@@ -1,0 +1,202 @@
+{
+  "nav": {
+    "home": "홈",
+    "blog": "블로그",
+    "about": "소개",
+    "courses": "강의",
+    "magazine": "매거진",
+    "interactive": "인터랙티브",
+    "tools": "tools"
+  },
+  "courses": {
+    "title": "강의 카탈로그",
+    "subtitle": "27개 분야에 걸친 체계적인 챕터별 학습 시리즈입니다.",
+    "chapters": "챕터",
+    "startCourse": "강의 시작",
+    "continueReading": "이어서 읽기",
+    "allCourses": "전체 강의",
+    "filterAll": "전체",
+    "noChapters": "글 읽기",
+    "searchPlaceholder": "카테고리 검색...",
+    "clearLabel": "지우기",
+    "clearAriaLabel": "카테고리 검색 지우기"
+  },
+  "magazine": {
+    "title": "매거진",
+    "subtitle": "마음, 신화, 철학, 그리고 인간의 경험에 관한 심층 에세이 모음입니다.",
+    "featured": "추천",
+    "readStory": "읽기",
+    "latestIssue": "최신",
+    "allStories": "전체 글"
+  },
+  "blog": {
+    "title": "블로그",
+    "readMore": "더 읽기",
+    "publishedOn": "게시일",
+    "updatedOn": "수정일",
+    "tags": "태그",
+    "category": "카테고리",
+    "searchPlaceholder": "글 검색...",
+    "noResults": "글을 찾을 수 없습니다",
+    "featuredPosts": "추천 글",
+    "recentPosts": "최신 글",
+    "allPosts": "모든 글",
+    "byAuthor": "작성자",
+    "readingTime": "분 읽기",
+    "badgeAcademy": "아카데미",
+    "badgeMagazine": "매거진",
+    "badgeInteractive": "인터랙티브",
+    "page": "페이지"
+  },
+  "interactive": {
+    "title": "인터랙티브",
+    "subtitle": "읽을거리와 도구, 게임, 시뮬레이터를 함께 엮은 콘텐츠 모음입니다.",
+    "featured": "추천 인터랙티브",
+    "launch": "살펴보기",
+    "latest": "최신 인터랙티브"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "notFound": "찾을 수 없음",
+    "share": "공유",
+    "copyLink": "링크 복사",
+    "toggleDarkMode": "다크 모드 전환",
+    "selectLanguage": "언어 선택",
+    "goToTop": "맨 위로",
+    "quickNav": "빠른 탐색",
+    "browseAll": "전체 보기"
+  },
+  "search": {
+    "title": "검색",
+    "placeholder": "글 검색...",
+    "results": "개 결과:",
+    "noResults": "검색 결과 없음:",
+    "tryDifferent": "다른 키워드로 시도해보세요"
+  },
+  "toc": {
+    "title": "목차"
+  },
+  "footer": {
+    "copyright": "© 2025 Oiyo Blog. 모든 권리 보유.",
+    "poweredBy": "Astro로 구동"
+  },
+  "page404": {
+    "description": "죄송합니다. 요청하신 페이지가 다른 차원으로 이동한 것 같습니다.",
+    "returnHome": "홈으로 돌아가기"
+  },
+  "home": {
+    "tagline": "우리는 스스로 나아지려는 노력을 할 때 늙지 않습니다."
+  },
+  "category": {
+    "allInsights": "전체 인사이트",
+    "academySubtitle": "{category}에 대한 체계적인 학습 가이드와 강의 시리즈입니다.",
+    "magazineSubtitle": "{category}에 관한 심층 기술 인사이트를 담았습니다.",
+    "names": {
+      "Accounting": "회계학",
+      "Economics": "경제학",
+      "Statistics": "통계학",
+      "Public Admin": "행정학",
+      "Law": "법학",
+      "Business": "경영학",
+      "Financial Engineering": "금융공학",
+      "AI Literacy": "AI 리터러시",
+      "Behavioral Economics": "행동경제학",
+      "Crypto": "암호화폐",
+      "Game Theory": "게임이론",
+      "History": "역사",
+      "Product Management": "프로덕트 매니지먼트",
+      "Psychology": "심리학",
+      "Actuarial Science": "보험계리학",
+      "Computer Science": "컴퓨터과학",
+      "Finance": "금융",
+      "Behavioral Science": "행동과학",
+      "Technical Analysis": "기술적 분석",
+      "Negotiation": "협상학",
+      "Advanced Bonds": "채권 심화",
+      "Nursing": "간호학",
+      "Medicine": "의학",
+      "Art Psychotherapy": "미술심리상담",
+      "Music History": "음악사",
+      "Zoology": "동물학",
+      "English Grammar": "영문법",
+      "Mysticism": "신비주의",
+      "Mythology": "신화학",
+      "Philosophy": "철학",
+      "Insights": "인사이트",
+      "Life & Spirit": "삶과 정신",
+      "Personality": "성격",
+      "Career & Vocation": "직업과 소명",
+      "Generational": "세대",
+      "Mind & Psychology": "마음 & 심리학",
+      "Lifestyle & Growth": "라이프스타일 & 성장",
+      "Philosophy & Spirit": "철학 & 영성",
+      "Psychology & Productivity": "심리학 & 생산성",
+      "Psychology & Society": "심리학 & 사회",
+      "Science & Health": "과학 & 건강",
+      "Society & Wealth": "사회 & 경제",
+      "Lifestyle & How-to": "라이프스타일 & 실용",
+      "Logic & Philosophy": "논리 & 철학",
+      "Myth & Culture": "신화 & 문화",
+      "Education & Language": "교육 & 언어",
+      "Lifestyle": "라이프스타일",
+      "Wellness": "웰니스",
+      "Logic": "논리학",
+      "Beauty": "뷰티",
+      "Law & Exam": "법학 & 시험",
+      "Academy": "강의",
+      "Magazine": "매거진",
+      "Tax": "세금",
+      "Technology": "기술",
+      "Korean Logic": "한국의 논리",
+      "Health": "건강",
+      "Science": "과학",
+      "Education": "교육",
+      "Strategy": "전략",
+      "Investment": "투자",
+      "Life": "삶",
+      "Culture": "문화",
+      "Design": "디자인",
+      "Productivity": "생산성",
+      "Games": "게임",
+      "Tools": "도구",
+      "Blockchain": "블록체인",
+      "Personal Finance": "개인 금융",
+      "Fortune & Spirituality": "운세 & 영성",
+      "Real Estate": "부동산"
+    }
+  },
+  "legal": {
+    "badge": "법적 고지",
+    "lastUpdated": "최종 업데이트",
+    "privacy": {
+      "title": "개인정보 처리방침",
+      "description": "귀하의 정보를 수집, 사용, 보호하는 방법에 대한 안내입니다."
+    },
+    "terms": {
+      "title": "이용약관",
+      "description": "Oiyo Blog 이용에 관한 약관 및 조건입니다."
+    }
+  },
+  "about": {
+    "missionBadge": "미션 소개",
+    "headline": "더 명확한 미래를 설계합니다.",
+    "description": "Oiyo는 현대 엔지니어링, 대사 건강, 그리고 디지털 수명의 교차점을 탐구하는 기술 집단입니다.",
+    "philosophyHeading": "철학",
+    "philosophyText": "저희의 핵심 철학은 '표준화된 탁월함'입니다. 전 세계에 분산된 애플리케이션의 지연 시간부터 장내 마이크로바이옴에 미치는 감미료의 분자적 영향까지, 우리는 데이터, 패턴, 그리고 고품질 증거를 추구합니다.",
+    "whatWeCoverHeading": "다루는 주제",
+    "coverItem1Title": "차세대 웹 개발:",
+    "coverItem1Text": "Astro, React, Cloudflare에 대한 심층 분석.",
+    "coverItem2Title": "대사 과학:",
+    "coverItem2Text": "생화학과 일상적인 장수의 교차점.",
+    "coverItem3Title": "디지털 미니멀리즘:",
+    "coverItem3Text": "인간을 위한 도구를 만드는 것, 그 반대가 아닌.",
+    "quote": "미래를 예측하는 가장 좋은 방법은 그것을 직접 설계하는 것입니다.",
+    "connectHeading": "팀과 소통하기"
+  },
+  "components": {
+    "knowledgeCheck": "개념 확인",
+    "latestInsights": "최신 인사이트",
+    "readTheBlog": "블로그 읽기"
+  }
+}

@@ -1,0 +1,170 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { siteConfig } from "../../config/site.config";
+import { getTranslations } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return siteConfig.locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang: locale } = Astro.params;
+const translations = await getTranslations(locale as Locale);
+
+// Build a serializable search index at build time
+const allPosts = await getCollection("blog", (post) => {
+  const postLocale = post.slug.split("/")[0];
+  return !post.data.draft && postLocale === locale;
+});
+
+const searchIndex = allPosts.map((post) => {
+  const parts = post.slug.split("/");
+  const slug = parts.slice(1).join("/");
+  return {
+    slug: `/${locale}/${slug}/`,
+    title: post.data.title,
+    description: post.data.description,
+    category: post.data.category ?? "",
+    tags: post.data.tags ?? [],
+    pubDate: post.data.pubDate.toISOString().split("T")[0],
+  };
+});
+
+const searchLabels = {
+  title: translations.search.title,
+  placeholder: translations.search.placeholder,
+  results: translations.search.results,
+  no_results: translations.search.noResults,
+};
+---
+
+<BaseLayout title={searchLabels.title}>
+  <div class="container mx-auto px-4 py-24 max-w-2xl">
+    <h1 class="text-4xl font-extrabold tracking-tight mb-10">{searchLabels.title}</h1>
+
+    <div id="search-root" data-index={JSON.stringify(searchIndex)} data-labels={JSON.stringify(searchLabels)}>
+      <input
+        id="search-input"
+        type="search"
+        placeholder={searchLabels.placeholder}
+        class="w-full rounded-xl border border-border bg-card px-4 py-3 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50 mb-6"
+        autofocus
+        aria-label={searchLabels.placeholder}
+      />
+      <div id="search-meta" class="text-sm text-muted-foreground mb-4 min-h-[1.25rem]"></div>
+      <ul id="search-results" class="space-y-4" role="list" aria-live="polite" aria-atomic="true"></ul>
+    </div>
+
+    <script>
+      import Fuse, { type FuseResult } from "fuse.js";
+
+      interface SearchItem {
+        slug: string;
+        title: string;
+        description: string;
+        category: string;
+        tags: string[];
+        pubDate: string;
+      }
+
+      interface SearchLabels {
+        results: string;
+        no_results: string;
+      }
+
+      const root = document.getElementById("search-root");
+      if (root) {
+        const index: SearchItem[] = JSON.parse(root.dataset.index || "[]");
+        const labels: SearchLabels = JSON.parse(root.dataset.labels || "{}");
+        const input = document.getElementById("search-input") as HTMLInputElement | null;
+        const resultsList = document.getElementById("search-results") as HTMLUListElement | null;
+        const metaEl = document.getElementById("search-meta") as HTMLDivElement | null;
+
+        let fuse: Fuse<SearchItem> | null = null;
+
+        function initFuse(): void {
+          if (fuse) return;
+          fuse = new Fuse(index, {
+            keys: [
+              { name: "title", weight: 3 },
+              { name: "description", weight: 2 },
+              { name: "tags", weight: 1.5 },
+              { name: "category", weight: 1 },
+            ],
+            threshold: 0.35,
+            includeScore: true,
+            minMatchCharLength: 2,
+          });
+          const q = new URLSearchParams(window.location.search).get("q");
+          if (q && input) { input.value = q; runSearch(q); }
+        }
+
+        function renderResults(results: FuseResult<SearchItem>[], query: string): void {
+          if (!resultsList || !metaEl) return;
+          resultsList.innerHTML = "";
+          if (results.length === 0) {
+            metaEl.textContent = `${labels.no_results} "${query}"`;
+            return;
+          }
+          metaEl.textContent = `${results.length} ${labels.results} "${query}"`;
+          for (const { item } of results) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = item.slug;
+            a.className = "group block rounded-xl border border-border/60 bg-card p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors";
+
+            if (item.category) {
+              const cat = document.createElement("span");
+              cat.className = "text-[10px] font-bold uppercase tracking-wider text-primary/70 mb-1 block";
+              cat.textContent = item.category;
+              a.appendChild(cat);
+            }
+
+            const title = document.createElement("p");
+            title.className = "font-semibold text-sm leading-snug group-hover:text-primary transition-colors mb-1";
+            title.textContent = item.title;
+            a.appendChild(title);
+
+            const desc = document.createElement("p");
+            desc.className = "text-xs text-muted-foreground line-clamp-2";
+            desc.textContent = item.description;
+            a.appendChild(desc);
+
+            const time = document.createElement("time");
+            time.className = "text-[11px] text-muted-foreground/60 mt-2 block";
+            time.textContent = item.pubDate;
+            a.appendChild(time);
+
+            li.appendChild(a);
+            resultsList.appendChild(li);
+          }
+        }
+
+        function runSearch(query: string): void {
+          if (!fuse || !resultsList || !metaEl) return;
+          if (!query.trim()) {
+            resultsList.innerHTML = "";
+            metaEl.textContent = "";
+            return;
+          }
+          const results = fuse.search(query);
+          renderResults(results, query);
+          const url = new URL(window.location.href);
+          url.searchParams.set("q", query);
+          history.replaceState(null, "", url.toString());
+        }
+
+        let debounceTimer: ReturnType<typeof setTimeout>;
+        if (input) {
+          input.addEventListener("input", (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => runSearch((e.target as HTMLInputElement).value), 200);
+          });
+        }
+
+        initFuse();
+      }
+    </script>
+  </div>
+</BaseLayout>

@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTranslations, locales } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({
+    params: { lang: lang === "en" ? undefined : lang },
+    props: { locale: lang },
+  }));
+}
+
+const { locale } = Astro.props;
+const t = await getTranslations(locale);
+---
+
+<BaseLayout title={t.nav.about}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Oiyo Team",
+      "description": t.about.description,
+      "image": "https://blog.oiyo.net/logo.svg",
+      "sameAs": [
+        "https://github.com/oiyo-net",
+        "https://twitter.com/oiyo_net"
+      ]
+    }
+  })} />
+  <section class="py-24 md:py-32 overflow-hidden">
+    <div class="container px-4">
+      <div class="max-w-3xl mx-auto">
+        <header class="mb-20 animate-fade-up">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 border border-primary/20"
+          >
+            {t.about.missionBadge}
+          </div>
+          <h1
+            class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-8 font-heading text-primary leading-tight"
+          >
+            {t.about.headline}
+          </h1>
+          <p class="text-2xl text-muted-foreground leading-relaxed italic">
+            {t.about.description}
+          </p>
+        </header>
+
+        <div
+          class="prose prose-stone lg:prose-xl dark:prose-invert max-w-none animate-fade-up delay-200"
+        >
+          <h2 class="font-heading">{t.about.philosophyHeading}</h2>
+          <p>
+            {t.about.philosophyText}
+          </p>
+
+          <h2 class="font-heading">{t.about.whatWeCoverHeading}</h2>
+          <ul>
+            <li>
+              <strong>{t.about.coverItem1Title}</strong> {t.about.coverItem1Text}
+            </li>
+            <li>
+              <strong>{t.about.coverItem2Title}</strong> {t.about.coverItem2Text}
+            </li>
+            <li>
+              <strong>{t.about.coverItem3Title}</strong> {t.about.coverItem3Text}
+            </li>
+          </ul>
+
+          <blockquote class="italic font-serif">
+            "{t.about.quote}"
+          </blockquote>
+        </div>
+
+        <div
+          class="mt-24 pt-12 border-t border-border/40 flex flex-col items-center text-center animate-fade-up"
+        >
+          <h3 class="text-xl font-bold mb-6">{t.about.connectHeading}</h3>
+          <div class="flex gap-8">
+            <a
+              href="https://github.com/oiyo-net"
+              class="text-muted-foreground hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs"
+              >GitHub</a
+            >
+            <a
+              href="https://twitter.com/oiyo_net"
+              class="text-muted-foreground hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs"
+              >Twitter</a
+            >
+            <a
+              href="mailto:team@oiyo.net"
+              class="text-muted-foreground hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs"
+              >Email</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

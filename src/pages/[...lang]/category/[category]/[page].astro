@@ -1,0 +1,98 @@
+---
+import { getCollection } from "astro:content";
+import BlogList from "../../../../components/BlogList.astro";
+import { getTranslations, locales } from "../../../../lib/i18n";
+import { getTrack, getTrackFromData, slugifyCategory } from "../../../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  const postsPerPage = 6;
+  const paths = [];
+
+  const allPosts = await getCollection(
+    "blog",
+    ({ data }) => data.draft !== true,
+  );
+
+  for (const lang of locales) {
+    const langPosts = allPosts.filter((post) => post.data.locale === lang);
+    const categories = [
+      ...new Set(
+        langPosts
+          .map((post) => post.data.category)
+          .filter((cat): cat is string => !!cat),
+      ),
+    ];
+
+    for (const category of categories) {
+      if (!category) continue;
+
+      const normalizedCategorySlug = slugifyCategory(category);
+
+      const categoryPosts = langPosts.filter(
+        (post) =>
+          post.data.category && slugifyCategory(post.data.category) === normalizedCategorySlug,
+      );
+
+      categoryPosts.sort((a, b) => {
+        const aMatch = a.slug.match(/-ch(\d+)$/);
+        const bMatch = b.slug.match(/-ch(\d+)$/);
+        if (aMatch && bMatch) {
+          return parseInt(aMatch[1], 10) - parseInt(bMatch[1], 10);
+        }
+        return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+      });
+
+      const totalPages = Math.ceil(categoryPosts.length / postsPerPage);
+
+      // Only generate pages 2+; page 1 is handled by index.astro
+      for (let p = 2; p <= totalPages; p++) {
+        paths.push({
+          params: { lang, category: normalizedCategorySlug, page: String(p) },
+          props: {
+            locale: lang,
+            originalCategory: category,
+            pageData: categoryPosts.slice(
+              (p - 1) * postsPerPage,
+              p * postsPerPage,
+            ),
+            currentPage: p,
+            totalPages,
+          },
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+const { category } = Astro.params;
+const { locale, originalCategory, pageData, currentPage, totalPages } =
+  Astro.props;
+const t = await getTranslations(locale);
+
+const page = {
+  data: pageData,
+  currentPage,
+  lastPage: totalPages,
+};
+
+const localePrefix = `/${locale}`;
+const track = pageData[0] ? getTrackFromData(pageData[0].data) : getTrack(originalCategory);
+
+const displayName = (t.category.names as Record<string, string>)?.[originalCategory] ?? originalCategory;
+const displaySubtitle = track === "academy"
+  ? t.category.academySubtitle.replace("{category}", displayName)
+  : track === "interactive"
+    ? (((t as Record<string, unknown>).interactive as Record<string, string> | undefined)?.categorySubtitle ?? "Interactive reading and embedded tools related to {category}.").replace("{category}", displayName)
+    : t.category.magazineSubtitle.replace("{category}", displayName);
+---
+
+<BlogList
+  page={page}
+  locale={locale}
+  baseUrl={`${localePrefix}/category/${category}`}
+  title={displayName}
+  subtitle={displaySubtitle}
+  activeCategory={category}
+/>

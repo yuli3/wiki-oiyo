@@ -1,0 +1,47 @@
+export const AHOXY_URL = 'https://ahoxy.com';
+export const OIYO_URL = 'https://oiyo.net';
+
+export const siteConfig = {
+  name: "Oiyo Wiki",
+  title: "Oiyo Wiki",
+  description: "In-depth guides, references, and knowledge base powered by Oiyo. Astro + Cloudflare Pages.",
+  url: "https://wiki.oiyo.net",
+  author: "Oiyo Team",
+  locale: "en",
+  locales: ["en", "ko", "ja", "fr", "es", "zh", "cn"],
+  themeColor: "#10b981", // Emerald/Green
+  features: {
+    scrollSnap: false,
+    // TOC intentionally disabled (commented out in article layout as well)
+    toc: false,
+    pagination: true,
+  },
+  socials: {
+    github: "https://github.com/oiyo-net",
+    twitter: "https://twitter.com/oiyo_net",
+    linkedin: "https://linkedin.com/company/oiyo",
+  },
+  seo: {
+    twitterHandle: "@oiyo_net",
+    ogImage: null,
+    organization: {
+      name: "Oiyo Tech",
+      logo: "/logo.svg",
+      sameAs: [
+        "https://github.com/oiyo-net",
+        "https://twitter.com/oiyo_net"
+      ]
+    }
+  },
+  analytics: {
+    googleAnalyticsId: "G-915L6V38X6",
+    googleAdsenseId: "ca-pub-9541920090543312",
+  },
+  newsletter: {
+    // Set to your Buttondown account slug to enable API subscription, or null to use mailto fallback
+    buttondownUsername: null as string | null,
+    fallbackEmail: "support@oiyo.net",
+  }
+};
+
+export type SiteConfig = typeof siteConfig;
