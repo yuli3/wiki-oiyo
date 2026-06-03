@@ -1,0 +1,10 @@
+{
+	"compatibility_date": "2026-06-03",
+	"name": "wiki-oiyo",
+	"assets": {
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": true
+	}
+}
