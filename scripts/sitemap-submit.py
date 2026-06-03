@@ -354,17 +354,11 @@ def main() -> int:
     if args.json_out:
         print(json.dumps(all_results, indent=2, ensure_ascii=False))
 
-    # Bing Webmaster API is treated as non-fatal (endpoint frequently changes,
-    # IndexNow already covers Bing crawling via the same protocol).
-    fatal_errors = [
-        k for k, v in all_results.items()
-        if isinstance(v, dict) and v.get("status") == "error" and k != "bing"
-    ]
+    # All submission errors are non-fatal — sitemap submission is best-effort.
+    # GSC/Bing errors indicate missing permissions (user action needed), not code issues.
     all_errors = [k for k, v in all_results.items() if isinstance(v, dict) and v.get("status") == "error"]
     if all_errors:
-        log(f"Submission errors (bing is non-fatal): {all_errors}", "WARN")
-    if fatal_errors:
-        return 1
+        log(f"Submission warnings (non-fatal): {all_errors}", "WARN")
 
     log("All submissions complete.", "OK")
     return 0

@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "updated": "2026-06-03"
+  },
+  "namespaces": {
+    "personality": {
+      "files": [
+        "mbti/types.json",
+        "mbti/careers/_index.json",
+        "mbti/careers/ENFJ.json",
+        "mbti/careers/ENFP.json",
+        "mbti/careers/ENTJ.json",
+        "mbti/careers/ENTP.json",
+        "mbti/careers/ESFJ.json",
+        "mbti/careers/ESFP.json",
+        "mbti/careers/ESTJ.json",
+        "mbti/careers/ESTP.json",
+        "mbti/careers/INFJ.json",
+        "mbti/careers/INFP.json",
+        "mbti/careers/INTJ.json",
+        "mbti/careers/INTP.json",
+        "mbti/careers/ISFJ.json",
+        "mbti/careers/ISFP.json",
+        "mbti/careers/ISTJ.json",
+        "mbti/careers/ISTP.json"
+      ]
+    }
+  }
+}
