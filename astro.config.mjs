@@ -2,6 +2,7 @@
 
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
@@ -14,6 +15,7 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   site: "https://wiki.oiyo.net",
   output: "static",
+  adapter: cloudflare(),
   integrations: [
     react(),
     mdx(),
