@@ -1,0 +1,325 @@
+{
+  "type": "ESFJ",
+  "top_careers": [
+    {
+      "id": "nurse",
+      "riasec": [
+        "S",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "간호사",
+        "en": "Nurse"
+      },
+      "why_fit": {
+        "ko": "타인을 돌보는 것에서 깊은 만족감을 얻습니다.",
+        "en": "Derives deep satisfaction from caring for others."
+      }
+    },
+    {
+      "id": "teacher",
+      "riasec": [
+        "S",
+        "A",
+        "C"
+      ],
+      "title": {
+        "ko": "교사",
+        "en": "Teacher"
+      },
+      "why_fit": {
+        "ko": "학생들의 성장을 지원하는 것을 가장 보람 있게 여깁니다.",
+        "en": "Finds the greatest reward in supporting students' growth."
+      }
+    },
+    {
+      "id": "social-worker",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "사회복지사",
+        "en": "Social Worker"
+      },
+      "why_fit": {
+        "ko": "도움이 필요한 사람들을 위한 서비스에 헌신합니다.",
+        "en": "Dedicated to services for people who need help."
+      }
+    },
+    {
+      "id": "event-planner",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "이벤트 플래너",
+        "en": "Event Planner"
+      },
+      "why_fit": {
+        "ko": "사람들에게 특별한 경험을 만들어 주는 일을 즐깁니다.",
+        "en": "Enjoys creating special experiences for people."
+      }
+    },
+    {
+      "id": "hr-specialist",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "인사 전문가",
+        "en": "HR Specialist"
+      },
+      "why_fit": {
+        "ko": "직원들의 복지와 조직 문화를 위해 헌신합니다.",
+        "en": "Dedicated to employee welfare and organizational culture."
+      }
+    },
+    {
+      "id": "dietitian",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "영양사",
+        "en": "Dietitian"
+      },
+      "why_fit": {
+        "ko": "사람들의 건강한 식생활을 위한 전문적 지원을 제공합니다.",
+        "en": "Provides professional support for people's healthy eating."
+      }
+    },
+    {
+      "id": "customer-service-manager",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "고객 서비스 매니저",
+        "en": "Customer Service Manager"
+      },
+      "why_fit": {
+        "ko": "고객 만족을 위해 세심하고 체계적으로 일합니다.",
+        "en": "Works carefully and systematically for customer satisfaction."
+      }
+    },
+    {
+      "id": "office-manager",
+      "riasec": [
+        "S",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "사무 관리자",
+        "en": "Office Manager"
+      },
+      "why_fit": {
+        "ko": "조직의 원활한 운영을 위해 세심하게 관리합니다.",
+        "en": "Carefully manages for smooth organizational operations."
+      }
+    },
+    {
+      "id": "receptionist",
+      "riasec": [
+        "S",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "리셉셔니스트",
+        "en": "Receptionist"
+      },
+      "why_fit": {
+        "ko": "방문자에게 따뜻하고 전문적인 첫인상을 제공합니다.",
+        "en": "Provides a warm, professional first impression to visitors."
+      }
+    },
+    {
+      "id": "elementary-school-teacher",
+      "riasec": [
+        "S",
+        "A",
+        "C"
+      ],
+      "title": {
+        "ko": "초등학교 교사",
+        "en": "Elementary School Teacher"
+      },
+      "why_fit": {
+        "ko": "어린이의 초기 교육과 정서 발달을 세심하게 돕습니다.",
+        "en": "Carefully supports children's early education and emotional development."
+      }
+    },
+    {
+      "id": "healthcare-administrator",
+      "riasec": [
+        "S",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "의료 행정가",
+        "en": "Healthcare Administrator"
+      },
+      "why_fit": {
+        "ko": "의료 기관의 원활한 운영으로 환자 케어의 질을 높입니다.",
+        "en": "Improves patient care quality through smooth operation of medical facilities."
+      }
+    },
+    {
+      "id": "counselor",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "상담사",
+        "en": "Counselor"
+      },
+      "why_fit": {
+        "ko": "따뜻한 공감으로 내담자의 문제 해결을 돕습니다.",
+        "en": "Helps clients solve problems with warm empathy."
+      }
+    },
+    {
+      "id": "public-health-worker",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "공중보건 전문가",
+        "en": "Public Health Worker"
+      },
+      "why_fit": {
+        "ko": "지역사회의 건강과 복지를 위해 헌신합니다.",
+        "en": "Dedicated to the health and welfare of the community."
+      }
+    },
+    {
+      "id": "sales-manager",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "영업 매니저",
+        "en": "Sales Manager"
+      },
+      "why_fit": {
+        "ko": "고객과의 신뢰 관계를 바탕으로 성과를 창출합니다.",
+        "en": "Creates results based on trust relationships with customers."
+      }
+    },
+    {
+      "id": "community-coordinator",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "지역사회 코디네이터",
+        "en": "Community Coordinator"
+      },
+      "why_fit": {
+        "ko": "지역 주민들을 연결하고 공동체 발전을 이끕니다.",
+        "en": "Connects community members and leads community development."
+      }
+    },
+    {
+      "id": "wedding-planner",
+      "riasec": [
+        "A",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "웨딩 플래너",
+        "en": "Wedding Planner"
+      },
+      "why_fit": {
+        "ko": "특별한 날을 완벽하게 준비하는 세심한 기획력이 있습니다.",
+        "en": "Has careful planning ability to perfectly prepare special days."
+      }
+    },
+    {
+      "id": "physical-therapist",
+      "riasec": [
+        "S",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "물리치료사",
+        "en": "Physical Therapist"
+      },
+      "why_fit": {
+        "ko": "환자의 회복을 위해 헌신적이고 체계적으로 지원합니다.",
+        "en": "Dedicatedly and systematically supports patient recovery."
+      }
+    },
+    {
+      "id": "school-counselor",
+      "riasec": [
+        "S",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "학교 상담사",
+        "en": "School Counselor"
+      },
+      "why_fit": {
+        "ko": "학생들의 학업과 정서적 성장을 전인적으로 지원합니다.",
+        "en": "Holistically supports students' academic and emotional growth."
+      }
+    },
+    {
+      "id": "tour-guide",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "관광 가이드",
+        "en": "Tour Guide"
+      },
+      "why_fit": {
+        "ko": "여행자들에게 최고의 경험을 선사하는 것을 즐깁니다.",
+        "en": "Enjoys providing travelers with the best experiences."
+      }
+    },
+    {
+      "id": "caregiver",
+      "riasec": [
+        "S",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "돌봄 전문가",
+        "en": "Caregiver"
+      },
+      "why_fit": {
+        "ko": "취약한 분들에게 헌신적이고 따뜻한 돌봄을 제공합니다.",
+        "en": "Provides dedicated, warm care to vulnerable individuals."
+      }
+    }
+  ]
+}

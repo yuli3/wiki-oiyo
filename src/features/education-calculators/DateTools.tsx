@@ -99,9 +99,9 @@ export function AnniversaryCalculator({ locale = 'ko' }: { locale?: 'ko' | 'en' 
   const past = milestones.filter(m => m.diff < 0).reverse().slice(0, 3);
 
   const shareText = L === 'ko'
-    ? `우리 ${elapsed}일째! ❤️ — blog.oiyo.net`
-    : L === 'en' ? `We are on Day ${elapsed}! ❤️ — blog.oiyo.net`
-    : `私たちは${elapsed}日目です！❤️ — blog.oiyo.net`;
+    ? `우리 ${elapsed}일째! ❤️ — wiki.oiyo.net`
+    : L === 'en' ? `We are on Day ${elapsed}! ❤️ — wiki.oiyo.net`
+    : `私たちは${elapsed}日目です！❤️ — wiki.oiyo.net`;
 
   return (
     <Card className="p-6 bg-white border-slate-200 shadow-xl mt-8">
@@ -202,7 +202,7 @@ const KOREAN_HOLIDAYS = [
 
 interface DayEvent { id: string; title: string; date: string; icon: string; }
 
-const LS_KEY = 'blog-oiyo-dday-events';
+const LS_KEY = 'wiki-oiyo-dday-events';
 function loadEvents(): DayEvent[] {
   if (typeof window === 'undefined') return [];
   try { return JSON.parse(localStorage.getItem(LS_KEY) ?? '[]'); } catch { return []; }

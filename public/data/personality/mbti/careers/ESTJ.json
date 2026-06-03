@@ -1,0 +1,325 @@
+{
+  "type": "ESTJ",
+  "top_careers": [
+    {
+      "id": "manager",
+      "riasec": [
+        "E",
+        "C",
+        "S"
+      ],
+      "title": {
+        "ko": "관리자",
+        "en": "Manager"
+      },
+      "why_fit": {
+        "ko": "체계적으로 팀을 이끌고 목표를 달성하는 데 뛰어납니다.",
+        "en": "Excels at systematically leading teams to achieve goals."
+      }
+    },
+    {
+      "id": "military-officer",
+      "riasec": [
+        "E",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "군 장교",
+        "en": "Military Officer"
+      },
+      "why_fit": {
+        "ko": "명확한 지휘 체계 속에서 임무를 완수합니다.",
+        "en": "Accomplishes missions within a clear command structure."
+      }
+    },
+    {
+      "id": "judge",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "판사",
+        "en": "Judge"
+      },
+      "why_fit": {
+        "ko": "규칙과 절차를 정확히 적용하여 공정한 판결을 내립니다.",
+        "en": "Applies rules and procedures precisely for fair judgments."
+      }
+    },
+    {
+      "id": "accountant",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "회계사",
+        "en": "Accountant"
+      },
+      "why_fit": {
+        "ko": "정확성과 체계적 사고로 재무 관리를 완벽하게 수행합니다.",
+        "en": "Perfectly handles financial management with accuracy and systematic thinking."
+      }
+    },
+    {
+      "id": "project-manager",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "프로젝트 매니저",
+        "en": "Project Manager"
+      },
+      "why_fit": {
+        "ko": "일정, 예산, 팀을 체계적으로 관리하여 프로젝트를 성공시킵니다.",
+        "en": "Successfully manages projects by systematically handling schedules, budgets, and teams."
+      }
+    },
+    {
+      "id": "financial-advisor",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "재무 어드바이저",
+        "en": "Financial Advisor"
+      },
+      "why_fit": {
+        "ko": "체계적 분석으로 고객에게 최선의 재무 계획을 제시합니다.",
+        "en": "Presents the best financial plans to clients through systematic analysis."
+      }
+    },
+    {
+      "id": "operations-director",
+      "riasec": [
+        "E",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "운영 이사",
+        "en": "Operations Director"
+      },
+      "why_fit": {
+        "ko": "조직의 효율적 운영을 총괄하고 성과를 최적화합니다.",
+        "en": "Oversees efficient organizational operations and optimizes performance."
+      }
+    },
+    {
+      "id": "law-enforcement",
+      "riasec": [
+        "E",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "경찰관",
+        "en": "Law Enforcement Officer"
+      },
+      "why_fit": {
+        "ko": "규범과 질서를 유지하는 사명에 헌신합니다.",
+        "en": "Dedicated to the mission of maintaining norms and order."
+      }
+    },
+    {
+      "id": "compliance-officer",
+      "riasec": [
+        "C",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "컴플라이언스 담당자",
+        "en": "Compliance Officer"
+      },
+      "why_fit": {
+        "ko": "법적 요건과 내부 규정을 철저히 관리합니다.",
+        "en": "Thoroughly manages legal requirements and internal regulations."
+      }
+    },
+    {
+      "id": "business-owner",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "사업주",
+        "en": "Business Owner"
+      },
+      "why_fit": {
+        "ko": "체계적이고 목표 지향적으로 사업을 운영합니다.",
+        "en": "Operates business systematically and with goal orientation."
+      }
+    },
+    {
+      "id": "school-principal",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "교장",
+        "en": "School Principal"
+      },
+      "why_fit": {
+        "ko": "교육 기관을 체계적으로 운영하고 기준을 유지합니다.",
+        "en": "Operates educational institutions systematically and maintains standards."
+      }
+    },
+    {
+      "id": "civil-engineer",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "토목 엔지니어",
+        "en": "Civil Engineer"
+      },
+      "why_fit": {
+        "ko": "공학적 원칙을 체계적으로 적용하여 인프라를 구축합니다.",
+        "en": "Builds infrastructure by systematically applying engineering principles."
+      }
+    },
+    {
+      "id": "budget-analyst",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "예산 분석가",
+        "en": "Budget Analyst"
+      },
+      "why_fit": {
+        "ko": "재무 데이터를 분석하여 효율적 예산 배분을 도출합니다.",
+        "en": "Derives efficient budget allocation by analyzing financial data."
+      }
+    },
+    {
+      "id": "supply-chain-manager",
+      "riasec": [
+        "E",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "공급망 관리자",
+        "en": "Supply Chain Manager"
+      },
+      "why_fit": {
+        "ko": "복잡한 공급망을 체계적으로 관리하고 최적화합니다.",
+        "en": "Systematically manages and optimizes complex supply chains."
+      }
+    },
+    {
+      "id": "real-estate-agent",
+      "riasec": [
+        "E",
+        "C",
+        "S"
+      ],
+      "title": {
+        "ko": "부동산 중개인",
+        "en": "Real Estate Agent"
+      },
+      "why_fit": {
+        "ko": "시장 분석과 체계적 접근으로 고객에게 최적의 거래를 제공합니다.",
+        "en": "Provides optimal transactions for clients through market analysis and systematic approach."
+      }
+    },
+    {
+      "id": "bank-manager",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "은행 지점장",
+        "en": "Bank Manager"
+      },
+      "why_fit": {
+        "ko": "금융 서비스를 체계적으로 운영하고 고객 신뢰를 구축합니다.",
+        "en": "Operates financial services systematically and builds customer trust."
+      }
+    },
+    {
+      "id": "quality-assurance",
+      "riasec": [
+        "C",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "품질 보증 관리자",
+        "en": "Quality Assurance Manager"
+      },
+      "why_fit": {
+        "ko": "기준에 부합하는 제품과 서비스의 품질을 철저히 관리합니다.",
+        "en": "Thoroughly manages product and service quality to meet standards."
+      }
+    },
+    {
+      "id": "tax-specialist",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "세무사",
+        "en": "Tax Specialist"
+      },
+      "why_fit": {
+        "ko": "복잡한 세법을 정확하게 이해하고 적용합니다.",
+        "en": "Accurately understands and applies complex tax laws."
+      }
+    },
+    {
+      "id": "logistics-coordinator",
+      "riasec": [
+        "C",
+        "E",
+        "R"
+      ],
+      "title": {
+        "ko": "물류 코디네이터",
+        "en": "Logistics Coordinator"
+      },
+      "why_fit": {
+        "ko": "물류 흐름을 체계적으로 관리하여 효율을 높입니다.",
+        "en": "Increases efficiency by systematically managing logistics flow."
+      }
+    },
+    {
+      "id": "insurance-underwriter",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "보험 심사역",
+        "en": "Insurance Underwriter"
+      },
+      "why_fit": {
+        "ko": "리스크를 정확하게 평가하고 적절한 보험 조건을 결정합니다.",
+        "en": "Accurately evaluates risk and determines appropriate insurance terms."
+      }
+    }
+  ]
+}

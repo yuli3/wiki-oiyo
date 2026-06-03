@@ -53,12 +53,12 @@ except ImportError:
     HAS_GOOGLE_CLIENT = False
 
 # ── configuration ─────────────────────────────────────────────────────────────
-SITE_URL = "https://blog.oiyo.net"
-SITEMAP_INDEX_URL = "https://blog.oiyo.net/sitemap-index.xml"
+SITE_URL = "https://wiki.oiyo.net"
+SITEMAP_INDEX_URL = "https://wiki.oiyo.net/sitemap-index.xml"
 
 # Additional sitemaps to submit (beyond the index)
 SITEMAPS = [
-    "https://blog.oiyo.net/sitemap-index.xml",
+    "https://wiki.oiyo.net/sitemap-index.xml",
 ]
 
 # ─────────────────────────────────────────────────────────────────────────────

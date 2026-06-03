@@ -1,0 +1,325 @@
+{
+  "type": "INFJ",
+  "top_careers": [
+    {
+      "id": "therapist",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "심리치료사",
+        "en": "Therapist"
+      },
+      "why_fit": {
+        "ko": "깊은 통찰력으로 내담자의 근본 문제를 이해하고 치유합니다.",
+        "en": "Understands and heals clients' fundamental issues with deep insight."
+      }
+    },
+    {
+      "id": "author",
+      "riasec": [
+        "A",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "작가",
+        "en": "Author"
+      },
+      "why_fit": {
+        "ko": "깊은 내면의 이야기를 글로 표현하여 독자에게 영감을 줍니다.",
+        "en": "Inspires readers by expressing deep inner stories through writing."
+      }
+    },
+    {
+      "id": "counselor",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "상담사",
+        "en": "Counselor"
+      },
+      "why_fit": {
+        "ko": "타인의 고통을 깊이 공감하며 의미 있는 지원을 제공합니다.",
+        "en": "Provides meaningful support with deep empathy for others' pain."
+      }
+    },
+    {
+      "id": "social-activist",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "사회 운동가",
+        "en": "Social Activist"
+      },
+      "why_fit": {
+        "ko": "더 나은 세상을 위한 확고한 신념과 헌신을 가지고 있습니다.",
+        "en": "Has firm conviction and dedication for a better world."
+      }
+    },
+    {
+      "id": "professor",
+      "riasec": [
+        "I",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "교수",
+        "en": "Professor"
+      },
+      "why_fit": {
+        "ko": "깊은 지식을 학생들에게 의미 있게 전달합니다.",
+        "en": "Meaningfully conveys deep knowledge to students."
+      }
+    },
+    {
+      "id": "life-coach",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "라이프코치",
+        "en": "Life Coach"
+      },
+      "why_fit": {
+        "ko": "사람들의 본질적 성장을 돕는 데서 큰 의미를 찾습니다.",
+        "en": "Finds great meaning in helping people grow fundamentally."
+      }
+    },
+    {
+      "id": "psychiatrist",
+      "riasec": [
+        "I",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "정신과 의사",
+        "en": "Psychiatrist"
+      },
+      "why_fit": {
+        "ko": "인간 정신의 깊이를 탐구하며 치유를 이끕니다.",
+        "en": "Explores the depths of the human mind and leads healing."
+      }
+    },
+    {
+      "id": "nonprofit-leader",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "비영리 리더",
+        "en": "Nonprofit Leader"
+      },
+      "why_fit": {
+        "ko": "사회적 가치를 위한 조직을 헌신적으로 이끕니다.",
+        "en": "Dedicatedly leads organizations for social value."
+      }
+    },
+    {
+      "id": "human-rights-lawyer",
+      "riasec": [
+        "S",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "인권 변호사",
+        "en": "Human Rights Lawyer"
+      },
+      "why_fit": {
+        "ko": "사회적 정의를 위해 헌신하는 법률 서비스를 제공합니다.",
+        "en": "Provides legal services dedicated to social justice."
+      }
+    },
+    {
+      "id": "spiritual-director",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "영성 지도자",
+        "en": "Spiritual Director"
+      },
+      "why_fit": {
+        "ko": "사람들의 내면 성장과 영적 발달을 안내합니다.",
+        "en": "Guides people's inner growth and spiritual development."
+      }
+    },
+    {
+      "id": "researcher",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "연구자",
+        "en": "Researcher"
+      },
+      "why_fit": {
+        "ko": "깊은 탐구심으로 인류에게 유익한 지식을 창출합니다.",
+        "en": "Creates knowledge beneficial to humanity with deep curiosity."
+      }
+    },
+    {
+      "id": "art-therapist",
+      "riasec": [
+        "A",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "미술 치료사",
+        "en": "Art Therapist"
+      },
+      "why_fit": {
+        "ko": "예술을 통한 치유의 힘을 믿고 실천합니다.",
+        "en": "Believes in and practices the healing power of art."
+      }
+    },
+    {
+      "id": "mediator",
+      "riasec": [
+        "S",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "조정가",
+        "en": "Mediator"
+      },
+      "why_fit": {
+        "ko": "갈등 속에서 공통점을 찾아 화해를 이끄는 능력이 있습니다.",
+        "en": "Has ability to find common ground in conflict and lead reconciliation."
+      }
+    },
+    {
+      "id": "documentary-filmmaker",
+      "riasec": [
+        "A",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "다큐멘터리 감독",
+        "en": "Documentary Filmmaker"
+      },
+      "why_fit": {
+        "ko": "사회적 메시지를 담은 이야기를 시각적으로 전달합니다.",
+        "en": "Visually conveys stories with social messages."
+      }
+    },
+    {
+      "id": "educational-psychologist",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "교육 심리학자",
+        "en": "Educational Psychologist"
+      },
+      "why_fit": {
+        "ko": "학습과 발달에 대한 깊은 이해로 교육을 개선합니다.",
+        "en": "Improves education with deep understanding of learning and development."
+      }
+    },
+    {
+      "id": "theologian",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "신학자",
+        "en": "Theologian"
+      },
+      "why_fit": {
+        "ko": "인생의 근본 의미를 탐구하는 깊은 지적 여정을 즐깁니다.",
+        "en": "Enjoys a deep intellectual journey exploring the fundamental meaning of life."
+      }
+    },
+    {
+      "id": "poet",
+      "riasec": [
+        "A",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "시인",
+        "en": "Poet"
+      },
+      "why_fit": {
+        "ko": "언어를 통해 깊은 감정과 통찰을 아름답게 표현합니다.",
+        "en": "Beautifully expresses deep emotions and insights through language."
+      }
+    },
+    {
+      "id": "environmental-advocate",
+      "riasec": [
+        "S",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "환경 운동가",
+        "en": "Environmental Advocate"
+      },
+      "why_fit": {
+        "ko": "지구의 미래를 위한 확고한 신념으로 행동합니다.",
+        "en": "Acts with firm conviction for the future of the Earth."
+      }
+    },
+    {
+      "id": "clinical-social-worker",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "임상 사회복지사",
+        "en": "Clinical Social Worker"
+      },
+      "why_fit": {
+        "ko": "개인과 가족의 복잡한 문제를 깊이 있게 지원합니다.",
+        "en": "Provides in-depth support for complex individual and family issues."
+      }
+    },
+    {
+      "id": "philosophy-professor",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "철학 교수",
+        "en": "Philosophy Professor"
+      },
+      "why_fit": {
+        "ko": "인생과 사회에 대한 깊은 사유를 학생들과 나눕니다.",
+        "en": "Shares deep reflections on life and society with students."
+      }
+    }
+  ]
+}

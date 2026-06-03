@@ -1,0 +1,325 @@
+{
+  "type": "INTJ",
+  "top_careers": [
+    {
+      "id": "systems-architect",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "시스템 아키텍트",
+        "en": "Systems Architect"
+      },
+      "why_fit": {
+        "ko": "복잡한 시스템을 전략적으로 설계하는 데 탁월합니다.",
+        "en": "Excels at strategically designing complex systems."
+      }
+    },
+    {
+      "id": "strategic-planner",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "전략 기획가",
+        "en": "Strategic Planner"
+      },
+      "why_fit": {
+        "ko": "장기적 비전을 바탕으로 실행 가능한 전략을 수립합니다.",
+        "en": "Establishes actionable strategies based on long-term vision."
+      }
+    },
+    {
+      "id": "data-scientist",
+      "riasec": [
+        "I",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "데이터 사이언티스트",
+        "en": "Data Scientist"
+      },
+      "why_fit": {
+        "ko": "복잡한 데이터에서 의미 있는 패턴과 통찰을 도출합니다.",
+        "en": "Derives meaningful patterns and insights from complex data."
+      }
+    },
+    {
+      "id": "researcher",
+      "riasec": [
+        "I",
+        "A",
+        "R"
+      ],
+      "title": {
+        "ko": "연구자",
+        "en": "Researcher"
+      },
+      "why_fit": {
+        "ko": "깊이 있는 탐구로 새로운 지식의 경계를 확장합니다.",
+        "en": "Expands the boundaries of new knowledge through deep exploration."
+      }
+    },
+    {
+      "id": "software-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "소프트웨어 엔지니어",
+        "en": "Software Engineer"
+      },
+      "why_fit": {
+        "ko": "논리적이고 효율적인 코드로 복잡한 문제를 해결합니다.",
+        "en": "Solves complex problems with logical and efficient code."
+      }
+    },
+    {
+      "id": "professor",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "교수",
+        "en": "Professor"
+      },
+      "why_fit": {
+        "ko": "지식의 깊이를 탐구하고 학생들과 공유하는 것을 즐깁니다.",
+        "en": "Enjoys exploring the depth of knowledge and sharing it with students."
+      }
+    },
+    {
+      "id": "investment-analyst",
+      "riasec": [
+        "I",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "투자 분석가",
+        "en": "Investment Analyst"
+      },
+      "why_fit": {
+        "ko": "심층적 분석으로 시장의 숨겨진 기회를 발견합니다.",
+        "en": "Discovers hidden market opportunities through in-depth analysis."
+      }
+    },
+    {
+      "id": "ai-researcher",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "AI 연구원",
+        "en": "AI Researcher"
+      },
+      "why_fit": {
+        "ko": "인공지능의 가능성과 한계를 탐구하는 최전선에 있습니다.",
+        "en": "At the forefront of exploring the possibilities and limits of AI."
+      }
+    },
+    {
+      "id": "forensic-scientist",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "법과학자",
+        "en": "Forensic Scientist"
+      },
+      "why_fit": {
+        "ko": "증거 분석의 정확성으로 진실을 밝혀냅니다.",
+        "en": "Reveals truth with the accuracy of evidence analysis."
+      }
+    },
+    {
+      "id": "economist",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "경제학자",
+        "en": "Economist"
+      },
+      "why_fit": {
+        "ko": "경제 시스템의 복잡성을 분석하고 예측합니다.",
+        "en": "Analyzes and predicts the complexity of economic systems."
+      }
+    },
+    {
+      "id": "management-consultant",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "경영 컨설턴트",
+        "en": "Management Consultant"
+      },
+      "why_fit": {
+        "ko": "체계적 분석으로 조직의 근본 문제를 진단하고 해결합니다.",
+        "en": "Diagnoses and solves organizations' fundamental problems through systematic analysis."
+      }
+    },
+    {
+      "id": "cybersecurity-specialist",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "사이버보안 전문가",
+        "en": "Cybersecurity Specialist"
+      },
+      "why_fit": {
+        "ko": "복잡한 보안 위협을 분석하고 방어 체계를 구축합니다.",
+        "en": "Analyzes complex security threats and builds defense systems."
+      }
+    },
+    {
+      "id": "neuroscientist",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "신경과학자",
+        "en": "Neuroscientist"
+      },
+      "why_fit": {
+        "ko": "뇌의 복잡한 메커니즘을 탐구하는 도전적 연구를 즐깁니다.",
+        "en": "Enjoys challenging research exploring the brain's complex mechanisms."
+      }
+    },
+    {
+      "id": "financial-engineer",
+      "riasec": [
+        "I",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "금융 엔지니어",
+        "en": "Financial Engineer"
+      },
+      "why_fit": {
+        "ko": "수학적 모델로 복잡한 금융 상품을 설계하고 분석합니다.",
+        "en": "Designs and analyzes complex financial products with mathematical models."
+      }
+    },
+    {
+      "id": "urban-planner",
+      "riasec": [
+        "I",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "도시 계획가",
+        "en": "Urban Planner"
+      },
+      "why_fit": {
+        "ko": "장기적 비전으로 지속 가능한 도시 환경을 설계합니다.",
+        "en": "Designs sustainable urban environments with long-term vision."
+      }
+    },
+    {
+      "id": "cryptographer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "암호학자",
+        "en": "Cryptographer"
+      },
+      "why_fit": {
+        "ko": "수학과 논리로 안전한 통신 시스템을 구축합니다.",
+        "en": "Builds secure communication systems with mathematics and logic."
+      }
+    },
+    {
+      "id": "bioinformatician",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "생물정보학자",
+        "en": "Bioinformatician"
+      },
+      "why_fit": {
+        "ko": "생물학적 데이터를 계산적으로 분석하는 융합 연구를 수행합니다.",
+        "en": "Conducts convergence research computationally analyzing biological data."
+      }
+    },
+    {
+      "id": "philosophy-professor",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "철학 교수",
+        "en": "Philosophy Professor"
+      },
+      "why_fit": {
+        "ko": "인간 존재의 근본 질문을 논리적으로 탐구합니다.",
+        "en": "Logically explores fundamental questions of human existence."
+      }
+    },
+    {
+      "id": "policy-researcher",
+      "riasec": [
+        "I",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "정책 연구원",
+        "en": "Policy Researcher"
+      },
+      "why_fit": {
+        "ko": "사회 문제를 깊이 분석하여 효과적 정책을 제안합니다.",
+        "en": "Proposes effective policies by deeply analyzing social issues."
+      }
+    },
+    {
+      "id": "patent-attorney",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "특허 변리사",
+        "en": "Patent Attorney"
+      },
+      "why_fit": {
+        "ko": "기술적 전문성과 법률 지식을 결합하여 혁신을 보호합니다.",
+        "en": "Protects innovation by combining technical expertise with legal knowledge."
+      }
+    }
+  ]
+}

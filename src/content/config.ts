@@ -12,7 +12,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     keywords: z.array(z.string()).optional(), // Additional SEO keywords beyond tags
     category: z.string().optional(),
-    track: z.enum(["academy", "magazine", "interactive", "education"]).optional(),
+    track: z.enum(["academy", "magazine", "interactive", "education", "dictionary"]).optional(),
     series: z.string().optional(),
     chapter: z.coerce.number().int().positive().optional(),
     chapterTitleShort: z.string().max(80).optional(),
@@ -21,7 +21,7 @@ const blog = defineCollection({
     draft: z.boolean().default(false),
     featured: z.boolean().default(false),
     author: z.string().default("Oiyo"),
-    sourceProject: z.enum(["blog-oiyo", "ahoxy-nextjs", "oiyo", "external-research"]).optional(),
+    sourceProject: z.enum(["wiki-oiyo", "blog-oiyo", "ahoxy-nextjs", "oiyo", "external-research"]).optional(),
     sourceSlug: z.string().optional(),
     migrationStatus: z.enum(["native", "candidate", "mapped", "drafted", "migrated", "needs-review"]).optional(),
     embeddedTools: z.array(z.string()).default([]),

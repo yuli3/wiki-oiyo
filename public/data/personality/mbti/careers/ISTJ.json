@@ -1,0 +1,325 @@
+{
+  "type": "ISTJ",
+  "top_careers": [
+    {
+      "id": "accountant",
+      "riasec": [
+        "C",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "회계사",
+        "en": "Accountant"
+      },
+      "why_fit": {
+        "ko": "정확성과 신뢰성으로 재무 업무를 완벽하게 처리합니다.",
+        "en": "Perfectly handles financial work with accuracy and reliability."
+      }
+    },
+    {
+      "id": "auditor",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "감사원",
+        "en": "Auditor"
+      },
+      "why_fit": {
+        "ko": "세심한 검토로 기업의 재무 건전성을 확인합니다.",
+        "en": "Verifies corporate financial soundness through careful review."
+      }
+    },
+    {
+      "id": "military-officer",
+      "riasec": [
+        "E",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "군 장교",
+        "en": "Military Officer"
+      },
+      "why_fit": {
+        "ko": "명확한 지침 아래 임무를 완수하는 데 탁월합니다.",
+        "en": "Excels at completing missions under clear guidelines."
+      }
+    },
+    {
+      "id": "judge",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "판사",
+        "en": "Judge"
+      },
+      "why_fit": {
+        "ko": "법과 규칙을 공정하고 정확하게 적용합니다.",
+        "en": "Applies laws and rules fairly and accurately."
+      }
+    },
+    {
+      "id": "database-administrator",
+      "riasec": [
+        "I",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "데이터베이스 관리자",
+        "en": "Database Administrator"
+      },
+      "why_fit": {
+        "ko": "데이터의 정확성과 보안을 철저히 관리합니다.",
+        "en": "Thoroughly manages data accuracy and security."
+      }
+    },
+    {
+      "id": "financial-analyst",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "재무 분석가",
+        "en": "Financial Analyst"
+      },
+      "why_fit": {
+        "ko": "수치 데이터를 정확하게 분석하여 신뢰할 수 있는 결과를 제공합니다.",
+        "en": "Provides reliable results by accurately analyzing numerical data."
+      }
+    },
+    {
+      "id": "project-manager",
+      "riasec": [
+        "C",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "프로젝트 매니저",
+        "en": "Project Manager"
+      },
+      "why_fit": {
+        "ko": "일정과 예산을 철저히 관리하여 프로젝트를 성공시킵니다.",
+        "en": "Succeeds in projects through strict management of schedules and budgets."
+      }
+    },
+    {
+      "id": "compliance-officer",
+      "riasec": [
+        "C",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "컴플라이언스 담당자",
+        "en": "Compliance Officer"
+      },
+      "why_fit": {
+        "ko": "규정과 절차를 철저히 준수하며 위험을 방지합니다.",
+        "en": "Prevents risks by strictly adhering to regulations and procedures."
+      }
+    },
+    {
+      "id": "engineer",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "엔지니어",
+        "en": "Engineer"
+      },
+      "why_fit": {
+        "ko": "실용적이고 체계적으로 기술 문제를 해결합니다.",
+        "en": "Solves technical problems practically and systematically."
+      }
+    },
+    {
+      "id": "police-officer",
+      "riasec": [
+        "E",
+        "R",
+        "S"
+      ],
+      "title": {
+        "ko": "경찰관",
+        "en": "Police Officer"
+      },
+      "why_fit": {
+        "ko": "법과 질서를 유지하는 책임에 헌신합니다.",
+        "en": "Dedicated to the responsibility of maintaining law and order."
+      }
+    },
+    {
+      "id": "librarian",
+      "riasec": [
+        "C",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "사서",
+        "en": "Librarian"
+      },
+      "why_fit": {
+        "ko": "지식 자원을 체계적으로 관리하고 이용자를 지원합니다.",
+        "en": "Systematically manages knowledge resources and supports users."
+      }
+    },
+    {
+      "id": "quality-control",
+      "riasec": [
+        "C",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "품질 관리자",
+        "en": "Quality Control Inspector"
+      },
+      "why_fit": {
+        "ko": "세심한 점검으로 제품과 서비스의 품질을 보장합니다.",
+        "en": "Ensures product and service quality through careful inspection."
+      }
+    },
+    {
+      "id": "medical-records",
+      "riasec": [
+        "C",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "의무기록사",
+        "en": "Medical Records Specialist"
+      },
+      "why_fit": {
+        "ko": "의료 정보를 정확하게 기록하고 관리합니다.",
+        "en": "Accurately records and manages medical information."
+      }
+    },
+    {
+      "id": "tax-examiner",
+      "riasec": [
+        "C",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "세무 조사관",
+        "en": "Tax Examiner"
+      },
+      "why_fit": {
+        "ko": "세법을 정확하게 적용하여 납세 준수를 보장합니다.",
+        "en": "Ensures tax compliance by accurately applying tax laws."
+      }
+    },
+    {
+      "id": "logistics-manager",
+      "riasec": [
+        "C",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "물류 관리자",
+        "en": "Logistics Manager"
+      },
+      "why_fit": {
+        "ko": "물류 프로세스를 정확하고 효율적으로 관리합니다.",
+        "en": "Manages logistics processes accurately and efficiently."
+      }
+    },
+    {
+      "id": "civil-servant",
+      "riasec": [
+        "C",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "공무원",
+        "en": "Civil Servant"
+      },
+      "why_fit": {
+        "ko": "공공 서비스를 정확하고 공정하게 제공합니다.",
+        "en": "Provides public services accurately and fairly."
+      }
+    },
+    {
+      "id": "insurance-claims",
+      "riasec": [
+        "C",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "보험 심사원",
+        "en": "Insurance Claims Adjuster"
+      },
+      "why_fit": {
+        "ko": "세심한 조사로 공정한 보험금 처리를 보장합니다.",
+        "en": "Ensures fair insurance payment processing through careful investigation."
+      }
+    },
+    {
+      "id": "supply-chain",
+      "riasec": [
+        "C",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "공급망 분석가",
+        "en": "Supply Chain Analyst"
+      },
+      "why_fit": {
+        "ko": "공급망 데이터를 정확하게 분석하여 효율을 높입니다.",
+        "en": "Increases efficiency by accurately analyzing supply chain data."
+      }
+    },
+    {
+      "id": "court-reporter",
+      "riasec": [
+        "C",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "법원 속기사",
+        "en": "Court Reporter"
+      },
+      "why_fit": {
+        "ko": "중요한 법적 절차를 정확하게 기록합니다.",
+        "en": "Accurately records important legal proceedings."
+      }
+    },
+    {
+      "id": "actuary",
+      "riasec": [
+        "C",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "보험계리사",
+        "en": "Actuary"
+      },
+      "why_fit": {
+        "ko": "수학적 정확성으로 복잡한 리스크를 분석합니다.",
+        "en": "Analyzes complex risks with mathematical accuracy."
+      }
+    }
+  ]
+}

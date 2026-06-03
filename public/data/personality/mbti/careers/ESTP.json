@@ -1,0 +1,325 @@
+{
+  "type": "ESTP",
+  "top_careers": [
+    {
+      "id": "entrepreneur",
+      "riasec": [
+        "E",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "기업가",
+        "en": "Entrepreneur"
+      },
+      "why_fit": {
+        "ko": "빠른 결정과 대담한 실행으로 기회를 잡습니다.",
+        "en": "Seizes opportunities with quick decisions and bold execution."
+      }
+    },
+    {
+      "id": "detective",
+      "riasec": [
+        "I",
+        "E",
+        "R"
+      ],
+      "title": {
+        "ko": "형사",
+        "en": "Detective"
+      },
+      "why_fit": {
+        "ko": "현장 중심적 사고와 빠른 판단으로 사건을 해결합니다.",
+        "en": "Solves cases with on-the-ground thinking and quick judgment."
+      }
+    },
+    {
+      "id": "sales-manager",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "영업 매니저",
+        "en": "Sales Manager"
+      },
+      "why_fit": {
+        "ko": "에너지 넘치는 설득력으로 목표를 초과 달성합니다.",
+        "en": "Exceeds targets with energetic persuasiveness."
+      }
+    },
+    {
+      "id": "paramedic",
+      "riasec": [
+        "S",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "응급구조사",
+        "en": "Paramedic"
+      },
+      "why_fit": {
+        "ko": "위기 상황에서 빠르고 정확하게 행동합니다.",
+        "en": "Acts quickly and accurately in crisis situations."
+      }
+    },
+    {
+      "id": "athlete",
+      "riasec": [
+        "R",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "운동선수",
+        "en": "Athlete"
+      },
+      "why_fit": {
+        "ko": "신체적 도전을 즐기고 경쟁에서 최고의 퍼포먼스를 발휘합니다.",
+        "en": "Enjoys physical challenges and delivers peak performance in competition."
+      }
+    },
+    {
+      "id": "stockbroker",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "주식 브로커",
+        "en": "Stockbroker"
+      },
+      "why_fit": {
+        "ko": "빠른 시장 변화에 즉각적으로 대응하며 수익을 창출합니다.",
+        "en": "Generates profits by responding immediately to rapid market changes."
+      }
+    },
+    {
+      "id": "crisis-manager",
+      "riasec": [
+        "E",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "위기 관리 전문가",
+        "en": "Crisis Manager"
+      },
+      "why_fit": {
+        "ko": "긴박한 상황에서 침착하게 빠른 해결책을 실행합니다.",
+        "en": "Calmly executes quick solutions in urgent situations."
+      }
+    },
+    {
+      "id": "construction-manager",
+      "riasec": [
+        "R",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "건설 관리자",
+        "en": "Construction Manager"
+      },
+      "why_fit": {
+        "ko": "현장에서 직접 팀을 이끌며 프로젝트를 완수합니다.",
+        "en": "Leads teams directly on-site to complete projects."
+      }
+    },
+    {
+      "id": "firefighter",
+      "riasec": [
+        "R",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "소방관",
+        "en": "Firefighter"
+      },
+      "why_fit": {
+        "ko": "위험한 상황에서도 두려움 없이 행동하는 용기가 있습니다.",
+        "en": "Has the courage to act fearlessly even in dangerous situations."
+      }
+    },
+    {
+      "id": "pilot",
+      "riasec": [
+        "R",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "파일럿",
+        "en": "Pilot"
+      },
+      "why_fit": {
+        "ko": "압박감 속에서도 정확한 판단으로 비행을 완수합니다.",
+        "en": "Completes flights with accurate judgment even under pressure."
+      }
+    },
+    {
+      "id": "marketing-manager",
+      "riasec": [
+        "E",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "마케팅 매니저",
+        "en": "Marketing Manager"
+      },
+      "why_fit": {
+        "ko": "직관적 판단으로 효과적인 마케팅 캠페인을 전개합니다.",
+        "en": "Develops effective marketing campaigns with intuitive judgment."
+      }
+    },
+    {
+      "id": "real-estate-agent",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "부동산 에이전트",
+        "en": "Real Estate Agent"
+      },
+      "why_fit": {
+        "ko": "빠른 시장 감각과 협상력으로 거래를 성사시킵니다.",
+        "en": "Closes deals with quick market sense and negotiation skills."
+      }
+    },
+    {
+      "id": "event-promoter",
+      "riasec": [
+        "E",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "이벤트 프로모터",
+        "en": "Event Promoter"
+      },
+      "why_fit": {
+        "ko": "활기찬 에너지로 이벤트를 홍보하고 참여를 이끕니다.",
+        "en": "Promotes events and drives participation with vibrant energy."
+      }
+    },
+    {
+      "id": "trader",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "트레이더",
+        "en": "Trader"
+      },
+      "why_fit": {
+        "ko": "실시간 시장 분석과 빠른 의사결정이 강점입니다.",
+        "en": "Real-time market analysis and quick decision-making are strengths."
+      }
+    },
+    {
+      "id": "personal-trainer",
+      "riasec": [
+        "S",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "퍼스널 트레이너",
+        "en": "Personal Trainer"
+      },
+      "why_fit": {
+        "ko": "활동적인 환경에서 직접 결과를 만들어 나가는 것을 즐깁니다.",
+        "en": "Enjoys directly creating results in an active environment."
+      }
+    },
+    {
+      "id": "tour-operator",
+      "riasec": [
+        "E",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "투어 오퍼레이터",
+        "en": "Tour Operator"
+      },
+      "why_fit": {
+        "ko": "즉흥적이고 활기찬 여행 경험을 기획합니다.",
+        "en": "Plans spontaneous and vibrant travel experiences."
+      }
+    },
+    {
+      "id": "bartender",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "바텐더",
+        "en": "Bartender"
+      },
+      "why_fit": {
+        "ko": "활기찬 소셜 환경에서 고객과 자연스럽게 어울립니다.",
+        "en": "Naturally mingles with customers in vibrant social environments."
+      }
+    },
+    {
+      "id": "insurance-agent",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "보험 설계사",
+        "en": "Insurance Agent"
+      },
+      "why_fit": {
+        "ko": "적극적인 네트워킹과 설득으로 고객을 확보합니다.",
+        "en": "Acquires clients through proactive networking and persuasion."
+      }
+    },
+    {
+      "id": "sports-coach",
+      "riasec": [
+        "S",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "스포츠 코치",
+        "en": "Sports Coach"
+      },
+      "why_fit": {
+        "ko": "실전 경험을 바탕으로 선수들의 퍼포먼스를 향상시킵니다.",
+        "en": "Improves athletes' performance based on practical experience."
+      }
+    },
+    {
+      "id": "logistics-manager",
+      "riasec": [
+        "E",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "물류 매니저",
+        "en": "Logistics Manager"
+      },
+      "why_fit": {
+        "ko": "실시간 문제 해결과 빠른 대응으로 운영 효율을 높입니다.",
+        "en": "Increases operational efficiency through real-time problem solving and quick response."
+      }
+    }
+  ]
+}

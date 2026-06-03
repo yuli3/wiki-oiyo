@@ -1,0 +1,325 @@
+{
+  "type": "ISFP",
+  "top_careers": [
+    {
+      "id": "artist",
+      "riasec": [
+        "A",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "예술가",
+        "en": "Artist"
+      },
+      "why_fit": {
+        "ko": "감각적 경험과 내면의 감정을 창의적으로 표현합니다.",
+        "en": "Creatively expresses sensory experiences and inner emotions."
+      }
+    },
+    {
+      "id": "musician",
+      "riasec": [
+        "A",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "음악가",
+        "en": "Musician"
+      },
+      "why_fit": {
+        "ko": "음악으로 감정을 섬세하게 표현하는 천부적 능력이 있습니다.",
+        "en": "Has a natural ability to delicately express emotions through music."
+      }
+    },
+    {
+      "id": "fashion-designer",
+      "riasec": [
+        "A",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "패션 디자이너",
+        "en": "Fashion Designer"
+      },
+      "why_fit": {
+        "ko": "아름다움과 실용성을 창의적으로 결합합니다.",
+        "en": "Creatively combines beauty and practicality."
+      }
+    },
+    {
+      "id": "chef",
+      "riasec": [
+        "A",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "요리사",
+        "en": "Chef"
+      },
+      "why_fit": {
+        "ko": "감각적 재능으로 창의적인 요리를 만들어냅니다.",
+        "en": "Creates creative dishes with sensory talent."
+      }
+    },
+    {
+      "id": "photographer",
+      "riasec": [
+        "A",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "사진작가",
+        "en": "Photographer"
+      },
+      "why_fit": {
+        "ko": "세상의 아름다운 순간을 포착하는 예민한 눈을 가지고 있습니다.",
+        "en": "Has a sensitive eye for capturing beautiful moments in the world."
+      }
+    },
+    {
+      "id": "veterinarian",
+      "riasec": [
+        "S",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "수의사",
+        "en": "Veterinarian"
+      },
+      "why_fit": {
+        "ko": "동물에 대한 깊은 공감과 사랑으로 돌봄을 제공합니다.",
+        "en": "Provides care with deep empathy and love for animals."
+      }
+    },
+    {
+      "id": "interior-designer",
+      "riasec": [
+        "A",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "인테리어 디자이너",
+        "en": "Interior Designer"
+      },
+      "why_fit": {
+        "ko": "공간의 미적 감각을 살려 아름다운 환경을 만듭니다.",
+        "en": "Creates beautiful environments by utilizing aesthetic sense of space."
+      }
+    },
+    {
+      "id": "dancer",
+      "riasec": [
+        "A",
+        "R",
+        "S"
+      ],
+      "title": {
+        "ko": "댄서",
+        "en": "Dancer"
+      },
+      "why_fit": {
+        "ko": "몸의 표현을 통해 감정과 이야기를 전달합니다.",
+        "en": "Conveys emotions and stories through bodily expression."
+      }
+    },
+    {
+      "id": "physical-therapist",
+      "riasec": [
+        "S",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "물리치료사",
+        "en": "Physical Therapist"
+      },
+      "why_fit": {
+        "ko": "신체적 돌봄으로 환자의 회복을 직접 지원합니다.",
+        "en": "Directly supports patient recovery through physical care."
+      }
+    },
+    {
+      "id": "cosmetologist",
+      "riasec": [
+        "A",
+        "S",
+        "R"
+      ],
+      "title": {
+        "ko": "미용사",
+        "en": "Cosmetologist"
+      },
+      "why_fit": {
+        "ko": "외모의 아름다움을 창의적으로 표현하는 일을 즐깁니다.",
+        "en": "Enjoys creatively expressing the beauty of appearance."
+      }
+    },
+    {
+      "id": "landscape-architect",
+      "riasec": [
+        "A",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "조경 건축가",
+        "en": "Landscape Architect"
+      },
+      "why_fit": {
+        "ko": "자연과 공간을 아름답게 설계하는 일에 열정이 있습니다.",
+        "en": "Has passion for beautifully designing nature and space."
+      }
+    },
+    {
+      "id": "social-worker",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "사회복지사",
+        "en": "Social Worker"
+      },
+      "why_fit": {
+        "ko": "조용하지만 헌신적으로 취약한 사람들을 돕습니다.",
+        "en": "Quietly but dedicatedly helps vulnerable people."
+      }
+    },
+    {
+      "id": "massage-therapist",
+      "riasec": [
+        "S",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "마사지 치료사",
+        "en": "Massage Therapist"
+      },
+      "why_fit": {
+        "ko": "신체적 접촉을 통한 치유에서 만족감을 느낍니다.",
+        "en": "Finds satisfaction in healing through physical touch."
+      }
+    },
+    {
+      "id": "animal-trainer",
+      "riasec": [
+        "R",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "동물 조련사",
+        "en": "Animal Trainer"
+      },
+      "why_fit": {
+        "ko": "동물과의 교감을 통해 신뢰 관계를 구축합니다.",
+        "en": "Builds trust relationships through communication with animals."
+      }
+    },
+    {
+      "id": "teacher",
+      "riasec": [
+        "S",
+        "A",
+        "I"
+      ],
+      "title": {
+        "ko": "교사",
+        "en": "Teacher"
+      },
+      "why_fit": {
+        "ko": "각 학생의 개성과 속도를 존중하며 지원합니다.",
+        "en": "Supports each student while respecting their individuality and pace."
+      }
+    },
+    {
+      "id": "graphic-designer",
+      "riasec": [
+        "A",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "그래픽 디자이너",
+        "en": "Graphic Designer"
+      },
+      "why_fit": {
+        "ko": "시각적 감각으로 아름다운 디자인을 만들어냅니다.",
+        "en": "Creates beautiful designs with visual sensibility."
+      }
+    },
+    {
+      "id": "ceramics-artist",
+      "riasec": [
+        "A",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "도예가",
+        "en": "Ceramics Artist"
+      },
+      "why_fit": {
+        "ko": "손으로 만드는 창작 활동에서 깊은 만족감을 느낍니다.",
+        "en": "Finds deep satisfaction in hands-on creative activities."
+      }
+    },
+    {
+      "id": "childcare-worker",
+      "riasec": [
+        "S",
+        "A",
+        "R"
+      ],
+      "title": {
+        "ko": "보육 교사",
+        "en": "Childcare Worker"
+      },
+      "why_fit": {
+        "ko": "어린이의 순수한 감성에 공감하며 따뜻하게 돌봅니다.",
+        "en": "Empathizes with children's pure emotions and cares for them warmly."
+      }
+    },
+    {
+      "id": "yoga-instructor",
+      "riasec": [
+        "S",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "요가 강사",
+        "en": "Yoga Instructor"
+      },
+      "why_fit": {
+        "ko": "신체와 마음의 연결을 통한 웰빙을 지도합니다.",
+        "en": "Guides wellbeing through the connection of body and mind."
+      }
+    },
+    {
+      "id": "illustrator",
+      "riasec": [
+        "A",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "일러스트레이터",
+        "en": "Illustrator"
+      },
+      "why_fit": {
+        "ko": "감각적이고 창의적인 이미지로 이야기를 시각화합니다.",
+        "en": "Visualizes stories with sensory and creative images."
+      }
+    }
+  ]
+}

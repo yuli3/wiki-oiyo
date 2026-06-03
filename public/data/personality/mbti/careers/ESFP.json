@@ -1,0 +1,325 @@
+{
+  "type": "ESFP",
+  "top_careers": [
+    {
+      "id": "performer",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "공연자",
+        "en": "Performer"
+      },
+      "why_fit": {
+        "ko": "무대에서 에너지를 발산하고 관객과 소통하는 것을 사랑합니다.",
+        "en": "Loves releasing energy on stage and connecting with audiences."
+      }
+    },
+    {
+      "id": "event-coordinator",
+      "riasec": [
+        "E",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "이벤트 코디네이터",
+        "en": "Event Coordinator"
+      },
+      "why_fit": {
+        "ko": "활기찬 행사를 기획하고 참여자들에게 즐거움을 줍니다.",
+        "en": "Plans lively events and brings joy to participants."
+      }
+    },
+    {
+      "id": "sales-representative",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "영업 담당자",
+        "en": "Sales Representative"
+      },
+      "why_fit": {
+        "ko": "사람들과의 만남에서 에너지를 얻고 설득력이 뛰어납니다.",
+        "en": "Gains energy from meeting people and is highly persuasive."
+      }
+    },
+    {
+      "id": "flight-attendant",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "승무원",
+        "en": "Flight Attendant"
+      },
+      "why_fit": {
+        "ko": "다양한 사람들을 만나며 서비스를 제공하는 것을 즐깁니다.",
+        "en": "Enjoys meeting diverse people and providing service."
+      }
+    },
+    {
+      "id": "personal-trainer",
+      "riasec": [
+        "S",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "개인 트레이너",
+        "en": "Personal Trainer"
+      },
+      "why_fit": {
+        "ko": "활동적인 환경에서 사람들의 건강 목표를 지원합니다.",
+        "en": "Supports people's health goals in an active environment."
+      }
+    },
+    {
+      "id": "actor",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "배우",
+        "en": "Actor"
+      },
+      "why_fit": {
+        "ko": "자발적이고 감정적 표현에 뛰어난 능력을 발휘합니다.",
+        "en": "Excels at spontaneous and emotional expression."
+      }
+    },
+    {
+      "id": "chef",
+      "riasec": [
+        "A",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "요리사",
+        "en": "Chef"
+      },
+      "why_fit": {
+        "ko": "창의적 요리로 사람들에게 즐거운 경험을 선사합니다.",
+        "en": "Provides enjoyable experiences to people through creative cooking."
+      }
+    },
+    {
+      "id": "travel-blogger",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "여행 블로거",
+        "en": "Travel Blogger"
+      },
+      "why_fit": {
+        "ko": "세상을 탐험하고 경험을 생생하게 공유하는 것을 즐깁니다.",
+        "en": "Enjoys exploring the world and vividly sharing experiences."
+      }
+    },
+    {
+      "id": "social-media-influencer",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "소셜미디어 인플루언서",
+        "en": "Social Media Influencer"
+      },
+      "why_fit": {
+        "ko": "자신의 라이프스타일을 공유하며 팔로워들에게 영감을 줍니다.",
+        "en": "Inspires followers by sharing their lifestyle."
+      }
+    },
+    {
+      "id": "customer-relations",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "고객 관계 담당자",
+        "en": "Customer Relations Officer"
+      },
+      "why_fit": {
+        "ko": "고객과의 따뜻한 소통으로 관계를 구축하는 데 뛰어납니다.",
+        "en": "Excels at building relationships through warm customer communication."
+      }
+    },
+    {
+      "id": "musician",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "음악가",
+        "en": "Musician"
+      },
+      "why_fit": {
+        "ko": "음악을 통해 감정을 표현하고 청중과 연결됩니다.",
+        "en": "Expresses emotions through music and connects with audiences."
+      }
+    },
+    {
+      "id": "dancer",
+      "riasec": [
+        "A",
+        "R",
+        "S"
+      ],
+      "title": {
+        "ko": "댄서",
+        "en": "Dancer"
+      },
+      "why_fit": {
+        "ko": "몸으로 감정과 이야기를 표현하는 것을 즐깁니다.",
+        "en": "Enjoys expressing emotions and stories through movement."
+      }
+    },
+    {
+      "id": "fashion-stylist",
+      "riasec": [
+        "A",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "패션 스타일리스트",
+        "en": "Fashion Stylist"
+      },
+      "why_fit": {
+        "ko": "개인의 매력을 최대화하는 스타일을 연출합니다.",
+        "en": "Creates styles that maximize individual appeal."
+      }
+    },
+    {
+      "id": "wellness-instructor",
+      "riasec": [
+        "S",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "웰니스 강사",
+        "en": "Wellness Instructor"
+      },
+      "why_fit": {
+        "ko": "사람들이 건강하고 활기찬 삶을 살도록 돕습니다.",
+        "en": "Helps people live healthy and vibrant lives."
+      }
+    },
+    {
+      "id": "bartender",
+      "riasec": [
+        "E",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "바텐더",
+        "en": "Bartender"
+      },
+      "why_fit": {
+        "ko": "소셜한 환경에서 사람들에게 즐거운 경험을 제공합니다.",
+        "en": "Provides enjoyable experiences to people in social environments."
+      }
+    },
+    {
+      "id": "tour-guide",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "여행 가이드",
+        "en": "Tour Guide"
+      },
+      "why_fit": {
+        "ko": "여행자들에게 활기차고 기억에 남는 경험을 선사합니다.",
+        "en": "Provides vibrant, memorable experiences to travelers."
+      }
+    },
+    {
+      "id": "sports-coach",
+      "riasec": [
+        "S",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "스포츠 코치",
+        "en": "Sports Coach"
+      },
+      "why_fit": {
+        "ko": "선수들을 열정적으로 이끌고 동기를 부여합니다.",
+        "en": "Passionately leads and motivates athletes."
+      }
+    },
+    {
+      "id": "retail-manager",
+      "riasec": [
+        "E",
+        "S",
+        "C"
+      ],
+      "title": {
+        "ko": "소매 매니저",
+        "en": "Retail Manager"
+      },
+      "why_fit": {
+        "ko": "활기찬 쇼핑 환경을 만들고 팀을 이끕니다.",
+        "en": "Creates a vibrant shopping environment and leads the team."
+      }
+    },
+    {
+      "id": "makeup-artist",
+      "riasec": [
+        "A",
+        "S",
+        "R"
+      ],
+      "title": {
+        "ko": "메이크업 아티스트",
+        "en": "Makeup Artist"
+      },
+      "why_fit": {
+        "ko": "창의적 기술로 아름다움을 표현하는 것을 즐깁니다.",
+        "en": "Enjoys expressing beauty with creative skills."
+      }
+    },
+    {
+      "id": "recreation-director",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "레크리에이션 디렉터",
+        "en": "Recreation Director"
+      },
+      "why_fit": {
+        "ko": "사람들에게 즐거운 활동 프로그램을 기획하고 운영합니다.",
+        "en": "Plans and runs enjoyable activity programs for people."
+      }
+    }
+  ]
+}

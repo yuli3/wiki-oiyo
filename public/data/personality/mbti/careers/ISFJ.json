@@ -1,0 +1,325 @@
+{
+  "type": "ISFJ",
+  "top_careers": [
+    {
+      "id": "nurse",
+      "riasec": [
+        "S",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "간호사",
+        "en": "Nurse"
+      },
+      "why_fit": {
+        "ko": "환자를 세심하게 돌보는 것에서 진정한 보람을 느낍니다.",
+        "en": "Finds genuine fulfillment in carefully caring for patients."
+      }
+    },
+    {
+      "id": "teacher",
+      "riasec": [
+        "S",
+        "C",
+        "A"
+      ],
+      "title": {
+        "ko": "교사",
+        "en": "Teacher"
+      },
+      "why_fit": {
+        "ko": "학생들의 성장을 따뜻하고 헌신적으로 지원합니다.",
+        "en": "Warmly and dedicatedly supports students' growth."
+      }
+    },
+    {
+      "id": "librarian",
+      "riasec": [
+        "C",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "사서",
+        "en": "Librarian"
+      },
+      "why_fit": {
+        "ko": "정돈된 지식 환경을 유지하고 이용자를 세심하게 안내합니다.",
+        "en": "Maintains an organized knowledge environment and carefully guides users."
+      }
+    },
+    {
+      "id": "social-worker",
+      "riasec": [
+        "S",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "사회복지사",
+        "en": "Social Worker"
+      },
+      "why_fit": {
+        "ko": "도움이 필요한 사람들을 위해 묵묵히 헌신합니다.",
+        "en": "Quietly devoted to people who need help."
+      }
+    },
+    {
+      "id": "hr-specialist",
+      "riasec": [
+        "S",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "인사 전문가",
+        "en": "HR Specialist"
+      },
+      "why_fit": {
+        "ko": "직원들의 복지와 필요를 세심하게 챙깁니다.",
+        "en": "Carefully attends to employees' welfare and needs."
+      }
+    },
+    {
+      "id": "office-administrator",
+      "riasec": [
+        "C",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "사무 행정가",
+        "en": "Office Administrator"
+      },
+      "why_fit": {
+        "ko": "세심하고 체계적으로 업무를 처리하여 조직을 지원합니다.",
+        "en": "Supports the organization by handling work carefully and systematically."
+      }
+    },
+    {
+      "id": "dental-hygienist",
+      "riasec": [
+        "S",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "치과 위생사",
+        "en": "Dental Hygienist"
+      },
+      "why_fit": {
+        "ko": "환자의 구강 건강을 위해 꼼꼼하게 서비스합니다.",
+        "en": "Provides meticulous service for patients' oral health."
+      }
+    },
+    {
+      "id": "accountant",
+      "riasec": [
+        "C",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "회계사",
+        "en": "Accountant"
+      },
+      "why_fit": {
+        "ko": "정확성과 세심함으로 재무 업무를 완벽하게 처리합니다.",
+        "en": "Perfectly handles financial work with accuracy and attention to detail."
+      }
+    },
+    {
+      "id": "child-care-worker",
+      "riasec": [
+        "S",
+        "C",
+        "A"
+      ],
+      "title": {
+        "ko": "보육 교사",
+        "en": "Child Care Worker"
+      },
+      "why_fit": {
+        "ko": "어린이를 따뜻하고 안전하게 돌보는 것에 헌신합니다.",
+        "en": "Dedicated to warmly and safely caring for children."
+      }
+    },
+    {
+      "id": "medical-secretary",
+      "riasec": [
+        "C",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "의료 비서",
+        "en": "Medical Secretary"
+      },
+      "why_fit": {
+        "ko": "의료 기관의 행정 업무를 정확하고 세심하게 처리합니다.",
+        "en": "Handles administrative tasks in medical institutions accurately and carefully."
+      }
+    },
+    {
+      "id": "pharmacy-technician",
+      "riasec": [
+        "C",
+        "S",
+        "R"
+      ],
+      "title": {
+        "ko": "약사 보조원",
+        "en": "Pharmacy Technician"
+      },
+      "why_fit": {
+        "ko": "정확한 약품 관리로 환자의 안전을 보장합니다.",
+        "en": "Ensures patient safety through accurate medication management."
+      }
+    },
+    {
+      "id": "elementary-teacher",
+      "riasec": [
+        "S",
+        "A",
+        "C"
+      ],
+      "title": {
+        "ko": "초등 교사",
+        "en": "Elementary Teacher"
+      },
+      "why_fit": {
+        "ko": "어린이의 전인적 발달을 따뜻하게 지원합니다.",
+        "en": "Warmly supports children's holistic development."
+      }
+    },
+    {
+      "id": "customer-support",
+      "riasec": [
+        "S",
+        "C",
+        "E"
+      ],
+      "title": {
+        "ko": "고객 지원 담당자",
+        "en": "Customer Support Specialist"
+      },
+      "why_fit": {
+        "ko": "고객의 문제를 인내심 있고 세심하게 해결합니다.",
+        "en": "Resolves customer issues patiently and carefully."
+      }
+    },
+    {
+      "id": "bookkeeper",
+      "riasec": [
+        "C",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "부기 담당자",
+        "en": "Bookkeeper"
+      },
+      "why_fit": {
+        "ko": "정확한 기록과 체계적 관리로 재무 건전성을 유지합니다.",
+        "en": "Maintains financial soundness through accurate records and systematic management."
+      }
+    },
+    {
+      "id": "physical-therapist",
+      "riasec": [
+        "S",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "물리치료사",
+        "en": "Physical Therapist"
+      },
+      "why_fit": {
+        "ko": "환자의 회복을 위해 인내심 있게 지원합니다.",
+        "en": "Patiently supports patient recovery."
+      }
+    },
+    {
+      "id": "school-counselor",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "학교 상담사",
+        "en": "School Counselor"
+      },
+      "why_fit": {
+        "ko": "학생들의 어려움을 조용히 들어주고 도움을 줍니다.",
+        "en": "Quietly listens to students' difficulties and offers help."
+      }
+    },
+    {
+      "id": "interior-designer",
+      "riasec": [
+        "A",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "인테리어 디자이너",
+        "en": "Interior Designer"
+      },
+      "why_fit": {
+        "ko": "사람들이 편안하게 생활할 수 있는 공간을 세심하게 설계합니다.",
+        "en": "Carefully designs spaces for people to live comfortably."
+      }
+    },
+    {
+      "id": "dietitian",
+      "riasec": [
+        "S",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "영양사",
+        "en": "Dietitian"
+      },
+      "why_fit": {
+        "ko": "건강한 식생활을 위한 실용적인 지침을 제공합니다.",
+        "en": "Provides practical guidance for healthy eating."
+      }
+    },
+    {
+      "id": "paralegal",
+      "riasec": [
+        "C",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "법률 보조원",
+        "en": "Paralegal"
+      },
+      "why_fit": {
+        "ko": "법률 업무를 정확하고 세심하게 지원합니다.",
+        "en": "Accurately and carefully supports legal work."
+      }
+    },
+    {
+      "id": "museum-curator",
+      "riasec": [
+        "A",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "박물관 큐레이터",
+        "en": "Museum Curator"
+      },
+      "why_fit": {
+        "ko": "문화 유산을 보존하고 대중과 연결하는 역할을 즐깁니다.",
+        "en": "Enjoys the role of preserving cultural heritage and connecting it with the public."
+      }
+    }
+  ]
+}

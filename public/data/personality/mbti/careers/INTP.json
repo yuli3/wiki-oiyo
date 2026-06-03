@@ -1,0 +1,325 @@
+{
+  "type": "INTP",
+  "top_careers": [
+    {
+      "id": "mathematician",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "수학자",
+        "en": "Mathematician"
+      },
+      "why_fit": {
+        "ko": "순수한 논리와 추상적 사고에서 아름다움을 발견합니다.",
+        "en": "Discovers beauty in pure logic and abstract thinking."
+      }
+    },
+    {
+      "id": "philosopher",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "철학자",
+        "en": "Philosopher"
+      },
+      "why_fit": {
+        "ko": "존재와 지식의 근본 질문을 끊임없이 탐구합니다.",
+        "en": "Constantly explores fundamental questions of existence and knowledge."
+      }
+    },
+    {
+      "id": "software-developer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "소프트웨어 개발자",
+        "en": "Software Developer"
+      },
+      "why_fit": {
+        "ko": "논리적 구조로 복잡한 문제를 우아하게 해결합니다.",
+        "en": "Elegantly solves complex problems with logical structures."
+      }
+    },
+    {
+      "id": "physicist",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "물리학자",
+        "en": "Physicist"
+      },
+      "why_fit": {
+        "ko": "우주의 근본 법칙을 탐구하는 지적 여정을 즐깁니다.",
+        "en": "Enjoys the intellectual journey of exploring the universe's fundamental laws."
+      }
+    },
+    {
+      "id": "researcher",
+      "riasec": [
+        "I",
+        "A",
+        "R"
+      ],
+      "title": {
+        "ko": "연구원",
+        "en": "Researcher"
+      },
+      "why_fit": {
+        "ko": "깊이 있는 탐구로 새로운 이해를 만들어 냅니다.",
+        "en": "Creates new understanding through in-depth exploration."
+      }
+    },
+    {
+      "id": "ai-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "AI 엔지니어",
+        "en": "AI Engineer"
+      },
+      "why_fit": {
+        "ko": "지능 시스템의 복잡한 원리를 설계하고 구현합니다.",
+        "en": "Designs and implements the complex principles of intelligent systems."
+      }
+    },
+    {
+      "id": "economist",
+      "riasec": [
+        "I",
+        "C",
+        "A"
+      ],
+      "title": {
+        "ko": "경제학자",
+        "en": "Economist"
+      },
+      "why_fit": {
+        "ko": "경제 현상의 이론적 모델을 구축하고 검증합니다.",
+        "en": "Builds and validates theoretical models of economic phenomena."
+      }
+    },
+    {
+      "id": "game-designer",
+      "riasec": [
+        "A",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "게임 디자이너",
+        "en": "Game Designer"
+      },
+      "why_fit": {
+        "ko": "복잡한 시스템 규칙과 창의적 메카닉을 설계합니다.",
+        "en": "Designs complex system rules and creative mechanics."
+      }
+    },
+    {
+      "id": "data-analyst",
+      "riasec": [
+        "I",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "데이터 분석가",
+        "en": "Data Analyst"
+      },
+      "why_fit": {
+        "ko": "데이터 패턴 속에서 숨겨진 의미를 찾아내는 것을 즐깁니다.",
+        "en": "Enjoys finding hidden meaning in data patterns."
+      }
+    },
+    {
+      "id": "cryptologist",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "암호학자",
+        "en": "Cryptologist"
+      },
+      "why_fit": {
+        "ko": "복잡한 암호 체계를 이해하고 개발합니다.",
+        "en": "Understands and develops complex cryptographic systems."
+      }
+    },
+    {
+      "id": "theoretical-physicist",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "이론 물리학자",
+        "en": "Theoretical Physicist"
+      },
+      "why_fit": {
+        "ko": "물질과 에너지의 근본 법칙을 이론적으로 탐구합니다.",
+        "en": "Theoretically explores the fundamental laws of matter and energy."
+      }
+    },
+    {
+      "id": "linguist",
+      "riasec": [
+        "I",
+        "A",
+        "S"
+      ],
+      "title": {
+        "ko": "언어학자",
+        "en": "Linguist"
+      },
+      "why_fit": {
+        "ko": "언어의 구조와 의미 체계를 분석하고 이해합니다.",
+        "en": "Analyzes and understands the structure and meaning system of language."
+      }
+    },
+    {
+      "id": "architect",
+      "riasec": [
+        "A",
+        "I",
+        "R"
+      ],
+      "title": {
+        "ko": "건축가",
+        "en": "Architect"
+      },
+      "why_fit": {
+        "ko": "공간의 논리적 구조와 미적 형태를 창의적으로 설계합니다.",
+        "en": "Creatively designs the logical structure and aesthetic form of space."
+      }
+    },
+    {
+      "id": "statistician",
+      "riasec": [
+        "I",
+        "C",
+        "R"
+      ],
+      "title": {
+        "ko": "통계학자",
+        "en": "Statistician"
+      },
+      "why_fit": {
+        "ko": "데이터에서 의미 있는 패턴을 수학적으로 추출합니다.",
+        "en": "Mathematically extracts meaningful patterns from data."
+      }
+    },
+    {
+      "id": "compiler-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "컴파일러 엔지니어",
+        "en": "Compiler Engineer"
+      },
+      "why_fit": {
+        "ko": "프로그래밍 언어의 이론적 기반과 구현을 탐구합니다.",
+        "en": "Explores the theoretical foundations and implementation of programming languages."
+      }
+    },
+    {
+      "id": "technical-writer",
+      "riasec": [
+        "A",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "기술 작가",
+        "en": "Technical Writer"
+      },
+      "why_fit": {
+        "ko": "복잡한 기술 개념을 명확하게 설명하는 것을 즐깁니다.",
+        "en": "Enjoys clearly explaining complex technical concepts."
+      }
+    },
+    {
+      "id": "biomedical-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "생체의학 엔지니어",
+        "en": "Biomedical Engineer"
+      },
+      "why_fit": {
+        "ko": "공학과 의학의 경계에서 혁신적 솔루션을 개발합니다.",
+        "en": "Develops innovative solutions at the boundary of engineering and medicine."
+      }
+    },
+    {
+      "id": "network-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "네트워크 엔지니어",
+        "en": "Network Engineer"
+      },
+      "why_fit": {
+        "ko": "복잡한 네트워크 시스템을 설계하고 최적화합니다.",
+        "en": "Designs and optimizes complex network systems."
+      }
+    },
+    {
+      "id": "quantum-physicist",
+      "riasec": [
+        "I",
+        "R",
+        "A"
+      ],
+      "title": {
+        "ko": "양자 물리학자",
+        "en": "Quantum Physicist"
+      },
+      "why_fit": {
+        "ko": "양자 세계의 신비로운 현상을 탐구합니다.",
+        "en": "Explores the mysterious phenomena of the quantum world."
+      }
+    },
+    {
+      "id": "strategy-researcher",
+      "riasec": [
+        "I",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "전략 연구원",
+        "en": "Strategy Researcher"
+      },
+      "why_fit": {
+        "ko": "복잡한 경쟁 환경을 이론적으로 분석합니다.",
+        "en": "Theoretically analyzes complex competitive environments."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "types": {
+    "ENFJ": { "nickname_ko": "주인공", "nickname_en": "Protagonist", "trait_ko": "따뜻하고 카리스마 있는 리더", "trait_en": "Warm, charismatic leader" },
+    "ENFP": { "nickname_ko": "활동가", "nickname_en": "Campaigner", "trait_ko": "열정적이고 창의적인 자유인", "trait_en": "Enthusiastic, creative free spirit" },
+    "ENTJ": { "nickname_ko": "통솔자", "nickname_en": "Commander", "trait_ko": "대담하고 상상력이 풍부한 강한 의지의 리더", "trait_en": "Bold, strong-willed leader" },
+    "ENTP": { "nickname_ko": "변론가", "nickname_en": "Debater", "trait_ko": "지적 도전을 즐기는 스마트한 호기심쟁이", "trait_en": "Smart, curious thinker who loves debate" },
+    "ESFJ": { "nickname_ko": "집정관", "nickname_en": "Consul", "trait_ko": "배려심 깊고 사교적인 팀 플레이어", "trait_en": "Caring, sociable team player" },
+    "ESFP": { "nickname_ko": "연예인", "nickname_en": "Entertainer", "trait_ko": "자발적이고 활기차며 열정적인 엔터테이너", "trait_en": "Spontaneous, energetic entertainer" },
+    "ESTJ": { "nickname_ko": "경영자", "nickname_en": "Executive", "trait_ko": "뛰어난 관리자, 사람과 사물 관리의 달인", "trait_en": "Excellent manager of people and things" },
+    "ESTP": { "nickname_ko": "사업가", "nickname_en": "Entrepreneur", "trait_ko": "스마트하고 활기차며 직접 행동하는 사람", "trait_en": "Smart, energetic, direct action taker" },
+    "INFJ": { "nickname_ko": "옹호자", "nickname_en": "Advocate", "trait_ko": "조용하고 신비로우나 내면이 강한 이상주의자", "trait_en": "Quiet, mystical idealist with strong inner life" },
+    "INFP": { "nickname_ko": "중재자", "nickname_en": "Mediator", "trait_ko": "시적이고 친절하며 자신만의 신념을 가진 이타주의자", "trait_en": "Poetic, kind altruist with personal values" },
+    "INTJ": { "nickname_ko": "건축가", "nickname_en": "Architect", "trait_ko": "상상력이 풍부하고 전략적인 계획자", "trait_en": "Imaginative, strategic planner" },
+    "INTP": { "nickname_ko": "논리술사", "nickname_en": "Logician", "trait_ko": "지식에 대한 열정이 있는 혁신적인 발명가", "trait_en": "Innovative inventor with passion for knowledge" },
+    "ISFJ": { "nickname_ko": "수호자", "nickname_en": "Defender", "trait_ko": "매우 헌신적이고 따뜻한 보호자", "trait_en": "Very dedicated, warm protector" },
+    "ISFP": { "nickname_ko": "모험가", "nickname_en": "Adventurer", "trait_ko": "유연하고 매력적인 예술가", "trait_en": "Flexible, charming artist" },
+    "ISTJ": { "nickname_ko": "현실주의자", "nickname_en": "Logistician", "trait_ko": "실용적이고 사실에 기반한 믿음직한 사람", "trait_en": "Practical, fact-minded, reliable person" },
+    "ISTP": { "nickname_ko": "장인", "nickname_en": "Virtuoso", "trait_ko": "대담하고 현실적인 실험 정신의 소유자", "trait_en": "Bold, practical experimenter" }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "type": "ENTJ",
+  "top_careers": [
+    {
+      "id": "ceo",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "최고경영자(CEO)",
+        "en": "CEO"
+      },
+      "why_fit": {
+        "ko": "전략적 비전으로 조직을 이끄는 타고난 리더입니다.",
+        "en": "A natural leader who drives organizations with strategic vision."
+      }
+    },
+    {
+      "id": "management-consultant",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "경영 컨설턴트",
+        "en": "Management Consultant"
+      },
+      "why_fit": {
+        "ko": "복잡한 비즈니스 문제를 분석하고 해결책을 제시합니다.",
+        "en": "Analyzes complex business problems and presents solutions."
+      }
+    },
+    {
+      "id": "investment-banker",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "투자은행가",
+        "en": "Investment Banker"
+      },
+      "why_fit": {
+        "ko": "고압적 환경에서 빠른 판단과 전략적 사고를 발휘합니다.",
+        "en": "Shows fast judgment and strategic thinking in high-pressure environments."
+      }
+    },
+    {
+      "id": "entrepreneur",
+      "riasec": [
+        "E",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "기업가",
+        "en": "Entrepreneur"
+      },
+      "why_fit": {
+        "ko": "새로운 사업 기회를 포착하고 대담하게 실행합니다.",
+        "en": "Seizes new business opportunities and executes boldly."
+      }
+    },
+    {
+      "id": "lawyer",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "변호사",
+        "en": "Lawyer"
+      },
+      "why_fit": {
+        "ko": "논리적 논증과 강한 의지로 승소를 이끕니다.",
+        "en": "Leads to victory with logical arguments and strong will."
+      }
+    },
+    {
+      "id": "politician",
+      "riasec": [
+        "E",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "정치인",
+        "en": "Politician"
+      },
+      "why_fit": {
+        "ko": "사회 변화를 위한 비전을 제시하고 지지를 모읍니다.",
+        "en": "Presents vision for social change and mobilizes support."
+      }
+    },
+    {
+      "id": "strategy-director",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "전략 이사",
+        "en": "Strategy Director"
+      },
+      "why_fit": {
+        "ko": "장기적 전략을 수립하고 실행을 총괄합니다.",
+        "en": "Establishes long-term strategies and oversees execution."
+      }
+    },
+    {
+      "id": "venture-capitalist",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "벤처 투자자",
+        "en": "Venture Capitalist"
+      },
+      "why_fit": {
+        "ko": "유망한 스타트업을 발굴하고 성장을 지원합니다.",
+        "en": "Identifies promising startups and supports their growth."
+      }
+    },
+    {
+      "id": "professor",
+      "riasec": [
+        "I",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "교수",
+        "en": "Professor"
+      },
+      "why_fit": {
+        "ko": "학문적 리더십으로 다음 세대를 이끕니다.",
+        "en": "Leads the next generation with academic leadership."
+      }
+    },
+    {
+      "id": "executive-director",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "임원",
+        "en": "Executive Director"
+      },
+      "why_fit": {
+        "ko": "조직의 핵심 의사결정을 주도합니다.",
+        "en": "Leads core decision-making in organizations."
+      }
+    },
+    {
+      "id": "business-analyst",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "비즈니스 애널리스트",
+        "en": "Business Analyst"
+      },
+      "why_fit": {
+        "ko": "데이터 기반의 통찰로 비즈니스 개선을 주도합니다.",
+        "en": "Drives business improvement with data-driven insights."
+      }
+    },
+    {
+      "id": "financial-director",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "재무이사(CFO)",
+        "en": "CFO"
+      },
+      "why_fit": {
+        "ko": "재무 전략으로 기업의 지속 성장을 뒷받침합니다.",
+        "en": "Supports sustainable business growth through financial strategy."
+      }
+    },
+    {
+      "id": "operations-manager",
+      "riasec": [
+        "E",
+        "C",
+        "I"
+      ],
+      "title": {
+        "ko": "운영 매니저",
+        "en": "Operations Manager"
+      },
+      "why_fit": {
+        "ko": "효율적인 운영 시스템을 구축하고 최적화합니다.",
+        "en": "Builds and optimizes efficient operating systems."
+      }
+    },
+    {
+      "id": "general-counsel",
+      "riasec": [
+        "E",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "법무총괄",
+        "en": "General Counsel"
+      },
+      "why_fit": {
+        "ko": "법적 리스크 관리와 전략적 의사결정을 동시에 수행합니다.",
+        "en": "Simultaneously manages legal risk and strategic decision-making."
+      }
+    },
+    {
+      "id": "judge",
+      "riasec": [
+        "I",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "판사",
+        "en": "Judge"
+      },
+      "why_fit": {
+        "ko": "논리적 판단력과 공정함으로 법을 집행합니다.",
+        "en": "Administers law with logical judgment and fairness."
+      }
+    },
+    {
+      "id": "military-officer",
+      "riasec": [
+        "E",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "군 장교",
+        "en": "Military Officer"
+      },
+      "why_fit": {
+        "ko": "명확한 목표 아래 팀을 이끌고 전략을 실행합니다.",
+        "en": "Leads teams and executes strategy under clear objectives."
+      }
+    },
+    {
+      "id": "product-director",
+      "riasec": [
+        "E",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "프로덕트 디렉터",
+        "en": "Product Director"
+      },
+      "why_fit": {
+        "ko": "제품 비전을 수립하고 팀을 이끌어 실현합니다.",
+        "en": "Establishes product vision and leads teams to realize it."
+      }
+    },
+    {
+      "id": "real-estate-developer",
+      "riasec": [
+        "E",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "부동산 개발업자",
+        "en": "Real Estate Developer"
+      },
+      "why_fit": {
+        "ko": "대규모 프로젝트를 기획하고 성공적으로 실행합니다.",
+        "en": "Plans and successfully executes large-scale projects."
+      }
+    },
+    {
+      "id": "diplomat",
+      "riasec": [
+        "E",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "외교관",
+        "en": "Diplomat"
+      },
+      "why_fit": {
+        "ko": "국제 무대에서 전략적으로 협상하고 목표를 달성합니다.",
+        "en": "Strategically negotiates and achieves goals on the international stage."
+      }
+    },
+    {
+      "id": "corporate-trainer",
+      "riasec": [
+        "E",
+        "S",
+        "I"
+      ],
+      "title": {
+        "ko": "기업 교육 전문가",
+        "en": "Corporate Trainer"
+      },
+      "why_fit": {
+        "ko": "직원들의 역량을 체계적으로 개발하는 프로그램을 이끕니다.",
+        "en": "Leads programs that systematically develop employee capabilities."
+      }
+    }
+  ]
+}

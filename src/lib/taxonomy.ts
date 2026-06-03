@@ -1,4 +1,4 @@
-export type ContentTrack = "academy" | "magazine" | "interactive" | "education";
+export type ContentTrack = "academy" | "magazine" | "interactive" | "education" | "dictionary";
 
 export const EDUCATION_CATEGORIES = [
   "Natural Science",

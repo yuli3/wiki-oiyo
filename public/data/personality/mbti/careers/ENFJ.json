@@ -1,0 +1,325 @@
+{
+  "type": "ENFJ",
+  "top_careers": [
+    {
+      "id": "life-coach",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "라이프코치",
+        "en": "Life Coach"
+      },
+      "why_fit": {
+        "ko": "사람을 돕고 성장을 이끄는 것이 핵심 동기입니다.",
+        "en": "Helping and guiding others to grow is their core motivation."
+      }
+    },
+    {
+      "id": "teacher",
+      "riasec": [
+        "S",
+        "A",
+        "E"
+      ],
+      "title": {
+        "ko": "교사",
+        "en": "Teacher"
+      },
+      "why_fit": {
+        "ko": "교육을 통해 사람들에게 긍정적 영향을 주고 싶어합니다.",
+        "en": "They want to positively impact people through education."
+      }
+    },
+    {
+      "id": "hr-manager",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "인사관리자",
+        "en": "HR Manager"
+      },
+      "why_fit": {
+        "ko": "사람 중심의 조직 문화를 만드는 데 탁월합니다.",
+        "en": "Excellent at creating people-centered organizational cultures."
+      }
+    },
+    {
+      "id": "nonprofit-director",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "비영리단체 대표",
+        "en": "Nonprofit Director"
+      },
+      "why_fit": {
+        "ko": "사회적 가치를 추구하며 사람들을 이끄는 역할에 맞습니다.",
+        "en": "Well suited for leading others toward social value goals."
+      }
+    },
+    {
+      "id": "counselor",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "상담사",
+        "en": "Counselor"
+      },
+      "why_fit": {
+        "ko": "깊은 공감 능력으로 내담자의 변화를 돕습니다.",
+        "en": "Their deep empathy helps clients achieve meaningful change."
+      }
+    },
+    {
+      "id": "public-speaker",
+      "riasec": [
+        "E",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "강연가",
+        "en": "Public Speaker"
+      },
+      "why_fit": {
+        "ko": "청중을 감동시키고 영감을 주는 능력이 뛰어납니다.",
+        "en": "Excels at moving and inspiring audiences."
+      }
+    },
+    {
+      "id": "social-worker",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "사회복지사",
+        "en": "Social Worker"
+      },
+      "why_fit": {
+        "ko": "취약 계층을 위한 헌신적 지원에 보람을 느낍니다.",
+        "en": "Finds purpose in dedicated support for vulnerable populations."
+      }
+    },
+    {
+      "id": "mediator",
+      "riasec": [
+        "S",
+        "E",
+        "A"
+      ],
+      "title": {
+        "ko": "조정가",
+        "en": "Mediator"
+      },
+      "why_fit": {
+        "ko": "갈등 해결과 합의 도출에 뛰어난 대인 능력을 발휘합니다.",
+        "en": "Excels at conflict resolution and reaching consensus."
+      }
+    },
+    {
+      "id": "career-consultant",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "커리어 컨설턴트",
+        "en": "Career Consultant"
+      },
+      "why_fit": {
+        "ko": "개인의 잠재력을 발견하고 방향을 잡아주는 역할에 능숙합니다.",
+        "en": "Skilled at discovering potential and setting career direction."
+      }
+    },
+    {
+      "id": "organizational-development",
+      "riasec": [
+        "S",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "조직개발 전문가",
+        "en": "Organizational Development Specialist"
+      },
+      "why_fit": {
+        "ko": "팀과 조직의 성장을 체계적으로 지원합니다.",
+        "en": "Systematically supports the growth of teams and organizations."
+      }
+    },
+    {
+      "id": "education-program-manager",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "교육 프로그램 매니저",
+        "en": "Education Program Manager"
+      },
+      "why_fit": {
+        "ko": "교육 과정 기획과 운영에서 리더십을 발휘합니다.",
+        "en": "Shows leadership in designing and running educational programs."
+      }
+    },
+    {
+      "id": "motivational-author",
+      "riasec": [
+        "A",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "동기부여 작가",
+        "en": "Motivational Author"
+      },
+      "why_fit": {
+        "ko": "글로 많은 사람에게 영감과 용기를 전달합니다.",
+        "en": "Delivers inspiration and courage to many through writing."
+      }
+    },
+    {
+      "id": "community-manager",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "커뮤니티 매니저",
+        "en": "Community Manager"
+      },
+      "why_fit": {
+        "ko": "사람들을 연결하고 긍정적 커뮤니티를 만드는 데 탁월합니다.",
+        "en": "Excellent at connecting people and building positive communities."
+      }
+    },
+    {
+      "id": "school-principal",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "교장",
+        "en": "School Principal"
+      },
+      "why_fit": {
+        "ko": "교육 기관을 이끄는 리더십과 헌신을 갖추고 있습니다.",
+        "en": "Has the leadership and dedication to lead educational institutions."
+      }
+    },
+    {
+      "id": "event-coordinator",
+      "riasec": [
+        "S",
+        "E",
+        "C"
+      ],
+      "title": {
+        "ko": "이벤트 코디네이터",
+        "en": "Event Coordinator"
+      },
+      "why_fit": {
+        "ko": "사람들이 의미 있는 경험을 할 수 있도록 기획하는 능력이 있습니다.",
+        "en": "Skilled at planning meaningful experiences for people."
+      }
+    },
+    {
+      "id": "talent-development",
+      "riasec": [
+        "S",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "인재개발 전문가",
+        "en": "Talent Development Specialist"
+      },
+      "why_fit": {
+        "ko": "조직 내 인재를 발굴하고 성장시키는 역할에 최적화돼 있습니다.",
+        "en": "Optimized for discovering and developing talent within organizations."
+      }
+    },
+    {
+      "id": "therapist",
+      "riasec": [
+        "S",
+        "I",
+        "A"
+      ],
+      "title": {
+        "ko": "심리치료사",
+        "en": "Therapist"
+      },
+      "why_fit": {
+        "ko": "심층적 공감과 이해로 내담자의 치유를 돕습니다.",
+        "en": "Helps clients heal through deep empathy and understanding."
+      }
+    },
+    {
+      "id": "political-leader",
+      "riasec": [
+        "E",
+        "S",
+        "A"
+      ],
+      "title": {
+        "ko": "정치인",
+        "en": "Political Leader"
+      },
+      "why_fit": {
+        "ko": "더 나은 사회를 위해 사람들을 이끄는 비전을 가지고 있습니다.",
+        "en": "Has the vision to lead people toward a better society."
+      }
+    },
+    {
+      "id": "wellness-director",
+      "riasec": [
+        "S",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "웰니스 디렉터",
+        "en": "Wellness Director"
+      },
+      "why_fit": {
+        "ko": "사람들의 건강과 행복을 위한 프로그램을 기획하고 운영합니다.",
+        "en": "Plans and runs programs for people's health and wellbeing."
+      }
+    },
+    {
+      "id": "international-development",
+      "riasec": [
+        "S",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "국제개발 전문가",
+        "en": "International Development Specialist"
+      },
+      "why_fit": {
+        "ko": "글로벌 수준에서 사회적 변화를 이끌 수 있는 역량을 발휘합니다.",
+        "en": "Applies capabilities to drive social change at a global level."
+      }
+    }
+  ]
+}

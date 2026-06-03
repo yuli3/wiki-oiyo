@@ -1,0 +1,325 @@
+{
+  "type": "ISTP",
+  "top_careers": [
+    {
+      "id": "engineer",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "엔지니어",
+        "en": "Engineer"
+      },
+      "why_fit": {
+        "ko": "기계와 시스템의 원리를 직접 이해하고 개선합니다.",
+        "en": "Directly understands and improves the principles of machines and systems."
+      }
+    },
+    {
+      "id": "pilot",
+      "riasec": [
+        "R",
+        "I",
+        "E"
+      ],
+      "title": {
+        "ko": "파일럿",
+        "en": "Pilot"
+      },
+      "why_fit": {
+        "ko": "기술적 능숙함과 침착함으로 비행을 완수합니다.",
+        "en": "Completes flights with technical proficiency and composure."
+      }
+    },
+    {
+      "id": "forensic-scientist",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "법과학자",
+        "en": "Forensic Scientist"
+      },
+      "why_fit": {
+        "ko": "증거를 객관적으로 분석하여 진실을 밝혀냅니다.",
+        "en": "Reveals truth by objectively analyzing evidence."
+      }
+    },
+    {
+      "id": "mechanic",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "기계공",
+        "en": "Mechanic"
+      },
+      "why_fit": {
+        "ko": "기계를 분해하고 수리하는 것에서 큰 만족감을 느낍니다.",
+        "en": "Finds great satisfaction in disassembling and repairing machines."
+      }
+    },
+    {
+      "id": "software-developer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "소프트웨어 개발자",
+        "en": "Software Developer"
+      },
+      "why_fit": {
+        "ko": "논리적 문제를 직접 해결하는 코딩에 매력을 느낍니다.",
+        "en": "Is drawn to coding that directly solves logical problems."
+      }
+    },
+    {
+      "id": "electrician",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "전기 기술자",
+        "en": "Electrician"
+      },
+      "why_fit": {
+        "ko": "전기 시스템을 정확하게 설치하고 유지합니다.",
+        "en": "Accurately installs and maintains electrical systems."
+      }
+    },
+    {
+      "id": "carpenter",
+      "riasec": [
+        "R",
+        "A",
+        "I"
+      ],
+      "title": {
+        "ko": "목수",
+        "en": "Carpenter"
+      },
+      "why_fit": {
+        "ko": "실제 손으로 만지고 만드는 작업에서 보람을 느낍니다.",
+        "en": "Finds reward in hands-on work of touching and making things."
+      }
+    },
+    {
+      "id": "crisis-negotiator",
+      "riasec": [
+        "E",
+        "R",
+        "S"
+      ],
+      "title": {
+        "ko": "위기 협상가",
+        "en": "Crisis Negotiator"
+      },
+      "why_fit": {
+        "ko": "위기 상황에서 침착하게 상황을 분석하고 대응합니다.",
+        "en": "Calmly analyzes and responds to situations in crisis."
+      }
+    },
+    {
+      "id": "athlete",
+      "riasec": [
+        "R",
+        "E",
+        "S"
+      ],
+      "title": {
+        "ko": "운동선수",
+        "en": "Athlete"
+      },
+      "why_fit": {
+        "ko": "신체 능력의 한계를 탐구하고 넘어서는 것을 즐깁니다.",
+        "en": "Enjoys exploring and transcending the limits of physical ability."
+      }
+    },
+    {
+      "id": "military-specialist",
+      "riasec": [
+        "R",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "군 특기 병사",
+        "en": "Military Specialist"
+      },
+      "why_fit": {
+        "ko": "실제 임무에서 기술적 능력을 발휘합니다.",
+        "en": "Demonstrates technical skills in actual missions."
+      }
+    },
+    {
+      "id": "race-car-driver",
+      "riasec": [
+        "R",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "레이서",
+        "en": "Race Car Driver"
+      },
+      "why_fit": {
+        "ko": "극한의 속도와 기술적 통제를 즐깁니다.",
+        "en": "Enjoys extreme speed and technical control."
+      }
+    },
+    {
+      "id": "security-analyst",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "보안 분석가",
+        "en": "Security Analyst"
+      },
+      "why_fit": {
+        "ko": "시스템의 취약점을 찾아내고 해결합니다.",
+        "en": "Identifies and resolves system vulnerabilities."
+      }
+    },
+    {
+      "id": "surgeon",
+      "riasec": [
+        "R",
+        "I",
+        "S"
+      ],
+      "title": {
+        "ko": "외과의",
+        "en": "Surgeon"
+      },
+      "why_fit": {
+        "ko": "정확한 손기술로 복잡한 수술을 수행합니다.",
+        "en": "Performs complex surgeries with precise manual skills."
+      }
+    },
+    {
+      "id": "electronics-technician",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "전자 기술자",
+        "en": "Electronics Technician"
+      },
+      "why_fit": {
+        "ko": "전자 장치를 정확하게 진단하고 수리합니다.",
+        "en": "Accurately diagnoses and repairs electronic devices."
+      }
+    },
+    {
+      "id": "firefighter",
+      "riasec": [
+        "R",
+        "S",
+        "E"
+      ],
+      "title": {
+        "ko": "소방관",
+        "en": "Firefighter"
+      },
+      "why_fit": {
+        "ko": "위기 상황에서 기술과 용기로 사람을 구합니다.",
+        "en": "Saves people with skill and courage in crisis situations."
+      }
+    },
+    {
+      "id": "network-engineer",
+      "riasec": [
+        "I",
+        "R",
+        "C"
+      ],
+      "title": {
+        "ko": "네트워크 엔지니어",
+        "en": "Network Engineer"
+      },
+      "why_fit": {
+        "ko": "복잡한 네트워크 문제를 논리적으로 진단합니다.",
+        "en": "Logically diagnoses complex network issues."
+      }
+    },
+    {
+      "id": "data-center-technician",
+      "riasec": [
+        "R",
+        "I",
+        "C"
+      ],
+      "title": {
+        "ko": "데이터센터 기술자",
+        "en": "Data Center Technician"
+      },
+      "why_fit": {
+        "ko": "IT 인프라를 직접 관리하고 유지합니다.",
+        "en": "Directly manages and maintains IT infrastructure."
+      }
+    },
+    {
+      "id": "industrial-designer",
+      "riasec": [
+        "A",
+        "R",
+        "I"
+      ],
+      "title": {
+        "ko": "산업 디자이너",
+        "en": "Industrial Designer"
+      },
+      "why_fit": {
+        "ko": "기능적이고 아름다운 제품을 설계합니다.",
+        "en": "Designs functional and beautiful products."
+      }
+    },
+    {
+      "id": "penetration-tester",
+      "riasec": [
+        "I",
+        "R",
+        "E"
+      ],
+      "title": {
+        "ko": "모의침투테스터",
+        "en": "Penetration Tester"
+      },
+      "why_fit": {
+        "ko": "시스템의 보안 취약점을 찾는 도전적인 작업을 즐깁니다.",
+        "en": "Enjoys the challenging work of finding security vulnerabilities in systems."
+      }
+    },
+    {
+      "id": "boat-captain",
+      "riasec": [
+        "R",
+        "E",
+        "I"
+      ],
+      "title": {
+        "ko": "선박 선장",
+        "en": "Boat Captain"
+      },
+      "why_fit": {
+        "ko": "기술적 능력으로 선박을 안전하게 조종합니다.",
+        "en": "Safely navigates vessels with technical skill."
+      }
+    }
+  ]
+}

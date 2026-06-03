@@ -1,0 +1,148 @@
+{
+  "types": {
+    "ENFJ": {
+      "top_careers": [
+        "life-coach",
+        "teacher",
+        "hr-manager",
+        "nonprofit-director",
+        "counselor"
+      ]
+    },
+    "ENFP": {
+      "top_careers": [
+        "journalist",
+        "creative-director",
+        "content-creator",
+        "entrepreneur",
+        "actor"
+      ]
+    },
+    "ENTJ": {
+      "top_careers": [
+        "ceo",
+        "management-consultant",
+        "investment-banker",
+        "entrepreneur",
+        "lawyer"
+      ]
+    },
+    "ENTP": {
+      "top_careers": [
+        "startup-founder",
+        "lawyer",
+        "inventor",
+        "product-manager",
+        "consultant"
+      ]
+    },
+    "ESFJ": {
+      "top_careers": [
+        "nurse",
+        "teacher",
+        "social-worker",
+        "event-planner",
+        "hr-specialist"
+      ]
+    },
+    "ESFP": {
+      "top_careers": [
+        "performer",
+        "event-coordinator",
+        "sales-representative",
+        "flight-attendant",
+        "personal-trainer"
+      ]
+    },
+    "ESTJ": {
+      "top_careers": [
+        "manager",
+        "military-officer",
+        "judge",
+        "accountant",
+        "project-manager"
+      ]
+    },
+    "ESTP": {
+      "top_careers": [
+        "entrepreneur",
+        "detective",
+        "sales-manager",
+        "paramedic",
+        "athlete"
+      ]
+    },
+    "INFJ": {
+      "top_careers": [
+        "therapist",
+        "author",
+        "counselor",
+        "social-activist",
+        "professor"
+      ]
+    },
+    "INFP": {
+      "top_careers": [
+        "writer",
+        "counselor",
+        "artist",
+        "musician",
+        "nonprofit-worker"
+      ]
+    },
+    "INTJ": {
+      "top_careers": [
+        "systems-architect",
+        "strategic-planner",
+        "data-scientist",
+        "researcher",
+        "software-engineer"
+      ]
+    },
+    "INTP": {
+      "top_careers": [
+        "mathematician",
+        "philosopher",
+        "software-developer",
+        "physicist",
+        "researcher"
+      ]
+    },
+    "ISFJ": {
+      "top_careers": [
+        "nurse",
+        "teacher",
+        "librarian",
+        "social-worker",
+        "hr-specialist"
+      ]
+    },
+    "ISFP": {
+      "top_careers": [
+        "artist",
+        "musician",
+        "fashion-designer",
+        "chef",
+        "photographer"
+      ]
+    },
+    "ISTJ": {
+      "top_careers": [
+        "accountant",
+        "auditor",
+        "military-officer",
+        "judge",
+        "database-administrator"
+      ]
+    },
+    "ISTP": {
+      "top_careers": [
+        "engineer",
+        "pilot",
+        "forensic-scientist",
+        "mechanic",
+        "software-developer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+# Category Registry — wiki-oiyo
+# Auto-generated from content scan 2026-06-03
+# Edit this file to add/rename categories; run validate:i18n to verify.
+
+tracks:
+  - id: academy
+    label_ko: 강의
+    label_en: Academy
+  - id: magazine
+    label_ko: 매거진
+    label_en: Magazine
+  - id: interactive
+    label_ko: 인터랙티브
+    label_en: Interactive
+  - id: dictionary
+    label_ko: 사전
+    label_en: Dictionary
+
+categories:
+  - id: oracle-300
+    label_ko: 오라클 300
+    label_en: Oracle 300
+    track: academy
+    description_ko: 발타자르 그라시안의 고전 오라클 300개 잠언 현대적 해석
+    description_en: Modern interpretation of Baltasar Gracian's 300 maxims
+
+  - id: mindset-30
+    label_ko: 30일 마인드셋
+    label_en: 30-Day Mindset
+    track: academy
+    description_ko: 30일간의 마인드셋 변화 프로그램
+    description_en: 30-day mindset transformation program
+
+  - id: self-management
+    label_ko: 자기관리
+    label_en: Self Management
+    track: academy
+    description_ko: 자기 관리와 생산성 향상
+    description_en: Self-management and productivity improvement
+
+  - id: relationships
+    label_ko: 인간관계
+    label_en: Relationships
+    track: academy
+    description_ko: 인간관계와 커뮤니케이션 기술
+    description_en: Human relationships and communication skills
+
+  - id: ai-leadership
+    label_ko: AI 리더십
+    label_en: AI Leadership
+    track: academy
+    description_ko: AI 시대의 리더십 전략
+    description_en: Leadership strategies in the AI era
+
+  - id: self-development
+    label_ko: 자기계발
+    label_en: Self Development
+    track: academy
+    description_ko: 자기계발과 성장 마인드셋
+    description_en: Personal development and growth mindset
+
+  - id: economics-crossroads
+    label_ko: 경제 갈림길
+    label_en: Economics Crossroads
+    track: academy
+    description_ko: 경제적 선택과 의사결정
+    description_en: Economic choices and decision-making
+
+  - id: speaking-skills
+    label_ko: 말하기 기술
+    label_en: Speaking Skills
+    track: academy
+    description_ko: 효과적인 말하기와 발표 기술
+    description_en: Effective speaking and presentation skills
+
+  - id: inner-strength
+    label_ko: 내면 근력
+    label_en: Inner Strength
+    track: academy
+    description_ko: 내면의 힘과 회복탄력성
+    description_en: Inner strength and resilience
+
+  - id: pension-rich
+    label_ko: 연금 부자
+    label_en: Pension Rich
+    track: academy
+    description_ko: 연금과 노후 자산 관리
+    description_en: Pension and retirement asset management
+
+  - id: mbti-dict
+    label_ko: MBTI 사전
+    label_en: MBTI Dictionary
+    track: dictionary
+    description_ko: MBTI 16유형 심층 백과사전 — 유형별 특성, 강점·약점, 유명인, 직업 완전 가이드
+    description_en: MBTI 16 type encyclopedia — traits, strengths, weaknesses, famous people, careers
+
+  - id: enneagram-dict
+    label_ko: 에니어그램 사전
+    label_en: Enneagram Dictionary
+    track: dictionary
+    description_ko: 에니어그램 9유형 심층 백과사전 — 핵심 동기, 날개, 성장·스트레스 방향 완전 가이드
+    description_en: Enneagram 9 type encyclopedia — core motivations, wings, growth and stress directions
+
+  - id: psychology-dict
+    label_ko: 심리학 사전
+    label_en: Psychology Dictionary
+    track: dictionary
+    description_ko: 심리학 핵심 개념 사전 — 애착이론, 인지편향, 방어기제 등 학술 개념 해설
+    description_en: Psychology concepts dictionary — attachment theory, cognitive biases, defense mechanisms
