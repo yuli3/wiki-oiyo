@@ -1,0 +1,142 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 4
+title: "Stock Basics Ch4. What Is Short-Term Trading — The Lure of Quick Profits and the Cold Reality"
+description: From the definition of short-term trading to the differences between scalping and swing trading, fee and tax calculations, and psychological traps — a beginner's guide to why day trading is hard and what principles actually work.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: en
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import ConceptCard from "@/components/mdx/ConceptCard.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 4. What Is Short-Term Trading — The Lure of Quick Profits and the Cold Reality
+
+"Buy today, sell today, pocket the gains." That simplicity is the appeal of short-term trading. But the statistics are unforgiving.
+
+---
+
+## 1. What Is Short-Term Trading?
+
+Short-term trading means **buying and selling within a short timeframe to capture price differences**. It is the opposite of long-term investing (holding for years).
+
+<StatCards
+  items={[
+    {
+      label: "Scalping",
+      value: "Ultra short-term",
+      icon: "⚡",
+      description: "Buy and sell within minutes to tens of minutes. Repeatedly capture small gains of 1–2%."
+    },
+    {
+      label: "Day Trading",
+      value: "Same-day close",
+      icon: "☀️",
+      description: "All positions opened and closed within the same trading session. No overnight risk."
+    },
+    {
+      label: "Swing Trading",
+      value: "Days to weeks",
+      icon: "🏄",
+      description: "Hold for roughly 2–14 days. Rides short-term trends. Technically sits between day trading and medium-term investing."
+    },
+  ]}
+  cols={3}
+/>
+
+---
+
+## 2. Short-Term Trading vs Long-Term Investing
+
+<CompareTable
+  title="Investment Style Comparison"
+  leftTitle="Short-Term Trading"
+  rightTitle="Long-Term Investing (Buy & Hold)"
+  rows={[
+    { label: "Holding period", left: "Minutes to days", right: "Months to years" },
+    { label: "Source of profit", left: "Short-term price fluctuations", right: "Company growth + dividends" },
+    { label: "Skills required", left: "Chart reading, fast decisions, emotional control", right: "Business analysis, patience" },
+    { label: "Taxes & fees", left: "Costs accumulate with frequent trades", right: "Minimal (negligible when held long-term)" },
+    { label: "Risk level", left: "High (leverage and emotions play a large role)", right: "Relatively low (time dilutes risk)" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#10b981"
+/>
+
+---
+
+## 3. The Real Costs of Short-Term Trading — Fees + Taxes
+
+One major reason short-term trading is difficult is that **costs are higher than most people expect**.
+
+| Item | Description | Rate (example) |
+|---|---|---|
+| **Trading commission** | Paid to the broker on every buy and sell | ~0.015–0.025% |
+| **Securities transaction tax** | Charged only on sells (KOSPI basis) | 0.18% (as of 2024) |
+| **Capital gains tax** | Applies to major shareholders or overseas stocks | 22% |
+
+> **Example calculation**: Buy and then sell ₩10,000,000 worth of stock?
+> - Round-trip commission: ~₩4,000
+> - Securities transaction tax: ₩18,000
+> - **Total cost: approximately ₩22,000** — you need to earn just 0.22% to break even.
+
+<Callout type="note">
+Repeat 3–5 trades a day and these costs pile up fast. To profit from short-term trading, you must consistently generate returns that beat the fees — every single trade.
+</Callout>
+
+---
+
+## 4. The Psychological Traps of Short-Term Trading
+
+<ConceptCard
+  icon="🧠"
+  name="Loss Aversion Bias"
+  type="Behavioral Psychology"
+  summary="The pain of a loss feels more than twice as intense as the pleasure of an equivalent gain. This is the root reason short-term traders fail to cut losses — and let them grow."
+  quote="Trying to avoid a 5% loss, you end up with a 50% loss."
+  color="red"
+/>
+
+Common traps short-term traders fall into:
+
+1. **Refusing to cut losses** — "It'll bounce back soon," so you keep holding — and the loss keeps growing
+2. **Taking profits too early** — Selling the moment you're in the green, only to miss a much larger move
+3. **FOMO (Fear Of Missing Out)** — Chasing a stock that's already rallied and buying near the top
+4. **Revenge trading** — After a loss, immediately placing a larger trade trying to win it back
+
+---
+
+## 5. Conditions Where Short-Term Trading Can Work
+
+Short-term trading is not impossible. It becomes more viable when these conditions are met:
+
+- **Sufficient liquidity**: High trading volume so orders fill at the intended price
+- **Clear entry and exit rules**: Based on objective criteria (moving averages, support/resistance), not gut feelings
+- **Strict stop-loss discipline**: Mechanically sell if the loss exceeds 2–3%
+- **Dedicated focus time**: You can monitor the market from 9:00 AM to 3:30 PM
+
+---
+
+<Quiz>
+**[Key Check Question]**
+
+Q. You buy ₩10,000,000 worth of stock and immediately sell it. What is the minimum cost?
+
+① Almost nothing  ② About ₩2,000  ③ About ₩22,000 or more
+
+**Answer: ③** — Round-trip commission (~₩4,000) + securities transaction tax on the sell (₩18,000) adds up to ₩22,000 or more. Short-term trading requires you to repeatedly generate returns that exceed this cost.
+</Quiz>
+
+---
+
+Next: we examine the concept of **margin buying (미수거래)** — borrowing to buy stocks — and the danger of forced liquidation.

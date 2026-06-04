@@ -1,0 +1,137 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 5
+title: "Actions Bases Ch5. Qu'est-ce que l'achat à crédit ? — Structure des achats sur marge et risque de liquidation forcée"
+description: "Tout sur l'achat à crédit (achat sur marge sans fonds de règlement) : calcul du taux de marge, concept de date de règlement D+2, et conditions de liquidation forcée. Explication concrète des raisons pour lesquelles l'achat sur marge est dangereux pour les investisseurs débutants."
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: fr
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapitre 5. Qu'est-ce que l'achat à crédit ? — Structure des achats sur marge et risque de liquidation forcée
+
+L'achat à crédit est un système sur les marchés boursiers qui vous permet d'**« acheter des actions même sans avoir l'argent immédiatement. »** Mais derrière cette commodité se cache un risque puissant : la liquidation forcée.
+
+---
+
+## 1. Définition de l'achat à crédit
+
+**L'achat à crédit** consiste à acheter plus d'actions que ce que vous permettent vos liquidités disponibles, en utilisant uniquement un dépôt de garantie (marge). Vous vous engagez à déposer le montant restant dans **deux jours ouvrables (D+2)** — c'est essentiellement un achat à crédit.
+
+> En termes simples : si vous avez 1 000 €, vous pouvez acheter jusqu'à 3 333 € d'actions. Cependant, vous devez déposer les 2 333 € restants dans les deux jours.
+
+---
+
+## 2. Taux de marge et calcul du montant impayé
+
+<StatCards
+  items={[
+    {
+      label: "Taux de marge",
+      value: "Varie selon le titre",
+      icon: "📋",
+      description: "De 30% à 100%. Plus la liquidité est faible et la volatilité élevée, plus le taux est haut. Les actions de premier ordre sont généralement à 40–50%."
+    },
+    {
+      label: "Montant impayé",
+      value: "Montant du déficit",
+      icon: "💳",
+      description: "Montant d'achat moins vos liquidités disponibles. Ce montant doit impérativement être déposé avant la date de règlement (D+2)."
+    },
+    {
+      label: "Date de règlement",
+      value: "D+2",
+      icon: "📅",
+      description: "Deux jours ouvrables après la date d'achat. Si le montant impayé n'est pas versé avant ce matin-là, une liquidation forcée est déclenchée."
+    },
+  ]}
+  cols={3}
+/>
+
+### Exemple de calcul
+
+| Élément | Détails |
+|---|---|
+| Liquidités disponibles | 1 000 € |
+| Taux de marge | 30% |
+| Montant maximum d'achat | **3 333 €** (= 1 000 € ÷ 0,3) |
+| Montant impayé | 2 333 € |
+| Délai de dépôt obligatoire | **9h00 le jour D+2 à compter de la date d'achat** |
+
+---
+
+## 3. Liquidation forcée (vente de clôture forcée)
+
+Si vous ne déposez pas le montant impayé avant la matinée du D+2, **votre courtier vend automatiquement vos actions de force**. C'est ce qu'on appelle la **liquidation forcée**.
+
+<Callout type="note">
+La liquidation forcée est exécutée **au prix du marché immédiatement après l'ouverture**, sans votre consentement. En marché baissier, vos actions peuvent être vendues au pire prix possible — vous ouvrez l'application et constatez que vos positions ont déjà été clôturées.
+</Callout>
+
+**Le scénario catastrophe de la liquidation forcée :**
+1. Achat pour 3 000 € (1 000 € de marge + 2 000 € d'impayé)
+2. Le cours chute de 30% → Valeur du portefeuille : 2 100 €
+3. Impossibilité de déposer avant D+2 → Liquidation forcée déclenchée
+4. Vente au marché pour 2 100 € → Le courtier récupère 2 000 €
+5. Montant restant pour l'investisseur : **100 €** (perte de 90% sur les 1 000 € investis)
+
+---
+
+## 4. Achat à crédit vs Trading sur marge à terme
+
+Il existe aussi le **trading sur marge à terme** souvent confondu avec l'achat à crédit.
+
+<CompareTable
+  title="Achat à crédit vs Trading sur marge à terme"
+  leftTitle="Achat à crédit"
+  rightTitle="Trading sur marge à terme"
+  rows={[
+    { label: "Nature", left: "Achat à crédit ultra court terme", right: "Emprunter de l'argent auprès du courtier pour investir" },
+    { label: "Période de remboursement", left: "D+2 (seulement deux jours)", right: "Jusqu'à 90–180 jours (selon le courtier)" },
+    { label: "Intérêts", left: "Aucun (mais la période est extrêmement courte)", right: "Environ 5–12% par an (calculé au prorata journalier)" },
+    { label: "Niveau de risque", left: "Très élevé (délai de règlement trop court)", right: "Élevé (charge d'intérêts + ratio de maintenance)" },
+    { label: "Profil cible", left: "Principalement les traders court terme", right: "Investisseurs recherchant un effet de levier" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#f59e0b"
+/>
+
+---
+
+## 5. Précautions pour l'achat à crédit
+
+1. **N'utilisez que des fonds que vous pouvez certainement déposer dans les deux jours**
+2. **Ne jamais utiliser en marché baissier** — la liquidation forcée maximise les pertes
+3. **Ne pas ouvrir de nouvelles positions à crédit pour résister à une baisse supplémentaire** — cela aggrave le risque
+4. **Les titres avec un taux de marge de 100%** ne peuvent pas être achetés à crédit (titres sous surveillance, titres en alerte spéculative, etc.)
+
+<Callout type="note">
+Il existe également le concept de **ratio de maintenance des garanties**. En trading sur marge, si le cours baisse et que la valeur du portefeuille tombe sous le seuil requis, le courtier exigera des garanties supplémentaires (appel de marge). Si vous ne pouvez pas y répondre, une liquidation forcée se produit également.
+</Callout>
+
+---
+
+<Quiz>
+**[Vérification des connaissances]**
+
+Q. Si vous ne payez pas le montant impayé d'un achat à crédit avant D+2, que se passe-t-il ?
+
+① Payer des intérêts et prolonger la période ② Le courtier vend vos actions de force (liquidation forcée) ③ Rien ne se passe
+
+**Réponse : ②** — Si impayé avant le matin du D+2, le courtier vend vos actions au prix du marché sans votre consentement. La liquidation se produit même si vous êtes en perte.
+</Quiz>
+
+---
+
+Prochainement, nous explorons **l'investissement value** — une approche axée sur la valeur intrinsèque d'une entreprise plutôt que sur les profits rapides.

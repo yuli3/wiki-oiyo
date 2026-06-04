@@ -1,0 +1,142 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 4
+title: "Bolsa Ch4. El trading a corto plazo — La tentación de las ganancias rápidas y la fría realidad"
+description: Desde la definición del trading a corto plazo hasta las diferencias entre scalping y swing trading, el cálculo de comisiones e impuestos, y las trampas psicológicas. Una guía para principiantes sobre por qué el day trading es difícil y qué principios realmente funcionan.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: es
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import ConceptCard from "@/components/mdx/ConceptCard.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Capítulo 4. El trading a corto plazo — La tentación de las ganancias rápidas y la fría realidad
+
+«Comprar hoy, vender hoy, embolsarse las ganancias.» Esa sencillez es el atractivo del trading a corto plazo. Pero las estadísticas son implacables.
+
+---
+
+## 1. ¿Qué es el trading a corto plazo?
+
+El trading a corto plazo consiste en **comprar y vender en un período corto para capturar diferencias de precio**. Es el opuesto de la inversión a largo plazo (mantener durante años).
+
+<StatCards
+  items={[
+    {
+      label: "Scalping",
+      value: "Ultra corto plazo",
+      icon: "⚡",
+      description: "Compra y venta en minutos o decenas de minutos. Capturar ganancias pequeñas del 1–2% de forma repetida."
+    },
+    {
+      label: "Day Trading",
+      value: "Cierre en el día",
+      icon: "☀️",
+      description: "Todas las posiciones abiertas y cerradas dentro de la misma sesión. Sin riesgo overnight."
+    },
+    {
+      label: "Swing Trading",
+      value: "Días a semanas",
+      icon: "🏄",
+      description: "Mantener durante 2 a 14 días aproximadamente. Aprovechar tendencias a corto plazo. Técnicamente entre el day trading y la inversión a medio plazo."
+    },
+  ]}
+  cols={3}
+/>
+
+---
+
+## 2. Trading a corto plazo vs Inversión a largo plazo
+
+<CompareTable
+  title="Comparación de estilos de inversión"
+  leftTitle="Trading a corto plazo"
+  rightTitle="Inversión a largo plazo (Buy & Hold)"
+  rows={[
+    { label: "Período de tenencia", left: "Minutos a días", right: "Meses a años" },
+    { label: "Fuente de ganancia", left: "Fluctuaciones de precio a corto plazo", right: "Crecimiento de la empresa + dividendos" },
+    { label: "Habilidades requeridas", left: "Lectura de gráficos, decisiones rápidas, control emocional", right: "Análisis de negocios, paciencia" },
+    { label: "Impuestos y comisiones", left: "Se acumulan con las operaciones frecuentes", right: "Mínimos (negligibles en tenencias largas)" },
+    { label: "Nivel de riesgo", left: "Alto (el apalancamiento y las emociones tienen gran peso)", right: "Relativamente bajo (el tiempo diluye el riesgo)" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#10b981"
+/>
+
+---
+
+## 3. Los costos reales del trading a corto plazo — Comisiones + Impuestos
+
+Una de las principales razones por las que el trading a corto plazo es difícil es que **los costos son más altos de lo que la mayoría de la gente espera**.
+
+| Concepto | Descripción | Tasa (ejemplo) |
+|---|---|---|
+| **Comisión de corretaje** | Pagada al broker en cada compra y venta | ~0,015–0,025% |
+| **Impuesto sobre transacciones de valores** | Aplicado solo en ventas (base KOSPI) | 0,18% (datos de 2024) |
+| **Impuesto sobre ganancias de capital** | Se aplica a grandes accionistas o acciones extranjeras | 22% |
+
+> **Ejemplo de cálculo**: ¿Comprar y luego vender acciones por valor de 10.000.000 ₩?
+> - Comisión de ida y vuelta: ~4.000 ₩
+> - Impuesto sobre transacciones: 18.000 ₩
+> - **Costo total: aproximadamente 22.000 ₩** — con solo un 0,22% de ganancia se llega al punto de equilibrio.
+
+<Callout type="note">
+Repita 3 a 5 operaciones al día y estos costos se acumulan rápidamente. Para ser rentable con el trading a corto plazo, debe generar constantemente rendimientos que superen las comisiones — en cada operación.
+</Callout>
+
+---
+
+## 4. Las trampas psicológicas del trading a corto plazo
+
+<ConceptCard
+  icon="🧠"
+  name="Sesgo de aversión a las pérdidas (Loss Aversion)"
+  type="Psicología conductual"
+  summary="El dolor de una pérdida se siente más del doble de intenso que el placer de una ganancia equivalente. Esta es la razón fundamental por la que los traders a corto plazo no cortan sus pérdidas — y las dejan crecer."
+  quote="Intentando evitar una pérdida del 5%, terminas con una pérdida del 50%."
+  color="red"
+/>
+
+Trampas comunes en las que caen los traders a corto plazo:
+
+1. **Negarse a cortar pérdidas** — «Ya subirá pronto», sigues aguantando — y la pérdida sigue creciendo
+2. **Toma de beneficios demasiado temprana** — Vender en cuanto estás en verde, perdiéndote un movimiento mucho mayor
+3. **FOMO (Fear Of Missing Out)** — Comprar tarde una acción que ya ha subido y quedarte atrapado en el techo
+4. **Trading de venganza** — Después de una pérdida, realizar inmediatamente una operación mayor para recuperarla
+
+---
+
+## 5. Condiciones en las que el trading a corto plazo puede funcionar
+
+El trading a corto plazo no es imposible. Se vuelve más viable cuando se cumplen estas condiciones:
+
+- **Liquidez suficiente**: Alto volumen de operaciones para que las órdenes se ejecuten al precio deseado
+- **Reglas claras de entrada y salida**: Basadas en criterios objetivos (medias móviles, soportes/resistencias), no en corazonadas
+- **Disciplina estricta de stop-loss**: Vender mecánicamente si la pérdida supera el 2–3%
+- **Tiempo de concentración dedicado**: Poder monitorear el mercado de 9:00 a 15:30
+
+---
+
+<Quiz>
+**[Pregunta de verificación clave]**
+
+Q. Compras acciones por valor de 10.000.000 ₩ y las vendes inmediatamente. ¿Cuál es el costo mínimo?
+
+① Casi nada  ② Unos 2.000 ₩  ③ Unos 22.000 ₩ o más
+
+**Respuesta: ③** — Comisión de ida y vuelta (~4.000 ₩) + impuesto sobre transacciones en la venta (18.000 ₩) = 22.000 ₩ o más. El trading a corto plazo requiere generar consistentemente rendimientos que superen este costo.
+</Quiz>
+
+---
+
+Próximo capítulo: el concepto de la **compra con margen** — pedir prestado para comprar acciones — y el peligro de la liquidación forzada.

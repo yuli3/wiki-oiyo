@@ -1,0 +1,137 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 5
+title: "Stock Basics Ch5. What Is Credit Buying? — Structure of Margin Purchases and Forced Liquidation Risk"
+description: "Everything about credit buying (buying on margin without settlement funds): margin rate calculation, the D+2 settlement date concept, and forced liquidation (margin call sell-off) conditions. A concrete explanation of why margin buying is dangerous for beginner investors."
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: en
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 5. What Is Credit Buying? — Structure of Margin Purchases and Forced Liquidation Risk
+
+Credit buying is a system in the stock market that lets you **"buy shares even when you don't have the money right now."** But behind that convenience lurks a powerful risk: forced liquidation.
+
+---
+
+## 1. Definition of Credit Buying
+
+**Credit buying** means purchasing more shares than your available cash by using only a margin deposit (collateral). You agree to deposit the remaining amount by **two business days later (D+2)** — it's essentially buying on credit.
+
+> Simply put: if you have ₩1,000,000, you can buy up to ₩3,330,000 worth of shares. However, you must deposit the remaining ₩2,330,000 within two days.
+
+---
+
+## 2. Margin Rate and Outstanding Amount Calculation
+
+<StatCards
+  items={[
+    {
+      label: "Margin Rate",
+      value: "Varies by Stock",
+      icon: "📋",
+      description: "Ranges from 30% to 100%. The lower the liquidity and higher the volatility, the higher the margin rate. Blue-chip stocks are typically 40–50%."
+    },
+    {
+      label: "Outstanding Amount",
+      value: "Shortfall",
+      icon: "💳",
+      description: "Purchase amount minus your available cash. This is the amount you must deposit by the settlement date (D+2)."
+    },
+    {
+      label: "Settlement Date",
+      value: "D+2",
+      icon: "📅",
+      description: "Two business days after the purchase date. If the outstanding amount is not paid by that morning, forced liquidation is triggered."
+    },
+  ]}
+  cols={3}
+/>
+
+### Calculation Example
+
+| Item | Details |
+|---|---|
+| Available Cash | ₩1,000,000 |
+| Margin Rate | 30% |
+| Maximum Purchasable Amount | **₩3,330,000** (= ₩1,000,000 ÷ 0.3) |
+| Outstanding Amount | ₩2,330,000 |
+| Required Deposit Deadline | **9:00 AM on D+2 from purchase date** |
+
+---
+
+## 3. Forced Liquidation (Margin Call Sell-Off)
+
+If you fail to deposit the outstanding amount by the morning of D+2, **your broker will automatically force-sell your shares**. This is called a **forced liquidation** or margin call sell-off.
+
+<Callout type="note">
+Forced liquidation is executed **at market price immediately after the market opens**, without your consent. In a falling market, your shares may be sold at the worst possible price — you open the app and find your position has already been closed.
+</Callout>
+
+**The Horror Scenario of Forced Liquidation:**
+1. Buy ₩3,000,000 worth of shares (₩1,000,000 margin + ₩2,000,000 outstanding)
+2. Stock price drops 30% → Portfolio value: ₩2,100,000
+3. Unable to deposit by D+2 → Forced liquidation triggered
+4. Shares sold at market price for ₩2,100,000 → Broker recovers ₩2,000,000
+5. Amount left for the investor: **₩100,000** (90% loss on the original ₩1,000,000)
+
+---
+
+## 4. Credit Buying vs. Margin Loan Trading
+
+There is another type called **margin loan trading** that is often confused with credit buying.
+
+<CompareTable
+  title="Credit Buying vs. Margin Loan Trading"
+  leftTitle="Credit Buying"
+  rightTitle="Margin Loan Trading"
+  rows={[
+    { label: "Nature", left: "Ultra-short-term credit purchase", right: "Borrowing money from the broker to invest" },
+    { label: "Repayment Period", left: "D+2 (just two days)", right: "Up to 90–180 days (varies by broker)" },
+    { label: "Interest", left: "None (but the period is extremely short)", right: "Approx. 5–12% per annum (calculated daily)" },
+    { label: "Risk Level", left: "Very High (repayment window is too short)", right: "High (interest burden + maintenance margin)" },
+    { label: "Target Users", left: "Mainly short-term traders", right: "Investors seeking leverage" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#f59e0b"
+/>
+
+---
+
+## 5. Precautions for Credit Buying
+
+1. **Only use funds you can definitely deposit within two days**
+2. **Never use credit buying in a falling market** — forced liquidation maximizes losses
+3. **Do not add more credit positions to hold through a further decline** — this compounds risk
+4. **Stocks with a 100% margin rate** cannot be bought on credit at all (watchlist stocks, speculation-warning stocks, etc.)
+
+<Callout type="note">
+There is also a concept called **maintenance margin ratio**. During margin loan trading, if the stock price falls and the portfolio value drops below the required threshold, the broker will demand additional collateral (a margin call). If you cannot meet this call, forced liquidation occurs as well.
+</Callout>
+
+---
+
+<Quiz>
+**[Key Concept Check]**
+
+Q. If you fail to pay the outstanding amount from a credit purchase by D+2, what happens?
+
+① Pay interest and extend the period ② The broker force-sells your shares (forced liquidation) ③ Nothing happens
+
+**Answer: ②** — If unpaid by D+2 morning, the broker force-sells your shares at market price without your consent. The liquidation happens regardless of whether you are at a loss.
+</Quiz>
+
+---
+
+Next, we explore **value investing** — an approach that focuses on a company's intrinsic value rather than chasing quick profits.

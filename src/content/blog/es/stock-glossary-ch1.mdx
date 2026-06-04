@@ -1,0 +1,144 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 1
+title: "Bolsa para principiantes Ch1. ¿Qué es una acción? — Comprar una fracción de empresa"
+description: Todo lo que un principiante necesita saber antes de invertir. Qué son las acciones, cómo funcionan los mercados KOSPI y KOSDAQ, cómo ganar dinero y qué significa realmente la capitalización bursátil.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: es
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 1. ¿Qué es una acción? — Comprar una fracción de empresa
+
+Comprar una acción de Samsung Electronics — ¿qué significa realmente? No es simplemente apostar a que un número suba o baje. Significa **poseer una pequeña fracción de Samsung Electronics como negocio**.
+
+---
+
+## 1. Definición de una acción
+
+Las empresas necesitan dinero para crecer. Hay dos formas principales de captar capital.
+
+<CompareTable
+  title="Cómo las empresas captan capital"
+  leftTitle="Préstamo bancario (deuda)"
+  rightTitle="Emisión de acciones (capital propio)"
+  rows={[
+    { label: "Naturaleza", left: "Dinero prestado — debe devolverse", right: "Dinero invertido — sin obligación de devolución" },
+    { label: "Costo", left: "Pago de intereses", right: "Dividendos (reparto de beneficios) o ninguno" },
+    { label: "Riesgo", left: "Gran carga para la empresa", right: "Riesgo compartido con los inversores" },
+    { label: "Relación", left: "Acreedor — relación comercial", right: "Accionista — copropietario de la empresa" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#3b82f6"
+/>
+
+Cuando una empresa emite acciones, en lugar de pedir dinero prestado, **cede una parte de su propiedad**. Cada unidad de esa propiedad se llama **acción (stock / share)**.
+
+<Callout type="note">
+Samsung Electronics tiene aproximadamente 5.900 millones de acciones en circulación. Poseer una acción te hace propietario de 1 / 5.900.000.000 de la empresa, pequeño pero con derechos de voto, dividendos y activos residuales.
+</Callout>
+
+---
+
+## 2. Estructura del mercado de valores
+
+Corea del Sur tiene dos bolsas oficiales principales.
+
+<StatCards
+  items={[
+    {
+      label: "KOSPI",
+      value: "Grandes empresas",
+      icon: "🏢",
+      description: "Korea Composite Stock Price Index. Samsung, Hyundai, SK Hynix y otras grandes corporaciones."
+    },
+    {
+      label: "KOSDAQ",
+      value: "Empresas de crecimiento",
+      icon: "🚀",
+      description: "Mercado centrado en empresas de IT, biotecnología y videojuegos."
+    },
+    {
+      label: "KONEX",
+      value: "Startups emergentes",
+      icon: "🌱",
+      description: "Exclusivo para pymes y startups. El acceso de inversores minoristas es limitado."
+    },
+  ]}
+  cols={3}
+/>
+
+---
+
+## 3. Dos formas de ganar dinero con acciones
+
+<StatCards
+  items={[
+    {
+      label: "Plusvalía",
+      value: "Capital Gain",
+      icon: "📈",
+      description: "Comprar a 10 € y vender a 15 € = 5 € de ganancia. La forma de retorno más común."
+    },
+    {
+      label: "Dividendo",
+      value: "Renta",
+      icon: "💰",
+      description: "Parte de los beneficios de la empresa pagada a los accionistas en efectivo. Normalmente una o dos veces al año."
+    },
+  ]}
+  cols={2}
+/>
+
+---
+
+## 4. Precio de la acción vs valor de la empresa
+
+Un precio alto por acción no significa que sea una empresa grande. La **capitalización bursátil** es la medida real del tamaño.
+
+> **Capitalización bursátil = Precio por acción × Acciones en circulación**
+
+Ejemplo:
+- Empresa A: 1.000.000 ₩ por acción × 10.000 acciones → capitalización **10.000 millones ₩**
+- Empresa B: 1.000 ₩ por acción × 100.000.000 acciones → capitalización **100.000 millones ₩**
+
+La empresa B tiene un precio por acción mucho menor pero es 10 veces más grande.
+
+---
+
+## 5. Vocabulario básico de trading
+
+| Término | Significado |
+|---|---|
+| **Comprar (Buy)** | Adquirir acciones |
+| **Vender (Sell)** | Vender las acciones que posees |
+| **Precio de cotización** | El precio al que quieres comprar o vender |
+| **Ejecución** | Cuando una orden de compra y venta coinciden |
+| **Posición / Cartera** | Las acciones que tienes actualmente |
+
+---
+
+<Quiz>
+**[Comprobación rápida]**
+
+Q. Cuando compras una acción de una empresa, ¿en qué te conviertes?
+
+① Un acreedor ② Un accionista (copropietario) ③ Un empleado ④ Un regulador
+
+**Respuesta: ②** — Comprar acciones te convierte en copropietario (accionista) de la empresa, no en acreedor.
+</Quiz>
+
+---
+
+Próximo capítulo: decodificamos los números que ves cada día en tu app de trading — apertura, cierre, volumen, precio límite y mucho más.

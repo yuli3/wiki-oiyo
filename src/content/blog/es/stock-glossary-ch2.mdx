@@ -1,0 +1,119 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 2
+title: "Bolsa para principiantes Ch2. Qué significan los números — Apertura, cierre, volumen y precios límite"
+description: Todos los números que los principiantes ven a diario en su app de trading — apertura, máximo, mínimo, cierre, volumen, precios límite, máximos de 52 semanas y flujo institucional — explicados en una sola guía.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: es
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 2. Qué significan los números — OHLCV, precios límite y flujo de mercado
+
+Abre una app de trading y te inundan los números. Necesitas saber leerlos antes de invertir.
+
+---
+
+## 1. OHLCV — La historia del precio de un día
+
+El movimiento del precio de un solo día se resume en cinco números.
+
+<StatCards
+  items={[
+    { label: "Apertura (O)", value: "Open", icon: "🔔", description: "Primer precio negociado al abrir el mercado (9:00 AM)" },
+    { label: "Máximo (H)", value: "High", icon: "⬆️", description: "Precio más alto alcanzado durante la sesión" },
+    { label: "Mínimo (L)", value: "Low", icon: "⬇️", description: "Precio más bajo alcanzado durante la sesión" },
+    { label: "Cierre (C)", value: "Close", icon: "🔕", description: "Último precio negociado al cerrar el mercado (3:30 PM)" },
+    { label: "Volumen (V)", value: "Acciones", icon: "📊", description: "Total de acciones negociadas. Refleja el interés del mercado." },
+  ]}
+  cols={3}
+/>
+
+<Callout type="note">
+Cada **vela (candlestick)** en un gráfico es una representación visual de esta información O·H·L·C. Lo cubrimos en el Ch3.
+</Callout>
+
+---
+
+## 2. Precio límite superior & inferior
+
+Los mercados coreanos limitan cuánto puede moverse un precio en una sesión.
+
+<StatCards
+  items={[
+    { label: "Límite Superior", value: "+30%", icon: "🚀", description: "Máximo +30% respecto al cierre anterior. El precio no puede subir más." },
+    { label: "Límite Inferior", value: "-30%", icon: "💥", description: "Máximo -30% respecto al cierre anterior. El precio no puede bajar más." },
+  ]}
+  cols={2}
+/>
+
+---
+
+## 3. Máximo / mínimo de 52 semanas
+
+| Término | Significado | Insight de trading |
+|---|---|---|
+| **Máximo 52 semanas** | Precio más alto en el último año | Puede señalar fuerte impulso — pero cuidado con la sobrecompra |
+| **Mínimo 52 semanas** | Precio más bajo en el último año | Tendencia bajista severa o posible infravaloración |
+
+---
+
+## 4. Participantes del mercado — ¿Quién compra y vende?
+
+<CompareTable
+  title="Los tres grandes participantes del mercado"
+  leftTitle="Inversores institucionales"
+  rightTitle="Inversores extranjeros"
+  rows={[
+    { label: "Quiénes", left: "Fondos, aseguradoras, fondos de pensiones", right: "Fondos e instituciones extranjeras" },
+    { label: "Comportamiento", left: "Medio-largo plazo, rebalanceo trimestral", right: "Sensibles a flujos globales y tipos de cambio" },
+    { label: "Influencia", left: "Fuerte impacto en valores medianos domésticos", right: "Motor clave de los movimientos de grandes capitales" },
+  ]}
+  leftColor="#6366f1"
+  rightColor="#10b981"
+/>
+
+---
+
+## 5. KOSPI 200 — El índice de referencia
+
+El **KOSPI 200** agrupa las 200 principales acciones por capitalización y liquidez del KOSPI. Es el activo subyacente de la mayoría de ETFs, futuros y opciones del mercado coreano.
+
+---
+
+## 6. Leer el libro de órdenes
+
+El libro de órdenes muestra las órdenes de compra y venta en tiempo real.
+
+| Lado | Significado |
+|---|---|
+| **Vendedores (Ask)** | Precios a los que los vendedores aceptan vender (rojo, arriba) |
+| **Compradores (Bid)** | Precios que los compradores están dispuestos a pagar (azul, abajo) |
+| **Spread** | Mejor ask − mejor bid |
+
+---
+
+<Quiz>
+**[Comprobación rápida]**
+
+Q. Si una acción cerró a ₩10.000 ayer, ¿cuál es el precio límite inferior de hoy?
+
+① ₩7.000 ② ₩9.000 ③ ₩13.000
+
+**Respuesta: ①** — El límite inferior es −30% del cierre anterior. 10.000 × 0,7 = ₩7.000.
+</Quiz>
+
+---
+
+Próximo capítulo: estos números forman patrones — decodificamos **velas japonesas y medias móviles**.

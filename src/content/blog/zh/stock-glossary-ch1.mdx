@@ -1,0 +1,144 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 1
+title: "股票基础 Ch1. 什么是股票——购买公司的一部分"
+description: 投资前必知的基础知识。股票的定义、KOSPI与KOSDAQ市场结构、盈利方式，以及市值的真正含义，专为初学者全面解析。
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: zh
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 1. 什么是股票——购买公司的一部分
+
+购买一股三星电子的股票意味着什么？这不只是押注某个数字的涨跌，而是**拥有三星电子这家企业极小一部分所有权**的行为。
+
+---
+
+## 1. 股票的定义
+
+企业需要资金来发展壮大，主要有两种筹资方式。
+
+<CompareTable
+  title="企业筹资方式"
+  leftTitle="银行贷款（负债）"
+  rightTitle="发行股票（股权）"
+  rows={[
+    { label: "性质", left: "借入资金——必须偿还", right: "投资资金——无偿还义务" },
+    { label: "成本", left: "产生利息", right: "分红（利润分享）或无成本" },
+    { label: "风险", left: "企业承担较大压力", right: "风险由投资者共同承担" },
+    { label: "关系", left: "债权人——与企业为债务关系", right: "股东——企业的共同所有者" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#3b82f6"
+/>
+
+企业发行股票时，不是借钱而是**将公司所有权的一部分分配出去**。每一个所有权单位就是**股票（Stock / Share）**。
+
+<Callout type="note">
+三星电子的已发行股份约为59亿股。持有1股，您就成为59亿分之一的股东——虽然微小，但拥有表决权、分红权和剩余资产分配权。
+</Callout>
+
+---
+
+## 2. 股票市场结构
+
+韩国有两个主要的官方证券交易所。
+
+<StatCards
+  items={[
+    {
+      label: "KOSPI",
+      value: "大型蓝筹股",
+      icon: "🏢",
+      description: "韩国综合股价指数。三星电子、现代汽车、SK海力士等大型企业上市市场。"
+    },
+    {
+      label: "KOSDAQ",
+      value: "中小成长股",
+      icon: "🚀",
+      description: "以IT、生物科技、游戏等成长型企业为主的市场。"
+    },
+    {
+      label: "KONEX",
+      value: "早期创业公司",
+      icon: "🌱",
+      description: "中小企业和创业公司专属市场，普通投资者访问受限。"
+    },
+  ]}
+  cols={3}
+/>
+
+---
+
+## 3. 股票盈利的两种方式
+
+<StatCards
+  items={[
+    {
+      label: "资本利得",
+      value: "Capital Gain",
+      icon: "📈",
+      description: "以1万元买入，以1.5万元卖出，获利5000元。最常见的收益方式。"
+    },
+    {
+      label: "股息",
+      value: "Dividend",
+      icon: "💰",
+      description: "企业将部分利润以现金形式分配给股东，通常每年一至两次。"
+    },
+  ]}
+  cols={2}
+/>
+
+---
+
+## 4. 股价 vs 企业价值：不要混淆
+
+股价高不代表公司大。**市值**才是衡量企业真实规模的指标。
+
+> **市值 = 股价 × 总股本**
+
+例如：
+- A公司：股价100万韩元 × 1万股 → 市值**100亿韩元**
+- B公司：股价1000韩元 × 1亿股 → 市值**1000亿韩元**
+
+B公司股价低得多，但规模是A公司的10倍。
+
+---
+
+## 5. 基础交易术语
+
+| 术语 | 含义 |
+|---|---|
+| **买入（Buy）** | 购买股票的行为 |
+| **卖出（Sell）** | 出售持有股票的行为 |
+| **报价** | 您愿意买入或卖出的价格 |
+| **成交** | 买卖双方订单匹配，交易完成 |
+| **持仓** | 您当前持有的股票数量 |
+
+---
+
+<Quiz>
+**[知识检验]**
+
+Q. 买入一家公司的股票后，您成为了什么？
+
+① 债权人 ② 股东（共同所有者） ③ 员工 ④ 监管机构
+
+**答案：②** — 购买股票使您成为该公司的共同所有者（股东），而非债权人（贷款方）。
+</Quiz>
+
+---
+
+下一章：解读您每天在交易应用中看到的数字——开盘价、收盘价、成交量、涨停价等。

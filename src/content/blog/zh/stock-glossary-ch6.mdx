@@ -1,0 +1,167 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 6
+title: "股票基础 Ch6. 什么是价值投资？——用市盈率、市净率和净资产收益率读懂内在价值"
+description: "沃伦·巴菲特与本杰明·格雷厄姆所践行的价值投资核心原则。市盈率、市净率、净资产收益率、股息收益率的含义与计算方法，以及安全边际概念。培养洞察企业真实价值的眼光。"
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: zh
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import ConceptCard from "@/components/mdx/ConceptCard.astro";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# 第六章. 什么是价值投资？——用市盈率、市净率和净资产收益率读懂内在价值
+
+当股价波动时，大多数人会看图表。价值投资者看的是不同的东西：**"这家公司实际上值多少钱？"**
+
+---
+
+## 1. 价值投资的哲学
+
+<ConceptCard
+  icon="📖"
+  name="本杰明·格雷厄姆（Benjamin Graham）"
+  year="1934"
+  type="价值投资之父"
+  summary="股票不是投机的对象——它是企业的部分所有权。当市场短期内表现出非理性时，买入以低于内在价值交易的股票，这是价值投资的核心。"
+  quote="短期内，市场是一台投票机器；长期来看，它是一台称重机器。"
+  color="blue"
+/>
+
+<ConceptCard
+  icon="💎"
+  name="沃伦·巴菲特（Warren Buffett）"
+  year="1965年至今"
+  type="伯克希尔·哈撒韦公司董事长"
+  summary="格雷厄姆最著名的学生。他将这一方法发展为更倾向于'以合理价格买入优秀企业'，而非'以优秀价格买入普通企业'。专注于长期投资具有持久经济护城河的企业——如可口可乐和苹果公司。"
+  quote="以合理的价格买入一家优秀的公司，远胜过以优秀的价格买入一家普通的公司。"
+  color="amber"
+/>
+
+---
+
+## 2. 内在价值 vs 市场价格
+
+<CompareTable
+  title="价值投资的核心概念"
+  leftTitle="内在价值（Intrinsic Value）"
+  rightTitle="市场价格（Market Price）"
+  rows={[
+    { label: "定义", left: "企业未来将产生的现金流的现值", right: "当前市场上股票的交易价格" },
+    { label: "决定因素", left: "盈利能力、增长潜力、竞争优势、财务健康状况", right: "供需关系、新闻、市场情绪、动量" },
+    { label: "短期特性", left: "不易改变", right: "每秒都在变化" },
+    { label: "投资机会", left: "内在价值 > 市场价格 = 被低估（买入机会）", right: "市场价格 > 内在价值 = 被高估（观望）" },
+  ]}
+  leftColor="#10b981"
+  rightColor="#6366f1"
+/>
+
+---
+
+## 3. 核心估值指标——市盈率、市净率、净资产收益率
+
+### 市盈率（P/E Ratio）
+
+<FormulaBox
+  label="市盈率（Price-to-Earnings Ratio，P/E）"
+  formula="\text{市盈率} = \frac{\text{股价}}{\text{每股收益（EPS）}}"
+  description="表示当前股价是每股收益的多少倍。市盈率为10意味着'股价相当于10年的盈利。'"
+  color="#3b82f6"
+/>
+
+| 市盈率解读 | 含义 |
+|---|---|
+| **低市盈率（如5–10倍）** | 可能被低估——但也可能是盈利下滑的公司 |
+| **高市盈率（如50–100倍）** | 被高估或市场对增长期望较高（科技/生物科技） |
+| **必须与行业平均值比较** | 市盈率20是贵还是便宜，只有与行业平均值比较才有意义 |
+
+### 市净率（P/B Ratio）
+
+<FormulaBox
+  label="市净率（Price-to-Book Ratio，P/B）"
+  formula="\text{市净率} = \frac{\text{股价}}{\text{每股净资产（BPS）}}"
+  description="股价相对于公司清算价值（账面价值）的比率。市净率低于1意味着'以低于清算价值的价格交易。'"
+  color="#10b981"
+/>
+
+### 净资产收益率（ROE）
+
+<FormulaBox
+  label="净资产收益率（Return on Equity，ROE）"
+  formula="\text{ROE} = \frac{\text{净利润}}{\text{股东权益}} \times 100"
+  description="公司利用股东投入资本（净资产）获得多少利润。ROE越高，说明公司赚钱效率越高。"
+  color="#f59e0b"
+/>
+
+---
+
+## 4. 综合解读三大指标
+
+<StatCards
+  items={[
+    { label: "市盈率", value: "衡量低估程度", icon: "💵", description: "股价相对收益。'我是否买得便宜？'" },
+    { label: "市净率", value: "相对资产衡量", icon: "🏦", description: "股价相对资产。'是否比清算价值贵？'" },
+    { label: "净资产收益率", value: "衡量盈利能力", icon: "⚙️", description: "资本效率。'这家公司赚钱能力如何？'" },
+  ]}
+  cols={3}
+/>
+
+> **理想组合**：市盈率低 + 市净率低 + 净资产收益率高 → 被低估的优质企业
+
+---
+
+## 5. 安全边际（Margin of Safety）
+
+<Callout type="note">
+本杰明·格雷厄姆的核心原则。如果一家公司的内在价值估计为100元，那么只在70元或以下时买入。这是您的**"误差缓冲"**——在您的估计出错时提供保护。
+
+安全边际30%：内在价值100元 × 0.7 = 只在70元或以下买入。
+</Callout>
+
+---
+
+## 6. 价值投资的实践原则
+
+1. **只投资您理解的业务** ——如果无法解释商业模式，就不要投资
+2. **以长期持有为前提** ——不要被短期波动所动摇
+3. **集中投资** ——深入了解2–3家公司，胜过粗浅了解10家
+4. **买的是企业，不是股票** ——关注价值，而非价格
+5. **不确定时持有现金** ——为正确机会保留现金也是一种策略
+
+---
+
+<Quiz>
+**[核心知识检验]**
+
+Q. 市盈率5倍的公司 vs 市盈率50倍的公司。市盈率5倍是否一定是更好的投资？
+
+① 是 ② 否
+
+**答案：②** ——市盈率低也可能意味着盈利下滑或公司经营困难。还必须同时考察净资产收益率、市净率、商业模式和增长潜力。与行业平均值的比较也是必不可少的。
+</Quiz>
+
+---
+
+## 结语——股票基础系列总结
+
+| 章节 | 核心要点 |
+|---|---|
+| Ch1 | 股票 = 企业所有权的一部分。收益来源 = 资本利得 + 股息 |
+| Ch2 | OHLCV、涨跌停板、机构/外资/散户资金流向 |
+| Ch3 | K线图、移动平均线、金叉/死叉、支撑/阻力位 |
+| Ch4 | 日内交易结构、成本（手续费+税）、心理陷阱 |
+| Ch5 | 信用买入 = 保证金购股。T+2交割、强制平仓风险 |
+| Ch6 | 价值投资 = 探索内在价值。市盈率、市净率、净资产收益率、安全边际 |
+
+股票不是赌博。理解企业、等待合适价格、遵守原则——这是长期生存和繁荣的方法。

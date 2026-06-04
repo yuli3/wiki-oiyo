@@ -1,0 +1,144 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 1
+title: "Bourse pour débutants Ch1. Qu'est-ce qu'une action ? — Acheter une part d'entreprise"
+description: Tout ce qu'un débutant doit savoir avant d'investir en bourse. Définition des actions, structure des marchés KOSPI et KOSDAQ, sources de revenus et capitalisation boursière expliqués simplement.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: fr
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 1. Qu'est-ce qu'une action ? — Acheter une part d'entreprise
+
+Acheter une action Samsung Electronics — qu'est-ce que cela signifie vraiment ? Ce n'est pas simplement parier sur une hausse ou une baisse de prix. C'est **posséder une infime fraction de Samsung Electronics en tant qu'entreprise**.
+
+---
+
+## 1. Définition d'une action
+
+Les entreprises ont besoin d'argent pour se développer. Il existe deux grandes façons de lever des capitaux.
+
+<CompareTable
+  title="Comment les entreprises lèvent des capitaux"
+  leftTitle="Emprunt bancaire (dette)"
+  rightTitle="Émission d'actions (capitaux propres)"
+  rows={[
+    { label: "Nature", left: "Argent emprunté — doit être remboursé", right: "Argent investi — aucune obligation de remboursement" },
+    { label: "Coût", left: "Paiement d'intérêts", right: "Dividendes (partage des bénéfices) ou aucun" },
+    { label: "Risque", left: "Pèse lourdement sur l'entreprise", right: "Risque partagé avec les investisseurs" },
+    { label: "Relation", left: "Créancier — relation commerciale", right: "Actionnaire — copropriétaire de l'entreprise" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#3b82f6"
+/>
+
+Lorsqu'une entreprise émet des actions, au lieu d'emprunter, elle **cède une partie de sa propriété**. Chaque unité de cette propriété est appelée une **action (stock / share)**.
+
+<Callout type="note">
+Samsung Electronics a environ 5,9 milliards d'actions en circulation. Posséder une action fait de vous 1 / 5 900 000 000ème propriétaire — c'est petit, mais cela confère des droits de vote, des droits aux dividendes et des droits sur les actifs résiduels.
+</Callout>
+
+---
+
+## 2. Structure du marché boursier
+
+La Corée du Sud dispose de deux bourses officielles principales.
+
+<StatCards
+  items={[
+    {
+      label: "KOSPI",
+      value: "Grandes capitalisations",
+      icon: "🏢",
+      description: "Korea Composite Stock Price Index. Home to Samsung, Hyundai, SK Hynix et autres grands groupes."
+    },
+    {
+      label: "KOSDAQ",
+      value: "Valeurs de croissance",
+      icon: "🚀",
+      description: "Marché axé sur les entreprises IT, biotechnologies et jeux vidéo."
+    },
+    {
+      label: "KONEX",
+      value: "Startups en phase initiale",
+      icon: "🌱",
+      description: "Réservé aux PME et startups. L'accès aux investisseurs particuliers est limité."
+    },
+  ]}
+  cols={3}
+/>
+
+---
+
+## 3. Deux façons de gagner de l'argent avec les actions
+
+<StatCards
+  items={[
+    {
+      label: "Plus-value",
+      value: "Capital Gain",
+      icon: "📈",
+      description: "Achat à 10 € et vente à 15 € = 5 € de profit. La forme de rendement la plus courante."
+    },
+    {
+      label: "Dividende",
+      value: "Revenu",
+      icon: "💰",
+      description: "Une part des bénéfices de l'entreprise versée aux actionnaires en espèces. Généralement une à deux fois par an."
+    },
+  ]}
+  cols={2}
+/>
+
+---
+
+## 4. Prix de l'action vs valeur de l'entreprise
+
+Un prix d'action élevé ne signifie pas que l'entreprise est grande. La **capitalisation boursière** est la vraie mesure de taille.
+
+> **Capitalisation boursière = Prix de l'action × Nombre d'actions en circulation**
+
+Exemple :
+- Société A : 1 000 000 ₩ par action × 10 000 actions → capitalisation **10 milliards ₩**
+- Société B : 1 000 ₩ par action × 100 000 000 actions → capitalisation **100 milliards ₩**
+
+La société B a un prix unitaire bien plus bas mais est 10 fois plus grande.
+
+---
+
+## 5. Vocabulaire de base
+
+| Terme | Signification |
+|---|---|
+| **Acheter (Buy)** | Acquérir des actions |
+| **Vendre (Sell)** | Céder des actions détenues |
+| **Prix coté (호가)** | Le prix que vous proposez à l'achat ou à la vente |
+| **Exécution** | Quand un ordre d'achat et de vente se correspondent |
+| **Position / Portefeuille** | Les actions que vous détenez actuellement |
+
+---
+
+<Quiz>
+**[Vérification rapide]**
+
+Q. Quand vous achetez une action d'une entreprise, vous devenez :
+
+① Un créancier ② Un actionnaire (copropriétaire) ③ Un employé ④ Un régulateur
+
+**Réponse : ②** — Acheter une action fait de vous un copropriétaire (actionnaire) de l'entreprise, pas un créancier.
+</Quiz>
+
+---
+
+Prochain chapitre : décryptage des chiffres que vous voyez chaque jour sur votre application de trading — ouverture, clôture, volume, cours plafond, et bien plus.

@@ -1,0 +1,167 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 6
+title: "Acciones Básicas Ch6. ¿Qué es la Inversión Value? — Leyendo el Valor Intrínseco con PER, PBR y ROE"
+description: "Los principios fundamentales de la inversión value practicados por Warren Buffett y Benjamin Graham. El significado y cálculo del PER, PBR, ROE y rentabilidad por dividendo — más el concepto de margen de seguridad. Desarrolle su ojo para el valor real de una empresa."
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: es
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import ConceptCard from "@/components/mdx/ConceptCard.astro";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Capítulo 6. ¿Qué es la Inversión Value? — Leyendo el Valor Intrínseco con PER, PBR y ROE
+
+Cuando un precio de acción fluctúa, la mayoría de las personas miran los gráficos. Los inversores value miran algo diferente: **"¿Cuánto vale realmente esta empresa?"**
+
+---
+
+## 1. La filosofía de la inversión value
+
+<ConceptCard
+  icon="📖"
+  name="Benjamin Graham"
+  year="1934"
+  type="Padre de la inversión value"
+  summary="Una acción no es un objeto de especulación — es una propiedad fraccionada de un negocio. El núcleo de la inversión value es comprar acciones que cotizan por debajo de su valor intrínseco cuando el mercado actúa de forma irracional a corto plazo."
+  quote="A corto plazo, el mercado es una máquina de votar. A largo plazo, es una máquina de pesar."
+  color="blue"
+/>
+
+<ConceptCard
+  icon="💎"
+  name="Warren Buffett"
+  year="1965–presente"
+  type="Presidente de Berkshire Hathaway"
+  summary="El discípulo más famoso de Graham. Evolucionó el enfoque para preferir 'empresas maravillosas a precios justos' en lugar de 'empresas justas a precios maravillosos'. Se enfoca en inversiones a largo plazo en empresas con fosos económicos duraderos — como Coca-Cola y Apple."
+  quote="Es mucho mejor comprar una empresa maravillosa a un precio justo que una empresa justa a un precio maravilloso."
+  color="amber"
+/>
+
+---
+
+## 2. Valor intrínseco vs Precio de mercado
+
+<CompareTable
+  title="Conceptos fundamentales de la inversión value"
+  leftTitle="Valor intrínseco"
+  rightTitle="Precio de mercado"
+  rows={[
+    { label: "Definición", left: "Valor presente de los flujos de caja que una empresa generará en el futuro", right: "El precio al que la acción se negocia actualmente en el mercado" },
+    { label: "Factores determinantes", left: "Ganancias, potencial de crecimiento, ventaja competitiva, salud financiera", right: "Oferta/demanda, noticias, sentimiento, momentum" },
+    { label: "Naturaleza a corto plazo", left: "No cambia fácilmente", right: "Cambia cada segundo" },
+    { label: "Oportunidad de inversión", left: "Valor intrínseco > Precio de mercado = Infravalorado (oportunidad de compra)", right: "Precio de mercado > Valor intrínseco = Sobrevalorado (esperar y observar)" },
+  ]}
+  leftColor="#10b981"
+  rightColor="#6366f1"
+/>
+
+---
+
+## 3. Métricas de valoración clave — PER, PBR, ROE
+
+### PER (Ratio Precio/Beneficio)
+
+<FormulaBox
+  label="PER (Price-to-Earnings Ratio)"
+  formula="\text{PER} = \frac{\text{Precio de la acción}}{\text{Beneficio por acción (BPA)}}"
+  description="Muestra cuántas veces el precio actual de la acción es superior al beneficio por acción. Un PER de 10 significa 'el precio equivale a 10 años de beneficios.'"
+  color="#3b82f6"
+/>
+
+| Interpretación del PER | Significado |
+|---|---|
+| **PER bajo (ej.: 5–10x)** | Potencialmente infravalorado — pero puede indicar beneficios en declive |
+| **PER alto (ej.: 50–100x)** | Sobrevalorado o grandes expectativas de crecimiento (tech/biotech) |
+| **Comparación con la media sectorial es esencial** | Si un PER de 20 es caro o barato solo tiene sentido comparado con la media del sector |
+
+### PBR (Ratio Precio/Valor Contable)
+
+<FormulaBox
+  label="PBR (Price-to-Book Ratio)"
+  formula="\text{PBR} = \frac{\text{Precio de la acción}}{\text{Valor contable por acción}}"
+  description="Precio de la acción en relación con el valor de liquidación de la empresa (valor contable). Un PBR inferior a 1 significa 'cotiza por debajo del valor de liquidación.'"
+  color="#10b981"
+/>
+
+### ROE (Rentabilidad sobre el capital propio)
+
+<FormulaBox
+  label="ROE (Return on Equity)"
+  formula="\text{ROE} = \frac{\text{Beneficio neto}}{\text{Fondos propios}} \times 100"
+  description="Cuánto beneficio genera la empresa a partir del capital invertido por los accionistas. Cuanto mayor sea el ROE, más eficientemente gana dinero la empresa."
+  color="#f59e0b"
+/>
+
+---
+
+## 4. Leyendo las tres métricas juntas
+
+<StatCards
+  items={[
+    { label: "PER", value: "Mide la infravaloración", icon: "💵", description: "Precio en relación a ganancias. '¿Estoy comprando barato?'" },
+    { label: "PBR", value: "Mide frente a activos", icon: "🏦", description: "Precio en relación a activos. '¿Es más caro que el valor de liquidación?'" },
+    { label: "ROE", value: "Mide la rentabilidad", icon: "⚙️", description: "Eficiencia del capital. '¿Esta empresa gana dinero bien?'" },
+  ]}
+  cols={3}
+/>
+
+> **La combinación ideal**: PER bajo + PBR bajo + ROE alto → Una empresa de calidad infravalorada
+
+---
+
+## 5. Margen de seguridad (Margin of Safety)
+
+<Callout type="note">
+El principio fundamental de Benjamin Graham. Si el valor intrínseco de una empresa se estima en 100 €, solo compra a 70 € o menos. Este es su **"colchón de error"** — protección para cuando su estimación resulte incorrecta.
+
+Con un margen de seguridad del 30%: Valor intrínseco 100 € × 0,7 = solo comprar a 70 € o menos.
+</Callout>
+
+---
+
+## 6. Principios prácticos de la inversión value
+
+1. **Solo invierta en negocios que entiende** — si no puede explicar el modelo de negocio, no invierta
+2. **Asuma una tenencia a largo plazo** — no se deje sacudir por la volatilidad a corto plazo
+3. **Concentre sus inversiones** — conocer 2–3 empresas en profundidad es mejor que conocer vagamente 10
+4. **Compre el negocio, no la acción** — céntrese en el valor, no en el precio
+5. **Conserve liquidez cuando sea incierto** — mantener efectivo para la oportunidad correcta también es una estrategia
+
+---
+
+<Quiz>
+**[Verificación de conocimientos]**
+
+Q. Una empresa con PER 5x vs una empresa con PER 50x. ¿Es automáticamente la empresa con PER 5x la mejor inversión?
+
+① Sí ② No
+
+**Respuesta: ②** — Un PER bajo puede indicar beneficios en declive o una empresa con dificultades. También debe examinar el ROE, el PBR, el modelo de negocio y el potencial de crecimiento. Comparar con la media sectorial también es esencial.
+</Quiz>
+
+---
+
+## Conclusión — Resumen de la serie Fundamentos de Acciones
+
+| Capítulo | Punto clave |
+|---|---|
+| Ch1 | Acción = propiedad fraccionada. Rendimientos = plusvalías + dividendos |
+| Ch2 | OHLCV, precios límite arriba/abajo, flujo institucional/extranjero/minorista |
+| Ch3 | Velas japonesas, medias móviles, cruce dorado/muerte, soporte/resistencia |
+| Ch4 | Estructura del day trading, costes (comisiones + impuesto), trampas psicológicas |
+| Ch5 | Compra a crédito = compra en margen. Liquidación D+2, riesgo de liquidación forzosa |
+| Ch6 | Inversión value = exploración del valor intrínseco. PER, PBR, ROE, margen de seguridad |
+
+Las acciones no son un juego de azar. Entender el negocio, esperar el precio correcto y seguir sus principios — así es como se sobrevive y prospera a largo plazo.

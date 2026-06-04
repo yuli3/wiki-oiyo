@@ -1,0 +1,127 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 2
+title: "Stock Basics Ch2. What Those Numbers Mean — Open, Close, Volume & Limit Prices Explained"
+description: Every number beginners encounter daily on their trading app — open, high, low, close, volume, upper/lower limit prices, 52-week highs, and institutional flow — decoded in one guide.
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: en
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Chapter 2. What Those Numbers Mean — OHLCV, Limit Prices & Market Flow
+
+Open a trading app and numbers flood the screen. You need to be able to read them before you can invest.
+
+---
+
+## 1. OHLCV — One Day's Price Story
+
+A single day's price movement is summarized in five numbers.
+
+<StatCards
+  items={[
+    { label: "Open (O)", value: "Opening Price", icon: "🔔", description: "The first trade price at market open (9:00 AM)" },
+    { label: "High (H)", value: "Day's High", icon: "⬆️", description: "The highest price reached during the session" },
+    { label: "Low (L)", value: "Day's Low", icon: "⬇️", description: "The lowest price reached during the session" },
+    { label: "Close (C)", value: "Closing Price", icon: "🔕", description: "The last trade price at market close (3:30 PM)" },
+    { label: "Volume (V)", value: "Shares Traded", icon: "📊", description: "Total number of shares traded. Reflects market interest." },
+  ]}
+  cols={3}
+/>
+
+<Callout type="note">
+Each **candlestick** on a chart is a visual representation of exactly this O·H·L·C information. We cover candlestick analysis in Ch3.
+</Callout>
+
+---
+
+## 2. Upper & Lower Limit Prices
+
+Korean stock markets cap how far a price can move in a single session.
+
+<StatCards
+  items={[
+    { label: "Upper Limit", value: "+30%", icon: "🚀", description: "Maximum 30% gain from prior close. Price cannot rise further once reached." },
+    { label: "Lower Limit", value: "-30%", icon: "💥", description: "Maximum 30% drop from prior close. Price cannot fall further once reached." },
+  ]}
+  cols={2}
+/>
+
+> **Why the cap?** To protect investors from extreme volatility and maintain market stability.
+
+---
+
+## 3. 52-Week High / Low
+
+| Term | Meaning | Trading Insight |
+|---|---|---|
+| **52-Week High** | Highest price in the past year | Can signal strong momentum — but may also mean it's overbought |
+| **52-Week Low** | Lowest price in the past year | Severe downtrend, or potentially undervalued |
+
+---
+
+## 4. Market Participants — Who Is Buying and Selling?
+
+<CompareTable
+  title="The Three Main Market Participants"
+  leftTitle="Institutional Investors"
+  rightTitle="Foreign Investors"
+  rows={[
+    { label: "Who", left: "Domestic funds, insurers, pension funds", right: "Overseas funds and foreign institutions" },
+    { label: "Behavior", left: "Medium-to-long-term, quarterly rebalancing", right: "Sensitive to global capital flows and exchange rates" },
+    { label: "Influence", left: "Strong impact on domestic mid-caps", right: "Key driver of large-cap movements" },
+  ]}
+  leftColor="#6366f1"
+  rightColor="#10b981"
+/>
+
+> **Retail investors (개미, "ants")** earned this nickname due to their smaller size and information disadvantage compared to institutions and foreigners.
+
+---
+
+## 5. KOSPI 200 — The Benchmark Index
+
+**KOSPI 200** comprises the top 200 stocks by market cap and liquidity on the KOSPI. It's the underlying asset for most ETFs, futures, and options in the Korean market.
+
+---
+
+## 6. Reading the Order Book
+
+The order book shows live buy and sell orders stacked at each price level.
+
+| Side | Meaning |
+|---|---|
+| **Ask (Sell Orders)** | Prices sellers are willing to accept (shown in red, upper section) |
+| **Bid (Buy Orders)** | Prices buyers are willing to pay (shown in blue, lower section) |
+| **Spread** | Best ask minus best bid — reflects liquidity |
+
+<Callout type="note">
+A wide spread means the stock is illiquid. Blue-chip stocks often trade at a 1-tick spread, while small-caps can have spreads of tens or hundreds of won.
+</Callout>
+
+---
+
+<Quiz>
+**[Quick Check]**
+
+Q. If a stock closed at ₩10,000 yesterday, what is today's lower limit price?
+
+① ₩7,000 ② ₩9,000 ③ ₩13,000
+
+**Answer: ①** — The lower limit is −30% of the prior close. 10,000 × 0.7 = ₩7,000.
+</Quiz>
+
+---
+
+Next: these numbers form patterns — we decode **candlestick charts and moving averages**.

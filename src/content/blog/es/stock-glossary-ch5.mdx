@@ -1,0 +1,137 @@
+---
+track: academy
+series: '주식 용어 해설'
+chapter: 5
+title: "Acciones Básicas Ch5. ¿Qué es la Compra a Crédito? — Estructura de las Compras en Margen y Riesgo de Liquidación Forzosa"
+description: "Todo sobre la compra a crédito (compra en margen sin fondos de liquidación): cálculo de la tasa de margen, concepto de fecha de liquidación D+2 y condiciones de liquidación forzosa. Explicación concreta de por qué la compra en margen es peligrosa para los inversores principiantes."
+pubDate: 2026-06-04T00:00:00.000Z
+category: Investment
+tags:
+  - Education
+  - investment
+  - stock
+locale: es
+author: Oiyo
+---
+
+import Callout from "@/components/mdx/Callout.astro";
+import StatCards from "@/components/mdx/StatCards.astro";
+import CompareTable from "@/components/mdx/CompareTable.astro";
+import Quiz from "@/components/mdx/Quiz.astro";
+
+# Capítulo 5. ¿Qué es la Compra a Crédito? — Estructura de las Compras en Margen y Riesgo de Liquidación Forzosa
+
+La compra a crédito es un sistema en el mercado de valores que le permite **"comprar acciones incluso cuando no tiene el dinero en este momento."** Pero detrás de esa comodidad se esconde un riesgo poderoso: la liquidación forzosa.
+
+---
+
+## 1. Definición de la compra a crédito
+
+La **compra a crédito** consiste en comprar más acciones de las que permiten sus fondos disponibles, utilizando únicamente un depósito de garantía (margen). Se compromete a depositar el importe restante en **dos días hábiles (D+2)** — es esencialmente una compra a crédito.
+
+> En términos simples: si tiene 1.000 €, puede comprar hasta 3.333 € en acciones. Sin embargo, debe depositar los 2.333 € restantes en dos días.
+
+---
+
+## 2. Tasa de margen y cálculo del importe pendiente
+
+<StatCards
+  items={[
+    {
+      label: "Tasa de margen",
+      value: "Varía según la acción",
+      icon: "📋",
+      description: "Del 30% al 100%. Cuanto menor sea la liquidez y mayor la volatilidad, mayor será la tasa. Las acciones de primera línea suelen ser del 40–50%."
+    },
+    {
+      label: "Importe pendiente",
+      value: "Déficit",
+      icon: "💳",
+      description: "Importe de compra menos sus fondos disponibles. Este es el importe que debe depositar obligatoriamente antes de la fecha de liquidación (D+2)."
+    },
+    {
+      label: "Fecha de liquidación",
+      value: "D+2",
+      icon: "📅",
+      description: "Dos días hábiles después de la fecha de compra. Si el importe pendiente no se paga antes de esa mañana, se activa una liquidación forzosa."
+    },
+  ]}
+  cols={3}
+/>
+
+### Ejemplo de cálculo
+
+| Concepto | Detalles |
+|---|---|
+| Fondos disponibles | 1.000 € |
+| Tasa de margen | 30% |
+| Importe máximo de compra | **3.333 €** (= 1.000 € ÷ 0,3) |
+| Importe pendiente | 2.333 € |
+| Plazo de depósito obligatorio | **9:00 h del día D+2 a partir de la fecha de compra** |
+
+---
+
+## 3. Liquidación forzosa (venta forzada)
+
+Si no deposita el importe pendiente antes de la mañana del D+2, **su bróker venderá automáticamente sus acciones a la fuerza**. Esto se llama **liquidación forzosa**.
+
+<Callout type="note">
+La liquidación forzosa se ejecuta **al precio de mercado inmediatamente después de la apertura**, sin su consentimiento. En un mercado bajista, sus acciones pueden venderse al peor precio posible — abre la aplicación y descubre que su posición ya ha sido cerrada.
+</Callout>
+
+**El escenario de terror de la liquidación forzosa:**
+1. Compra por 3.000 € (1.000 € de margen + 2.000 € pendiente)
+2. El precio cae un 30% → Valor de la cartera: 2.100 €
+3. No puede depositar antes de D+2 → Se activa la liquidación forzosa
+4. Venta a precio de mercado por 2.100 € → El bróker recupera 2.000 €
+5. Importe restante para el inversor: **100 €** (pérdida del 90% sobre los 1.000 € invertidos)
+
+---
+
+## 4. Compra a crédito vs Operativa en margen a plazo
+
+También existe la **operativa en margen a plazo** que se confunde a menudo con la compra a crédito.
+
+<CompareTable
+  title="Compra a crédito vs Operativa en margen a plazo"
+  leftTitle="Compra a crédito"
+  rightTitle="Operativa en margen a plazo"
+  rows={[
+    { label: "Naturaleza", left: "Compra a crédito ultra corto plazo", right: "Pedir dinero prestado al bróker para invertir" },
+    { label: "Período de reembolso", left: "D+2 (solo dos días)", right: "Hasta 90–180 días (varía según el bróker)" },
+    { label: "Intereses", left: "Ninguno (pero el período es extremadamente corto)", right: "Aprox. 5–12% anual (calculado diariamente)" },
+    { label: "Nivel de riesgo", left: "Muy alto (plazo de liquidación demasiado corto)", right: "Alto (carga de intereses + ratio de mantenimiento)" },
+    { label: "Perfil objetivo", left: "Principalmente traders a corto plazo", right: "Inversores que buscan apalancamiento" },
+  ]}
+  leftColor="#ef4444"
+  rightColor="#f59e0b"
+/>
+
+---
+
+## 5. Precauciones para la compra a crédito
+
+1. **Utilice solo fondos que pueda depositar con certeza en dos días**
+2. **Nunca use en un mercado bajista** — la liquidación forzosa maximiza las pérdidas
+3. **No abra nuevas posiciones a crédito para resistir una caída adicional** — esto agrava el riesgo
+4. **Las acciones con tasa de margen del 100%** no pueden comprarse a crédito en absoluto (acciones bajo vigilancia, acciones con alerta de especulación, etc.)
+
+<Callout type="note">
+También existe el concepto de **ratio de mantenimiento de garantías**. En operativas en margen, si el precio cae y el valor de la cartera cae por debajo del umbral requerido, el bróker exigirá garantías adicionales (llamada de margen). Si no puede cumplirlo, también se produce una liquidación forzosa.
+</Callout>
+
+---
+
+<Quiz>
+**[Verificación de conocimientos]**
+
+Q. Si no paga el importe pendiente de una compra a crédito antes del D+2, ¿qué ocurre?
+
+① Pagar intereses y ampliar el período ② El bróker vende sus acciones a la fuerza (liquidación forzosa) ③ No pasa nada
+
+**Respuesta: ②** — Si no se paga antes de la mañana del D+2, el bróker vende sus acciones al precio de mercado sin su consentimiento. La liquidación ocurre incluso si está en pérdidas.
+</Quiz>
+
+---
+
+A continuación, exploramos la **inversión value** — un enfoque que se centra en el valor intrínseco de una empresa en lugar de perseguir ganancias rápidas.
