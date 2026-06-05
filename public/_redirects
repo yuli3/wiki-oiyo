@@ -1,4 +1,21 @@
-# wiki.oiyo.net → blog.oiyo.net 리다이렉트
+# wiki.oiyo.net 리다이렉트
+
+# MBTI 실행형 테스트 → oiyo.net (테스트 canonical)
+/en/insight-quest-test  https://oiyo.net/en/mbti/test  301
+/ko/insight-quest-test  https://oiyo.net/ko/mbti/test  301
+/ja/insight-quest-test  https://oiyo.net/ja/mbti/test  301
+/fr/insight-quest-test  https://oiyo.net/fr/mbti/test  301
+/es/insight-quest-test  https://oiyo.net/es/mbti/test  301
+/zh/insight-quest-test  https://oiyo.net/zh/mbti/test  301
+/cn/insight-quest-test  https://oiyo.net/zh/mbti/test  301
+/en/mbti-career-test  https://oiyo.net/en/mbti/career  301
+/ko/mbti-career-test  https://oiyo.net/ko/mbti/career  301
+/ja/mbti-career-test  https://oiyo.net/ja/mbti/career  301
+/fr/mbti-career-test  https://oiyo.net/fr/mbti/career  301
+/es/mbti-career-test  https://oiyo.net/es/mbti/career  301
+/zh/mbti-career-test  https://oiyo.net/zh/mbti/career  301
+/cn/mbti-career-test  https://oiyo.net/zh/mbti/career  301
+
 # 게임 페이지: wiki는 백과사전 허브, 게임은 blog에만
 
 # blackjack
