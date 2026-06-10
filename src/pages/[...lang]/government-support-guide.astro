@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GovernmentSupportGuide from "../../components/tools/GovernmentSupportGuide";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({
+    params: { lang },
+    props: { locale: lang },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "정부 지원 가이드 — 복지·의료·주거·취업 공식 안내",
+    description:
+      "한국·일본·미국의 정부 지원 프로그램을 공식 URL과 전화번호와 함께 안내합니다. 긴급복지, 의료급여, 주거지원, 육아수당, 실업급여, 세금환급 정보를 한눈에 확인하세요.",
+  },
+  en: {
+    title: "Government Support Guide — Official Welfare, Health & Housing Resources",
+    description:
+      "Comprehensive directory of government support programs for South Korea, Japan, and the United States — with official URLs and phone numbers. Find emergency welfare, medical aid, housing, childcare, unemployment, and tax credit resources.",
+  },
+  ja: {
+    title: "政府支援ガイド — 福祉・医療・住居・就労の公式案内",
+    description:
+      "韓国・日本・アメリカの政府支援プログラムを公式URLと電話番号とともに掲載。緊急福祉、医療給付、住居支援、育児手当、失業給付、税額控除の情報を一覧で確認できます。",
+  },
+  fr: {
+    title: "Guide des aides gouvernementales — Ressources officielles bien-être, santé et logement",
+    description:
+      "Répertoire complet des programmes d'aide gouvernementale en Corée du Sud, au Japon et aux États-Unis, avec URL officielles et numéros de téléphone. Aide d'urgence, soins médicaux, logement, garde d'enfants, chômage et crédit d'impôt.",
+  },
+  es: {
+    title: "Guía de ayudas del gobierno — Recursos oficiales de bienestar, salud y vivienda",
+    description:
+      "Directorio completo de programas de apoyo gubernamental en Corea del Sur, Japón y Estados Unidos, con URL oficiales y números de teléfono. Ayuda de emergencia, atención médica, vivienda, cuidado infantil, desempleo y crédito fiscal.",
+  },
+  zh: {
+    title: "政府補助指南 — 福利、醫療與住宅官方資源",
+    description:
+      "涵蓋韓國、日本及美國政府支援計畫的完整目錄，附官方網址與電話號碼。包含緊急援助、醫療給付、住宅補助、育兒手當、失業給付及稅務抵免等資訊。",
+  },
+  cn: {
+    title: "政府补贴指南 — 福利、医疗与住房官方资源",
+    description:
+      "涵盖韩国、日本及美国政府支援计划的完整目录，附官方网址与电话号码。包含紧急援助、医疗给付、住房补贴、育儿手当、失业给付及税务抵免等信息。",
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<BaseLayout title={m.title} description={m.description}>
+  <main class="mx-auto max-w-4xl px-4 py-8">
+    <GovernmentSupportGuide client:load locale={locale} />
+  </main>
+</BaseLayout>

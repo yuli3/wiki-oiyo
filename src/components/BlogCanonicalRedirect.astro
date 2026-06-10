@@ -1,0 +1,70 @@
+---
+import type { Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  itemName: string;
+  targetPath: string;
+}
+
+const { locale, itemName, targetPath } = Astro.props;
+const targetLocale = locale === "cn" ? "zh" : locale;
+const target = `https://blog.oiyo.net/${targetLocale}${targetPath}/`;
+
+const copy: Record<Locale, { moved: string; body: string; link: string }> = {
+  ko: {
+    moved: "blog.oiyo.net에서 이용합니다",
+    body: "wiki.oiyo.net은 뜻과 개념을 설명하는 백과 허브입니다. 실행형 도구·테스트·계산기는 blog.oiyo.net의 정본 페이지로 통합했습니다.",
+    link: "blog.oiyo.net에서 열기",
+  },
+  en: {
+    moved: "now lives on blog.oiyo.net",
+    body: "wiki.oiyo.net is the encyclopedia hub. Interactive tools, tests, and calculators are unified on the canonical blog.oiyo.net page.",
+    link: "Open on blog.oiyo.net",
+  },
+  ja: {
+    moved: "は blog.oiyo.net に移動しました",
+    body: "wiki.oiyo.net は意味と概念を説明する百科ハブです。実行型ツール・テスト・計算機は blog.oiyo.net の正本ページに統合しました。",
+    link: "blog.oiyo.netで開く",
+  },
+  fr: {
+    moved: "est sur blog.oiyo.net",
+    body: "wiki.oiyo.net est le hub encyclopédique. Les outils interactifs sont unifiés sur la page canonique blog.oiyo.net.",
+    link: "Ouvrir sur blog.oiyo.net",
+  },
+  es: {
+    moved: "está en blog.oiyo.net",
+    body: "wiki.oiyo.net es el hub enciclopédico. Las herramientas interactivas están unificadas en la página canónica de blog.oiyo.net.",
+    link: "Abrir en blog.oiyo.net",
+  },
+  zh: {
+    moved: "已移至 blog.oiyo.net",
+    body: "wiki.oiyo.net 负责概念定义，互动工具统一到 blog.oiyo.net 的规范页面。",
+    link: "在 blog.oiyo.net 打开",
+  },
+  cn: {
+    moved: "已移至 blog.oiyo.net",
+    body: "wiki.oiyo.net 負責概念定義，互動工具統一到 blog.oiyo.net 的規範頁面。",
+    link: "在 blog.oiyo.net 開啟",
+  },
+};
+
+const text = copy[locale] ?? copy.en;
+const title = `${itemName} ${text.moved}`;
+---
+<html lang={locale}>
+  <head>
+    <title>{title}</title>
+    <link rel="canonical" href={target} />
+    <meta name="naver-site-verification" content="e1043bad51e3be143affbe491f12354fa985fa6a" />
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+  </head>
+  <body>
+    <main style="font-family: system-ui, sans-serif; max-width: 42rem; margin: 4rem auto; padding: 0 1rem;">
+      <h1>{title}</h1>
+      <p>{text.body}</p>
+      <p><a href={target}>{text.link}</a></p>
+    </main>
+  </body>
+</html>

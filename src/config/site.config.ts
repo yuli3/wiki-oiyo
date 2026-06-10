@@ -8,7 +8,7 @@ export const siteConfig = {
   url: "https://wiki.oiyo.net",
   author: "Oiyo Team",
   locale: "en",
-  locales: ["en", "ko", "ja", "fr", "es", "zh", "cn"],
+  locales: ["en", "ko", "ja", "fr", "es", "zh"],
   themeColor: "#65a30d",
   features: {
     scrollSnap: false,
