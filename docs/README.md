@@ -1,6 +1,6 @@
-# blog-oiyo Documentation Index
+# wiki-oiyo Documentation Index
 
-This directory defines how `blog-oiyo` should grow from its current mixed-content state into a documented, stable content platform centered on Cloudflare Pages.
+This directory defines how `wiki-oiyo` should grow as a documented, stable reference and education-wiki platform centered on Cloudflare Pages.
 
 ## Document Map
 
@@ -73,6 +73,12 @@ This directory defines how `blog-oiyo` should grow from its current mixed-conten
 23. [AGENTS Harness](../AGENTS.md)
     Canonical cross-agent harness for Codex, Claude Code, Gemini, Cursor, and other repository agents.
 
+24. [Wiki Content Strengthening Project](./wiki-content-strengthening-project-2026-06.md)
+    Project-specific content plan for `wiki-oiyo`, including cross-project role checks for `blog-oiyo`, `wiki-oiyo`, `oiyo-astro`, and `ahoxy-nextjs`.
+
+25. [Wiki Content Audit](./wiki-content-audit-2026-06-05.md)
+    Current metadata and inventory drift snapshot for the next wiki content-strengthening batch.
+
 ## Working Principle
 
 The order of operations from now on is:
@@ -81,4 +87,4 @@ The order of operations from now on is:
 2. Standardize before scaling.
 3. Store content metadata separately from article body.
 4. Prefer simple, inspectable formats over ad hoc logic.
-5. Keep `blog-oiyo` optimized for static publishing on Cloudflare Pages.
+5. Keep `wiki-oiyo` optimized for static publishing on Cloudflare Pages.

@@ -2,7 +2,6 @@
 
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
@@ -15,15 +14,19 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   site: "https://wiki.oiyo.net",
   output: "static",
-  adapter: cloudflare(),
   integrations: [
     react(),
     mdx(),
     sitemap({
+      // Keep sitemap files small enough for predictable Cloudflare Pages deploys
+      // and split the current URL set into sitemap-0.xml, sitemap-1.xml, sitemap-2.xml.
+      entryLimit: 2000,
       // Exclude dev/utility paths and underscore-prefixed routes
       filter: (page) => {
         const url = new URL(page);
         const path = url.pathname;
+        // Root is a locale redirect shell; canonical English content lives at /en/.
+        if (path === "/" || path === "") return false;
         // Exclude paths with underscore segments
         if (path.split("/").some((seg) => seg.startsWith("_"))) return false;
         // Exclude /index duplicate (trailing slash version is canonical)
@@ -37,7 +40,7 @@ export default defineConfig({
         const url = new URL(item.url);
         const path = url.pathname;
         // Homepage — highest priority
-        if (path === "/" || path === "") {
+        if (path === "/en/") {
           return { ...item, priority: 1.0 };
         }
         // Locale homepages (e.g. /ko/, /ja/, /fr/)
@@ -56,7 +59,16 @@ export default defineConfig({
         return { ...item, priority: 0.6 };
       },
     }),
-    robotsTxt(),
+    robotsTxt({
+      host: true,
+      policy: [
+        {
+          userAgent: "*",
+          allow: "/",
+          disallow: ["*/search?*", "/search", "/api/"],
+        },
+      ],
+    }),
   ],
   image: {
     service: {

@@ -8,8 +8,8 @@ export const siteConfig = {
   url: "https://wiki.oiyo.net",
   author: "Oiyo Team",
   locale: "en",
-  locales: ["en", "ko", "ja"],
-  themeColor: "#10b981", // Emerald/Green
+  locales: ["en", "ko", "ja", "fr", "es", "zh", "cn"],
+  themeColor: "#65a30d",
   features: {
     scrollSnap: false,
     // TOC intentionally disabled (commented out in article layout as well)

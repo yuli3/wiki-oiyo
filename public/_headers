@@ -1,9 +1,9 @@
 # Cloudflare Pages cache & security headers
-# blog.oiyo.net
+# wiki.oiyo.net
 
 # ──────────────────────────────────────────
 # DATA API — long cache, public CORS
-# blog-oiyo serves as static JSON CDN for ahoxy.com
+# wiki-oiyo serves as static JSON CDN for ahoxy.com
 # ──────────────────────────────────────────
 /data/*
   Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400

@@ -39,16 +39,14 @@ const currentPathname = Astro.url.pathname;
 
 const getLocalizedPath = (targetLocale: string) => {
   const firstSegment = currentPathname.split("/")[1];
+  const restOfPath = locales.includes(firstSegment)
+    ? currentPathname.replace(`/${firstSegment}`, "") || "/"
+    : currentPathname;
 
-  let localizedPath = currentPathname;
-  if (locales.includes(firstSegment)) {
-    const restOfPath = currentPathname.replace(`/${firstSegment}`, "");
-    localizedPath =
-      targetLocale === "en" ? restOfPath || "/" : `/${targetLocale}${restOfPath}`;
-  } else {
-    localizedPath =
-      targetLocale === "en" ? currentPathname : `/${targetLocale}${currentPathname}`;
-  }
+  const localizedPath = restOfPath === "/"
+    ? `/${targetLocale}/`
+    : `/${targetLocale}${restOfPath}`;
+
   return localizedPath.startsWith("/") ? localizedPath : `/${localizedPath}`;
 };
 

@@ -5,7 +5,7 @@ Disallow: /search
 Disallow: /api/
 
 # Host
-Host: https://blog.oiyo.net
+Host: https://wiki.oiyo.net
 
 # Sitemaps
-Sitemap: https://blog.oiyo.net/sitemap-index.xml
+Sitemap: https://wiki.oiyo.net/sitemap-index.xml

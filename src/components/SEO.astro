@@ -40,36 +40,14 @@ const currentPathname = Astro.url.pathname;
 
 // Helper to generate localized URLs
 const getLocalizedUrl = (locale: string) => {
-  const parts = currentPathname.split("/").filter(Boolean);
-  // If the first segment is a locale, replace it
-  if (locales.includes(parts[0])) {
-    parts[0] = locale;
-  } else {
-    // If it's the default locale (no prefix), add the prefix if not 'en'
-    if (locale !== "en") {
-      parts.unshift(locale);
-    }
-  }
-  // Special case: if it's 'en' (prefixDefaultLocale: false), remove the prefix if it was there
-  if (locale === "en" && locales.includes(currentPathname.split("/")[1])) {
-    // This logic depends on prefixDefaultLocale: false
-    // If current path starts with /ko/... and we want 'en', it should be /...
-  }
-
-  // Refined logic for prefixDefaultLocale: false
-  let localizedPath = currentPathname;
   const firstSegment = currentPathname.split("/")[1];
+  const restOfPath = siteConfig.locales.includes(firstSegment)
+    ? currentPathname.replace(`/${firstSegment}`, "") || "/"
+    : currentPathname;
 
-  if (locales.includes(firstSegment)) {
-    // Current is prefixed (e.g., /ko/blog)
-    const restOfPath = currentPathname.replace(`/${firstSegment}`, "");
-    localizedPath =
-      locale === "en" ? restOfPath || "/" : `/${locale}${restOfPath}`;
-  } else {
-    // Current is NOT prefixed (e.g., /blog)
-    localizedPath =
-      locale === "en" ? currentPathname : `/${locale}${currentPathname}`;
-  }
+  const localizedPath = restOfPath === "/"
+    ? `/${locale}/`
+    : `/${locale}${restOfPath}`;
 
   return new URL(localizedPath, Astro.site);
 };
@@ -83,14 +61,19 @@ const hreflangMap: Record<string, string> = {
   zh: "zh-CN",
   cn: "zh-TW",
 };
+
+const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig.locale);
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.json" />
 <meta name="generator" content={Astro.generator} />
 <meta name="theme-color" content={siteConfig.themeColor} />
 <meta name="naver-site-verification" content="e1043bad51e3be143affbe491f12354fa985fa6a" />
@@ -134,7 +117,7 @@ const hreflangMap: Record<string, string> = {
     <link rel="alternate" hreflang={hreflangMap[locale] ?? locale} href={getLocalizedUrl(locale)} />
   ))
 }
-<link rel="alternate" hreflang="x-default" href={getLocalizedUrl("en")} />
+<link rel="alternate" hreflang="x-default" href={getLocalizedUrl(xDefaultLocale)} />
 
 <!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
@@ -167,7 +150,7 @@ const hreflangMap: Record<string, string> = {
   <meta property="article:modified_time" content={(updatedDate ?? pubDate)!.toISOString()} />
 )}
 {type === "article" && (
-  <meta property="article:author" content={`${siteConfig.url}/about`} />
+  <meta property="article:author" content={`${siteConfig.url}/en/about`} />
 )}
 {type === "article" && category && (
   <meta property="article:section" content={category} />
