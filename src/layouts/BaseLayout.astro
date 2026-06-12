@@ -54,18 +54,21 @@ const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
   { href: `/${locale}/courses`, label: nav.courses ?? "Courses" },
   { href: `/${locale}/interactive`, label: nav.interactive ?? "Interactive" },
-  { href: `/${locale}/tools`, label: nav.tools ?? "Tools" },
 ];
 
-const langItems = [
+const allLangItems = [
   { code: "en", label: "EN" },
   { code: "ko", label: "KO" },
   { code: "ja", label: "JA" },
   { code: "fr", label: "FR" },
   { code: "es", label: "ES" },
   { code: "zh", label: "ZH" },
-  { code: "cn", label: "CN" },
 ];
+// Only offer locales the current page actually exists in (article pages pass
+// availableLocales); fall back to all. cn is removed from routing entirely.
+const langItems = availableLocales && availableLocales.length
+  ? allLangItems.filter((li) => availableLocales.includes(li.code) || li.code === locale)
+  : allLangItems;
 ---
 
 <html
@@ -362,13 +365,13 @@ const langItems = [
             aria-label="Footer navigation"
             class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-bold uppercase tracking-widest text-muted-foreground"
           >
-            <a href={`/${locale}/tools`} class="hover:text-primary transition-colors">{nav.tools ?? "Tools"}</a>
+            <a href={`/${locale}/interactive`} class="hover:text-primary transition-colors">{nav.tools ?? "Tools"}</a>
             <a href={`/${locale}/courses`} class="hover:text-primary transition-colors">{nav.courses ?? "Courses"}</a>
             <a href={`/${locale}/magazine`} class="hover:text-primary transition-colors">{nav.magazine ?? "Magazine"}</a>
             <a href="/rss.xml" class="hover:text-primary transition-colors">RSS</a>
             <a href="/sitemap-index.xml" class="hover:text-primary transition-colors">Sitemap</a>
-            <a href={`/${locale === "en" ? "" : locale + "/"}privacy`} class="hover:text-primary transition-colors">{t.legal.privacy.title}</a>
-            <a href={`/${locale === "en" ? "" : locale + "/"}terms`} class="hover:text-primary transition-colors">{t.legal.terms.title}</a>
+            <a href={`/${locale}/privacy`} class="hover:text-primary transition-colors">{t.legal.privacy.title}</a>
+            <a href={`/${locale}/terms`} class="hover:text-primary transition-colors">{t.legal.terms.title}</a>
             <a href="mailto:support@oiyo.net" class="hover:text-primary transition-colors">support@oiyo.net</a>
           </nav>
           <div
@@ -379,10 +382,10 @@ const langItems = [
         </div>
         <div class="flex flex-wrap justify-center md:justify-start gap-6 text-xs text-muted-foreground/60 items-center border-t border-border/20 pt-4">
           <span class="font-bold uppercase tracking-widest text-[10px]">Explore</span>
-          <a href="/ko/tools/" class="hover:text-primary transition-colors">도구 모음</a>
-          <a href="/en/tools/" class="hover:text-primary transition-colors">Tools</a>
-          <a href="/ko/academy-economics-basics-ch1/" class="hover:text-primary transition-colors">경제학 강의</a>
-          <a href="/ko/academy-accounting-basics-ch1/" class="hover:text-primary transition-colors">회계학 강의</a>
+          <a href="/ko/interactive/" class="hover:text-primary transition-colors">도구 모음</a>
+          <a href="/en/interactive/" class="hover:text-primary transition-colors">Tools</a>
+          <a href="https://blog.oiyo.net/ko/academy-economics-basics-ch1/" class="hover:text-primary transition-colors">경제학 강의</a>
+          <a href="https://blog.oiyo.net/ko/academy-accounting-basics-ch1/" class="hover:text-primary transition-colors">회계학 강의</a>
         </div>
         <div class="flex flex-wrap justify-center md:justify-start gap-6 text-xs text-muted-foreground/60 items-center border-t border-border/20 pt-4">
           <span class="font-bold uppercase tracking-widest text-[10px]">Oiyo Family</span>
