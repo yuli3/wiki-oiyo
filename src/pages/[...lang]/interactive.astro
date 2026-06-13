@@ -32,6 +32,30 @@ for (const post of allPosts) {
   byCategoryMap.set(cat, existing);
 }
 const categoryGroups = Array.from(byCategoryMap.entries()).sort(([a], [b]) => a.localeCompare(b));
+const routeModules = import.meta.glob("./*.astro");
+const excludedRouteSlugs = new Set([
+  "about",
+  "courses",
+  "index",
+  "interactive",
+  "magazine",
+  "privacy",
+  "search",
+  "terms",
+]);
+const standaloneRoutes = Object.keys(routeModules)
+  .map((path) => path.replace("./", "").replace(".astro", ""))
+  .filter((slug) => !slug.startsWith("[") && !excludedRouteSlugs.has(slug))
+  .sort((a, b) => a.localeCompare(b));
+const prettyRouteName = (slug: string) =>
+  slug
+    .split("-")
+    .map((part) =>
+      part.length <= 3 && /^[a-z]+$/.test(part)
+        ? part.toUpperCase()
+        : part.charAt(0).toUpperCase() + part.slice(1),
+    )
+    .join(" ");
 
 const interactiveT = (t as Record<string, unknown>).interactive as Record<string, string> | undefined;
 const pageTitle = interactiveT?.title ?? "Interactive";
@@ -39,6 +63,30 @@ const pageSubtitle = interactiveT?.subtitle ?? "Reading-first pages that embed s
 const featuredLabel = interactiveT?.featured ?? "Interactive Pick";
 const launchLabel = interactiveT?.launch ?? "Explore";
 const latestLabel = interactiveT?.latest ?? "Latest Interactive";
+const allInteractiveLabel =
+  locale === "ko" ? "전체 인터랙티브 디렉터리" :
+  locale === "ja" ? "すべてのインタラクティブ" :
+  locale === "fr" ? "Répertoire interactif complet" :
+  locale === "es" ? "Directorio interactivo completo" :
+  locale === "zh" ? "全部互動內容" :
+  locale === "cn" ? "全部互动内容" :
+  "All Interactive Directory";
+const allInteractiveSubtitle =
+  locale === "ko" ? "테스트, 계산기, 시뮬레이터를 빠르게 훑어보고 바로 이동하세요." :
+  locale === "ja" ? "テスト、計算機、シミュレーターを一覧からすばやく開けます。" :
+  locale === "fr" ? "Parcourez rapidement les tests, calculateurs et simulateurs." :
+  locale === "es" ? "Explora rápidamente tests, calculadoras y simuladores." :
+  locale === "zh" ? "快速瀏覽測驗、計算器與模擬器。" :
+  locale === "cn" ? "快速浏览测验、计算器与模拟器。" :
+  "Scan tests, calculators, and simulators, then jump straight in.";
+const standaloneLabel =
+  locale === "ko" ? "독립형 도구 전체 보기" :
+  locale === "ja" ? "スタンドアロンツール一覧" :
+  locale === "fr" ? "Tous les outils autonomes" :
+  locale === "es" ? "Todas las herramientas independientes" :
+  locale === "zh" ? "全部獨立工具" :
+  locale === "cn" ? "全部独立工具" :
+  "All Standalone Tools";
 ---
 
 <BaseLayout title={pageTitle} description={pageSubtitle}>
@@ -154,6 +202,63 @@ const latestLabel = interactiveT?.latest ?? "Latest Interactive";
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {allPosts.length > 0 && (
+        <div class="mt-20">
+          <div class="mb-8 max-w-3xl">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">{allInteractiveLabel}</h2>
+            <p class="mt-2 text-sm text-muted-foreground leading-relaxed">{allInteractiveSubtitle}</p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {allPosts.map((post) => {
+              const href = `/${locale}/${post.slug.split("/").slice(1).join("/")}/`;
+              return (
+                <a
+                  href={href}
+                  class="group min-h-24 rounded-xl border border-border/60 bg-background p-4 transition-colors hover:border-secondary/40 hover:bg-secondary/5"
+                >
+                  <div class="text-[10px] font-black uppercase tracking-[0.18em] text-secondary/80">
+                    {categoryNames[post.data.category ?? ""] ?? post.data.category ?? "Interactive"}
+                  </div>
+                  <h3 class="mt-2 text-sm font-bold leading-snug group-hover:text-secondary transition-colors line-clamp-2">
+                    {post.data.title}
+                  </h3>
+                  <p class="mt-2 text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                    {post.data.description}
+                  </p>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {standaloneRoutes.length > 0 && (
+        <div class="mt-20">
+          <div class="mb-8 max-w-3xl">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">{standaloneLabel}</h2>
+            <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+              {locale === "ko" ? "계산기, 테스트, 게임, 실험 도구를 한 페이지에서 모두 찾아볼 수 있습니다." :
+               locale === "ja" ? "計算機、テスト、ゲーム、実験ツールをこのページからまとめて探せます。" :
+               locale === "fr" ? "Retrouvez calculateurs, tests, jeux et outils expérimentaux depuis cette page." :
+               locale === "es" ? "Encuentra calculadoras, tests, juegos y herramientas experimentales desde esta página." :
+               locale === "zh" ? "在此集中查找計算器、測驗、遊戲與實驗工具。" :
+               locale === "cn" ? "在此集中查找计算器、测验、游戏与实验工具。" :
+               "Find calculators, tests, games, and experimental tools from one directory."}
+            </p>
+          </div>
+          <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {standaloneRoutes.map((slug) => (
+              <a
+                href={`/${locale}/${slug}/`}
+                class="rounded-lg border border-border/60 px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:border-secondary/40 hover:bg-secondary/5 hover:text-secondary"
+              >
+                {prettyRouteName(slug)}
+              </a>
+            ))}
+          </div>
         </div>
       )}
 

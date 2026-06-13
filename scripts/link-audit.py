@@ -30,6 +30,31 @@ def norm(path: str) -> str:
     return path.rstrip("/") or "/"
 
 
+
+def load_redirect_sources(dist: Path) -> list[str]:
+    """Splat-aware source patterns from dist/_redirects (CF Pages)."""
+    f = dist / "_redirects"
+    if not f.exists():
+        return []
+    sources = []
+    for line in f.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        sources.append(line.split()[0])
+    return sources
+
+
+def redirect_covers(sources: list[str], path: str) -> bool:
+    for src in sources:
+        if src.endswith("*"):
+            if path.startswith(src[:-1].rstrip("/")):
+                return True
+        elif norm(src) == path:
+            return True
+    return False
+
+
 def main() -> None:
     pages: dict[str, Path] = {}
     for html in DIST.rglob("index.html"):
@@ -38,6 +63,7 @@ def main() -> None:
 
     inbound: dict[str, int] = defaultdict(int)
     broken: list[tuple[str, str]] = []
+    redirect_sources = load_redirect_sources(DIST)
 
     for key, html in pages.items():
         text = html.read_text(errors="ignore")
@@ -51,7 +77,7 @@ def main() -> None:
                 continue
             if target in pages:
                 inbound[target] += 1
-            else:
+            elif not redirect_covers(redirect_sources, target):
                 broken.append((key, href))
 
     # Orphans: locale-prefixed content pages nobody links to.

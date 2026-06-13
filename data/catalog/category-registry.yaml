@@ -24,6 +24,13 @@ categories:
     description_ko: 발타자르 그라시안의 고전 오라클 300개 잠언 현대적 해석
     description_en: Modern interpretation of Baltasar Gracian's 300 maxims
 
+  - id: oracle-400
+    label_ko: 오라클 400
+    label_en: Oracle 400
+    track: academy
+    description_ko: 마르쿠스 아우렐리우스의 명상록을 현대적으로 풀어낸 스토아 잠언
+    description_en: Modern Stoic reflections from Marcus Aurelius' Meditations
+
   - id: mindset-30
     label_ko: 30일 마인드셋
     label_en: 30-Day Mindset

@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
-    "blog": "Blog",
+    "blog": "Bitácora",
     "about": "Acerca de",
     "courses": "Cursos",
     "magazine": "Revista",
@@ -30,7 +30,7 @@
     "allStories": "Todos los artículos"
   },
   "blog": {
-    "title": "Blog",
+    "title": "Bitácora",
     "readMore": "Leer más",
     "publishedOn": "Publicado el",
     "updatedOn": "Actualizado el",
@@ -57,7 +57,7 @@
   },
   "common": {
     "loading": "Cargando...",
-    "error": "Error",
+    "error": "Se produjo un error",
     "notFound": "No encontrado",
     "share": "Compartir",
     "copyLink": "Copiar enlace",
@@ -160,7 +160,7 @@
       "Productivity": "Productividad",
       "Games": "Juegos",
       "Tools": "Herramientas",
-      "Blockchain": "Blockchain",
+      "Blockchain": "Cadena de bloques",
       "Personal Finance": "Finanzas Personales",
       "Fortune & Spirituality": "Fortuna & Espiritualidad",
       "Real Estate": "Bienes Raíces"
