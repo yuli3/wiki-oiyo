@@ -1,5 +1,8 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { siteConfig } from "../../config/site.config";
 
 /**
@@ -10,10 +13,37 @@ import { siteConfig } from "../../config/site.config";
  * Output: /knowledge/topics.json  — a schema.org DefinedTermSet.
  * Additive endpoint: does not touch any page rendering.
  */
+type SeedTopic = {
+  id: string;
+  name?: Record<string, string>;
+  definitionOwner?: string;
+  primaryOwner?: string;
+  explanationOwner?: string;
+  marketPolicy?: string;
+  aliases?: string[];
+  routeIds?: string[];
+  relatedTopicIds?: string[];
+};
+
+const SEED_TOPIC_PATH = resolve(
+  dirname(fileURLToPath(import.meta.url)),
+  "../../../../docs/knowledge/topics.json",
+);
+
+function readWikiSeedTopics(): SeedTopic[] {
+  try {
+    const parsed = JSON.parse(readFileSync(SEED_TOPIC_PATH, "utf-8")) as { topics?: SeedTopic[] };
+    return parsed.topics?.filter((topic) => topic.definitionOwner === "wiki") ?? [];
+  } catch (error) {
+    console.warn(`[knowledge/topics] failed to read seed topics: ${String(error)}`);
+    return [];
+  }
+}
+
 export const GET: APIRoute = async () => {
   const posts = await getCollection("blog", ({ data }) => data.draft !== true);
 
-  const topics = posts
+  const dictionaryTopics = posts
     .filter((p) => p.data.track === "dictionary")
     .map((p) => {
       const localeFromSlug = p.slug.split("/")[0];
@@ -37,8 +67,42 @@ export const GET: APIRoute = async () => {
         datePublished: p.data.pubDate?.toISOString().slice(0, 10) ?? null,
         dateModified: modified?.toISOString().slice(0, 10) ?? null,
       };
-    })
-    .sort((a, b) => a.id.localeCompare(b.id));
+    });
+
+  const existingConcepts = new Set(dictionaryTopics.map((topic) => topic.concept));
+  const seedUpdatedDate = "2026-06-14";
+  const hubTopics = readWikiSeedTopics()
+    .filter((topic) => !existingConcepts.has(topic.id))
+    .flatMap((topic) =>
+      Object.entries(topic.name ?? {}).map(([locale, term]) => ({
+        id: `hub/${locale}/${topic.id}`,
+        concept: topic.id,
+        url: `${siteConfig.url}/knowledge/topics.json#${topic.id}`,
+        term,
+        definition: null,
+        category: "hub",
+        series: null,
+        locale,
+        tags: topic.aliases ?? [],
+        relatedTerms: topic.relatedTopicIds ?? [],
+        broader: null,
+        narrower: [],
+        author: "Oiyo",
+        reviewer: "OIYO Research Institute",
+        datePublished: seedUpdatedDate,
+        dateModified: seedUpdatedDate,
+        isHub: true,
+        source: {
+          primaryOwner: topic.primaryOwner ?? null,
+          definitionOwner: topic.definitionOwner ?? null,
+          explanationOwner: topic.explanationOwner ?? null,
+          marketPolicy: topic.marketPolicy ?? null,
+          routeIds: topic.routeIds ?? [],
+        },
+      })),
+    );
+
+  const topics = [...dictionaryTopics, ...hubTopics].sort((a, b) => a.id.localeCompare(b.id));
 
   const body = {
     "@context": "https://schema.org",
@@ -51,6 +115,7 @@ export const GET: APIRoute = async () => {
     license: `${siteConfig.url}/en/about`,
     dateModified: new Date().toISOString(),
     count: topics.length,
+    hubCount: hubTopics.length,
     hasDefinedTerm: topics,
   };
 
