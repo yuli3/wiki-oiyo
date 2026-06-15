@@ -24,9 +24,12 @@ interface Props {
   category?: string;
   author?: string;
   availableLocales?: string[];
+  track?: string;
+  series?: string;
+  definition?: string;
 }
 
-const { title, description, image, type, pubDate, updatedDate, tags, category, author, availableLocales } = Astro.props;
+const { title, description, image, type, pubDate, updatedDate, tags, category, author, availableLocales, track, series, definition } = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = await getTranslations(locale);
 const nav = t.nav as Record<string, string>;
@@ -76,7 +79,7 @@ const langItems = availableLocales && availableLocales.length
   class:list={["scroll-smooth", { "snap-y snap-mandatory": scrollSnapEnabled }]}
 >
   <head>
-    <SEO {title} {description} {image} {type} {pubDate} {updatedDate} {tags} {category} {author} {availableLocales} />
+    <SEO {title} {description} {image} {type} {pubDate} {updatedDate} {tags} {category} {author} {availableLocales} {track} {series} {definition} />
 
     <!-- Mermaid diagram rendering (only executes if mermaid code blocks are present) -->
     <script type="module" is:inline>

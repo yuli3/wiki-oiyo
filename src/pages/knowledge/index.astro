@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqAccordion from "../../components/shared/_oiyo-shared/FaqAccordion.astro";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../config/site.config";
+
+const posts = await getCollection("blog", ({ data }) => data.draft !== true);
+const dictCount = posts.filter((p) => p.data.track === "dictionary").length;
+const locales = siteConfig.locales;
+
+const resources = [
+  { name: "topics.json", href: "/knowledge/topics.json", desc: `${dictCount} defined terms (schema.org DefinedTermSet) with definition, sources, locale and a stable URL.` },
+  { name: "relations.json", href: "/knowledge/relations.json", desc: "Concept graph: series/topic clusters, explicit broader/narrower/related edges, and cross-locale translations." },
+  { name: "index.json", href: "/knowledge/index.json", desc: "Machine-readable discovery manifest for this site and the wider knowledge network." },
+];
+
+const network = [
+  { role: "Definition", name: "Oiyo Wiki", url: "https://wiki.oiyo.net" },
+  { role: "Explanation", name: "Oiyo Blog", url: "https://blog.oiyo.net" },
+  { role: "Execution", name: "Oiyo", url: "https://oiyo.net" },
+];
+---
+
+<BaseLayout
+  title="Knowledge Foundation — Citable Reference Data"
+  description="A machine-citable, source-cited reference dataset for astrology, saju, tarot, personality and psychology — designed for people and AI to cite."
+>
+  <article class="py-24 max-w-3xl mx-auto px-6">
+    <p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Knowledge Foundation</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+      A reference dataset built to be cited
+    </h1>
+    <p class="text-lg text-muted-foreground leading-relaxed mb-10">
+      Oiyo Wiki is the <strong>definition layer</strong> of the Oiyo knowledge network: source-cited,
+      stable definitions across astrology, saju, tarot, personality and psychology — published as clean
+      HTML <em>and</em> as machine-readable catalogs so that both people and AI can reference them.
+    </p>
+
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Open data catalogs</h2>
+    <ul class="space-y-4 mb-12">
+      {resources.map((r) => (
+        <li class="border border-border rounded-lg p-5">
+          <a href={r.href} class="text-primary font-bold font-mono">{r.name}</a>
+          <p class="text-sm text-muted-foreground mt-1">{r.desc}</p>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-bold tracking-tight mb-4">The knowledge network</h2>
+    <p class="text-muted-foreground mb-4">Three interlinked layers, each with its own <code>/knowledge/index.json</code>:</p>
+    <ul class="space-y-3 mb-12">
+      {network.map((n) => (
+        <li class="flex items-baseline gap-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-primary w-24 shrink-0">{n.role}</span>
+          <a href={n.url} class="font-medium hover:text-primary transition-colors">{n.name}</a>
+          <span class="text-xs text-muted-foreground">{n.url}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Citation</h2>
+    <p class="text-muted-foreground">
+      Cite individual terms by their stable URL (see <a href="/knowledge/topics.json" class="text-primary">topics.json</a>).
+      Coverage spans {locales.length} languages ({locales.join(", ")}). Attribution: <strong>Oiyo Wiki (wiki.oiyo.net)</strong>.
+    </p>
+
+    <FaqAccordion
+      heading="FAQ"
+      items={[
+        { q: "Can I cite or reuse this data?", a: "Yes. Each term has a stable canonical URL (see <a href='/knowledge/topics.json'>topics.json</a>). Please attribute to Oiyo Wiki (wiki.oiyo.net)." },
+        { q: "Is the data machine-readable?", a: "Yes — open JSON catalogs (topics.json, relations.json) plus <code>DefinedTerm</code> JSON-LD embedded in every dictionary page." },
+        { q: "How current is it?", a: "Catalogs are regenerated on every build; each entry carries a published and last-reviewed date." },
+      ]}
+    />
+  </article>
+</BaseLayout>

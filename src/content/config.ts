@@ -34,6 +34,16 @@ const blog = defineCollection({
     layoutVariant: z.enum(["standard-essay", "lecture-series", "interactive-article", "comparison-guide", "qualification-roadmap"]).optional(),
     heroMode: z.enum(["none", "abstract", "legacy-image"]).optional(),
     contentStage: z.enum(["idea", "planned", "outlined", "drafting", "review", "published", "rework", "archived"]).optional(),
+
+    // --- Knowledge-foundation fields (machine-citable definition layer) ---
+    // All optional & backward-compatible. The /knowledge catalogs and DefinedTerm
+    // JSON-LD prefer these when present, else derive from description/tags/series.
+    definition: z.string().max(400).optional(),      // explicit 1-sentence definition
+    relatedTerms: z.array(z.string()).default([]),   // related concept keys (slug w/o locale)
+    broader: z.string().optional(),                  // parent concept key
+    narrower: z.array(z.string()).default([]),       // child concept keys
+    reviewer: z.string().optional(),                 // E-E-A-T: reviewer byline
+    reviewedDate: z.coerce.date().optional(),        // E-E-A-T: last reviewed
   })
 });
 

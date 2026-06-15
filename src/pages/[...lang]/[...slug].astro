@@ -202,6 +202,9 @@ const coursesHref = `/${locale}/courses`;
   category={post.data.category}
   author={post.data.author}
   availableLocales={availableLocales}
+  track={track}
+  series={post.data.series}
+  definition={post.data.definition}
 >
   {seriesJsonLd && <script is:inline type="application/ld+json" set:html={seriesJsonLd} />}
 
