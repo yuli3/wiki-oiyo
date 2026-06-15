@@ -40,6 +40,29 @@ function readWikiSeedTopics(): SeedTopic[] {
   }
 }
 
+function conceptSlug(value: string): string {
+  return "meaning-of-" + value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/**
+ * Resolve a hub topic to its actual wiki definition page in the SAME locale, if
+ * one exists. Tries the topic id then its aliases (e.g. saju → meaning-of-palja).
+ * Returns null when no wiki definition exists yet — honest, no fabricated links.
+ */
+function resolveDefinitionUrl(
+  topic: SeedTopic,
+  locale: string,
+  conceptUrlByLocale: Map<string, Map<string, string>>,
+): string | null {
+  const localeConcepts = conceptUrlByLocale.get(locale);
+  if (!localeConcepts) return null;
+  for (const candidate of [topic.id, ...(topic.aliases ?? [])]) {
+    const url = localeConcepts.get(conceptSlug(candidate));
+    if (url) return url;
+  }
+  return null;
+}
+
 export const GET: APIRoute = async () => {
   const posts = await getCollection("blog", ({ data }) => data.draft !== true);
 
@@ -70,36 +93,51 @@ export const GET: APIRoute = async () => {
     });
 
   const existingConcepts = new Set(dictionaryTopics.map((topic) => topic.concept));
+
+  // Per-locale concept → URL index, used to link hub nodes to their actual wiki
+  // definition page (e.g. hub "saju" → /<locale>/meaning-of-palja/).
+  const conceptUrlByLocale = new Map<string, Map<string, string>>();
+  for (const topic of dictionaryTopics) {
+    let m = conceptUrlByLocale.get(topic.locale);
+    if (!m) conceptUrlByLocale.set(topic.locale, (m = new Map()));
+    m.set(topic.concept, topic.url);
+  }
+
   const seedUpdatedDate = "2026-06-14";
   const hubTopics = readWikiSeedTopics()
     .filter((topic) => !existingConcepts.has(topic.id))
     .flatMap((topic) =>
-      Object.entries(topic.name ?? {}).map(([locale, term]) => ({
-        id: `hub/${locale}/${topic.id}`,
-        concept: topic.id,
-        url: `${siteConfig.url}/knowledge/topics.json#${topic.id}`,
-        term,
-        definition: null,
-        category: "hub",
-        series: null,
-        locale,
-        tags: topic.aliases ?? [],
-        relatedTerms: topic.relatedTopicIds ?? [],
-        broader: null,
-        narrower: [],
-        author: "Oiyo",
-        reviewer: "OIYO Research Institute",
-        datePublished: seedUpdatedDate,
-        dateModified: seedUpdatedDate,
-        isHub: true,
-        source: {
-          primaryOwner: topic.primaryOwner ?? null,
-          definitionOwner: topic.definitionOwner ?? null,
-          explanationOwner: topic.explanationOwner ?? null,
-          marketPolicy: topic.marketPolicy ?? null,
-          routeIds: topic.routeIds ?? [],
-        },
-      })),
+      Object.entries(topic.name ?? {}).map(([locale, term]) => {
+        const definitionUrl = resolveDefinitionUrl(topic, locale, conceptUrlByLocale);
+        return {
+          id: `hub/${locale}/${topic.id}`,
+          concept: topic.id,
+          url: `${siteConfig.url}/knowledge/topics.json#${topic.id}`,
+          term,
+          definition: null,
+          definitionUrl,
+          category: "hub",
+          series: null,
+          locale,
+          tags: topic.aliases ?? [],
+          relatedTerms: topic.relatedTopicIds ?? [],
+          broader: null,
+          narrower: [],
+          author: "Oiyo",
+          reviewer: "OIYO Research Institute",
+          datePublished: seedUpdatedDate,
+          dateModified: seedUpdatedDate,
+          isHub: true,
+          source: {
+            primaryOwner: topic.primaryOwner ?? null,
+            definitionOwner: topic.definitionOwner ?? null,
+            definitionUrl,
+            explanationOwner: topic.explanationOwner ?? null,
+            marketPolicy: topic.marketPolicy ?? null,
+            routeIds: topic.routeIds ?? [],
+          },
+        };
+      }),
     );
 
   const topics = [...dictionaryTopics, ...hubTopics].sort((a, b) => a.id.localeCompare(b.id));
