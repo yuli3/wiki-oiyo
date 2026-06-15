@@ -2,9 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FaqAccordion from "../../components/shared/_oiyo-shared/FaqAccordion.astro";
 import { getCollection } from "astro:content";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
 import { siteConfig } from "../../config/site.config";
+import seedData from "../../data/knowledge-seed.json";
 
 const posts = await getCollection("blog", ({ data }) => data.draft !== true);
 const dictPosts = posts.filter((p) => p.data.track === "dictionary");
@@ -20,25 +19,19 @@ for (const p of dictPosts) {
 const conceptSlug = (v: string) =>
   "meaning-of-" + v.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-// Read the route-ownership seed and build the human-facing topic map.
-// Resolve from the build cwd (repo root) — robust across .astro bundling.
-const SEED_PATH = resolve(process.cwd(), "../docs/knowledge/topics.json");
+// Build the human-facing topic map from the in-repo route-ownership seed.
 type Seed = { id: string; name?: Record<string, string>; aliases?: string[]; relatedTopicIds?: string[]; definitionOwner?: string };
-let topicMap: { id: string; name: string; href: string | null; related: string[] }[] = [];
-try {
-  const seed = JSON.parse(readFileSync(SEED_PATH, "utf-8")) as { topics?: Seed[] };
-  topicMap = (seed.topics ?? [])
-    .filter((t) => t.definitionOwner === "wiki")
-    .map((t) => {
-      let href: string | null = null;
-      for (const c of [t.id, ...(t.aliases ?? [])]) {
-        const u = enConceptUrl.get(conceptSlug(c));
-        if (u) { href = u; break; }
-      }
-      return { id: t.id, name: t.name?.en ?? t.id, href, related: t.relatedTopicIds ?? [] };
-    })
-    .sort((a, b) => a.name.localeCompare(b.name));
-} catch { topicMap = []; }
+const topicMap = ((seedData as { topics?: Seed[] }).topics ?? [])
+  .filter((t) => t.definitionOwner === "wiki")
+  .map((t) => {
+    let href: string | null = null;
+    for (const c of [t.id, ...(t.aliases ?? [])]) {
+      const u = enConceptUrl.get(conceptSlug(c));
+      if (u) { href = u; break; }
+    }
+    return { id: t.id, name: t.name?.en ?? t.id, href, related: t.relatedTopicIds ?? [] };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const resources = [
   { name: "topics.json", href: "/knowledge/topics.json", desc: `${dictCount} defined terms (schema.org DefinedTermSet) with definition, sources, locale and a stable URL.` },

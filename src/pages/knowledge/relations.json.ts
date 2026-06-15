@@ -1,9 +1,8 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 import { siteConfig } from "../../config/site.config";
+// In-repo copy of the route-ownership seed (see topics.json.ts / sync-seed.sh).
+import seedData from "../../data/knowledge-seed.json";
 
 /**
  * Public concept graph for the dictionary (definition) layer.
@@ -32,19 +31,8 @@ type SeedTopic = {
   relatedTopicIds?: string[];
 };
 
-const SEED_TOPIC_PATH = resolve(
-  dirname(fileURLToPath(import.meta.url)),
-  "../../../../docs/knowledge/topics.json",
-);
-
 function readAllSeedTopics(): SeedTopic[] {
-  try {
-    const parsed = JSON.parse(readFileSync(SEED_TOPIC_PATH, "utf-8")) as { topics?: SeedTopic[] };
-    return parsed.topics ?? [];
-  } catch (error) {
-    console.warn(`[knowledge/relations] failed to read seed topics: ${String(error)}`);
-    return [];
-  }
+  return (seedData as { topics?: SeedTopic[] }).topics ?? [];
 }
 
 function conceptSlug(value: string): string {

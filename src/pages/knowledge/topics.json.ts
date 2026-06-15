@@ -1,9 +1,10 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 import { siteConfig } from "../../config/site.config";
+// In-repo copy of the route-ownership seed (SSOT: docs/knowledge/topics.json,
+// synced via docs/knowledge/sync-seed.sh). Imported so it is bundled at build —
+// each repo is built independently on Cloudflare and cannot read outside files.
+import seedData from "../../data/knowledge-seed.json";
 
 /**
  * Public machine-citable catalog of every dictionary (definition-layer) entry.
@@ -25,19 +26,9 @@ type SeedTopic = {
   relatedTopicIds?: string[];
 };
 
-const SEED_TOPIC_PATH = resolve(
-  dirname(fileURLToPath(import.meta.url)),
-  "../../../../docs/knowledge/topics.json",
-);
-
 function readWikiSeedTopics(): SeedTopic[] {
-  try {
-    const parsed = JSON.parse(readFileSync(SEED_TOPIC_PATH, "utf-8")) as { topics?: SeedTopic[] };
-    return parsed.topics?.filter((topic) => topic.definitionOwner === "wiki") ?? [];
-  } catch (error) {
-    console.warn(`[knowledge/topics] failed to read seed topics: ${String(error)}`);
-    return [];
-  }
+  const topics = (seedData as { topics?: SeedTopic[] }).topics ?? [];
+  return topics.filter((topic) => topic.definitionOwner === "wiki");
 }
 
 function conceptSlug(value: string): string {
