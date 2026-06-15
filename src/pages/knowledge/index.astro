@@ -2,11 +2,43 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FaqAccordion from "../../components/shared/_oiyo-shared/FaqAccordion.astro";
 import { getCollection } from "astro:content";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { siteConfig } from "../../config/site.config";
 
 const posts = await getCollection("blog", ({ data }) => data.draft !== true);
-const dictCount = posts.filter((p) => p.data.track === "dictionary").length;
+const dictPosts = posts.filter((p) => p.data.track === "dictionary");
+const dictCount = dictPosts.length;
 const locales = siteConfig.locales;
+
+// English concept → URL index, for linking topic-map cards to their definition.
+const enConceptUrl = new Map<string, string>();
+for (const p of dictPosts) {
+  if ((p.data.locale ?? p.slug.split("/")[0]) !== "en") continue;
+  enConceptUrl.set(p.slug.split("/").slice(1).join("/"), `/${p.slug}/`);
+}
+const conceptSlug = (v: string) =>
+  "meaning-of-" + v.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+// Read the route-ownership seed and build the human-facing topic map.
+// Resolve from the build cwd (repo root) — robust across .astro bundling.
+const SEED_PATH = resolve(process.cwd(), "../docs/knowledge/topics.json");
+type Seed = { id: string; name?: Record<string, string>; aliases?: string[]; relatedTopicIds?: string[]; definitionOwner?: string };
+let topicMap: { id: string; name: string; href: string | null; related: string[] }[] = [];
+try {
+  const seed = JSON.parse(readFileSync(SEED_PATH, "utf-8")) as { topics?: Seed[] };
+  topicMap = (seed.topics ?? [])
+    .filter((t) => t.definitionOwner === "wiki")
+    .map((t) => {
+      let href: string | null = null;
+      for (const c of [t.id, ...(t.aliases ?? [])]) {
+        const u = enConceptUrl.get(conceptSlug(c));
+        if (u) { href = u; break; }
+      }
+      return { id: t.id, name: t.name?.en ?? t.id, href, related: t.relatedTopicIds ?? [] };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+} catch { topicMap = []; }
 
 const resources = [
   { name: "topics.json", href: "/knowledge/topics.json", desc: `${dictCount} defined terms (schema.org DefinedTermSet) with definition, sources, locale and a stable URL.` },
@@ -45,6 +77,27 @@ const network = [
         </li>
       ))}
     </ul>
+
+    {topicMap.length > 0 && (
+      <>
+        <h2 class="text-2xl font-bold tracking-tight mb-4">Topic map</h2>
+        <p class="text-muted-foreground mb-4">Top-level concepts and how they connect. Each links to its definition.</p>
+        <div class="grid sm:grid-cols-2 gap-3 mb-12">
+          {topicMap.map((t) => (
+            <div class="border border-border rounded-lg p-4">
+              {t.href ? (
+                <a href={t.href} class="font-bold hover:text-primary transition-colors">{t.name}</a>
+              ) : (
+                <span class="font-bold">{t.name}</span>
+              )}
+              {t.related.length > 0 && (
+                <p class="text-xs text-muted-foreground mt-1">related: {t.related.join(", ")}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </>
+    )}
 
     <h2 class="text-2xl font-bold tracking-tight mb-4">The knowledge network</h2>
     <p class="text-muted-foreground mb-4">Three interlinked layers, each with its own <code>/knowledge/index.json</code>:</p>
