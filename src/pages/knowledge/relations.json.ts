@@ -1,5 +1,8 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { siteConfig } from "../../config/site.config";
 
 /**
@@ -9,10 +12,44 @@ import { siteConfig } from "../../config/site.config";
  * Edges are expressed compactly to stay O(n):
  *  - sets:    cluster memberships (same series, or same mystic topic, per locale)
  *  - sameAs:  cross-locale translation tuples (same concept, different language)
+ *  - hubs:    cross-site concept ownership graph (which site owns the definition,
+ *             explanation and execution of each top-level topic) + topic↔topic
+ *             relations, sourced from the route-ownership seed.
  *
  * Consumers can derive pairwise relations from set membership. This keeps the
  * file small even when a series has hundreds of members.
  */
+
+type SeedTopic = {
+  id: string;
+  name?: Record<string, string>;
+  primaryOwner?: string;
+  definitionOwner?: string;
+  explanationOwner?: string;
+  marketPolicy?: string;
+  aliases?: string[];
+  routeIds?: string[];
+  relatedTopicIds?: string[];
+};
+
+const SEED_TOPIC_PATH = resolve(
+  dirname(fileURLToPath(import.meta.url)),
+  "../../../../docs/knowledge/topics.json",
+);
+
+function readAllSeedTopics(): SeedTopic[] {
+  try {
+    const parsed = JSON.parse(readFileSync(SEED_TOPIC_PATH, "utf-8")) as { topics?: SeedTopic[] };
+    return parsed.topics ?? [];
+  } catch (error) {
+    console.warn(`[knowledge/relations] failed to read seed topics: ${String(error)}`);
+    return [];
+  }
+}
+
+function conceptSlug(value: string): string {
+  return "meaning-of-" + value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 
 // Mystic topic inference from slug (mirrors src/config/mystic-trinity.json topics).
 const TOPIC_PATTERNS: [string, RegExp][] = [
@@ -70,9 +107,16 @@ export const GET: APIRoute = async () => {
   // --- explicit edges from frontmatter (broader / narrower / relatedTerms) ---
   const edges: { from: string; to: string; type: "broader" | "narrower" | "related"; locale: string }[] = [];
 
+  // --- per-locale concept → URL index (for resolving hub definition links) ---
+  const conceptUrlByLocale = new Map<string, Map<string, string>>();
+
   for (const p of posts) {
     const locale = p.data.locale ?? p.slug.split("/")[0];
     const concept = p.slug.split("/").slice(1).join("/");
+
+    let cu = conceptUrlByLocale.get(locale);
+    if (!cu) conceptUrlByLocale.set(locale, (cu = new Map()));
+    cu.set(concept, url(p.slug));
 
     if (p.data.broader) {
       edges.push({ from: concept, to: p.data.broader, type: "broader", locale });
@@ -107,19 +151,65 @@ export const GET: APIRoute = async () => {
     .map(([concept, urls]) => ({ concept, urls }))
     .sort((a, b) => a.concept.localeCompare(b.concept));
 
+  // --- hub concept graph (cross-site ownership) from the route-ownership seed ---
+  const seedTopics = readAllSeedTopics();
+  const seedIds = new Set(seedTopics.map((t) => t.id));
+  const hubs = seedTopics
+    .map((t) => {
+      // resolve same-locale wiki definition URL for each locale (id or alias)
+      const definitionUrls: Record<string, string> = {};
+      for (const [locale, cu] of conceptUrlByLocale) {
+        for (const candidate of [t.id, ...(t.aliases ?? [])]) {
+          const u = cu.get(conceptSlug(candidate));
+          if (u) {
+            definitionUrls[locale] = u;
+            break;
+          }
+        }
+      }
+      return {
+        concept: t.id,
+        names: t.name ?? {},
+        primaryOwner: t.primaryOwner ?? null,
+        definitionOwner: t.definitionOwner ?? null,
+        explanationOwner: t.explanationOwner ?? null,
+        marketPolicy: t.marketPolicy ?? null,
+        definitionUrls,
+        routeIds: t.routeIds ?? [],
+        related: (t.relatedTopicIds ?? []).filter((r) => seedIds.has(r)),
+      };
+    })
+    .sort((a, b) => a.concept.localeCompare(b.concept));
+
+  // hub↔hub relation edges (concept-level, locale-agnostic), de-duplicated
+  const hubEdgeSet = new Set<string>();
+  const hubEdges: { from: string; to: string; type: "related" }[] = [];
+  for (const h of hubs) {
+    for (const r of h.related) {
+      const key = [h.concept, r].sort().join("::");
+      if (hubEdgeSet.has(key)) continue;
+      hubEdgeSet.add(key);
+      hubEdges.push({ from: h.concept, to: r, type: "related" });
+    }
+  }
+
   const body = {
     "@context": "https://schema.org",
     name: `${siteConfig.name} — Concept Graph`,
     url: `${siteConfig.url}/knowledge/relations.json`,
     description:
-      "Concept relationships for the dictionary layer: cluster memberships (series, topic) and cross-locale translation links.",
+      "Concept relationships: dictionary cluster memberships (series, topic), cross-locale translation links, frontmatter edges, and the cross-site hub ownership graph.",
     dateModified: new Date().toISOString(),
     setCount: sets.length,
     sameAsCount: sameAs.length,
     edgeCount: edges.length,
+    hubCount: hubs.length,
+    hubEdgeCount: hubEdges.length,
     sets,
     edges: edges.sort((a, b) => a.from.localeCompare(b.from) || a.to.localeCompare(b.to)),
     sameAs,
+    hubs,
+    hubEdges: hubEdges.sort((a, b) => a.from.localeCompare(b.from) || a.to.localeCompare(b.to)),
   };
 
   return new Response(JSON.stringify(body, null, 2), {
