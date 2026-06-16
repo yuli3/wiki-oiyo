@@ -139,6 +139,20 @@ export const GET: APIRoute = async () => {
     .map(([concept, urls]) => ({ concept, urls }))
     .sort((a, b) => a.concept.localeCompare(b.concept));
 
+  // Topic-cluster index: concept → { locale → member count } and cluster ids,
+  // so a hub can link to all dictionary definitions under it (e.g. astrology → 34).
+  const memberCountByConcept = new Map<string, Record<string, number>>();
+  const clusterIdsByConcept = new Map<string, string[]>();
+  for (const s of setMap.values()) {
+    if (s.kind !== "topic") continue;
+    const counts = memberCountByConcept.get(s.name) ?? {};
+    counts[s.locale] = s.members.length;
+    memberCountByConcept.set(s.name, counts);
+    const ids = clusterIdsByConcept.get(s.name) ?? [];
+    ids.push(s.id);
+    clusterIdsByConcept.set(s.name, ids);
+  }
+
   // --- hub concept graph (cross-site ownership) from the route-ownership seed ---
   const seedTopics = readAllSeedTopics();
   const seedIds = new Set(seedTopics.map((t) => t.id));
@@ -165,6 +179,10 @@ export const GET: APIRoute = async () => {
         definitionUrls,
         routeIds: t.routeIds ?? [],
         related: (t.relatedTopicIds ?? []).filter((r) => seedIds.has(r)),
+        // dictionary definitions under this hub (via topic inference), so the
+        // hub links to its whole subtree, not just one representative page.
+        definitionMemberCounts: memberCountByConcept.get(t.id) ?? {},
+        definitionClusters: (clusterIdsByConcept.get(t.id) ?? []).sort(),
       };
     })
     .sort((a, b) => a.concept.localeCompare(b.concept));
