@@ -49,7 +49,7 @@ const TOPIC_PATTERNS: [string, RegExp][] = [
   ["numerology", /numerolog|life-path-number|destiny-number/],
   ["blood-type", /blood-type/],
   ["dream", /dream-(meaning|interpretation|of)|meaning-of-dream/],
-  ["palmistry", /palmistry|palm-reading/],
+  ["palmistry", /palmistry|palm-reading|palm-[a-z]+-line/],
   ["physiognomy", /physiognomy|face-reading/],
   ["oracle", /\boracle\b|gracian|meditations/],
   ["fortune", /\bfortune\b|\bluck\b/],
