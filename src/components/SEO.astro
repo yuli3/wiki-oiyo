@@ -61,9 +61,12 @@ const locales =
 // Helper to generate localized URLs
 const getLocalizedUrl = (locale: string) => {
   const firstSegment = currentPathname.split("/")[1];
-  const restOfPath = siteConfig.locales.includes(firstSegment)
-    ? currentPathname.replace(`/${firstSegment}`, "") || "/"
-    : currentPathname;
+  // Locale-less pages (e.g. /knowledge) have no per-locale variants — keep the
+  // alternate self-referential rather than inventing a non-existent /xx/ URL.
+  if (!siteConfig.locales.includes(firstSegment)) {
+    return new URL(currentPathname, Astro.site);
+  }
+  const restOfPath = currentPathname.replace(`/${firstSegment}`, "") || "/";
 
   const localizedPath = restOfPath === "/"
     ? `/${locale}/`
