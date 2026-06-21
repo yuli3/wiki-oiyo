@@ -114,3 +114,201 @@ categories:
     track: dictionary
     description_ko: 심리학 핵심 개념 사전 — 애착이론, 인지편향, 방어기제 등 학술 개념 해설
     description_en: Psychology concepts dictionary — attachment theory, cognitive biases, defense mechanisms
+
+# --- expanded SSOT coverage (2026-06-21) ---
+  - id: mysticism
+    label_ko: 신비주의
+    label_en: Mysticism
+    track: dictionary
+  - id: mind-psychology
+    label_ko: 마음·심리
+    label_en: Mind & Psychology
+    track: dictionary
+  - id: economics
+    label_ko: 경제
+    label_en: Economics
+    track: academy
+  - id: business
+    label_ko: 비즈니스
+    label_en: Business
+    track: academy
+  - id: finance
+    label_ko: 금융
+    label_en: Finance
+    track: academy
+  - id: social-science
+    label_ko: 사회과학
+    label_en: Social Science
+    track: academy
+  - id: public-admin
+    label_ko: 행정
+    label_en: Public Admin
+    track: academy
+  - id: english-grammar
+    label_ko: 영문법
+    label_en: English Grammar
+    track: academy
+  - id: accounting
+    label_ko: 회계
+    label_en: Accounting
+    track: academy
+  - id: music-history
+    label_ko: 음악사
+    label_en: Music History
+    track: academy
+  - id: nursing
+    label_ko: 간호
+    label_en: Nursing
+    track: academy
+  - id: investment
+    label_ko: 투자
+    label_en: Investment
+    track: academy
+  - id: computer-science
+    label_ko: 컴퓨터과학
+    label_en: Computer Science
+    track: academy
+  - id: financial-engineering
+    label_ko: 금융공학
+    label_en: Financial Engineering
+    track: academy
+  - id: natural-science
+    label_ko: 자연과학
+    label_en: Natural Science
+    track: academy
+  - id: art-psychotherapy
+    label_ko: 미술치료
+    label_en: Art Psychotherapy
+    track: academy
+  - id: zoology
+    label_ko: 동물학
+    label_en: Zoology
+    track: academy
+  - id: statistics
+    label_ko: 통계
+    label_en: Statistics
+    track: academy
+  - id: actuarial-science
+    label_ko: 계리학
+    label_en: Actuarial Science
+    track: academy
+  - id: history
+    label_ko: 역사
+    label_en: History
+    track: academy
+  - id: philosophy-spirit
+    label_ko: 철학·영성
+    label_en: Philosophy & Spirit
+    track: dictionary
+  - id: medicine
+    label_ko: 의학
+    label_en: Medicine
+    track: academy
+  - id: technical-analysis
+    label_ko: 기술적 분석
+    label_en: Technical Analysis
+    track: academy
+  - id: law
+    label_ko: 법률
+    label_en: Law
+    track: academy
+  - id: lifestyle
+    label_ko: 라이프스타일
+    label_en: Lifestyle
+    track: magazine
+  - id: society-wealth
+    label_ko: 사회와 부
+    label_en: Society & Wealth
+    track: academy
+  - id: korean-logic
+    label_ko: 국어 논리
+    label_en: Korean Logic
+    track: academy
+  - id: education
+    label_ko: 교육
+    label_en: Education
+    track: academy
+  - id: product-management
+    label_ko: 제품 관리
+    label_en: Product Management
+    track: academy
+  - id: crypto
+    label_ko: 크립토
+    label_en: Crypto
+    track: academy
+  - id: health
+    label_ko: 건강
+    label_en: Health
+    track: magazine
+  - id: mythology
+    label_ko: 신화
+    label_en: Mythology
+    track: dictionary
+  - id: engineering
+    label_ko: 공학
+    label_en: Engineering
+    track: academy
+  - id: mathematics
+    label_ko: 수학
+    label_en: Mathematics
+    track: academy
+  - id: ai-literacy
+    label_ko: AI 리터러시
+    label_en: AI Literacy
+    track: academy
+  - id: game-theory
+    label_ko: 게임 이론
+    label_en: Game Theory
+    track: academy
+  - id: humanities
+    label_ko: 인문학
+    label_en: Humanities
+    track: academy
+  - id: government
+    label_ko: 정부
+    label_en: Government
+    track: academy
+  - id: communication
+    label_ko: 커뮤니케이션
+    label_en: Communication
+    track: academy
+  - id: tax
+    label_ko: 세무
+    label_en: Tax
+    track: academy
+  - id: blockchain
+    label_ko: 블록체인
+    label_en: Blockchain
+    track: academy
+  - id: behavioral-economics
+    label_ko: 행동경제학
+    label_en: Behavioral Economics
+    track: academy
+  - id: life
+    label_ko: 삶
+    label_en: Life
+    track: magazine
+  - id: digital
+    label_ko: 디지털
+    label_en: Digital
+    track: academy
+  - id: consumer
+    label_ko: 소비자
+    label_en: Consumer
+    track: academy
+  - id: career
+    label_ko: 커리어
+    label_en: Career
+    track: academy
+  - id: 
+    label_ko: 오라클 속담
+    label_en: 오라클 속담
+    track: academy
+  - id: 
+    label_ko: 오라클 노자
+    label_en: 오라클 노자
+    track: academy
+  - id: 
+    label_ko: 오라클 손자병법
+    label_en: 오라클 손자병법
+    track: academy

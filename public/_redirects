@@ -554,3 +554,29 @@
 
 # ── cn locale 전체 fallback (cn→zh 마이그레이션, 2026-06-10) ─────
 /cn/*  /zh/:splat  301
+
+# ── 카테고리 정규화 301 (synonym merge, 2026-06-21) ──
+/:lang/category/bienestar-y-espiritualidad  /:lang/category/health  301
+/:lang/category/bienestar-y-espiritualidad/  /:lang/category/health  301
+/:lang/category/health-rhythm  /:lang/category/health  301
+/:lang/category/health-rhythm/  /:lang/category/health  301
+/:lang/category/liberal-arts  /:lang/category/humanities  301
+/:lang/category/liberal-arts/  /:lang/category/humanities  301
+/:lang/category/lifestyle-growth  /:lang/category/lifestyle  301
+/:lang/category/lifestyle-growth/  /:lang/category/lifestyle  301
+/:lang/category/myth-culture  /:lang/category/mythology  301
+/:lang/category/myth-culture/  /:lang/category/mythology  301
+/:lang/category/mythology-history  /:lang/category/mythology  301
+/:lang/category/mythology-history/  /:lang/category/mythology  301
+/:lang/category/philosophy  /:lang/category/philosophy-spirit  301
+/:lang/category/philosophy/  /:lang/category/philosophy-spirit  301
+/:lang/category/psychologie  /:lang/category/mind-psychology  301
+/:lang/category/psychologie/  /:lang/category/mind-psychology  301
+/:lang/category/psychology  /:lang/category/mind-psychology  301
+/:lang/category/psychology/  /:lang/category/mind-psychology  301
+/:lang/category/psychology-self-development  /:lang/category/mind-psychology  301
+/:lang/category/psychology-self-development/  /:lang/category/mind-psychology  301
+/:lang/category/science  /:lang/category/natural-science  301
+/:lang/category/science/  /:lang/category/natural-science  301
+/:lang/category/wellness-spirituality  /:lang/category/health  301
+/:lang/category/wellness-spirituality/  /:lang/category/health  301
