@@ -59,7 +59,8 @@ const getLocalizedPath = (targetLocale: string) => {
 const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
   { href: `/${locale}/courses`, label: nav.courses ?? "Courses" },
-  { href: `/${locale}/interactive`, label: nav.interactive ?? "Interactive" },
+  // IA consolidation: top item labelled "Tools/도구들" → merged hub (/interactive).
+  { href: `/${locale}/interactive`, label: nav.tools ?? "Tools" },
 ];
 
 const allLangItems = [

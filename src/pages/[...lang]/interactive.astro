@@ -59,6 +59,9 @@ const prettyRouteName = (slug: string) =>
 
 const interactiveT = (t as Record<string, unknown>).interactive as Record<string, string> | undefined;
 const pageTitle = interactiveT?.title ?? "Interactive";
+// IA consolidation: heading reads as the unified "Tools" label (matches nav).
+const navObj = (t as Record<string, unknown>).nav as Record<string, string> | undefined;
+const toolsLabel = navObj?.tools ?? pageTitle;
 const pageSubtitle = interactiveT?.subtitle ?? "Reading-first pages that embed selected tools, games, and simulators.";
 const featuredLabel = interactiveT?.featured ?? "Interactive Pick";
 const launchLabel = interactiveT?.launch ?? "Explore";
@@ -94,9 +97,9 @@ const standaloneLabel =
     <div class="container px-4">
       <div class="mb-16 max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-          Interactive
+          {toolsLabel}
         </div>
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">{pageTitle}</h1>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">{toolsLabel}</h1>
         <p class="text-lg text-muted-foreground leading-relaxed max-w-2xl">{pageSubtitle}</p>
         <p class="mt-2 text-sm text-muted-foreground/50">{allPosts.length} interactive stories</p>
       </div>
