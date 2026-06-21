@@ -1,5 +1,5 @@
 ---
-import BlogCanonicalRedirect from "../../components/BlogCanonicalRedirect.astro";
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
 import { locales } from "../../lib/i18n";
 import type { Locale } from "../../lib/i18n";
 
@@ -8,5 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
+const names: Record<Locale, string> = { ko: "Emotion Regulation Test", en: "Emotion Regulation Test", ja: "Emotion Regulation Test", fr: "Emotion Regulation Test", es: "Emotion Regulation Test", zh: "Emotion Regulation Test", cn: "Emotion Regulation Test" };
 ---
-<BlogCanonicalRedirect locale={locale} itemName="Emotion Regulation Test" targetPath="/emotion-regulation-test" />
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/emotion-regulation-test/" kind="test" />
