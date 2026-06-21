@@ -59,8 +59,9 @@ const getLocalizedPath = (targetLocale: string) => {
 const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
   { href: `/${locale}/courses`, label: nav.courses ?? "Courses" },
-  // IA consolidation: top item labelled "Tools/도구들" → merged hub (/interactive).
-  { href: `/${locale}/interactive`, label: nav.tools ?? "Tools" },
+  // IA consolidation: wiki has no tools of its own (tools live in the family's
+  // unified catalog). "Tools/도구들" points at the canonical blog.oiyo.net hub.
+  { href: `https://blog.oiyo.net/${locale}/tools/`, label: nav.tools ?? "Tools" },
 ];
 
 const allLangItems = [
@@ -372,7 +373,7 @@ const langItems = availableLocales && availableLocales.length
             aria-label="Footer navigation"
             class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-bold uppercase tracking-widest text-muted-foreground"
           >
-            <a href={`/${locale}/interactive`} class="hover:text-primary transition-colors">{nav.tools ?? "Tools"}</a>
+            <a href={`https://blog.oiyo.net/${locale}/tools/`} class="hover:text-primary transition-colors">{nav.tools ?? "Tools"}</a>
             <a href={`/${locale}/courses`} class="hover:text-primary transition-colors">{nav.courses ?? "Courses"}</a>
             <a href={`/${locale}/magazine`} class="hover:text-primary transition-colors">{nav.magazine ?? "Magazine"}</a>
             <a href="/knowledge/" class="hover:text-primary transition-colors">Knowledge</a>
@@ -390,8 +391,8 @@ const langItems = availableLocales && availableLocales.length
         </div>
         <div class="flex flex-wrap justify-center md:justify-start gap-6 text-xs text-muted-foreground/60 items-center border-t border-border/20 pt-4">
           <span class="font-bold uppercase tracking-widest text-[10px]">Explore</span>
-          <a href="/ko/interactive/" class="hover:text-primary transition-colors">도구 모음</a>
-          <a href="/en/interactive/" class="hover:text-primary transition-colors">Tools</a>
+          <a href="https://blog.oiyo.net/ko/tools/" class="hover:text-primary transition-colors">도구 모음</a>
+          <a href="https://blog.oiyo.net/en/tools/" class="hover:text-primary transition-colors">Tools</a>
           <a href="https://blog.oiyo.net/ko/academy-economics-basics-ch1/" class="hover:text-primary transition-colors">경제학 강의</a>
           <a href="https://blog.oiyo.net/ko/academy-accounting-basics-ch1/" class="hover:text-primary transition-colors">회계학 강의</a>
         </div>
