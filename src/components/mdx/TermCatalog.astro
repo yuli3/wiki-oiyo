@@ -33,6 +33,8 @@ const SET_NAME: Record<string, Record<string, string>> = {
   cert: { ko: "자격증 용어 사전", en: "Certification Terms Glossary" },
   gwansang: { ko: "관상 용어 사전", en: "Korean Physiognomy (Gwansang) Glossary" },
   mbti: { ko: "MBTI 16유형 사전", en: "MBTI 16 Personality Types Glossary" },
+  zodiac: { ko: "별자리(12사인) 사전", en: "Zodiac Signs Glossary", ja: "12星座 辞典", zh: "十二星座词典", fr: "Glossaire des signes du zodiaque", es: "Glosario de signos del zodiaco" },
+  "chinese-zodiac": { ko: "12간지(띠) 사전", en: "Chinese Zodiac Glossary", ja: "十二支 辞典", zh: "十二生肖词典", fr: "Glossaire du zodiaque chinois", es: "Glosario del zodiaco chino" },
 };
 const setName = (SET_NAME[set]?.[locale]) ?? SET_NAME[set]?.en ?? set;
 const canonical = `${siteConfig.url}${Astro.url.pathname}`;

@@ -568,5 +568,117 @@
       "url": "/ko/mbti-dict-esfp/",
       "description": "즐거움과 에너지로 분위기를 띄우는 연예인"
     }
+  ],
+  "chinese-zodiac": [
+    {
+      "name": "쥐 (子)",
+      "url": "/ko/meaning-of-chinese-zodiac-rat/",
+      "description": "재치·기민함·적응력"
+    },
+    {
+      "name": "소 (丑)",
+      "url": "/ko/meaning-of-chinese-zodiac-ox/",
+      "description": "인내·안정감·지속력"
+    },
+    {
+      "name": "호랑이 (寅)",
+      "url": "/ko/meaning-of-chinese-zodiac-tiger/",
+      "description": "용기·힘·독립성"
+    },
+    {
+      "name": "토끼 (卯)",
+      "url": "/ko/meaning-of-chinese-zodiac-rabbit/",
+      "description": "온화·섬세·외교"
+    },
+    {
+      "name": "용 (辰)",
+      "url": "/ko/meaning-of-chinese-zodiac-dragon/",
+      "description": "카리스마·포부·기운"
+    },
+    {
+      "name": "뱀 (巳)",
+      "url": "/ko/meaning-of-chinese-zodiac-snake/",
+      "description": "지혜·직관·신중"
+    },
+    {
+      "name": "말 (午)",
+      "url": "/ko/meaning-of-chinese-zodiac-horse/",
+      "description": "활동·자유·열정"
+    },
+    {
+      "name": "양 (未)",
+      "url": "/ko/meaning-of-chinese-zodiac-goat/",
+      "description": "온순·예술·배려"
+    },
+    {
+      "name": "원숭이 (申)",
+      "url": "/ko/meaning-of-chinese-zodiac-monkey/",
+      "description": "재주·기지·호기심"
+    },
+    {
+      "name": "닭 (酉)",
+      "url": "/ko/meaning-of-chinese-zodiac-rooster/",
+      "description": "성실·정확·자신감"
+    },
+    {
+      "name": "개 (戌)",
+      "url": "/ko/meaning-of-chinese-zodiac-dog/",
+      "description": "충직·정의감·책임"
+    },
+    {
+      "name": "돼지 (亥)",
+      "url": "/ko/meaning-of-chinese-zodiac-pig/",
+      "description": "순수·풍요·낙천"
+    }
+  ],
+  "zodiac": [
+    {
+      "name": "양자리 (Aries, 3.21–4.19)",
+      "description": "불 · 시작·용기·추진"
+    },
+    {
+      "name": "황소자리 (Taurus, 4.20–5.20)",
+      "description": "흙 · 안정·인내·감각"
+    },
+    {
+      "name": "쌍둥이자리 (Gemini, 5.21–6.21)",
+      "description": "공기 · 호기심·소통·다재"
+    },
+    {
+      "name": "게자리 (Cancer, 6.22–7.22)",
+      "description": "물 · 정서·보호·가정"
+    },
+    {
+      "name": "사자자리 (Leo, 7.23–8.22)",
+      "description": "불 · 자신감·표현·리더십"
+    },
+    {
+      "name": "처녀자리 (Virgo, 8.23–9.22)",
+      "description": "흙 · 분석·완벽·실용"
+    },
+    {
+      "name": "천칭자리 (Libra, 9.23–10.22)",
+      "description": "공기 · 균형·관계·심미"
+    },
+    {
+      "name": "전갈자리 (Scorpio, 10.23–11.22)",
+      "description": "물 · 깊이·집중·변형"
+    },
+    {
+      "name": "사수자리 (Sagittarius, 11.23–12.21)",
+      "description": "불 · 모험·자유·철학"
+    },
+    {
+      "name": "염소자리 (Capricorn, 12.22–1.19)",
+      "description": "흙 · 목표·책임·성취"
+    },
+    {
+      "name": "물병자리 (Aquarius, 1.20–2.18)",
+      "description": "공기 · 독창·이상·혁신"
+    },
+    {
+      "name": "물고기자리 (Pisces, 2.19–3.20)",
+      "description": "물 · 공감·직관·예술"
+    }
   ]
 }
