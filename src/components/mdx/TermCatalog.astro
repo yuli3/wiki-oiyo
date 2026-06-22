@@ -11,7 +11,7 @@ interface Props {
 }
 const { set } = Astro.props;
 
-interface Term { name: string; url: string; description?: string }
+interface Term { name: string; url?: string; description?: string }
 const terms = ((catalogs as Record<string, Term[]>)[set]) ?? [];
 
 // Locale = first path segment (e.g. /en/meaning-of-... → "en"); default ko.
@@ -29,6 +29,10 @@ const SET_NAME: Record<string, Record<string, string>> = {
     ja: "タロット 大アルカナ辞典", zh: "塔罗大阿尔卡纳词典",
     fr: "Glossaire des Arcanes Majeurs du Tarot", es: "Glosario de Arcanos Mayores del Tarot",
   },
+  crypto: { ko: "암호화폐·블록체인 용어 사전", en: "Crypto & Blockchain Glossary" },
+  cert: { ko: "자격증 용어 사전", en: "Certification Terms Glossary" },
+  gwansang: { ko: "관상 용어 사전", en: "Korean Physiognomy (Gwansang) Glossary" },
+  mbti: { ko: "MBTI 16유형 사전", en: "MBTI 16 Personality Types Glossary" },
 };
 const setName = (SET_NAME[set]?.[locale]) ?? SET_NAME[set]?.en ?? set;
 const canonical = `${siteConfig.url}${Astro.url.pathname}`;
@@ -44,7 +48,7 @@ const jsonLd = terms.length > 0 ? JSON.stringify({
     "@type": "DefinedTerm",
     name: t.name,
     ...(t.description ? { description: t.description } : {}),
-    url: `${siteConfig.url}${t.url}`,
+    ...(t.url ? { url: `${siteConfig.url}${t.url}` } : {}),
   })),
 }) : null;
 ---

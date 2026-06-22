@@ -332,5 +332,241 @@
       "url": "/ko/meaning-of-tarot-the-world/",
       "description": "21 · 완성, 통합 · 목표 달성 · 미완성"
     }
+  ],
+  "crypto": [
+    {
+      "name": "블록체인",
+      "description": "거래 기록을 블록 단위로 묶어 사슬처럼 연결한 분산 장부. 누구나 검증할 수 있어 위·변조가 어렵습니다"
+    },
+    {
+      "name": "채굴(마이닝)·PoW",
+      "description": "작업증명. 연산 경쟁으로 블록을 생성하고 보상으로 코인을 받는 방식 — 비트코인의 방식"
+    },
+    {
+      "name": "PoS·스테이킹",
+      "description": "지분증명. 코인을 맡겨(스테이킹) 네트워크 검증에 참여하고 이자처럼 보상받는 방식 — 이더리움 등"
+    },
+    {
+      "name": "반감기(Halving)",
+      "description": "약 4년마다 비트코인 채굴 보상이 절반으로 줄어드는 이벤트. 공급 증가 속도가 줄어 역사적으로 큰 사이클의 기준점이 되어 왔습니다"
+    },
+    {
+      "name": "하드포크",
+      "description": "블록체인 규칙이 갈라져 새 체인이 생기는 것 (예: 비트코인캐시)"
+    },
+    {
+      "name": "지갑(월렛)",
+      "description": "코인을 보관·전송하는 도구. 핫월렛(온라인)과 콜드월렛(오프라인)으로 나뉩니다"
+    },
+    {
+      "name": "시드 문구",
+      "description": "지갑 복구용 12~24개 단어. 이것이 곧 자산 — 유출되면 끝, 분실해도 끝"
+    },
+    {
+      "name": "온체인",
+      "description": "블록체인 위에 기록된 실제 데이터. \"온체인 지표\"는 지갑 이동량 등으로 시장을 읽는 분석을 말합니다"
+    },
+    {
+      "name": "트래블룰",
+      "description": "일정 금액 이상 전송 시 송수신자 정보를 확인하는 자금세탁방지 규제"
+    },
+    {
+      "name": "가스비(수수료)",
+      "description": "네트워크 사용 수수료. 혼잡할수록 비싸집니다"
+    },
+    {
+      "name": "알트코인",
+      "description": "비트코인을 제외한 모든 코인의 통칭"
+    },
+    {
+      "name": "스테이블코인",
+      "description": "달러 등에 가치를 고정한 코인(USDT, USDC). 시장의 대기 자금 역할"
+    },
+    {
+      "name": "시가총액(시총)",
+      "description": "가격 × 유통량. 코인의 '체급'을 비교하는 기본 단위"
+    },
+    {
+      "name": "도미넌스",
+      "description": "전체 시총에서 비트코인이 차지하는 비율. 자금이 비트코인과 알트 중 어디로 쏠리는지의 지표"
+    },
+    {
+      "name": "김치프리미엄",
+      "description": "국내 거래소 가격이 해외보다 높은 정도. 국내 과열 심리의 온도계"
+    },
+    {
+      "name": "레버리지·청산",
+      "description": "빌린 돈으로 배율 거래하는 것. 가격이 반대로 가면 증거금이 강제 소멸(청산)됩니다 — 초보자 금지 영역"
+    },
+    {
+      "name": "DCA(분할 매수)",
+      "description": "일정 주기로 같은 금액을 사는 전략. 타이밍 예측을 포기하는 대신 평균 단가를 얻습니다"
+    },
+    {
+      "name": "FOMO / FUD",
+      "description": "급등 추격 심리(놓칠까 봐 매수) / 공포 유발 정보(패닉 매도 유도). 양쪽 다 계좌의 적입니다"
+    },
+    {
+      "name": "고래(Whale)",
+      "description": "시장을 움직일 만큼 대량 보유한 주체. 고래 지갑 이동은 온체인 분석의 단골 재료"
+    },
+    {
+      "name": "에어드랍",
+      "description": "특정 조건 충족자에게 코인을 무료 배포하는 것. '에어드랍 사칭 피싱'이 가장 흔한 사기 유형입니다"
+    }
+  ],
+  "cert": [
+    {
+      "name": "기능사",
+      "description": "기초 기능·숙련. 응시 자격 제한이 거의 없음"
+    },
+    {
+      "name": "산업기사",
+      "description": "기능사보다 상위. 전문대 수준 또는 경력 요건"
+    },
+    {
+      "name": "기사",
+      "description": "4년제 수준 또는 경력 요건. 실무 핵심 등급"
+    },
+    {
+      "name": "기능장",
+      "description": "기능사 상위의 숙련·관리 등급"
+    },
+    {
+      "name": "기술사",
+      "description": "최고 등급. 고도 전문지식 + 풍부한 실무경력 요구"
+    }
+  ],
+  "gwansang": [
+    {
+      "name": "명궁(命宮)",
+      "description": "양 눈썹 사이(인당) · 전반적 운세·정신 상태"
+    },
+    {
+      "name": "재백궁(財帛宮)",
+      "description": "코(준두) · 재물운"
+    },
+    {
+      "name": "형제궁(兄弟宮)",
+      "description": "눈썹 · 형제·동료 관계"
+    },
+    {
+      "name": "전택궁(田宅宮)",
+      "description": "눈과 눈썹 사이 · 부동산·가정"
+    },
+    {
+      "name": "남녀궁(男女宮)",
+      "description": "눈 아래(와잠) · 자녀·생식"
+    },
+    {
+      "name": "노복궁(奴僕宮)",
+      "description": "턱 아래 · 아랫사람·말년 인덕"
+    },
+    {
+      "name": "처첩궁(妻妾宮)",
+      "description": "눈꼬리(어미) · 배우자·애정"
+    },
+    {
+      "name": "질액궁(疾厄宮)",
+      "description": "산근(콧대 위) · 건강·재액"
+    },
+    {
+      "name": "천이궁(遷移宮)",
+      "description": "이마 양옆 · 이동·여행·변동"
+    },
+    {
+      "name": "관록궁(官祿宮)",
+      "description": "이마 중앙 · 직업·명예·지위"
+    },
+    {
+      "name": "복덕궁(福德宮)",
+      "description": "이마 양쪽 위 · 복록·정신적 안정"
+    },
+    {
+      "name": "부모궁(父母宮)",
+      "description": "이마 위쪽 좌우 · 부모운"
+    }
+  ],
+  "mbti": [
+    {
+      "name": "INTJ 전략가",
+      "url": "/ko/mbti-dict-intj/",
+      "description": "장기 비전과 전략적 사고로 시스템을 설계하는 독립적 완벽주의자"
+    },
+    {
+      "name": "INTP 논리학자",
+      "url": "/ko/mbti-dict-intp/",
+      "description": "호기심과 논리로 개념의 근본을 파고드는 이론가"
+    },
+    {
+      "name": "ENTJ 통솔자",
+      "url": "/ko/mbti-dict-entj/",
+      "description": "목표 지향적 리더십으로 조직을 이끄는 지휘관"
+    },
+    {
+      "name": "ENTP 변론가",
+      "url": "/ko/mbti-dict-entp/",
+      "description": "아이디어와 토론을 즐기는 기지 넘치는 혁신가"
+    },
+    {
+      "name": "INFJ 옹호자",
+      "url": "/ko/mbti-dict-infj/",
+      "description": "통찰과 이상으로 사람을 돕는 조용한 신념가"
+    },
+    {
+      "name": "INFP 중재자",
+      "url": "/ko/mbti-dict-infp/",
+      "description": "가치와 진정성을 추구하는 이상주의적 몽상가"
+    },
+    {
+      "name": "ENFJ 선도자",
+      "url": "/ko/mbti-dict-enfj/",
+      "description": "공감과 카리스마로 사람을 이끄는 선도자"
+    },
+    {
+      "name": "ENFP 활동가",
+      "url": "/ko/mbti-dict-enfp/",
+      "description": "열정과 가능성으로 영감을 주는 자유로운 활동가"
+    },
+    {
+      "name": "ISTJ 현실주의자",
+      "url": "/ko/mbti-dict-istj/",
+      "description": "책임감과 원칙으로 신뢰를 쌓는 현실주의자"
+    },
+    {
+      "name": "ISFJ 수호자",
+      "url": "/ko/mbti-dict-isfj/",
+      "description": "헌신과 배려로 주변을 돌보는 따뜻한 수호자"
+    },
+    {
+      "name": "ESTJ 경영자",
+      "url": "/ko/mbti-dict-estj/",
+      "description": "체계와 효율로 일을 완수하는 관리자"
+    },
+    {
+      "name": "ESFJ 집정관",
+      "url": "/ko/mbti-dict-esfj/",
+      "description": "화합과 봉사로 공동체를 챙기는 사교가"
+    },
+    {
+      "name": "ISTP 장인",
+      "url": "/ko/mbti-dict-istp/",
+      "description": "손과 논리로 문제를 해결하는 만능 재주꾼"
+    },
+    {
+      "name": "ISFP 모험가",
+      "url": "/ko/mbti-dict-isfp/",
+      "description": "감각과 자유를 사랑하는 예술적 모험가"
+    },
+    {
+      "name": "ESTP 사업가",
+      "url": "/ko/mbti-dict-estp/",
+      "description": "행동력과 순발력으로 현장을 누비는 활동가"
+    },
+    {
+      "name": "ESFP 연예인",
+      "url": "/ko/mbti-dict-esfp/",
+      "description": "즐거움과 에너지로 분위기를 띄우는 연예인"
+    }
   ]
 }
