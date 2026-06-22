@@ -23,6 +23,7 @@ import RadarChart from "../components/mdx/RadarChart.astro";
 import ToolCTA from "../components/mdx/ToolCTA.astro";
 import ToolCTAInline from "../components/mdx/ToolCTAInline.astro";
 import TestCTA from "../components/mdx/TestCTA.astro";
+import TermCatalog from "../components/mdx/TermCatalog.astro";
 import QuadrantMatrix from "../components/mdx/QuadrantMatrix.astro";
 import PyramidDiagram from "../components/mdx/PyramidDiagram.astro";
 import ForceDiagram from "../components/mdx/ForceDiagram.astro";
@@ -256,6 +257,7 @@ const editorialComponents = {
   ToolCTA,
   ToolCTAInline,
   TestCTA,
+  TermCatalog,
 };
 
 const diagramComponents = {

@@ -1,0 +1,51 @@
+---
+// Emits a schema.org DefinedTermSet for a dictionary hub page, listing every
+// member term (name + description + canonical URL) so the hub is machine-citable
+// as a glossary catalog by search engines and AI. Term data is generated into
+// src/data/term-catalogs.json from the hub MDX tables. Renders no visible UI.
+import catalogs from "../../data/term-catalogs.json";
+import { siteConfig } from "../../config/site.config";
+
+interface Props {
+  set: string; // "saju" | "tarot"
+}
+const { set } = Astro.props;
+
+interface Term { name: string; url: string; description?: string }
+const terms = ((catalogs as Record<string, Term[]>)[set]) ?? [];
+
+// Locale = first path segment (e.g. /en/meaning-of-... → "en"); default ko.
+const seg = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "ko";
+const locale = ["ko", "en", "ja", "zh", "fr", "es"].includes(seg) ? seg : "ko";
+
+const SET_NAME: Record<string, Record<string, string>> = {
+  saju: {
+    ko: "사주 명리 용어 사전", en: "Saju (Four Pillars) Glossary",
+    ja: "四柱推命 用語辞典", zh: "四柱命理术语词典",
+    fr: "Glossaire du Saju (Quatre Piliers)", es: "Glosario del Saju (Cuatro Pilares)",
+  },
+  tarot: {
+    ko: "타로 메이저 아르카나 사전", en: "Tarot Major Arcana Glossary",
+    ja: "タロット 大アルカナ辞典", zh: "塔罗大阿尔卡纳词典",
+    fr: "Glossaire des Arcanes Majeurs du Tarot", es: "Glosario de Arcanos Mayores del Tarot",
+  },
+};
+const setName = (SET_NAME[set]?.[locale]) ?? SET_NAME[set]?.en ?? set;
+const canonical = `${siteConfig.url}${Astro.url.pathname}`;
+
+const jsonLd = terms.length > 0 ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": `${canonical}#termset`,
+  name: setName,
+  url: canonical,
+  inLanguage: locale,
+  hasDefinedTerm: terms.map((t) => ({
+    "@type": "DefinedTerm",
+    name: t.name,
+    ...(t.description ? { description: t.description } : {}),
+    url: `${siteConfig.url}${t.url}`,
+  })),
+}) : null;
+---
+{jsonLd && <script type="application/ld+json" is:inline set:html={jsonLd} />}

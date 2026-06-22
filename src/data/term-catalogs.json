@@ -1,0 +1,336 @@
+{
+  "saju": [
+    {
+      "name": "갑(甲)",
+      "url": "/ko/meaning-of-saju-stem-gap/",
+      "description": "양목 · 거목 · 리더십, 개척, 곧음"
+    },
+    {
+      "name": "을(乙)",
+      "url": "/ko/meaning-of-saju-stem-eul/",
+      "description": "음목 · 덩굴·화초 · 유연함, 적응력, 실속"
+    },
+    {
+      "name": "병(丙)",
+      "url": "/ko/meaning-of-saju-stem-byeong/",
+      "description": "양화 · 태양 · 열정, 밝음, 표현력"
+    },
+    {
+      "name": "정(丁)",
+      "url": "/ko/meaning-of-saju-stem-jeong/",
+      "description": "음화 · 촛불·달빛 · 섬세한 열정, 헌신"
+    },
+    {
+      "name": "무(戊)",
+      "url": "/ko/meaning-of-saju-stem-mu/",
+      "description": "양토 · 큰 산 · 신용, 중후함, 포용"
+    },
+    {
+      "name": "기(己)",
+      "url": "/ko/meaning-of-saju-stem-gi/",
+      "description": "음토 · 밭의 흙 · 양육, 실용, 꼼꼼함"
+    },
+    {
+      "name": "경(庚)",
+      "url": "/ko/meaning-of-saju-stem-gyeong/",
+      "description": "양금 · 원석·무쇠 · 결단력, 의리, 개혁"
+    },
+    {
+      "name": "신(辛)",
+      "url": "/ko/meaning-of-saju-stem-sin/",
+      "description": "음금 · 보석·칼날 · 예리함, 완벽주의"
+    },
+    {
+      "name": "임(壬)",
+      "url": "/ko/meaning-of-saju-stem-im/",
+      "description": "양수 · 바다 · 지혜, 포용, 스케일"
+    },
+    {
+      "name": "계(癸)",
+      "url": "/ko/meaning-of-saju-stem-gye/",
+      "description": "음수 · 이슬비·샘물 · 순수, 직관, 감수성"
+    },
+    {
+      "name": "자(子)",
+      "url": "/ko/meaning-of-saju-branch-ja/",
+      "description": "쥐 · 수 · 23~01시 · 지혜, 시작"
+    },
+    {
+      "name": "축(丑)",
+      "url": "/ko/meaning-of-saju-branch-chuk/",
+      "description": "소 · 토 · 01~03시 · 인내, 축적"
+    },
+    {
+      "name": "인(寅)",
+      "url": "/ko/meaning-of-saju-branch-in/",
+      "description": "호랑이 · 목 · 03~05시 · 용맹, 추진"
+    },
+    {
+      "name": "묘(卯)",
+      "url": "/ko/meaning-of-saju-branch-myo/",
+      "description": "토끼 · 목 · 05~07시 · 온화, 성장"
+    },
+    {
+      "name": "진(辰)",
+      "url": "/ko/meaning-of-saju-branch-jin/",
+      "description": "용 · 토 · 07~09시 · 포부, 변화"
+    },
+    {
+      "name": "사(巳)",
+      "url": "/ko/meaning-of-saju-branch-sa/",
+      "description": "뱀 · 화 · 09~11시 · 통찰, 세련"
+    },
+    {
+      "name": "오(午)",
+      "url": "/ko/meaning-of-saju-branch-o/",
+      "description": "말 · 화 · 11~13시 · 열정, 정점"
+    },
+    {
+      "name": "미(未)",
+      "url": "/ko/meaning-of-saju-branch-mi/",
+      "description": "양 · 토 · 13~15시 · 온순, 헌신"
+    },
+    {
+      "name": "신(申)",
+      "url": "/ko/meaning-of-saju-branch-sin-monkey/",
+      "description": "원숭이 · 금 · 15~17시 · 재주, 기민함"
+    },
+    {
+      "name": "유(酉)",
+      "url": "/ko/meaning-of-saju-branch-yu/",
+      "description": "닭 · 금 · 17~19시 · 정밀, 결실"
+    },
+    {
+      "name": "술(戌)",
+      "url": "/ko/meaning-of-saju-branch-sul/",
+      "description": "개 · 토 · 19~21시 · 충직, 수호"
+    },
+    {
+      "name": "해(亥)",
+      "url": "/ko/meaning-of-saju-branch-hae/",
+      "description": "돼지 · 수 · 21~23시 · 풍요, 순수"
+    },
+    {
+      "name": "비견(比肩)",
+      "url": "/ko/meaning-of-saju-god-bigyeon/",
+      "description": "같은 오행, 같은 음양 · 자아, 동료, 독립"
+    },
+    {
+      "name": "겁재(劫財)",
+      "url": "/ko/meaning-of-saju-god-geopjae/",
+      "description": "같은 오행, 다른 음양 · 승부, 야망, 재물 기복"
+    },
+    {
+      "name": "식신(食神)",
+      "url": "/ko/meaning-of-saju-god-siksin/",
+      "description": "내가 생함, 같은 음양 · 표현, 의식주, 재능"
+    },
+    {
+      "name": "상관(傷官)",
+      "url": "/ko/meaning-of-saju-god-sanggwan/",
+      "description": "내가 생함, 다른 음양 · 언변, 창의, 도전"
+    },
+    {
+      "name": "편재(偏財)",
+      "url": "/ko/meaning-of-saju-god-pyeonjae/",
+      "description": "내가 극함, 같은 음양 · 사업, 유동 재물"
+    },
+    {
+      "name": "정재(正財)",
+      "url": "/ko/meaning-of-saju-god-jeongjae/",
+      "description": "내가 극함, 다른 음양 · 고정 재물, 성실"
+    },
+    {
+      "name": "편관(偏官)",
+      "url": "/ko/meaning-of-saju-god-pyeongwan/",
+      "description": "나를 극함, 같은 음양 · 도전, 카리스마"
+    },
+    {
+      "name": "정관(正官)",
+      "url": "/ko/meaning-of-saju-god-jeonggwan/",
+      "description": "나를 극함, 다른 음양 · 명예, 질서, 조직"
+    },
+    {
+      "name": "편인(偏印)",
+      "url": "/ko/meaning-of-saju-god-pyeonin/",
+      "description": "나를 생함, 같은 음양 · 직관, 특수 재능"
+    },
+    {
+      "name": "정인(正印)",
+      "url": "/ko/meaning-of-saju-god-jeongin/",
+      "description": "나를 생함, 다른 음양 · 학문, 수용, 인덕"
+    },
+    {
+      "name": "장생(長生)",
+      "url": "/ko/meaning-of-saju-stage-jangsaeng/",
+      "description": "탄생 · 시작, 성장, 귀인"
+    },
+    {
+      "name": "목욕(沐浴)",
+      "url": "/ko/meaning-of-saju-stage-mokyok/",
+      "description": "사춘기 · 매력, 유행, 변동"
+    },
+    {
+      "name": "관대(冠帶)",
+      "url": "/ko/meaning-of-saju-stage-gwandae/",
+      "description": "성인식 · 패기, 명예, 도전"
+    },
+    {
+      "name": "건록(建祿)",
+      "url": "/ko/meaning-of-saju-stage-geonrok/",
+      "description": "자립 · 실력, 성실, 자수성가"
+    },
+    {
+      "name": "제왕(帝旺)",
+      "url": "/ko/meaning-of-saju-stage-jewang/",
+      "description": "전성기 · 카리스마, 주도권"
+    },
+    {
+      "name": "쇠(衰)",
+      "url": "/ko/meaning-of-saju-stage-soe/",
+      "description": "원숙기 · 노련, 신중, 내실"
+    },
+    {
+      "name": "병(病)",
+      "url": "/ko/meaning-of-saju-stage-byeong/",
+      "description": "휴식기 · 공감, 감수성, 사색"
+    },
+    {
+      "name": "사(死)",
+      "url": "/ko/meaning-of-saju-stage-sa/",
+      "description": "정지 · 몰입, 전문성, 외길"
+    },
+    {
+      "name": "묘(墓)",
+      "url": "/ko/meaning-of-saju-stage-myo/",
+      "description": "갈무리 · 저장, 절약, 관리"
+    },
+    {
+      "name": "절(絶)",
+      "url": "/ko/meaning-of-saju-stage-jeol/",
+      "description": "무(無) · 전환, 리셋, 재기"
+    },
+    {
+      "name": "태(胎)",
+      "url": "/ko/meaning-of-saju-stage-tae/",
+      "description": "잉태 · 구상, 기획, 가능성"
+    },
+    {
+      "name": "양(養)",
+      "url": "/ko/meaning-of-saju-stage-yang/",
+      "description": "태교기 · 준비, 양육, 축적"
+    }
+  ],
+  "tarot": [
+    {
+      "name": "바보 (The Fool)",
+      "url": "/ko/meaning-of-tarot-the-fool/",
+      "description": "0 · 새로운 시작, 모험 · 두려움 없는 출발 · 무모함, 준비 부족"
+    },
+    {
+      "name": "마법사 (The Magician)",
+      "url": "/ko/meaning-of-tarot-the-magician/",
+      "description": "1 · 의지, 실행력 · 능력 발휘 · 재능 낭비, 속임수"
+    },
+    {
+      "name": "여사제 (The High Priestess)",
+      "url": "/ko/meaning-of-tarot-the-high-priestess/",
+      "description": "2 · 직관, 무의식 · 직감 신뢰 · 직관 무시"
+    },
+    {
+      "name": "여황제 (The Empress)",
+      "url": "/ko/meaning-of-tarot-the-empress/",
+      "description": "3 · 풍요, 창조 · 풍요로운 성장 · 과잉보호, 정체"
+    },
+    {
+      "name": "황제 (The Emperor)",
+      "url": "/ko/meaning-of-tarot-the-emperor/",
+      "description": "4 · 권위, 질서 · 리더십, 안정 · 독선, 경직"
+    },
+    {
+      "name": "교황 (The Hierophant)",
+      "url": "/ko/meaning-of-tarot-the-hierophant/",
+      "description": "5 · 전통, 가르침 · 멘토의 조언 · 형식주의"
+    },
+    {
+      "name": "연인 (The Lovers)",
+      "url": "/ko/meaning-of-tarot-the-lovers/",
+      "description": "6 · 사랑, 선택 · 깊은 유대 · 불화, 갈등"
+    },
+    {
+      "name": "전차 (The Chariot)",
+      "url": "/ko/meaning-of-tarot-the-chariot/",
+      "description": "7 · 승리, 추진력 · 목표 돌파 · 방향 상실"
+    },
+    {
+      "name": "힘 (Strength)",
+      "url": "/ko/meaning-of-tarot-strength/",
+      "description": "8 · 내면의 힘, 인내 · 공포의 극복 · 자신감 상실"
+    },
+    {
+      "name": "은둔자 (The Hermit)",
+      "url": "/ko/meaning-of-tarot-the-hermit/",
+      "description": "9 · 성찰, 고독 · 깊은 통찰 · 고립, 단절"
+    },
+    {
+      "name": "운명의 수레바퀴 (Wheel of Fortune)",
+      "url": "/ko/meaning-of-tarot-wheel-of-fortune/",
+      "description": "10 · 전환점, 순환 · 행운의 흐름 · 하락 국면"
+    },
+    {
+      "name": "정의 (Justice)",
+      "url": "/ko/meaning-of-tarot-justice/",
+      "description": "11 · 공정, 인과 · 공정한 결과 · 불공정, 편향"
+    },
+    {
+      "name": "매달린 사람 (The Hanged Man)",
+      "url": "/ko/meaning-of-tarot-the-hanged-man/",
+      "description": "12 · 관점 전환, 멈춤 · 발상의 전환 · 무의미한 희생"
+    },
+    {
+      "name": "죽음 (Death)",
+      "url": "/ko/meaning-of-tarot-death/",
+      "description": "13 · 끝과 시작, 변환 · 새 챕터 · 변화 거부"
+    },
+    {
+      "name": "절제 (Temperance)",
+      "url": "/ko/meaning-of-tarot-temperance/",
+      "description": "14 · 조화, 중용 · 균형 회복 · 불균형, 과잉"
+    },
+    {
+      "name": "악마 (The Devil)",
+      "url": "/ko/meaning-of-tarot-the-devil/",
+      "description": "15 · 속박, 집착 · 얽매임의 자각 · 속박에서 해방"
+    },
+    {
+      "name": "탑 (The Tower)",
+      "url": "/ko/meaning-of-tarot-the-tower/",
+      "description": "16 · 붕괴, 급변 · 구조의 해체 · 내적 격변"
+    },
+    {
+      "name": "별 (The Star)",
+      "url": "/ko/meaning-of-tarot-the-star/",
+      "description": "17 · 희망, 치유 · 희망의 회복 · 자기 의심"
+    },
+    {
+      "name": "달 (The Moon)",
+      "url": "/ko/meaning-of-tarot-the-moon/",
+      "description": "18 · 불안, 환상 · 불확실성 · 안개 걷힘"
+    },
+    {
+      "name": "태양 (The Sun)",
+      "url": "/ko/meaning-of-tarot-the-sun/",
+      "description": "19 · 성공, 기쁨 · 확실한 성공 · 지연된 성공"
+    },
+    {
+      "name": "심판 (Judgement)",
+      "url": "/ko/meaning-of-tarot-judgement/",
+      "description": "20 · 부활, 재평가 · 각성, 두 번째 기회 · 과거 집착"
+    },
+    {
+      "name": "세계 (The World)",
+      "url": "/ko/meaning-of-tarot-the-world/",
+      "description": "21 · 완성, 통합 · 목표 달성 · 미완성"
+    }
+  ]
+}
