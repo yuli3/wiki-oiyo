@@ -37,6 +37,11 @@ const SET_NAME: Record<string, Record<string, string>> = {
   "chinese-zodiac": { ko: "12간지(띠) 사전", en: "Chinese Zodiac Glossary", ja: "十二支 辞典", zh: "十二生肖词典", fr: "Glossaire du zodiaque chinois", es: "Glosario del zodiaco chino" },
   finance: { ko: "금융·투자 용어 사전", en: "Finance & Investing Glossary", ja: "金融・投資 用語辞典", zh: "金融与投资术语词典", fr: "Glossaire de la finance et de l'investissement", es: "Glosario de finanzas e inversión" },
   personality: { ko: "성격검사 용어 사전", en: "Personality Assessment Glossary", ja: "性格検査 用語辞典", zh: "性格测验术语词典", fr: "Glossaire des tests de personnalité", es: "Glosario de evaluación de personalidad" },
+  big5: { ko: "Big5 30 패싯 사전", en: "Big Five 30 Facets Glossary", ja: "Big5 30ファセット辞典", zh: "大五人格30维度词典", fr: "Glossaire des 30 facettes du Big Five", es: "Glosario de las 30 facetas del Big Five" },
+  enneagram: { ko: "에니어그램 9유형 사전", en: "Enneagram 9 Types Glossary", ja: "エニアグラム9タイプ辞典", zh: "九型人格词典", fr: "Glossaire des 9 types de l'Ennéagramme", es: "Glosario de los 9 tipos del Eneagrama" },
+  disc: { ko: "DISC 4유형 사전", en: "DISC Four Styles Glossary", ja: "DISC 4スタイル辞典", zh: "DISC四种风格词典", fr: "Glossaire des 4 styles DISC", es: "Glosario de los 4 estilos DISC" },
+  hexaco: { ko: "HEXACO 6요인 사전", en: "HEXACO Six Factors Glossary", ja: "HEXACO 6因子辞典", zh: "HEXACO六因素词典", fr: "Glossaire des 6 facteurs HEXACO", es: "Glosario de los 6 factores HEXACO" },
+  attachment: { ko: "애착 유형 사전", en: "Attachment Styles Glossary", ja: "愛着スタイル辞典", zh: "依恋类型词典", fr: "Glossaire des styles d'attachement", es: "Glosario de estilos de apego" },
 };
 const setName = (SET_NAME[set]?.[locale]) ?? SET_NAME[set]?.en ?? set;
 const canonical = `${siteConfig.url}${Astro.url.pathname}`;
