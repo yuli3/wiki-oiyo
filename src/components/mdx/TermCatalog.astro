@@ -35,6 +35,8 @@ const SET_NAME: Record<string, Record<string, string>> = {
   mbti: { ko: "MBTI 16유형 사전", en: "MBTI 16 Personality Types Glossary" },
   zodiac: { ko: "별자리(12사인) 사전", en: "Zodiac Signs Glossary", ja: "12星座 辞典", zh: "十二星座词典", fr: "Glossaire des signes du zodiaque", es: "Glosario de signos del zodiaco" },
   "chinese-zodiac": { ko: "12간지(띠) 사전", en: "Chinese Zodiac Glossary", ja: "十二支 辞典", zh: "十二生肖词典", fr: "Glossaire du zodiaque chinois", es: "Glosario del zodiaco chino" },
+  finance: { ko: "금융·투자 용어 사전", en: "Finance & Investing Glossary", ja: "金融・投資 用語辞典", zh: "金融与投资术语词典", fr: "Glossaire de la finance et de l'investissement", es: "Glosario de finanzas e inversión" },
+  personality: { ko: "성격검사 용어 사전", en: "Personality Assessment Glossary", ja: "性格検査 用語辞典", zh: "性格测验术语词典", fr: "Glossaire des tests de personnalité", es: "Glosario de evaluación de personalidad" },
 };
 const setName = (SET_NAME[set]?.[locale]) ?? SET_NAME[set]?.en ?? set;
 const canonical = `${siteConfig.url}${Astro.url.pathname}`;
