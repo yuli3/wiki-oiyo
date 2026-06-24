@@ -766,55 +766,315 @@
   "personality": [
     {
       "name": "개방성",
-      "description": "빅파이브 차원. 새로운 경험·아이디어·예술에 대한 호기심과 수용성."
+      "description": "빅파이브 차원. 새로운 경험·아이디어·예술에 대한 호기심과 수용성.",
+      "en": {
+        "name": "Openness",
+        "description": "Big Five dimension. Curiosity and receptivity to new experiences, ideas, and art."
+      },
+      "ja": {
+        "name": "開放性",
+        "description": "ビッグファイブの次元。新しい経験・アイデア・芸術への好奇心と受容性。"
+      },
+      "zh": {
+        "name": "开放性",
+        "description": "大五人格维度。对新体验、想法和艺术的好奇与接纳。"
+      },
+      "fr": {
+        "name": "Ouverture",
+        "description": "Dimension du Big Five. Curiosité et réceptivité aux nouvelles expériences, idées et à l'art."
+      },
+      "es": {
+        "name": "Apertura",
+        "description": "Dimensión del Big Five. Curiosidad y receptividad a nuevas experiencias, ideas y arte."
+      }
     },
     {
       "name": "성실성",
-      "description": "빅파이브 차원. 계획성·자기통제·책임감·목표 지향성."
+      "description": "빅파이브 차원. 계획성·자기통제·책임감·목표 지향성.",
+      "en": {
+        "name": "Conscientiousness",
+        "description": "Big Five dimension. Planning, self-control, responsibility, and goal-orientation."
+      },
+      "ja": {
+        "name": "誠実性",
+        "description": "ビッグファイブの次元。計画性・自己統制・責任感・目標志向。"
+      },
+      "zh": {
+        "name": "尽责性",
+        "description": "大五人格维度。计划性、自我控制、责任感与目标导向。"
+      },
+      "fr": {
+        "name": "Conscienciosité",
+        "description": "Dimension du Big Five. Planification, maîtrise de soi, responsabilité et orientation vers les objectifs."
+      },
+      "es": {
+        "name": "Responsabilidad",
+        "description": "Dimensión del Big Five. Planificación, autocontrol, responsabilidad y orientación a metas."
+      }
     },
     {
       "name": "외향성",
-      "description": "빅파이브 차원. 사교성·활동성·긍정 정서와 자극 추구."
+      "description": "빅파이브 차원. 사교성·활동성·긍정 정서와 자극 추구.",
+      "en": {
+        "name": "Extraversion",
+        "description": "Big Five dimension. Sociability, activity, positive emotion, and stimulation-seeking."
+      },
+      "ja": {
+        "name": "外向性",
+        "description": "ビッグファイブの次元。社交性・活動性・肯定的感情と刺激希求。"
+      },
+      "zh": {
+        "name": "外向性",
+        "description": "大五人格维度。社交性、活跃性、积极情绪与寻求刺激。"
+      },
+      "fr": {
+        "name": "Extraversion",
+        "description": "Dimension du Big Five. Sociabilité, activité, émotions positives et recherche de stimulation."
+      },
+      "es": {
+        "name": "Extraversión",
+        "description": "Dimensión del Big Five. Sociabilidad, actividad, emoción positiva y búsqueda de estimulación."
+      }
     },
     {
       "name": "우호성",
-      "description": "빅파이브 차원. 협조성·공감·신뢰·배려."
+      "description": "빅파이브 차원. 협조성·공감·신뢰·배려.",
+      "en": {
+        "name": "Agreeableness",
+        "description": "Big Five dimension. Cooperativeness, empathy, trust, and consideration."
+      },
+      "ja": {
+        "name": "調和性",
+        "description": "ビッグファイブの次元。協調性・共感・信頼・思いやり。"
+      },
+      "zh": {
+        "name": "宜人性",
+        "description": "大五人格维度。合作性、共情、信任与体贴。"
+      },
+      "fr": {
+        "name": "Agréabilité",
+        "description": "Dimension du Big Five. Coopération, empathie, confiance et considération."
+      },
+      "es": {
+        "name": "Amabilidad",
+        "description": "Dimensión del Big Five. Cooperación, empatía, confianza y consideración."
+      }
     },
     {
       "name": "신경성",
-      "description": "빅파이브 차원. 불안·정서적 불안정성에 대한 민감도(낮을수록 정서 안정)."
+      "description": "빅파이브 차원. 불안·정서적 불안정성에 대한 민감도(낮을수록 정서 안정).",
+      "en": {
+        "name": "Neuroticism",
+        "description": "Big Five dimension. Sensitivity to anxiety and emotional instability (lower means more emotionally stable)."
+      },
+      "ja": {
+        "name": "神経症傾向",
+        "description": "ビッグファイブの次元。不安・情緒的不安定への敏感さ(低いほど情緒安定)。"
+      },
+      "zh": {
+        "name": "神经质",
+        "description": "大五人格维度。对焦虑和情绪不稳定的敏感度(越低越情绪稳定)。"
+      },
+      "fr": {
+        "name": "Névrosisme",
+        "description": "Dimension du Big Five. Sensibilité à l'anxiété et à l'instabilité émotionnelle (plus bas = plus stable)."
+      },
+      "es": {
+        "name": "Neuroticismo",
+        "description": "Dimensión del Big Five. Sensibilidad a la ansiedad y la inestabilidad emocional (menor = más estable)."
+      }
     },
     {
       "name": "외향(E)-내향(I)",
-      "description": "MBTI 차원. 에너지의 방향 — 외부 세계와 교류 vs 내면 집중."
+      "description": "MBTI 차원. 에너지의 방향 — 외부 세계와 교류 vs 내면 집중.",
+      "en": {
+        "name": "Extraversion–Introversion (E–I)",
+        "description": "MBTI dimension. Direction of energy — engaging the outer world vs. inner focus."
+      },
+      "ja": {
+        "name": "外向(E)-内向(I)",
+        "description": "MBTIの次元。エネルギーの方向 — 外界との交流か内面への集中か。"
+      },
+      "zh": {
+        "name": "外向(E)-内向(I)",
+        "description": "MBTI维度。能量方向 — 与外部世界互动还是专注内心。"
+      },
+      "fr": {
+        "name": "Extraversion–Introversion (E–I)",
+        "description": "Dimension du MBTI. Direction de l'énergie — le monde extérieur vs le focus intérieur."
+      },
+      "es": {
+        "name": "Extraversión–Introversión (E–I)",
+        "description": "Dimensión del MBTI. Dirección de la energía — el mundo exterior vs el foco interior."
+      }
     },
     {
       "name": "감각(S)-직관(N)",
-      "description": "MBTI 차원. 정보 수집 — 구체적 사실 vs 패턴·가능성."
+      "description": "MBTI 차원. 정보 수집 — 구체적 사실 vs 패턴·가능성.",
+      "en": {
+        "name": "Sensing–Intuition (S–N)",
+        "description": "MBTI dimension. Information gathering — concrete facts vs. patterns and possibilities."
+      },
+      "ja": {
+        "name": "感覚(S)-直観(N)",
+        "description": "MBTIの次元。情報収集 — 具体的事実かパターン・可能性か。"
+      },
+      "zh": {
+        "name": "实感(S)-直觉(N)",
+        "description": "MBTI维度。信息收集 — 具体事实还是模式与可能性。"
+      },
+      "fr": {
+        "name": "Sensation–Intuition (S–N)",
+        "description": "Dimension du MBTI. Recueil d'information — faits concrets vs schémas et possibilités."
+      },
+      "es": {
+        "name": "Sensación–Intuición (S–N)",
+        "description": "Dimensión del MBTI. Recogida de información — hechos concretos vs patrones y posibilidades."
+      }
     },
     {
       "name": "사고(T)-감정(F)",
-      "description": "MBTI 차원. 판단 기준 — 논리·일관성 vs 가치·관계."
+      "description": "MBTI 차원. 판단 기준 — 논리·일관성 vs 가치·관계.",
+      "en": {
+        "name": "Thinking–Feeling (T–F)",
+        "description": "MBTI dimension. Decision criteria — logic and consistency vs. values and relationships."
+      },
+      "ja": {
+        "name": "思考(T)-感情(F)",
+        "description": "MBTIの次元。判断基準 — 論理・一貫性か価値・関係か。"
+      },
+      "zh": {
+        "name": "思考(T)-情感(F)",
+        "description": "MBTI维度。判断标准 — 逻辑一致还是价值关系。"
+      },
+      "fr": {
+        "name": "Pensée–Sentiment (T–F)",
+        "description": "Dimension du MBTI. Critères de décision — logique et cohérence vs valeurs et relations."
+      },
+      "es": {
+        "name": "Pensamiento–Sentimiento (T–F)",
+        "description": "Dimensión del MBTI. Criterio de decisión — lógica y coherencia vs valores y relaciones."
+      }
     },
     {
       "name": "판단(J)-인식(P)",
-      "description": "MBTI 차원. 생활 양식 — 계획·결정 vs 유연·개방."
+      "description": "MBTI 차원. 생활 양식 — 계획·결정 vs 유연·개방.",
+      "en": {
+        "name": "Judging–Perceiving (J–P)",
+        "description": "MBTI dimension. Lifestyle — planning and deciding vs. flexibility and openness."
+      },
+      "ja": {
+        "name": "判断(J)-知覚(P)",
+        "description": "MBTIの次元。生活様式 — 計画・決定か柔軟・開放か。"
+      },
+      "zh": {
+        "name": "判断(J)-知觉(P)",
+        "description": "MBTI维度。生活方式 — 计划决定还是灵活开放。"
+      },
+      "fr": {
+        "name": "Jugement–Perception (J–P)",
+        "description": "Dimension du MBTI. Mode de vie — planifier et décider vs flexibilité et ouverture."
+      },
+      "es": {
+        "name": "Juicio–Percepción (J–P)",
+        "description": "Dimensión del MBTI. Estilo de vida — planificar y decidir vs flexibilidad y apertura."
+      }
     },
     {
       "name": "기질",
-      "description": "타고난 정서·반응 성향의 토대. 성격이 형성되는 생물학적 바탕."
+      "description": "타고난 정서·반응 성향의 토대. 성격이 형성되는 생물학적 바탕.",
+      "en": {
+        "name": "Temperament",
+        "description": "The innate emotional and reactive disposition; the biological basis on which personality forms."
+      },
+      "ja": {
+        "name": "気質",
+        "description": "生まれ持った情緒・反応傾向の基盤。性格が形成される生物学的基盤。"
+      },
+      "zh": {
+        "name": "气质",
+        "description": "与生俱来的情绪与反应倾向基础;性格形成的生物学基础。"
+      },
+      "fr": {
+        "name": "Tempérament",
+        "description": "Disposition émotionnelle et réactive innée ; base biologique sur laquelle se forme la personnalité."
+      },
+      "es": {
+        "name": "Temperamento",
+        "description": "Disposición emocional y reactiva innata; base biológica sobre la que se forma la personalidad."
+      }
     },
     {
       "name": "성격특성",
-      "description": "상황을 가로질러 비교적 일관되게 나타나는 개인의 행동·사고 패턴."
+      "description": "상황을 가로질러 비교적 일관되게 나타나는 개인의 행동·사고 패턴.",
+      "en": {
+        "name": "Personality Trait",
+        "description": "Patterns of behavior and thought that appear relatively consistently across situations."
+      },
+      "ja": {
+        "name": "性格特性",
+        "description": "状況を越えて比較的一貫して現れる個人の行動・思考のパターン。"
+      },
+      "zh": {
+        "name": "人格特质",
+        "description": "跨情境相对一致地表现出来的个人行为与思维模式。"
+      },
+      "fr": {
+        "name": "Trait de personnalité",
+        "description": "Schémas de comportement et de pensée relativement constants selon les situations."
+      },
+      "es": {
+        "name": "Rasgo de personalidad",
+        "description": "Patrones de conducta y pensamiento que aparecen de forma relativamente consistente entre situaciones."
+      }
     },
     {
       "name": "신뢰도",
-      "description": "검사가 일관된 결과를 주는 정도(예: 재검사 신뢰도)."
+      "description": "검사가 일관된 결과를 주는 정도(예: 재검사 신뢰도).",
+      "en": {
+        "name": "Reliability",
+        "description": "The degree to which a test yields consistent results (e.g., test-retest reliability)."
+      },
+      "ja": {
+        "name": "信頼性",
+        "description": "検査が一貫した結果を与える程度(例: 再検査信頼性)。"
+      },
+      "zh": {
+        "name": "信度",
+        "description": "测验给出一致结果的程度(如重测信度)。"
+      },
+      "fr": {
+        "name": "Fidélité",
+        "description": "Degré auquel un test donne des résultats cohérents (ex. fidélité test-retest)."
+      },
+      "es": {
+        "name": "Fiabilidad",
+        "description": "Grado en que una prueba da resultados consistentes (p. ej., fiabilidad test-retest)."
+      }
     },
     {
       "name": "타당도",
-      "description": "검사가 측정하려는 것을 실제로 측정하는 정도."
+      "description": "검사가 측정하려는 것을 실제로 측정하는 정도.",
+      "en": {
+        "name": "Validity",
+        "description": "The degree to which a test actually measures what it intends to measure."
+      },
+      "ja": {
+        "name": "妥当性",
+        "description": "検査が測定しようとするものを実際に測定する程度。"
+      },
+      "zh": {
+        "name": "效度",
+        "description": "测验实际测量其意图测量内容的程度。"
+      },
+      "fr": {
+        "name": "Validité",
+        "description": "Degré auquel un test mesure réellement ce qu'il prétend mesurer."
+      },
+      "es": {
+        "name": "Validez",
+        "description": "Grado en que una prueba mide realmente lo que pretende medir."
+      }
     }
   ],
   "big5": [
