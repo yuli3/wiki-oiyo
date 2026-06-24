@@ -818,74 +818,501 @@
     }
   ],
   "big5": [
-    { "name": "불안 (N1 · Anxiety)", "description": "신경성 facet. 걱정·두려움·긴장을 쉽게 경험하는 경향. 출처: Costa & McCrae 1992 NEO PI-R." },
-    { "name": "분노적 적대감 (N2 · Angry Hostility)", "description": "신경성 facet. 좌절과 분노를 쉽게 경험하는 경향." },
-    { "name": "우울 (N3 · Depression)", "description": "신경성 facet. 슬픔·절망·죄책감을 경험하는 경향." },
-    { "name": "자의식 (N4 · Self-Consciousness)", "description": "신경성 facet. 타인의 판단에 민감하고 당혹감을 쉽게 느끼는 경향." },
-    { "name": "충동성 (N5 · Impulsiveness)", "description": "신경성 facet. 욕구나 충동을 억제하기 어려운 경향." },
-    { "name": "취약성 (N6 · Vulnerability)", "description": "신경성 facet. 스트레스 상황에서 쉽게 흔들리거나 의존적이 되는 경향." },
-    { "name": "온정성 (E1 · Warmth)", "description": "외향성 facet. 친근하고 애정 어린 대인 태도." },
-    { "name": "군집성 (E2 · Gregariousness)", "description": "외향성 facet. 사람들과 함께하는 것을 선호하는 경향." },
-    { "name": "자기주장 (E3 · Assertiveness)", "description": "외향성 facet. 집단 내에서 지배적이고 주도적으로 발언하는 경향." },
-    { "name": "활동성 (E4 · Activity)", "description": "외향성 facet. 빠른 속도와 높은 에너지로 활동에 참여하는 경향." },
-    { "name": "자극 추구 (E5 · Excitement Seeking)", "description": "외향성 facet. 스릴·강렬한 자극·위험을 갈망하는 경향." },
-    { "name": "긍정적 정서 (E6 · Positive Emotions)", "description": "외향성 facet. 기쁨·낙관·행복 등 긍정 감정을 자주 경험하는 경향." },
-    { "name": "공상 (O1 · Fantasy)", "description": "개방성 facet. 상상력이 풍부하고 내면의 환상 세계를 즐기는 경향." },
-    { "name": "심미성 (O2 · Aesthetics)", "description": "개방성 facet. 예술·음악·시 등 미적 경험에 민감한 경향." },
-    { "name": "감정개방성 (O3 · Feelings)", "description": "개방성 facet. 자신의 내면 감정에 열려 있고 감정을 중요시하는 경향." },
-    { "name": "행동개방성 (O4 · Actions)", "description": "개방성 facet. 새로운 활동·다양성을 선호하고 일상의 변화를 즐기는 경향." },
-    { "name": "아이디어 (O5 · Ideas)", "description": "개방성 facet. 지적 호기심과 추상적 개념에 대한 관심." },
-    { "name": "가치개방성 (O6 · Values)", "description": "개방성 facet. 사회적·도덕적 가치를 재검토할 준비가 된 경향." },
-    { "name": "신뢰 (A1 · Trust)", "description": "우호성 facet. 타인의 선의를 믿고 긍정적 의도를 귀인하는 경향." },
-    { "name": "솔직성 (A2 · Straightforwardness)", "description": "우호성 facet. 조종하지 않고 진실하고 직접적으로 소통하는 경향." },
-    { "name": "이타성 (A3 · Altruism)", "description": "우호성 facet. 타인의 복지에 적극적으로 관심을 갖고 돕는 경향." },
-    { "name": "순응성 (A4 · Compliance)", "description": "우호성 facet. 갈등 상황에서 자신의 입장을 양보하고 협력하는 경향." },
-    { "name": "겸손성 (A5 · Modesty)", "description": "우호성 facet. 자신을 과장하거나 과시하지 않는 경향." },
-    { "name": "온유성 (A6 · Tender-Mindedness)", "description": "우호성 facet. 타인의 필요와 감정에 공감하고 정서적으로 반응하는 경향." },
-    { "name": "유능성 (C1 · Competence)", "description": "성실성 facet. 자신이 효과적이고 유능하다는 믿음." },
-    { "name": "질서 (C2 · Order)", "description": "성실성 facet. 정돈과 구조를 선호하는 경향." },
-    { "name": "의무감 (C3 · Dutifulness)", "description": "성실성 facet. 윤리적·도덕적 의무를 충실히 이행하는 경향." },
-    { "name": "성취 추구 (C4 · Achievement Striving)", "description": "성실성 facet. 높은 목표를 세우고 이를 달성하려는 의욕." },
-    { "name": "자기 절제 (C5 · Self-Discipline)", "description": "성실성 facet. 과제를 시작하고 끝까지 완수하는 능력." },
-    { "name": "숙고성 (C6 · Deliberation)", "description": "성실성 facet. 행동하기 전에 신중하게 생각하는 경향." }
+    {
+      "name": "불안 (N1 · Anxiety)",
+      "description": "신경성 facet. 걱정·두려움·긴장을 쉽게 경험하는 경향. 출처: Costa & McCrae 1992 NEO PI-R.",
+      "en": {
+        "name": "Anxiety (N1)",
+        "description": "Neuroticism facet. Tendency to easily experience worry, fear, and tension. Source: Costa & McCrae 1992 NEO PI-R."
+      }
+    },
+    {
+      "name": "분노적 적대감 (N2 · Angry Hostility)",
+      "description": "신경성 facet. 좌절과 분노를 쉽게 경험하는 경향.",
+      "en": {
+        "name": "Angry Hostility (N2)",
+        "description": "Neuroticism facet. Tendency to experience frustration and anger readily."
+      }
+    },
+    {
+      "name": "우울 (N3 · Depression)",
+      "description": "신경성 facet. 슬픔·절망·죄책감을 경험하는 경향.",
+      "en": {
+        "name": "Depression (N3)",
+        "description": "Neuroticism facet. Tendency to experience sadness, hopelessness, and guilt."
+      }
+    },
+    {
+      "name": "자의식 (N4 · Self-Consciousness)",
+      "description": "신경성 facet. 타인의 판단에 민감하고 당혹감을 쉽게 느끼는 경향.",
+      "en": {
+        "name": "Self-Consciousness (N4)",
+        "description": "Neuroticism facet. Sensitivity to others' judgment and proneness to embarrassment."
+      }
+    },
+    {
+      "name": "충동성 (N5 · Impulsiveness)",
+      "description": "신경성 facet. 욕구나 충동을 억제하기 어려운 경향.",
+      "en": {
+        "name": "Impulsiveness (N5)",
+        "description": "Neuroticism facet. Difficulty resisting cravings and urges."
+      }
+    },
+    {
+      "name": "취약성 (N6 · Vulnerability)",
+      "description": "신경성 facet. 스트레스 상황에서 쉽게 흔들리거나 의존적이 되는 경향.",
+      "en": {
+        "name": "Vulnerability (N6)",
+        "description": "Neuroticism facet. Tendency to feel overwhelmed or dependent under stress."
+      }
+    },
+    {
+      "name": "온정성 (E1 · Warmth)",
+      "description": "외향성 facet. 친근하고 애정 어린 대인 태도.",
+      "en": {
+        "name": "Warmth (E1)",
+        "description": "Extraversion facet. Friendly, affectionate interpersonal style."
+      }
+    },
+    {
+      "name": "군집성 (E2 · Gregariousness)",
+      "description": "외향성 facet. 사람들과 함께하는 것을 선호하는 경향.",
+      "en": {
+        "name": "Gregariousness (E2)",
+        "description": "Extraversion facet. Preference for the company of others."
+      }
+    },
+    {
+      "name": "자기주장 (E3 · Assertiveness)",
+      "description": "외향성 facet. 집단 내에서 지배적이고 주도적으로 발언하는 경향.",
+      "en": {
+        "name": "Assertiveness (E3)",
+        "description": "Extraversion facet. Dominance and tendency to take charge and speak up in groups."
+      }
+    },
+    {
+      "name": "활동성 (E4 · Activity)",
+      "description": "외향성 facet. 빠른 속도와 높은 에너지로 활동에 참여하는 경향.",
+      "en": {
+        "name": "Activity (E4)",
+        "description": "Extraversion facet. Engaging in activity at a fast pace with high energy."
+      }
+    },
+    {
+      "name": "자극 추구 (E5 · Excitement Seeking)",
+      "description": "외향성 facet. 스릴·강렬한 자극·위험을 갈망하는 경향.",
+      "en": {
+        "name": "Excitement Seeking (E5)",
+        "description": "Extraversion facet. Craving for thrills, intense stimulation, and risk."
+      }
+    },
+    {
+      "name": "긍정적 정서 (E6 · Positive Emotions)",
+      "description": "외향성 facet. 기쁨·낙관·행복 등 긍정 감정을 자주 경험하는 경향.",
+      "en": {
+        "name": "Positive Emotions (E6)",
+        "description": "Extraversion facet. Tendency to frequently experience joy, optimism, and happiness."
+      }
+    },
+    {
+      "name": "공상 (O1 · Fantasy)",
+      "description": "개방성 facet. 상상력이 풍부하고 내면의 환상 세계를 즐기는 경향.",
+      "en": {
+        "name": "Fantasy (O1)",
+        "description": "Openness facet. Vivid imagination and enjoyment of an inner world of fantasy."
+      }
+    },
+    {
+      "name": "심미성 (O2 · Aesthetics)",
+      "description": "개방성 facet. 예술·음악·시 등 미적 경험에 민감한 경향.",
+      "en": {
+        "name": "Aesthetics (O2)",
+        "description": "Openness facet. Sensitivity to art, music, and poetry."
+      }
+    },
+    {
+      "name": "감정개방성 (O3 · Feelings)",
+      "description": "개방성 facet. 자신의 내면 감정에 열려 있고 감정을 중요시하는 경향.",
+      "en": {
+        "name": "Feelings (O3)",
+        "description": "Openness facet. Openness to and valuing of one's inner emotional experience."
+      }
+    },
+    {
+      "name": "행동개방성 (O4 · Actions)",
+      "description": "개방성 facet. 새로운 활동·다양성을 선호하고 일상의 변화를 즐기는 경향.",
+      "en": {
+        "name": "Actions (O4)",
+        "description": "Openness facet. Preference for novelty, variety, and trying new activities."
+      }
+    },
+    {
+      "name": "아이디어 (O5 · Ideas)",
+      "description": "개방성 facet. 지적 호기심과 추상적 개념에 대한 관심.",
+      "en": {
+        "name": "Ideas (O5)",
+        "description": "Openness facet. Intellectual curiosity and interest in abstract concepts."
+      }
+    },
+    {
+      "name": "가치개방성 (O6 · Values)",
+      "description": "개방성 facet. 사회적·도덕적 가치를 재검토할 준비가 된 경향.",
+      "en": {
+        "name": "Values (O6)",
+        "description": "Openness facet. Readiness to re-examine social and moral values."
+      }
+    },
+    {
+      "name": "신뢰 (A1 · Trust)",
+      "description": "우호성 facet. 타인의 선의를 믿고 긍정적 의도를 귀인하는 경향.",
+      "en": {
+        "name": "Trust (A1)",
+        "description": "Agreeableness facet. Belief in others' good intentions and sincerity."
+      }
+    },
+    {
+      "name": "솔직성 (A2 · Straightforwardness)",
+      "description": "우호성 facet. 조종하지 않고 진실하고 직접적으로 소통하는 경향.",
+      "en": {
+        "name": "Straightforwardness (A2)",
+        "description": "Agreeableness facet. Frank, sincere, non-manipulative communication."
+      }
+    },
+    {
+      "name": "이타성 (A3 · Altruism)",
+      "description": "우호성 facet. 타인의 복지에 적극적으로 관심을 갖고 돕는 경향.",
+      "en": {
+        "name": "Altruism (A3)",
+        "description": "Agreeableness facet. Active concern for others' welfare and willingness to help."
+      }
+    },
+    {
+      "name": "순응성 (A4 · Compliance)",
+      "description": "우호성 facet. 갈등 상황에서 자신의 입장을 양보하고 협력하는 경향.",
+      "en": {
+        "name": "Compliance (A4)",
+        "description": "Agreeableness facet. Deferring to others and cooperating during conflict."
+      }
+    },
+    {
+      "name": "겸손성 (A5 · Modesty)",
+      "description": "우호성 facet. 자신을 과장하거나 과시하지 않는 경향.",
+      "en": {
+        "name": "Modesty (A5)",
+        "description": "Agreeableness facet. Tendency not to boast or claim superiority."
+      }
+    },
+    {
+      "name": "온유성 (A6 · Tender-Mindedness)",
+      "description": "우호성 facet. 타인의 필요와 감정에 공감하고 정서적으로 반응하는 경향.",
+      "en": {
+        "name": "Tender-Mindedness (A6)",
+        "description": "Agreeableness facet. Empathy and emotional responsiveness to others' needs."
+      }
+    },
+    {
+      "name": "유능성 (C1 · Competence)",
+      "description": "성실성 facet. 자신이 효과적이고 유능하다는 믿음.",
+      "en": {
+        "name": "Competence (C1)",
+        "description": "Conscientiousness facet. Belief in one's own effectiveness and capability."
+      }
+    },
+    {
+      "name": "질서 (C2 · Order)",
+      "description": "성실성 facet. 정돈과 구조를 선호하는 경향.",
+      "en": {
+        "name": "Order (C2)",
+        "description": "Conscientiousness facet. Preference for organization and structure."
+      }
+    },
+    {
+      "name": "의무감 (C3 · Dutifulness)",
+      "description": "성실성 facet. 윤리적·도덕적 의무를 충실히 이행하는 경향.",
+      "en": {
+        "name": "Dutifulness (C3)",
+        "description": "Conscientiousness facet. Adherence to ethical and moral obligations."
+      }
+    },
+    {
+      "name": "성취 추구 (C4 · Achievement Striving)",
+      "description": "성실성 facet. 높은 목표를 세우고 이를 달성하려는 의욕.",
+      "en": {
+        "name": "Achievement Striving (C4)",
+        "description": "Conscientiousness facet. Drive to set and accomplish high goals."
+      }
+    },
+    {
+      "name": "자기 절제 (C5 · Self-Discipline)",
+      "description": "성실성 facet. 과제를 시작하고 끝까지 완수하는 능력.",
+      "en": {
+        "name": "Self-Discipline (C5)",
+        "description": "Conscientiousness facet. Ability to begin tasks and see them through."
+      }
+    },
+    {
+      "name": "숙고성 (C6 · Deliberation)",
+      "description": "성실성 facet. 행동하기 전에 신중하게 생각하는 경향.",
+      "en": {
+        "name": "Deliberation (C6)",
+        "description": "Conscientiousness facet. Tendency to think carefully before acting."
+      }
+    }
   ],
   "enneagram": [
-    { "name": "1유형 · 개혁가 (Reformer)", "description": "온전함과 완벽을 추구하는 원칙주의 유형. 핵심 두려움: 사악함·결함. 핵심 욕망: 올바름·온전함. 장 중심(본능). 출처: Riso & Hudson 1999." },
-    { "name": "2유형 · 조력자 (Helper)", "description": "사랑받고 필요한 존재가 되려는 유형. 핵심 두려움: 사랑받지 못함. 핵심 욕망: 사랑과 인정. 가슴 중심(감정)." },
-    { "name": "3유형 · 성취가 (Achiever)", "description": "성공과 존경을 추구하는 유형. 핵심 두려움: 실패·무능력. 핵심 욕망: 가치 있는 존재로 인정받기. 가슴 중심(감정)." },
-    { "name": "4유형 · 개인주의자 (Individualist)", "description": "독창성과 자아 발견을 추구하는 유형. 핵심 두려움: 정체성 결핍·평범함. 핵심 욕망: 진정한 자아 발견. 가슴 중심(감정)." },
-    { "name": "5유형 · 탐구자 (Investigator)", "description": "지식과 유능함을 추구하는 유형. 핵심 두려움: 무능·무지. 핵심 욕망: 충분한 지식과 유능함. 머리 중심(사고)." },
-    { "name": "6유형 · 충성가 (Loyalist)", "description": "안전과 신뢰를 추구하는 유형. 핵심 두려움: 위험·지원 부재. 핵심 욕망: 안전과 지지. 머리 중심(사고)." },
-    { "name": "7유형 · 열정가 (Enthusiast)", "description": "행복과 만족을 추구하는 유형. 핵심 두려움: 고통·박탈감. 핵심 욕망: 완전한 행복과 충족. 머리 중심(사고)." },
-    { "name": "8유형 · 도전가 (Challenger)", "description": "주도권과 강함을 추구하는 유형. 핵심 두려움: 통제당함·약함. 핵심 욕망: 자기 결정권 유지. 장 중심(본능)." },
-    { "name": "9유형 · 평화주의자 (Peacemaker)", "description": "평화와 안정을 추구하는 유형. 핵심 두려움: 갈등·분리. 핵심 욕망: 내면과 외면의 평화. 장 중심(본능)." },
-    { "name": "날개 (Wing)", "description": "에니어그램 개념. 핵심 유형 양옆 번호 중 하나의 특성을 보조적으로 띠는 현상. 예: 1w9(1번 + 9번 날개)." },
-    { "name": "통합 방향 (Integration)", "description": "에니어그램 개념. 건강한 상태일 때 다른 유형의 긍정적 자질을 통합하는 방향. 성장 화살." },
-    { "name": "분열 방향 (Disintegration)", "description": "에니어그램 개념. 스트레스 상태일 때 다른 유형의 부정적 측면이 나타나는 방향. 스트레스 화살." },
-    { "name": "3중심 (Centers of Intelligence)", "description": "에니어그램 개념. 장 중심(8·9·1번, 본능/분노), 가슴 중심(2·3·4번, 감정/수치심), 머리 중심(5·6·7번, 사고/두려움)의 세 에너지 센터." }
+    {
+      "name": "1유형 · 개혁가 (Reformer)",
+      "description": "온전함과 완벽을 추구하는 원칙주의 유형. 핵심 두려움: 사악함·결함. 핵심 욕망: 올바름·온전함. 장 중심(본능). 출처: Riso & Hudson 1999.",
+      "en": {
+        "name": "Type 1 · The Reformer",
+        "description": "Principled type pursuing integrity and perfection. Core fear: being corrupt or defective. Core desire: to be good and whole. Gut (instinctive) center. Source: Riso & Hudson 1999."
+      }
+    },
+    {
+      "name": "2유형 · 조력자 (Helper)",
+      "description": "사랑받고 필요한 존재가 되려는 유형. 핵심 두려움: 사랑받지 못함. 핵심 욕망: 사랑과 인정. 가슴 중심(감정).",
+      "en": {
+        "name": "Type 2 · The Helper",
+        "description": "Type seeking to be loved and needed. Core fear: being unloved. Core desire: love and appreciation. Heart (feeling) center."
+      }
+    },
+    {
+      "name": "3유형 · 성취가 (Achiever)",
+      "description": "성공과 존경을 추구하는 유형. 핵심 두려움: 실패·무능력. 핵심 욕망: 가치 있는 존재로 인정받기. 가슴 중심(감정).",
+      "en": {
+        "name": "Type 3 · The Achiever",
+        "description": "Type pursuing success and admiration. Core fear: failure or worthlessness. Core desire: to be valued. Heart (feeling) center."
+      }
+    },
+    {
+      "name": "4유형 · 개인주의자 (Individualist)",
+      "description": "독창성과 자아 발견을 추구하는 유형. 핵심 두려움: 정체성 결핍·평범함. 핵심 욕망: 진정한 자아 발견. 가슴 중심(감정).",
+      "en": {
+        "name": "Type 4 · The Individualist",
+        "description": "Type pursuing originality and self-discovery. Core fear: having no identity or being ordinary. Core desire: to find an authentic self. Heart (feeling) center."
+      }
+    },
+    {
+      "name": "5유형 · 탐구자 (Investigator)",
+      "description": "지식과 유능함을 추구하는 유형. 핵심 두려움: 무능·무지. 핵심 욕망: 충분한 지식과 유능함. 머리 중심(사고).",
+      "en": {
+        "name": "Type 5 · The Investigator",
+        "description": "Type pursuing knowledge and competence. Core fear: incapability or ignorance. Core desire: to be capable and knowledgeable. Head (thinking) center."
+      }
+    },
+    {
+      "name": "6유형 · 충성가 (Loyalist)",
+      "description": "안전과 신뢰를 추구하는 유형. 핵심 두려움: 위험·지원 부재. 핵심 욕망: 안전과 지지. 머리 중심(사고).",
+      "en": {
+        "name": "Type 6 · The Loyalist",
+        "description": "Type pursuing safety and trust. Core fear: danger or lack of support. Core desire: security and support. Head (thinking) center."
+      }
+    },
+    {
+      "name": "7유형 · 열정가 (Enthusiast)",
+      "description": "행복과 만족을 추구하는 유형. 핵심 두려움: 고통·박탈감. 핵심 욕망: 완전한 행복과 충족. 머리 중심(사고).",
+      "en": {
+        "name": "Type 7 · The Enthusiast",
+        "description": "Type pursuing happiness and satisfaction. Core fear: pain or deprivation. Core desire: complete happiness. Head (thinking) center."
+      }
+    },
+    {
+      "name": "8유형 · 도전가 (Challenger)",
+      "description": "주도권과 강함을 추구하는 유형. 핵심 두려움: 통제당함·약함. 핵심 욕망: 자기 결정권 유지. 장 중심(본능).",
+      "en": {
+        "name": "Type 8 · The Challenger",
+        "description": "Type pursuing control and strength. Core fear: being controlled or weak. Core desire: self-determination. Gut (instinctive) center."
+      }
+    },
+    {
+      "name": "9유형 · 평화주의자 (Peacemaker)",
+      "description": "평화와 안정을 추구하는 유형. 핵심 두려움: 갈등·분리. 핵심 욕망: 내면과 외면의 평화. 장 중심(본능).",
+      "en": {
+        "name": "Type 9 · The Peacemaker",
+        "description": "Type pursuing peace and stability. Core fear: conflict or separation. Core desire: inner and outer peace. Gut (instinctive) center."
+      }
+    },
+    {
+      "name": "날개 (Wing)",
+      "description": "에니어그램 개념. 핵심 유형 양옆 번호 중 하나의 특성을 보조적으로 띠는 현상. 예: 1w9(1번 + 9번 날개).",
+      "en": {
+        "name": "Wing",
+        "description": "Enneagram concept. A secondary influence from one of the two types adjacent to the core type (e.g., 1w9)."
+      }
+    },
+    {
+      "name": "통합 방향 (Integration)",
+      "description": "에니어그램 개념. 건강한 상태일 때 다른 유형의 긍정적 자질을 통합하는 방향. 성장 화살.",
+      "en": {
+        "name": "Integration (Direction of Growth)",
+        "description": "Enneagram concept. In health, moving toward the positive qualities of another type. The growth arrow."
+      }
+    },
+    {
+      "name": "분열 방향 (Disintegration)",
+      "description": "에니어그램 개념. 스트레스 상태일 때 다른 유형의 부정적 측면이 나타나는 방향. 스트레스 화살.",
+      "en": {
+        "name": "Disintegration (Direction of Stress)",
+        "description": "Enneagram concept. Under stress, taking on the negative aspects of another type. The stress arrow."
+      }
+    },
+    {
+      "name": "3중심 (Centers of Intelligence)",
+      "description": "에니어그램 개념. 장 중심(8·9·1번, 본능/분노), 가슴 중심(2·3·4번, 감정/수치심), 머리 중심(5·6·7번, 사고/두려움)의 세 에너지 센터.",
+      "en": {
+        "name": "Centers of Intelligence",
+        "description": "Enneagram concept. Gut center (8·9·1, instinct/anger), Heart center (2·3·4, emotion/shame), Head center (5·6·7, thinking/fear)."
+      }
+    }
   ],
   "disc": [
-    { "name": "주도형 (D · Dominance)", "description": "결과 지향·도전·통제 욕구가 강한 행동 유형. 직접적이고 결단력 있으며 경쟁을 즐김. 출처: Marston 1928 Emotions of Normal People." },
-    { "name": "사교형 (I · Influence)", "description": "사람 중심·설득·인정 욕구가 강한 행동 유형. 낙관적이고 열정적이며 협력을 통해 목표를 달성함." },
-    { "name": "안정형 (S · Steadiness)", "description": "협력·인내·안정 욕구가 강한 행동 유형. 신뢰할 수 있고 일관성 있으며 변화보다 안정을 선호함." },
-    { "name": "신중형 (C · Conscientiousness)", "description": "정확·분석·품질 욕구가 강한 행동 유형. 체계적이고 꼼꼼하며 높은 기준을 유지함." }
+    {
+      "name": "주도형 (D · Dominance)",
+      "description": "결과 지향·도전·통제 욕구가 강한 행동 유형. 직접적이고 결단력 있으며 경쟁을 즐김. 출처: Marston 1928 Emotions of Normal People.",
+      "en": {
+        "name": "Dominance (D)",
+        "description": "Behavioral style driven by results, challenge, and control. Direct, decisive, and competitive. Source: Marston 1928, Emotions of Normal People."
+      }
+    },
+    {
+      "name": "사교형 (I · Influence)",
+      "description": "사람 중심·설득·인정 욕구가 강한 행동 유형. 낙관적이고 열정적이며 협력을 통해 목표를 달성함.",
+      "en": {
+        "name": "Influence (I)",
+        "description": "Behavioral style driven by people, persuasion, and recognition. Optimistic and enthusiastic, achieving goals through collaboration."
+      }
+    },
+    {
+      "name": "안정형 (S · Steadiness)",
+      "description": "협력·인내·안정 욕구가 강한 행동 유형. 신뢰할 수 있고 일관성 있으며 변화보다 안정을 선호함.",
+      "en": {
+        "name": "Steadiness (S)",
+        "description": "Behavioral style driven by cooperation, patience, and stability. Reliable and consistent, preferring stability over change."
+      }
+    },
+    {
+      "name": "신중형 (C · Conscientiousness)",
+      "description": "정확·분석·품질 욕구가 강한 행동 유형. 체계적이고 꼼꼼하며 높은 기준을 유지함.",
+      "en": {
+        "name": "Conscientiousness (C)",
+        "description": "Behavioral style driven by accuracy, analysis, and quality. Systematic and meticulous, holding high standards."
+      }
+    }
   ],
   "hexaco": [
-    { "name": "정직-겸손성 (H · Honesty-Humility)", "description": "이익을 위해 타인을 속이지 않는 성향. Big5에 없는 신규 요인으로, 탐욕 회피·공정성·진실성·겸손을 포괄함. 출처: Lee & Ashton 2004." },
-    { "name": "정서성 (E · Emotionality)", "description": "정서적 취약성·감수성·유대 욕구를 반영. Big5 신경성의 감수성·의존 측면을 흡수. 두려움·불안·의존·감상 facet 포함." },
-    { "name": "외향성 (X · eXtraversion)", "description": "사교·활기·자신감을 반영. Big5 외향성과 유사하나 사회적 자존감과 대담성 강조." },
-    { "name": "원만성 (A · Agreeableness)", "description": "분노 억제·용서·온화함. Big5 우호성과 유사하나 용서와 분노 억제에 더 집중함." },
-    { "name": "성실성 (C · Conscientiousness)", "description": "계획·근면·정확을 반영. Big5 성실성과 유사하며 조직화·완벽주의·신중함 facet 포함." },
-    { "name": "개방성 (O · Openness to Experience)", "description": "예술·아이디어·창의성에 대한 개방. Big5 개방성과 유사하며 심미 감상·탐구성·창의성·비관습성 포함." }
+    {
+      "name": "정직-겸손성 (H · Honesty-Humility)",
+      "description": "이익을 위해 타인을 속이지 않는 성향. Big5에 없는 신규 요인으로, 탐욕 회피·공정성·진실성·겸손을 포괄함. 출처: Lee & Ashton 2004.",
+      "en": {
+        "name": "Honesty-Humility (H)",
+        "description": "Tendency not to exploit others for personal gain. A factor absent from the Big Five, encompassing greed avoidance, fairness, sincerity, and modesty. Source: Lee & Ashton 2004."
+      }
+    },
+    {
+      "name": "정서성 (E · Emotionality)",
+      "description": "정서적 취약성·감수성·유대 욕구를 반영. Big5 신경성의 감수성·의존 측면을 흡수. 두려움·불안·의존·감상 facet 포함.",
+      "en": {
+        "name": "Emotionality (E)",
+        "description": "Reflects emotional vulnerability, sensitivity, and need for attachment. Absorbs the sensitivity and dependence side of Big Five Neuroticism. Includes fearfulness, anxiety, dependence, sentimentality facets."
+      }
+    },
+    {
+      "name": "외향성 (X · eXtraversion)",
+      "description": "사교·활기·자신감을 반영. Big5 외향성과 유사하나 사회적 자존감과 대담성 강조.",
+      "en": {
+        "name": "eXtraversion (X)",
+        "description": "Reflects sociability, liveliness, and confidence. Similar to Big Five Extraversion but emphasizes social self-esteem and boldness."
+      }
+    },
+    {
+      "name": "원만성 (A · Agreeableness)",
+      "description": "분노 억제·용서·온화함. Big5 우호성과 유사하나 용서와 분노 억제에 더 집중함.",
+      "en": {
+        "name": "Agreeableness (A)",
+        "description": "Forgiveness, gentleness, and anger control. Similar to Big Five Agreeableness but more focused on forgiveness and restraining anger."
+      }
+    },
+    {
+      "name": "성실성 (C · Conscientiousness)",
+      "description": "계획·근면·정확을 반영. Big5 성실성과 유사하며 조직화·완벽주의·신중함 facet 포함.",
+      "en": {
+        "name": "Conscientiousness (C)",
+        "description": "Reflects planning, diligence, and accuracy. Similar to Big Five Conscientiousness; includes organization, perfectionism, prudence facets."
+      }
+    },
+    {
+      "name": "개방성 (O · Openness to Experience)",
+      "description": "예술·아이디어·창의성에 대한 개방. Big5 개방성과 유사하며 심미 감상·탐구성·창의성·비관습성 포함.",
+      "en": {
+        "name": "Openness to Experience (O)",
+        "description": "Openness to art, ideas, and creativity. Similar to Big Five Openness; includes aesthetic appreciation, inquisitiveness, creativity, unconventionality."
+      }
+    }
   ],
   "attachment": [
-    { "name": "안정형 (Secure)", "description": "신뢰의 안전기지를 바탕으로 친밀과 독립을 균형 있게 유지하는 애착 유형. 인구 약 50%. 출처: Ainsworth 1978; Bowlby 1969." },
-    { "name": "불안형 · 양가형 (Anxious / Ambivalent)", "description": "버림받음에 대한 두려움·집착·확인 욕구가 강한 애착 유형. 인구 약 20%. 양육자의 비일관적 반응에서 발달." },
-    { "name": "회피형 · 무시형 (Avoidant / Dismissing)", "description": "독립을 과장하고 친밀을 불편해하며 거리를 두는 애착 유형. 인구 약 25%. 정서적 거리를 두는 양육 환경에서 발달." },
-    { "name": "혼란형 · 공포-회피형 (Disorganized / Fearful-Avoidant)", "description": "친밀함을 원하면서도 두려워하는 애착 유형. 인구 약 5%. 초기 외상·학대·방임과 연관. 출처: Main & Solomon 1986." },
-    { "name": "내적 작동 모델 (Internal Working Model)", "description": "애착 개념. 애착 관계 경험을 통해 형성된 자신과 타인에 대한 정신적 표상. 이후 관계 기대에 영향. 출처: Bowlby 1969." },
-    { "name": "안전 기지 (Secure Base)", "description": "애착 개념. 두려움 없이 탐색 활동을 할 수 있게 해주는 신뢰할 수 있는 애착 대상. 볼비 이론의 핵심 개념." },
-    { "name": "낯선 상황 실험 (Strange Situation)", "description": "애착 개념. 에인스워스가 고안한 영아 애착 유형 측정 절차. 분리·재결합 반응으로 안정/불안/회피/혼란형을 분류." },
-    { "name": "획득된 안정형 (Earned Secure)", "description": "애착 개념. 불안정 애착으로 시작했으나 치유적 관계 경험이나 자기 이해를 통해 안정형으로 이동한 상태. 출처: Bartholomew & Horowitz 1991." }
+    {
+      "name": "안정형 (Secure)",
+      "description": "신뢰의 안전기지를 바탕으로 친밀과 독립을 균형 있게 유지하는 애착 유형. 인구 약 50%. 출처: Ainsworth 1978; Bowlby 1969.",
+      "en": {
+        "name": "Secure Attachment",
+        "description": "Attachment style that balances intimacy and independence from a trusted secure base. About 50% of the population. Source: Ainsworth 1978; Bartholomew & Horowitz 1991."
+      }
+    },
+    {
+      "name": "불안형 · 양가형 (Anxious / Ambivalent)",
+      "description": "버림받음에 대한 두려움·집착·확인 욕구가 강한 애착 유형. 인구 약 20%. 양육자의 비일관적 반응에서 발달.",
+      "en": {
+        "name": "Anxious / Ambivalent",
+        "description": "Attachment style marked by fear of abandonment, clinging, and need for reassurance. About 20%. Develops from inconsistent caregiver responsiveness."
+      }
+    },
+    {
+      "name": "회피형 · 무시형 (Avoidant / Dismissing)",
+      "description": "독립을 과장하고 친밀을 불편해하며 거리를 두는 애착 유형. 인구 약 25%. 정서적 거리를 두는 양육 환경에서 발달.",
+      "en": {
+        "name": "Avoidant / Dismissing",
+        "description": "Attachment style that exaggerates independence, is uncomfortable with intimacy, and keeps distance. About 25%. Develops from emotionally distant caregiving."
+      }
+    },
+    {
+      "name": "혼란형 · 공포-회피형 (Disorganized / Fearful-Avoidant)",
+      "description": "친밀함을 원하면서도 두려워하는 애착 유형. 인구 약 5%. 초기 외상·학대·방임과 연관. 출처: Main & Solomon 1986.",
+      "en": {
+        "name": "Disorganized / Fearful-Avoidant",
+        "description": "Attachment style that both desires and fears intimacy. About 5%. Associated with early trauma, abuse, or neglect. Source: Main & Solomon 1986."
+      }
+    },
+    {
+      "name": "내적 작동 모델 (Internal Working Model)",
+      "description": "애착 개념. 애착 관계 경험을 통해 형성된 자신과 타인에 대한 정신적 표상. 이후 관계 기대에 영향. 출처: Bowlby 1969.",
+      "en": {
+        "name": "Internal Working Model",
+        "description": "Attachment concept. Mental representations of self and others formed through attachment experiences, shaping later relationship expectations. Source: Bowlby 1969."
+      }
+    },
+    {
+      "name": "안전 기지 (Secure Base)",
+      "description": "애착 개념. 두려움 없이 탐색 활동을 할 수 있게 해주는 신뢰할 수 있는 애착 대상. 볼비 이론의 핵심 개념.",
+      "en": {
+        "name": "Secure Base",
+        "description": "Attachment concept. A trusted attachment figure that enables exploration without fear. A core concept of Bowlby's theory."
+      }
+    },
+    {
+      "name": "낯선 상황 실험 (Strange Situation)",
+      "description": "애착 개념. 에인스워스가 고안한 영아 애착 유형 측정 절차. 분리·재결합 반응으로 안정/불안/회피/혼란형을 분류.",
+      "en": {
+        "name": "Strange Situation",
+        "description": "Attachment concept. Ainsworth's procedure for measuring infant attachment, classifying secure/anxious/avoidant/disorganized by separation-reunion responses."
+      }
+    },
+    {
+      "name": "획득된 안정형 (Earned Secure)",
+      "description": "애착 개념. 불안정 애착으로 시작했으나 치유적 관계 경험이나 자기 이해를 통해 안정형으로 이동한 상태. 출처: Bartholomew & Horowitz 1991.",
+      "en": {
+        "name": "Earned Secure",
+        "description": "Attachment concept. A state of having moved to secure attachment despite an insecure start, through healing relationships or self-understanding. Source: Bartholomew & Horowitz 1991."
+      }
+    }
   ]
 }

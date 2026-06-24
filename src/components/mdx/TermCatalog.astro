@@ -11,7 +11,8 @@ interface Props {
 }
 const { set } = Astro.props;
 
-interface Term { name: string; url?: string; description?: string }
+interface LocaleText { name?: string; description?: string }
+interface Term { name: string; url?: string; description?: string; en?: LocaleText; ja?: LocaleText; zh?: LocaleText; fr?: LocaleText; es?: LocaleText }
 const terms = ((catalogs as Record<string, Term[]>)[set]) ?? [];
 
 // Locale = first path segment (e.g. /en/meaning-of-... → "en"); default ko.
@@ -53,12 +54,18 @@ const jsonLd = terms.length > 0 ? JSON.stringify({
   name: setName,
   url: canonical,
   inLanguage: locale,
-  hasDefinedTerm: terms.map((t) => ({
-    "@type": "DefinedTerm",
-    name: t.name,
-    ...(t.description ? { description: t.description } : {}),
-    ...(t.url ? { url: `${siteConfig.url}${t.url}` } : {}),
-  })),
+  hasDefinedTerm: terms.map((t) => {
+    // Localized term name/description when present, else fall back to ko (default fields).
+    const loc = (t as unknown as Record<string, LocaleText | undefined>)[locale];
+    const name = loc?.name ?? t.name;
+    const description = loc?.description ?? t.description;
+    return {
+      "@type": "DefinedTerm",
+      name,
+      ...(description ? { description } : {}),
+      ...(t.url ? { url: `${siteConfig.url}${t.url}` } : {}),
+    };
+  }),
 }) : null;
 ---
 {jsonLd && <script type="application/ld+json" is:inline set:html={jsonLd} />}
