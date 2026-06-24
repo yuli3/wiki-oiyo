@@ -832,6 +832,14 @@
       "zh": {
         "name": "焦虑 (N1)",
         "description": "神经质维度。容易体验担忧、恐惧和紧张的倾向。来源: Costa & McCrae 1992 NEO PI-R."
+      },
+      "fr": {
+        "name": "Anxiété (N1)",
+        "description": "Facette du névrosisme. Tendance à éprouver facilement inquiétude, peur et tension. Source : Costa & McCrae 1992 NEO PI-R."
+      },
+      "es": {
+        "name": "Ansiedad (N1)",
+        "description": "Faceta del neuroticismo. Tendencia a experimentar fácilmente preocupación, miedo y tensión. Fuente: Costa & McCrae 1992 NEO PI-R."
       }
     },
     {
@@ -848,6 +856,14 @@
       "zh": {
         "name": "愤怒敌意 (N2)",
         "description": "神经质维度。容易体验挫折和愤怒的倾向。"
+      },
+      "fr": {
+        "name": "Hostilité colérique (N2)",
+        "description": "Facette du névrosisme. Tendance à éprouver frustration et colère."
+      },
+      "es": {
+        "name": "Hostilidad colérica (N2)",
+        "description": "Faceta del neuroticismo. Tendencia a experimentar frustración e ira."
       }
     },
     {
@@ -864,6 +880,14 @@
       "zh": {
         "name": "抑郁 (N3)",
         "description": "神经质维度。体验悲伤、绝望和内疚的倾向。"
+      },
+      "fr": {
+        "name": "Dépression (N3)",
+        "description": "Facette du névrosisme. Tendance à éprouver tristesse, désespoir et culpabilité."
+      },
+      "es": {
+        "name": "Depresión (N3)",
+        "description": "Faceta del neuroticismo. Tendencia a experimentar tristeza, desesperanza y culpa."
       }
     },
     {
@@ -880,6 +904,14 @@
       "zh": {
         "name": "自我意识 (N4)",
         "description": "神经质维度。对他人评价敏感、易感到尴尬的倾向。"
+      },
+      "fr": {
+        "name": "Conscience de soi (N4)",
+        "description": "Facette du névrosisme. Sensibilité au jugement d'autrui et tendance à l'embarras."
+      },
+      "es": {
+        "name": "Autoconciencia (N4)",
+        "description": "Faceta del neuroticismo. Sensibilidad al juicio ajeno y propensión a la vergüenza."
       }
     },
     {
@@ -896,6 +928,14 @@
       "zh": {
         "name": "冲动性 (N5)",
         "description": "神经质维度。难以抑制欲望和冲动的倾向。"
+      },
+      "fr": {
+        "name": "Impulsivité (N5)",
+        "description": "Facette du névrosisme. Difficulté à résister aux envies et impulsions."
+      },
+      "es": {
+        "name": "Impulsividad (N5)",
+        "description": "Faceta del neuroticismo. Dificultad para resistir antojos e impulsos."
       }
     },
     {
@@ -912,6 +952,14 @@
       "zh": {
         "name": "脆弱性 (N6)",
         "description": "神经质维度。在压力下容易动摇或变得依赖的倾向。"
+      },
+      "fr": {
+        "name": "Vulnérabilité (N6)",
+        "description": "Facette du névrosisme. Tendance à se sentir dépassé ou dépendant sous le stress."
+      },
+      "es": {
+        "name": "Vulnerabilidad (N6)",
+        "description": "Faceta del neuroticismo. Tendencia a sentirse abrumado o dependiente bajo estrés."
       }
     },
     {
@@ -928,6 +976,14 @@
       "zh": {
         "name": "热情 (E1)",
         "description": "外向性维度。友善而充满感情的人际态度。"
+      },
+      "fr": {
+        "name": "Chaleur (E1)",
+        "description": "Facette de l'extraversion. Attitude interpersonnelle amicale et affectueuse."
+      },
+      "es": {
+        "name": "Cordialidad (E1)",
+        "description": "Faceta de la extraversión. Actitud interpersonal amistosa y afectuosa."
       }
     },
     {
@@ -944,6 +1000,14 @@
       "zh": {
         "name": "合群性 (E2)",
         "description": "外向性维度。喜欢与他人相处的倾向。"
+      },
+      "fr": {
+        "name": "Grégarité (E2)",
+        "description": "Facette de l'extraversion. Préférence pour la compagnie des autres."
+      },
+      "es": {
+        "name": "Gregarismo (E2)",
+        "description": "Faceta de la extraversión. Preferencia por la compañía de otros."
       }
     },
     {
@@ -960,6 +1024,14 @@
       "zh": {
         "name": "自信 (E3)",
         "description": "外向性维度。在群体中占主导并主动发言的倾向。"
+      },
+      "fr": {
+        "name": "Assertivité (E3)",
+        "description": "Facette de l'extraversion. Tendance à dominer et à prendre la parole dans un groupe."
+      },
+      "es": {
+        "name": "Asertividad (E3)",
+        "description": "Faceta de la extraversión. Tendencia a dominar y tomar la iniciativa en el grupo."
       }
     },
     {
@@ -976,6 +1048,14 @@
       "zh": {
         "name": "活跃性 (E4)",
         "description": "外向性维度。以快节奏和高能量参与活动的倾向。"
+      },
+      "fr": {
+        "name": "Activité (E4)",
+        "description": "Facette de l'extraversion. Engagement dans l'activité à un rythme soutenu et avec énergie."
+      },
+      "es": {
+        "name": "Actividad (E4)",
+        "description": "Faceta de la extraversión. Participar en actividades a ritmo rápido y con energía."
       }
     },
     {
@@ -992,6 +1072,14 @@
       "zh": {
         "name": "寻求刺激 (E5)",
         "description": "外向性维度。渴望刺激、强烈感官体验和冒险的倾向。"
+      },
+      "fr": {
+        "name": "Recherche de sensations (E5)",
+        "description": "Facette de l'extraversion. Goût pour les sensations fortes, la stimulation intense et le risque."
+      },
+      "es": {
+        "name": "Búsqueda de sensaciones (E5)",
+        "description": "Faceta de la extraversión. Anhelo de emociones fuertes, estimulación intensa y riesgo."
       }
     },
     {
@@ -1008,6 +1096,14 @@
       "zh": {
         "name": "积极情绪 (E6)",
         "description": "外向性维度。经常体验喜悦、乐观和幸福等积极情绪的倾向。"
+      },
+      "fr": {
+        "name": "Émotions positives (E6)",
+        "description": "Facette de l'extraversion. Tendance à éprouver fréquemment joie, optimisme et bonheur."
+      },
+      "es": {
+        "name": "Emociones positivas (E6)",
+        "description": "Faceta de la extraversión. Tendencia a experimentar con frecuencia alegría, optimismo y felicidad."
       }
     },
     {
@@ -1024,6 +1120,14 @@
       "zh": {
         "name": "幻想 (O1)",
         "description": "开放性维度。想象力丰富、享受内心幻想世界的倾向。"
+      },
+      "fr": {
+        "name": "Imagination (O1)",
+        "description": "Facette de l'ouverture. Imagination vive et goût pour un monde intérieur fantaisiste."
+      },
+      "es": {
+        "name": "Fantasía (O1)",
+        "description": "Faceta de la apertura. Imaginación viva y disfrute de un mundo interior de fantasía."
       }
     },
     {
@@ -1040,6 +1144,14 @@
       "zh": {
         "name": "审美 (O2)",
         "description": "开放性维度。对艺术、音乐和诗歌等审美体验敏感的倾向。"
+      },
+      "fr": {
+        "name": "Esthétique (O2)",
+        "description": "Facette de l'ouverture. Sensibilité à l'art, à la musique et à la poésie."
+      },
+      "es": {
+        "name": "Estética (O2)",
+        "description": "Faceta de la apertura. Sensibilidad al arte, la música y la poesía."
       }
     },
     {
@@ -1056,6 +1168,14 @@
       "zh": {
         "name": "感受 (O3)",
         "description": "开放性维度。对自己内在情感开放并重视情感的倾向。"
+      },
+      "fr": {
+        "name": "Sentiments (O3)",
+        "description": "Facette de l'ouverture. Ouverture à sa propre expérience émotionnelle."
+      },
+      "es": {
+        "name": "Sentimientos (O3)",
+        "description": "Faceta de la apertura. Apertura a la propia experiencia emocional."
       }
     },
     {
@@ -1072,6 +1192,14 @@
       "zh": {
         "name": "行动 (O4)",
         "description": "开放性维度。偏好新活动和多样性、享受日常变化的倾向。"
+      },
+      "fr": {
+        "name": "Actions (O4)",
+        "description": "Facette de l'ouverture. Préférence pour la nouveauté, la variété et les nouvelles activités."
+      },
+      "es": {
+        "name": "Acciones (O4)",
+        "description": "Faceta de la apertura. Preferencia por la novedad, la variedad y nuevas actividades."
       }
     },
     {
@@ -1088,6 +1216,14 @@
       "zh": {
         "name": "思想 (O5)",
         "description": "开放性维度。智力上的好奇心和对抽象概念的兴趣。"
+      },
+      "fr": {
+        "name": "Idées (O5)",
+        "description": "Facette de l'ouverture. Curiosité intellectuelle et intérêt pour les concepts abstraits."
+      },
+      "es": {
+        "name": "Ideas (O5)",
+        "description": "Faceta de la apertura. Curiosidad intelectual e interés por conceptos abstractos."
       }
     },
     {
@@ -1104,6 +1240,14 @@
       "zh": {
         "name": "价值观 (O6)",
         "description": "开放性维度。愿意重新审视社会和道德价值观的倾向。"
+      },
+      "fr": {
+        "name": "Valeurs (O6)",
+        "description": "Facette de l'ouverture. Disposition à réexaminer les valeurs sociales et morales."
+      },
+      "es": {
+        "name": "Valores (O6)",
+        "description": "Faceta de la apertura. Disposición a reexaminar valores sociales y morales."
       }
     },
     {
@@ -1120,6 +1264,14 @@
       "zh": {
         "name": "信任 (A1)",
         "description": "宜人性维度。相信他人善意并归因于积极意图的倾向。"
+      },
+      "fr": {
+        "name": "Confiance (A1)",
+        "description": "Facette de l'agréabilité. Tendance à croire en la bonne intention d'autrui."
+      },
+      "es": {
+        "name": "Confianza (A1)",
+        "description": "Faceta de la amabilidad. Tendencia a creer en la buena intención de los demás."
       }
     },
     {
@@ -1136,6 +1288,14 @@
       "zh": {
         "name": "直率 (A2)",
         "description": "宜人性维度。不操纵、真诚而直接沟通的倾向。"
+      },
+      "fr": {
+        "name": "Droiture (A2)",
+        "description": "Facette de l'agréabilité. Communication franche, sincère et non manipulatrice."
+      },
+      "es": {
+        "name": "Franqueza (A2)",
+        "description": "Faceta de la amabilidad. Comunicación franca, sincera y no manipuladora."
       }
     },
     {
@@ -1152,6 +1312,14 @@
       "zh": {
         "name": "利他 (A3)",
         "description": "宜人性维度。积极关心他人福祉并乐于助人的倾向。"
+      },
+      "fr": {
+        "name": "Altruisme (A3)",
+        "description": "Facette de l'agréabilité. Souci actif du bien-être d'autrui et volonté d'aider."
+      },
+      "es": {
+        "name": "Altruismo (A3)",
+        "description": "Faceta de la amabilidad. Interés activo por el bienestar ajeno y disposición a ayudar."
       }
     },
     {
@@ -1168,6 +1336,14 @@
       "zh": {
         "name": "顺从 (A4)",
         "description": "宜人性维度。在冲突中让步并合作的倾向。"
+      },
+      "fr": {
+        "name": "Conformité (A4)",
+        "description": "Facette de l'agréabilité. Tendance à céder et à coopérer en cas de conflit."
+      },
+      "es": {
+        "name": "Condescendencia (A4)",
+        "description": "Faceta de la amabilidad. Tendencia a ceder y cooperar en el conflicto."
       }
     },
     {
@@ -1184,6 +1360,14 @@
       "zh": {
         "name": "谦虚 (A5)",
         "description": "宜人性维度。不夸大或炫耀自己的倾向。"
+      },
+      "fr": {
+        "name": "Modestie (A5)",
+        "description": "Facette de l'agréabilité. Tendance à ne pas se vanter ni se croire supérieur."
+      },
+      "es": {
+        "name": "Modestia (A5)",
+        "description": "Faceta de la amabilidad. Tendencia a no presumir ni creerse superior."
       }
     },
     {
@@ -1200,6 +1384,14 @@
       "zh": {
         "name": "温柔 (A6)",
         "description": "宜人性维度。对他人需求和情感产生共情并情感回应的倾向。"
+      },
+      "fr": {
+        "name": "Sensibilité (A6)",
+        "description": "Facette de l'agréabilité. Empathie et réactivité émotionnelle aux besoins d'autrui."
+      },
+      "es": {
+        "name": "Sensibilidad (A6)",
+        "description": "Faceta de la amabilidad. Empatía y respuesta emocional a las necesidades ajenas."
       }
     },
     {
@@ -1216,6 +1408,14 @@
       "zh": {
         "name": "能力感 (C1)",
         "description": "尽责性维度。相信自己有能力且高效的信念。"
+      },
+      "fr": {
+        "name": "Compétence (C1)",
+        "description": "Facette de la conscienciosité. Conviction d'être capable et efficace."
+      },
+      "es": {
+        "name": "Competencia (C1)",
+        "description": "Faceta de la responsabilidad. Creencia en la propia capacidad y eficacia."
       }
     },
     {
@@ -1232,6 +1432,14 @@
       "zh": {
         "name": "条理性 (C2)",
         "description": "尽责性维度。偏好整洁和有序结构的倾向。"
+      },
+      "fr": {
+        "name": "Ordre (C2)",
+        "description": "Facette de la conscienciosité. Préférence pour l'organisation et la structure."
+      },
+      "es": {
+        "name": "Orden (C2)",
+        "description": "Faceta de la responsabilidad. Preferencia por la organización y la estructura."
       }
     },
     {
@@ -1248,6 +1456,14 @@
       "zh": {
         "name": "尽职 (C3)",
         "description": "尽责性维度。忠实履行伦理和道德义务的倾向。"
+      },
+      "fr": {
+        "name": "Sens du devoir (C3)",
+        "description": "Facette de la conscienciosité. Respect des obligations éthiques et morales."
+      },
+      "es": {
+        "name": "Sentido del deber (C3)",
+        "description": "Faceta de la responsabilidad. Cumplimiento de obligaciones éticas y morales."
       }
     },
     {
@@ -1264,6 +1480,14 @@
       "zh": {
         "name": "追求成就 (C4)",
         "description": "尽责性维度。设定高目标并努力实现的动力。"
+      },
+      "fr": {
+        "name": "Recherche de réussite (C4)",
+        "description": "Facette de la conscienciosité. Volonté de se fixer et d'atteindre des objectifs élevés."
+      },
+      "es": {
+        "name": "Búsqueda de logro (C4)",
+        "description": "Faceta de la responsabilidad. Afán de fijarse y alcanzar metas altas."
       }
     },
     {
@@ -1280,6 +1504,14 @@
       "zh": {
         "name": "自律 (C5)",
         "description": "尽责性维度。开始任务并坚持完成的能力。"
+      },
+      "fr": {
+        "name": "Autodiscipline (C5)",
+        "description": "Facette de la conscienciosité. Capacité à entreprendre les tâches et à les mener à terme."
+      },
+      "es": {
+        "name": "Autodisciplina (C5)",
+        "description": "Faceta de la responsabilidad. Capacidad de iniciar tareas y completarlas."
       }
     },
     {
@@ -1296,6 +1528,14 @@
       "zh": {
         "name": "审慎 (C6)",
         "description": "尽责性维度。行动前审慎思考的倾向。"
+      },
+      "fr": {
+        "name": "Délibération (C6)",
+        "description": "Facette de la conscienciosité. Tendance à réfléchir avant d'agir."
+      },
+      "es": {
+        "name": "Deliberación (C6)",
+        "description": "Faceta de la responsabilidad. Tendencia a pensar con cuidado antes de actuar."
       }
     }
   ],
@@ -1314,6 +1554,14 @@
       "zh": {
         "name": "第1型 · 改革者",
         "description": "追求完整与完美的原则型。核心恐惧: 腐败、有缺陷。核心欲望: 正确与完整。本能(腹)中心。来源: Riso & Hudson 1999."
+      },
+      "fr": {
+        "name": "Type 1 · Le Réformateur",
+        "description": "Type de principes recherchant l'intégrité et la perfection. Peur : être corrompu ou défectueux. Désir : être bon et intègre. Centre instinctif (ventre). Source : Riso & Hudson 1999."
+      },
+      "es": {
+        "name": "Tipo 1 · El Reformador",
+        "description": "Tipo de principios que busca la integridad y la perfección. Miedo: ser corrupto o defectuoso. Deseo: ser bueno e íntegro. Centro instintivo (vientre). Fuente: Riso & Hudson 1999."
       }
     },
     {
@@ -1330,6 +1578,14 @@
       "zh": {
         "name": "第2型 · 助人者",
         "description": "渴望被爱和被需要的类型。核心恐惧: 不被爱。核心欲望: 爱与认可。情感(心)中心。"
+      },
+      "fr": {
+        "name": "Type 2 · L'Altruiste",
+        "description": "Type cherchant à être aimé et nécessaire. Peur : ne pas être aimé. Désir : amour et reconnaissance. Centre émotionnel (cœur)."
+      },
+      "es": {
+        "name": "Tipo 2 · El Ayudador",
+        "description": "Tipo que busca ser amado y necesitado. Miedo: no ser amado. Deseo: amor y aprecio. Centro emocional (corazón)."
       }
     },
     {
@@ -1346,6 +1602,14 @@
       "zh": {
         "name": "第3型 · 成就者",
         "description": "追求成功和赞赏的类型。核心恐惧: 失败、无价值。核心欲望: 被视为有价值。情感(心)中心。"
+      },
+      "fr": {
+        "name": "Type 3 · Le Battant",
+        "description": "Type recherchant le succès et l'admiration. Peur : l'échec, l'inutilité. Désir : être valorisé. Centre émotionnel (cœur)."
+      },
+      "es": {
+        "name": "Tipo 3 · El Triunfador",
+        "description": "Tipo que busca el éxito y la admiración. Miedo: el fracaso, la falta de valor. Deseo: ser valorado. Centro emocional (corazón)."
       }
     },
     {
@@ -1362,6 +1626,14 @@
       "zh": {
         "name": "第4型 · 个人主义者",
         "description": "追求独特性和自我发现的类型。核心恐惧: 缺乏身份、平庸。核心欲望: 发现真实自我。情感(心)中心。"
+      },
+      "fr": {
+        "name": "Type 4 · L'Individualiste",
+        "description": "Type recherchant l'originalité et la découverte de soi. Peur : ne pas avoir d'identité. Désir : un soi authentique. Centre émotionnel (cœur)."
+      },
+      "es": {
+        "name": "Tipo 4 · El Individualista",
+        "description": "Tipo que busca la originalidad y el autodescubrimiento. Miedo: carecer de identidad. Deseo: un yo auténtico. Centro emocional (corazón)."
       }
     },
     {
@@ -1378,6 +1650,14 @@
       "zh": {
         "name": "第5型 · 探索者",
         "description": "追求知识和能力的类型。核心恐惧: 无能、无知。核心欲望: 具备能力与知识。思考(脑)中心。"
+      },
+      "fr": {
+        "name": "Type 5 · L'Investigateur",
+        "description": "Type recherchant la connaissance et la compétence. Peur : l'incapacité, l'ignorance. Désir : être compétent. Centre mental (tête)."
+      },
+      "es": {
+        "name": "Tipo 5 · El Investigador",
+        "description": "Tipo que busca el conocimiento y la competencia. Miedo: la incapacidad, la ignorancia. Deseo: ser capaz. Centro mental (cabeza)."
       }
     },
     {
@@ -1394,6 +1674,14 @@
       "zh": {
         "name": "第6型 · 忠诚者",
         "description": "追求安全和信任的类型。核心恐惧: 危险、缺乏支持。核心欲望: 安全与支持。思考(脑)中心。"
+      },
+      "fr": {
+        "name": "Type 6 · Le Loyaliste",
+        "description": "Type recherchant la sécurité et la confiance. Peur : le danger, le manque de soutien. Désir : sécurité et soutien. Centre mental (tête)."
+      },
+      "es": {
+        "name": "Tipo 6 · El Leal",
+        "description": "Tipo que busca la seguridad y la confianza. Miedo: el peligro, la falta de apoyo. Deseo: seguridad y apoyo. Centro mental (cabeza)."
       }
     },
     {
@@ -1410,6 +1698,14 @@
       "zh": {
         "name": "第7型 · 热情者",
         "description": "追求快乐和满足的类型。核心恐惧: 痛苦、匮乏。核心欲望: 完全的幸福。思考(脑)中心。"
+      },
+      "fr": {
+        "name": "Type 7 · L'Épicurien",
+        "description": "Type recherchant le bonheur et la satisfaction. Peur : la douleur, le manque. Désir : un bonheur complet. Centre mental (tête)."
+      },
+      "es": {
+        "name": "Tipo 7 · El Entusiasta",
+        "description": "Tipo que busca la felicidad y la satisfacción. Miedo: el dolor, la privación. Deseo: una felicidad plena. Centro mental (cabeza)."
       }
     },
     {
@@ -1426,6 +1722,14 @@
       "zh": {
         "name": "第8型 · 挑战者",
         "description": "追求主导权和力量的类型。核心恐惧: 被控制、软弱。核心欲望: 自主权。本能(腹)中心。"
+      },
+      "fr": {
+        "name": "Type 8 · Le Meneur",
+        "description": "Type recherchant le contrôle et la force. Peur : être contrôlé, la faiblesse. Désir : l'autodétermination. Centre instinctif (ventre)."
+      },
+      "es": {
+        "name": "Tipo 8 · El Desafiador",
+        "description": "Tipo que busca el control y la fuerza. Miedo: ser controlado, la debilidad. Deseo: la autodeterminación. Centro instintivo (vientre)."
       }
     },
     {
@@ -1442,6 +1746,14 @@
       "zh": {
         "name": "第9型 · 和平者",
         "description": "追求和平与稳定的类型。核心恐惧: 冲突、分离。核心欲望: 内外的和平。本能(腹)中心。"
+      },
+      "fr": {
+        "name": "Type 9 · Le Médiateur",
+        "description": "Type recherchant la paix et la stabilité. Peur : le conflit, la séparation. Désir : la paix intérieure et extérieure. Centre instinctif (ventre)."
+      },
+      "es": {
+        "name": "Tipo 9 · El Pacificador",
+        "description": "Tipo que busca la paz y la estabilidad. Miedo: el conflicto, la separación. Deseo: la paz interior y exterior. Centro instintivo (vientre)."
       }
     },
     {
@@ -1458,6 +1770,14 @@
       "zh": {
         "name": "侧翼 (Wing)",
         "description": "九型人格概念。核心类型两侧编号之一的特质作为辅助呈现的现象(如 1w9)。"
+      },
+      "fr": {
+        "name": "Aile (Wing)",
+        "description": "Concept de l'ennéagramme. Influence secondaire de l'un des deux types adjacents au type principal (ex. 1w9)."
+      },
+      "es": {
+        "name": "Ala (Wing)",
+        "description": "Concepto del eneagrama. Influencia secundaria de uno de los dos tipos adyacentes al tipo principal (p. ej., 1w9)."
       }
     },
     {
@@ -1474,6 +1794,14 @@
       "zh": {
         "name": "整合方向 (Integration)",
         "description": "九型人格概念。健康状态下整合其他类型积极特质的方向。成长箭头。"
+      },
+      "fr": {
+        "name": "Intégration (Integration)",
+        "description": "Concept de l'ennéagramme. En santé, mouvement vers les qualités positives d'un autre type. La flèche de croissance."
+      },
+      "es": {
+        "name": "Integración (Integration)",
+        "description": "Concepto del eneagrama. En salud, movimiento hacia las cualidades positivas de otro tipo. La flecha de crecimiento."
       }
     },
     {
@@ -1490,6 +1818,14 @@
       "zh": {
         "name": "分裂方向 (Disintegration)",
         "description": "九型人格概念。压力状态下出现其他类型消极特质的方向。压力箭头。"
+      },
+      "fr": {
+        "name": "Désintégration (Disintegration)",
+        "description": "Concept de l'ennéagramme. Sous stress, adoption des aspects négatifs d'un autre type. La flèche de stress."
+      },
+      "es": {
+        "name": "Desintegración (Disintegration)",
+        "description": "Concepto del eneagrama. Bajo estrés, adopción de los aspectos negativos de otro tipo. La flecha de estrés."
       }
     },
     {
@@ -1506,6 +1842,14 @@
       "zh": {
         "name": "三个中心 (Centers)",
         "description": "九型人格概念。腹中心(8·9·1, 本能/愤怒)、心中心(2·3·4, 情感/羞耻)、脑中心(5·6·7, 思考/恐惧)。"
+      },
+      "fr": {
+        "name": "Centres d'intelligence (Centers)",
+        "description": "Concept de l'ennéagramme. Centre du ventre (8·9·1, instinct/colère), du cœur (2·3·4, émotion/honte), de la tête (5·6·7, pensée/peur)."
+      },
+      "es": {
+        "name": "Centros de inteligencia (Centers)",
+        "description": "Concepto del eneagrama. Centro del vientre (8·9·1, instinto/ira), del corazón (2·3·4, emoción/vergüenza), de la cabeza (5·6·7, pensamiento/miedo)."
       }
     }
   ],
@@ -1524,6 +1868,14 @@
       "zh": {
         "name": "支配型 (D)",
         "description": "结果导向、挑战、控制欲强的行为风格。直接、果断、喜欢竞争。来源: Marston 1928."
+      },
+      "fr": {
+        "name": "Dominance (D)",
+        "description": "Style comportemental axé sur les résultats, le défi et le contrôle. Direct, décidé et compétitif. Source : Marston 1928."
+      },
+      "es": {
+        "name": "Dominancia (D)",
+        "description": "Estilo conductual orientado a resultados, desafío y control. Directo, decidido y competitivo. Fuente: Marston 1928."
       }
     },
     {
@@ -1540,6 +1892,14 @@
       "zh": {
         "name": "影响型 (I)",
         "description": "以人为本、说服、寻求认可的行为风格。乐观热情，通过合作达成目标。"
+      },
+      "fr": {
+        "name": "Influence (I)",
+        "description": "Style comportemental axé sur les personnes, la persuasion et la reconnaissance. Optimiste et enthousiaste, atteint les objectifs par la collaboration."
+      },
+      "es": {
+        "name": "Influencia (I)",
+        "description": "Estilo conductual centrado en las personas, la persuasión y el reconocimiento. Optimista y entusiasta, logra metas mediante la colaboración."
       }
     },
     {
@@ -1556,6 +1916,14 @@
       "zh": {
         "name": "稳健型 (S)",
         "description": "合作、耐心、追求稳定的行为风格。可靠一致，偏好稳定而非变化。"
+      },
+      "fr": {
+        "name": "Stabilité (S)",
+        "description": "Style comportemental axé sur la coopération, la patience et la stabilité. Fiable et constant, préfère la stabilité au changement."
+      },
+      "es": {
+        "name": "Estabilidad (S)",
+        "description": "Estilo conductual orientado a la cooperación, la paciencia y la estabilidad. Fiable y constante, prefiere la estabilidad al cambio."
       }
     },
     {
@@ -1572,6 +1940,14 @@
       "zh": {
         "name": "谨慎型 (C)",
         "description": "准确、分析、追求质量的行为风格。系统细致，保持高标准。"
+      },
+      "fr": {
+        "name": "Conformité (C)",
+        "description": "Style comportemental axé sur la précision, l'analyse et la qualité. Systématique et méticuleux, maintient des normes élevées."
+      },
+      "es": {
+        "name": "Concienzudo (C)",
+        "description": "Estilo conductual orientado a la precisión, el análisis y la calidad. Sistemático y meticuloso, mantiene estándares altos."
       }
     }
   ],
@@ -1590,6 +1966,14 @@
       "zh": {
         "name": "诚实-谦逊 (H)",
         "description": "不为私利欺骗他人的倾向。大五人格所没有的新因素，涵盖避免贪婪、公平、真诚和谦逊。来源: Lee & Ashton 2004."
+      },
+      "fr": {
+        "name": "Honnêteté-Humilité (H)",
+        "description": "Tendance à ne pas exploiter autrui pour son profit. Facteur absent du Big Five, englobant évitement de la cupidité, équité, sincérité et modestie. Source : Lee & Ashton 2004."
+      },
+      "es": {
+        "name": "Honestidad-Humildad (H)",
+        "description": "Tendencia a no explotar a otros para beneficio propio. Factor ausente en el Big Five, abarca evitación de la codicia, equidad, sinceridad y modestia. Fuente: Lee & Ashton 2004."
       }
     },
     {
@@ -1606,6 +1990,14 @@
       "zh": {
         "name": "情绪性 (E)",
         "description": "反映情绪脆弱性、敏感性和依恋需求。吸收了大五神经质的敏感与依赖面向。"
+      },
+      "fr": {
+        "name": "Émotivité (E)",
+        "description": "Reflète la vulnérabilité émotionnelle, la sensibilité et le besoin d'attachement. Absorbe le versant sensibilité/dépendance du névrosisme."
+      },
+      "es": {
+        "name": "Emocionalidad (E)",
+        "description": "Refleja vulnerabilidad emocional, sensibilidad y necesidad de apego. Absorbe el lado de sensibilidad/dependencia del neuroticismo."
       }
     },
     {
@@ -1622,6 +2014,14 @@
       "zh": {
         "name": "外向性 (X)",
         "description": "反映社交、活力和自信。与大五外向性相似，但强调社会自尊和大胆。"
+      },
+      "fr": {
+        "name": "eXtraversion (X)",
+        "description": "Reflète la sociabilité, la vivacité et la confiance. Proche de l'extraversion du Big Five mais accentue l'estime de soi sociale et l'audace."
+      },
+      "es": {
+        "name": "eXtraversión (X)",
+        "description": "Refleja sociabilidad, vivacidad y confianza. Similar a la extraversión del Big Five pero enfatiza la autoestima social y la audacia."
       }
     },
     {
@@ -1638,6 +2038,14 @@
       "zh": {
         "name": "宜人性 (A)",
         "description": "抑制愤怒、宽恕与温和。与大五宜人性相似，但更专注于宽恕和抑制愤怒。"
+      },
+      "fr": {
+        "name": "Agréabilité (A)",
+        "description": "Pardon, douceur et maîtrise de la colère. Proche de l'agréabilité du Big Five mais centrée sur le pardon et la maîtrise de la colère."
+      },
+      "es": {
+        "name": "Amabilidad (A)",
+        "description": "Perdón, gentileza y control de la ira. Similar a la amabilidad del Big Five pero más centrada en el perdón y el control de la ira."
       }
     },
     {
@@ -1654,6 +2062,14 @@
       "zh": {
         "name": "尽责性 (C)",
         "description": "反映计划性、勤奋和准确。与大五尽责性相似，包含条理、完美主义、审慎。"
+      },
+      "fr": {
+        "name": "Conscienciosité (C)",
+        "description": "Reflète la planification, l'assiduité et la précision. Inclut organisation, perfectionnisme, prudence."
+      },
+      "es": {
+        "name": "Responsabilidad (C)",
+        "description": "Refleja planificación, diligencia y precisión. Incluye organización, perfeccionismo, prudencia."
       }
     },
     {
@@ -1670,6 +2086,14 @@
       "zh": {
         "name": "经验开放性 (O)",
         "description": "对艺术、思想和创造力的开放。与大五开放性相似，包含审美欣赏、好奇、创造力、不拘一格。"
+      },
+      "fr": {
+        "name": "Ouverture à l'expérience (O)",
+        "description": "Ouverture à l'art, aux idées et à la créativité. Inclut appréciation esthétique, curiosité, créativité, non-conformisme."
+      },
+      "es": {
+        "name": "Apertura a la experiencia (O)",
+        "description": "Apertura al arte, las ideas y la creatividad. Incluye apreciación estética, curiosidad, creatividad, inconformismo."
       }
     }
   ],
@@ -1688,6 +2112,14 @@
       "zh": {
         "name": "安全型 (Secure)",
         "description": "以可信赖的安全基地为基础，平衡亲密与独立的依恋类型。约占人口50%。来源: Ainsworth 1978; Bartholomew & Horowitz 1991."
+      },
+      "fr": {
+        "name": "Sécure (Secure)",
+        "description": "Style d'attachement équilibrant intimité et indépendance à partir d'une base de sécurité fiable. Environ 50 % de la population. Source : Ainsworth 1978 ; Bartholomew & Horowitz 1991."
+      },
+      "es": {
+        "name": "Seguro (Secure)",
+        "description": "Estilo de apego que equilibra intimidad e independencia desde una base segura confiable. Alrededor del 50 % de la población. Fuente: Ainsworth 1978; Bartholomew & Horowitz 1991."
       }
     },
     {
@@ -1704,6 +2136,14 @@
       "zh": {
         "name": "焦虑型·矛盾型 (Anxious/Ambivalent)",
         "description": "对被抛弃的恐惧、依附和寻求确认强烈的依恋类型。约20%。源于养育者不一致的回应。"
+      },
+      "fr": {
+        "name": "Anxieux / Ambivalent",
+        "description": "Style d'attachement marqué par la peur de l'abandon, l'accrochage et le besoin de réassurance. Environ 20 %. Issu d'une réactivité parentale incohérente."
+      },
+      "es": {
+        "name": "Ansioso / Ambivalente",
+        "description": "Estilo de apego marcado por el miedo al abandono, el aferramiento y la necesidad de confirmación. Alrededor del 20 %. Por una respuesta parental inconsistente."
       }
     },
     {
@@ -1720,6 +2160,14 @@
       "zh": {
         "name": "回避型·疏离型 (Avoidant/Dismissing)",
         "description": "夸大独立、对亲密感到不适并保持距离的依恋类型。约25%。源于情感疏离的养育环境。"
+      },
+      "fr": {
+        "name": "Évitant / Détaché",
+        "description": "Style d'attachement qui exagère l'indépendance, est mal à l'aise avec l'intimité et garde ses distances. Environ 25 %. Issu de soins émotionnellement distants."
+      },
+      "es": {
+        "name": "Evitativo / Distanciador",
+        "description": "Estilo de apego que exagera la independencia, se incomoda con la intimidad y mantiene la distancia. Alrededor del 25 %. Por una crianza emocionalmente distante."
       }
     },
     {
@@ -1736,6 +2184,14 @@
       "zh": {
         "name": "混乱型·恐惧回避型 (Disorganized/Fearful-Avoidant)",
         "description": "既渴望又害怕亲密的依恋类型。约5%。与早期创伤、虐待或忽视有关。来源: Main & Solomon 1986."
+      },
+      "fr": {
+        "name": "Désorganisé / Craintif-évitant",
+        "description": "Style d'attachement qui désire et craint à la fois l'intimité. Environ 5 %. Associé à un traumatisme ou une négligence précoces. Source : Main & Solomon 1986."
+      },
+      "es": {
+        "name": "Desorganizado / Temeroso-evitativo",
+        "description": "Estilo de apego que a la vez desea y teme la intimidad. Alrededor del 5 %. Asociado a trauma o negligencia tempranos. Fuente: Main & Solomon 1986."
       }
     },
     {
@@ -1752,6 +2208,14 @@
       "zh": {
         "name": "内部工作模型 (Internal Working Model)",
         "description": "依恋概念。通过依恋经验形成的关于自我与他人的心理表征，影响日后的关系期望。来源: Bowlby 1969."
+      },
+      "fr": {
+        "name": "Modèle interne opérant (Internal Working Model)",
+        "description": "Concept d'attachement. Représentations mentales de soi et d'autrui formées par les expériences d'attachement. Source : Bowlby 1969."
+      },
+      "es": {
+        "name": "Modelo operativo interno (Internal Working Model)",
+        "description": "Concepto del apego. Representaciones mentales de uno mismo y de los demás formadas por las experiencias de apego. Fuente: Bowlby 1969."
       }
     },
     {
@@ -1768,6 +2232,14 @@
       "zh": {
         "name": "安全基地 (Secure Base)",
         "description": "依恋概念。使个体能够无所畏惧地进行探索的可信赖依恋对象。鲍尔比理论的核心概念。"
+      },
+      "fr": {
+        "name": "Base de sécurité (Secure Base)",
+        "description": "Concept d'attachement. Figure d'attachement fiable permettant l'exploration sans crainte. Concept central de la théorie de Bowlby."
+      },
+      "es": {
+        "name": "Base segura (Secure Base)",
+        "description": "Concepto del apego. Figura de apego confiable que permite la exploración sin miedo. Concepto central de la teoría de Bowlby."
       }
     },
     {
@@ -1784,6 +2256,14 @@
       "zh": {
         "name": "陌生情境实验 (Strange Situation)",
         "description": "依恋概念。爱因斯沃斯设计的婴儿依恋类型测量程序。通过分离-重聚反应分类安全/焦虑/回避/混乱型。"
+      },
+      "fr": {
+        "name": "Situation étrange (Strange Situation)",
+        "description": "Concept d'attachement. Procédure d'Ainsworth mesurant l'attachement du nourrisson via les réactions de séparation-réunion."
+      },
+      "es": {
+        "name": "Situación extraña (Strange Situation)",
+        "description": "Concepto del apego. Procedimiento de Ainsworth para medir el apego infantil mediante las reacciones de separación-reencuentro."
       }
     },
     {
@@ -1800,6 +2280,14 @@
       "zh": {
         "name": "习得安全型 (Earned Secure)",
         "description": "依恋概念。尽管起点为不安全依恋，但通过治愈性关系经验或自我理解转变为安全型的状态。来源: Bartholomew & Horowitz 1991."
+      },
+      "fr": {
+        "name": "Sécurité acquise (Earned Secure)",
+        "description": "Concept d'attachement. Évolution vers un attachement sécure malgré un départ insécure, grâce à des relations réparatrices. Source : Bartholomew & Horowitz 1991."
+      },
+      "es": {
+        "name": "Seguridad ganada (Earned Secure)",
+        "description": "Concepto del apego. Paso a un apego seguro pese a un inicio inseguro, mediante relaciones reparadoras o autocomprensión. Fuente: Bartholomew & Horowitz 1991."
       }
     }
   ]
