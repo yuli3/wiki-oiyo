@@ -824,6 +824,10 @@
       "en": {
         "name": "Anxiety (N1)",
         "description": "Neuroticism facet. Tendency to easily experience worry, fear, and tension. Source: Costa & McCrae 1992 NEO PI-R."
+      },
+      "ja": {
+        "name": "不安 (N1)",
+        "description": "神経症傾向のファセット。心配・恐れ・緊張を感じやすい傾向。出典: Costa & McCrae 1992 NEO PI-R."
       }
     },
     {
@@ -832,6 +836,10 @@
       "en": {
         "name": "Angry Hostility (N2)",
         "description": "Neuroticism facet. Tendency to experience frustration and anger readily."
+      },
+      "ja": {
+        "name": "敵意 (N2)",
+        "description": "神経症傾向のファセット。欲求不満や怒りを感じやすい傾向。"
       }
     },
     {
@@ -840,6 +848,10 @@
       "en": {
         "name": "Depression (N3)",
         "description": "Neuroticism facet. Tendency to experience sadness, hopelessness, and guilt."
+      },
+      "ja": {
+        "name": "抑うつ (N3)",
+        "description": "神経症傾向のファセット。悲しみ・絶望・罪悪感を経験する傾向。"
       }
     },
     {
@@ -848,6 +860,10 @@
       "en": {
         "name": "Self-Consciousness (N4)",
         "description": "Neuroticism facet. Sensitivity to others' judgment and proneness to embarrassment."
+      },
+      "ja": {
+        "name": "自意識 (N4)",
+        "description": "神経症傾向のファセット。他者の評価に敏感で当惑しやすい傾向。"
       }
     },
     {
@@ -856,6 +872,10 @@
       "en": {
         "name": "Impulsiveness (N5)",
         "description": "Neuroticism facet. Difficulty resisting cravings and urges."
+      },
+      "ja": {
+        "name": "衝動性 (N5)",
+        "description": "神経症傾向のファセット。欲求や衝動を抑えにくい傾向。"
       }
     },
     {
@@ -864,6 +884,10 @@
       "en": {
         "name": "Vulnerability (N6)",
         "description": "Neuroticism facet. Tendency to feel overwhelmed or dependent under stress."
+      },
+      "ja": {
+        "name": "傷つきやすさ (N6)",
+        "description": "神経症傾向のファセット。ストレス下で動揺しやすく依存的になる傾向。"
       }
     },
     {
@@ -872,6 +896,10 @@
       "en": {
         "name": "Warmth (E1)",
         "description": "Extraversion facet. Friendly, affectionate interpersonal style."
+      },
+      "ja": {
+        "name": "温かさ (E1)",
+        "description": "外向性のファセット。親しみやすく愛情深い対人態度。"
       }
     },
     {
@@ -880,6 +908,10 @@
       "en": {
         "name": "Gregariousness (E2)",
         "description": "Extraversion facet. Preference for the company of others."
+      },
+      "ja": {
+        "name": "群居性 (E2)",
+        "description": "外向性のファセット。他者と一緒にいることを好む傾向。"
       }
     },
     {
@@ -888,6 +920,10 @@
       "en": {
         "name": "Assertiveness (E3)",
         "description": "Extraversion facet. Dominance and tendency to take charge and speak up in groups."
+      },
+      "ja": {
+        "name": "断行性 (E3)",
+        "description": "外向性のファセット。集団内で支配的・主導的に発言する傾向。"
       }
     },
     {
@@ -896,6 +932,10 @@
       "en": {
         "name": "Activity (E4)",
         "description": "Extraversion facet. Engaging in activity at a fast pace with high energy."
+      },
+      "ja": {
+        "name": "活動性 (E4)",
+        "description": "外向性のファセット。速いペースと高いエネルギーで活動する傾向。"
       }
     },
     {
@@ -904,6 +944,10 @@
       "en": {
         "name": "Excitement Seeking (E5)",
         "description": "Extraversion facet. Craving for thrills, intense stimulation, and risk."
+      },
+      "ja": {
+        "name": "刺激希求性 (E5)",
+        "description": "外向性のファセット。スリル・強い刺激・危険を求める傾向。"
       }
     },
     {
@@ -912,6 +956,10 @@
       "en": {
         "name": "Positive Emotions (E6)",
         "description": "Extraversion facet. Tendency to frequently experience joy, optimism, and happiness."
+      },
+      "ja": {
+        "name": "ポジティブ感情 (E6)",
+        "description": "外向性のファセット。喜び・楽観・幸福などの肯定的感情を頻繁に経験する傾向。"
       }
     },
     {
@@ -920,6 +968,10 @@
       "en": {
         "name": "Fantasy (O1)",
         "description": "Openness facet. Vivid imagination and enjoyment of an inner world of fantasy."
+      },
+      "ja": {
+        "name": "空想 (O1)",
+        "description": "開放性のファセット。豊かな想像力を持ち内的な空想世界を楽しむ傾向。"
       }
     },
     {
@@ -928,6 +980,10 @@
       "en": {
         "name": "Aesthetics (O2)",
         "description": "Openness facet. Sensitivity to art, music, and poetry."
+      },
+      "ja": {
+        "name": "審美性 (O2)",
+        "description": "開放性のファセット。芸術・音楽・詩などの美的経験に敏感な傾向。"
       }
     },
     {
@@ -936,6 +992,10 @@
       "en": {
         "name": "Feelings (O3)",
         "description": "Openness facet. Openness to and valuing of one's inner emotional experience."
+      },
+      "ja": {
+        "name": "感情 (O3)",
+        "description": "開放性のファセット。自分の内的感情に開かれ感情を重視する傾向。"
       }
     },
     {
@@ -944,6 +1004,10 @@
       "en": {
         "name": "Actions (O4)",
         "description": "Openness facet. Preference for novelty, variety, and trying new activities."
+      },
+      "ja": {
+        "name": "行為 (O4)",
+        "description": "開放性のファセット。新しい活動や多様性を好み変化を楽しむ傾向。"
       }
     },
     {
@@ -952,6 +1016,10 @@
       "en": {
         "name": "Ideas (O5)",
         "description": "Openness facet. Intellectual curiosity and interest in abstract concepts."
+      },
+      "ja": {
+        "name": "アイデア (O5)",
+        "description": "開放性のファセット。知的好奇心と抽象的概念への関心。"
       }
     },
     {
@@ -960,6 +1028,10 @@
       "en": {
         "name": "Values (O6)",
         "description": "Openness facet. Readiness to re-examine social and moral values."
+      },
+      "ja": {
+        "name": "価値 (O6)",
+        "description": "開放性のファセット。社会的・道徳的価値を再検討する準備がある傾向。"
       }
     },
     {
@@ -968,6 +1040,10 @@
       "en": {
         "name": "Trust (A1)",
         "description": "Agreeableness facet. Belief in others' good intentions and sincerity."
+      },
+      "ja": {
+        "name": "信頼 (A1)",
+        "description": "調和性のファセット。他者の善意を信じ肯定的な意図を帰属する傾向。"
       }
     },
     {
@@ -976,6 +1052,10 @@
       "en": {
         "name": "Straightforwardness (A2)",
         "description": "Agreeableness facet. Frank, sincere, non-manipulative communication."
+      },
+      "ja": {
+        "name": "実直さ (A2)",
+        "description": "調和性のファセット。操作せず誠実で率直に伝える傾向。"
       }
     },
     {
@@ -984,6 +1064,10 @@
       "en": {
         "name": "Altruism (A3)",
         "description": "Agreeableness facet. Active concern for others' welfare and willingness to help."
+      },
+      "ja": {
+        "name": "利他性 (A3)",
+        "description": "調和性のファセット。他者の福祉に積極的に関心を持ち助ける傾向。"
       }
     },
     {
@@ -992,6 +1076,10 @@
       "en": {
         "name": "Compliance (A4)",
         "description": "Agreeableness facet. Deferring to others and cooperating during conflict."
+      },
+      "ja": {
+        "name": "応諾性 (A4)",
+        "description": "調和性のファセット。対立時に自分の立場を譲り協力する傾向。"
       }
     },
     {
@@ -1000,6 +1088,10 @@
       "en": {
         "name": "Modesty (A5)",
         "description": "Agreeableness facet. Tendency not to boast or claim superiority."
+      },
+      "ja": {
+        "name": "慎み深さ (A5)",
+        "description": "調和性のファセット。自分を誇張・誇示しない傾向。"
       }
     },
     {
@@ -1008,6 +1100,10 @@
       "en": {
         "name": "Tender-Mindedness (A6)",
         "description": "Agreeableness facet. Empathy and emotional responsiveness to others' needs."
+      },
+      "ja": {
+        "name": "優しさ (A6)",
+        "description": "調和性のファセット。他者の必要や感情に共感し情緒的に反応する傾向。"
       }
     },
     {
@@ -1016,6 +1112,10 @@
       "en": {
         "name": "Competence (C1)",
         "description": "Conscientiousness facet. Belief in one's own effectiveness and capability."
+      },
+      "ja": {
+        "name": "有能感 (C1)",
+        "description": "誠実性のファセット。自分が有能で効果的だという信念。"
       }
     },
     {
@@ -1024,6 +1124,10 @@
       "en": {
         "name": "Order (C2)",
         "description": "Conscientiousness facet. Preference for organization and structure."
+      },
+      "ja": {
+        "name": "秩序 (C2)",
+        "description": "誠実性のファセット。整理整頓と構造を好む傾向。"
       }
     },
     {
@@ -1032,6 +1136,10 @@
       "en": {
         "name": "Dutifulness (C3)",
         "description": "Conscientiousness facet. Adherence to ethical and moral obligations."
+      },
+      "ja": {
+        "name": "義務感 (C3)",
+        "description": "誠実性のファセット。倫理的・道徳的義務を忠実に果たす傾向。"
       }
     },
     {
@@ -1040,6 +1148,10 @@
       "en": {
         "name": "Achievement Striving (C4)",
         "description": "Conscientiousness facet. Drive to set and accomplish high goals."
+      },
+      "ja": {
+        "name": "達成追求 (C4)",
+        "description": "誠実性のファセット。高い目標を立て達成しようとする意欲。"
       }
     },
     {
@@ -1048,6 +1160,10 @@
       "en": {
         "name": "Self-Discipline (C5)",
         "description": "Conscientiousness facet. Ability to begin tasks and see them through."
+      },
+      "ja": {
+        "name": "自己鍛錬 (C5)",
+        "description": "誠実性のファセット。課題を始め最後までやり遂げる能力。"
       }
     },
     {
@@ -1056,6 +1172,10 @@
       "en": {
         "name": "Deliberation (C6)",
         "description": "Conscientiousness facet. Tendency to think carefully before acting."
+      },
+      "ja": {
+        "name": "慎重さ (C6)",
+        "description": "誠実性のファセット。行動する前に慎重に考える傾向。"
       }
     }
   ],
@@ -1066,6 +1186,10 @@
       "en": {
         "name": "Type 1 · The Reformer",
         "description": "Principled type pursuing integrity and perfection. Core fear: being corrupt or defective. Core desire: to be good and whole. Gut (instinctive) center. Source: Riso & Hudson 1999."
+      },
+      "ja": {
+        "name": "タイプ1 · 改革者",
+        "description": "完全さと誠実さを追求する原則主義タイプ。根源的恐れ: 堕落・欠陥。根源的欲求: 正しく完全であること。本能(腹)センター。出典: Riso & Hudson 1999."
       }
     },
     {
@@ -1074,6 +1198,10 @@
       "en": {
         "name": "Type 2 · The Helper",
         "description": "Type seeking to be loved and needed. Core fear: being unloved. Core desire: love and appreciation. Heart (feeling) center."
+      },
+      "ja": {
+        "name": "タイプ2 · 助力者",
+        "description": "愛され必要とされたいタイプ。根源的恐れ: 愛されないこと。根源的欲求: 愛と承認。感情(心)センター。"
       }
     },
     {
@@ -1082,6 +1210,10 @@
       "en": {
         "name": "Type 3 · The Achiever",
         "description": "Type pursuing success and admiration. Core fear: failure or worthlessness. Core desire: to be valued. Heart (feeling) center."
+      },
+      "ja": {
+        "name": "タイプ3 · 達成者",
+        "description": "成功と称賛を追求するタイプ。根源的恐れ: 失敗・無価値。根源的欲求: 価値ある存在として認められること。感情(心)センター。"
       }
     },
     {
@@ -1090,6 +1222,10 @@
       "en": {
         "name": "Type 4 · The Individualist",
         "description": "Type pursuing originality and self-discovery. Core fear: having no identity or being ordinary. Core desire: to find an authentic self. Heart (feeling) center."
+      },
+      "ja": {
+        "name": "タイプ4 · 個性派",
+        "description": "独自性と自己発見を追求するタイプ。根源的恐れ: アイデンティティの欠如・平凡。根源的欲求: 真の自己発見。感情(心)センター。"
       }
     },
     {
@@ -1098,6 +1234,10 @@
       "en": {
         "name": "Type 5 · The Investigator",
         "description": "Type pursuing knowledge and competence. Core fear: incapability or ignorance. Core desire: to be capable and knowledgeable. Head (thinking) center."
+      },
+      "ja": {
+        "name": "タイプ5 · 探究者",
+        "description": "知識と有能さを追求するタイプ。根源的恐れ: 無能・無知。根源的欲求: 有能で知識を備えること。思考(頭)センター。"
       }
     },
     {
@@ -1106,6 +1246,10 @@
       "en": {
         "name": "Type 6 · The Loyalist",
         "description": "Type pursuing safety and trust. Core fear: danger or lack of support. Core desire: security and support. Head (thinking) center."
+      },
+      "ja": {
+        "name": "タイプ6 · 忠実家",
+        "description": "安全と信頼を追求するタイプ。根源的恐れ: 危険・支援の欠如。根源的欲求: 安全と支え。思考(頭)センター。"
       }
     },
     {
@@ -1114,6 +1258,10 @@
       "en": {
         "name": "Type 7 · The Enthusiast",
         "description": "Type pursuing happiness and satisfaction. Core fear: pain or deprivation. Core desire: complete happiness. Head (thinking) center."
+      },
+      "ja": {
+        "name": "タイプ7 · 熱中者",
+        "description": "幸福と満足を追求するタイプ。根源的恐れ: 苦痛・欠乏。根源的欲求: 完全な幸福。思考(頭)センター。"
       }
     },
     {
@@ -1122,6 +1270,10 @@
       "en": {
         "name": "Type 8 · The Challenger",
         "description": "Type pursuing control and strength. Core fear: being controlled or weak. Core desire: self-determination. Gut (instinctive) center."
+      },
+      "ja": {
+        "name": "タイプ8 · 挑戦者",
+        "description": "主導権と強さを追求するタイプ。根源的恐れ: 支配される・弱さ。根源的欲求: 自己決定権。本能(腹)センター。"
       }
     },
     {
@@ -1130,6 +1282,10 @@
       "en": {
         "name": "Type 9 · The Peacemaker",
         "description": "Type pursuing peace and stability. Core fear: conflict or separation. Core desire: inner and outer peace. Gut (instinctive) center."
+      },
+      "ja": {
+        "name": "タイプ9 · 平和主義者",
+        "description": "平和と安定を追求するタイプ。根源的恐れ: 対立・分離。根源的欲求: 内外の平和。本能(腹)センター。"
       }
     },
     {
@@ -1138,6 +1294,10 @@
       "en": {
         "name": "Wing",
         "description": "Enneagram concept. A secondary influence from one of the two types adjacent to the core type (e.g., 1w9)."
+      },
+      "ja": {
+        "name": "ウイング (Wing)",
+        "description": "エニアグラムの概念。中心タイプの両隣のうち一方の特性を補助的に帯びる現象(例: 1w9)。"
       }
     },
     {
@@ -1146,6 +1306,10 @@
       "en": {
         "name": "Integration (Direction of Growth)",
         "description": "Enneagram concept. In health, moving toward the positive qualities of another type. The growth arrow."
+      },
+      "ja": {
+        "name": "統合の方向 (Integration)",
+        "description": "エニアグラムの概念。健康な状態で他タイプの肯定的資質を統合する方向。成長の矢印。"
       }
     },
     {
@@ -1154,6 +1318,10 @@
       "en": {
         "name": "Disintegration (Direction of Stress)",
         "description": "Enneagram concept. Under stress, taking on the negative aspects of another type. The stress arrow."
+      },
+      "ja": {
+        "name": "分裂の方向 (Disintegration)",
+        "description": "エニアグラムの概念。ストレス下で他タイプの否定的側面が現れる方向。ストレスの矢印。"
       }
     },
     {
@@ -1162,6 +1330,10 @@
       "en": {
         "name": "Centers of Intelligence",
         "description": "Enneagram concept. Gut center (8·9·1, instinct/anger), Heart center (2·3·4, emotion/shame), Head center (5·6·7, thinking/fear)."
+      },
+      "ja": {
+        "name": "3つのセンター (Centers)",
+        "description": "エニアグラムの概念。腹センター(8・9・1、本能/怒り)、心センター(2・3・4、感情/恥)、頭センター(5・6・7、思考/恐れ)。"
       }
     }
   ],
@@ -1172,6 +1344,10 @@
       "en": {
         "name": "Dominance (D)",
         "description": "Behavioral style driven by results, challenge, and control. Direct, decisive, and competitive. Source: Marston 1928, Emotions of Normal People."
+      },
+      "ja": {
+        "name": "主導型 (D)",
+        "description": "結果志向・挑戦・統制欲求が強い行動スタイル。直接的で決断力があり競争を好む。出典: Marston 1928."
       }
     },
     {
@@ -1180,6 +1356,10 @@
       "en": {
         "name": "Influence (I)",
         "description": "Behavioral style driven by people, persuasion, and recognition. Optimistic and enthusiastic, achieving goals through collaboration."
+      },
+      "ja": {
+        "name": "感化型 (I)",
+        "description": "人間中心・説得・承認欲求が強い行動スタイル。楽観的で熱意があり協力を通じて目標を達成する。"
       }
     },
     {
@@ -1188,6 +1368,10 @@
       "en": {
         "name": "Steadiness (S)",
         "description": "Behavioral style driven by cooperation, patience, and stability. Reliable and consistent, preferring stability over change."
+      },
+      "ja": {
+        "name": "安定型 (S)",
+        "description": "協力・忍耐・安定欲求が強い行動スタイル。信頼でき一貫性があり変化より安定を好む。"
       }
     },
     {
@@ -1196,6 +1380,10 @@
       "en": {
         "name": "Conscientiousness (C)",
         "description": "Behavioral style driven by accuracy, analysis, and quality. Systematic and meticulous, holding high standards."
+      },
+      "ja": {
+        "name": "慎重型 (C)",
+        "description": "正確・分析・品質欲求が強い行動スタイル。体系的で几帳面、高い基準を保つ。"
       }
     }
   ],
@@ -1206,6 +1394,10 @@
       "en": {
         "name": "Honesty-Humility (H)",
         "description": "Tendency not to exploit others for personal gain. A factor absent from the Big Five, encompassing greed avoidance, fairness, sincerity, and modesty. Source: Lee & Ashton 2004."
+      },
+      "ja": {
+        "name": "正直-謙虚性 (H)",
+        "description": "利益のために他者を欺かない傾向。ビッグファイブにない新しい因子で、貪欲の回避・公正さ・誠実さ・謙虚さを含む。出典: Lee & Ashton 2004."
       }
     },
     {
@@ -1214,6 +1406,10 @@
       "en": {
         "name": "Emotionality (E)",
         "description": "Reflects emotional vulnerability, sensitivity, and need for attachment. Absorbs the sensitivity and dependence side of Big Five Neuroticism. Includes fearfulness, anxiety, dependence, sentimentality facets."
+      },
+      "ja": {
+        "name": "情動性 (E)",
+        "description": "情緒的な傷つきやすさ・感受性・絆の欲求を反映。ビッグファイブの神経症傾向の感受性・依存の側面を吸収。"
       }
     },
     {
@@ -1222,6 +1418,10 @@
       "en": {
         "name": "eXtraversion (X)",
         "description": "Reflects sociability, liveliness, and confidence. Similar to Big Five Extraversion but emphasizes social self-esteem and boldness."
+      },
+      "ja": {
+        "name": "外向性 (X)",
+        "description": "社交性・活気・自信を反映。ビッグファイブの外向性に類似するが社会的自尊心と大胆さを強調。"
       }
     },
     {
@@ -1230,6 +1430,10 @@
       "en": {
         "name": "Agreeableness (A)",
         "description": "Forgiveness, gentleness, and anger control. Similar to Big Five Agreeableness but more focused on forgiveness and restraining anger."
+      },
+      "ja": {
+        "name": "協調性 (A)",
+        "description": "怒りの抑制・許し・温和さ。ビッグファイブの調和性に類似するが許しと怒りの抑制により焦点を当てる。"
       }
     },
     {
@@ -1238,6 +1442,10 @@
       "en": {
         "name": "Conscientiousness (C)",
         "description": "Reflects planning, diligence, and accuracy. Similar to Big Five Conscientiousness; includes organization, perfectionism, prudence facets."
+      },
+      "ja": {
+        "name": "誠実性 (C)",
+        "description": "計画性・勤勉・正確さを反映。ビッグファイブの誠実性に類似し組織化・完璧主義・慎重さを含む。"
       }
     },
     {
@@ -1246,6 +1454,10 @@
       "en": {
         "name": "Openness to Experience (O)",
         "description": "Openness to art, ideas, and creativity. Similar to Big Five Openness; includes aesthetic appreciation, inquisitiveness, creativity, unconventionality."
+      },
+      "ja": {
+        "name": "経験への開放性 (O)",
+        "description": "芸術・アイデア・創造性への開放。ビッグファイブの開放性に類似し審美的鑑賞・探究心・創造性・型破りを含む。"
       }
     }
   ],
@@ -1256,6 +1468,10 @@
       "en": {
         "name": "Secure Attachment",
         "description": "Attachment style that balances intimacy and independence from a trusted secure base. About 50% of the population. Source: Ainsworth 1978; Bartholomew & Horowitz 1991."
+      },
+      "ja": {
+        "name": "安定型 (Secure)",
+        "description": "信頼できる安全基地をもとに親密さと自立をバランスよく保つ愛着スタイル。人口の約50%。出典: Ainsworth 1978; Bartholomew & Horowitz 1991."
       }
     },
     {
@@ -1264,6 +1480,10 @@
       "en": {
         "name": "Anxious / Ambivalent",
         "description": "Attachment style marked by fear of abandonment, clinging, and need for reassurance. About 20%. Develops from inconsistent caregiver responsiveness."
+      },
+      "ja": {
+        "name": "不安型・両価型 (Anxious/Ambivalent)",
+        "description": "見捨てられ不安・執着・確認欲求が強い愛着スタイル。約20%。養育者の一貫しない反応から発達。"
       }
     },
     {
@@ -1272,6 +1492,10 @@
       "en": {
         "name": "Avoidant / Dismissing",
         "description": "Attachment style that exaggerates independence, is uncomfortable with intimacy, and keeps distance. About 25%. Develops from emotionally distant caregiving."
+      },
+      "ja": {
+        "name": "回避型・拒絶型 (Avoidant/Dismissing)",
+        "description": "自立を誇張し親密さを不快に感じ距離を取る愛着スタイル。約25%。情緒的に距離を取る養育から発達。"
       }
     },
     {
@@ -1280,6 +1504,10 @@
       "en": {
         "name": "Disorganized / Fearful-Avoidant",
         "description": "Attachment style that both desires and fears intimacy. About 5%. Associated with early trauma, abuse, or neglect. Source: Main & Solomon 1986."
+      },
+      "ja": {
+        "name": "無秩序型・恐れ回避型 (Disorganized/Fearful-Avoidant)",
+        "description": "親密さを求めつつ恐れる愛着スタイル。約5%。幼少期のトラウマ・虐待・ネグレクトと関連。出典: Main & Solomon 1986."
       }
     },
     {
@@ -1288,6 +1516,10 @@
       "en": {
         "name": "Internal Working Model",
         "description": "Attachment concept. Mental representations of self and others formed through attachment experiences, shaping later relationship expectations. Source: Bowlby 1969."
+      },
+      "ja": {
+        "name": "内的作業モデル (Internal Working Model)",
+        "description": "愛着の概念。愛着経験を通じて形成される自己と他者についての心的表象。後の関係への期待に影響。出典: Bowlby 1969."
       }
     },
     {
@@ -1296,6 +1528,10 @@
       "en": {
         "name": "Secure Base",
         "description": "Attachment concept. A trusted attachment figure that enables exploration without fear. A core concept of Bowlby's theory."
+      },
+      "ja": {
+        "name": "安全基地 (Secure Base)",
+        "description": "愛着の概念。恐れなく探索活動を可能にする信頼できる愛着対象。ボウルビィ理論の中核概念。"
       }
     },
     {
@@ -1304,6 +1540,10 @@
       "en": {
         "name": "Strange Situation",
         "description": "Attachment concept. Ainsworth's procedure for measuring infant attachment, classifying secure/anxious/avoidant/disorganized by separation-reunion responses."
+      },
+      "ja": {
+        "name": "ストレンジ・シチュエーション法 (Strange Situation)",
+        "description": "愛着の概念。エインスワースが考案した乳児の愛着タイプ測定手続き。分離・再会反応で安定/不安/回避/無秩序型を分類。"
       }
     },
     {
@@ -1312,6 +1552,10 @@
       "en": {
         "name": "Earned Secure",
         "description": "Attachment concept. A state of having moved to secure attachment despite an insecure start, through healing relationships or self-understanding. Source: Bartholomew & Horowitz 1991."
+      },
+      "ja": {
+        "name": "獲得安定型 (Earned Secure)",
+        "description": "愛着の概念。不安定な始まりから癒しとなる関係経験や自己理解を通じて安定型へ移行した状態。出典: Bartholomew & Horowitz 1991."
       }
     }
   ]
