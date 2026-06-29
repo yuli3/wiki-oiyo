@@ -199,5 +199,28 @@ const intro = copy.intro;
         </a>
       </section>
     )}
+
+    {/* OIYO 지식 네트워크 — 정의(wiki)→설명(blog)→실행(oiyo) 크로스도메인 */}
+    <section class="mt-12 rounded-2xl border border-green-100 bg-green-50/40 p-5">
+      <h2 class="mb-1 text-lg font-black text-green-950">{locale === "ko" ? "OIYO 지식 네트워크" : "OIYO Knowledge Network"}</h2>
+      <p class="mb-3 text-sm text-green-700">{locale === "ko" ? "한 주제를 정의 → 설명 → 실행으로 잇습니다." : "Each topic connects: definition → explanation → tool."}</p>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div class="rounded-xl border border-green-200 bg-white p-4">
+          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "정의" : "Definition"}</div>
+          <div class="mt-1 font-bold text-green-950">wiki.oiyo.net</div>
+          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "지금 보고 있는 사전" : "the dictionary you're in"}</div>
+        </div>
+        <a href={`https://blog.oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-white p-4 transition-colors hover:border-green-400 hover:bg-green-50">
+          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "설명" : "Explanation"}</div>
+          <div class="mt-1 font-bold text-green-950">blog.oiyo.net →</div>
+          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "강좌·매거진으로 더 깊이" : "courses & magazine"}</div>
+        </a>
+        <a href={`https://oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-white p-4 transition-colors hover:border-green-400 hover:bg-green-50">
+          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "실행" : "Tools"}</div>
+          <div class="mt-1 font-bold text-green-950">oiyo.net →</div>
+          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "테스트·계산기로 직접" : "tests & calculators"}</div>
+        </a>
+      </div>
+    </section>
   </main>
 </BaseLayout>
