@@ -226,10 +226,11 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
   set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": siteConfig.seo.organization.id,
     name: siteConfig.seo.organization.name,
-    url: siteConfig.url,
-    logo: new URL(siteConfig.seo.organization.logo, siteConfig.url),
-    sameAs: siteConfig.seo.organization.sameAs,
+    url: siteConfig.seo.organization.canonicalUrl,
+    logo: siteConfig.seo.organization.logo,
+    ...(siteConfig.seo.organization.sameAs.length ? { sameAs: siteConfig.seo.organization.sameAs } : {}),
   })}
 />
 
@@ -243,8 +244,7 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
     url: siteConfig.url,
     description: siteConfig.description,
     publisher: {
-      "@type": "Organization",
-      name: siteConfig.seo.organization.name,
+      "@id": siteConfig.seo.organization.id,
     },
     potentialAction: {
       "@type": "SearchAction",
@@ -311,10 +311,11 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
         },
         publisher: {
           "@type": "Organization",
+          "@id": siteConfig.seo.organization.id,
           name: siteConfig.seo.organization.name,
           logo: {
             "@type": "ImageObject",
-            url: new URL(siteConfig.seo.organization.logo, siteConfig.url),
+            url: siteConfig.seo.organization.logo,
           },
         },
         mainEntityOfPage: {
