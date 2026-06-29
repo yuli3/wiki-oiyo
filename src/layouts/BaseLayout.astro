@@ -58,6 +58,7 @@ const getLocalizedPath = (targetLocale: string) => {
 
 const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
+  { href: `/${locale}/explore`, label: nav.explore ?? "Explore" },
   { href: `/${locale}/courses`, label: nav.courses ?? "Courses" },
   // IA consolidation: wiki has no tools of its own (tools live in the family's
   // unified catalog). "Tools/도구들" points at the canonical blog.oiyo.net hub.
@@ -374,6 +375,7 @@ const langItems = availableLocales && availableLocales.length
             class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-bold uppercase tracking-widest text-muted-foreground"
           >
             <a href={`https://blog.oiyo.net/${locale}/tools/`} class="hover:text-primary transition-colors">{nav.tools ?? "Tools"}</a>
+            <a href={`/${locale}/explore`} class="hover:text-primary transition-colors">{nav.explore ?? "Explore"}</a>
             <a href={`/${locale}/courses`} class="hover:text-primary transition-colors">{nav.courses ?? "Courses"}</a>
             <a href={`/${locale}/magazine`} class="hover:text-primary transition-colors">{nav.magazine ?? "Magazine"}</a>
             <a href="/knowledge/" class="hover:text-primary transition-colors">Knowledge</a>

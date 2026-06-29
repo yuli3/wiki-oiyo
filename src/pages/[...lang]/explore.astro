@@ -1,0 +1,203 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTranslations, locales } from "../../lib/i18n";
+import { getTrackFromData, slugifyCategory } from "../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+type ActiveLocale = (typeof locales)[number];
+
+const { locale } = Astro.props as { locale: ActiveLocale };
+const t = await getTranslations(locale);
+const categoryNames = (t.category?.names ?? {}) as Record<string, string>;
+
+const posts = await getCollection("blog", ({ data }) => data.draft !== true && data.locale === locale);
+
+type Track = "dictionary" | "academy" | "magazine";
+type ExploreCopy = {
+  title: string;
+  intro: string;
+  home: string;
+  current: string;
+  dictionary: string;
+  academy: string;
+  magazine: string;
+  browseMagazine: string;
+  chapterSuffix: string;
+};
+
+const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
+  en: {
+    title: "Explore the OIYO Wiki",
+    intro: "Browse definitions, courses, and long-form reading by track.",
+    home: "Home",
+    current: "Explore",
+    dictionary: "Dictionary - term definitions",
+    academy: "Courses - learn by series",
+    magazine: "Magazine - reads",
+    browseMagazine: "Browse the magazine",
+    chapterSuffix: " ch",
+  },
+  ko: {
+    title: "OIYO 위키 전체 탐색",
+    intro: "정의, 강좌, 긴 읽을거리를 트랙별로 둘러봅니다.",
+    home: "홈",
+    current: "전체 탐색",
+    dictionary: "사전 - 용어 정의",
+    academy: "강좌 - 시리즈 학습",
+    magazine: "매거진 - 읽을거리",
+    browseMagazine: "매거진 전체 보기",
+    chapterSuffix: "강",
+  },
+  ja: {
+    title: "OIYO Wiki を探索",
+    intro: "定義、講座、読み物をトラック別に探せます。",
+    home: "ホーム",
+    current: "探索",
+    dictionary: "辞典 - 用語の定義",
+    academy: "講座 - シリーズ学習",
+    magazine: "マガジン - 読み物",
+    browseMagazine: "マガジンを見る",
+    chapterSuffix: "章",
+  },
+  zh: {
+    title: "浏览 OIYO Wiki",
+    intro: "按分类浏览定义、课程和长篇阅读。",
+    home: "首页",
+    current: "浏览",
+    dictionary: "词典 - 术语定义",
+    academy: "课程 - 系列学习",
+    magazine: "杂志 - 阅读",
+    browseMagazine: "浏览杂志",
+    chapterSuffix: "章",
+  },
+  fr: {
+    title: "Explorer le Wiki OIYO",
+    intro: "Parcourez les definitions, les cours et les lectures longues par piste.",
+    home: "Accueil",
+    current: "Explorer",
+    dictionary: "Dictionnaire - definitions",
+    academy: "Cours - series d'apprentissage",
+    magazine: "Revue - lectures",
+    browseMagazine: "Parcourir la revue",
+    chapterSuffix: " chap.",
+  },
+  es: {
+    title: "Explorar OIYO Wiki",
+    intro: "Explora definiciones, cursos y lecturas extensas por pista.",
+    home: "Inicio",
+    current: "Explorar",
+    dictionary: "Diccionario - definiciones",
+    academy: "Cursos - aprendizaje por series",
+    magazine: "Revista - lecturas",
+    browseMagazine: "Explorar la revista",
+    chapterSuffix: " cap.",
+  },
+};
+const copy = copyByLocale[locale] ?? copyByLocale.en;
+const trackLabel: Record<Track, string> = {
+  dictionary: copy.dictionary,
+  academy: copy.academy,
+  magazine: copy.magazine,
+};
+
+// dictionary: track → category → count (link to category page)
+const dict = posts.filter((p) => getTrackFromData(p.data) === "dictionary");
+const dictByCat = new Map<string, number>();
+for (const p of dict) {
+  const c = p.data.category ?? "Etc";
+  dictByCat.set(c, (dictByCat.get(c) ?? 0) + 1);
+}
+const dictCats = [...dictByCat.entries()].sort((a, b) => b[1] - a[1]);
+
+// academy: track → series → chapters (link to first chapter)
+const academy = posts.filter((p) => getTrackFromData(p.data) === "academy");
+type Series = { key: string; category: string; first: string; count: number };
+const seriesMap = new Map<string, Series>();
+for (const p of academy) {
+  const raw = p.slug.split("/").slice(1).join("/");
+  const m = raw.match(/^(.+)-ch\d+$/);
+  const key = m ? m[1] : raw;
+  const ex = seriesMap.get(key);
+  if (ex) ex.count++;
+  else seriesMap.set(key, { key, category: p.data.category ?? "Etc", first: raw, count: 1 });
+}
+// academy: group series by category
+const seriesByCat = new Map<string, Series[]>();
+for (const s of seriesMap.values()) {
+  if (!seriesByCat.has(s.category)) seriesByCat.set(s.category, []);
+  seriesByCat.get(s.category)!.push(s);
+}
+const acadCats = [...seriesByCat.entries()].sort((a, b) => b[1].length - a[1].length);
+
+const magazineCount = posts.filter((p) => getTrackFromData(p.data) === "magazine").length;
+const catLabel = (c: string) => categoryNames[c] ?? c;
+const title = copy.title;
+const intro = copy.intro;
+---
+
+<BaseLayout title={title} description={intro}>
+  <main class="mx-auto max-w-4xl px-4 py-10">
+    <nav class="mb-4 text-xs text-green-700/70" aria-label="Breadcrumb">
+      <a class="hover:underline" href={`/${locale}`}>{copy.home}</a> <span class="mx-1">›</span>
+      <span class="font-semibold">{copy.current}</span>
+    </nav>
+    <h1 class="text-3xl font-black text-green-950">{title}</h1>
+    <p class="mt-2 text-sm text-green-700">{intro}</p>
+
+    <section class="mt-8">
+      <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-green-900">
+        {trackLabel.dictionary} <span class="text-sm font-medium text-green-600">{dict.length}</span>
+      </h2>
+      <div class="grid gap-2 sm:grid-cols-2">
+        {dictCats.map(([cat, n]) => (
+          <a
+            href={`/${locale}/category/${slugifyCategory(cat)}`}
+            class="flex items-center justify-between rounded-lg border border-green-100 bg-white px-4 py-2.5 text-sm transition-colors hover:border-green-400 hover:bg-green-50"
+          >
+            <span class="font-semibold text-green-950">{catLabel(cat)}</span>
+            <span class="text-xs text-green-600">{n}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-green-900">
+        {trackLabel.academy} <span class="text-sm font-medium text-green-600">{seriesMap.size}</span>
+      </h2>
+      <div class="flex flex-col gap-2">
+        {acadCats.map(([cat, series]) => (
+          <details class="rounded-lg border border-green-100 bg-white open:bg-green-50/40">
+            <summary class="cursor-pointer list-none px-4 py-2.5 text-sm font-bold text-green-950">
+              {catLabel(cat)} <span class="ml-1 text-xs font-medium text-green-600">{series.length}</span>
+            </summary>
+            <ul class="border-t border-green-100 px-4 py-2">
+              {series
+                .sort((a, b) => a.key.localeCompare(b.key))
+                .map((s) => (
+                  <li class="py-1">
+                    <a class="text-sm text-green-800 hover:underline" href={`/${locale}/${s.first}`}>
+                      {s.key} <span class="text-xs text-green-500">· {s.count}{copy.chapterSuffix}</span>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    {magazineCount > 0 && (
+      <section class="mt-10">
+        <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.magazine} <span class="text-sm font-medium text-green-600">{magazineCount}</span></h2>
+        <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={`/${locale}/magazine`}>
+          {copy.browseMagazine}
+        </a>
+      </section>
+    )}
+  </main>
+</BaseLayout>
