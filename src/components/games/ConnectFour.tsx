@@ -75,15 +75,6 @@ const i18n: Record<Locale, {
     restart: "再玩一次",
     desc: "在水平、垂直或對角線方向連接四個棋子即獲勝。",
   },
-  cn: {
-    title: "四子棋",
-    player: "玩家",
-    turn: "的回合",
-    wins: "获胜！",
-    draw: "平局！",
-    restart: "再玩一次",
-    desc: "在水平、垂直或对角线方向连接四个棋子即获胜。",
-  },
 };
 
 function emptyBoard(): Board {

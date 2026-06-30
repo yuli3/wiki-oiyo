@@ -11,7 +11,7 @@ import {
 // UI string manifests — no hardcoded strings in JSX
 // ---------------------------------------------------------------------------
 
-type UILocale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
+type UILocale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
 const UI_LABELS: Record<UILocale, {
   pageTitle: string;
@@ -125,22 +125,6 @@ const UI_LABELS: Record<UILocale, {
     disclaimer: '本資訊依據官方來源，可能隨時變動，請至各機構官網確認最新資訊。',
     countryLabel: '選擇國家',
   },
-  cn: {
-    pageTitle: '政府补贴指南',
-    pageSubtitle: '福利·医疗·住房·就业官方资源',
-    filterAll: '全部',
-    filterEmergency: '紧急援助',
-    filterMedical: '医疗',
-    filterHousing: '住房',
-    filterChildcare: '育儿',
-    filterEmployment: '就业',
-    filterTax: '税务',
-    visitSite: '官方网站',
-    callPhone: '电话咨询',
-    noPhone: '请联系当地机构',
-    disclaimer: '本信息基于官方来源，可能随时变动，请至各机构官网确认最新信息。',
-    countryLabel: '选择国家',
-  },
 };
 
 // ---------------------------------------------------------------------------
@@ -210,7 +194,6 @@ const LOCALE_DEFAULT_COUNTRY: Record<UILocale, CountryCode> = {
   fr: 'FR',
   es: 'ES',
   zh: 'CN',
-  cn: 'CN',
 };
 
 // ---------------------------------------------------------------------------
@@ -225,7 +208,6 @@ function getProgramName(program: SupportProgram, locale: UILocale): string {
     fr: program.nameFr,
     es: program.nameEs,
     zh: program.nameZh,
-    cn: program.nameZh,
   };
   return map[locale] ?? program.nameEn;
 }
@@ -238,7 +220,6 @@ function getProgramDesc(program: SupportProgram, locale: UILocale): string {
     fr: program.descFr,
     es: program.descEs,
     zh: program.descZh,
-    cn: program.descZh,
   };
   return map[locale] ?? program.descEn;
 }
@@ -330,7 +311,6 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                   fr: country.nameFr,
                   es: country.nameEs,
                   zh: country.nameZh,
-                  cn: country.nameZh,
                 }[uiLocale] ?? country.nameEn}</span>
               </button>
             );

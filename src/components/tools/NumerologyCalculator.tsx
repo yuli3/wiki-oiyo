@@ -184,24 +184,6 @@ const UI: Record<Locale, {
     challengeLabel: "挑戰",
     giftLabel: "天賦",
   },
-  cn: {
-    title: "数字命理计算器",
-    subtitle: "通过生日和姓名计算生命数、表达数、灵魂数和个性数",
-    nameLabel: "英文全名",
-    namePlaceholder: "例: Wang Fang",
-    dateLabel: "出生日期",
-    calcBtn: "计算",
-    resetBtn: "重新计算",
-    lifePathLabel: "生命灵数",
-    expressionLabel: "表达数",
-    soulUrgeLabel: "灵魂冲动数",
-    personalityLabel: "个性数",
-    masterNote: "主数",
-    keywordsLabel: "关键词",
-    meaningLabel: "含义",
-    challengeLabel: "挑战",
-    giftLabel: "天赋",
-  },
 };
 
 interface NumberMeaning {
@@ -223,7 +205,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Indépendance", "Leadership", "Pionnier", "Confiance"],
       es: ["Independencia", "Liderazgo", "Pionero", "Confianza"],
       zh: ["獨立", "領導力", "開拓精神", "自信"],
-      cn: ["独立", "领导力", "开拓精神", "自信"],
     },
     meaning: {
       ko: "당신은 타고난 리더입니다. 독창적인 아이디어와 강한 의지로 새로운 길을 개척합니다.",
@@ -232,7 +213,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un leader né. Avec des idées originales et une forte volonté, vous tracez de nouveaux chemins.",
       es: "Eres un líder nato. Con ideas originales y fuerte voluntad, abres nuevos caminos.",
       zh: "你是天生的領導者。以獨創的想法和強大的意志力開闢新道路。",
-      cn: "你是天生的领导者。以独创的想法和强大的意志力开辟新道路。",
     },
     challenge: {
       ko: "독선과 고집을 경계하고 타인의 의견을 경청하는 연습이 필요합니다.",
@@ -241,7 +221,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Méfiez-vous de l'entêtement ; pratiquez l'écoute des autres.",
       es: "Cuidado con la terquedad; practica escuchar a los demás.",
       zh: "警惕固執自以為是，需要練習傾聽他人意見。",
-      cn: "警惕固执自以为是，需要练习倾听他人意见。",
     },
     gift: {
       ko: "강한 추진력과 독창성으로 아무도 가지 않은 길을 만들어냅니다.",
@@ -250,7 +229,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Force de caractère et originalité pour créer des voies inédites.",
       es: "Fuerte impulso y originalidad para crear caminos que nadie ha recorrido.",
       zh: "強大的驅動力和獨創性讓你能走出前人未走過的路。",
-      cn: "强大的驱动力和独创性让你能走出前人未走过的路。",
     },
   },
   2: {
@@ -262,7 +240,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Coopération", "Équilibre", "Sensibilité", "Diplomatique"],
       es: ["Cooperación", "Equilibrio", "Sensibilidad", "Diplomático"],
       zh: ["合作", "平衡", "感受性", "外交手腕"],
-      cn: ["合作", "平衡", "感受性", "外交手腕"],
     },
     meaning: {
       ko: "당신은 뛰어난 중재자이자 파트너입니다. 관계의 조화를 추구하고 섬세한 감수성으로 주변을 편안하게 합니다.",
@@ -271,7 +248,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un excellent médiateur et partenaire. Vous recherchez l'harmonie et mettez les autres à l'aise.",
       es: "Eres un excelente mediador y compañero. Buscas la armonía y pones a los demás a gusto.",
       zh: "你是出色的調解者和夥伴。追求關係中的和諧，用細膩的感受力讓周圍的人感到輕鬆。",
-      cn: "你是出色的调解者和伙伴。追求关系中的和谐，用细腻的感受力让周围的人感到轻松。",
     },
     challenge: {
       ko: "지나친 의존과 우유부단함을 극복하고 자신의 목소리를 낼 용기가 필요합니다.",
@@ -280,7 +256,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Surmontez dépendance excessive et indécision; osez exprimer votre vérité.",
       es: "Supera la dependencia excesiva e indecisión; encuentra el valor para expresar tu verdad.",
       zh: "克服過度依賴和優柔寡斷，需要勇氣說出自己的想法。",
-      cn: "克服过度依赖和优柔寡断，需要勇气说出自己的想法。",
     },
     gift: {
       ko: "타인의 감정을 깊이 이해하는 공감 능력과 갈등을 조율하는 탁월한 능력을 가졌습니다.",
@@ -289,7 +264,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Empathie profonde et capacité exceptionnelle à résoudre les conflits.",
       es: "Profunda empatía y excepcional capacidad para mediar conflictos.",
       zh: "深刻理解他人情感的同理心和化解衝突的卓越能力。",
-      cn: "深刻理解他人情感的同理心和化解冲突的卓越能力。",
     },
   },
   3: {
@@ -301,7 +275,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Créativité", "Expression", "Sociabilité", "Optimisme"],
       es: ["Creatividad", "Expresión", "Sociabilidad", "Optimismo"],
       zh: ["創造力", "表達能力", "社交性", "樂觀主義"],
-      cn: ["创造力", "表达能力", "社交性", "乐观主义"],
     },
     meaning: {
       ko: "당신은 빛나는 창의적 표현자입니다. 예술, 글쓰기, 말하기 등으로 세상에 기쁨을 전합니다.",
@@ -310,7 +283,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un brillant expressif créatif. Vous apportez joie au monde par l'art et la communication.",
       es: "Eres un brillante expresor creativo. Llevas alegría al mundo a través del arte y la comunicación.",
       zh: "你是閃耀的創意表達者。透過藝術、寫作和溝通為世界帶來快樂。",
-      cn: "你是闪耀的创意表达者。通过艺术、写作和沟通为世界带来快乐。",
     },
     challenge: {
       ko: "에너지를 분산하지 않고 한 가지에 집중하는 능력을 키워야 합니다.",
@@ -319,7 +291,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Développez la capacité de vous concentrer plutôt que de disperser votre énergie.",
       es: "Desarrolla la capacidad de concentrarte en una cosa en lugar de dispersar tu energía.",
       zh: "需要培養專注於一件事的能力，而不是分散精力。",
-      cn: "需要培养专注于一件事的能力，而不是分散精力。",
     },
     gift: {
       ko: "타고난 유머와 창의력으로 어디서든 분위기를 밝히는 에너지를 가졌습니다.",
@@ -328,7 +299,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Humour naturel et créativité qui illuminent n'importe quelle atmosphère.",
       es: "Humor natural y creatividad que iluminan cualquier ambiente.",
       zh: "天生的幽默感和創造力，能在任何地方活躍氣氛。",
-      cn: "天生的幽默感和创造力，能在任何地方活跃气氛。",
     },
   },
   4: {
@@ -340,7 +310,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Stabilité", "Praticité", "Diligence", "Systématique"],
       es: ["Estabilidad", "Practicidad", "Diligencia", "Sistemático"],
       zh: ["穩定", "實用性", "勤勉", "系統性"],
-      cn: ["稳定", "实用性", "勤勉", "系统性"],
     },
     meaning: {
       ko: "당신은 신뢰할 수 있는 건축가입니다. 체계적이고 성실한 노력으로 단단한 기반을 쌓아갑니다.",
@@ -349,7 +318,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un bâtisseur fiable. Par l'effort systématique et diligent, vous posez des bases solides.",
       es: "Eres un constructor confiable. Con esfuerzo sistemático y diligente, construyes una base sólida.",
       zh: "你是值得信賴的建造者。透過系統性的努力奠定堅實基礎。",
-      cn: "你是值得信赖的建造者。通过系统性的努力奠定坚实基础。",
     },
     challenge: {
       ko: "지나친 경직성과 변화 거부를 극복하고 유연성을 키워야 합니다.",
@@ -358,7 +326,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Surmontez la rigidité excessive et la résistance au changement en cultivant la flexibilité.",
       es: "Supera la rigidez excesiva y la resistencia al cambio cultivando flexibilidad.",
       zh: "需要克服過度刻板和對變化的抗拒，培養靈活性。",
-      cn: "需要克服过度刻板和对变化的抗拒，培养灵活性。",
     },
     gift: {
       ko: "어떤 프로젝트든 끝까지 완성하는 놀라운 인내력과 실행력을 가졌습니다.",
@@ -367,7 +334,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Persévérance remarquable pour mener n'importe quel projet à terme.",
       es: "Perseverancia y capacidad de ejecución para completar cualquier proyecto.",
       zh: "無論什麼項目都能堅持到底完成的驚人耐力和執行力。",
-      cn: "无论什么项目都能坚持到底完成的惊人耐力和执行力。",
     },
   },
   5: {
@@ -379,7 +345,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Liberté", "Aventure", "Changement", "Adaptabilité"],
       es: ["Libertad", "Aventura", "Cambio", "Adaptabilidad"],
       zh: ["自由", "冒險", "變化", "適應力"],
-      cn: ["自由", "冒险", "变化", "适应力"],
     },
     meaning: {
       ko: "당신은 자유로운 모험가입니다. 변화를 두려워하지 않고 다양한 경험을 통해 인생을 풍요롭게 합니다.",
@@ -388,7 +353,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un aventurier libre. Sans craindre le changement, vous enrichissez la vie d'expériences variées.",
       es: "Eres un aventurero libre. Sin miedo al cambio, enriqueces tu vida con experiencias variadas.",
       zh: "你是自由奔放的冒險家。不懼變化，透過豐富的經歷豐富人生。",
-      cn: "你是自由奔放的冒险家。不惧变化，通过丰富的经历丰富人生。",
     },
     challenge: {
       ko: "충동적 결정과 집중력 부족을 극복하고 하나의 방향으로 나아가는 힘을 길러야 합니다.",
@@ -397,7 +361,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Surmontez les décisions impulsives et le manque de concentration; bâtissez la force d'aller dans une direction.",
       es: "Supera decisiones impulsivas y falta de concentración; desarrolla la fuerza de ir en una dirección.",
       zh: "需要克服衝動的決定和缺乏專注，培養朝一個方向前進的力量。",
-      cn: "需要克服冲动的决定和缺乏专注，培养朝一个方向前进的力量。",
     },
     gift: {
       ko: "어떤 상황에서도 빠르게 적응하고 새로운 가능성을 발견하는 탁월한 감각을 가졌습니다.",
@@ -406,7 +369,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Sens exceptionnel d'adaptation rapide et de découverte de nouvelles possibilités.",
       es: "Excepcional sentido de adaptación rápida y descubrimiento de nuevas posibilidades.",
       zh: "在任何情況下都能快速適應並發現新可能性的卓越感知力。",
-      cn: "在任何情况下都能快速适应并发现新可能性的卓越感知力。",
     },
   },
   6: {
@@ -418,7 +380,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Foyer", "Responsabilité", "Service", "Amour"],
       es: ["Hogar", "Responsabilidad", "Servicio", "Amor"],
       zh: ["家庭", "責任感", "服務", "愛"],
-      cn: ["家庭", "责任感", "服务", "爱"],
     },
     meaning: {
       ko: "당신은 타고난 보호자이자 치유자입니다. 가족과 공동체를 위해 헌신하며 사랑으로 세상을 더 따뜻하게 합니다.",
@@ -427,7 +388,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un protecteur et guérisseur né. Dévoué à la famille et la communauté, vous réchauffez le monde.",
       es: "Eres un protector y sanador nato. Dedicado a la familia y comunidad, haces el mundo más cálido.",
       zh: "你是天生的保護者和治癒者。為家人和社區奉獻，以愛讓世界更溫暖。",
-      cn: "你是天生的保护者和治愈者。为家人和社区奉献，以爱让世界更温暖。",
     },
     challenge: {
       ko: "자신을 희생하는 과도한 봉사에서 벗어나 건강한 경계를 설정하는 법을 배워야 합니다.",
@@ -436,7 +396,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Apprenez à poser des limites saines plutôt que de trop vous sacrifier.",
       es: "Aprende a establecer límites saludables en lugar de sacrificarte demasiado.",
       zh: "需要學會設立健康的界限，而非過度犧牲自己去服務他人。",
-      cn: "需要学会设立健康的界限，而非过度牺牲自己去服务他人。",
     },
     gift: {
       ko: "무조건적인 사랑과 깊은 치유 능력으로 상처받은 영혼을 위로합니다.",
@@ -445,7 +404,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Amour inconditionnel et profonde capacité de guérison pour réconforter les âmes blessées.",
       es: "Amor incondicional y profunda capacidad curativa para consolar almas heridas.",
       zh: "無條件的愛和深刻的治癒能力，能安慰受傷的靈魂。",
-      cn: "无条件的爱和深刻的治愈能力，能安慰受伤的灵魂。",
     },
   },
   7: {
@@ -457,7 +415,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Sagesse", "Analyse", "Spiritualité", "Introspection"],
       es: ["Sabiduría", "Análisis", "Espiritualidad", "Introspección"],
       zh: ["智慧", "分析", "靈性", "內省"],
-      cn: ["智慧", "分析", "灵性", "内省"],
     },
     meaning: {
       ko: "당신은 진실을 탐구하는 철학자입니다. 깊은 사색과 분석으로 인생의 숨겨진 의미를 찾아갑니다.",
@@ -466,7 +423,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous êtes un philosophe en quête de vérité. La réflexion profonde vous guide vers les sens cachés.",
       es: "Eres un filósofo en busca de la verdad. La reflexión profunda te guía hacia los significados ocultos.",
       zh: "你是探尋真理的哲學家。透過深刻的沉思和分析，尋找生命的隱藏意義。",
-      cn: "你是探寻真理的哲学家。通过深刻的沉思和分析，寻找生命的隐藏意义。",
     },
     challenge: {
       ko: "고립과 불신을 극복하고 타인과의 진정한 연결을 두려워하지 않는 용기가 필요합니다.",
@@ -475,7 +431,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Surmontez l'isolement et la méfiance; trouvez le courage de vous connecter vraiment.",
       es: "Supera el aislamiento y la desconfianza; encuentra el valor de conectarte genuinamente.",
       zh: "需要克服孤立和不信任，勇於與他人建立真正的連結。",
-      cn: "需要克服孤立和不信任，勇于与他人建立真正的联结。",
     },
     gift: {
       ko: "남들이 보지 못하는 패턴을 발견하고 깊은 진리를 꿰뚫어 보는 탁월한 직관력을 가졌습니다.",
@@ -484,7 +439,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Intuition exceptionnelle pour découvrir des schémas que les autres manquent.",
       es: "Intuición excepcional para descubrir patrones que otros no ven.",
       zh: "發現他人看不到的規律、洞察深層真理的卓越直覺力。",
-      cn: "发现他人看不到的规律、洞察深层真理的卓越直觉力。",
     },
   },
   8: {
@@ -496,7 +450,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Succès", "Pouvoir", "Abondance", "Ambition"],
       es: ["Éxito", "Poder", "Abundancia", "Ambición"],
       zh: ["成功", "權力", "豐盛", "野心"],
-      cn: ["成功", "权力", "丰盛", "野心"],
     },
     meaning: {
       ko: "당신은 세상을 움직이는 힘을 가진 사람입니다. 강한 야망과 실행력으로 물질적·정신적 성공을 이룹니다.",
@@ -505,7 +458,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous avez le pouvoir de changer le monde. Forte ambition et exécution mènent au succès.",
       es: "Tienes el poder de mover el mundo. Fuerte ambición y ejecución te llevan al éxito.",
       zh: "你擁有影響世界的力量。強大的野心和執行力帶領你走向物質和精神上的成功。",
-      cn: "你拥有影响世界的力量。强大的野心和执行力带领你走向物质和精神上的成功。",
     },
     challenge: {
       ko: "권력과 물질에 집착하지 않고 그것을 더 큰 선을 위해 사용하는 지혜가 필요합니다.",
@@ -514,7 +466,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Sagesse pour utiliser pouvoir et succès pour le bien commun plutôt que de s'y accrocher.",
       es: "Sabiduría para usar el poder y el éxito para el bien mayor en lugar de aferrarte a ellos.",
       zh: "需要智慧地使用權力和物質成功，為更大的善服務，而非執著於此。",
-      cn: "需要智慧地使用权力和物质成功，为更大的善服务，而非执着于此。",
     },
     gift: {
       ko: "어떤 분야에서든 최고의 자리에 오를 수 있는 탁월한 전략적 사고와 실행 능력을 가졌습니다.",
@@ -523,7 +474,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Pensée stratégique et exécution exceptionnelles pour atteindre le sommet.",
       es: "Pensamiento estratégico y ejecución excepcionales para llegar a la cima.",
       zh: "在任何領域都能登頂的卓越戰略思維和執行能力。",
-      cn: "在任何领域都能登顶的卓越战略思维和执行能力。",
     },
   },
   9: {
@@ -535,7 +485,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Humanitarisme", "Achèvement", "Sagesse", "Compassion"],
       es: ["Humanitarismo", "Completitud", "Sabiduría", "Compasión"],
       zh: ["人道主義", "完成", "智慧", "慈悲"],
-      cn: ["人道主义", "完成", "智慧", "慈悲"],
     },
     meaning: {
       ko: "당신은 인류를 품는 넓은 마음의 소유자입니다. 오래된 지혜와 깊은 자비로 세상에 봉사하는 사명을 지닙니다.",
@@ -544,7 +493,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous avez un cœur qui embrasse l'humanité. Sagesse ancienne et compassion profonde vous appellent à servir.",
       es: "Tienes un corazón que abraza a toda la humanidad. Sabiduría antigua y compasión profunda te llaman a servir.",
       zh: "你有一顆包容全人類的廣闊心靈。以深邃的智慧和慈悲，承擔服務世界的使命。",
-      cn: "你有一颗包容全人类的广阔心灵。以深邃的智慧和慈悲，承担服务世界的使命。",
     },
     challenge: {
       ko: "과거에 대한 집착과 감정적 상처를 놓아버리고 앞으로 나아가는 용기가 필요합니다.",
@@ -553,7 +501,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Lâchez les attachements du passé et les blessures émotionnelles pour avancer.",
       es: "Suelta el apego al pasado y las heridas emocionales; encuentra valor para avanzar.",
       zh: "需要放下對過去的執著和情感創傷，勇於前行。",
-      cn: "需要放下对过去的执着和情感创伤，勇于前行。",
     },
     gift: {
       ko: "삶의 모든 경험을 통합하여 타인의 길을 밝혀주는 지혜의 등불이 됩니다.",
@@ -562,7 +509,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Intégrer toutes les expériences de vie pour devenir un phare de sagesse.",
       es: "Integrar todas las experiencias de vida para convertirse en un faro de sabiduría.",
       zh: "整合所有人生經驗，成為照亮他人道路的智慧燈塔。",
-      cn: "整合所有人生经验，成为照亮他人道路的智慧灯塔。",
     },
   },
   11: {
@@ -574,7 +520,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Inspiration", "Intuition", "Idéalisme", "Spiritualité"],
       es: ["Inspiración", "Intuición", "Idealismo", "Espiritualidad"],
       zh: ["靈感", "直覺", "理想主義", "靈性"],
-      cn: ["灵感", "直觉", "理想主义", "灵性"],
     },
     meaning: {
       ko: "당신은 11의 마스터 넘버를 가진 타고난 영감의 채널입니다. 높은 직관력과 영적 통찰로 인류에게 빛을 가져다줍니다.",
@@ -583,7 +528,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous portez le Nombre Maître 11 — un canal d'inspiration naturel. Votre haute intuition apporte lumière à l'humanité.",
       es: "Llevas el Número Maestro 11 — canal natural de inspiración. Tu alta intuición trae luz a la humanidad.",
       zh: "你擁有主數11——天生的靈感傳遞渠道。高度直覺和靈性洞察為人類帶來光明。",
-      cn: "你拥有主数11——天生的灵感传递渠道。高度直觉和灵性洞察为人类带来光明。",
     },
     challenge: {
       ko: "극도의 민감성과 내면의 갈등을 다스리고 높은 이상을 현실에 접지시키는 능력이 필요합니다.",
@@ -592,7 +536,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Gérer l'hypersensibilité et les conflits intérieurs; ancrer les idéaux élevés dans la réalité.",
       es: "Manejar la extrema sensibilidad y conflictos internos; aterrizar los altos ideales en la realidad.",
       zh: "需要管理極度敏感和內心衝突，將崇高理想落實於現實。",
-      cn: "需要管理极度敏感和内心冲突，将崇高理想落实于现实。",
     },
     gift: {
       ko: "강렬한 직관과 영감으로 많은 사람들의 삶에 영향을 미치는 선지자적 능력을 가졌습니다.",
@@ -601,7 +544,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Capacité prophétique d'influencer de nombreuses vies par l'intuition et l'inspiration.",
       es: "Capacidad profética de influir en muchas vidas a través de la intuición e inspiración.",
       zh: "以強烈的直覺和靈感影響眾多人生的先知般的能力。",
-      cn: "以强烈的直觉和灵感影响众多人生的先知般的能力。",
     },
   },
   22: {
@@ -613,7 +555,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Maître Bâtisseur", "Idéalisme pratique", "Grande vision", "Transformation"],
       es: ["Maestro Constructor", "Idealismo práctico", "Gran visión", "Transformación"],
       zh: ["大師建築者", "實用理想主義", "宏大願景", "變革"],
-      cn: ["大师建筑者", "实用理想主义", "宏大愿景", "变革"],
     },
     meaning: {
       ko: "당신은 22의 마스터 넘버, 마스터 건축가입니다. 원대한 비전을 현실로 구현하는 탁월한 능력으로 세상을 변화시킵니다.",
@@ -622,7 +563,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous portez le Nombre Maître 22 — le Maître Bâtisseur. Vous transformez le monde en manifestant de grandes visions.",
       es: "Llevas el Número Maestro 22 — el Maestro Constructor. Transformas el mundo materializando grandes visiones.",
       zh: "你擁有主數22——大師建築者。將宏大願景化為現實的卓越能力改變著世界。",
-      cn: "你拥有主数22——大师建筑者。将宏大愿景化为现实的卓越能力改变着世界。",
     },
     challenge: {
       ko: "거대한 잠재력에 짓눌리지 않고 한 걸음씩 현실적인 계획으로 실현하는 균형 감각이 필요합니다.",
@@ -631,7 +571,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Équilibre nécessaire pour ne pas être écrasé par un potentiel immense — réalisez-le pas à pas.",
       es: "Equilibrio para no ser abrumado por el vasto potencial — realizarlo paso a paso.",
       zh: "需要平衡感，不被巨大潛力壓倒，而是一步一步用實際計劃去實現。",
-      cn: "需要平衡感，不被巨大潜力压倒，而是一步一步用实际计划去实现。",
     },
     gift: {
       ko: "인류 역사에 기여하는 불멸의 작품을 남길 수 있는 마스터 빌더의 능력을 타고났습니다.",
@@ -640,7 +579,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Don du Maître Bâtisseur pour laisser des œuvres immortelles qui contribuent à l'histoire humaine.",
       es: "Don del Maestro Constructor para dejar obras inmortales que contribuyan a la historia humana.",
       zh: "天生具備大師建築者的能力，能留下對人類歷史有貢獻的不朽作品。",
-      cn: "天生具备大师建筑者的能力，能留下对人类历史有贡献的不朽作品。",
     },
   },
   33: {
@@ -652,7 +590,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: ["Maître Enseignant", "Amour inconditionnel", "Sacrifice", "Guérison"],
       es: ["Maestro Instructor", "Amor incondicional", "Sacrificio", "Sanación"],
       zh: ["大師教師", "無條件的愛", "犧牲", "治癒"],
-      cn: ["大师教师", "无条件的爱", "牺牲", "治愈"],
     },
     meaning: {
       ko: "당신은 33의 마스터 넘버, 마스터 교사입니다. 무조건적인 사랑으로 인류를 가르치고 치유하는 숭고한 사명을 지닙니다.",
@@ -661,7 +598,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Vous portez le Nombre Maître 33 — le Maître Enseignant. Votre mission sublime est d'enseigner et guérir avec amour inconditionnel.",
       es: "Llevas el Número Maestro 33 — el Maestro Instructor. Tu misión sublime es enseñar y sanar con amor incondicional.",
       zh: "你擁有主數33——大師教師。以無條件的愛教導和治癒人類是你崇高的使命。",
-      cn: "你拥有主数33——大师教师。以无条件的爱教导和治愈人类是你崇高的使命。",
     },
     challenge: {
       ko: "자신을 돌보면서 타인을 섬기는 균형을 찾고, 자기 소진 없이 사랑을 나눌 방법을 찾아야 합니다.",
@@ -670,7 +606,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Trouver équilibre entre prendre soin de soi et servir les autres sans s'épuiser.",
       es: "Encontrar equilibrio entre cuidarte y servir a otros; compartir amor sin agotarte.",
       zh: "在照顧自己和服務他人之間找到平衡，在不自我耗竭的情況下分享愛。",
-      cn: "在照顾自己和服务他人之间找到平衡，在不自我耗竭的情况下分享爱。",
     },
     gift: {
       ko: "존재 자체로 주변을 치유하고 영감을 주는 신성한 빛과 같은 존재입니다.",
@@ -679,7 +614,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       fr: "Votre existence même guérit et inspire — vous êtes comme une lumière divine.",
       es: "Tu propia existencia sana e inspira — eres como una luz divina.",
       zh: "你的存在本身就能治癒和激勵他人，如同神聖的光芒。",
-      cn: "你的存在本身就能治愈和激励他人，如同神圣的光芒。",
     },
   },
 };

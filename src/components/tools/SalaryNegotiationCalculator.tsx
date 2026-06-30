@@ -178,31 +178,6 @@ const L: Record<Locale, {
     pct: "%",
     note: "* 月稅後薪資為韓國簡易所得稅及保險費概算。",
   },
-  cn: {
-    title: "薪资谈判模拟器",
-    subtitle: "情境别加薪计算器",
-    currentSalary: "当前年薪（万韩元）",
-    desiredRate: "期望加薪率（%）",
-    calcBtn: "模拟",
-    resetBtn: "重置",
-    scenario: "情境",
-    optimistic: "乐观",
-    moderate: "中间",
-    conservative: "保守",
-    afterSalary: "谈判后年薪",
-    monthly: "月税前薪资",
-    netMonthly: "月税后薪资",
-    increase: "加薪金额",
-    tipsTitle: "谈判成功技巧",
-    tips: [
-      "事先调查市场平均薪资数据，以数据支撑你的请求。",
-      "用具体数字量化你的成就与贡献，提升谈判筹码。",
-      "运用锚定策略——先提出比目标高10~15%的数字，留下谈判空间。",
-    ],
-    won: "万韩元",
-    pct: "%",
-    note: "* 月税后薪资为韩国简易所得税及保险费概算。",
-  },
 };
 
 function calcNetMonthly(annualWon: number): number {

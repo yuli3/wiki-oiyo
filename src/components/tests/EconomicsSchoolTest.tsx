@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
+type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 type School = 'keynesian' | 'classical' | 'behavioral' | 'austrian' | 'institutional'
 
 const LABELS: Record<Locale, {
@@ -35,7 +35,6 @@ const LABELS: Record<Locale, {
   fr: { title: 'Test d\'École de Pensée Économique', subtitle: 'À quelle école économique appartenez-vous ? 12 questions', start: 'Commencer', restart: 'Recommencer', yourSchool: 'Votre École Économique', traitLabel: 'Tendances fondamentales', keyThinkers: 'Penseurs clés', policyLabel: 'Position politique', note: 'Ce test est à des fins éducatives.', progress: (c, t) => `${c} / ${t}` },
   es: { title: 'Test de Escuela de Pensamiento Económico', subtitle: '¿A qué escuela económica perteneces? 12 preguntas', start: 'Comenzar', restart: 'Repetir', yourSchool: 'Tu Escuela Económica', traitLabel: 'Tendencias fundamentales', keyThinkers: 'Pensadores clave', policyLabel: 'Postura política', note: 'Este test es para interés educativo.', progress: (c, t) => `${c} / ${t}` },
   zh: { title: '經濟學派傾向測試', subtitle: '你屬於哪個經濟學派？12個問題來了解', start: '開始', restart: '重新測試', yourSchool: '你的經濟學派', traitLabel: '核心傾向', keyThinkers: '代表學者', policyLabel: '政策立場', note: '此測試僅供教育興趣。', progress: (c, t) => `${c} / ${t}` },
-  cn: { title: '经济学派倾向测试', subtitle: '你属于哪个经济学派？12个问题来了解', start: '开始', restart: '重新测试', yourSchool: '你的经济学派', traitLabel: '核心倾向', keyThinkers: '代表学者', policyLabel: '政策立场', note: '此测试仅供教育兴趣。', progress: (c, t) => `${c} / ${t}` },
 }
 
 interface SchoolData {
@@ -156,20 +155,6 @@ const QUESTIONS: Record<Locale, Question[]> = {
     { id: 'q10', text: '關於福利國家？', options: [{ value: 'keynesian', label: '作為自動穩定器必不可少，減少經濟波動' }, { value: 'classical', label: '過度福利降低勞動積極性，增加財政負擔' }, { value: 'institutional', label: '有必要減少不平等，提供社會安全網' }, { value: 'behavioral', label: '福利計劃的設計是真正行為改變的關鍵' }] },
     { id: 'q11', text: '你對國家債務的立場？', options: [{ value: 'keynesian', label: '在衰退期間，借貸是刺激經濟的正當之舉' }, { value: 'classical', label: '長期平衡預算使經濟保持健康' }, { value: 'austrian', label: '國家債務將稅收負擔轉移給未來世代' }, { value: 'institutional', label: '債務的用途和結構與規模一樣重要' }] },
     { id: 'q12', text: '關於技術取代工作？', options: [{ value: 'classical', label: '長期內新產業和就業機會出現，恢復平衡' }, { value: 'keynesian', label: '短期失業需要再培訓和社會支持' }, { value: 'behavioral', label: '過渡期人們並不總是做出理性選擇；需要政策設計' }, { value: 'institutional', label: '需要制度改革來分配技術進步的好處' }] },
-  ],
-  cn: [
-    { id: 'q1', text: '经济衰退时，政府的角色是什么？', options: [{ value: 'keynesian', label: '增加支出并积极刺激经济' }, { value: 'classical', label: '最小化干预，让市场自我修正' }, { value: 'austrian', label: '政府干预本身会使问题恶化；退出' }, { value: 'institutional', label: '改革制度和法规以解决结构性问题' }] },
-    { id: 'q2', text: '人们如何做出经济决策？', options: [{ value: 'classical', label: '在有足够信息的情况下理性判断' }, { value: 'behavioral', label: '因心理偏见和情绪而常常做出非理性选择' }, { value: 'institutional', label: '受制度和社会规范的大力约束' }, { value: 'keynesian', label: '因未来不确定性而减少消费和投资' }] },
-    { id: 'q3', text: '如何解决收入不平等问题？', options: [{ value: 'keynesian', label: '累进税和扩大福利支出进行再分配' }, { value: 'classical', label: '自由市场和增长从长远看能缩小不平等' }, { value: 'behavioral', label: '通过推动政策鼓励低收入群体储蓄和投资' }, { value: 'institutional', label: '解决教育和机会方面的制度性不平等' }] },
-    { id: 'q4', text: '关于中央银行的角色？', options: [{ value: 'keynesian', label: '货币政策应维持就业并管理经济' }, { value: 'classical', label: '价格稳定和可预测的货币供应规则是关键' }, { value: 'austrian', label: '中央银行是扭曲经济周期的原因' }, { value: 'behavioral', label: '管理公众预期是核心功能' }] },
-    { id: 'q5', text: '你对自由贸易的立场？', options: [{ value: 'classical', label: '自由贸易通过比较优势让所有人受益' }, { value: 'keynesian', label: '短期内可能需要一些保护措施来保护就业' }, { value: 'institutional', label: '发达国家有结构性优势；有时需要保护' }, { value: 'austrian', label: '贸易应完全自由；关税对所有人有害' }] },
-    { id: 'q6', text: '关于环境和经济的关系？', options: [{ value: 'institutional', label: '市场在这里失败；需要强有力的环境法规' }, { value: 'behavioral', label: '碳税+推动措施改变行为' }, { value: 'classical', label: '碳税等价格信号可以内部化外部性' }, { value: 'austrian', label: '清晰的产权让市场能解决环境问题' }] },
-    { id: 'q7', text: '关于提高最低工资？', options: [{ value: 'keynesian', label: '促进总需求，可能有积极的经济影响' }, { value: 'classical', label: '减少就业，可能伤害低收入工人' }, { value: 'behavioral', label: '效果因情况而异；需要分析企业行为模式' }, { value: 'institutional', label: '有必要纠正劳动力市场的权力不平衡' }] },
-    { id: 'q8', text: '关于企业垄断？', options: [{ value: 'classical', label: '市场进入从长远看将打破垄断' }, { value: 'keynesian', label: '垄断制造低效和不平等；需要监管' }, { value: 'institutional', label: '垄断源于制度性特权；需要监管改革' }, { value: 'austrian', label: '政府法规创造垄断；减少法规' }] },
-    { id: 'q9', text: '关于经济预测模型？', options: [{ value: 'classical', label: '数学模型可以合理预测经济行为' }, { value: 'behavioral', label: '人类的非理性限制了传统模型' }, { value: 'austrian', label: '经济太复杂，无法进行集中预测' }, { value: 'institutional', label: '没有历史和制度背景的模型没有意义' }] },
-    { id: 'q10', text: '关于福利国家？', options: [{ value: 'keynesian', label: '作为自动稳定器必不可少，减少经济波动' }, { value: 'classical', label: '过度福利降低劳动积极性，增加财政负担' }, { value: 'institutional', label: '有必要减少不平等，提供社会安全网' }, { value: 'behavioral', label: '福利计划的设计是真正行为改变的关键' }] },
-    { id: 'q11', text: '你对国家债务的立场？', options: [{ value: 'keynesian', label: '在衰退期间，借贷是刺激经济的正当之举' }, { value: 'classical', label: '长期平衡预算使经济保持健康' }, { value: 'austrian', label: '国家债务将税收负担转移给未来世代' }, { value: 'institutional', label: '债务的用途和结构与规模一样重要' }] },
-    { id: 'q12', text: '关于技术取代工作？', options: [{ value: 'classical', label: '长期内新产业和就业机会出现，恢复平衡' }, { value: 'keynesian', label: '短期失业需要再培训和社会支持' }, { value: 'behavioral', label: '过渡期人们并不总是做出理性选择；需要政策设计' }, { value: 'institutional', label: '需要制度改革来分配技术进步的好处' }] },
   ],
 }
 

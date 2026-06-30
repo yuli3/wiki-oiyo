@@ -93,18 +93,6 @@ const L: Record<Locale, Labels> = {
     maxReached: "最多可新增10個事件。",
     namePlaceholder: "例：生日、考試、旅遊...",
   },
-  cn: {
-    title: "倒计时计数器",
-    addEvent: "添加事件",
-    eventName: "事件名称",
-    eventDate: "目标日期",
-    addBtn: "添加",
-    empty: "暂无倒计时事件",
-    deleteBtn: "删除",
-    today: "就是今天！",
-    maxReached: "最多可添加10个事件。",
-    namePlaceholder: "例：生日、考试、旅行...",
-  },
 };
 
 const STORAGE_KEY = "dday-counter-events";

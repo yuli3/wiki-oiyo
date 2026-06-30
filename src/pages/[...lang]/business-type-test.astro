@@ -8,6 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
-const names: Record<Locale, string> = { ko: "Business Type Test", en: "Business Type Test", ja: "Business Type Test", fr: "Business Type Test", es: "Business Type Test", zh: "Business Type Test", cn: "Business Type Test" };
+const names: Record<Locale, string> = { ko: "Business Type Test", en: "Business Type Test", ja: "Business Type Test", fr: "Business Type Test", es: "Business Type Test", zh: "Business Type Test" };
 ---
 <OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/business-type-test/" kind="test" />

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
-type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
+type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
 const L: Record<Locale, {
   title: string; subtitle: string;
@@ -135,26 +135,6 @@ const L: Record<Locale, {
     disclaimer: '本計算機假設典型週期進行預測，不應用於醫療目的。',
     daysUntil: '天後', daysAgo: '天前', daysAway: '天',
   },
-  cn: {
-    title: '月经周期计算器', subtitle: '预测下次月经日、排卵日和受孕窗口期',
-    lastPeriodLabel: '最后一次月经开始日期', cycleLengthLabel: '平均周期长度（天）', periodDurationLabel: '月经持续天数',
-    calcBtn: '计算', resetBtn: '重置',
-    nextPeriod: '下次月经预计日期', ovulationDay: '排卵预计日期', fertileWindow: '受孕窗口期', lutealPhase: '黄体期',
-    next3Cycles: '未来3个周期预测',
-    cycleLabel: '周期',
-    days: '天', daysUnit: '天',
-    phaseFollicular: '卵泡期', phaseOvulation: '排卵期', phaseLuteal: '黄体期',
-    today: '今天', todayIs: '今天是',
-    tipTitle: '健康提示',
-    tips: [
-      '正常月经周期范围为21至35天。',
-      '排卵通常在周期第14天左右发生，但因人而异。',
-      '受孕窗口期从排卵前5天延伸到排卵当天。',
-      '如果周期不规律或疼痛严重，请咨询医疗专业人员。',
-    ],
-    disclaimer: '本计算器假设典型周期进行预测，不应用于医疗目的。',
-    daysUntil: '天后', daysAgo: '天前', daysAway: '天',
-  },
 };
 
 function addDays(date: Date, days: number): Date {
@@ -170,7 +150,7 @@ function diffDays(a: Date, b: Date): number {
 function formatDate(date: Date, locale: Locale): string {
   const opts: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   const localeMap: Record<Locale, string> = {
-    ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', fr: 'fr-FR', es: 'es-ES', zh: 'zh-TW', cn: 'zh-CN',
+    ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', fr: 'fr-FR', es: 'es-ES', zh: 'zh-TW',
   };
   return date.toLocaleDateString(localeMap[locale], opts);
 }
@@ -178,7 +158,7 @@ function formatDate(date: Date, locale: Locale): string {
 function formatShort(date: Date, locale: Locale): string {
   const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
   const localeMap: Record<Locale, string> = {
-    ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', fr: 'fr-FR', es: 'es-ES', zh: 'zh-TW', cn: 'zh-CN',
+    ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', fr: 'fr-FR', es: 'es-ES', zh: 'zh-TW',
   };
   return date.toLocaleDateString(localeMap[locale], opts);
 }
@@ -289,9 +269,9 @@ export default function MenstrualCycleCalculator({ locale = 'ko' }: { locale?: L
     const effectiveDay = ((dayOfCycle % cycleLength) + cycleLength) % cycleLength;
     const ovDay = cycleLength - 14;
 
-    if (effectiveDay < periodDuration) return { phase: 'menstrual', day: effectiveDay + 1, color: 'text-red-600', bg: 'bg-red-50', label: locale === 'ko' ? '생리 중' : locale === 'ja' ? '生理中' : locale === 'fr' ? 'Règles' : locale === 'es' ? 'Menstruación' : locale === 'zh' ? '月經中' : locale === 'cn' ? '月经中' : 'Menstrual' };
+    if (effectiveDay < periodDuration) return { phase: 'menstrual', day: effectiveDay + 1, color: 'text-red-600', bg: 'bg-red-50', label: locale === 'ko' ? '생리 중' : locale === 'ja' ? '生理中' : locale === 'fr' ? 'Règles' : locale === 'es' ? 'Menstruación' : locale === 'zh' ? '月经中' : 'Menstrual' };
     if (effectiveDay < ovDay - 5) return { phase: 'follicular', day: effectiveDay + 1, color: 'text-blue-600', bg: 'bg-blue-50', label: t.phaseFollicular };
-    if (effectiveDay >= ovDay - 5 && effectiveDay <= ovDay) return { phase: 'fertile', day: effectiveDay + 1, color: 'text-pink-600', bg: 'bg-pink-50', label: locale === 'ko' ? '가임기' : locale === 'ja' ? '妊娠可能期' : locale === 'fr' ? 'Période fertile' : locale === 'es' ? 'Período fértil' : locale === 'zh' ? '受孕期' : locale === 'cn' ? '受孕期' : 'Fertile' };
+    if (effectiveDay >= ovDay - 5 && effectiveDay <= ovDay) return { phase: 'fertile', day: effectiveDay + 1, color: 'text-pink-600', bg: 'bg-pink-50', label: locale === 'ko' ? '가임기' : locale === 'ja' ? '妊娠可能期' : locale === 'fr' ? 'Période fertile' : locale === 'es' ? 'Período fértil' : locale === 'zh' ? '受孕期' : 'Fertile' };
     return { phase: 'luteal', day: effectiveDay + 1, color: 'text-violet-600', bg: 'bg-violet-50', label: t.phaseLuteal };
   }, [result, lastPeriodStr, cycleLength, periodDuration, today, locale]);
 
@@ -405,7 +385,7 @@ export default function MenstrualCycleCalculator({ locale = 'ko' }: { locale?: L
           {/* Cycle phases visual */}
           <div className="bg-white rounded-2xl border border-gray-200 p-4">
             <h2 className="text-sm font-semibold text-gray-700 mb-3">
-              {locale === 'ko' ? '주기 단계' : locale === 'ja' ? '周期の段階' : locale === 'fr' ? 'Phases du cycle' : locale === 'es' ? 'Fases del ciclo' : locale === 'zh' ? '週期階段' : locale === 'cn' ? '周期阶段' : 'Cycle Phases'}
+              {locale === 'ko' ? '주기 단계' : locale === 'ja' ? '周期の段階' : locale === 'fr' ? 'Phases du cycle' : locale === 'es' ? 'Fases del ciclo' : locale === 'zh' ? '周期阶段' : 'Cycle Phases'}
             </h2>
             <div className="flex h-6 rounded-full overflow-hidden">
               {/* menstrual */}

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
+type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 
 type FactionKey = 'dongin' | 'seoin' | 'namin' | 'bukin' | 'noron' | 'soron'
 
@@ -95,7 +95,6 @@ const LABELS: Record<Locale, {
     progress: (c, t) => `${c} / ${t}`,
   },
   zh: { title: '朝鮮王朝派系測試', subtitle: '如果你是朝鮮官員，你會屬於哪個派系？', start: '開始測試', restart: '重新測試', result: '你的派系', share: '分享結果', yourFaction: '你是', traitLabel: '核心特質', descLabel: '描述', histLabel: '歷史背景', note: '此測試僅供歷史興趣之用。', progress: (c, t) => `${c} / ${t}` },
-  cn: { title: '朝鲜王朝派系测试', subtitle: '如果你是朝鲜官员，你会属于哪个派系？', start: '开始测试', restart: '重新测试', result: '你的派系', share: '分享结果', yourFaction: '你是', traitLabel: '核心特质', descLabel: '描述', histLabel: '历史背景', note: '此测试仅供历史兴趣之用。', progress: (c, t) => `${c} / ${t}` },
 }
 
 const FACTIONS: Record<FactionKey, {
@@ -188,16 +187,6 @@ const QUESTIONS: Record<Locale, Question[]> = {
     { id: 'q6', text: '我對朋友和同事的態度是？', options: [{ value: 'namin', label: '努力與所有人相處融洽。' }, { value: 'dongin', label: '與價值觀相同的人深交。' }, { value: 'bukin', label: '重視能共同創造變化的夥伴。' }, { value: 'seoin', label: '偏好互利互惠的關係。' }] },
     { id: 'q7', text: '歷史上更重要的是？', options: [{ value: 'dongin', label: '堅守道德原則的人。' }, { value: 'bukin', label: '改變時代的改革者。' }, { value: 'noron', label: '穩定引領社會的領導者。' }, { value: 'soron', label: '實踐新思想與包容的人。' }] },
     { id: 'q8', text: '變革與傳統哪個更重要？', options: [{ value: 'noron', label: '經過驗證的傳統是社會基礎。' }, { value: 'bukin', label: '沒有變化就沒有進步。' }, { value: 'namin', label: '需要傳統與變革的均衡。' }, { value: 'soron', label: '應根據情況靈活選擇。' }] },
-  ],
-  cn: [
-    { id: 'q1', text: '在团队项目中出现意见冲突时，我？', options: [{ value: 'dongin', label: '坚守原则。妥协之后再说。' }, { value: 'seoin', label: '找到有效方案快速解决。' }, { value: 'namin', label: '理解双方并找到中间立场。' }, { value: 'bukin', label: '大胆提出新方向。' }] },
-    { id: 'q2', text: '面临重要决策时，我？', options: [{ value: 'noron', label: '遵循已验证的方法。' }, { value: 'soron', label: '听取各种意见灵活决策。' }, { value: 'dongin', label: '选择与信念一致的方向。' }, { value: 'bukin', label: '看结果大胆选择。' }] },
-    { id: 'q3', text: '我的学习/工作风格是？', options: [{ value: 'dongin', label: '喜欢深入钻研一个领域。' }, { value: 'seoin', label: '建立系统高效推进。' }, { value: 'soron', label: '跨越各个领域探索新事物。' }, { value: 'namin', label: '以均衡视角看待全局。' }] },
-    { id: 'q4', text: '面对不公正情况时？', options: [{ value: 'dongin', label: '按规则提出问题。' }, { value: 'bukin', label: '立即行动创造变化。' }, { value: 'noron', label: '在现有制度内寻找解决方案。' }, { value: 'namin', label: '减少冲突渐进式推动变化。' }] },
-    { id: 'q5', text: '我理想中的社会/组织是？', options: [{ value: 'dongin', label: '道德与原则主导的地方。' }, { value: 'seoin', label: '有高效有序系统的地方。' }, { value: 'soron', label: '认可多元性并接受变化的地方。' }, { value: 'noron', label: '维护传统与稳定值得信赖的地方。' }] },
-    { id: 'q6', text: '我对朋友和同事的态度是？', options: [{ value: 'namin', label: '努力与所有人相处融洽。' }, { value: 'dongin', label: '与价值观相同的人深交。' }, { value: 'bukin', label: '重视能共同创造变化的伙伴。' }, { value: 'seoin', label: '偏好互利互惠的关系。' }] },
-    { id: 'q7', text: '历史上更重要的是？', options: [{ value: 'dongin', label: '坚守道德原则的人。' }, { value: 'bukin', label: '改变时代的改革者。' }, { value: 'noron', label: '稳定引领社会的领导者。' }, { value: 'soron', label: '实践新思想与包容的人。' }] },
-    { id: 'q8', text: '变革与传统哪个更重要？', options: [{ value: 'noron', label: '经过验证的传统是社会基础。' }, { value: 'bukin', label: '没有变化就没有进步。' }, { value: 'namin', label: '需要传统与变革的均衡。' }, { value: 'soron', label: '应根据情况灵活选择。' }] },
   ],
 }
 

@@ -117,22 +117,6 @@ const L: Record<Locale, Labels> = {
     seconds: "秒",
     spaceHint: "空白鍵：開始 / 暫停",
   },
-  cn: {
-    title: "计时器",
-    tabStopwatch: "秒表",
-    tabCountdown: "倒计时",
-    start: "开始",
-    pause: "暂停",
-    reset: "重置",
-    lap: "计次",
-    lapNum: "圈",
-    lapTime: "圈速",
-    totalTime: "总计",
-    hours: "时",
-    minutes: "分",
-    seconds: "秒",
-    spaceHint: "空格键：开始 / 暂停",
-  },
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

@@ -8,6 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
-const names: Record<Locale, string> = { ko: "Self Compassion Test", en: "Self Compassion Test", ja: "Self Compassion Test", fr: "Self Compassion Test", es: "Self Compassion Test", zh: "Self Compassion Test", cn: "Self Compassion Test" };
+const names: Record<Locale, string> = { ko: "Self Compassion Test", en: "Self Compassion Test", ja: "Self Compassion Test", fr: "Self Compassion Test", es: "Self Compassion Test", zh: "Self Compassion Test" };
 ---
 <OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/self-compassion-test/" kind="test" />

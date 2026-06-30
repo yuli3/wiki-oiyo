@@ -155,27 +155,6 @@ const LABELS: Record<Locale, Labels> = {
     reset: "重置",
     disclaimer: "本計算器僅供參考，實際收益可能因市場狀況而異。",
   },
-  cn: {
-    title: "重建盈利计算器",
-    subtitle: "Reconstruction Profit Calculator",
-    currentPrice: "当前公寓价格（万韩元）",
-    afterPrice: "重建后预期价格（万韩元）",
-    contribution: "额外分担金（万韩元）",
-    holdingYears: "持有期间（年）",
-    completionYears: "重建完成所需年数",
-    totalInvestment: "总投资金额",
-    netProfit: "净利润",
-    roi: "投资回报率",
-    annualReturn: "年均回报率",
-    grade: "盈利等级",
-    gradeExcellent: "非常好",
-    gradeGood: "好",
-    gradeFair: "一般",
-    gradePoor: "差",
-    unit: "万韩元",
-    reset: "重置",
-    disclaimer: "本计算器仅供参考，实际收益可能因市场情况而有所不同。",
-  },
 };
 
 function fmtMan(n: number) {

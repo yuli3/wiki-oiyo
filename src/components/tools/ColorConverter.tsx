@@ -154,12 +154,6 @@ const UI: Record<Locale, {
     copy: "複製", copied: "已複製", sliders: "RGB 滑桿",
     recent: "最近顏色", nearest: "CSS 名稱", noRecent: "無最近顏色",
   },
-  cn: {
-    title: "颜色转换器", subtitle: "HEX · RGB · HSL · HSV · CMYK",
-    hex: "HEX", rgb: "RGB", hsl: "HSL", hsv: "HSV", cmyk: "CMYK",
-    copy: "复制", copied: "已复制", sliders: "RGB 滑块",
-    recent: "最近颜色", nearest: "CSS 名称", noRecent: "无最近颜色",
-  },
 };
 
 // ─── Component ───────────────────────────────────────────────────────────────

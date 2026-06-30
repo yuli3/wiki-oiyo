@@ -16,7 +16,7 @@ const blog = defineCollection({
     series: z.string().optional(),
     chapter: z.coerce.number().int().positive().optional(),
     chapterTitleShort: z.string().max(80).optional(),
-    locale: z.enum(['en', 'ko', 'ja', 'fr', 'es', 'zh', 'cn']).optional(),
+    locale: z.enum(['en', 'ko', 'ja', 'fr', 'es', 'zh']).optional(),
     market: z.enum(["KR", "US", "JP", "GLOBAL", "EU", "LATAM", "CN", "TW"]).optional(),
     audienceMarket: z.enum(["KR", "US", "JP", "GLOBAL", "EU", "LATAM", "CN", "TW"]).optional(),
     contentScope: z.enum(["global", "local", "regional"]).optional(),

@@ -136,21 +136,6 @@ const i18n: Record<Locale, {
     ms: "毫秒",
     sec: "秒",
   },
-  cn: {
-    title: "瞄准训练器",
-    desc: "在30秒内尽可能快速准确地点击圆圈。随着时间推移，目标会变小。",
-    start: "开始游戏",
-    timeLeft: "剩余时间",
-    hits: "命中",
-    misses: "失误",
-    accuracy: "准确率",
-    avgReaction: "平均反应时间",
-    grade: "等级",
-    restart: "再玩一次",
-    result: "结果",
-    ms: "毫秒",
-    sec: "秒",
-  },
 };
 
 function getGrade(accuracy: number): string {

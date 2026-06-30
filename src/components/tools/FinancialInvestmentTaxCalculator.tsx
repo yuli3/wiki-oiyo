@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
-type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
+type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
 // Korean Financial Investment Income Tax (금융투자소득세)
 // Rates: domestic stocks/funds: 20% up to ₩300M, 25% above
@@ -201,36 +201,6 @@ const L: Record<Locale, {
     note: '本計算機僅供參考。實際納稅額請諮詢稅務專業人士。',
     wonUnit: '萬韓元',
     zeroTax: '在基本扣除範圍內 — 無需納稅',
-  },
-  cn: {
-    title: '韩国金融投资所得税计算器',
-    subtitle: '금투세（金融投资所得税）试算',
-    domesticGain: '国内股票·基金收益（万韩元）',
-    foreignGain: '海外股票·ETF收益（万韩元）',
-    otherGain: '债券·衍生品收益（万韩元）',
-    domesticLoss: '国内损失（万韩元）',
-    foreignLoss: '海外损失（万韩元）',
-    carryForward: '亏损结转（万韩元）',
-    calc: '计算税金',
-    reset: '重置',
-    totalGain: '总收益',
-    totalLoss: '总损失',
-    netGain: '净收益',
-    deduction: '基本扣除',
-    taxableIncome: '应税所得',
-    taxAmount: '应缴税额',
-    effectiveRate: '实际税率',
-    breakdown: '税率级距',
-    domesticLabel: '国内（股票·ETF·基金）',
-    foreignLabel: '海外（股票·ETF）',
-    otherLabel: '债券·衍生品',
-    tier1: '3亿韩元以下（20%）',
-    tier2: '3亿韩元以上（25%）',
-    tip: '💡 节税策略',
-    tipText: '有亏损时在同年实现以抵消收益。最大限度利用基本扣除（国内5千万、其他250万）。',
-    note: '本计算器仅供参考。实际纳税额请咨询税务专业人士。',
-    wonUnit: '万韩元',
-    zeroTax: '在基本扣除范围内 — 无需纳税',
   },
 };
 

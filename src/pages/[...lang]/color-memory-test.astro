@@ -8,6 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
-const names: Record<Locale, string> = { ko: "Color Memory Test", en: "Color Memory Test", ja: "Color Memory Test", fr: "Color Memory Test", es: "Color Memory Test", zh: "Color Memory Test", cn: "Color Memory Test" };
+const names: Record<Locale, string> = { ko: "Color Memory Test", en: "Color Memory Test", ja: "Color Memory Test", fr: "Color Memory Test", es: "Color Memory Test", zh: "Color Memory Test" };
 ---
 <OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/color-memory-test/" kind="test" />

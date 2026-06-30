@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
+type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 
 const LABELS: Record<Locale, {
   title: string; subtitle: string; start: string; restart: string
@@ -15,7 +15,6 @@ const LABELS: Record<Locale, {
   fr: { title: 'Jeu d\'IQ Spatial', subtitle: 'Trouvez la règle du motif et choisissez la pièce manquante', start: 'Commencer', restart: 'Rejouer', correct: 'Correct ! ✓', wrong: 'Faux ✗', correctIs: 'Réponse :', score: 'Score', outOf: '/ 10', next: 'Suivant', results: (s) => s >= 9 ? 'QI Spatial de premier ordre 🏆' : s >= 7 ? 'Excellentes compétences spatiales 🌟' : s >= 5 ? 'Au-dessus de la moyenne 📊' : 'Continuez à pratiquer 💪', instruction: 'Choisissez la forme qui appartient à la case ?', progress: (c, t) => `${c} / ${t}` },
   es: { title: 'Juego de IQ Espacial', subtitle: 'Encuentra la regla del patrón y elige la pieza que falta', start: 'Comenzar', restart: 'Jugar de nuevo', correct: '¡Correcto! ✓', wrong: 'Incorrecto ✗', correctIs: 'Respuesta:', score: 'Puntuación', outOf: '/ 10', next: 'Siguiente', results: (s) => s >= 9 ? 'IQ Espacial de primer nivel 🏆' : s >= 7 ? 'Excelentes habilidades espaciales 🌟' : s >= 5 ? 'Por encima del promedio 📊' : 'Sigue practicando 💪', instruction: 'Elige la forma que corresponde al lugar ?', progress: (c, t) => `${c} / ${t}` },
   zh: { title: '空間IQ遊戲', subtitle: '找出圖案規律並選擇缺失的部分', start: '開始', restart: '再玩一次', correct: '正確！✓', wrong: '錯誤 ✗', correctIs: '答案：', score: '分數', outOf: '/ 10', next: '下一題', results: (s) => s >= 9 ? '頂級空間IQ 🏆' : s >= 7 ? '空間能力優秀 🌟' : s >= 5 ? '高於平均 📊' : '繼續練習 💪', instruction: '選擇應填入?位置的圖形', progress: (c, t) => `${c} / ${t}` },
-  cn: { title: '空间IQ游戏', subtitle: '找出图案规律并选择缺失的部分', start: '开始', restart: '再玩一次', correct: '正确！✓', wrong: '错误 ✗', correctIs: '答案：', score: '分数', outOf: '/ 10', next: '下一题', results: (s) => s >= 9 ? '顶级空间IQ 🏆' : s >= 7 ? '空间能力优秀 🌟' : s >= 5 ? '高于平均 📊' : '继续练习 💪', instruction: '选择应填入?位置的图形', progress: (c, t) => `${c} / ${t}` },
 }
 
 // Emoji-based pattern puzzles: 3x3 grid with bottom-right missing

@@ -482,22 +482,6 @@ const LABELS: Record<L, Labels> = {
     catSymbols: "符號",
     catRecent: "最近使用",
   },
-  cn: {
-    title: "表情符号选择器",
-    subtitle: "复制表情符号到剪贴板",
-    search: "按名称或关键字搜索...",
-    copied: "已复制!",
-    noResults: "无搜索结果",
-    recentEmpty: "最近没有使用过的表情符号",
-    catSmileys: "笑脸和情感",
-    catAnimals: "动物和自然",
-    catFood: "食物和饮料",
-    catActivities: "活动",
-    catTravel: "旅游和地点",
-    catObjects: "物品",
-    catSymbols: "符号",
-    catRecent: "最近使用",
-  },
 };
 
 const CAT_LABEL_KEYS: Record<CategoryKey, keyof Labels> = {

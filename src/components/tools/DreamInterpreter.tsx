@@ -192,30 +192,6 @@ const UI: Record<
       emotions: "情感",
     },
   },
-  cn: {
-    title: "梦境解析器",
-    subtitle: "选择梦中出现的符号，揭示其隐藏含义",
-    selectPrompt: "选择梦境关键词（最多5个）",
-    interpretBtn: "解析梦境",
-    clearBtn: "重置",
-    selectedLabel: "已选关键词",
-    meaningLabel: "符号含义",
-    positiveLabel: "正面解读",
-    negativeLabel: "需注意",
-    adviceLabel: "建议",
-    noSelection: "请至少选择一个梦境关键词",
-    maxReached: "最多可选择5个关键词",
-    categoryLabels: {
-      nature: "自然",
-      body: "身体",
-      animals: "动物",
-      people: "人物",
-      places: "地点",
-      actions: "行动",
-      objects: "物品",
-      emotions: "情感",
-    },
-  },
 };
 
 // ─── Dream Symbol Database ────────────────────────────────────────────────────
@@ -226,7 +202,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "water",
     emoji: "💧",
     category: "nature",
-    name: { ko: "물", en: "Water", ja: "水", fr: "Eau", es: "Agua", zh: "水", cn: "水" },
+    name: { ko: "물", en: "Water", ja: "水", fr: "Eau", es: "Agua", zh: "水" },
     meaning: {
       ko: "감정, 무의식, 변화의 흐름을 상징합니다.",
       en: "Symbolizes emotions, the unconscious, and the flow of change.",
@@ -234,7 +210,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise les émotions, l'inconscient et le flux du changement.",
       es: "Simboliza las emociones, el inconsciente y el flujo del cambio.",
       zh: "象徵情感、潛意識與變化的流動。",
-      cn: "象征情感、潜意识与变化的流动。",
     },
     positive: {
       ko: "맑은 물은 정화, 새로운 시작, 내면의 평화를 의미합니다.",
@@ -243,7 +218,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "L'eau claire signifie purification, nouveaux départs et paix intérieure.",
       es: "El agua clara significa purificación, nuevos comienzos y paz interior.",
       zh: "清澈的水意味著淨化、新的開始和內心平靜。",
-      cn: "清澈的水意味着净化、新的开始和内心平静。",
     },
     negative: {
       ko: "탁하거나 범람하는 물은 압도당하는 감정이나 억압된 두려움을 나타낼 수 있습니다.",
@@ -252,7 +226,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une eau trouble ou inondante peut signaler des émotions écrasantes ou des peurs refoulées.",
       es: "El agua turbia o inundada puede señalar emociones abrumadoras o miedos reprimidos.",
       zh: "渾濁或氾濫的水可能暗示情感崩潰或被壓抑的恐懼。",
-      cn: "浑浊或泛滥的水可能暗示情感崩溃或被压抑的恐惧。",
     },
     advice: {
       ko: "현재 억누르고 있는 감정이 있다면 솔직하게 표현해보세요.",
@@ -261,14 +234,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si vous réfrimez des émotions, essayez de les exprimer honnêtement.",
       es: "Si estás reprimiendo emociones, intenta expresarlas honestamente.",
       zh: "如果你正在壓抑情感，試著誠實地表達它們。",
-      cn: "如果你正在压抑情感，试着诚实地表达它们。",
     },
   },
   {
     id: "fire",
     emoji: "🔥",
     category: "nature",
-    name: { ko: "불", en: "Fire", ja: "火", fr: "Feu", es: "Fuego", zh: "火", cn: "火" },
+    name: { ko: "불", en: "Fire", ja: "火", fr: "Feu", es: "Fuego", zh: "火" },
     meaning: {
       ko: "열정, 변혁, 에너지, 파괴와 재생을 상징합니다.",
       en: "Symbolizes passion, transformation, energy, destruction and rebirth.",
@@ -276,7 +248,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la passion, la transformation, l'énergie, la destruction et la renaissance.",
       es: "Simboliza pasión, transformación, energía, destrucción y renacimiento.",
       zh: "象徵熱情、轉化、能量、破壞與重生。",
-      cn: "象征热情、转化、能量、破坏与重生。",
     },
     positive: {
       ko: "활활 타오르는 불은 내면의 열정과 강력한 창조 에너지를 의미합니다.",
@@ -285,7 +256,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un feu ardent signifie passion intérieure et puissante énergie créatrice.",
       es: "Un fuego ardiente significa pasión interior y poderosa energía creativa.",
       zh: "熊熊烈火象徵內在熱情和強大的創造能量。",
-      cn: "熊熊烈火象征内在热情和强大的创造能量。",
     },
     negative: {
       ko: "통제할 수 없는 불은 분노, 충동적 결정, 혹은 번아웃의 경고일 수 있습니다.",
@@ -294,7 +264,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un feu incontrôlable peut avertir de la colère, de décisions impulsives ou d'un burnout.",
       es: "El fuego incontrolable puede advertir de ira, decisiones impulsivas o agotamiento.",
       zh: "無法控制的火可能是憤怒、衝動決策或職業倦怠的警示。",
-      cn: "无法控制的火可能是愤怒、冲动决策或职业倦怠的警示。",
     },
     advice: {
       ko: "열정을 건강하게 발산할 창구를 만드세요. 분노는 억누르기보다 표현하세요.",
@@ -303,14 +272,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Créez des exutoires sains pour votre passion. Exprimez la colère plutôt que de la réprimer.",
       es: "Crea salidas saludables para tu pasión. Expresa la ira en lugar de suprimirla.",
       zh: "為你的熱情創造健康的發洩管道。表達憤怒而非壓抑它。",
-      cn: "为你的热情创造健康的发泄管道。表达愤怒而非压抑它。",
     },
   },
   {
     id: "sky",
     emoji: "☁️",
     category: "nature",
-    name: { ko: "하늘", en: "Sky", ja: "空", fr: "Ciel", es: "Cielo", zh: "天空", cn: "天空" },
+    name: { ko: "하늘", en: "Sky", ja: "空", fr: "Ciel", es: "Cielo", zh: "天空" },
     meaning: {
       ko: "자유, 무한한 가능성, 영적 세계, 높은 이상을 상징합니다.",
       en: "Symbolizes freedom, infinite possibility, the spiritual realm, and lofty ideals.",
@@ -318,7 +286,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la liberté, les possibilités infinies, le domaine spirituel et les idéaux élevés.",
       es: "Simboliza libertad, posibilidades infinitas, el reino espiritual e ideales elevados.",
       zh: "象徵自由、無限可能性、精神世界與崇高理想。",
-      cn: "象征自由、无限可能性、精神世界与崇高理想。",
     },
     positive: {
       ko: "맑은 하늘은 명료한 사고, 낙관적 전망, 자유로운 표현을 의미합니다.",
@@ -327,7 +294,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un ciel clair signifie pensée claire, perspective optimiste et expression libre.",
       es: "Un cielo despejado significa pensamiento claro, perspectiva optimista y expresión libre.",
       zh: "晴朗的天空意味著清晰的思維、樂觀的前景和自由表達。",
-      cn: "晴朗的天空意味着清晰的思维、乐观的前景和自由表达。",
     },
     negative: {
       ko: "먹구름 낀 하늘은 불안, 앞길의 장애물, 억압감을 나타낼 수 있습니다.",
@@ -336,7 +302,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un ciel orageux peut indiquer de l'anxiété, des obstacles à venir ou un sentiment d'oppression.",
       es: "Un cielo tormentoso puede indicar ansiedad, obstáculos por delante o sentimientos de opresión.",
       zh: "烏雲密布的天空可能暗示焦慮、前路的障礙或壓迫感。",
-      cn: "乌云密布的天空可能暗示焦虑、前路的障碍或压迫感。",
     },
     advice: {
       ko: "시야를 넓히고 더 큰 그림을 보려는 노력을 기울여보세요.",
@@ -345,14 +310,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Essayez d'élargir votre perspective et de voir la vue d'ensemble.",
       es: "Intenta ampliar tu perspectiva y ver el panorama más amplio.",
       zh: "嘗試拓寬視野，著眼全局。",
-      cn: "尝试拓宽视野，着眼全局。",
     },
   },
   {
     id: "mountain",
     emoji: "⛰️",
     category: "nature",
-    name: { ko: "산", en: "Mountain", ja: "山", fr: "Montagne", es: "Montaña", zh: "山", cn: "山" },
+    name: { ko: "산", en: "Mountain", ja: "山", fr: "Montagne", es: "Montaña", zh: "山" },
     meaning: {
       ko: "도전, 성취, 장애물, 안정성을 상징합니다.",
       en: "Symbolizes challenge, achievement, obstacles, and stability.",
@@ -360,7 +324,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise le défi, l'accomplissement, les obstacles et la stabilité.",
       es: "Simboliza desafío, logro, obstáculos y estabilidad.",
       zh: "象徵挑戰、成就、障礙與穩定性。",
-      cn: "象征挑战、成就、障碍与稳定性。",
     },
     positive: {
       ko: "정상에 오르는 꿈은 목표 달성, 극복, 성장을 의미합니다.",
@@ -369,7 +332,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Atteindre le sommet signifie atteindre les objectifs, surmonter et grandir.",
       es: "Alcanzar la cima significa lograr objetivos, superar y crecer.",
       zh: "登上山頂意味著實現目標、克服困難與成長。",
-      cn: "登上山顶意味着实现目标、克服困难与成长。",
     },
     negative: {
       ko: "산을 오르지 못하거나 떨어지는 꿈은 과중한 부담이나 좌절감을 반영할 수 있습니다.",
@@ -378,7 +340,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Ne pas réussir à grimper ou tomber peut refléter un fardeau écrasant ou de la frustration.",
       es: "No poder escalar o caer puede reflejar cargas abrumadoras o frustración.",
       zh: "無法攀登或跌落可能反映沉重負擔或挫敗感。",
-      cn: "无法攀登或跌落可能反映沉重负担或挫败感。",
     },
     advice: {
       ko: "큰 목표를 작은 단계로 나눠 접근해보세요.",
@@ -387,14 +348,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Divisez les grands objectifs en petites étapes gérables.",
       es: "Divide los grandes objetivos en pasos pequeños y manejables.",
       zh: "將大目標分解為小步驟來逐步實現。",
-      cn: "将大目标分解为小步骤来逐步实现。",
     },
   },
   {
     id: "forest",
     emoji: "🌲",
     category: "nature",
-    name: { ko: "숲", en: "Forest", ja: "森", fr: "Forêt", es: "Bosque", zh: "森林", cn: "森林" },
+    name: { ko: "숲", en: "Forest", ja: "森", fr: "Forêt", es: "Bosque", zh: "森林" },
     meaning: {
       ko: "무의식, 미지의 세계, 탐구, 내면의 복잡성을 상징합니다.",
       en: "Symbolizes the unconscious, the unknown, exploration, and inner complexity.",
@@ -402,7 +362,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'inconscient, l'inconnu, l'exploration et la complexité intérieure.",
       es: "Simboliza el inconsciente, lo desconocido, la exploración y la complejidad interior.",
       zh: "象徵潛意識、未知世界、探索與內在的複雜性。",
-      cn: "象征潜意识、未知世界、探索与内在的复杂性。",
     },
     positive: {
       ko: "밝은 숲은 자기 발견의 여정, 풍부한 내면, 자연과의 연결을 나타냅니다.",
@@ -411,7 +370,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une forêt lumineuse représente un voyage de découverte de soi, une vie intérieure riche.",
       es: "Un bosque luminoso representa un viaje de autodescubrimiento y rica vida interior.",
       zh: "明亮的森林代表自我探索之旅、豐富的內在生活與自然連結。",
-      cn: "明亮的森林代表自我探索之旅、丰富的内在生活与自然连结。",
     },
     negative: {
       ko: "어둡고 길을 잃은 숲은 혼란, 방향 상실, 고립감을 반영할 수 있습니다.",
@@ -420,7 +378,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une forêt sombre et perdue peut refléter la confusion, la perte de direction ou l'isolement.",
       es: "Un bosque oscuro y perdido puede reflejar confusión, pérdida de dirección o aislamiento.",
       zh: "黑暗迷失的森林可能反映混亂、失去方向感或孤立感。",
-      cn: "黑暗迷失的森林可能反映混乱、失去方向感或孤立感。",
     },
     advice: {
       ko: "스스로를 탐구하는 시간을 가져보세요. 내면의 목소리에 귀 기울이세요.",
@@ -429,7 +386,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Prenez le temps de vous explorer. Écoutez votre voix intérieure.",
       es: "Tómate tiempo para explorarte. Escucha tu voz interior.",
       zh: "花時間探索自我，傾聽內心的聲音。",
-      cn: "花时间探索自我，倾听内心的声音。",
     },
   },
 
@@ -438,7 +394,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "teeth",
     emoji: "🦷",
     category: "body",
-    name: { ko: "이빨 / 치아", en: "Teeth", ja: "歯", fr: "Dents", es: "Dientes", zh: "牙齒", cn: "牙齿" },
+    name: { ko: "이빨 / 치아", en: "Teeth", ja: "歯", fr: "Dents", es: "Dientes", zh: "牙齒" },
     meaning: {
       ko: "자신감, 소통 능력, 외모, 힘, 나이 들어가는 것에 대한 두려움을 상징합니다.",
       en: "Symbolizes confidence, communication ability, appearance, power, and fear of aging.",
@@ -446,7 +402,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la confiance, la capacité de communication, l'apparence, le pouvoir et la peur du vieillissement.",
       es: "Simboliza confianza, capacidad de comunicación, apariencia, poder y miedo al envejecimiento.",
       zh: "象徵自信、溝通能力、外貌、力量與對衰老的恐懼。",
-      cn: "象征自信、沟通能力、外貌、力量与对衰老的恐惧。",
     },
     positive: {
       ko: "치아가 튼튼하고 깨끗한 꿈은 자신감과 표현력의 향상을 나타냅니다.",
@@ -455,7 +410,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Des dents fortes et propres indiquent une confiance et une expressivité croissantes.",
       es: "Dientes fuertes y limpios indican confianza y expresividad crecientes.",
       zh: "夢見牙齒堅固潔白代表自信心和表達能力提升。",
-      cn: "梦见牙齿坚固洁白代表自信心和表达能力提升。",
     },
     negative: {
       ko: "치아가 빠지거나 부러지는 꿈은 불안감, 자존감 하락, 통제력 상실의 신호일 수 있습니다.",
@@ -464,7 +418,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Des dents qui tombent ou se cassent peuvent signaler de l'anxiété, une baisse d'estime de soi.",
       es: "Dientes que caen o se rompen pueden señalar ansiedad, baja autoestima o pérdida de control.",
       zh: "牙齒脫落或破碎可能是焦慮、自尊心下降或失控的信號。",
-      cn: "牙齿脱落或破碎可能是焦虑、自尊心下降或失控的信号。",
     },
     advice: {
       ko: "자기 자신을 돌보고 자존감을 높이는 활동에 집중해보세요.",
@@ -473,14 +426,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Concentrez-vous sur des activités de soins personnels qui renforcent votre estime de soi.",
       es: "Concéntrate en actividades de autocuidado que fortalezcan tu autoestima.",
       zh: "專注於能提升自尊心的自我照顧活動。",
-      cn: "专注于能提升自尊心的自我照顾活动。",
     },
   },
   {
     id: "falling",
     emoji: "🌀",
     category: "body",
-    name: { ko: "추락 / 떨어짐", en: "Falling", ja: "落下", fr: "Chute", es: "Caída", zh: "墜落", cn: "坠落" },
+    name: { ko: "추락 / 떨어짐", en: "Falling", ja: "落下", fr: "Chute", es: "Caída", zh: "墜落" },
     meaning: {
       ko: "통제력 상실, 불안감, 실패에 대한 두려움, 과중한 부담을 상징합니다.",
       en: "Symbolizes loss of control, anxiety, fear of failure, and overwhelming burdens.",
@@ -488,7 +440,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la perte de contrôle, l'anxiété, la peur de l'échec et les fardeaux accablants.",
       es: "Simboliza pérdida de control, ansiedad, miedo al fracaso y cargas abrumadoras.",
       zh: "象徵失控、焦慮、對失敗的恐懼與沉重負擔。",
-      cn: "象征失控、焦虑、对失败的恐惧与沉重负担。",
     },
     positive: {
       ko: "추락하다가 날아오르는 꿈은 위기를 극복하고 자유로워지는 것을 의미합니다.",
@@ -497,7 +448,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Tomber puis s'envoler signifie surmonter une crise et gagner en liberté.",
       es: "Caer y luego volar significa superar la crisis y ganar libertad.",
       zh: "墜落後飛翔意味著克服危機並獲得自由。",
-      cn: "坠落后飞翔意味着克服危机并获得自由。",
     },
     negative: {
       ko: "반복적인 추락 꿈은 만성적인 불안이나 심리적 압박의 신호일 수 있습니다.",
@@ -506,7 +456,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Des rêves de chute récurrents peuvent signaler une anxiété chronique ou une pression psychologique.",
       es: "Los sueños recurrentes de caídas pueden señalar ansiedad crónica o presión psicológica.",
       zh: "反覆出現的墜落夢可能是慢性焦慮或心理壓力的信號。",
-      cn: "反复出现的坠落梦可能是慢性焦虑或心理压力的信号。",
     },
     advice: {
       ko: "현재 감당하기 힘든 스트레스 요인이 있다면 도움을 요청하는 것을 두려워하지 마세요.",
@@ -515,14 +464,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si vous êtes débordé, n'ayez pas peur de demander de l'aide.",
       es: "Si estás abrumado, no tengas miedo de pedir ayuda.",
       zh: "如果你不堪重負，不要害怕尋求幫助。",
-      cn: "如果你不堪重负，不要害怕寻求帮助。",
     },
   },
   {
     id: "flying",
     emoji: "🦅",
     category: "body",
-    name: { ko: "비행 / 날기", en: "Flying", ja: "飛ぶ", fr: "Voler", es: "Volar", zh: "飛翔", cn: "飞翔" },
+    name: { ko: "비행 / 날기", en: "Flying", ja: "飛ぶ", fr: "Voler", es: "Volar", zh: "飛翔" },
     meaning: {
       ko: "자유, 해방감, 성취욕, 제약으로부터의 탈출을 상징합니다.",
       en: "Symbolizes freedom, liberation, ambition, and escape from constraints.",
@@ -530,7 +478,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la liberté, la libération, l'ambition et l'évasion des contraintes.",
       es: "Simboliza libertad, liberación, ambición y escape de las restricciones.",
       zh: "象徵自由、解放感、成就慾與從束縛中逃脫。",
-      cn: "象征自由、解放感、成就欲与从束缚中逃脱。",
     },
     positive: {
       ko: "자유롭게 나는 꿈은 자신감의 절정, 목표를 향한 강한 의지를 의미합니다.",
@@ -539,7 +486,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Voler librement signifie une confiance maximale et une forte volonté vers vos objectifs.",
       es: "Volar libremente significa confianza máxima y fuerte determinación hacia tus metas.",
       zh: "自由飛翔意味著自信達到頂峰，對目標有強烈意志。",
-      cn: "自由飞翔意味着自信达到顶峰，对目标有强烈意志。",
     },
     negative: {
       ko: "너무 높이 날다가 추락할 것 같은 두려움은 과도한 야망이나 불안정함을 나타낼 수 있습니다.",
@@ -548,7 +494,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "La peur de tomber en volant trop haut peut indiquer une ambition excessive ou une instabilité.",
       es: "El miedo a caer mientras se vuela muy alto puede indicar ambición excesiva o inestabilidad.",
       zh: "飛太高而害怕墜落可能暗示過度野心或不穩定感。",
-      cn: "飞太高而害怕坠落可能暗示过度野心或不稳定感。",
     },
     advice: {
       ko: "자신의 능력을 믿되, 현실적인 계획도 함께 세워보세요.",
@@ -557,7 +502,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Croyez en vos capacités, mais élaborez aussi des plans réalistes.",
       es: "Confía en tus capacidades, pero también haz planes realistas.",
       zh: "相信自己的能力，同時也要制定切實可行的計劃。",
-      cn: "相信自己的能力，同时也要制定切实可行的计划。",
     },
   },
 
@@ -566,7 +510,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "snake",
     emoji: "🐍",
     category: "animals",
-    name: { ko: "뱀", en: "Snake", ja: "蛇", fr: "Serpent", es: "Serpiente", zh: "蛇", cn: "蛇" },
+    name: { ko: "뱀", en: "Snake", ja: "蛇", fr: "Serpent", es: "Serpiente", zh: "蛇" },
     meaning: {
       ko: "변화, 치유, 지혜, 유혹, 숨겨진 두려움을 상징합니다.",
       en: "Symbolizes transformation, healing, wisdom, temptation, and hidden fears.",
@@ -574,7 +518,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la transformation, la guérison, la sagesse, la tentation et les peurs cachées.",
       es: "Simboliza transformación, curación, sabiduría, tentación y miedos ocultos.",
       zh: "象徵轉化、治癒、智慧、誘惑與隱藏的恐懼。",
-      cn: "象征转化、治愈、智慧、诱惑与隐藏的恐惧。",
     },
     positive: {
       ko: "뱀이 허물을 벗는 꿈은 낡은 습관을 버리고 새롭게 거듭나는 것을 의미합니다.",
@@ -583,7 +526,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un serpent qui mue signifie abandonner les vieilles habitudes et renaître.",
       es: "Una serpiente mudando la piel significa dejar los viejos hábitos y renacer.",
       zh: "蛇蛻皮的夢意味著拋棄舊習慣、重獲新生。",
-      cn: "蛇蜕皮的梦意味着抛弃旧习惯、重获新生。",
     },
     negative: {
       ko: "공격적인 뱀은 주변에 신뢰하기 어려운 사람이 있거나 배신에 대한 두려움을 나타낼 수 있습니다.",
@@ -592,7 +534,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un serpent agressif peut indiquer des personnes peu fiables ou la peur de la trahison.",
       es: "Una serpiente agresiva puede indicar personas poco confiables o miedo a la traición.",
       zh: "攻擊性的蛇可能暗示身邊有不可信任的人或對背叛的恐懼。",
-      cn: "攻击性的蛇可能暗示身边有不可信任的人或对背叛的恐惧。",
     },
     advice: {
       ko: "주변 사람들과의 관계를 점검하고 건강하지 않은 관계는 정리해보세요.",
@@ -601,14 +542,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Revoyez vos relations et mettez fin aux relations malsaines.",
       es: "Revisa tus relaciones y deja ir las poco saludables.",
       zh: "檢視身邊的關係，整理不健康的關係。",
-      cn: "检视身边的关系，整理不健康的关系。",
     },
   },
   {
     id: "dog",
     emoji: "🐕",
     category: "animals",
-    name: { ko: "개", en: "Dog", ja: "犬", fr: "Chien", es: "Perro", zh: "狗", cn: "狗" },
+    name: { ko: "개", en: "Dog", ja: "犬", fr: "Chien", es: "Perro", zh: "狗" },
     meaning: {
       ko: "충성심, 우정, 본능, 보호, 신뢰 관계를 상징합니다.",
       en: "Symbolizes loyalty, friendship, instinct, protection, and trust.",
@@ -616,7 +556,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la loyauté, l'amitié, l'instinct, la protection et la confiance.",
       es: "Simboliza lealtad, amistad, instinto, protección y confianza.",
       zh: "象徵忠誠、友誼、本能、保護與信任關係。",
-      cn: "象征忠诚、友谊、本能、保护与信任关系。",
     },
     positive: {
       ko: "친근한 개는 신뢰할 수 있는 친구나 지지자가 있음을 의미합니다.",
@@ -625,7 +564,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un chien amical signifie que vous avez des amis ou des partisans de confiance.",
       es: "Un perro amistoso significa que tienes amigos o seguidores de confianza.",
       zh: "友善的狗意味著你有可信賴的朋友或支持者。",
-      cn: "友善的狗意味着你有可信赖的朋友或支持者。",
     },
     negative: {
       ko: "으르렁거리는 개는 관계에서의 갈등, 신뢰 문제, 경계 침범을 나타낼 수 있습니다.",
@@ -634,7 +572,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un chien qui grogne peut indiquer des conflits relationnels, des problèmes de confiance.",
       es: "Un perro gruñendo puede indicar conflictos en relaciones, problemas de confianza.",
       zh: "咆哮的狗可能暗示關係衝突、信任問題或邊界侵犯。",
-      cn: "咆哮的狗可能暗示关系冲突、信任问题或边界侵犯。",
     },
     advice: {
       ko: "믿을 수 있는 사람들과의 관계를 소중히 여기고, 본능을 믿어보세요.",
@@ -643,14 +580,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Chérissez vos relations avec des personnes de confiance et faites confiance à vos instincts.",
       es: "Valora las relaciones con personas de confianza y confía en tus instintos.",
       zh: "珍惜與可信賴之人的關係，相信你的本能。",
-      cn: "珍惜与可信赖之人的关系，相信你的本能。",
     },
   },
   {
     id: "cat",
     emoji: "🐱",
     category: "animals",
-    name: { ko: "고양이", en: "Cat", ja: "猫", fr: "Chat", es: "Gato", zh: "貓", cn: "猫" },
+    name: { ko: "고양이", en: "Cat", ja: "猫", fr: "Chat", es: "Gato", zh: "貓" },
     meaning: {
       ko: "독립심, 신비, 직관, 여성성, 숨겨진 본성을 상징합니다.",
       en: "Symbolizes independence, mystery, intuition, femininity, and hidden nature.",
@@ -658,7 +594,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'indépendance, le mystère, l'intuition, la féminité et la nature cachée.",
       es: "Simboliza independencia, misterio, intuición, feminidad y naturaleza oculta.",
       zh: "象徵獨立、神秘、直覺、女性氣質與隱藏本性。",
-      cn: "象征独立、神秘、直觉、女性气质与隐藏本性。",
     },
     positive: {
       ko: "온순한 고양이는 직관을 신뢰하고 독립심을 발휘해야 할 때임을 알립니다.",
@@ -667,7 +602,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un chat doux signale qu'il est temps de faire confiance à votre intuition.",
       es: "Un gato gentil señala que es momento de confiar en tu intuición.",
       zh: "溫順的貓提示你要信任直覺並發揮獨立性。",
-      cn: "温顺的猫提示你要信任直觉并发挥独立性。",
     },
     negative: {
       ko: "공격적인 고양이는 배신, 기만, 혹은 자신의 어두운 면을 나타낼 수 있습니다.",
@@ -676,7 +610,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un chat agressif peut représenter la trahison, la tromperie ou votre côté sombre.",
       es: "Un gato agresivo puede representar traición, engaño o tu lado oscuro.",
       zh: "攻擊性的貓可能代表背叛、欺騙或自身的陰暗面。",
-      cn: "攻击性的猫可能代表背叛、欺骗或自身的阴暗面。",
     },
     advice: {
       ko: "자신의 직관과 감각을 믿어보세요. 독립적인 결정을 내릴 용기를 가져보세요.",
@@ -685,14 +618,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Faites confiance à votre intuition. Ayez le courage de prendre des décisions indépendantes.",
       es: "Confía en tu intuición. Ten el coraje de tomar decisiones independientes.",
       zh: "相信自己的直覺與感知，鼓起勇氣做出獨立決定。",
-      cn: "相信自己的直觉与感知，鼓起勇气做出独立决定。",
     },
   },
   {
     id: "bird",
     emoji: "🕊️",
     category: "animals",
-    name: { ko: "새", en: "Bird", ja: "鳥", fr: "Oiseau", es: "Pájaro", zh: "鳥", cn: "鸟" },
+    name: { ko: "새", en: "Bird", ja: "鳥", fr: "Oiseau", es: "Pájaro", zh: "鳥" },
     meaning: {
       ko: "자유, 영적 해방, 희망, 전달되는 메시지, 새로운 관점을 상징합니다.",
       en: "Symbolizes freedom, spiritual liberation, hope, messages being delivered, and new perspectives.",
@@ -700,7 +632,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la liberté, la libération spirituelle, l'espoir et les nouvelles perspectives.",
       es: "Simboliza libertad, liberación espiritual, esperanza y nuevas perspectivas.",
       zh: "象徵自由、精神解放、希望、傳遞的信息與新視角。",
-      cn: "象征自由、精神解放、希望、传递的信息与新视角。",
     },
     positive: {
       ko: "하늘을 나는 새는 자유를 향한 열망, 좋은 소식이 올 것임을 의미합니다.",
@@ -709,7 +640,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Des oiseaux qui volent haut signifient un désir de liberté et de bonnes nouvelles à venir.",
       es: "Pájaros volando alto significan anhelo de libertad y buenas noticias por venir.",
       zh: "在高空飛翔的鳥意味著對自由的渴望和好消息即將到來。",
-      cn: "在高空飞翔的鸟意味着对自由的渴望和好消息即将到来。",
     },
     negative: {
       ko: "갇힌 새나 죽은 새는 억압된 자유, 상실, 소통의 단절을 의미할 수 있습니다.",
@@ -718,7 +648,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un oiseau en cage ou mort peut signifier liberté réprimée, perte ou communication brisée.",
       es: "Un pájaro enjaulado o muerto puede significar libertad suprimida, pérdida o comunicación rota.",
       zh: "被關籠中或死去的鳥可能意味著被壓抑的自由、失去或溝通中斷。",
-      cn: "被关笼中或死去的鸟可能意味着被压抑的自由、失去或沟通中断。",
     },
     advice: {
       ko: "일상에서 작은 자유를 찾아보세요. 새로운 관점으로 상황을 바라보는 연습을 해보세요.",
@@ -727,7 +656,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Trouvez de petites libertés dans la vie quotidienne. Pratiquez de nouveaux angles de vue.",
       es: "Encuentra pequeñas libertades en la vida diaria. Practica ver situaciones desde nuevos ángulos.",
       zh: "在日常生活中尋找小小的自由，練習從新角度看待事物。",
-      cn: "在日常生活中寻找小小的自由，练习从新角度看待事物。",
     },
   },
 
@@ -736,7 +664,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "deceased",
     emoji: "👻",
     category: "people",
-    name: { ko: "고인 / 죽은 사람", en: "Deceased person", ja: "故人", fr: "Personne décédée", es: "Persona fallecida", zh: "故人", cn: "故人" },
+    name: { ko: "고인 / 죽은 사람", en: "Deceased person", ja: "故人", fr: "Personne décédée", es: "Persona fallecida", zh: "故人" },
     meaning: {
       ko: "과거와의 연결, 해결되지 않은 슬픔, 지혜의 전달, 변화의 메시지를 상징합니다.",
       en: "Symbolizes connection to the past, unresolved grief, transmitted wisdom, and messages of change.",
@@ -744,7 +672,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise la connexion au passé, le deuil non résolu, la sagesse transmise et des messages de changement.",
       es: "Simboliza conexión con el pasado, duelo no resuelto, sabiduría transmitida y mensajes de cambio.",
       zh: "象徵與過去的連結、未解決的悲傷、傳遞的智慧與變化的信息。",
-      cn: "象征与过去的连结、未解决的悲伤、传递的智慧与变化的信息。",
     },
     positive: {
       ko: "고인이 밝게 웃거나 무언가를 전해주는 꿈은 보호받고 있다는 따뜻한 메시지입니다.",
@@ -753,7 +680,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un défunt souriant ou donnant quelque chose est un message chaleureux que vous êtes protégé.",
       es: "Una persona fallecida sonriendo o dando algo es un mensaje cálido de que estás protegido.",
       zh: "故人微笑或傳遞東西是一個溫暖的信息，表示你被保護著。",
-      cn: "故人微笑或传递东西是一个温暖的信息，表示你被保护着。",
     },
     negative: {
       ko: "고인이 슬프거나 화난 모습은 아직 해결하지 못한 감정적 문제가 있음을 나타낼 수 있습니다.",
@@ -762,7 +688,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une personne décédée triste ou en colère peut indiquer des problèmes émotionnels non résolus.",
       es: "Una persona fallecida triste o enojada puede indicar problemas emocionales no resueltos.",
       zh: "故人悲傷或憤怒的樣子可能表示還有未解決的情感問題。",
-      cn: "故人悲伤或愤怒的样子可能表示还有未解决的情感问题。",
     },
     advice: {
       ko: "그리움이나 슬픔을 충분히 느끼고 표현해보세요. 과거와 화해하는 시간을 가져보세요.",
@@ -771,14 +696,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Permettez-vous de ressentir et d'exprimer pleinement la nostalgie ou le deuil.",
       es: "Permítete sentir y expresar plenamente la añoranza o el duelo.",
       zh: "允許自己充分感受並表達思念或悲傷，花時間與過去和解。",
-      cn: "允许自己充分感受并表达思念或悲伤，花时间与过去和解。",
     },
   },
   {
     id: "stranger",
     emoji: "🧑",
     category: "people",
-    name: { ko: "낯선 사람", en: "Stranger", ja: "見知らぬ人", fr: "Étranger", es: "Extraño", zh: "陌生人", cn: "陌生人" },
+    name: { ko: "낯선 사람", en: "Stranger", ja: "見知らぬ人", fr: "Étranger", es: "Extraño", zh: "陌生人" },
     meaning: {
       ko: "자신의 알려지지 않은 측면, 새로운 기회, 숨겨진 가능성을 상징합니다.",
       en: "Symbolizes an unknown aspect of yourself, new opportunities, and hidden potential.",
@@ -786,7 +710,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise un aspect inconnu de vous-même, de nouvelles opportunités et un potentiel caché.",
       es: "Simboliza un aspecto desconocido de ti mismo, nuevas oportunidades y potencial oculto.",
       zh: "象徵自身未知的一面、新機會與隱藏的潛能。",
-      cn: "象征自身未知的一面、新机会与隐藏的潜能。",
     },
     positive: {
       ko: "친근하게 느껴지는 낯선 사람은 아직 발견하지 못한 자신의 능력이나 새로운 관계를 의미합니다.",
@@ -795,7 +718,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un étranger amical représente des capacités non découvertes ou de nouvelles relations.",
       es: "Un extraño amistoso representa habilidades no descubiertas o nuevas relaciones.",
       zh: "感覺親切的陌生人代表尚未發現的自身能力或新的關係。",
-      cn: "感觉亲切的陌生人代表尚未发现的自身能力或新的关系。",
     },
     negative: {
       ko: "위협적인 낯선 사람은 변화에 대한 두려움이나 내면의 갈등을 나타낼 수 있습니다.",
@@ -804,7 +726,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un étranger menaçant peut indiquer une peur du changement ou un conflit intérieur.",
       es: "Un extraño amenazante puede indicar miedo al cambio o conflicto interior.",
       zh: "威脅性的陌生人可能暗示對變化的恐懼或內心衝突。",
-      cn: "威胁性的陌生人可能暗示对变化的恐惧或内心冲突。",
     },
     advice: {
       ko: "새로운 사람이나 경험에 열린 마음을 가져보세요. 자신의 숨겨진 재능을 탐구해보세요.",
@@ -813,7 +734,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Gardez l'esprit ouvert aux nouvelles personnes et expériences. Explorez vos talents cachés.",
       es: "Mantén una mente abierta a nuevas personas y experiencias. Explora tus talentos ocultos.",
       zh: "對新的人和經歷保持開放心態，探索你的隱藏才能。",
-      cn: "对新的人和经历保持开放心态，探索你的隐藏才能。",
     },
   },
 
@@ -822,7 +742,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "house",
     emoji: "🏠",
     category: "places",
-    name: { ko: "집", en: "House", ja: "家", fr: "Maison", es: "Casa", zh: "房子", cn: "房子" },
+    name: { ko: "집", en: "House", ja: "家", fr: "Maison", es: "Casa", zh: "房子" },
     meaning: {
       ko: "자신의 심리적 구조, 자아, 가족 관계, 안전감을 상징합니다.",
       en: "Symbolizes your psychological structure, the self, family relationships, and sense of safety.",
@@ -830,7 +750,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise votre structure psychologique, le moi, les relations familiales et le sentiment de sécurité.",
       es: "Simboliza tu estructura psicológica, el yo, las relaciones familiares y la sensación de seguridad.",
       zh: "象徵你的心理結構、自我、家庭關係與安全感。",
-      cn: "象征你的心理结构、自我、家庭关系与安全感。",
     },
     positive: {
       ko: "밝고 넓은 집은 안정된 자아, 따뜻한 가족 관계, 심리적 안정을 의미합니다.",
@@ -839,7 +758,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une maison lumineuse et spacieuse signifie un moi stable, des liens familiaux chaleureux.",
       es: "Una casa brillante y espaciosa significa un yo estable, lazos familiares cálidos.",
       zh: "明亮寬敞的房子意味著穩定的自我、溫暖的家庭關係和心理安全感。",
-      cn: "明亮宽敞的房子意味着稳定的自我、温暖的家庭关系和心理安全感。",
     },
     negative: {
       ko: "무너지거나 낡은 집은 자아 정체성의 혼란, 가족 갈등, 심리적 불안을 나타낼 수 있습니다.",
@@ -848,7 +766,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une maison qui s'effondre peut indiquer une confusion identitaire, des conflits familiaux.",
       es: "Una casa que se derrumba puede indicar confusión de identidad, conflictos familiares.",
       zh: "倒塌或破舊的房子可能暗示自我認同混亂、家庭衝突或心理不安。",
-      cn: "倒塌或破旧的房子可能暗示自我认同混乱、家庭冲突或心理不安。",
     },
     advice: {
       ko: "자신의 내면 상태를 점검하고 필요한 경우 전문가의 도움을 받아보세요.",
@@ -857,14 +774,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Faites le point sur votre état intérieur et demandez de l'aide professionnelle si nécessaire.",
       es: "Revisa tu estado interior y busca ayuda profesional si es necesario.",
       zh: "檢視內心狀態，必要時尋求專業幫助。",
-      cn: "检视内心状态，必要时寻求专业帮助。",
     },
   },
   {
     id: "school",
     emoji: "🏫",
     category: "places",
-    name: { ko: "학교", en: "School", ja: "学校", fr: "École", es: "Escuela", zh: "學校", cn: "学校" },
+    name: { ko: "학교", en: "School", ja: "学校", fr: "École", es: "Escuela", zh: "學校" },
     meaning: {
       ko: "학습, 성장, 사회적 관계, 과거의 경험이나 불안을 상징합니다.",
       en: "Symbolizes learning, growth, social relationships, and past experiences or anxieties.",
@@ -872,7 +788,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'apprentissage, la croissance, les relations sociales et les expériences ou anxiétés passées.",
       es: "Simboliza aprendizaje, crecimiento, relaciones sociales y experiencias o ansiedades pasadas.",
       zh: "象徵學習、成長、社會關係與過去的經歷或焦慮。",
-      cn: "象征学习、成长、社会关系与过去的经历或焦虑。",
     },
     positive: {
       ko: "즐거운 학교 꿈은 새로운 것을 배우고 싶은 욕구나 성장 중임을 나타냅니다.",
@@ -881,7 +796,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Un rêve scolaire agréable montre un désir d'apprendre ou signale que vous grandissez.",
       es: "Un sueño escolar feliz muestra deseo de aprender o señala que estás creciendo.",
       zh: "愉快的學校夢表示想學習新事物的渴望或正在成長。",
-      cn: "愉快的学校梦表示想学习新事物的渴望或正在成长。",
     },
     negative: {
       ko: "시험에 늦거나 실패하는 학교 꿈은 현실의 성과 압박이나 평가에 대한 불안을 반영합니다.",
@@ -890,7 +804,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Être en retard ou échouer à l'école reflète la pression des performances ou l'anxiété d'évaluation.",
       es: "Llegar tarde o fallar en la escuela refleja presión de rendimiento o ansiedad de evaluación.",
       zh: "上學遲到或考試失敗的夢反映現實中的表現壓力或對評估的焦慮。",
-      cn: "上学迟到或考试失败的梦反映现实中的表现压力或对评估的焦虑。",
     },
     advice: {
       ko: "완벽주의를 내려놓고 배움 자체를 즐기는 시간을 가져보세요.",
@@ -899,7 +812,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Lâchez le perfectionnisme et prenez le temps d'apprécier l'apprentissage en lui-même.",
       es: "Suelta el perfeccionismo y tómate tiempo para disfrutar el aprendizaje en sí.",
       zh: "放下完美主義，花時間享受學習本身。",
-      cn: "放下完美主义，花时间享受学习本身。",
     },
   },
 
@@ -908,7 +820,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "running",
     emoji: "🏃",
     category: "actions",
-    name: { ko: "달리기 / 도망", en: "Running / Fleeing", ja: "走る / 逃げる", fr: "Courir / Fuir", es: "Correr / Huir", zh: "奔跑 / 逃跑", cn: "奔跑 / 逃跑" },
+    name: { ko: "달리기 / 도망", en: "Running / Fleeing", ja: "走る / 逃げる", fr: "Courir / Fuir", es: "Correr / Huir", zh: "奔跑 / 逃跑" },
     meaning: {
       ko: "무언가를 향해 달리거나 피하고 싶은 욕구, 긴박함과 압박감을 상징합니다.",
       en: "Symbolizes urgency and pressure, or a desire to pursue or escape something.",
@@ -916,7 +828,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'urgence et la pression, ou un désir de poursuivre ou d'échapper à quelque chose.",
       es: "Simboliza urgencia y presión, o un deseo de perseguir o escapar de algo.",
       zh: "象徵緊迫感與壓力，或渴望追求或逃避某事。",
-      cn: "象征紧迫感与压力，或渴望追求或逃避某事。",
     },
     positive: {
       ko: "목표를 향해 달리는 꿈은 강한 동기부여와 목표에 대한 열정을 나타냅니다.",
@@ -925,7 +836,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Courir vers un objectif montre une forte motivation et de la passion.",
       es: "Correr hacia una meta muestra fuerte motivación y pasión.",
       zh: "向目標奔跑的夢表示強烈的動力和對目標的熱情。",
-      cn: "向目标奔跑的梦表示强烈的动力和对目标的热情。",
     },
     negative: {
       ko: "무언가에게 쫓기는 꿈은 직면하지 않으려는 두려움이나 회피 패턴을 나타낼 수 있습니다.",
@@ -934,7 +844,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Être poursuivi peut indiquer des peurs que vous évitez ou des schémas d'évitement.",
       es: "Ser perseguido puede indicar miedos que evitas o patrones de evitación.",
       zh: "被追趕的夢可能暗示你在迴避的恐懼或逃避模式。",
-      cn: "被追赶的梦可能暗示你在回避的恐惧或逃避模式。",
     },
     advice: {
       ko: "현재 회피하고 있는 문제가 있다면 작은 한 걸음부터 직면해보세요.",
@@ -943,14 +852,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si vous évitez un problème, essayez de le confronter un petit pas à la fois.",
       es: "Si estás evitando un problema, intenta enfrentarlo un pequeño paso a la vez.",
       zh: "如果你在逃避某個問題，試著一小步一小步地面對它。",
-      cn: "如果你在逃避某个问题，试着一小步一小步地面对它。",
     },
   },
   {
     id: "exam",
     emoji: "📝",
     category: "actions",
-    name: { ko: "시험", en: "Exam", ja: "試験", fr: "Examen", es: "Examen", zh: "考試", cn: "考试" },
+    name: { ko: "시험", en: "Exam", ja: "試験", fr: "Examen", es: "Examen", zh: "考試" },
     meaning: {
       ko: "자기 평가, 성과에 대한 불안, 중요한 시험대를 상징합니다.",
       en: "Symbolizes self-evaluation, performance anxiety, and an important test in life.",
@@ -958,7 +866,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'auto-évaluation, l'anxiété de performance et une épreuve importante.",
       es: "Simboliza autoevaluación, ansiedad de rendimiento y una prueba importante en la vida.",
       zh: "象徵自我評估、對表現的焦慮與重要的人生考驗。",
-      cn: "象征自我评估、对表现的焦虑与重要的人生考验。",
     },
     positive: {
       ko: "시험을 잘 보는 꿈은 자신에 대한 확신과 현실에서의 준비가 잘 되어 있음을 의미합니다.",
@@ -967,7 +874,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Bien réussir un examen signifie confiance en soi et bonne préparation dans la réalité.",
       es: "Hacerlo bien en un examen significa confianza y buena preparación en la realidad.",
       zh: "考試順利意味著對自己有信心且在現實中準備充分。",
-      cn: "考试顺利意味着对自己有信心且在现实中准备充分。",
     },
     negative: {
       ko: "시험을 못 보거나 준비가 안 된 꿈은 평가받는 것에 대한 두려움이나 완벽주의를 반영합니다.",
@@ -976,7 +882,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Échouer ou être mal préparé reflète la peur du jugement ou le perfectionnisme.",
       es: "Fallar o estar mal preparado refleja miedo al juicio o perfeccionismo.",
       zh: "考試失敗或沒有準備的夢反映對評判的恐懼或完美主義。",
-      cn: "考试失败或没有准备的梦反映对评判的恐惧或完美主义。",
     },
     advice: {
       ko: "결과보다 과정에 집중하는 연습을 해보세요. 충분히 준비된 자신을 인정해주세요.",
@@ -985,7 +890,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Pratiquez la concentration sur le processus plutôt que les résultats.",
       es: "Practica enfocarte en el proceso más que en los resultados.",
       zh: "練習專注於過程而非結果，認可自己已充分準備。",
-      cn: "练习专注于过程而非结果，认可自己已充分准备。",
     },
   },
 
@@ -994,7 +898,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "money",
     emoji: "💰",
     category: "objects",
-    name: { ko: "돈 / 재물", en: "Money", ja: "お金", fr: "Argent", es: "Dinero", zh: "金錢", cn: "金钱" },
+    name: { ko: "돈 / 재물", en: "Money", ja: "お金", fr: "Argent", es: "Dinero", zh: "金錢" },
     meaning: {
       ko: "힘, 가치, 자원, 안전감, 자아 가치를 상징합니다.",
       en: "Symbolizes power, value, resources, security, and self-worth.",
@@ -1002,7 +906,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise le pouvoir, la valeur, les ressources, la sécurité et l'estime de soi.",
       es: "Simboliza poder, valor, recursos, seguridad y autoestima.",
       zh: "象徵力量、價值、資源、安全感與自我價值。",
-      cn: "象征力量、价值、资源、安全感与自我价值。",
     },
     positive: {
       ko: "돈을 줍거나 많이 있는 꿈은 기회, 자원 획득, 자신감 상승을 의미합니다.",
@@ -1011,7 +914,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Trouver ou avoir beaucoup d'argent signifie opportunités, acquisition de ressources.",
       es: "Encontrar o tener mucho dinero significa oportunidades, adquisición de recursos.",
       zh: "撿到錢或擁有很多錢意味著機遇、獲取資源和自信心提升。",
-      cn: "捡到钱或拥有很多钱意味着机遇、获取资源和自信心提升。",
     },
     negative: {
       ko: "돈을 잃는 꿈은 안전감의 위협, 가치에 대한 의문, 재정적 불안을 나타낼 수 있습니다.",
@@ -1020,7 +922,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Perdre de l'argent peut indiquer une sécurité menacée ou une anxiété financière.",
       es: "Perder dinero puede indicar seguridad amenazada o ansiedad financiera.",
       zh: "失去金錢的夢可能暗示安全感受到威脅、質疑自身價值或財務焦慮。",
-      cn: "失去金钱的梦可能暗示安全感受到威胁、质疑自身价值或财务焦虑。",
     },
     advice: {
       ko: "외적 성공보다 내면의 풍요로움에 집중해보세요. 지금 가진 것에 감사하는 시간을 가져보세요.",
@@ -1029,14 +930,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Concentrez-vous sur la richesse intérieure plutôt que le succès externe.",
       es: "Enfócate en la riqueza interior sobre el éxito externo.",
       zh: "專注於內在豐盛而非外在成就，花時間感恩你所擁有的。",
-      cn: "专注于内在丰盛而非外在成就，花时间感恩你所拥有的。",
     },
   },
   {
     id: "door",
     emoji: "🚪",
     category: "objects",
-    name: { ko: "문", en: "Door", ja: "ドア", fr: "Porte", es: "Puerta", zh: "門", cn: "门" },
+    name: { ko: "문", en: "Door", ja: "ドア", fr: "Porte", es: "Puerta", zh: "門" },
     meaning: {
       ko: "새로운 기회, 변화, 선택, 전환점, 비밀을 상징합니다.",
       en: "Symbolizes new opportunities, change, choices, turning points, and secrets.",
@@ -1044,7 +944,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise de nouvelles opportunités, le changement, les choix, les tournants et les secrets.",
       es: "Simboliza nuevas oportunidades, cambio, elecciones, puntos de inflexión y secretos.",
       zh: "象徵新機會、變化、選擇、轉折點與秘密。",
-      cn: "象征新机会、变化、选择、转折点与秘密。",
     },
     positive: {
       ko: "열린 문이나 문을 통과하는 꿈은 새로운 기회 수용, 변화를 향한 준비를 의미합니다.",
@@ -1053,7 +952,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une porte ouverte signifie l'accueil de nouvelles opportunités et la préparation au changement.",
       es: "Una puerta abierta significa abrazar nuevas oportunidades y estar listo para el cambio.",
       zh: "開著的門或穿過門的夢意味著迎接新機遇、為變化做好準備。",
-      cn: "开着的门或穿过门的梦意味着迎接新机遇、为变化做好准备。",
     },
     negative: {
       ko: "잠긴 문이나 열리지 않는 문은 막힌 기회, 소통의 어려움, 내면의 장벽을 나타낼 수 있습니다.",
@@ -1062,7 +960,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Une porte fermée à clé peut indiquer des opportunités bloquées, des difficultés de communication.",
       es: "Una puerta cerrada con llave puede indicar oportunidades bloqueadas, dificultades de comunicación.",
       zh: "上鎖或打不開的門可能暗示機會受阻、溝通困難或內心障礙。",
-      cn: "上锁或打不开的门可能暗示机会受阻、沟通困难或内心障碍。",
     },
     advice: {
       ko: "현재 망설이고 있는 결정이 있다면 한 걸음 내딛어보세요. 새로운 가능성에 열린 자세를 유지하세요.",
@@ -1071,7 +968,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si vous hésitez sur une décision, faites un pas en avant. Restez ouvert aux nouvelles possibilités.",
       es: "Si estás dudando de una decisión, da un paso adelante. Mantente abierto a nuevas posibilidades.",
       zh: "如果你在某個決定上猶豫不決，邁出一步吧。保持對新可能性的開放態度。",
-      cn: "如果你在某个决定上犹豫不决，迈出一步吧。保持对新可能性的开放态度。",
     },
   },
 
@@ -1080,7 +976,7 @@ const SYMBOLS: DreamSymbol[] = [
     id: "joy",
     emoji: "😊",
     category: "emotions",
-    name: { ko: "기쁨 / 행복", en: "Joy / Happiness", ja: "喜び / 幸福", fr: "Joie / Bonheur", es: "Alegría / Felicidad", zh: "喜悅 / 幸福", cn: "喜悦 / 幸福" },
+    name: { ko: "기쁨 / 행복", en: "Joy / Happiness", ja: "喜び / 幸福", fr: "Joie / Bonheur", es: "Alegría / Felicidad", zh: "喜悅 / 幸福" },
     meaning: {
       ko: "충족감, 조화, 내면의 평화, 긍정적 에너지를 상징합니다.",
       en: "Symbolizes fulfillment, harmony, inner peace, and positive energy.",
@@ -1088,7 +984,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise l'épanouissement, l'harmonie, la paix intérieure et l'énergie positive.",
       es: "Simboliza plenitud, armonía, paz interior y energía positiva.",
       zh: "象徵充足感、和諧、內心平靜與正面能量。",
-      cn: "象征充足感、和谐、内心平静与正面能量。",
     },
     positive: {
       ko: "꿈속에서 느낀 기쁨은 현실에서 이루고 싶은 것이 무엇인지 알려주는 나침반입니다.",
@@ -1097,7 +992,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "La joie ressentie en rêve est une boussole indiquant ce que vous voulez vraiment accomplir.",
       es: "La alegría sentida en sueños es una brújula que muestra lo que realmente quieres lograr.",
       zh: "夢中感受到的喜悅是指引你在現實中真正想實現之事的指南針。",
-      cn: "梦中感受到的喜悦是指引你在现实中真正想实现之事的指南针。",
     },
     negative: {
       ko: "꿈에서만 행복하고 깨어나면 공허한 느낌은 현실에서 채워지지 않은 욕구가 있음을 나타냅니다.",
@@ -1106,7 +1000,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Se sentir heureux seulement en rêve et vide au réveil indique des besoins non satisfaits.",
       es: "Sentirse feliz solo en sueños y vacío al despertar indica necesidades insatisfechas en la realidad.",
       zh: "只在夢中快樂，醒來卻感到空虛，表示現實中有未滿足的需求。",
-      cn: "只在梦中快乐，醒来却感到空虚，表示现实中有未满足的需求。",
     },
     advice: {
       ko: "꿈속에서 기쁨을 느꼈다면 그 감정을 현실에서도 재현할 방법을 찾아보세요.",
@@ -1115,14 +1008,13 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si vous avez ressenti de la joie en rêve, trouvez des moyens de recréer ce sentiment dans la réalité.",
       es: "Si sentiste alegría en sueños, encuentra formas de recrear ese sentimiento en la realidad.",
       zh: "如果你在夢中感到喜悅，試著找到在現實中重現那種感覺的方法。",
-      cn: "如果你在梦中感到喜悦，试着找到在现实中重现那种感觉的方法。",
     },
   },
   {
     id: "fear",
     emoji: "😨",
     category: "emotions",
-    name: { ko: "공포 / 두려움", en: "Fear", ja: "恐怖 / 不安", fr: "Peur", es: "Miedo", zh: "恐懼", cn: "恐惧" },
+    name: { ko: "공포 / 두려움", en: "Fear", ja: "恐怖 / 不安", fr: "Peur", es: "Miedo", zh: "恐懼" },
     meaning: {
       ko: "위협, 불확실성, 자신의 취약한 부분, 직면하지 못한 문제를 상징합니다.",
       en: "Symbolizes threats, uncertainty, your vulnerable side, and unconfronted problems.",
@@ -1130,7 +1022,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Symbolise les menaces, l'incertitude, votre côté vulnérable et les problèmes non confrontés.",
       es: "Simboliza amenazas, incertidumbre, tu lado vulnerable y problemas no confrontados.",
       zh: "象徵威脅、不確定性、自身脆弱的一面與未面對的問題。",
-      cn: "象征威胁、不确定性、自身脆弱的一面与未面对的问题。",
     },
     positive: {
       ko: "공포를 극복하는 꿈은 내면의 용기와 성장 가능성을 나타냅니다.",
@@ -1139,7 +1030,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Surmonter la peur dans un rêve signale le courage intérieur et le potentiel de croissance.",
       es: "Superar el miedo en un sueño señala coraje interior y potencial de crecimiento.",
       zh: "在夢中克服恐懼象徵內在的勇氣與成長潛力。",
-      cn: "在梦中克服恐惧象征内在的勇气与成长潜力。",
     },
     negative: {
       ko: "반복되는 공포 꿈은 무의식이 처리하지 못한 트라우마나 강렬한 스트레스를 나타낼 수 있습니다.",
@@ -1148,7 +1038,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Des rêves de peur récurrents peuvent indiquer un traumatisme non traité ou un stress intense.",
       es: "Los sueños de miedo recurrentes pueden indicar traumas no procesados o estrés intenso.",
       zh: "反覆出現的恐懼夢可能暗示潛意識中未處理的創傷或強烈壓力。",
-      cn: "反复出现的恐惧梦可能暗示潜意识中未处理的创伤或强烈压力。",
     },
     advice: {
       ko: "반복되는 공포 꿈이 있다면 전문 상담을 고려해보세요. 두려움을 이름 붙여 인식하는 것이 극복의 첫 걸음입니다.",
@@ -1157,7 +1046,6 @@ const SYMBOLS: DreamSymbol[] = [
       fr: "Si des rêves de peur récurrents persistent, envisagez un conseil professionnel.",
       es: "Si persisten sueños de miedo recurrentes, considera el asesoramiento profesional.",
       zh: "如果反覆出現恐懼夢，考慮尋求專業輔導。為恐懼命名是克服它的第一步。",
-      cn: "如果反复出现恐惧梦，考虑寻求专业辅导。为恐惧命名是克服它的第一步。",
     },
   },
 ];

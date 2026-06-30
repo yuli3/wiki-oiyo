@@ -8,6 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
-const names: Record<Locale, string> = { ko: "Dopamine Dependency Test", en: "Dopamine Dependency Test", ja: "Dopamine Dependency Test", fr: "Dopamine Dependency Test", es: "Dopamine Dependency Test", zh: "Dopamine Dependency Test", cn: "Dopamine Dependency Test" };
+const names: Record<Locale, string> = { ko: "Dopamine Dependency Test", en: "Dopamine Dependency Test", ja: "Dopamine Dependency Test", fr: "Dopamine Dependency Test", es: "Dopamine Dependency Test", zh: "Dopamine Dependency Test" };
 ---
 <OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/dopamine-dependency-test/" kind="test" />
