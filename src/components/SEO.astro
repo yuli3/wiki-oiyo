@@ -343,7 +343,21 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
         inLanguage: hreflangMap[currentLocaleSegment] ?? currentLocaleSegment,
         inDefinedTermSet: {
           "@type": "DefinedTermSet",
-          name: series ?? category ?? `${siteConfig.name} Knowledge Catalog`,
+          // series frontmatter는 고정 enum(한국어)이라 로케일 표기로 변환해 발행
+          // (감사: 비한국어 정의가 한국어 시리즈명으로 인덱싱되는 AIEO 문제)
+          name: (() => {
+            const SERIES_I18N: Record<string, Record<string, string>> = {
+              "점성술 대사전": { en: "Astrology Encyclopedia", ja: "占星術大事典", zh: "占星术大辞典", fr: "Encyclopédie de l'astrologie", es: "Enciclopedia de astrología" },
+              "사주 대사전": { en: "Saju (Four Pillars) Encyclopedia", ja: "四柱推命大事典", zh: "四柱八字大辞典", fr: "Encyclopédie du Saju", es: "Enciclopedia del Saju" },
+              "신화 인물 사전": { en: "Mythological Figures Dictionary", ja: "神話人物事典", zh: "神话人物辞典", fr: "Dictionnaire des figures mythologiques", es: "Diccionario de figuras mitológicas" },
+              "타로 대사전": { en: "Tarot Encyclopedia", ja: "タロット大事典", zh: "塔罗大辞典", fr: "Encyclopédie du tarot", es: "Enciclopedia del tarot" },
+              "꿈해몽 사전": { en: "Dream Interpretation Dictionary", ja: "夢占い事典", zh: "解梦辞典", fr: "Dictionnaire des rêves", es: "Diccionario de sueños" },
+              "24절기 사전": { en: "24 Solar Terms Dictionary", ja: "二十四節気事典", zh: "二十四节气辞典", fr: "Dictionnaire des 24 termes solaires", es: "Diccionario de los 24 términos solares" },
+              "MBTI 사전": { en: "MBTI Dictionary", ja: "MBTI事典", zh: "MBTI 辞典", fr: "Dictionnaire MBTI", es: "Diccionario MBTI" },
+            };
+            const base = series ?? category ?? `${siteConfig.name} Knowledge Catalog`;
+            return SERIES_I18N[base]?.[currentLocaleSegment] ?? base;
+          })(),
           url: `${siteConfig.url}/knowledge/topics.json`,
         },
       })}
