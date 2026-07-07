@@ -3,6 +3,18 @@
 /**
  * LectureTable: Standard table for educational content with highlighting support.
  */
+/**
+ * Authors write markdown bold (**text**) inside string props; MDX does not
+ * process component props, so it rendered literally on ~109 pages
+ * (2026-07-07 audit). Render balanced ** pairs as <strong>.
+ */
+function renderBold(text: any): any {
+  if (typeof text !== 'string' || !text.includes('**')) return text;
+  const parts = text.split('**');
+  if (parts.length % 2 === 0) return text; // unbalanced — leave untouched
+  return parts.map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
+}
+
 export function LectureTable({ title, headers, rows, highlightColumns = [] }: any) {
   return (
     <div style={{ overflowX: 'auto', margin: '2.5rem 0', borderRadius: '0.75rem', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}>
@@ -16,7 +28,7 @@ export function LectureTable({ title, headers, rows, highlightColumns = [] }: an
           <tr>
             {headers?.map((h: any, i: number) => (
               <th key={i} style={{ padding: '1rem 1.5rem', borderBottom: '2px solid #e2e8f0', fontWeight: '600', color: '#475569', whiteSpace: 'nowrap' }}>
-                {h}
+                {renderBold(h)}
               </th>
             ))}
           </tr>
@@ -35,7 +47,7 @@ export function LectureTable({ title, headers, rows, highlightColumns = [] }: an
                     fontWeight: highlightColumns.includes(j) ? '500' : '400',
                   }}
                 >
-                  {c}
+                  {renderBold(c)}
                 </td>
               ))}
             </tr>
@@ -63,8 +75,8 @@ export function LectureProcess({ title, steps }: any) {
               {i < steps.length - 1 && <div style={{ width: '2px', flexGrow: 1, backgroundColor: '#bfdbfe', margin: '0.5rem 0' }}></div>}
             </div>
             <div style={{ paddingBottom: i < steps.length - 1 ? '1.5rem' : 0 }}>
-              <strong style={{ color: '#1e293b', display: 'block', fontSize: '1.05rem', marginBottom: '0.4rem' }}>{step.label}</strong>
-              <p style={{ margin: 0, color: '#64748b', lineHeight: '1.6', fontSize: '0.95rem' }}>{step.description}</p>
+              <strong style={{ color: '#1e293b', display: 'block', fontSize: '1.05rem', marginBottom: '0.4rem' }}>{renderBold(step.label)}</strong>
+              <p style={{ margin: 0, color: '#64748b', lineHeight: '1.6', fontSize: '0.95rem' }}>{renderBold(step.description)}</p>
             </div>
           </div>
         ))}

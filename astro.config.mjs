@@ -7,6 +7,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import remarkGfm from "remark-gfm";
+import remarkCjkFriendly from "remark-cjk-friendly";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import robotsTxt from "astro-robots-txt";
@@ -122,6 +123,9 @@ export default defineConfig({
     },
     remarkPlugins: [
       [remarkGfm, { singleTilde: false }],
+      // Fixes CommonMark emphasis failing around CJK: **볼드(영문)**조사 patterns
+      // rendered as literal ** on 458 pages (found 2026-07-07 audit).
+      remarkCjkFriendly,
       remarkMath,
     ],
     rehypePlugins: [
