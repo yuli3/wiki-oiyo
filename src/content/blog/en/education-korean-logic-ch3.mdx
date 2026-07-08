@@ -2,126 +2,127 @@
 track: academy
 series: '논리적 사고'
 chapter: 3
-title: "Public Enterprise Korean Language Logic Ch3. Engine of Reasoning — Syllogisms and Modus Tollens"
+title: "Public Enterprise Korean Language Logic Ch3. The Engine of Inference — Syllogisms and Modus Tollens"
 description: >-
-  A chain-building strategy that doubles the speed of logical reasoning. Learn
-  the chain combination of syllogisms and consequent negation, the most powerful
-  reasoning tool, with practical examples.
+  A chain-building strategy that doubles your speed on logical reasoning
+  problems. Master chaining syllogisms together and modus tollens (denying
+  the consequent), the single most powerful inference tool, through worked
+  examples.
 pubDate: 2026-04-13T00:00:00.000Z
 category: Korean Logic
 tags:
   - Education
-  - 국어논리
-  - 삼단논법
-  - 후건부정
+  - korean-logic
+  - syllogism
 locale: en
 author: Oiyo
 ---
-import { LectureTable } from "@/features/education-common/components/LectureVisuals"; 
-import FormulaBox from "@/components/mdx/FormulaBox.astro"; 
-import Callout from "@/components/mdx/Callout.astro"; 
-import FlowChart from "@/components/mdx/FlowChart.astro"; 
 
-# Chapter 3. Engine of Reasoning: Syllogism and Consequent Negation 
+import { LectureTable } from "@/features/education-common/components/LectureVisuals";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Callout from "@/components/mdx/Callout.astro";
+import FlowChart from "@/components/mdx/FlowChart.astro";
 
-Once you've learned how to symbolize conditionals, it's time to connect the symbols to create a **'Chain'**. 80% of logic quizzes end when you connect the scattered premises into one long chain of arrows. 
+# Chapter 3. The Engine of Inference: Syllogisms and Modus Tollens
 
---- 
+Now that you know how to symbolize conditionals, it's time to link those symbols into a **"chain."** 80% of logic puzzles are solved the moment you connect a scattering of premises into one long chain of arrows.
 
-## 1. Hypothetical Syllogism 
+---
 
-“If A → B and B → C, then A → C.” It seems so obvious, but in actual exam papers, B is hidden in various forms. 
+## 1. The hypothetical syllogism
 
-- **Key**: Finding the medium, **B**. 
-- **Tip**: If you can't see B directly, take the treat (~B→~A) and try to guess the tail. 
+"If A→B and B→C, then A→C." It sounds obvious, but on the actual exam, B is disguised in all kinds of forms.
 
-<FormulaBox 
-formula="(A → B) ∧ (B → C) ⇒ A → C" 
-label="Syllogism (Chain Link)" 
-description="Creates a logical flow that follows each other." 
-color="#10b981" 
-/> 
+- **Key point**: Find the middle term, **B**.
+- **Tip**: If B isn't directly visible, take the contrapositive (~B→~A) and try matching up the tail ends.
 
---- 
+<FormulaBox
+  formula="(A → B) ∧ (B → C)  ⇒  A → C"
+  label="Hypothetical Syllogism (Chaining)"
+  description="Creates an unbroken logical flow, one link leading to the next."
+  color="#10b981"
+/>
 
-## 2. Negation of the consequent (Modus Tollens) ★★★ 
+---
 
-This is the ‘cheat key’ that test takers miss the most. It is a powerful tool for denying causes when you know the conclusion is false. 
+## 2. Modus Tollens (Denying the Consequent) ★★★
 
-<FormulaBox 
-formula="(A → B) ∧ ~B ⇒ ~A" 
-label="Modus Tollens" 
-description="If the result (B) did not occur, it is certain that the cause (A) did not occur." 
-color="#ef4444" 
-/> 
+This is the "cheat code" test-takers miss most often. It's a powerful tool for negating a cause once you know the conclusion is false.
 
-<Callout type="warning"> 
-**Beware of inversion errors**: In “When it rains, the ground gets wet”, do not conclude that “It rained (A)” just because “The ground was wet (B)”! (Someone may have sprinkled water on it) 
-You can say **"it didn't rain(~A)"** only if **"the ground wasn't wet(~B)"**. 
-</Callout> 
+<FormulaBox
+  formula="(A → B) ∧ ~B  ⇒  ~A"
+  label="Modus Tollens"
+  description="If the result (B) didn't happen, the cause (A) certainly didn't happen either."
+  color="#ef4444"
+/>
 
---- 
+<Callout type="warning">
+  **Watch out for the fallacy of affirming the consequent**: from "If it rains, the ground gets wet," you cannot conclude "it rained (A)" just because "the ground is wet (B)"! (Someone could have hosed it down.)
+  You can only say **"it didn't rain (~A)"** when you know **"the ground isn't wet (~B)."**
+</Callout>
 
-## 3. Solving evolving problems (Step 7: Chaining) 
+---
 
-**Problem 6**: If all of the following premises are true, which conclusion is necessarily true? 
+## 3. Evolving problem practice (Step 7: chaining it together)
 
-> - Premise 1: If you are sincere, you will succeed. 
-> - Premise 2: If you are not happy, you are not successful. 
-> - Premise 3: Cheolsu is sincere. 
+**Question 6**: Given that all of the following premises are true, which conclusion must be true?
 
-1. The retreat was successful, but I was not happy. 
-2. Cheolsu is happy. 
-3. The withdrawal was not successful. 
-4. If you succeed, you will definitely be happy. 
+> - Premise 1: If you are sincere, you succeed.
+> - Premise 2: If you are not happy, you have not succeeded.
+> - Premise 3: Cheolsu is sincere.
 
-<Callout type="tip"> 
-**[Thought Process: Chain Construction]** 
-1. Step 1 (Symbolization): 
-- (1) Sincerity → Success 
-- (2) ~Happiness → ~Success 
-2. Step 2 (Taking Treatment): 
-- Treatment of (2): **Success → Happiness** 
-3. Step 3 (Chaining): 
-- Sincerity → Success → Happiness 
-- In other words, **sincerity → happiness** 
-4. Step 4 (substituting facts): 
-- Cheolsu is sincere (T). 
-- Therefore, Cheolsu is happy (T). 
+1. Cheolsu succeeded, but he is not happy.
+2. Cheolsu is happy.
+3. Cheolsu did not succeed.
+4. If you succeed, you are necessarily happy.
 
-**Correct answer: 2** 
-</Callout> 
+<Callout type="tip">
+**[Thought process: building the chain]**
+1. Step 1 (symbolize):
+   - (1) Sincere → Succeed
+   - (2) ~Happy → ~Succeed
+2. Step 2 (take the contrapositive):
+   - Contrapositive of (2): **Succeed → Happy**
+3. Step 3 (chain them together):
+   - Sincere → Succeed → Happy
+   - In other words, **Sincere → Happy**
+4. Step 4 (plug in the fact):
+   - Cheolsu is sincere (T).
+   - Therefore, Cheolsu is happy (T).
 
---- 
+**Correct answer: 2**
+</Callout>
 
-## 4. Solving evolving problems (Step 8: Backward reasoning) 
+---
 
-**Problem 7**: What premises are necessary to derive the following conclusion? 
+## 4. Evolving problem practice (Step 8: reasoning backward)
 
-> - **Premise 1**: If the weather is nice, we go on a picnic. 
-> - **Premise 2**: I feel good when I go on a picnic. 
-> - **Conclusion**: If you're not in a good mood, you're under bad weather. 
+**Question 7**: Which premise is needed to derive the following conclusion?
 
-1. If the weather is bad, don’t go on a picnic. 
-2. If you feel good, you go on a picnic. 
-3. The conclusion is already drawn without any additional premises. 
-4. I don’t feel good if I don’t go on a picnic. 
+> - **Premise 1**: If the weather is nice, we go on a picnic.
+> - **Premise 2**: If we go on a picnic, we're in a good mood.
+> - **Conclusion**: If we're not in a good mood, the weather wasn't nice.
 
-<Callout type="tip"> 
-**[Thought Process]** 
-1. Chain: nice weather → picnic feeling → good mood 
-2. Final chain: **good weather → good mood** 
-3. Confirmation of conclusion: The conclusion “~good mood → ~good weather” is the **treatment** of the final chain. 
-4. Therefore, the situation has already been perfectly logically derived. 
+1. If the weather isn't nice, we don't go on a picnic.
+2. If we're in a good mood, we went on a picnic.
+3. The conclusion already follows with no additional premise needed.
+4. If we don't go on a picnic, we're not in a good mood.
 
-**Correct answer: 3** 
-</Callout> 
+<Callout type="tip">
+**[Thought process]**
+1. Chain: Nice weather → Picnic → Good mood
+2. Final chain: **Nice weather → Good mood**
+3. Check the conclusion: "~Good mood → ~Nice weather" is simply the **contrapositive** of the final chain.
+4. So the conclusion is already fully and validly derived, with nothing extra required.
 
---- 
+**Correct answer: 3**
+</Callout>
 
-## 🚀 Insight from the 200,000 won lecture 
-As soon as true experts see the premise, they change the 'treatment' in their head frequently and quickly catch structures such as "A → B → C" or "A → B, ~C → ~B." As you practice, get into the habit of drawing arrows next to sentences. Coding is the only way to achieve both speed and accuracy. 
+---
 
---- 
+## 🚀 Insight from the premium course
+True experts flip to the **contrapositive** in their head the instant they see a premise, and instantly spot structures like "A → B → C" or "A → B, ~C → ~B." As you practice, get in the habit of drawing an arrow next to every sentence. Symbolization is the only way to gain both speed and accuracy at once.
 
-In the next enrichment lesson, we will conquer a quiz of a higher difficulty level through **reductio ad** and **number of cases**.
+---
+
+In the next lesson, we'll use **reductio ad absurdum** and **case splitting** to conquer an even harder tier of puzzles.

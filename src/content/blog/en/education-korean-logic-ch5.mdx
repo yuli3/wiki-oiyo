@@ -2,16 +2,15 @@
 track: academy
 series: '논리적 사고'
 chapter: 5
-title: "Public Enterprise Korean Language Logic Ch5. Final Weapon - Roadmap for conquering and passing di..."
-description: "The final gateway. Use all the skills you have learned so far (categorical propositions, De Morgan, reductiometry, number of cases) to beat the most difficult logic quiz. Make the thinking model of..."
+title: "Public Enterprise Korean Language Logic Ch5. The Final Weapon — Conquering High-Difficulty Quizzes and Your Roadmap to Passing"
+description: "The last gate. Mobilize everything you've learned so far — categorical propositions, De Morgan's laws, reductio ad absurdum, case splitting — to break the hardest logic puzzles on the test. Make the mindset of the top 1% your own."
 pubDate: 2026-04-13T00:00:00.000Z
 category: Korean Logic
 tags:
   - Education
-  - 국어논리
-  - NCS
-  - PSAT
-  - 최종정리
+  - korean-logic
+  - ncs
+  - psat
 locale: en
 market: KR
 audienceMarket: GLOBAL
@@ -19,100 +18,97 @@ contentScope: local
 localizationMode: localized
 author: Oiyo
 ---
-import { LectureTable } from "@/features/education-common/components/LectureVisuals"; 
-import FormulaBox from "@/components/mdx/FormulaBox.astro"; 
-import Callout from "@/components/mdx/Callout.astro"; 
-import FlowChart from "@/components/mdx/FlowChart.astro"; 
 
-# Chapter 5. The Ultimate Weapon: Conquering the Highly Difficulty Quiz 
+import { LectureTable } from "@/features/education-common/components/LectureVisuals";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Callout from "@/components/mdx/Callout.astro";
+import FlowChart from "@/components/mdx/FlowChart.astro";
 
-Congratulations! You have now covered everything from the basics of logic to the more advanced techniques of reductiometry. In the last class, we will teach you the **final algorithm** so that you can demonstrate your master's skills without panicking when you encounter the **'complex reasoning quiz'** that makes test takers cry in the actual NCS or PSAT. 
+# Chapter 5. The Final Weapon: Conquering High-Difficulty Quizzes
 
---- 
+Congratulations. You've now made your way through everything from the basics of logic to the advanced technique of reductio ad absurdum. In this final lesson, we'll hand you the **master algorithm** for staying calm and performing like an expert the moment you run into one of the **"compound inference puzzles"** that make test-takers cry on the real NCS or PSAT.
 
-## 1. 1% experts’ ‘problem solving algorithm’ 
+---
 
-The moment you read the question, you have 5 seconds to decide the next 4 steps. 
+## 1. The top 1%'s "problem-solving algorithm"
 
-<FlowChart 
-title="Logic Quiz Defeating Process" 
-steps={[ 
-{ title: "1. Symbolization", description: "Simplify all sentences into →, ∧, ∨." }, 
-{ title: "2. Confirmed search", description: "Find information with fixed true/false values, such as ~A and B." }, 
-{ title: "3. Chain connection", description: "If there is confirmed information, the chain is connected. If not, the treatment is taken and combined." }, 
-{ title: "4. Choose a strategy", description: "If the chain is broken, break through with 'reductio' or 'number of cases'." } 
-]} 
-/> 
+The instant you read a question, you need to decide the following four steps within five seconds.
 
---- 
+<FlowChart
+  title="The logic-quiz-breaking process"
+  steps={[
+    { title: "1. Symbolize", description: "Reduce every sentence to →, ∧, and ∨." },
+    { title: "2. Search for a confirmed fact", description: "Look for information with a fixed truth value, like ~A or B." },
+    { title: "3. Chain it together", description: "If you have a confirmed fact, extend the chain from it. If not, take contrapositives and link things up that way." },
+    { title: "4. Pick a strategy", description: "If the chain breaks, push through with 'reductio ad absurdum' or 'case splitting.'" }
+  ]}
+/>
 
-## 2. Solving evolving problems (Step 9: The ultimate in complex reasoning) 
+---
 
-**Problem 6 (NCS/PSAT style)**: If all five conditions below are true, which conclusion is necessarily true? 
+## 2. Evolving problem practice (Step 9: the ultimate compound-inference boss)
 
-> 1. If A attends the meeting, B also attends. 
-> 2. B does not attend or Byoung attends. 
-> 3. If Byeong does not attend, Jeong will attend. 
-> 4. If Mu attends, Jeong does not attend. 
-> 5. Person A attended the meeting. 
+**Question 6 (NCS/PSAT style)**: Given that all five of the following conditions are true, which conclusion must be true?
 
-1. Jeong attended and Eul did not attend. 
-2. Both Byeong and Mu attended. 
-3. Byeong attended, but Jeong did not. 
-4. Eul attended and Mu did not attend. 
+> 1. If A attends the meeting, B attends too.
+> 2. Either B does not attend, or C attends.
+> 3. If C does not attend, D attends.
+> 4. If E attends, D does not attend.
+> 5. A attended the meeting.
 
-<Callout type="tip"> 
-**[Master's thought flow]** 
-1. **Symbolization**: 
-- (1) A → B 
-- (2) ~Eul ∨ Byeong (Conversion: **Eul → Byeong**) 
-- (3) ~Byeong → Jeong 
-- (4) Mu → ~jeong (Treatment: **jeong → ~mu**) 
-- (5) **A (confirmed information!)** 
+1. D attended and B did not attend.
+2. Both B and C attended.
+3. C attended and D did not attend.
+4. A did not attend.
 
-2. **Chain Link**: 
-- A (5) → B (1) → B (2) 
-- Now that it is a disease (T), the antecedent is negated in (3) “~byeong → Jeong”, so forward inference is no longer possible. 
-- However, it is possible to connect "**mu → ~jeong**", which is the counterpart of (4) "jeong → ~mu", and "**~jeong → bottle**", which is the counterpart of (3). 
+<Callout type="tip">
+**[A master's thought process]**
+1. **Symbolize**:
+   - (1) A → B
+   - (2) ~B ∨ C (converted: **B → C**)
+   - (3) ~C → D
+   - (4) E → ~D (contrapositive: **D → ~E**)
+   - (5) **A (confirmed information!)**
 
-3. **Find the final conclusion**: 
-- Since A attended, **B must attend** (T) 
-- Since Eul attended **Byeong must attend** (T) 
-- It is unknown whether **Mu** will attend (it is unknown what will happen to Jeong even if Mu does not come, based on premise 3) 
-- However, option 4: the **'Eul was present'** part is 100% certain. 
-- **Mu did not attend?** If Mu attends (T), affection will not come (~jeong) due to (4), and illness will come due to the treatment of (3), “~jeong → illness,” which does not contradict the facts already confirmed. However, on the other hand, just because radish did not come does not create a logical contradiction. 
+2. **Chain it together**:
+   - Start from the confirmed fact (5): **A(T)**.
+   - By (1), A → B, so → **B(T)**.
+   - By the converted form of (2), B → C, so → **C(T)**.
 
-4. **Re-analysis of options**: 
-- Numbers 1, 2, and 3 require definitive information on either Yes or No, but are unknown. 
-- **Wait!** Let’s look at (3) and (4) again. 
-- A (T) → Eul (T) → Byeong (T). 
-- If Byeong attends (T), the antecedent (~ Byeong) of (3) becomes false and **whether Jeong is present is unknown**. 
-- If it is unclear whether it is defined, **it is also unclear whether it is meaningless**. 
-- But the point of this problem is that **'Eul attended'** and **'Byeong attended'** are 100% certain. 
+3. **Can the remaining propositions be pinned down?**
+   - Since C is true, the antecedent (~C) of (3) "~C → D" is false → **whether D attends is unknown** (a false antecedent forces nothing in a conditional).
+   - Since D is undetermined, (4) leaves **whether E attends unknown** as well.
+   - In other words, the only thing that's **100% certain here is that A, B, and C all attended.**
 
-**Correct answer: Eul and Byeong must attend. (Select the most obvious combination among the options)** 
-</Callout> 
+4. **Check each option**:
+   - ① Makes a claim about D and B → D is unknown, and B did attend anyway, so this is **false**.
+   - ② **Both B and C attended** → confirmed above. **True!**
+   - ③ Includes a claim about D → since D is unknown, this **can't be confirmed**.
+   - ④ A did not attend → directly contradicts (5) → **false**.
 
---- 
+**Answer: ② Both B and C attended.** (the one conclusion the chain of confirmed information forces)
+</Callout>
 
-## 3. The final blow to passing: ‘Mistake prevention’ checklist 
+---
 
-1. **"Or (∨)" processing**: Was it necessarily changed into a conditional statement of "If not A, then B" and inserted into the chain? 
-2. **"Only in the case of ~"**: Did you write the arrow direction in the opposite direction? (A iff B) 
-3. **"Some" vs "All"**: Did you carelessly connect a chain of arrows in the Some proposition? 
-4. **Time Management**: If you don't see the chain within 1 minute, do you immediately start **reductio (what if)**? 
+## 3. Your final checklist before passing: "mistake prevention"
 
---- 
+1. **Handling "or (∨)"**: Did you convert it into a conditional — "If not A, then B" — before slotting it into the chain?
+2. **"Only if ~"**: Did you accidentally write the arrow backward? (A iff B)
+3. **"Some" vs. "All"**: In a "Some" proposition, did you carelessly extend an arrow chain where you shouldn't have?
+4. **Time management**: If you can't see the chain within a minute, did you immediately switch to **reductio ad absurdum (making an assumption)**?
 
-## 🎓 Master’s final message: Completion of the 200,000 won lecture roadmap 
+---
 
-Studying logic is **'quality over quantity'**. Rather than solving 100 problems mechanically, it is more important to practice completely decomposing 10 problems into the steps of **'Symbolization - Chain - Confirmation - Inference'**. 
+## 🎓 A master's final message: completing the premium-course roadmap
 
-The **reductio law** and **number of cases** learned through this class will be powerful tools that will make your brain the clearest even in complex decision-making situations in life. 
+Studying logic is about **"quality over quantity."** Rather than grinding through 100 problems on autopilot, it's far more valuable to practice fully breaking down 10 problems into the steps of **"symbolize → chain → confirm → infer."**
 
-We sincerely support your success! 
+The **reductio ad absurdum** and **case splitting** techniques you've learned in this course will be powerful tools that sharpen your thinking even in complex, real-life decisions.
 
---- 
+We're rooting for your success!
 
-**[Appendix: Premium Logic Summary PDF Guide to be downloaded]** 
-(This lecture plan has been optimized for practical application.)
+---
+
+**[Appendix: a premium logic-summary PDF guide is coming soon]**
+(This course was optimized for practical, exam-ready application.)

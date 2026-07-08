@@ -2,123 +2,122 @@
 track: academy
 series: '논리적 사고'
 chapter: 4
-title: "Public Enterprise Korean Language Logic Ch4. Master's Tools — Reductio and Number of Cases"
-description: "The ultimate weapon to solve difficult logic quizzes. We teach 'separation of the number of cases' when there is no definite information and 'reductio' skills to find contradictions in a paid lectu..."
+title: "Public Enterprise Korean Language Logic Ch4. A Master's Toolkit — Reductio ad Absurdum and Case Splitting"
+description: "The ultimate weapons for cracking high-difficulty logic puzzles. Learn 'case splitting' for when there's no confirmed information, and 'reductio ad absurdum' for spotting contradictions, taught at premium-course depth."
 pubDate: 2026-04-13T00:00:00.000Z
 category: Korean Logic
 tags:
   - Education
-  - 국어논리
-  - 귀류법
-  - 경우의수
-  - 전략
+  - korean-logic
+  - reductio
+  - case-split
 locale: en
 author: Oiyo
 ---
-import { LectureTable } from "@/features/education-common/components/LectureVisuals"; 
-import FormulaBox from "@/components/mdx/FormulaBox.astro"; 
-import Callout from "@/components/mdx/Callout.astro"; 
-import FlowChart from "@/components/mdx/FlowChart.astro"; 
 
-# Chapter 4. Master's Tools: Reductio and Number of Cases 
+import { LectureTable } from "@/features/education-common/components/LectureVisuals";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Callout from "@/components/mdx/Callout.astro";
+import FlowChart from "@/components/mdx/FlowChart.astro";
 
-The treatment, syllogism, and de Morgan that we have learned so far are the 'basic tools'. But what frustrates us in real exams is **"not knowing where to start."** When no information is confirmed, the masters unleash two powerful weapons. 
+# Chapter 4. A Master's Toolkit: Reductio ad Absurdum and Case Splitting
 
---- 
+The contrapositive, syllogisms, and De Morgan's laws you've learned so far are your "basic tools." But what really rattles you on the actual test is **"not knowing where to even start."** When not a single piece of information is confirmed, masters reach for two powerful weapons.
 
-## 1. Reductio ad absurdum 
+---
 
-**Reduction** is a method of verifying whether a **contradiction** occurs when assuming a claim and proving that the assumption is wrong. 
+## 1. Reductio ad absurdum (proof by contradiction)
 
-<FlowChart 
-title="Reductio method execution algorithm" 
-steps={[ 
-{ title: "Hypothesis Setting", description: "Assume one proposition whose true/false unknown is arbitrarily 'true'." }, 
-{ title: "Chain inference", description: "Based on that assumption, the truth/false of other propositions is determined along the arrow chain." }, 
-{ title: "Contradiction discovery", description: "Check whether conflicting information (such as A and ~A) appears during the inference process." }, 
-{ title: "Drawing a conclusion", description: "What if a contradiction occurs? → The initial assumption is 'false'. What if there is no contradiction? → The assumption is 'possible'." } 
-]} 
-/> 
+**Reductio ad absurdum** proves that an assumption is wrong by checking whether assuming it leads to a **contradiction**.
 
---- 
+<FlowChart
+  title="Reductio ad absurdum execution algorithm"
+  steps={[
+    { title: "Set up a hypothesis", description: "Arbitrarily assume that one proposition of unknown truth value is 'true.'" },
+    { title: "Chain the inference", description: "Based on that assumption, follow the chain of arrows to determine the truth value of the other propositions." },
+    { title: "Look for a contradiction", description: "Check whether the reasoning produces conflicting information (e.g., both A and ~A)." },
+    { title: "Draw the conclusion", description: "If a contradiction shows up? → The initial assumption is 'false.' No contradiction? → The assumption is 'possible.'" }
+  ]}
+/>
 
-## 2. Case Split 
+---
 
-This is a strategy used when there is a lot of “or (∨)” in the conditional sentence or when there is no definitive information. 
+## 2. Case splitting
 
-- **Method**: Select one variable and divide it into [If A] and [If ~A] and record each result in a table (Matrix). 
-- **Tip**: If there is a **common conclusion** in both cases, that is a “conclusion that is necessarily true”. 
+Use this strategy when a conditional is loaded with "or (∨)" statements, or when there's no confirmed information at all.
 
---- 
+- **Method**: Pick one variable, split into the [case where it's true] and the [case where it's false], and record the outcome of each in a table (matrix).
+- **Tip**: If both cases lead to a **shared conclusion**, that shared conclusion is exactly the "conclusion that must be true."
 
-## 3. Solving evolving problems (Step 5: Practicing the method of reductio) 
+---
 
-**Problem 4**: If only one of the following four statements is true, who is the culprit? 
+## 3. Evolving problem practice (Step 5: reductio ad absurdum in action)
 
-> - **갑**: 내가 범인이다.
- > - **Eul**: Person A is not the culprit. 
-> - **Byung**: Eul is not the culprit. 
-> - **Jeong**: Illness is not the culprit. 
+**Question 4**: The culprit is one of Person A, B, C, or D. Only one of the following four statements is true. Who is the culprit?
 
-<Callout type="tip"> 
-**[Thought Process: Applying the Reductio ad]** 
-1. **Assume A is true (culprit: A)** 
-- A (T), B (F), Byeong (T), Jeong (T) → There are 3 people who say it is true (contradiction! Only one person has to say it is true) 
-2. **Assume B is true (culprit: not A)** 
-- What if the culprit is Eul? 
-- A (F), Eul (T), Byeong (F), Jeong (T) → 2 true people (contradiction!) 
-3. **Assume the illness is true (culprit: B)** 
-- A (F), Eul (F), Byeong (T), Jeong (T) → 2 true people (contradiction!) 
-4. **Assume the statement is true (culprit: bottle)** 
-- A: The culprit is a disease, so ‘A is the culprit’ is false (F) 
-- B: ‘A is not the culprit’ is true (T) 
-- Bottle: ‘Eul is not the culprit’ is true (T) 
-- Jeong: ‘Disease is not the culprit’ is false because ‘disease is the culprit’ (F) 
-- 2 true people (T, T) → Contradiction! 
+> - **Person A**: B is the culprit.
+> - **Person B**: D is the culprit.
+> - **Person C**: I am not the culprit.
+> - **Person D**: B's statement is false.
 
-5. **Wait! Find the contradiction first.** (Paid lecture skill) 
-- **A vs Eul** is a contradictory relationship (one must be true, one must be false). 
-- Therefore, one person who is 'true' must be either A or E. 
-- **Class status must always be False (F)**. 
-- Since the illness is false → **Eul is the culprit.** (Confirmed!) 
-- Since the truth is false → **The bottle is the culprit.** (If there cannot be multiple culprits in one incident, check the problem setting) 
+<Callout type="tip">
+**[Thought process: applying reductio ad absurdum]**
+1. **Assume A is the culprit**
+   - A (F), B (F), C (T), D (T) → 2 statements are true (contradiction! only one may be true)
+2. **Assume B is the culprit**
+   - A (T), B (F), C (T), D (T) → 3 statements are true (contradiction!)
+3. **Assume C is the culprit**
+   - A: "B is the culprit" is false (F)
+   - B: "D is the culprit" is false (F)
+   - C: since C is the culprit, "I am not the culprit" is false (F)
+   - D: B's statement really is false, so this is true (T)
+   - Exactly 1 statement is true → **condition satisfied!**
+4. **Assume D is the culprit**
+   - A (F), B (T), C (T), D (F) → 2 statements are true (contradiction!)
 
-**Correct answer: The disease is the culprit, and B is the person who made the true statement.** 
-</Callout> 
+5. **Wait — spotting the contradictory pair first is faster.** (a premium-course skill)
+   - **B and D** stand in a contradictory relationship (D directly denies B's statement → exactly one of them must be true, the other false).
+   - So the single "true" statement has to belong to either B or D.
+   - That means **A and C must both be false (F).**
+   - Since C's statement ("I am not the culprit") is false → **C is the culprit!** (confirmed)
+   - If C is the culprit, then B's statement ("D is the culprit") is false and D's statement ("B's statement is false") is true — everything lines up.
 
---- 
+**Answer: The culprit is C, and D is the one who told the truth.**
+</Callout>
 
-## 4. Solving evolving problems (Step 6: Separating the number of cases) 
+---
 
-**Problem 5**: There are the following conditions regarding whether to proceed with projects A, B, and C. What is necessarily true? 
+## 4. Evolving problem practice (Step 6: case splitting)
 
-> 1. If A is promoted, B is also promoted. 
-> 2. If B is not promoted, C will not be promoted either. 
-> 3. Either C is promoted or A is promoted. 
+**Question 5**: The following conditions describe whether projects A, B, and C move forward. Which of these must be true?
 
-<Callout type="tip"> 
-**[Thinking Process: Divide by Number of Cases]** 
-Symbolization: (1) A→B, (2) ~B→~C (treatment: C→B), (3) C∨A 
+> 1. If A moves forward, B moves forward too.
+> 2. If B does not move forward, C does not move forward either.
+> 3. Either C moves forward, or A moves forward.
 
-**Case 1: When A is promoted (A=T)** 
-- by (1) B=T 
-- C is unknown due to treatment in (2) (either T or F is possible) 
-- (3) C∨A is satisfied (since A is T) 
+<Callout type="tip">
+**[Thought process: splitting into cases]**
+Symbolize: (1) A→B, (2) ~B→~C (contrapositive: C→B), (3) C∨A
 
-**Case 2: When A is not promoted (A=F)** 
-- (3) **C=T required** by C∨A 
-- By the treatment (C → B) in (2), **B=T is required** 
+**Case 1: A moves forward (A=T)**
+- By (1), B=T
+- C is undetermined by the contrapositive of (2) (either T or F is possible)
+- (3) C∨A is satisfied (since A is T)
 
-**Overall**: Whether Case 1 or Case 2, **In general, B is unconditionally promoted (T)**. 
+**Case 2: A does not move forward (A=F)**
+- By (3) C∨A, **C=T is required**
+- By the contrapositive of (2) (C→B), **B=T is required**
 
-**Correct answer: B will definitely be promoted.** 
-</Callout> 
+**Putting it together**: In both Case 1 and Case 2, **B moves forward (T) without exception.**
 
---- 
+**Answer: B is guaranteed to move forward.**
+</Callout>
 
-## 🚀 Insight from the 200,000 won lecture 
-“Difficult problems are not solved because of lack of knowledge, but because of lack of **courage to assume**.” If you don't have any definitive information, just grab one and say 'let's assume so'. All the formulas of logic will start working from that moment. 
+---
 
---- 
+## 🚀 Insight from the premium course
+"Hard problems don't stump you because you lack knowledge — they stump you because you lack **the nerve to make an assumption**." If there's no confirmed information, just grab any one variable and say "let's assume it's true." Every formula of logic you've learned starts working the moment you do.
 
-In the next supplementary lesson, we will defeat the final bosses of the logic quiz through **mathematical logic and precise measurement of the number of cases**.
+---
+
+In the next lesson, we'll take down the final bosses of logic puzzles using **quantitative reasoning and precise case counting**.

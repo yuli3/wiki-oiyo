@@ -2,112 +2,112 @@
 track: academy
 series: '논리적 사고'
 chapter: 2
-title: "Public Enterprise Korean Language Logic Ch2. De Morgan’s Law and Complex Propositions — Confusing..."
-description: "We delve into De Morgan's law, one of the 10 commandments of logic, at the level of a 200,000 won paid lecture. Negation of declaration (∧) and declaration (∨), and strategic interpretation of ‘eit..."
+title: "Public Enterprise Korean Language Logic Ch2. De Morgan's Laws and Compound Propositions — Solving Confusing 'Negations' for Good"
+description: "A deep dive into De Morgan's laws — one of logic's ten commandments — at the depth of a premium paid course. Covers negating conjunctions (∧) and disjunctions (∨), plus the strategic reading of 'A or B.'"
 pubDate: 2026-03-01T00:00:00.000Z
 category: Korean Logic
 tags:
   - Education
-  - 국어논리
-  - 공기업
-  - 드모르간
+  - korean-logic
+  - de-morgan
 locale: en
 author: Oiyo
 ---
-import { 
-LectureTable, 
-} from "@/features/education-common/components/LectureVisuals"; 
-import FormulaBox from "@/components/mdx/FormulaBox.astro"; 
-import Callout from "@/components/mdx/Callout.astro"; 
-import FlowChart from "@/components/mdx/FlowChart.astro"; 
 
-# Chapter 2. De Morgan’s law and negation of complex propositions 
+import {
+  LectureTable,
+} from "@/features/education-common/components/LectureVisuals";
+import FormulaBox from "@/components/mdx/FormulaBox.astro";
+import Callout from "@/components/mdx/Callout.astro";
+import FlowChart from "@/components/mdx/FlowChart.astro";
 
-When negating a compound proposition, simply adding 'an' or 'not' in front of the word is the way of the underdogs. Experts ‘flip’ the logical structure of the entire sentence through **De Morgan’s Law**. In particular, in public enterprise writing, negation is induced through the question “Which of the following is not true?”, so this rule is like a survival skill. 
+# Chapter 2. De Morgan's Laws and the Negation of Compound Propositions
 
---- 
+When you negate a compound proposition, simply slapping "not" in front of a word is the amateur move. Experts use **De Morgan's laws** to "flip" the logical structure of the whole sentence. Public-company aptitude tests (NCS) love to trigger negation through prompts like "Which of the following is NOT true?" — which makes this law a survival skill.
 
-## 1. DeMorgan’s Core: Switch Strategy 
+---
 
-When the negation sign (~) enters parentheses, two things change: 
-1. **True/False** of each element changes. 
-2. The connecting link **connector (∧, ∨)** switches. 
+## 1. The core of De Morgan's laws: the switch strategy
 
-<FormulaBox 
-formula="~(A ∧ B) ≡ ~A ∨ ~B" 
-label="De Morgan's First Law (Negation of AND)" 
-description="Not 'both' means 'not at least one'." 
-color="#ef4444" 
-/> 
+When a negation sign (~) pushes into a set of parentheses, two things change:
+1. The **truth value** of each element flips.
+2. The **connective** (∧, ∨) between them switches.
 
-<FormulaBox 
-formula="~(A ∨ B) ≡ ~A ∧ ~B" 
-label="De Morgan's second law (negation of OR)" 
-description="Not 'either one' means 'not both'." 
-color="#8b5cf6" 
-/> 
+<FormulaBox
+  formula="~(A ∧ B)  ≡  ~A ∨ ~B"
+  label="De Morgan's First Law (Negating AND)"
+  description="'Not both' means 'at least one is false.'"
+  color="#ef4444"
+/>
 
---- 
+<FormulaBox
+  formula="~(A ∨ B)  ≡  ~A ∧ ~B"
+  label="De Morgan's Second Law (Negating OR)"
+  description="'Not either one' means 'both are false.'"
+  color="#8b5cf6"
+/>
 
-## 2. Strategic understanding of the ‘or(∨)’ proposition 
+---
 
-When you encounter the sentence **“It is either A or B”** in a public enterprise exam, you must think of the following three things at the same time. (This is the core of the 200,000 won lecture.) 
+## 2. A strategic read on "or (∨)" propositions
 
-1. **At least one person**: At least one of A and B is true. (both can be true) 
-2. **조건문 변환**: ~A → B (A가 아니면 무조건 B여야 한다)
- 3. **Remove declaration**: What if A ∨ B is true but A is false? → **B is unconditionally true.** 
+When a public-enterprise exam gives you the sentence **"A or B"**, you should immediately think of all three of the following at once. (This is the heart of the premium course.)
 
---- 
+1. **At least one**: At least one of A and B is true (both being true is also fine).
+2. **Convert to a conditional**: ~A → B (if A is false, B has to be true).
+3. **Eliminate a disjunct**: If A ∨ B is true and A turns out to be false, then → **B has to be true.**
 
-## 3. Evolving problem solving (Step 5: De Morgan application) 
+---
 
-**Problem 4**: When the proposition “I eat fruits and vegetables” is **false**, what is necessarily true? 
+## 3. Evolving problem practice (Step 5: applying De Morgan's laws)
 
-1. I don’t eat fruit and I don’t eat vegetables. 
-2. If you don't eat fruit, eat vegetables. 
-3. Don't eat fruit or vegetables. 
-4. If you eat vegetables, don’t eat fruit. 
+**Question 4**: When the proposition "I eat both fruit and vegetables" is **false**, which of the following must be true?
 
-<Callout type="tip"> 
-**[Thought Process]** 
-1. Symbolization: Fruit (A) ∧ Vegetable (B) 
-2. Negative application: ~(A ∧ B) ≡ ~A ∨ ~B 
-3. Interpretation: “I don’t eat fruit (OR) or I don’t eat vegetables.” 
+1. I eat neither fruit nor vegetables.
+2. If I don't eat fruit, I eat vegetables.
+3. I don't eat fruit, or I don't eat vegetables.
+4. If I eat vegetables, I don't eat fruit.
 
-**Correct answer: 3** 
-</Callout> 
+<Callout type="tip">
+**[Thought process]**
+1. Symbolize: Fruit (A) ∧ Vegetables (B)
+2. Apply the negation: ~(A ∧ B) ≡ ~A ∨ ~B
+3. Interpretation: "I don't eat fruit, OR I don't eat vegetables."
 
---- 
+**Correct answer: 3**
+</Callout>
 
-## 4. Solving evolving problems (Step 6: Chain of complex negation) 
+---
 
-**Problem 5**: If all of the following premises are true, which one is necessarily true? 
+## 4. Evolving problem practice (Step 6: chaining compound negations)
 
-> - Premise 1: Either A passes or B passes. 
-> - Premise 2: If A passes, B also passes. 
-> - Premise 3: The bottle did not pass. 
+**Question 5**: Given that all of the following premises are true, which one must be true?
 
-1. Student B did not pass. 
-2. Both A and B passed. 
-3. Student B passed. 
-4. Person A passed. 
+> - Premise 1: Either A passes or B passes.
+> - Premise 2: If A passes, C also passes.
+> - Premise 3: C did not pass.
 
-<Callout type="tip"> 
-**[Step-by-Step Algorithm]** 
-1. Symbolization: (1) A ∨ Eul, (2) A → Byeong, (3) ~ Byeong (confirmed!) 
-2. Start inference: 
-- Since it is a disease (3), based on the treatment in premise 2 (**~ disease → ~A**), **A is confirmed to have failed (~A).** 
-- In premise 1 (A ∨ B), 'A' was found to be false, so by the **'declaration removal'** rule, **the remaining one, 'B', must be true (pass).** 
-3. Conclusion: Student B passed. 
+1. B did not pass.
+2. Both A and B passed.
+3. B passed.
+4. A passed.
 
-**Correct answer: 3** 
-</Callout> 
+<Callout type="tip">
+**[Step-by-step algorithm]**
+1. Symbolize: (1) A ∨ B, (2) A → C, (3) ~C (confirmed!)
+2. Start reasoning:
+   - Since ~C is confirmed (3), the contrapositive of premise 2 (**~C → ~A**) confirms **A did not pass (~A).**
+   - Since "A" turned out to be false in premise 1 (A ∨ B), the **"eliminate a disjunct"** rule forces the remaining option, **B, to be true (passed).**
+3. Conclusion: B passed.
 
---- 
+**Correct answer: 3**
+</Callout>
 
-## 🚀 Insight from the 200,000 won lecture 
-In practice, De Morgan's law itself does not appear alone, but is combined with **declaration removal (A∨B, ~A ∴B)** as in the above problem. When you see information that says "A or B," always prepare for the "the moment it turns out that it's not one of them, the other one is the culprit." 
+---
 
---- 
+## 🚀 Insight from the premium course
+In practice, De Morgan's laws rarely appear on their own — they're usually paired with **disjunct elimination (A∨B, ~A ∴ B)**, exactly like the problem above. Whenever you see an "A or B" statement, always be ready for the scenario: **"the moment one of the two is ruled out, the other one is guilty."**
 
-In the next supplementary lesson, you will learn how to solve difficult quizzes with insufficient information through **reductio ad subjunctive law** and **number of cases**.
+---
+
+In the next lesson, we'll use **reductio ad absurdum (the method of assumption)** and **case splitting** to solve high-difficulty puzzles that don't give you enough confirmed information.
