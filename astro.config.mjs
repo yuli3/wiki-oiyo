@@ -18,6 +18,14 @@ const BRIDGE_SLUGS = new Set(
   JSON.parse(readFileSync(new URL("./src/config/bridge-slugs.json", import.meta.url), "utf8")),
 );
 
+// Crawl-budget policy: served to users, kept out of the index. Googlebot rations
+// crawling on low-authority domains, and these locales consumed ~35% of wiki's
+// submitted URLs while producing no clicks. Must stay in lockstep with
+// SEO.astro's robots meta — sitemap-listed but noindex is a contradictory signal.
+const DEINDEXED_LOCALES = new Set(
+  JSON.parse(readFileSync(new URL("./src/config/deindexed-locales.json", import.meta.url), "utf8")),
+);
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://wiki.oiyo.net",
@@ -42,6 +50,8 @@ export default defineConfig({
         // Exclude noindex bridge stubs (canonical lives on blog.oiyo.net/oiyo.net)
         const segs = path.split("/").filter(Boolean);
         if (segs.length === 2 && BRIDGE_SLUGS.has(segs[1])) return false;
+        // Exclude deindexed locales (crawl budget).
+        if (segs.length > 0 && DEINDEXED_LOCALES.has(segs[0])) return false;
         return true;
       },
       // Set lastmod to today's build date

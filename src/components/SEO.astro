@@ -1,6 +1,11 @@
 ---
 import { siteConfig } from "../config/site.config";
 import { getAuthor } from "../lib/authors";
+import deindexedLocales from "../config/deindexed-locales.json";
+
+// Crawl-budget policy — see astro.config.mjs. Reachable for users, out of the
+// index, the sitemap, and the hreflang cluster.
+const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
 
 interface Props {
   title?: string;
@@ -54,9 +59,16 @@ const isLocaleCompleteRoute =
   siteConfig.locales.includes(pathSegments[0]) &&
   (pathSegments.length === 1 ||
     (pathSegments.length === 2 && !/^\d+$/.test(pathSegments[1])));
-const locales =
+const allLocales =
   availableLocales ??
   (isLocaleCompleteRoute ? siteConfig.locales : [currentLocaleSegment]);
+// Deindexed locales are dropped from the hreflang cluster: Google discards
+// hreflang annotations pointing at noindex URLs.
+const locales = allLocales.filter((l: string) => !DEINDEXED_LOCALES.has(l));
+const isDeindexedLocale = DEINDEXED_LOCALES.has(currentLocaleSegment);
+const robotsContent = isDeindexedLocale
+  ? "noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
 // Helper to generate localized URLs
 const getLocalizedUrl = (locale: string) => {
@@ -101,9 +113,9 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
 <meta name="naver-site-verification" content="e1043bad51e3be143affbe491f12354fa985fa6a" />
 
 <!-- Robots & Indexing -->
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="robots" content={robotsContent} />
+<meta name="googlebot" content={robotsContent} />
+<meta name="bingbot" content={robotsContent} />
 
 <!-- Preconnect to external origins -->
 {googleAnalyticsId && (
