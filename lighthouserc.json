@@ -12,7 +12,7 @@
         "http://localhost:8080/ko/economics-guide/",
         "http://localhost:8080/knowledge/"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": { "preset": "desktop" }
     },
     "assert": {
