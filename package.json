@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' astro build --concurrency 1",
+    "sync:category-registry": "node scripts/generate-category-registry.mjs",
+    "check:category-registry": "node scripts/generate-category-registry.mjs --check",
+    "build": "npm run sync:category-registry && NODE_OPTIONS='--max-old-space-size=8192' astro build --concurrency 1",
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "astro check",

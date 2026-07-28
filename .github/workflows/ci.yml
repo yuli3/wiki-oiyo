@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify generated category registry
+        run: npm run check:category-registry
+
       - name: Validate i18n keys
         run: npm run validate:i18n
 

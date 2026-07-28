@@ -39,6 +39,7 @@ import ProductLifeCycle from "../components/mdx/ProductLifeCycle.astro";
 import KeynesianCross from "../components/mdx/KeynesianCross.astro";
 import OrgChart from "../components/mdx/OrgChart.astro";
 import PolicyCycle from "../components/mdx/PolicyCycle.astro";
+import MdxContentHeading from "../components/mdx/MdxContentHeading.astro";
 
 import {
   LectureTable,
@@ -516,6 +517,7 @@ const transitionalMagazineCompatibilityComponents = {
 };
 
 const baseComponents = {
+  h1: MdxContentHeading,
   ...editorialComponents,
   ...diagramComponents,
   ...chartsAndMathComponents,
