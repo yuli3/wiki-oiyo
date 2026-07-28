@@ -16,7 +16,8 @@
     "audit:magazine-compat": "node scripts/audit-magazine-compat.mjs",
     "triage:magazine-compat": "node scripts/triage-magazine-compat.mjs",
     "submit:indexing": "python3 ../docs/search-submit-all.py --site wiki --new-only",
-    "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site wiki --new-only --dry-run"
+    "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site wiki --new-only --dry-run",
+    "audit:translations": "node scripts/verify-translation-batch.mjs --scan"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

@@ -13,7 +13,6 @@ tags:
 locale: en
 author: Oiyo
 ---
-
 import {
   LectureTable,
 } from "@/features/education-common/components/LectureVisuals";
@@ -21,80 +20,80 @@ import FormulaBox from "@/components/mdx/FormulaBox.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ASADChart from "@/components/mdx/ASADChart.astro";
 
-# Chapter 19. 총수요-총공급(AD-AS) 모형과 물가 결정
+# Chapter 19. The Aggregate Demand-Aggregate Supply (AD-AS) Model and Price Determination
 
-IS-LM 모형이 물가가 고정된 단기 분석이라면, AD-AS 모형은 물가($P$)의 변동을 포함하여 거시경제를 분석하는 더 포괄적인 도구이다. 본 장에서는 총수요와 총공급이 어떻게 결정되고, 경제 전체의 균형이 어떻게 이동하는지 분석한다.
-
----
-
-## 1. 총수요 (AD: Aggregate Demand)
-
-물가 수준과 국민소득 사이의 역(-)의 관계를 나타낸다.
-
-### (1) 우하향의 원인
-
-1. **이자율 효과 (Keynes Effect)**: 물가 하락 $\rightarrow$ 실질화폐공급 증가 $\rightarrow$ 이자율 하락 $\rightarrow$ 투자($I$) 증가 $\rightarrow$ 소득($Y$) 증가.
-2. **자산 효과 (Pigou Effect)**: 물가 하락 $\rightarrow$ 가계가 보유한 화폐의 실질 가치 상승 $\rightarrow$ 소비($C$) 증가 $\rightarrow$ 소득($Y$) 증가.
-3. **경상수지 효과**: 물가 하락 $\rightarrow$ 국산품의 상대 가격 하락 $\rightarrow$ 수출 증가 $\rightarrow$ 소득($Y$) 증가.
+While the IS-LM model is a short-term analysis with a fixed price level, the AD-AS model is a more comprehensive tool for analyzing the macroeconomy, incorporating fluctuations in the price level ($P$). This chapter analyzes how aggregate demand and aggregate supply are determined, and how the overall economic equilibrium shifts.
 
 ---
 
-## 2. 총공급 (AS: Aggregate Supply)
+## 1. Aggregate Demand (AD)
 
-기업이 물가 수준에 따라 생산하고자 하는 총산출량이다.
+This represents the negative (-) relationship between the price level and national income.
 
-### (1) 단기 총공급곡선 (SRAS)
+### (1) Causes of the Downward Slope
 
-- **우상향**: 임금이나 가격의 경직성 때문에 물가가 오르면 기업의 실질 이윤이 늘어 생산을 늘린다.
-- **학파별 시각**: 케인즈학파는 노동자의 '화폐환상'이나 '정보 비대칭'으로 인해 단기에 산출량이 변한다고 본다.
-
-### (2) 장기 총공급곡선 (LRAS)
-
-- **수직선**: 장기에는 모든 가격과 임금이 신축적으로 조정되므로, 물가와 상관없이 **잠재 GDP(Full Employment GDP)** 수준에서 수직선이 된다.
+1. **Interest Rate Effect (Keynes Effect)**: Fall in price level $\rightarrow$ Increase in real money supply $\rightarrow$ Fall in interest rate $\rightarrow$ Increase in investment ($I$) $\rightarrow$ Increase in income ($Y$).
+2. **Real Balance Effect (Pigou Effect)**: Fall in price level $\rightarrow$ Increase in real value of money held by households $\rightarrow$ Increase in consumption ($C$) $\rightarrow$ Increase in income ($Y$).
+3. **Net Export Effect**: Fall in price level $\rightarrow$ Fall in relative price of domestic goods $\rightarrow$ Increase in exports $\rightarrow$ Increase in income ($Y$).
 
 ---
 
-## 3. 경제의 균형과 변동 (Shock Analysis)
+## 2. Aggregate Supply (AS)
+
+This is the total output that firms are willing to produce according to the price level.
+
+### (1) Short-Run Aggregate Supply Curve (SRAS)
+
+- **Upward-sloping**: Due to wage or price stickiness, when prices rise, firms' real profits increase, leading them to expand production.
+- **Views by School of Thought**: The Keynesian school views output as changing in the short run due to workers' "money illusion" or "information asymmetry."
+
+### (2) Long-Run Aggregate Supply Curve (LRAS)
+
+- **Vertical line**: In the long run, all prices and wages adjust flexibly, so it becomes a vertical line at the **Potential GDP (Full Employment GDP)** level, regardless of the price level.
+
+---
+
+## 3. Economic Equilibrium and Fluctuations (Shock Analysis)
 
 <ASADChart
-  title="AD-AS 기본 모형"
-  xLabel="실질 GDP (Y)"
-  yLabel="물가수준 (P)"
+  title="Basic AD-AS Model"
+  xLabel="Real GDP (Y)"
+  yLabel="Price Level (P)"
   showLRAS={true}
-  caption="E: 단기 균형점 / Yf: 잠재 GDP 수준의 장기 총공급(LRAS)"
+  caption="E: Short-run equilibrium point / Yf: Long-run aggregate supply (LRAS) at potential GDP level"
 />
 
-### (1) 총수요 충격
+### (1) Aggregate Demand Shocks
 
-- $AD$ 우측 이동 $\rightarrow$ 물가 상승($P \uparrow$), 소득 증가($Y \uparrow$). (경기 과열)
+- Shift of $AD$ to the right $\rightarrow$ Rise in price level ($P \uparrow$), increase in income ($Y \uparrow$). (Economic overheating)
 
-### (2) 총공급 충격: 스태그플레이션 (Stagflation)
+### (2) Aggregate Supply Shocks: Stagflation
 
-- **부의 충격**: 원유 가격 급등 등으로 $AS$가 좌측으로 이동할 때 발생.
-- **결과**: 물가 상승($P \uparrow$)과 소득 감소($Y \downarrow$, 실업 증가)가 동시에 나타나는 최악의 상황.
-
----
-
-## 4. 정책의 시차 (Policy Lag)
-
-정부 정책이 효과를 발휘하기까지는 시간이 걸린다.
-
-- **내부 시차**: 상황 인지부터 정책 결정까지의 시간 (재정 정책이 긴 편).
-- **외부 시차**: 정책 집행부터 실물 경제 반응까지의 시간 (통화 정책이 긴 편).
+- **Negative shock**: Occurs when $AS$ shifts to the left due to a surge in oil prices, etc.
+- **Outcome**: The worst-case scenario where a rise in prices ($P \uparrow$) and a fall in income ($Y \downarrow$, rise in unemployment) occur simultaneously.
 
 ---
 
-## 5. 결론: 물가는 경제의 온도계입니다
+## 4. Policy Lags
 
-AD-AS 모형은 우리가 뉴스로 접하는 고물가와 경기 불황을 논리적으로 설명하는 틀을 제공한다. 장기적으로 경제는 언제나 잠재 수준으로 회복하려 하지만, 그 과정에서의 고통을 줄이는 것이 거시경제 정책의 존재 이유이다.
+It takes time for government policies to take effect.
 
----
-
-## 📖 참고문헌
-
-- **[거시경제학] - 정병렬**: AD-AS 모형의 심층 도출.
-- **[물가와 통화정책] - 한국은행**: 현실 정책의 사례.
+- **Inside lag**: The time from recognizing a situation to deciding on a policy (fiscal policy tends to be long).
+- **Outside lag**: The time from policy implementation to the real economy's reaction (monetary policy tends to be long).
 
 ---
 
-수고하셨습니다. 다음 시간에는 사람들의 '기대'가 정책 효과를 어떻게 무력화시키는지 분석하는 **합리적 기대 가설과 신고전학파**에 대해 학습하겠습니다.
+## 5. Conclusion: Prices Are the Economic Thermometer
+
+The AD-AS model provides a framework to logically explain the high inflation and economic recessions we encounter in the news. In the long run, the economy always tries to recover to its potential level, and reducing the pain during that process is the raison d'être of macroeconomic policy.
+
+---
+
+## 📖 References
+
+- **[Macroeconomics] - Byung-ryul Jung**: In-depth derivation of the AD-AS model.
+- **[Prices and Monetary Policy] - Bank of Korea**: Real-world policy cases.
+
+---
+
+Great job. In the next session, we will study the **Rational Expectations Hypothesis and the New Classical School**, analyzing how people's "expectations" can neutralize policy effects.

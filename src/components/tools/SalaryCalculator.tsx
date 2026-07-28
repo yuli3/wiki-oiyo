@@ -88,23 +88,23 @@ const SalaryCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' })
                         onChange={(e) => setAnnualSalary(Math.max(0, Number(e.target.value)))}
                         step={1000000}
                         min={0}
-                        className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-green-500"
                         aria-label={t.annualSalary}
                     />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 flex flex-col gap-1">
-                        <span className="text-xs font-bold text-emerald-700 uppercase tracking-wide">{t.monthlyGross}</span>
-                        <span className="text-2xl font-bold text-emerald-900">₩{fmt(Math.floor(monthlyGross))}</span>
+                    <div className="rounded-2xl bg-green-50 border border-green-200 p-5 flex flex-col gap-1">
+                        <span className="text-xs font-bold text-green-700 uppercase tracking-wide">{t.monthlyGross}</span>
+                        <span className="text-2xl font-bold text-green-900">₩{fmt(Math.floor(monthlyGross))}</span>
                     </div>
-                    <div className="rounded-2xl bg-emerald-500 p-5 flex flex-col gap-1">
-                        <span className="text-xs font-bold text-emerald-100 uppercase tracking-wide">{t.monthlyNet}</span>
+                    <div className="rounded-2xl bg-green-500 p-5 flex flex-col gap-1">
+                        <span className="text-xs font-bold text-green-100 uppercase tracking-wide">{t.monthlyNet}</span>
                         <span className="text-2xl font-bold text-white">₩{fmt(monthlyNet)}</span>
                     </div>
-                    <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 flex flex-col gap-1">
-                        <span className="text-xs font-bold text-emerald-700 uppercase tracking-wide">{t.annualNet}</span>
-                        <span className="text-2xl font-bold text-emerald-900">₩{fmt(annualNet)}</span>
+                    <div className="rounded-2xl bg-green-50 border border-green-200 p-5 flex flex-col gap-1">
+                        <span className="text-xs font-bold text-green-700 uppercase tracking-wide">{t.annualNet}</span>
+                        <span className="text-2xl font-bold text-green-900">₩{fmt(annualNet)}</span>
                     </div>
                 </div>
 

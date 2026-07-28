@@ -71,6 +71,7 @@ import InheritanceTaxCalculator from "../components/calculators/InheritanceTaxCa
 import { BondPricer, PortfolioVisualizer } from "@/features/education-calculators/BondAndPortfolioTools";
 import { TypingSpeedTest, PrisonersDilemma } from "@/features/education-calculators/UtilityGames";
 import { AttachmentTest } from "@/features/education-calculators/PsychologyTools";
+import CognitiveDissonanceLab from "@/components/content/academy/CognitiveDissonanceLab";
 import { CVPGame } from "@/features/education-calculators/AccountingGames";
 import { SWOTBuilder } from "@/features/education-calculators/BusinessStrategyTools";
 import { DeveloperUnitConverter } from "@/features/education-calculators/DeveloperTools";
@@ -333,6 +334,7 @@ const islandComponents = {
   TypingSpeedTest,
   PrisonersDilemma,
   AttachmentTest,
+  CognitiveDissonanceLab,
   CVPGame,
   SWOTBuilder,
   DeveloperUnitConverter,

@@ -1,22 +1,21 @@
-# blog-oiyo
+# wiki-oiyo
 
-Long-form content, lecture, and interactive reading platform for Oiyo, optimized for Astro and Cloudflare Pages.
+출처 기반 정의·용어·참조 지식을 제공하는 OIYO Wiki Astro/Cloudflare Pages 프로젝트다.
 
 ## Start Here
 
-The operational documentation now lives in [docs/README.md](/Users/seuncho/coding/blog/docs/README.md).
+1. [AGENTS.md](./AGENTS.md) — 정의 도메인 역할과 검증 계약
+2. [docs/README.md](./docs/README.md) — Wiki 문서 지도
+3. [SOUL.md](./SOUL.md) — 프로젝트 표현 원칙
+4. [Cross-project goals](../company-brain/goals.json) — 목표 SSOT
 
-Read in this order:
+## Verification
 
-1. [Content Charter](/Users/seuncho/coding/blog/docs/content-charter.md)
-2. [MDOC Authoring Spec](/Users/seuncho/coding/blog/docs/mdoc-authoring-spec.md)
-3. [Lecture System Blueprint](/Users/seuncho/coding/blog/docs/lecture-system-blueprint.md)
-4. [Credential Catalog Blueprint](/Users/seuncho/coding/blog/docs/credential-catalog-blueprint.md)
-5. [Content Inventory Blueprint](/Users/seuncho/coding/blog/docs/content-inventory-blueprint.md)
+```bash
+npm run type-check
+npm run validate:i18n
+npm run build
+```
 
-## Key Direction
-
-1. Tracks are `academy`, `magazine`, and `interactive`.
-2. New authoring should move toward strict `MDOC` rules rather than free-form MDX usage.
-3. Qualification and lecture metadata should be stored as structured data, not buried only inside prose.
-4. The platform should remain static-first and Cloudflare Pages-friendly.
+정의는 wiki, 해설은 blog, 실행은 oiyo가 정본이다. blog 문서를 이 저장소에 복제하지
+않고 필요한 경우 정본을 링크한다.

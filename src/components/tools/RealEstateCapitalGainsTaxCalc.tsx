@@ -278,9 +278,9 @@ const RealEstateCapitalGainsTaxCalc: React.FC<{ locale?: Locale }> = ({ locale =
 
       {/* Non-taxable banner */}
       {result.isNonTaxable && (
-        <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 mb-6 text-center">
-          <p className="text-2xl font-black text-emerald-600">✓ {t.nonTaxable}</p>
-          <p className="text-sm text-emerald-600/80 mt-1">납부 세액 없음</p>
+        <div className="p-5 rounded-2xl bg-green-50 border border-green-200 mb-6 text-center">
+          <p className="text-2xl font-black text-green-600">✓ {t.nonTaxable}</p>
+          <p className="text-sm text-green-600/80 mt-1">납부 세액 없음</p>
         </div>
       )}
 
@@ -306,7 +306,7 @@ const RealEstateCapitalGainsTaxCalc: React.FC<{ locale?: Locale }> = ({ locale =
             </div>
             <div className="p-4 rounded-2xl bg-muted/20 border border-border text-center">
               <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground">{t.afterTaxProfit}</p>
-              <p className="text-xl font-black text-emerald-600 tabular-nums">{fmt(result.afterTaxProfit ?? 0)}</p>
+              <p className="text-xl font-black text-green-600 tabular-nums">{fmt(result.afterTaxProfit ?? 0)}</p>
             </div>
           </div>
 
@@ -344,7 +344,7 @@ const RealEstateCapitalGainsTaxCalc: React.FC<{ locale?: Locale }> = ({ locale =
             ].filter(r => !r.skip).map(({ label, value, bold }) => (
               <div key={label} className={`flex justify-between text-sm py-1 border-b border-border/40 last:border-0 ${bold ? 'font-black' : ''}`}>
                 <span className="text-muted-foreground text-xs">{label}</span>
-                <span className={`tabular-nums text-xs font-bold ${value < 0 ? 'text-emerald-600' : ''}`}>
+                <span className={`tabular-nums text-xs font-bold ${value < 0 ? 'text-green-600' : ''}`}>
                   {value < 0 ? '−' : ''}{fmt(Math.abs(value))} {t.won}
                 </span>
               </div>

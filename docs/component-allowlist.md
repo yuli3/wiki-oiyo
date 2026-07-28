@@ -137,6 +137,11 @@ Examples already aligned with this direction:
 6. `AcquisitionTaxCalculator`
 7. `SalaryCalculator`
 8. `YearEndTaxCalculator`
+9. `CognitiveDissonanceLab`
+
+`CognitiveDissonanceLab` is approved as a non-diagnostic teaching simulator for
+psychology theory pages. It must not collect free text, persist inputs, or present
+its teaching index as a psychometric score.
 
 ## 3. Track-by-Track Allowance
 

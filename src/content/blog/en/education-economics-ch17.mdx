@@ -20,73 +20,72 @@ import {
 import FormulaBox from "@/components/mdx/FormulaBox.astro";
 import Callout from "@/components/mdx/Callout.astro";
 
-# Chapter 17. 투자함수론: 미래를 위한 선택
+# Chapter 17. Investment Function Theory: Choices for the Future
 
-투자는 소비보다 규모는 작지만, 경기 변동을 일으키는 가장 가변적이고 핵심적인 요소이다. 기업이 어떤 기준으로 기계 설비를 늘리고 공장을 짓는지, 투자의 경제적 결정 요인들을 정밀하게 분석한다.
+Although investment is smaller than consumption, it is the most volatile and central factor behind business-cycle fluctuations. This chapter closely examines the economic determinants of investment: how firms decide to expand equipment and build factories.
 
 ---
 
-## 1. 투자 결정의 전통적 이론
+## 1. Traditional Theories of Investment Decisions
 
-### (1) 현재가치법 (NPV: Net Present Value)
+### (1) Net Present Value (NPV)
 
-미래에 발생할 수익을 현재 가치로 할인하여 투자비용과 비교한다.
+Future returns are discounted to present value and compared with the cost of investment.
 
 <FormulaBox>
-  $NPV = \sum \frac{R_t}{(1+i)^t} - I > 0$ 이면 투자 실행.
+  Invest when $NPV = \sum \frac{R_t}{(1+i)^t} - I > 0$.
 </FormulaBox>
 
-### (2) 자본의 한계효율설 (MEI: Marginal Efficiency of Investment)
+### (2) Marginal Efficiency of Investment (MEI)
 
-- 투자의 한계효율($r$)이 시장 이자율($i$)보다 높으면 투자를 실행한다.
-- **케인즈의 관점**: 투자는 이자율뿐만 아니라 기업가의 '야성적 충동(Animal Spirits)'에 의해 크게 좌우된다고 보았다.
-
----
-
-## 2. 가속도 원리 (Acceleration Principle)
-
-소비재 수요의 변화가 자본재(투자) 수요에 더 큰 폭의 변화를 가져온다는 원리이다.
-
-- **원리**: 생산량의 **증가분**에 비례하여 투자가 결정된다.
-- **한계**: 설비 가동률이 낮을 때는 작동하지 않으며, 실제 현실보다 과장된 측면이 있다 (신축적 가속도 모형이 보완).
+- Investment is undertaken when the marginal efficiency of investment ($r$) exceeds the market interest rate ($i$).
+- **Keynes's view**: Investment is driven not only by interest rates but also strongly by entrepreneurs' “animal spirits.”
 
 ---
 
-## 3. 토빈의 q 이론 (Tobin's q Theory)
+## 2. The Accelerator Principle
 
-금융 시장(주식 시장)의 정보를 투자의 지표로 활용하는 현대적 이론이다.
+This principle states that a change in demand for consumer goods produces a larger change in demand for capital goods (investment).
+
+- **Principle**: Investment is determined in proportion to the **increase** in output.
+- **Limitation**: It does not operate when capacity utilization is low and tends to exaggerate reality; the flexible accelerator model addresses this limitation.
+
+---
+
+## 3. Tobin's q Theory
+
+This modern theory uses information from financial markets, especially stock markets, as an indicator for investment.
 
 <FormulaBox>
-  $q = \frac{\text{주식시장에서 평가된 기업의 가치}}{\text{기업 자산의 실물 대체 비용}}$
+  $q = \frac{\text{Market value of the firm}}{\text{Physical replacement cost of the firm's assets}}$
 </FormulaBox>
 
-- **$q > 1$**: 기업 실물 가치보다 주식 가치가 높음 $\rightarrow$ **투자 확대**.
-- **$q < 1$**: 투자를 하는 것보다 기업을 사는 것이 쌈 $\rightarrow$ **투자 축소**.
-- <mark>**시사점**</mark>: 주가 지수가 실물 경제의 선행 지표가 되는 이론적
-  근거를 제공한다.
+- **$q > 1$**: The stock-market value exceeds the firm's physical value $\rightarrow$ **expand investment**.
+- **$q < 1$**: Buying a firm is cheaper than investing in it $\rightarrow$ **reduce investment**.
+- <mark>**Implication**</mark>: This provides a theoretical basis for stock-price indices to serve as leading indicators of the real economy.
 
 ---
 
-## 4. 자본의 사용자 비용 (User Cost of Capital)
+## 4. User Cost of Capital
 
-신고전학파의 투자 이론으로, 자본 1단위를 유지하는 데 드는 비용과 한계생산성을 비교한다.
+This neoclassical investment theory compares the cost of maintaining one unit of capital with its marginal productivity.
 
-- **사용자 비용**: 이자 비용 + 감가상각비 - 자산 가격 상승률.
-- **최적 투자**: 자본의 한계생산(MPK) = 사용자 비용 이 되는 지점에서 결정.
-
----
-
-## 5. 결론: 투자는 내일의 성장판입니다
-
-투자는 단기적으로는 총수요의 변동을 가져오지만, 장기적으로는 생산 능력을 확충하여 성장의 기반이 된다. 이자율에 민감한 투자의 성격은 금융 정책이 실물 경제로 전달되는 가장 중요한 통로가 된다.
+- **User cost**: interest cost + depreciation − the rate of increase in asset prices.
+- **Optimal investment**: determined where the marginal product of capital (MPK) equals the user cost.
 
 ---
 
-## 📖 참고문헌
+## 5. Conclusion: Investment Is Tomorrow's Growth Engine
 
-- **[거시경제학] - 정병렬**: 투자 이론의 수리적 도출.
-- **[기업 투자 이론] - 제임스 토빈**: q 이론의 정립.
+In the short run, investment causes fluctuations in aggregate demand; in the long run, it expands productive capacity and becomes a foundation for growth. Investment's sensitivity to interest rates makes it the most important channel through which monetary policy reaches the real economy.
 
 ---
 
-수고하셨습니다. 다음 시간에는 가계와 기업의 행동이 모여 형성되는 **IS-LM 모형의 심층 분석과 정책 유효성**에 대해 학습하겠습니다.
+## 📖 References
+
+- **[Macroeconomics] - Jeong Byeong-ryeol**: Mathematical derivation of investment theory.
+- **[Corporate Investment Theory] - James Tobin**: The formulation of q theory.
+
+---
+
+Well done. Next, we will study an **in-depth analysis of the IS-LM model and policy effectiveness**, which emerges from the behavior of households and firms.

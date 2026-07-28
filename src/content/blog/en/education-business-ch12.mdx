@@ -14,173 +14,169 @@ tags:
 locale: en
 author: Oiyo
 ---
-
 import { LectureTable } from "@/features/education-common/components/LectureVisuals";
 import CompareTable from "@/components/mdx/CompareTable.astro";
 import FormulaBox from "@/components/mdx/FormulaBox.astro";
 import Fraction from "@/components/mdx/Fraction.astro";
 import Callout from "@/components/mdx/Callout.astro";
 
-# 경영학 Ch12. 회계 및 재무관리
+# Business Administration Ch12. Accounting and Financial Management
 
-재무관리와 회계는 공기업 경영학 시험에서 변별력을 높이는 파트입니다. 수리적인 계산 원리보다 각 이론이 갖는 절대적인 가정과 결론의 방향(증가/감소 여부)을 파악하는 것이 중요합니다.
-
----
-
-## 1. 회계의 기초와 재무제표
-
-### (1) 재무제표 4대장
-
-1. **재무상태표**: "특정시점"의 자산, 부채, 자본 표시. (자산 = 부채 + 자본)
-2. **포괄손익계산서**: "일정기간"의 경영성과(수익, 비용, 순이익) 표시.
-3. **현금흐름표**: 영업활동, 투자활동, 재무활동(자금조달/상환)으로 분류하여 현금 변동 표시.
-4. **자본변동표**: 자본의 크기와 변동 표시.
-
-### (2) 자산 재고 단가 및 감가상각
-
-- **기말재고 평가**: 기초재고 + 당기매입 - 당기매출원가 = 기말재고
-- _물가 상승 (인플레이션) 가정 시_ 이익(세금)이 가장 크게 잡히는 순서: **선입선출법(FIFO) > 이동평균법 > 총평균법 > 후입선출법(LIFO)**
-- **유형자산 감가상각**: (유형자산의 가치 배분 과정)
-  - 감가상각대상금액 = 취득원가 - 잔존가치
-  - _정액법_: 매년 동일 상각.
-  - _정률법/연수합계법_: 초기에 많은 금액 상각, 갈수록 감소함 (가속상각법).
+Financial management and accounting are differentiating sections in public enterprise business administration exams. Rather than mathematical calculation principles, it is important to grasp the absolute assumptions and the direction of conclusions (increase/decrease) of each theory.
 
 ---
 
-## 2. 재무가치 및 비율 분석 ★
+## 1. Basics of Accounting and Financial Statements
+
+### (1) The Big Four Financial Statements
+
+1. **Statement of Financial Position**: Shows assets, liabilities, and equity at a "specific point in time". (Assets = Liabilities + Equity)
+2. **Statement of Profit or Loss and Other Comprehensive Income**: Shows business performance (revenue, expenses, net income) over a "certain period".
+3. **Statement of Cash Flows**: Shows cash changes classified by operating, investing, and financing activities (fund raising/repayment).
+4. **Statement of Changes in Equity**: Shows the size and changes in equity.
+
+### (2) Asset Inventory Unit Cost and Depreciation
+
+- **Ending Inventory Valuation**: Beginning Inventory + Current Period Purchases - Cost of Goods Sold = Ending Inventory
+- *Assuming Inflation*: Order in which profit (tax) is recorded highest: **FIFO (First-In, First-Out) > Moving Average > Weighted Average > LIFO (Last-In, First-Out)**
+- **Tangible Asset Depreciation**: (Process of allocating tangible asset value)
+  - Depreciable Amount = Acquisition Cost - Salvage Value
+  - *Straight-Line Method*: Same depreciation every year.
+  - *Declining-Balance Method / Sum-of-the-Years'-Digits Method*: Large depreciation amount in the early years, decreasing over time (Accelerated Depreciation Method).
+
+---
+
+## 2. Financial Value and Ratio Analysis ★
 
 <LectureTable
-  title="주요 재무비율 요약"
-  headers={["구분", "의미", "핵심 비율"]}
+  title="Summary of Major Financial Ratios"
+  headers={["Category", "Meaning", "Core Ratios"]}
   rows={[
     [
-      "유동성 비율",
-      "단기 채무 지급 능력",
-      "유동비율 (유동자산/유동부채) \n 당좌비율 (당좌자산/유동부채)",
+      "Liquidity Ratio",
+      "Short-term debt-paying ability",
+      "Current Ratio (Current Assets/Current Liabilities) \n Quick Ratio (Quick Assets/Current Liabilities)",
     ],
     [
-      "안정성(레버리지)",
-      "장기 지급 및 부채 감당률",
-      "부채비율 (부채/자본) \n 이자보상비율 (영업이익/이자비용)",
+      "Stability (Leverage)",
+      "Long-term payment and debt-coverage ratio",
+      "Debt-to-Equity Ratio (Liabilities/Equity) \n Interest Coverage Ratio (Operating Income/Interest Expense)",
     ],
     [
-      "수익성 비율",
-      "마진 창출 능력",
-      "ROA (순이익/총자산), ROE (순이익/자기자본)",
+      "Profitability Ratio",
+      "Margin generation ability",
+      "ROA (Net Income/Total Assets), ROE (Net Income/Total Equity)",
     ],
-    ["활동성 비율", "자산 활용 효율성", "매출채권회전율, 재고자산회전율"],
+    ["Activity Ratio", "Asset utilization efficiency", "Accounts Receivable Turnover, Inventory Turnover"],
     [
-      "주가관련 비율",
-      "주식시장의 평가",
-      "PER (주가/주당순이익 EPS), PBR (주가/주당순자산)",
+      "Stock-Related Ratio",
+      "Stock market valuation",
+      "PER (Stock Price/EPS), PBR (Stock Price/Book Value Per Share)",
     ],
   ]}
 />
 
-### CVP 분석 (단기 손익분기점)
+### CVP Analysis (Short-Term Break-Even Point)
 
-- **손익분기점 (BEP)**: 총수익 = 총비용 (고정비 + 변동비)
-- **공헌이익 (CM)**: 매출액 - 변동비. (이는 고정비를 회수하고 영업이익을 만드는 데 공헌함)
+- **Break-Even Point (BEP)**: Total Revenue = Total Cost (Fixed Costs + Variable Costs)
+- **Contribution Margin (CM)**: Sales Revenue - Variable Costs. (This contributes to recovering fixed costs and creating operating income.)
 
 ---
 
-## 3. 투자의 경제성 분석 (자본예산)
+## 3. Economic Analysis of Investment (Capital Budgeting)
 
-투자의 타당성을 검토할 때, 화폐의 시간가치(할인율)를 고려하는 방법과 하지 않는 방법이 있습니다.
+When reviewing the feasibility of an investment, there are methods that consider the time value of money (discount rate) and methods that do not.
 
-| 기법 유형                           | 기법 명칭              | 채택 기준             | 단점                                              |
-| ----------------------------------- | ---------------------- | --------------------- | ------------------------------------------------- |
-| **비할인 기법** (시간가치 무시)     | 회수기간법             | 목표 기간보다 짧을 때 | 회수 후 현금흐름 무시                             |
-|                                     | 회계적 이익률법        | 목표 이익률보다 클 때 | 현금흐름이 아닌 회계상 이익 기초                  |
-| **할인 기법** (시간가치 고려, 권장) | **순현재가치법 (NPV)** | NPV > 0 일 때         | 자본비용 추정이 실무적으로 어려움                 |
-|                                     | **내부수익률법 (IRR)** | IRR > 자본비용 일 때  | 복수의 내부수익률 존재 가능, 가치가산 원리 미성립 |
+| Technique Type | Technique Name | Acceptance Criteria | Disadvantages |
+| --- | --- | --- | --- |
+| **Non-Discounted Techniques** (Ignoring time value) | Payback Period Method | When shorter than the target period | Ignores cash flows after payback |
+| | Accounting Rate of Return Method | When greater than the target rate of return | Based on accounting profit rather than cash flow |
+| **Discounted Techniques** (Considering time value, recommended) | **Net Present Value (NPV) Method** | When NPV > 0 | Cost of capital estimation is practically difficult |
+| | **Internal Rate of Return (IRR) Method** | When IRR > Cost of Capital | Multiple internal rates of return may exist, value additivity principle does not hold |
 
 <Callout type="tip">
-  **NPV를 IRR보다 우수하게 평가하는 이유** 순현재가치(NPV)법은 재투자수익률로
-  '자본비용(현실적)'을 사용하고, 여러 투자안을 더할 때 '가치가산의 원리'가
-  성립하며, 종국적으로 '기업가치의 극대화'라는 최고 재무목표에 부합하기
-  때문입니다.
+  **Why NPV is Rated Superior to IRR** Because the Net Present Value (NPV) method uses the 'cost of capital (realistic)' as the reinvestment rate of return, satisfies the 'principle of value additivity' when summing multiple investment projects, and ultimately aligns with the highest financial goal of 'maximizing firm value'.
 </Callout>
 
 ---
 
-## 4. 포트폴리오 이론과 CAPM
+## 4. Portfolio Theory and CAPM
 
-### (1) 포트폴리오 위험의 분해
+### (1) Decomposition of Portfolio Risk
 
-- **총위험 = 체계적 위험 + 비체계적 위험**
-- **비체계적 위험**: 개별 기업의 파업, 소송 등 고유 위험. 여러 주식에 _분산투자 시 "제거 가능(상쇄)_. 상관계수가 -1 일 때 제거 효과 최대.
-- **체계적 위험**: 인플레이션, 이자율, 전쟁 등 시장 전반의 요인거리. _분산투자해도 제거 불가_.
+- **Total Risk = Systematic Risk + Unsystematic Risk**
+- **Unsystematic Risk**: Unique risks such as strikes or lawsuits of individual companies. _Can be "eliminated (offset)" through "diversification" across multiple stocks_. Elimination effect is maximized when the correlation coefficient is -1.
+- **Systematic Risk**: Market-wide factors such as inflation, interest rates, and war. _Cannot be eliminated even through diversification_.
 
-### (2) 자본자산가격결정모형 (CAPM)
+### (2) Capital Asset Pricing Model (CAPM)
 
-주식의 균형 수익률은 무위험이자율과 체계적 위험(베타 $\beta$)에 대한 위험 프리미엄의 합으로 결정됨을 나타냅니다. (시장 전체의 위험 프리미엄을 반영)
+Shows that the equilibrium rate of return on a stock is determined by the sum of the risk-free rate and the risk premium for systematic risk (beta $\beta$). (Reflects the market-wide risk premium)
 
-- 나타내는 직선: **증권시장선 (SML, Security Market Line)**
-- SML 위쪽은 주가가 "과소평가" (수익률이 요구보다 높음), 아래쪽은 "과대평가".
+- Line represented: **Security Market Line (SML)**
+- Above the SML, the stock is "undervalued" (return is higher than required), and below it is "overvalued".
 
 ---
 
-## 5. 자본구조이론 (MM 1958)
+## 5. Capital Structure Theory (MM 1958)
 
 <CompareTable
-  leftTitle="법인세 없는 MM의 자본구조이론"
-  rightTitle="법인세(파산/대리이론) 존재 자본구조이론"
+  leftTitle="MM's Capital Structure Theory without Corporate Tax"
+  rightTitle="Capital Structure Theory with Corporate Tax (Bankruptcy/Agency Theory)"
   rows={[
     {
-      label: "기본 명제",
-      left: "기업의 가치는 자본구조(부채비율)와 무관하다. 부채를 써도 가치는 V로 동일.",
+      label: "Basic Proposition",
+      left: "Firm value is independent of capital structure (debt-to-equity ratio). Value remains V even when using debt.",
       right:
-        "이자의 법인세 절세 효과 때문에, 100% 부채 사용할 때 기업가치 최고.",
+        "Due to the corporate tax shield of interest, firm value is highest when using 100% debt.",
     },
     {
-      label: "WACC (자본비용) 변동",
-      left: "타인자본비용과 자기자본비용의 상쇄로 가중평균자본비용(WACC)은 불변.",
+      label: "WACC (Cost of Capital) Changes",
+      left: "Due to the offset between the cost of debt and cost of equity, Weighted Average Cost of Capital (WACC) remains unchanged.",
       right:
-        "파산비용이론: 일정수준(초반)까지는 기업가치 상승, 이후 파산비용 커져 가치 하락 (최적 자본구조 존재).",
+        "Bankruptcy Cost Theory: Firm value increases up to a certain point (early stage), then decreases as bankruptcy costs grow (optimal capital structure exists).",
     },
   ]}
   leftColor="#3b82f6"
   rightColor="#eab308"
 />
 
-**정보비대칭성 (Pecking Order, 자본조달순위이론)**: 경영자는 내부유보금(가장 선호) → 부채 (그 다음) → 신주 발행(최후의 수단, 불리) 순으로 자금을 조달하려 한다.
+**Information Asymmetry (Pecking Order Theory)**: Managers tend to raise funds in the order of internal retained earnings (most preferred) → debt (next) → new stock issuance (last resort, unfavorable).
 
 ---
 
-## 6. 파생상품 기초: 옵션과 선물
+## 6. Derivatives Basics: Options and Futures
 
-### (1) 옵션 (Options)
+### (1) Options
 
 <LectureTable
-  title="콜옵션 vs 풋옵션"
-  headers={["구분", "권리", "행사하여 이익을 보는 상황 (내가격)"]}
+  title="Call Options vs Put Options"
+  headers={["Category", "Right", "Situation to Exercise for Profit (In-the-Money)"]}
   rows={[
     [
-      "콜 옵션 (Call)",
-      "살 수 있는 권리",
-      "현재 시장가격 > 약정한 행사가격 (싸게 살 수 있으므로)",
+      "Call Option",
+      "Right to buy",
+      "Current Market Price > Agreed Strike Price (since it can be bought cheap)",
     ],
     [
-      "풋 옵션 (Put)",
-      "팔 수 있는 권리",
-      "현재 시장가격 < 약정한 행사가격 (바싸게 팔 수 있으므로)",
+      "Put Option",
+      "Right to sell",
+      "Current Market Price < Agreed Strike Price (since it can be sold expensive)",
     ],
   ]}
   highlightColumns={[0]}
 />
 
-**풋-콜 패러티 (Put-Call Parity)**: 유럽형 콜옵션과 풋옵션 사이의 균형 식.
+**Put-Call Parity**: Equilibrium equation between European call and put options.
 
 <FormulaBox>
-  S (주가) + P (풋옵션 가치) = C (콜옵션 가치) + PV(E) (행사가격의 현재가치)
+  S (Stock Price) + P (Put Option Value) = C (Call Option Value) + PV(E) (Present Value of Strike Price)
 </FormulaBox>
 
-### (2) 선물거래 (Futures) vs 선도거래 (Forwards)
+### (2) Futures vs Forwards
 
-- **선물거래**: "조직화된 거래소", "조건 표준화", "일일정산", 청산소가 "계약이행 보증" (반대매매로 청산).
-- **선도거래**: "장외시장(비조직)", 당사자 간 직접 계약, 만기일에 실물 인도, 위험 높음.
+- **Futures**: "Organized exchange", "Standardized terms", "Daily settlement", clearinghouse "guarantees contract fulfillment" (settled by reversing trades).
+- **Forwards**: "Over-the-counter (OTC) market", direct contracts between parties, physical delivery at maturity, high risk.
 
 ---
 
-_이로써 경영학 핵심 이론의 전수 내용이 완성되었습니다._
+*This completes the delivery of the core theories in business administration.*

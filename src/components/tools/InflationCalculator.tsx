@@ -49,10 +49,10 @@ const InflationCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko'
                         <h4 className="text-2xl font-black text-rose-700">{Math.round(futureValue).toLocaleString()}원</h4>
                         <p className="text-[10px] text-rose-300">물가 상승으로 인해 구매력이 {Math.round((1 - futureValue/amount)*100)}% 하락합니다.</p>
                     </div>
-                    <div className="p-6 bg-emerald-50 border border-emerald-100 rounded-3xl space-y-2 animate-in slide-in-from-bottom-4 delay-100">
-                        <p className="text-[10px] font-black text-emerald-400 uppercase">{t.result2}</p>
-                        <h4 className="text-2xl font-black text-emerald-700">{Math.round(neededAmount).toLocaleString()}원</h4>
-                        <p className="text-[10px] text-emerald-300">현재와 같은 생활 수준을 위해 필요한 미래 자산입니다.</p>
+                    <div className="p-6 bg-green-50 border border-green-100 rounded-3xl space-y-2 animate-in slide-in-from-bottom-4 delay-100">
+                        <p className="text-[10px] font-black text-green-400 uppercase">{t.result2}</p>
+                        <h4 className="text-2xl font-black text-green-700">{Math.round(neededAmount).toLocaleString()}원</h4>
+                        <p className="text-[10px] text-green-300">현재와 같은 생활 수준을 위해 필요한 미래 자산입니다.</p>
                     </div>
                 </div>
             </div>

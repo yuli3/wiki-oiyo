@@ -48,11 +48,11 @@ const CaffeineCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' 
                     </div>
                 </div>
 
-                <div className={`p-10 rounded-[40px] border-4 transition-all duration-500 text-center space-y-4 shadow-2xl relative overflow-hidden ${isAlert ? 'bg-amber-50 border-amber-200' : 'bg-emerald-50 border-emerald-200'}`}>
+                <div className={`p-10 rounded-[40px] border-4 transition-all duration-500 text-center space-y-4 shadow-2xl relative overflow-hidden ${isAlert ? 'bg-amber-50 border-amber-200' : 'bg-green-50 border-green-200'}`}>
                     <div className="relative z-10">
-                        <p className={`text-[10px] font-black uppercase tracking-widest ${isAlert ? 'text-amber-500' : 'text-emerald-500'}`}>{t.result}</p>
-                        <h2 className={`text-6xl font-black ${isAlert ? 'text-amber-700' : 'text-emerald-700'}`}>{remaining.toFixed(1)}mg</h2>
-                        <div className={`inline-block px-6 py-2 rounded-full font-black text-sm uppercase ${isAlert ? 'bg-amber-200 text-amber-900' : 'bg-emerald-200 text-emerald-900'}`}>
+                        <p className={`text-[10px] font-black uppercase tracking-widest ${isAlert ? 'text-amber-500' : 'text-green-500'}`}>{t.result}</p>
+                        <h2 className={`text-6xl font-black ${isAlert ? 'text-amber-700' : 'text-green-700'}`}>{remaining.toFixed(1)}mg</h2>
+                        <div className={`inline-block px-6 py-2 rounded-full font-black text-sm uppercase ${isAlert ? 'bg-amber-200 text-amber-900' : 'bg-green-200 text-green-900'}`}>
                             {isAlert ? t.danger : t.safe}
                         </div>
                         <p className="mt-6 text-sm font-medium text-muted-foreground max-w-sm mx-auto">

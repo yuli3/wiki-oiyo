@@ -214,7 +214,7 @@ const ComprehensiveIncomeTaxCalc: React.FC<{ locale?: Locale }> = ({ locale = 'k
         ].filter(r => !r.skip).map(({ label, value }) => (
           <div key={label} className="flex justify-between text-sm py-0.5 border-b border-border/30 last:border-0">
             <span className="text-muted-foreground text-xs">{label}</span>
-            <span className={`tabular-nums text-xs font-bold ${value < 0 ? 'text-emerald-600' : ''}`}>
+            <span className={`tabular-nums text-xs font-bold ${value < 0 ? 'text-green-600' : ''}`}>
               {value < 0 ? '−' : ''}{fmt(Math.abs(value))} {t.won}
             </span>
           </div>
