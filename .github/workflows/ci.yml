@@ -46,6 +46,10 @@ jobs:
         # page that declares a locale but serves Korean, not on the known backlog.
         run: npm run audit:translations
 
+      - name: Audit page structure
+        run: npm run audit:page-structure
+
+
       - name: Type check
         run: npm run type-check
 

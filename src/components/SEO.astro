@@ -19,6 +19,8 @@ interface Props {
   category?: string;
   author?: string;
   availableLocales?: string[];
+  // Search-result pages must stay out of the index (Google quality guidelines).
+  noindex?: boolean;
   track?: string;
   series?: string;
   definition?: string;
@@ -36,6 +38,7 @@ const {
   category,
   author = siteConfig.author,
   availableLocales,
+  noindex = false,
   track,
   series,
   definition,
@@ -66,7 +69,7 @@ const allLocales =
 // hreflang annotations pointing at noindex URLs.
 const locales = allLocales.filter((l: string) => !DEINDEXED_LOCALES.has(l));
 const isDeindexedLocale = DEINDEXED_LOCALES.has(currentLocaleSegment);
-const robotsContent = isDeindexedLocale
+const robotsContent = noindex || isDeindexedLocale
   ? "noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
