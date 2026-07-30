@@ -300,15 +300,15 @@ categories:
     label_ko: 커리어
     label_en: Career
     track: academy
-  - id: 
+  - id: oracle-proverb
     label_ko: 오라클 속담
     label_en: 오라클 속담
     track: academy
-  - id: 
+  - id: oracle-laozi
     label_ko: 오라클 노자
     label_en: 오라클 노자
     track: academy
-  - id: 
+  - id: oracle-sunzi
     label_ko: 오라클 손자병법
     label_en: 오라클 손자병법
     track: academy
