@@ -64,8 +64,6 @@ This directory defines how `wiki-oiyo` should grow as a documented, stable refer
 20. [Content Schema Implementation Draft](../../blog/docs/content-schema-implementation-draft.md)
     File-by-file implementation draft for bringing the schema and taxonomy into the codebase.
 
-21. [Implementation Control Board](../../blog/docs/implementation-control-board.md)
-    Fast operational dashboard for quick wins, current risks, and next implementation priorities.
 
 22. [Component Registry by Track](./component-registry-by-track.md)
     Connects the authoring allowlist to the actual centralized MDX component registry in code.

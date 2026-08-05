@@ -3,13 +3,17 @@ import path from "node:path";
 
 const root = process.cwd();
 
+// 2026-07-28 orphan 정리에서 `docs/implementation-control-board.md` 가 삭제됐다(2.5개월
+// 미수정 + superseded 된 MASTER_PLAN.md 를 가리키던 문서). wiki 는 애초에 자기 사본을
+// 참조한 적이 없고 blog 사본을 절대경로로 가리키고 있었다. 그런데 이 목록만 갱신되지 않아
+// **CI 가 8일간 빨간불**이었다 — 문서 인용만 세면 orphan 이지만 이 스크립트가 소비처였다.
+// 되돌리지 말 것: 문서는 죽었고, 계약을 문서에 맞춘 것이다.
 const requiredFiles = [
   "AGENTS.md",
   "CLAUDE.md",
   "GEMINI.md",
   "CURSOR.md",
   ".cursor/rules/project-harness.mdc",
-  "docs/implementation-control-board.md",
   "docs/component-registry-by-track.md",
   "data/catalog/category-registry.yaml",
   "data/catalog/content-inventory.master.csv",
