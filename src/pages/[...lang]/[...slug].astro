@@ -8,7 +8,7 @@ import { siteConfig } from "../../config/site.config";
 import { getTranslations } from "../../lib/i18n";
 import type { Locale } from "../../lib/i18n";
 import { getRegisteredMdxComponents } from "../../lib/mdx-component-registry";
-import { getTrackFromData } from "../../lib/taxonomy";
+import { getTrackFromData, slugifyCategory } from "../../lib/taxonomy";
 import AuthorProfile from "../../components/AuthorProfile.astro";
 import MysticTrinity from "../../components/MysticTrinity.astro";
 
@@ -250,7 +250,7 @@ const coursesHref = `/${locale}/courses`;
           <header class="mb-16">
             <div class="flex items-center gap-3 text-xs font-bold text-primary uppercase tracking-widest mb-6 flex-wrap">
               <a
-                href={`/${locale}/category/${rawCategory.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                href={`/${locale}/category/${slugifyCategory(rawCategory)}`}
                 class="hover:underline decoration-2 underline-offset-4 transition-all"
               >
                 {displayCategory}
