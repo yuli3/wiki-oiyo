@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 // import TOC from "../../components/TOC.astro";
 import ChapterSidebar from "../../components/ChapterSidebar.astro";
+import DocumentChapterNav from "../../components/DocumentChapterNav.astro";
 import BlogCTA from "../../components/BlogCTA.astro";
 import { siteConfig } from "../../config/site.config";
 import { getTranslations } from "../../lib/i18n";
@@ -123,11 +124,13 @@ const categoryNames = (t.category.names ?? {}) as Record<string, string>;
 const rawCategory = (post.data.category ?? "").replace(/^["']|["']$/g, "");
 const displayCategory = categoryNames[rawCategory] ?? rawCategory;
 const track = getTrackFromData(post.data);
+const isDocumentPilot = rawCategory === "Mind & Psychology";
 const mdxComponents = getRegisteredMdxComponents(track);
 
 const chMatch = post.slug.match(/-ch(\d+)$/);
 const chapter = chMatch ? parseInt(chMatch[1], 10) : null;
 const isSeriesPost = chapter !== null && seriesPosts !== null && seriesPosts.length > 0;
+const displayTitle = post.data.title.replace(/^Ch\.?\s*\d+[.:]?\s*/i, "");
 
 // Derive series name for sidebar — prefer frontmatter `series` field over slug-derived name
 const seriesName = isSeriesPost
@@ -150,7 +153,7 @@ if (isSeriesPost && chapter !== null) {
   seriesJsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: post.data.title,
+    headline: displayTitle,
     description: post.data.description,
     isPartOf: {
       "@type": "Course",
@@ -180,9 +183,9 @@ const readingTimeLabel = readingTimeLabels[locale] ?? readingTimeLabels.en;
 const chapterLabel: Record<string, string> = { en: "Chapter", ko: "챕터", ja: "第", fr: "Chapitre", es: "Capítulo", zh: "章节" };
 const prevLabel: Record<string, string> = { en: "Previous", ko: "이전", ja: "前へ", fr: "Précédent", es: "Anterior", zh: "上一页" };
 const nextLabel: Record<string, string> = { en: "Next", ko: "다음", ja: "次へ", fr: "Suivant", es: "Siguiente", zh: "下一页" };
-const backLabel: Record<string, string> = { en: "Back to Home", ko: "홈으로", ja: "ホームへ戻る", fr: "Retour à l'accueil", es: "Volver al inicio", zh: "回到首页" };
 const contributorLabel: Record<string, string> = { en: "Contributor", ko: "기여자", ja: "寄稿者", fr: "Contributeur", es: "Colaborador", zh: "贡献者" };
 const coursesLabel: Record<string, string> = { en: "All Courses", ko: "전체 강의", ja: "コース一覧", fr: "Tous les cours", es: "Todos los cursos", zh: "全部课程" };
+const homeLabel: Record<string, string> = { en: "Home", ko: "홈", ja: "ホーム", fr: "Accueil", es: "Inicio", zh: "首页" };
 
 const chapterStr = (n: number) =>
   locale === "ja" ? `第${n}章` : `${chapterLabel[locale] ?? "Chapter"} ${n}`;
@@ -191,7 +194,7 @@ const coursesHref = `/${locale}/courses`;
 ---
 
 <BaseLayout
-  title={post.data.title}
+  title={displayTitle}
   description={post.data.description}
   image={post.data.heroImage}
   type="article"
@@ -209,9 +212,10 @@ const coursesHref = `/${locale}/courses`;
 
   <article
     class:list={[
-      "py-24 animate-fade-up",
+      isDocumentPilot ? "py-8 md:py-12" : "py-24 animate-fade-up",
       { "snap-start": siteConfig.features.scrollSnap },
     ]}
+    data-document-shell={isDocumentPilot ? "pilot" : undefined}
   >
     <div class="container px-4">
       <!--
@@ -222,7 +226,9 @@ const coursesHref = `/${locale}/courses`;
       <div
         class:list={[
           isSeriesPost
-            ? "lg:grid lg:grid-cols-[200px_1fr_240px] lg:gap-10 xl:gap-16"
+            ? isDocumentPilot
+              ? "lg:grid lg:grid-cols-[240px_minmax(0,740px)] lg:justify-center lg:gap-12 xl:gap-16"
+              : "lg:grid lg:grid-cols-[200px_1fr_240px] lg:gap-10 xl:gap-16"
             : tocEnabled
             ? "lg:grid lg:grid-cols-[1fr_240px] lg:gap-16"
             : "",
@@ -230,32 +236,44 @@ const coursesHref = `/${locale}/courses`;
       >
         <!-- Left: Chapter Sidebar (series posts only, desktop) -->
         {isSeriesPost && (
-          <div class="hidden lg:block">
+          <div class:list={[isDocumentPilot ? "mb-6 lg:mb-0" : "hidden lg:block"]}>
             <div class="sticky top-28">
-              <ChapterSidebar
-                seriesPosts={seriesPosts!}
-                currentChapter={chapter!}
-                locale={locale}
-                seriesName={seriesName!}
-                coursesHref={coursesHref}
-              />
+              {isDocumentPilot ? (
+                <DocumentChapterNav
+                  seriesPosts={seriesPosts!}
+                  currentChapter={chapter!}
+                  locale={locale}
+                  seriesName={seriesName!}
+                  coursesHref={coursesHref}
+                />
+              ) : (
+                <ChapterSidebar
+                  seriesPosts={seriesPosts!}
+                  currentChapter={chapter!}
+                  locale={locale}
+                  seriesName={seriesName!}
+                  coursesHref={coursesHref}
+                />
+              )}
             </div>
           </div>
         )}
 
         <!-- Center: Main content -->
-        <div class:list={[isSeriesPost ? "" : "max-w-2xl mx-auto lg:mx-0"]}>
+        <div class:list={[isSeriesPost ? "min-w-0" : "max-w-2xl mx-auto lg:mx-0"]}>
 
           <!-- Article header -->
-          <header class="mb-16">
-            <div class="flex items-center gap-3 text-xs font-bold text-primary uppercase tracking-widest mb-6 flex-wrap">
-              <a
-                href={`/${locale}/category/${slugifyCategory(rawCategory)}`}
-                class="hover:underline decoration-2 underline-offset-4 transition-all"
-              >
-                {displayCategory}
-              </a>
-              <span class="text-muted-foreground/30">•</span>
+          <header class:list={[isDocumentPilot ? "mb-10 border-b border-border pb-8" : "mb-16"]}>
+            <nav aria-label="Breadcrumb" class="mb-5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel[locale] ?? homeLabel.en}</a>
+              <span aria-hidden="true">/</span>
+              <a href={`/${locale}/courses`} class="hover:text-primary hover:underline">{coursesLabel[locale] ?? coursesLabel.en}</a>
+              <span aria-hidden="true">/</span>
+              <a href={`/${locale}/category/${slugifyCategory(rawCategory)}`} class="hover:text-primary hover:underline">{displayCategory}</a>
+              {chapter !== null && <><span aria-hidden="true">/</span><span aria-current="page">{chapterStr(chapter)}</span></>}
+            </nav>
+
+            <div class="mb-6 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-widest text-primary">
               {chapter !== null ? (
                 <span class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest">
                   {chapterStr(chapter!)}
@@ -284,12 +302,18 @@ const coursesHref = `/${locale}/courses`;
               )}
             </div>
 
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-10 leading-tight font-heading">
-              {post.data.title}
+            <h1 class:list={[
+              "font-heading font-extrabold tracking-tight leading-tight",
+              isDocumentPilot ? "mb-6 text-3xl md:text-4xl" : "mb-10 text-4xl md:text-5xl",
+            ]}>
+              {displayTitle}
             </h1>
 
             <!-- Author row -->
-            <div class="flex items-center gap-4 py-6 border-y border-border/40">
+            <div class:list={[
+              "flex items-center gap-4",
+              isDocumentPilot ? "pt-4" : "py-6 border-y border-border/40",
+            ]}>
               <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold flex-shrink-0">
                 {post.data.author.charAt(0)}
               </div>
@@ -333,7 +357,7 @@ const coursesHref = `/${locale}/courses`;
             </div>
 
             <!-- Series progress banner (below author row, desktop) -->
-            {isSeriesPost && (
+            {isSeriesPost && !isDocumentPilot && (
               <div class="mt-6 hidden lg:flex items-center gap-4 px-4 py-3 rounded-xl bg-muted/30 border border-border/40 not-prose">
                 <div class="flex-1">
                   <div class="flex justify-between items-center mb-1.5">
@@ -390,7 +414,12 @@ const coursesHref = `/${locale}/courses`;
           )}
 
           <!-- Main content -->
-          <div class="prose prose-stone prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-pre:rounded-2xl prose-pre:bg-muted/10 prose-pre:border prose-pre:border-border/40 leading-relaxed text-pretty">
+          <div class:list={[
+            "prose prose-stone max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-pre:bg-muted/10 prose-pre:border prose-pre:border-border/40 leading-relaxed text-pretty",
+            isDocumentPilot
+              ? "prose-base prose-headings:scroll-mt-24 prose-pre:rounded-lg prose-table:block prose-table:max-w-full prose-table:overflow-x-auto"
+              : "prose-lg prose-pre:rounded-2xl",
+          ]}>
             <Content components={mdxComponents} />
           </div>
 
@@ -465,28 +494,6 @@ const coursesHref = `/${locale}/courses`;
             </nav>
           )}
 
-          <!-- Footer -->
-          <footer class="mt-24 pt-12 border-t border-border/40 flex items-center gap-4 flex-wrap">
-            <a
-              href={`/${locale}/`}
-              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-              {backLabel[locale] ?? backLabel.en}
-            </a>
-            {isSeriesPost && (
-              <>
-                <span class="text-muted-foreground/30">·</span>
-                <a
-                  href={coursesHref}
-                  class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-                  {coursesLabel[locale] ?? coursesLabel.en}
-                </a>
-              </>
-            )}
-          </footer>
         </div>
 
         <!-- Right: TOC sidebar (disabled by request) -->

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Item from "../../components/ui/Item.astro";
 import { getTranslations, locales } from "../../lib/i18n";
 import { getTrackFromData, slugifyCategory } from "../../lib/taxonomy";
 
@@ -154,13 +155,11 @@ const intro = copy.intro;
       </h2>
       <div class="grid gap-2 sm:grid-cols-2">
         {dictCats.map(([cat, n]) => (
-          <a
+          <Item
             href={`/${locale}/category/${slugifyCategory(cat)}`}
-            class="flex items-center justify-between rounded-lg border border-green-100 bg-white px-4 py-2.5 text-sm transition-colors hover:border-green-400 hover:bg-green-50"
-          >
-            <span class="font-semibold text-green-950">{catLabel(cat)}</span>
-            <span class="text-xs text-green-600">{n}</span>
-          </a>
+            title={catLabel(cat)}
+            meta={n}
+          />
         ))}
       </div>
     </section>
@@ -179,10 +178,13 @@ const intro = copy.intro;
               {series
                 .sort((a, b) => a.key.localeCompare(b.key))
                 .map((s) => (
-                  <li class="py-1">
-                    <a class="text-sm text-green-800 hover:underline" href={`/${locale}/${s.first}`}>
-                      {s.key} <span class="text-xs text-green-500">· {s.count}{copy.chapterSuffix}</span>
-                    </a>
+                  <li class="py-1.5">
+                    <Item
+                      href={`/${locale}/${s.first}`}
+                      title={s.key}
+                      meta={`${s.count}${copy.chapterSuffix}`}
+                      class="border-transparent bg-transparent px-3 py-2 hover:bg-white"
+                    />
                   </li>
                 ))}
             </ul>

@@ -1,9 +1,27 @@
 ---
+interface Props {
+  type?: "important" | "tip" | "note" | "info" | "warning" | "danger";
+  title?: string;
+}
 
+const { type = "note", title } = Astro.props;
+const warning = type === "warning";
+const danger = type === "danger";
 ---
 
-<div
-  style="padding:1.5rem; background-color:#f8fafc; border-left:4px solid #3b82f6; border-radius:0.5rem; margin:1.5rem 0; color:#1e293b; font-size:1.05rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); line-height:1.6;"
+<aside
+  class:list={[
+    "not-prose my-6 rounded-lg border-l-4 px-5 py-4 text-[0.975rem] leading-7",
+    warning
+      ? "border-warning bg-warning/10 text-warning-foreground"
+      : danger
+        ? "border-destructive bg-destructive/8 text-foreground"
+        : "border-primary bg-primary/7 text-foreground",
+  ]}
+  data-callout={type}
 >
-  <slot />
-</div>
+  {title && <p class="mb-2 text-sm font-bold text-foreground">{title}</p>}
+  <div class="[&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
+    <slot />
+  </div>
+</aside>

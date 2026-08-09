@@ -1,0 +1,44 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  meta?: string | number;
+  eyebrow?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  class?: string;
+}
+
+const {
+  href,
+  title,
+  description,
+  meta,
+  eyebrow,
+  imageSrc,
+  imageAlt = "",
+  class: className,
+} = Astro.props;
+---
+
+<a
+  data-slot="item"
+  href={href}
+  class:list={[
+    "group flex min-h-11 items-center gap-3 rounded-xl border border-green-100 bg-white px-4 py-3 text-left transition-colors hover:border-green-400 hover:bg-green-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2",
+    className,
+  ]}
+>
+  {imageSrc && (
+    <span data-slot="item-media" class="aspect-[16/10] w-24 shrink-0 overflow-hidden rounded-lg border border-green-100 bg-green-50 sm:w-32">
+      <img src={imageSrc} alt={imageAlt} class="h-full w-full object-cover" loading="lazy" decoding="async" />
+    </span>
+  )}
+  <span data-slot="item-content" class="min-w-0 flex-1">
+    {eyebrow && <span data-slot="item-eyebrow" class="mb-1 block text-[10px] font-bold uppercase tracking-widest text-green-600">{eyebrow}</span>}
+    <span data-slot="item-title" class="block font-semibold leading-snug text-green-950 group-hover:text-green-900">{title}</span>
+    {description && <span data-slot="item-description" class="mt-0.5 block text-xs leading-relaxed text-green-700">{description}</span>}
+  </span>
+  {meta !== undefined && <span data-slot="item-meta" class="shrink-0 text-xs font-medium text-green-600">{meta}</span>}
+</a>

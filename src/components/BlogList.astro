@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Pagination from "./Pagination.astro";
 import CategoryCloud from "./CategoryCloud.astro";
 import IntentBundles from "./IntentBundles.astro";
+import Item from "./ui/Item.astro";
 import { siteConfig } from "../config/site.config";
 import { getTrackFromData } from "../lib/taxonomy";
 import { getTranslations } from "../lib/i18n";
@@ -24,9 +25,10 @@ interface Props {
   subtitle: string;
   activeCategory?: string;
   showIntentBundles?: boolean;
+  useItemComposition?: boolean;
 }
 
-const { page, locale, baseUrl, title, subtitle, activeCategory, showIntentBundles = false } = Astro.props;
+const { page, locale, baseUrl, title, subtitle, activeCategory, showIntentBundles = false, useItemComposition = false } = Astro.props;
 const paginationEnabled = siteConfig.features.pagination;
 const t = await getTranslations(locale as Locale);
 const blogT = t.blog as Record<string, string>;
@@ -76,6 +78,27 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
                 ? (blogT.badgeInteractive ?? "Interactive")
                 : blogT.badgeMagazine;
 
+            const localizedCategory = (post.data.category ? categoryNames[post.data.category] : undefined) ?? post.data.category;
+            const published = post.data.pubDate?.toLocaleDateString(
+              locale === "ko" ? "ko-KR" : locale === "ja" ? "ja-JP" : locale === "zh" ? "zh-CN" : locale === "fr" ? "fr-FR" : locale === "es" ? "es-ES" : "en-US",
+              { month: "short", day: "numeric", year: "numeric" },
+            );
+
+            if (useItemComposition) {
+              return (
+                <Item
+                  href={href}
+                  title={`${isAcademy && chapter !== null ? `#${chapter} ` : ""}${post.data.title}`}
+                  description={post.data.description}
+                  eyebrow={[badgeLabel, localizedCategory].filter(Boolean).join(" · ")}
+                  meta={published}
+                  imageSrc={post.data.heroImage}
+                  imageAlt={post.data.title}
+                  class="my-2 px-4 py-4 sm:px-5"
+                />
+              );
+            }
+
             return (
               <article
                 class:list={[
@@ -117,7 +140,7 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
                     </span>
                     <span class="text-muted-foreground/40">/</span>
                     <span class="text-muted-foreground">
-                      {(post.data.category ? categoryNames[post.data.category] : undefined) ?? post.data.category}
+                      {localizedCategory}
                     </span>
                   </div>
 
@@ -133,10 +156,7 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
                   <div class="mt-2 flex items-center gap-3 text-[11px] text-muted-foreground/60">
                     {post.data.pubDate && (
                       <span>
-                        {post.data.pubDate.toLocaleDateString(
-                          locale === "ko" ? "ko-KR" : locale === "ja" ? "ja-JP" : locale === "zh" ? "zh-CN" : locale === "fr" ? "fr-FR" : locale === "es" ? "es-ES" : "en-US",
-                          { month: "short", day: "numeric", year: "numeric" },
-                        )}
+                        {published}
                       </span>
                     )}
                     {post.data.author && (
