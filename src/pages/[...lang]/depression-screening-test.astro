@@ -1,0 +1,24 @@
+---
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({
+    params: { lang },
+    props: { locale: lang },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+
+const names: Record<Locale, string> = {
+  ko: "우울감 자가 점검",
+  en: "Depression screening",
+  ja: "うつ病スクリーニング",
+  fr: "dépistage de la dépression",
+  es: "cribado de depresión",
+  zh: "抑鬱症篩查",
+};
+---
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/depression/test/" kind="test" />

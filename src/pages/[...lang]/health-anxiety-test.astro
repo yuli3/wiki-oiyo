@@ -1,0 +1,13 @@
+---
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const names: Record<Locale, string> = { ko: "Health Anxiety Test", en: "Health Anxiety Test", ja: "Health Anxiety Test", fr: "Health Anxiety Test", es: "Health Anxiety Test", zh: "Health Anxiety Test" };
+---
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/health-anxiety-test/" kind="test" />

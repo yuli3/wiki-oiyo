@@ -1,0 +1,27 @@
+---
+// Wiki hosts no interactive tools of its own. The family's tools live in the
+// unified catalog on blog.oiyo.net. Static meta-refresh redirect there.
+import { locales } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const target = `https://blog.oiyo.net/${lang}/tools/`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <meta name="robots" content="noindex, follow" />
+    <title>Redirecting to Tools…</title>
+  </head>
+  <body>
+    <p>Tools have moved. <a href={target}>Go to the Tools hub →</a></p>
+  </body>
+</html>

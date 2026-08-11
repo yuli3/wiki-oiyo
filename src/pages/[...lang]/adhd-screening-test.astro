@@ -1,0 +1,24 @@
+---
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({
+    params: { lang },
+    props: { locale: lang },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+
+const names: Record<Locale, string> = {
+  ko: "성인 ADHD 자가 스크리닝",
+  en: "Adult ADHD self-screening",
+  ja: "成人ADHD自己スクリーニング",
+  fr: "dépistage TDAH adulte",
+  es: "cribado TDAH adulto",
+  zh: "成人ADHD自我篩查",
+};
+---
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/adhd/test/" kind="test" />

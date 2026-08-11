@@ -1,0 +1,13 @@
+---
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const names: Record<Locale, string> = { ko: "Typing Speed Test", en: "Typing Speed Test", ja: "Typing Speed Test", fr: "Typing Speed Test", es: "Typing Speed Test", zh: "Typing Speed Test" };
+---
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/typing-speed-test/" kind="test" />

@@ -1,0 +1,20 @@
+---
+import OiyoCanonicalRedirect from "../../components/OiyoCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const names: Record<Locale, string> = {
+  "ko": "오늘의 타로",
+  "en": "Daily Tarot",
+  "ja": "今日のタロット",
+  "fr": "tarot du jour",
+  "es": "lectura de tarot",
+  "zh": "今日塔罗",
+};
+---
+<OiyoCanonicalRedirect locale={locale} itemName={names[locale] ?? names.en} targetPath="/tarot/daily" kind="tool" />

@@ -1,0 +1,12 @@
+---
+import BlogCanonicalRedirect from "../../components/BlogCanonicalRedirect.astro";
+import { locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+<BlogCanonicalRedirect locale={locale} itemName="Pension Optimizer Calculator" targetPath="/pension-optimizer-calculator" />
