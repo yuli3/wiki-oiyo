@@ -10,7 +10,9 @@ jobs:
   audit:
     name: Broken links & orphan pages
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Builds the whole site first. The 08-11 pass took 11m49s, leaving barely
+    # three minutes of headroom at the old 15. Same budget as ci.yml.
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
