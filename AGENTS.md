@@ -32,12 +32,12 @@ The long-term goal is:
 
 Read these in order before making substantial changes:
 
-1. [docs/content-charter.md](/Users/seuncho/coding/blog/docs/content-charter.md)
-2. [docs/mdoc-authoring-spec.md](/Users/seuncho/coding/blog/docs/mdoc-authoring-spec.md)
-3. [docs/component-allowlist.md](/Users/seuncho/coding/blog/docs/component-allowlist.md)
-4. [docs/component-disallowlist.md](/Users/seuncho/coding/blog/docs/component-disallowlist.md)
-5. [docs/component-registry-by-track.md](/Users/seuncho/coding/blog/docs/component-registry-by-track.md)
-6. [docs/content-schema-implementation-draft.md](/Users/seuncho/coding/blog/docs/content-schema-implementation-draft.md)
+1. [docs/content-charter.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/content-charter.md)
+2. [docs/mdoc-authoring-spec.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/mdoc-authoring-spec.md)
+3. [docs/component-allowlist.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-allowlist.md)
+4. [docs/component-disallowlist.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-disallowlist.md)
+5. [docs/component-registry-by-track.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-registry-by-track.md)
+6. [docs/content-schema-implementation-draft.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/content-schema-implementation-draft.md)
 7. [data/catalog/category-registry.yaml](/Users/seuncho/coding/blog/data/catalog/category-registry.yaml)
 8. [data/catalog/content-inventory.master.csv](/Users/seuncho/coding/blog/data/catalog/content-inventory.master.csv)
 9. [data/catalog/ahoxy-migration.revisit-later.csv](/Users/seuncho/coding/blog/data/catalog/ahoxy-migration.revisit-later.csv)
