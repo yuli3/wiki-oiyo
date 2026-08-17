@@ -17,20 +17,6 @@ tracks:
     label_en: Dictionary
 
 categories:
-  - id: oracle-300
-    label_ko: 오라클 300
-    label_en: Oracle 300
-    track: academy
-    description_ko: 발타자르 그라시안의 고전 오라클 300개 잠언 현대적 해석
-    description_en: Modern interpretation of Baltasar Gracian's 300 maxims
-
-  - id: oracle-400
-    label_ko: 오라클 400
-    label_en: Oracle 400
-    track: academy
-    description_ko: 마르쿠스 아우렐리우스의 명상록을 현대적으로 풀어낸 스토아 잠언
-    description_en: Modern Stoic reflections from Marcus Aurelius' Meditations
-
   - id: mindset-30
     label_ko: 30일 마인드셋
     label_en: 30-Day Mindset
@@ -51,13 +37,6 @@ categories:
     track: academy
     description_ko: 인간관계와 커뮤니케이션 기술
     description_en: Human relationships and communication skills
-
-  - id: ai-leadership
-    label_ko: AI 리더십
-    label_en: AI Leadership
-    track: academy
-    description_ko: AI 시대의 리더십 전략
-    description_en: Leadership strategies in the AI era
 
   - id: self-development
     label_ko: 자기계발
@@ -288,10 +267,6 @@ categories:
     label_ko: 삶
     label_en: Life
     track: magazine
-  - id: digital
-    label_ko: 디지털
-    label_en: Digital
-    track: academy
   - id: consumer
     label_ko: 소비자
     label_en: Consumer
@@ -299,16 +274,4 @@ categories:
   - id: career
     label_ko: 커리어
     label_en: Career
-    track: academy
-  - id: oracle-proverb
-    label_ko: 오라클 속담
-    label_en: 오라클 속담
-    track: academy
-  - id: oracle-laozi
-    label_ko: 오라클 노자
-    label_en: 오라클 노자
-    track: academy
-  - id: oracle-sunzi
-    label_ko: 오라클 손자병법
-    label_en: 오라클 손자병법
     track: academy
