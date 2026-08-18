@@ -629,3 +629,32 @@
 /ko/meaning-of-palm-heart-line/  https://oiyo.net/ko/palmistry/explore/  301
 /ko/meaning-of-palm-life-line  https://oiyo.net/ko/palmistry/explore/  301
 /ko/meaning-of-palm-life-line/  https://oiyo.net/ko/palmistry/explore/  301
+
+# 2026-08-18 wiki -> oiyo tool merge. These 11 slugs are the only ones in the
+# batch with 3+ impressions in 90 days; the articles are archived under
+# archive/oiyo-tool-merge-2026-08-18/. Targets are concrete pages, not section
+# roots -- oiyo has no index.astro under tarot/, enneagram/, biorhythm/, saju/
+# or natal/, so /tarot/ would 404.
+# Budget: this file dies past rule #622 with no error. Count before adding more.
+/:lang/meaning-of-hsp  https://oiyo.net/:lang/hsp-test/  301
+/:lang/meaning-of-hsp/  https://oiyo.net/:lang/hsp-test/  301
+/:lang/meaning-of-tarot  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-chinese-zodiac  https://oiyo.net/:lang/chinese-zodiac/  301
+/:lang/meaning-of-chinese-zodiac/  https://oiyo.net/:lang/chinese-zodiac/  301
+/:lang/meaning-of-blood-type  https://oiyo.net/:lang/blood-type/  301
+/:lang/meaning-of-blood-type/  https://oiyo.net/:lang/blood-type/  301
+/:lang/meaning-of-enneagram  https://oiyo.net/:lang/enneagram/test/  301
+/:lang/meaning-of-enneagram/  https://oiyo.net/:lang/enneagram/test/  301
+/:lang/meaning-of-biorhythms  https://oiyo.net/:lang/biorhythm/calculator/  301
+/:lang/meaning-of-biorhythms/  https://oiyo.net/:lang/biorhythm/calculator/  301
+/:lang/meaning-of-saju-stage-geonrok  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-stage-geonrok/  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
