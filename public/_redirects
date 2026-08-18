@@ -587,3 +587,15 @@
 # 경영학 강의 퇴장: Blog 강의가 정본 (locale parity가 있는 경로만)
 /ko/education-business-ch20  https://blog.oiyo.net/ko/academy-management-core-ch12/  301
 /ko/education-business-ch20/  https://blog.oiyo.net/ko/academy-management-core-ch12/  301
+
+# ── 금융 사전·시리즈 blog 통합 (2026-08-18) ─────────────────────────────
+# 세운 지시: wiki 금융은 blog가 정본. 4편 전부 90일 노출 0·클릭 0.
+# 고유 내용(용어 20개·차트 읽기·채권/ETF/펀드·금리/인플레/복리)은 대상 글에 병합했다.
+/ko/crypto-basics-ch1  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/crypto-basics-ch1/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/crypto-basics-ch2  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/crypto-basics-ch2/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/crypto-glossary-ch1  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/crypto-glossary-ch1/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
+/ko/finance-terms-glossary  https://blog.oiyo.net/ko/magazine-stock-terms-guide/  301
+/ko/finance-terms-glossary/  https://blog.oiyo.net/ko/magazine-stock-terms-guide/  301
