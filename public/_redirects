@@ -667,3 +667,28 @@
 # 21 rules of headroom remain for exactly that fallback.
 /:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
 /:lang/meaning-of-myth-*/  https://blog.oiyo.net/:lang/meaning-of-myth-:splat/  301
+
+# 2026-08-18 ten lecture courses moved to blog (248 files, en/ja/ko).
+# Two rules per subject, not per chapter -- per-chapter would be ~500 lines and
+# this file stops working past rule #622. Same unverified mid-segment splat as
+# the myth block above; probe both together after deploy.
+/:lang/education-zoology-*  https://blog.oiyo.net/:lang/education-zoology-:splat  301
+/:lang/education-zoology-*/  https://blog.oiyo.net/:lang/education-zoology-:splat/  301
+/:lang/education-medicine-*  https://blog.oiyo.net/:lang/education-medicine-:splat  301
+/:lang/education-medicine-*/  https://blog.oiyo.net/:lang/education-medicine-:splat/  301
+/:lang/education-nursing-*  https://blog.oiyo.net/:lang/education-nursing-:splat  301
+/:lang/education-nursing-*/  https://blog.oiyo.net/:lang/education-nursing-:splat/  301
+/:lang/education-music-history-*  https://blog.oiyo.net/:lang/education-music-history-:splat  301
+/:lang/education-music-history-*/  https://blog.oiyo.net/:lang/education-music-history-:splat/  301
+/:lang/education-financial-engineering-*  https://blog.oiyo.net/:lang/education-financial-engineering-:splat  301
+/:lang/education-financial-engineering-*/  https://blog.oiyo.net/:lang/education-financial-engineering-:splat/  301
+/:lang/education-ai-literacy-*  https://blog.oiyo.net/:lang/education-ai-literacy-:splat  301
+/:lang/education-ai-literacy-*/  https://blog.oiyo.net/:lang/education-ai-literacy-:splat/  301
+/:lang/education-actuarial-science-*  https://blog.oiyo.net/:lang/education-actuarial-science-:splat  301
+/:lang/education-actuarial-science-*/  https://blog.oiyo.net/:lang/education-actuarial-science-:splat/  301
+/:lang/education-advanced-bonds-*  https://blog.oiyo.net/:lang/education-advanced-bonds-:splat  301
+/:lang/education-advanced-bonds-*/  https://blog.oiyo.net/:lang/education-advanced-bonds-:splat/  301
+/:lang/education-geology-*  https://blog.oiyo.net/:lang/education-geology-:splat  301
+/:lang/education-geology-*/  https://blog.oiyo.net/:lang/education-geology-:splat/  301
+/:lang/education-urban-planning-*  https://blog.oiyo.net/:lang/education-urban-planning-:splat  301
+/:lang/education-urban-planning-*/  https://blog.oiyo.net/:lang/education-urban-planning-:splat/  301
