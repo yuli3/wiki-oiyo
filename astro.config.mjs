@@ -26,6 +26,12 @@ const DEINDEXED_LOCALES = new Set(
   JSON.parse(readFileSync(new URL("./src/config/deindexed-locales.json", import.meta.url), "utf8")),
 );
 
+// Same policy at the slug level, for combinatorial grids that only multiply URLs.
+// SEO.astro reads this same file for its robots meta — they must not drift.
+const DEINDEXED_SLUG_RES = JSON.parse(
+  readFileSync(new URL("./src/config/deindexed-slugs.json", import.meta.url), "utf8"),
+).patterns.map((/** @type {{ pattern: string }} */ p) => new RegExp(p.pattern));
+
 /** @param {URL} directory @returns {string[]} */
 function collectExcludedPageSlugs(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -73,6 +79,8 @@ export default defineConfig({
         if (segs.length === 2 && BRIDGE_SLUGS.has(segs[1])) return false;
         // Exclude deindexed locales (crawl budget).
         if (segs.length > 0 && DEINDEXED_LOCALES.has(segs[0])) return false;
+        // Deindexed slug patterns (combinatorial grids). In lockstep with SEO.astro.
+        if (segs.length > 1 && DEINDEXED_SLUG_RES.some((/** @type {RegExp} */ re) => re.test(segs[segs.length - 1]))) return false;
         if (segs.length === 2 && EXCLUDED_PAGE_SLUGS.has(segs[1])) return false;
         return true;
       },

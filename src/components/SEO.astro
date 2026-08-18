@@ -2,10 +2,13 @@
 import { siteConfig } from "../config/site.config";
 import { getAuthor } from "../lib/authors";
 import deindexedLocales from "../config/deindexed-locales.json";
+import deindexedSlugs from "../config/deindexed-slugs.json";
 
 // Crawl-budget policy — see astro.config.mjs. Reachable for users, out of the
 // index, the sitemap, and the hreflang cluster.
 const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
+// 조합격자처럼 URL 만 늘리고 검색 수요가 없는 슬러그 묶음. 근거는 설정 파일에 적혀 있다.
+const DEINDEXED_SLUG_RES = deindexedSlugs.patterns.map((p) => new RegExp(p.pattern));
 
 interface Props {
   title?: string;
@@ -69,7 +72,9 @@ const allLocales =
 // hreflang annotations pointing at noindex URLs.
 const locales = allLocales.filter((l: string) => !DEINDEXED_LOCALES.has(l));
 const isDeindexedLocale = DEINDEXED_LOCALES.has(currentLocaleSegment);
-const robotsContent = noindex || isDeindexedLocale
+const currentSlugSegment = pathSegments.length > 1 ? pathSegments[pathSegments.length - 1] : "";
+const isDeindexedSlug = DEINDEXED_SLUG_RES.some((re) => re.test(currentSlugSegment));
+const robotsContent = noindex || isDeindexedLocale || isDeindexedSlug
   ? "noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 

@@ -1,0 +1,11 @@
+{
+  "_why": "크롤 예산 정책. 사용자에게는 그대로 서빙하되 색인·사이트맵에서 뺀다. astro.config.mjs 의 사이트맵 필터와 SEO.astro 의 robots meta 가 이 파일 하나를 함께 읽어 lockstep 을 유지한다 — 사이트맵에 있으면서 noindex 인 URL 은 검색엔진에 반대 신호 두 개를 보낸다.",
+  "patterns": [
+    {
+      "pattern": "^meaning-of-astro-(?!planets-in)[a-z]+-in-",
+      "why": "행성×사인 120 + 행성×하우스 120 조합격자. 2026-08-18 GSC 90일 실측 720 URL(ko/en/ja) 노출 21·클릭 0. 같은 내용을 AstroMatrix 도구가 허브 2편에서 한 화면으로 제공한다. 허브(meaning-of-astro-planets-in-signs/houses)는 lookahead 로 제외해 색인을 유지한다.",
+      "hubs": ["meaning-of-astro-planets-in-signs", "meaning-of-astro-planets-in-houses"],
+      "measuredAt": "2026-08-18"
+    }
+  ]
+}
