@@ -414,3 +414,24 @@
 /:lang/education-public-admin*  https://blog.oiyo.net/:lang/education-public-admin:splat  301
 /:lang/education-statistics*  https://blog.oiyo.net/:lang/education-statistics:splat  301
 /:lang/education-technical-analysis*  https://blog.oiyo.net/:lang/education-technical-analysis:splat  301
+
+# 2026-08-19 combinatorial grids -> the oiyo tool that answers the same intent.
+# 1,806 files: saju ilju/branch/god (60갑자 x locale), astro planet-in-sign for
+# eight planets, and the tarot card set. Archived under
+# archive/grid-to-oiyo-2026-08-19/. These are the pages the 2026-07-14 audit
+# called scaled content; part of the astro grid was already noindex (7b17d2f).
+/:lang/meaning-of-astro-jupiter*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-mars*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-mercury*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-neptune*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-pluto*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-saturn*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-sun*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-venus*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-tarot*  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-ace*  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-king*  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-page*  https://oiyo.net/:lang/tarot/reading/  301
