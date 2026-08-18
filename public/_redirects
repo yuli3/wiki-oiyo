@@ -658,3 +658,12 @@
 /:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
 /:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
 /:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
+
+# 2026-08-18 myth dictionary moved to blog (101 slugs x 6 locales).
+# Two wildcard rules instead of 202, because this file dies past rule #622.
+# NOTE: the splat here is mid-segment (meaning-of-myth-*), which Cloudflare
+# does not document -- it documents * at the end of a path. If a probe shows
+# these 404, replace them with per-slug rules for the top 10 by impressions;
+# 21 rules of headroom remain for exactly that fallback.
+/:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
+/:lang/meaning-of-myth-*/  https://blog.oiyo.net/:lang/meaning-of-myth-:splat/  301
