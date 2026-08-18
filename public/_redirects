@@ -684,3 +684,39 @@
 /:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
 /:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
 /:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
+
+# 2026-08-19 last academy/magazine articles moved to blog (16 files).
+# Written as STATIC per-locale lines, not a splat: static gets 2,000 and
+# dynamic only 100, and 4ae617b proved what happens when dynamic overflows.
+/en/insurance-cancel-guide  https://blog.oiyo.net/en/insurance-cancel-guide/  301
+/en/insurance-cancel-guide/  https://blog.oiyo.net/en/insurance-cancel-guide/  301
+/en/insurance-how-to  https://blog.oiyo.net/en/insurance-how-to/  301
+/en/insurance-how-to/  https://blog.oiyo.net/en/insurance-how-to/  301
+/en/moving-guide-jp  https://blog.oiyo.net/en/moving-guide-jp/  301
+/en/moving-guide-jp/  https://blog.oiyo.net/en/moving-guide-jp/  301
+/en/moving-guide-kr  https://blog.oiyo.net/en/moving-guide-kr/  301
+/en/moving-guide-kr/  https://blog.oiyo.net/en/moving-guide-kr/  301
+/en/stock-glossary-ch3  https://blog.oiyo.net/en/stock-glossary-ch3/  301
+/en/stock-glossary-ch3/  https://blog.oiyo.net/en/stock-glossary-ch3/  301
+/es/stock-glossary-ch3  https://blog.oiyo.net/es/stock-glossary-ch3/  301
+/es/stock-glossary-ch3/  https://blog.oiyo.net/es/stock-glossary-ch3/  301
+/fr/stock-glossary-ch3  https://blog.oiyo.net/fr/stock-glossary-ch3/  301
+/fr/stock-glossary-ch3/  https://blog.oiyo.net/fr/stock-glossary-ch3/  301
+/ja/stock-glossary-ch3  https://blog.oiyo.net/ja/stock-glossary-ch3/  301
+/ja/stock-glossary-ch3/  https://blog.oiyo.net/ja/stock-glossary-ch3/  301
+/ko/insurance-cancel-guide  https://blog.oiyo.net/ko/insurance-cancel-guide/  301
+/ko/insurance-cancel-guide/  https://blog.oiyo.net/ko/insurance-cancel-guide/  301
+/ko/insurance-how-to  https://blog.oiyo.net/ko/insurance-how-to/  301
+/ko/insurance-how-to/  https://blog.oiyo.net/ko/insurance-how-to/  301
+/ko/moving-guide-jp  https://blog.oiyo.net/ko/moving-guide-jp/  301
+/ko/moving-guide-jp/  https://blog.oiyo.net/ko/moving-guide-jp/  301
+/ko/moving-guide-kr  https://blog.oiyo.net/ko/moving-guide-kr/  301
+/ko/moving-guide-kr/  https://blog.oiyo.net/ko/moving-guide-kr/  301
+/ko/adler-environment  https://blog.oiyo.net/ko/adler-environment/  301
+/ko/adler-environment/  https://blog.oiyo.net/ko/adler-environment/  301
+/ko/stock-glossary-ch3  https://blog.oiyo.net/ko/stock-glossary-ch3/  301
+/ko/stock-glossary-ch3/  https://blog.oiyo.net/ko/stock-glossary-ch3/  301
+/ko/lecture-civil-law-05  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
+/ko/lecture-civil-law-05/  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
+/zh/stock-glossary-ch3  https://blog.oiyo.net/zh/stock-glossary-ch3/  301
+/zh/stock-glossary-ch3/  https://blog.oiyo.net/zh/stock-glossary-ch3/  301
