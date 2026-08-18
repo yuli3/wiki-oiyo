@@ -1,0 +1,35 @@
+---
+/**
+ * MDX entry point for the planet-by-house / planet-by-sign reader.
+ *
+ * The data comes from src/data/astro/<locale>.json, extracted on 2026-08-14
+ * from the 1,446 combination pages this replaces. Loading it here rather than
+ * inside the island keeps the JSON out of every page that imports the island
+ * and lets the build fail loudly on a missing locale instead of rendering an
+ * empty widget.
+ */
+import AstroMatrixIsland from "../astro/AstroMatrix";
+import type { AstroData } from "../astro/AstroMatrix";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const files = import.meta.glob<AstroData>("../../data/astro/*.json", {
+  import: "default",
+  eager: true,
+});
+const entry = Object.entries(files).find(([path]) => path.endsWith(`/${locale}.json`));
+
+if (!entry) {
+  throw new Error(
+    `AstroMatrix: no data for locale "${locale}". Expected src/data/astro/${locale}.json`,
+  );
+}
+
+const data = entry[1];
+---
+
+<AstroMatrixIsland client:visible data={data} />
