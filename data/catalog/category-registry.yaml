@@ -199,9 +199,9 @@ categories:
     label_ko: 사회와 부
     label_en: Society & Wealth
     track: academy
-  - id: korean-logic
-    label_ko: 국어 논리
-    label_en: Korean Logic
+  - id: logic
+    label_ko: 논리
+    label_en: Logic
     track: academy
   - id: education
     label_ko: 교육

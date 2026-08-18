@@ -39,6 +39,7 @@ export const ACADEMY_CATEGORIES = [
   "Music History",
   "Zoology",
   "English Grammar",
+  "Logic",
   "Technical Analysis",
   "Negotiation",
   "Advanced Bonds",
