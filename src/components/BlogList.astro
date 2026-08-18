@@ -26,16 +26,18 @@ interface Props {
   activeCategory?: string;
   showIntentBundles?: boolean;
   useItemComposition?: boolean;
+  /** Keep this listing out of the index — see the category/pagination policy. */
+  noindex?: boolean;
 }
 
-const { page, locale, baseUrl, title, subtitle, activeCategory, showIntentBundles = false, useItemComposition = false } = Astro.props;
+const { page, locale, baseUrl, title, subtitle, activeCategory, showIntentBundles = false, useItemComposition = false, noindex } = Astro.props;
 const paginationEnabled = siteConfig.features.pagination;
 const t = await getTranslations(locale as Locale);
 const blogT = t.blog as Record<string, string>;
 const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: string };
 ---
 
-<BaseLayout title={title} description={subtitle} availableLocales={Astro.props.availableLocales}>
+<BaseLayout title={title} description={subtitle} availableLocales={Astro.props.availableLocales} noindex={noindex}>
   <section class="py-16 md:py-20">
     <div class="container px-4">
       <div class="mb-12 max-w-2xl">

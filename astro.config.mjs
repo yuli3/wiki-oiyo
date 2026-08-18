@@ -57,6 +57,13 @@ export default defineConfig({
         const path = url.pathname;
         // Root is a locale redirect shell; canonical English content lives at /en/.
         if (path === "/" || path === "") return false;
+        // Category listings and pagination: served, not indexed. Measured
+        // 2026-08-18, 2,278 such URLs across wiki and blog produced one click
+        // in 90 days while taking crawl budget from the pages that earn it.
+        // In lockstep with the noindex on those routes — a URL that is both
+        // sitemap-listed and noindex sends search engines two opposite signals.
+        if (path.includes("/category/")) return false;
+        if (/\/\d+\/?$/.test(path)) return false;
         // Exclude paths with underscore segments
         if (path.split("/").some((seg) => seg.startsWith("_"))) return false;
         // Exclude /index duplicate (trailing slash version is canonical)
