@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import BlogList from "../../components/BlogList.astro";
+import DictionaryLanding from "../../components/DictionaryLanding.astro";
 import { getTranslations, locales } from "../../lib/i18n";
+import type { Locale } from "../../lib/i18n";
+import { slugifyCategory } from "../../lib/taxonomy";
 
 export async function getStaticPaths() {
   return locales.map((lang) => ({
@@ -11,37 +13,84 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.props;
-const t = await getTranslations(locale);
+const t = await getTranslations(locale as Locale);
+const categoryNames = (t.category.names ?? {}) as Record<string, string>;
 
-const posts = await getCollection("blog", ({ data }) => {
-  return data.draft !== true && data.locale === locale;
+// The landing represents the definition layer, so it counts and lists dictionary
+// entries only. Academy and magazine articles also live in this collection — see
+// wiki-blog-merge-analysis-2026-08-14 on why that is being corrected — but they
+// are not what this site is for, and putting them here is how both homes ended
+// up looking like the same site.
+const terms = await getCollection("blog", ({ data }) => {
+  return data.draft !== true && data.locale === locale && data.track === "dictionary";
 });
 
-posts.sort((a, b) => {
-  const aMatch = a.slug.match(/-ch(\d+)$/);
-  const bMatch = b.slug.match(/-ch(\d+)$/);
-  if (aMatch && bMatch && a.data.category === b.data.category) {
-    return parseInt(aMatch[1], 10) - parseInt(bMatch[1], 10);
-  }
-  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
-});
+const slugOf = (slug: string) => slug.split("/").slice(1).join("/");
 
-const postsPerPage = 10;
-const totalPages = Math.ceil(posts.length / postsPerPage);
+const byCategory = new Map<string, typeof terms>();
+for (const term of terms) {
+  const key = term.data.category ?? "";
+  if (!key) continue;
+  const bucket = byCategory.get(key);
+  if (bucket) bucket.push(term);
+  else byCategory.set(key, [term]);
+}
 
-const page = {
-  data: posts.slice(0, postsPerPage),
-  currentPage: 1,
-  lastPage: totalPages,
-};
+// slugifyCategory is the canonical mapping and it throws for labels with no
+// registered slug — "에니어그램 사전" and "MBTI 사전" have none, and hand-rolling
+// the slug here produced /ko/category// and a link to a page that is not built.
+// A category we cannot address is a category we must not link to; collect the
+// names so the gap is visible rather than silently swallowed.
+const unroutable: string[] = [];
+const categories = [...byCategory.entries()]
+  .flatMap(([key, entries]) => {
+    let slug: string;
+    try {
+      slug = slugifyCategory(key);
+    } catch {
+      unroutable.push(key);
+      return [];
+    }
+    return [{
+      key,
+      label: categoryNames[key] ?? key,
+      count: entries.length,
+      href: `/${locale}/category/${slug}/`,
+      sample: entries.slice(0, 3).map((e) => e.data.title),
+    }];
+  })
+  .sort((a, b) => b.count - a.count);
+
+if (unroutable.length > 0) {
+  console.warn(
+    `[dictionary-landing] ${locale}: no registered category slug, omitted from browse — ${unroutable.join(", ")}`,
+  );
+}
+
+// reviewedDate is the human-review signal this collection carries and the blog
+// collection does not; surfacing it is the point, so entries without one are
+// left out rather than backfilled with pubDate.
+// The schema coerces reviewedDate to a Date, so String(d).slice(0,10) yields
+// "Wed Jun 03" rather than the date. Sort on the timestamp and format as ISO.
+const asTime = (d: unknown) => (d instanceof Date ? d.getTime() : Date.parse(String(d)));
+const asISO = (d: unknown) =>
+  d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10);
+
+const recent = terms
+  .filter((e) => e.data.reviewedDate)
+  .sort((a, b) => asTime(b.data.reviewedDate) - asTime(a.data.reviewedDate))
+  .slice(0, 8)
+  .map((e) => ({
+    title: e.data.title,
+    href: `/${locale}/${slugOf(e.slug)}/`,
+    definition: e.data.definition ?? e.data.description ?? "",
+    reviewedDate: asISO(e.data.reviewedDate),
+  }));
 ---
 
-<BlogList
-  page={page}
-  locale={locale}
-  baseUrl={`/${locale}`}
-  title={t.nav.home}
-  subtitle={t.home.tagline}
-  showIntentBundles={true}
-  useItemComposition={true}
+<DictionaryLanding
+  locale={locale as Locale}
+  termCount={terms.length}
+  categories={categories}
+  recent={recent}
 />

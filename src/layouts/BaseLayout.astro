@@ -402,10 +402,15 @@ const footerLabels = footerCopy[locale] ?? footerCopy.en;
         <section>
           <p class="mb-3 text-sm font-black tracking-tight">OIYO <span class="font-semibold lowercase text-primary">wiki</span></p>
           <nav aria-label={footerLabels.site} class="grid gap-2 text-sm text-muted-foreground">
+            {/*
+              2026-08-17: courses(강의)·magazine(매거진) 링크를 뺐다. 두 역할은 blog가
+              소유한다(definition=wiki / explanation=blog). wiki 푸터가 계속 그것을
+              가리키면 세운이 본 그대로 — wiki가 아직 강의·매거진 사이트로 보인다.
+              라우트 자체는 아직 살아 있으므로 지우지 않았다. 이전은 별도 배치다.
+            */}
             <a href={`/${locale}/explore`} class="hover:text-primary">{nav.explore ?? "Explore"}</a>
-            <a href={`/${locale}/courses`} class="hover:text-primary">{nav.courses ?? "Courses"}</a>
-            <a href={`/${locale}/magazine`} class="hover:text-primary">{nav.magazine ?? "Magazine"}</a>
             <a href="/knowledge/" class="hover:text-primary">{footerLabels.knowledge}</a>
+            <a href={`/${locale}/about`} class="hover:text-primary">{nav.about ?? "About"}</a>
           </nav>
         </section>
         <section>

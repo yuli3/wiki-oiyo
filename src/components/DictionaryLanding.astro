@@ -1,0 +1,257 @@
+---
+/**
+ * The front door for the definition layer.
+ *
+ * Until 2026-08-14 this site's landing page rendered the same component as
+ * blog.oiyo.net with the same category grid, so both homes carried the h1 "홈",
+ * the same description, and a shelf of links to calculators, psychology tests
+ * and puzzle games. Two sites, one front door, and neither of them said what
+ * this one is: the place where terms are defined.
+ *
+ * The machine-facing half of that identity already existed — /knowledge/topics.json
+ * publishes a DefinedTermSet and every dictionary entry emits DefinedTerm — so
+ * this page gives the human half the same claim: how many terms, in what
+ * subjects, reviewed when, and a way in.
+ */
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getTranslations } from "../lib/i18n";
+import type { Locale } from "../lib/i18n";
+
+interface Category {
+  key: string;
+  label: string;
+  count: number;
+  href: string;
+  sample: string[];
+}
+
+interface Props {
+  locale: Locale;
+  termCount: number;
+  categories: Category[];
+  recent: { title: string; href: string; definition: string; reviewedDate?: string }[];
+  availableLocales?: string[];
+}
+
+const { locale, termCount, categories, recent, availableLocales } = Astro.props;
+const t = await getTranslations(locale);
+
+type Copy = {
+  eyebrow: string;
+  title: (n: string) => string;
+  lede: string;
+  browse: string;
+  terms: (n: number) => string;
+  recentTitle: string;
+  recentNote: string;
+  machineTitle: string;
+  machineBody: string;
+  machineCta: string;
+  siblingsTitle: string;
+  blog: string;
+  blogDesc: string;
+  tools: string;
+  toolsDesc: string;
+};
+
+const COPY: Record<Locale, Copy> = {
+  ko: {
+    eyebrow: "정의 계층",
+    title: (n) => `${n}개 용어의 정의`,
+    lede: "사주·점성술·타로·심리 용어를 한 문장 정의부터 정리합니다. 각 항목은 검토자와 검토일을 밝히고, 고정된 주소로 인용할 수 있습니다.",
+    browse: "주제로 찾기",
+    terms: (n) => `${n.toLocaleString("ko")}개 용어`,
+    recentTitle: "최근 검토한 항목",
+    recentNote: "검토일은 사람이 내용을 다시 확인한 날짜입니다.",
+    machineTitle: "기계가 읽는 사전",
+    machineBody: "모든 항목은 DefinedTerm으로 표시되고, 전체 목록은 하나의 JSON으로 공개됩니다. AI와 검색엔진이 출처를 밝히고 인용할 수 있습니다.",
+    machineCta: "topics.json 열기",
+    siblingsTitle: "정의 다음에 필요한 것",
+    blog: "설명 읽기",
+    blogDesc: "왜 그런지, 사례와 학습 경로로",
+    tools: "직접 해보기",
+    toolsDesc: "계산기·차트·테스트로 내 경우를 확인",
+  },
+  en: {
+    eyebrow: "Definition layer",
+    title: (n) => `${n} terms, defined`,
+    lede: "Saju, astrology, tarot and psychology terms, each starting from a one-sentence definition. Every entry names its reviewer and review date, and has a stable URL you can cite.",
+    browse: "Browse by subject",
+    terms: (n) => `${n.toLocaleString("en")} terms`,
+    recentTitle: "Recently reviewed",
+    recentNote: "The review date is when a person checked the entry again.",
+    machineTitle: "A dictionary machines can read",
+    machineBody: "Every entry is marked up as a DefinedTerm, and the whole set is published as one JSON file, so search engines and AI can cite it with attribution.",
+    machineCta: "Open topics.json",
+    siblingsTitle: "After the definition",
+    blog: "Read the explanation",
+    blogDesc: "Why it works that way, with examples",
+    tools: "Try it yourself",
+    toolsDesc: "Calculators, charts and tests for your own case",
+  },
+  ja: {
+    eyebrow: "定義レイヤー",
+    title: (n) => `${n}語の定義`,
+    lede: "四柱推命・占星術・タロット・心理の用語を、一文の定義から整理します。各項目は査読者と査読日を明示し、固定URLで引用できます。",
+    browse: "テーマから探す",
+    terms: (n) => `${n.toLocaleString("ja")}語`,
+    recentTitle: "最近見直した項目",
+    recentNote: "査読日は人が内容を再確認した日付です。",
+    machineTitle: "機械が読める辞典",
+    machineBody: "すべての項目は DefinedTerm として記述され、全体は一つの JSON として公開されます。検索エンジンや AI が出典を示して引用できます。",
+    machineCta: "topics.json を開く",
+    siblingsTitle: "定義のつぎに",
+    blog: "解説を読む",
+    blogDesc: "なぜそうなるのか、事例とともに",
+    tools: "試してみる",
+    toolsDesc: "計算機・チャート・診断で自分の場合を確認",
+  },
+  zh: {
+    eyebrow: "定义层",
+    title: (n) => `${n} 个词条的定义`,
+    lede: "四柱、占星、塔罗与心理学术语，都从一句话的定义开始。每个词条标明审校人与审校日期，并有可引用的固定网址。",
+    browse: "按主题浏览",
+    terms: (n) => `${n.toLocaleString("zh")} 个词条`,
+    recentTitle: "最近审校",
+    recentNote: "审校日期是有人重新核对该词条的日期。",
+    machineTitle: "机器可读的词典",
+    machineBody: "每个词条都以 DefinedTerm 标注，全集以单个 JSON 发布，便于搜索引擎与 AI 注明出处后引用。",
+    machineCta: "打开 topics.json",
+    siblingsTitle: "读完定义之后",
+    blog: "阅读讲解",
+    blogDesc: "为什么如此，附案例与学习路径",
+    tools: "亲自试试",
+    toolsDesc: "用计算器、星盘和测验看自己的情况",
+  },
+  fr: {
+    eyebrow: "Couche de définition",
+    title: (n) => `${n} termes, définis`,
+    lede: "Termes de saju, d'astrologie, de tarot et de psychologie, chacun partant d'une définition d'une phrase. Chaque entrée indique son relecteur et sa date de relecture, avec une URL stable à citer.",
+    browse: "Parcourir par sujet",
+    terms: (n) => `${n.toLocaleString("fr")} termes`,
+    recentTitle: "Relu récemment",
+    recentNote: "La date de relecture est celle où une personne a revérifié l'entrée.",
+    machineTitle: "Un dictionnaire lisible par les machines",
+    machineBody: "Chaque entrée est balisée comme DefinedTerm et l'ensemble est publié dans un seul fichier JSON, citable avec attribution par les moteurs de recherche et les IA.",
+    machineCta: "Ouvrir topics.json",
+    siblingsTitle: "Après la définition",
+    blog: "Lire l'explication",
+    blogDesc: "Pourquoi il en est ainsi, avec des exemples",
+    tools: "Essayer soi-même",
+    toolsDesc: "Calculateurs, thèmes et tests pour votre cas",
+  },
+  es: {
+    eyebrow: "Capa de definición",
+    title: (n) => `${n} términos, definidos`,
+    lede: "Términos de saju, astrología, tarot y psicología, cada uno a partir de una definición de una frase. Cada entrada indica su revisor y la fecha de revisión, con una URL estable para citar.",
+    browse: "Explorar por tema",
+    terms: (n) => `${n.toLocaleString("es")} términos`,
+    recentTitle: "Revisado recientemente",
+    recentNote: "La fecha de revisión es cuando una persona volvió a comprobar la entrada.",
+    machineTitle: "Un diccionario que las máquinas leen",
+    machineBody: "Cada entrada se marca como DefinedTerm y el conjunto se publica en un solo JSON, de modo que buscadores e IA puedan citarlo con atribución.",
+    machineCta: "Abrir topics.json",
+    siblingsTitle: "Después de la definición",
+    blog: "Leer la explicación",
+    blogDesc: "Por qué es así, con ejemplos",
+    tools: "Probarlo",
+    toolsDesc: "Calculadoras, cartas y tests para tu caso",
+  },
+};
+
+const c = COPY[locale] ?? COPY.en;
+const formatted = termCount.toLocaleString(locale === "ko" ? "ko" : locale);
+const pageTitle = c.title(formatted);
+---
+
+<BaseLayout title={pageTitle} description={c.lede} availableLocales={availableLocales}>
+  <section class="py-16 md:py-20">
+    <div class="container px-4">
+      <p class="text-sm font-medium text-primary mb-3">{c.eyebrow}</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 font-heading">
+        {pageTitle}
+      </h1>
+      {/* keep-all stops Korean and Chinese from breaking inside a word, which
+          the default break-all does — "밝히 / 고," in the first render. */}
+      <p class="text-lg text-muted-foreground max-w-2xl leading-relaxed [word-break:keep-all]">
+        {c.lede}
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-16">
+    <div class="container px-4">
+      <h2 class="text-2xl font-bold mb-6 font-heading">{c.browse}</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {categories.map((cat) => (
+          <a
+            href={cat.href}
+            class="block rounded-xl border border-border/60 p-5 transition hover:border-primary/60 hover:bg-muted/40"
+          >
+            <div class="flex items-baseline justify-between gap-3">
+              <span class="font-semibold">{cat.label}</span>
+              <span class="text-sm text-muted-foreground whitespace-nowrap">{c.terms(cat.count)}</span>
+            </div>
+            {cat.sample.length > 0 && (
+              <p class="mt-2 text-sm text-muted-foreground line-clamp-2">
+                {cat.sample.join(" · ")}
+              </p>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {recent.length > 0 && (
+    <section class="pb-16">
+      <div class="container px-4">
+        <h2 class="text-2xl font-bold mb-2 font-heading">{c.recentTitle}</h2>
+        <p class="text-sm text-muted-foreground mb-6">{c.recentNote}</p>
+        <ul class="divide-y divide-border/60">
+          {recent.map((r) => (
+            <li class="py-4">
+              <a href={r.href} class="font-medium hover:text-primary">{r.title}</a>
+              {r.reviewedDate && (
+                <span class="ml-2 text-xs text-muted-foreground">{r.reviewedDate}</span>
+              )}
+              <p class="mt-1 text-sm text-muted-foreground line-clamp-2">{r.definition}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="pb-20">
+    <div class="container px-4 grid gap-6 lg:grid-cols-3">
+      <div class="rounded-xl border border-border/60 p-6 lg:col-span-1">
+        <h2 class="text-lg font-bold mb-2 font-heading">{c.machineTitle}</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-4">{c.machineBody}</p>
+        <a href="/knowledge/topics.json" class="text-sm font-medium text-primary hover:underline">
+          {c.machineCta} →
+        </a>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h2 class="text-lg font-bold mb-4 font-heading">{c.siblingsTitle}</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a
+            href={`https://blog.oiyo.net/${locale}/`}
+            class="block rounded-xl border border-border/60 p-5 transition hover:border-primary/60 hover:bg-muted/40"
+          >
+            <span class="font-semibold">{c.blog}</span>
+            <p class="mt-1 text-sm text-muted-foreground">{c.blogDesc}</p>
+          </a>
+          <a
+            href={`https://oiyo.net/${locale}/`}
+            class="block rounded-xl border border-border/60 p-5 transition hover:border-primary/60 hover:bg-muted/40"
+          >
+            <span class="font-semibold">{c.tools}</span>
+            <p class="mt-1 text-sm text-muted-foreground">{c.toolsDesc}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
