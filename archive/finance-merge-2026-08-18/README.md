@@ -49,6 +49,10 @@ ch3만 빼면 남은 두 편이 죽은 링크를 갖게 되므로 3부작을 함
 
 `public/_redirects` 하단에 8줄(4 slug × 슬래시 유무). 이 파일은 549 → 557 규칙이 됐고 한도는 2,000이다.
 
-⚠️ 이 배치에서 확인한 사실: **"append한 `_redirects` 규칙은 하단에서 드롭된다"는 종전 기록은 지금 조건에서 틀리다.**
-파일의 마지막 규칙이었던 `/ko/education-business-ch20`이 라이브에서 정상 301한다(실측).
-그래서 meta-refresh 스텁(`OiyoCanonicalRedirect`) 대신 진짜 301을 썼다 — 통합에는 이쪽이 낫다.
+왜 스텁이 아니라 진짜 301인가: **하단 드롭 컷오프는 blog 고유이고 wiki에는 없다.**
+`AI-Sessions/wiki/errors/cloudflare-pages-rules-pitfalls-2026-07-16.md`가 이미 그렇게 적고 있다
+(blog는 303번째에서 잘리지만 wiki는 545 규칙 마지막 줄까지 작동). 이 배치에서 라이브로 재확인했다 —
+파일의 마지막 규칙 `/ko/education-business-ch20`이 정상 301한다. 통합에는 meta-refresh 스텁보다 301이 낫다.
+
+⚠️ **아직 남은 검증**: 위 문서의 규칙 3·6이 "`_redirects` 변경은 배포 후 라이브 curl로 검증"을 요구한다.
+빌드·dist 확인은 규칙 유효성을 보증하지 않는다. 배포 완료 후 새 8줄 중 하나를 반드시 찍어볼 것.
