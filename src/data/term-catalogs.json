@@ -490,82 +490,82 @@
   "mbti": [
     {
       "name": "INTJ 전략가",
-      "url": "/ko/mbti-dict-intj/",
+      "url": "https://oiyo.net/ko/mbti/intj/",
       "description": "장기 비전과 전략적 사고로 시스템을 설계하는 독립적 완벽주의자"
     },
     {
       "name": "INTP 논리학자",
-      "url": "/ko/mbti-dict-intp/",
+      "url": "https://oiyo.net/ko/mbti/intp/",
       "description": "호기심과 논리로 개념의 근본을 파고드는 이론가"
     },
     {
       "name": "ENTJ 통솔자",
-      "url": "/ko/mbti-dict-entj/",
+      "url": "https://oiyo.net/ko/mbti/entj/",
       "description": "목표 지향적 리더십으로 조직을 이끄는 지휘관"
     },
     {
       "name": "ENTP 변론가",
-      "url": "/ko/mbti-dict-entp/",
+      "url": "https://oiyo.net/ko/mbti/entp/",
       "description": "아이디어와 토론을 즐기는 기지 넘치는 혁신가"
     },
     {
       "name": "INFJ 옹호자",
-      "url": "/ko/mbti-dict-infj/",
+      "url": "https://oiyo.net/ko/mbti/infj/",
       "description": "통찰과 이상으로 사람을 돕는 조용한 신념가"
     },
     {
       "name": "INFP 중재자",
-      "url": "/ko/mbti-dict-infp/",
+      "url": "https://oiyo.net/ko/mbti/infp/",
       "description": "가치와 진정성을 추구하는 이상주의적 몽상가"
     },
     {
       "name": "ENFJ 선도자",
-      "url": "/ko/mbti-dict-enfj/",
+      "url": "https://oiyo.net/ko/mbti/enfj/",
       "description": "공감과 카리스마로 사람을 이끄는 선도자"
     },
     {
       "name": "ENFP 활동가",
-      "url": "/ko/mbti-dict-enfp/",
+      "url": "https://oiyo.net/ko/mbti/enfp/",
       "description": "열정과 가능성으로 영감을 주는 자유로운 활동가"
     },
     {
       "name": "ISTJ 현실주의자",
-      "url": "/ko/mbti-dict-istj/",
+      "url": "https://oiyo.net/ko/mbti/istj/",
       "description": "책임감과 원칙으로 신뢰를 쌓는 현실주의자"
     },
     {
       "name": "ISFJ 수호자",
-      "url": "/ko/mbti-dict-isfj/",
+      "url": "https://oiyo.net/ko/mbti/isfj/",
       "description": "헌신과 배려로 주변을 돌보는 따뜻한 수호자"
     },
     {
       "name": "ESTJ 경영자",
-      "url": "/ko/mbti-dict-estj/",
+      "url": "https://oiyo.net/ko/mbti/estj/",
       "description": "체계와 효율로 일을 완수하는 관리자"
     },
     {
       "name": "ESFJ 집정관",
-      "url": "/ko/mbti-dict-esfj/",
+      "url": "https://oiyo.net/ko/mbti/esfj/",
       "description": "화합과 봉사로 공동체를 챙기는 사교가"
     },
     {
       "name": "ISTP 장인",
-      "url": "/ko/mbti-dict-istp/",
+      "url": "https://oiyo.net/ko/mbti/istp/",
       "description": "손과 논리로 문제를 해결하는 만능 재주꾼"
     },
     {
       "name": "ISFP 모험가",
-      "url": "/ko/mbti-dict-isfp/",
+      "url": "https://oiyo.net/ko/mbti/isfp/",
       "description": "감각과 자유를 사랑하는 예술적 모험가"
     },
     {
       "name": "ESTP 사업가",
-      "url": "/ko/mbti-dict-estp/",
+      "url": "https://oiyo.net/ko/mbti/estp/",
       "description": "행동력과 순발력으로 현장을 누비는 활동가"
     },
     {
       "name": "ESFP 연예인",
-      "url": "/ko/mbti-dict-esfp/",
+      "url": "https://oiyo.net/ko/mbti/esfp/",
       "description": "즐거움과 에너지로 분위기를 띄우는 연예인"
     }
   ],
