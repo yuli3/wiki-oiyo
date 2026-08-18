@@ -389,3 +389,28 @@
 /:lang/education-geology-*/  https://blog.oiyo.net/:lang/education-geology-:splat/  301
 /:lang/education-urban-planning-*  https://blog.oiyo.net/:lang/education-urban-planning-:splat  301
 /:lang/education-urban-planning-*/  https://blog.oiyo.net/:lang/education-urban-planning-:splat/  301
+
+# 2026-08-19 the remaining 20 lecture subjects moved to blog (614 files).
+# One rule each: the splat matches both the bare path and the trailing slash,
+# proven by the fold in 4ae617b. education-* here also covers the odd
+# economics-ch25_29 style slugs and business-scholars.
+/:lang/education-accounting*  https://blog.oiyo.net/:lang/education-accounting:splat  301
+/:lang/education-art-psychotherapy*  https://blog.oiyo.net/:lang/education-art-psychotherapy:splat  301
+/:lang/education-behavioral-economics*  https://blog.oiyo.net/:lang/education-behavioral-economics:splat  301
+/:lang/education-biology*  https://blog.oiyo.net/:lang/education-biology:splat  301
+/:lang/education-business*  https://blog.oiyo.net/:lang/education-business:splat  301
+/:lang/education-calculus*  https://blog.oiyo.net/:lang/education-calculus:splat  301
+/:lang/education-crypto*  https://blog.oiyo.net/:lang/education-crypto:splat  301
+/:lang/education-cs*  https://blog.oiyo.net/:lang/education-cs:splat  301
+/:lang/education-economics*  https://blog.oiyo.net/:lang/education-economics:splat  301
+/:lang/education-economics-math*  https://blog.oiyo.net/:lang/education-economics-math:splat  301
+/:lang/education-english-grammar*  https://blog.oiyo.net/:lang/education-english-grammar:splat  301
+/:lang/education-finance*  https://blog.oiyo.net/:lang/education-finance:splat  301
+/:lang/education-food-nutrition*  https://blog.oiyo.net/:lang/education-food-nutrition:splat  301
+/:lang/education-history-everywhere*  https://blog.oiyo.net/:lang/education-history-everywhere:splat  301
+/:lang/education-law*  https://blog.oiyo.net/:lang/education-law:splat  301
+/:lang/education-pm*  https://blog.oiyo.net/:lang/education-pm:splat  301
+/:lang/education-psychology*  https://blog.oiyo.net/:lang/education-psychology:splat  301
+/:lang/education-public-admin*  https://blog.oiyo.net/:lang/education-public-admin:splat  301
+/:lang/education-statistics*  https://blog.oiyo.net/:lang/education-statistics:splat  301
+/:lang/education-technical-analysis*  https://blog.oiyo.net/:lang/education-technical-analysis:splat  301
