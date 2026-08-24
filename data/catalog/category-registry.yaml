@@ -231,10 +231,6 @@ categories:
     label_ko: 수학
     label_en: Mathematics
     track: academy
-  - id: ai-literacy
-    label_ko: AI 리터러시
-    label_en: AI Literacy
-    track: academy
   - id: game-theory
     label_ko: 게임 이론
     label_en: Game Theory
