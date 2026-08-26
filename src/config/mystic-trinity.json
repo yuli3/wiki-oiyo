@@ -57,7 +57,7 @@
       },
       "lookup": {
         "site": "wiki",
-        "path": "/meaning-of-saju-dictionary",
+        "path": "/meaning-of-saju-60gapja",
         "locales": [
           "ko",
           "en",
@@ -233,7 +233,7 @@
     "mbti": {
       "lookup": {
         "site": "wiki",
-        "path": "/meaning-of-mbti-types",
+        "path": "/meaning-of-mbti",
         "locales": [
           "ko"
         ]
