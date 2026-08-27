@@ -42,28 +42,28 @@ const resources = [
 
 const network = [
   {
-    role: "Definition",
+    role: "Reference",
     title: "Oiyo Wiki",
     href: "https://wiki.oiyo.net/knowledge/",
     summary: "Source-backed definitions and concept graphs.",
-    details: "Use this layer when you need stable terms, cited references, and machine-readable DefinedTerm data.",
+    details: "Use this catalog when you need stable terms, cited references, and machine-readable DefinedTerm data.",
     catalogs: [{ label: "topics.json", href: "/knowledge/topics.json" }],
     current: true,
   },
   {
-    role: "Explanation",
+    role: "Publishing",
     title: "Oiyo Blog",
     href: "https://blog.oiyo.net/knowledge/",
     summary: "Guides, lessons, comparisons, and long-form context.",
-    details: "Use this layer when a reader needs examples, study paths, or a practical explanation before using a tool.",
+    details: "Use this catalog for guides, lessons, references, and established utilities published on the blog.",
     catalogs: [{ label: "guides.json", href: "https://blog.oiyo.net/knowledge/guides.json" }],
   },
   {
-    role: "Execution",
+    role: "Interactive",
     title: "OIYO",
     href: "https://oiyo.net/knowledge/",
     summary: "Tests, calculators, results, and repeatable workflows.",
-    details: "Use this layer when the user wants to calculate, test, save a result, or turn knowledge into action.",
+    details: "Use this catalog when the user wants to calculate, test, save a result, or turn knowledge into action.",
     catalogs: [{ label: "tools.json", href: "https://oiyo.net/knowledge/tools.json" }],
   },
 ];
@@ -79,8 +79,8 @@ const network = [
       A reference dataset built to be cited
     </h1>
     <p class="text-lg text-muted-foreground leading-relaxed mb-10">
-      Oiyo Wiki is the <strong>definition layer</strong> of the Oiyo knowledge network: source-cited,
-      stable definitions across astrology, saju, tarot, personality and psychology — published as clean
+      Oiyo Wiki publishes source-cited reference knowledge in the Oiyo network, including stable definitions
+      and selected explanations across astrology, saju, tarot, personality and psychology — as clean
       HTML <em>and</em> as machine-readable catalogs so that both people and AI can reference them.
     </p>
 
@@ -116,9 +116,9 @@ const network = [
     )}
 
     <KnowledgeNetworkMap
-      eyebrow="Three layers"
+      eyebrow="Canonical catalogs"
       heading="The knowledge network"
-      intro="Start with the layer that matches the intent. Open the details only when you need the data contract behind it."
+      intro="Start with the canonical catalog that matches the task. A content format does not force a particular domain."
       layers={network}
     />
 

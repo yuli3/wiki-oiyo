@@ -16,7 +16,7 @@ const { locale } = Astro.props;
 const t = await getTranslations(locale as Locale);
 const categoryNames = (t.category.names ?? {}) as Record<string, string>;
 
-// The landing represents the definition layer, so it counts and lists dictionary
+// The landing represents Wiki reference routes, so it counts and lists dictionary
 // entries only. Academy and magazine articles also live in this collection — see
 // wiki-blog-merge-analysis-2026-08-14 on why that is being corrected — but they
 // are not what this site is for, and putting them here is how both homes ended

@@ -414,10 +414,9 @@ const knowledgeMission = ({
           <p class="mb-3 max-w-xs text-xs leading-relaxed text-muted-foreground">{knowledgeMission}</p>
           <nav aria-label={footerLabels.site} class="grid gap-2 text-sm text-muted-foreground">
             {/*
-              2026-08-17: courses(강의)·magazine(매거진) 링크를 뺐다. 두 역할은 blog가
-              소유한다(definition=wiki / explanation=blog). wiki 푸터가 계속 그것을
-              가리키면 세운이 본 그대로 — wiki가 아직 강의·매거진 사이트로 보인다.
-              라우트 자체는 아직 살아 있으므로 지우지 않았다. 이전은 별도 배치다.
+              2026-08-17: courses(강의)·magazine(매거진) 링크를 뺐다. 당시 실제 canonical
+              routes가 blog로 이전됐기 때문에 wiki 푸터에서도 제거했다. 2026-08-27부터
+              콘텐츠 형식은 도메인을 강제하지 않지만, 이 링크 제거 결정은 그대로 유효하다.
             */}
             <a href={`/${locale}/explore`} class="hover:text-primary">{nav.explore ?? "Explore"}</a>
             <a href="/knowledge/" class="hover:text-primary">{footerLabels.knowledge}</a>

@@ -35,7 +35,7 @@ const blog = defineCollection({
     heroMode: z.enum(["none", "abstract", "legacy-image"]).optional(),
     contentStage: z.enum(["idea", "planned", "outlined", "drafting", "review", "published", "rework", "archived"]).optional(),
 
-    // --- Knowledge-foundation fields (machine-citable definition layer) ---
+    // --- Knowledge-foundation fields (machine-citable reference routes) ---
     // All optional & backward-compatible. The /knowledge catalogs and DefinedTerm
     // JSON-LD prefer these when present, else derive from description/tags/series.
     definition: z.string().max(400).optional(),      // explicit 1-sentence definition
