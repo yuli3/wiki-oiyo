@@ -5,42 +5,44 @@ This file is the canonical agent harness for `wiki-oiyo`.
 Before using this project-specific harness, read the cross-project harness:
 
 1. [/Users/seuncho/coding/AGENTS.md](/Users/seuncho/coding/AGENTS.md)
-2. [/Users/seuncho/coding/docs/AGENT_WORKLOG.md](/Users/seuncho/coding/docs/AGENT_WORKLOG.md)
-3. [/Users/seuncho/coding/docs/route-ownership.json](/Users/seuncho/coding/docs/route-ownership.json)
+2. [/Users/seuncho/coding/company-brain/AGENT_BOOTSTRAP.md](/Users/seuncho/coding/company-brain/AGENT_BOOTSTRAP.md)
+3. [/Users/seuncho/coding/company-brain/NOW.md](/Users/seuncho/coding/company-brain/NOW.md)
 
 All coding agents working in this repository should treat this file as the first operational document, then follow the linked control documents and verification commands.
 
 ## 1. Mission
 
-`wiki-oiyo` is not just a content fork.
+`wiki-oiyo` is a source-backed reference and concept-graph surface. Definitions and
+explanations may also live on Blog or an execution surface when that route is the
+canonical owner. Content format alone never selects Wiki.
 
-It is the definition and reference layer of the OIYO ecosystem, while sharing the structured content platform patterns used by `blog-oiyo`.
+Preserve existing canonical owners. Create or move a route only when search intent,
+existing authority, product adjacency, and maintenance cost support the change; record
+that decision in the route-ownership contract.
 
 1. `academy`
 2. `magazine`
 3. `interactive`
 
-The long-term goal is:
+The operating goal is:
 
 1. stable Cloudflare Pages publishing
 2. controlled MDOC-style authoring
-3. structured lecture and qualification systems
-4. selective migration from `ahoxy-nextjs`
-5. content and metadata that stay understandable across tools and agents
+3. source-backed reference content with explicit provenance
+4. content and metadata that stay understandable across tools and agents
+5. no parallel page created merely to complete a definition/explanation/execution trio
 
 ## 2. Source of Truth Order
 
 Read these in order before making substantial changes:
 
-1. [docs/content-charter.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/content-charter.md)
-2. [docs/mdoc-authoring-spec.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/mdoc-authoring-spec.md)
-3. [docs/component-allowlist.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-allowlist.md)
-4. [docs/component-disallowlist.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-disallowlist.md)
-5. [docs/component-registry-by-track.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/component-registry-by-track.md)
-6. [docs/content-schema-implementation-draft.md](/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/blog/docs/content-schema-implementation-draft.md)
-7. [data/catalog/category-registry.yaml](/Users/seuncho/coding/blog/data/catalog/category-registry.yaml)
-8. [data/catalog/content-inventory.master.csv](/Users/seuncho/coding/blog/data/catalog/content-inventory.master.csv)
-9. [data/catalog/ahoxy-migration.revisit-later.csv](/Users/seuncho/coding/blog/data/catalog/ahoxy-migration.revisit-later.csv)
+1. [Cross-project harness](/Users/seuncho/coding/AGENTS.md)
+2. [Current work surface](/Users/seuncho/coding/company-brain/NOW.md)
+3. [Route ownership contract](/Users/seuncho/coding/company-brain/projects/oiyo-ecosystem/contracts/route-ownership.json)
+4. [Topic ownership contract](/Users/seuncho/coding/company-brain/projects/oiyo-ecosystem/contracts/knowledge/topics.json)
+5. [Three-domain boundary repeal](/Users/seuncho/coding/company-brain/AI-Sessions/wiki/decisions/three-domain-boundary-abolished-2026-08-27.md) when selecting or moving a canonical owner
+6. [Wiki category registry](/Users/seuncho/coding/wiki/data/catalog/category-registry.yaml)
+7. [Wiki content inventory](/Users/seuncho/coding/wiki/data/catalog/content-inventory.master.csv)
 
 ## 3. Working Rules
 
@@ -121,22 +123,14 @@ Tool-specific instructions should stay thin.
 
 The following files are adapters and should point back here:
 
-1. [CLAUDE.md](/Users/seuncho/coding/blog/CLAUDE.md)
-2. [GEMINI.md](/Users/seuncho/coding/blog/GEMINI.md)
-3. [CURSOR.md](/Users/seuncho/coding/blog/CURSOR.md)
-4. [.cursor/rules/project-harness.mdc](/Users/seuncho/coding/blog/.cursor/rules/project-harness.mdc)
+1. [CLAUDE.md](/Users/seuncho/coding/wiki/CLAUDE.md)
+2. [CURSOR.md](/Users/seuncho/coding/wiki/CURSOR.md)
+3. [.cursor/rules/project-harness.mdc](/Users/seuncho/coding/wiki/.cursor/rules/project-harness.mdc)
 
 ## 8. Current State
 
-As of 2026-05-25 — see `/Users/seuncho/coding/docs/MASTER_PLAN.md` for the live cross-project roadmap.
-
-1. Schema transition complete — all `academy` files have `series:` + `chapter:`, all `interactive` have `embeddedTools:`
-2. Track-aware MDX registry split complete
-3. Series normalization complete — Korean `series:` field used everywhere (display bugs fixed 2026-05-25)
-4. Build pipeline green — `npm run build` + `type-check` 0 errors
-5. Content: **742 pieces** (Academy 437 · Magazine 280 · Lecture 25) across 7 locales
-6. Civil-law series reclassified: `track: magazine` → `track: academy` (2026-05-25)
-7. Cross-project promotion: ahoxy BlogBanner, footer card, home cross-promo pending commit
-8. Intent-first browse UX: 8 intent bundles, hub pages for accounting/economics live
-9. Data integrity items outstanding: `academy-labor-law-basic` ↔ `academy-labor-law-basics` duplicate; `academy-tax-basics`+`academy-tax-intro` split series
-10. Phase A content: 10 series each at ch1–2, need 3–5 more chapters each (see MASTER_PLAN § 4)
+Do not cache dated page counts or roadmap status in this harness. Read
+`company-brain/NOW.md` for active goals and derive Wiki inventory state from
+`data/catalog/content-inventory.master.csv` and the repository's verification scripts.
+Before changing content ownership, inspect the current route contract and preserve the
+existing owner unless route-level evidence supports an explicit change.
