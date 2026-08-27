@@ -95,14 +95,15 @@ const allLangItems = [
 const langItems = availableLocales && availableLocales.length
   ? allLangItems.filter((li) => availableLocales.includes(li.code) || li.code === locale)
   : allLangItems;
+const currentLangItem = langItems.find((li) => li.code === locale) ?? allLangItems.find((li) => li.code === locale);
 
-const footerCopy: Record<string, { site: string; family: string; utility: string; knowledge: string; sitemap: string }> = {
-  en: { site: "Wiki", family: "OIYO family", utility: "Information", knowledge: "Knowledge index", sitemap: "Sitemap" },
-  ko: { site: "위키", family: "OIYO 패밀리", utility: "안내", knowledge: "지식 목록", sitemap: "사이트맵" },
-  ja: { site: "ウィキ", family: "OIYOファミリー", utility: "ご案内", knowledge: "知識一覧", sitemap: "サイトマップ" },
-  zh: { site: "维基", family: "OIYO 系列", utility: "信息", knowledge: "知识索引", sitemap: "网站地图" },
-  fr: { site: "Wiki", family: "Famille OIYO", utility: "Informations", knowledge: "Index des connaissances", sitemap: "Plan du site" },
-  es: { site: "Wiki", family: "Familia OIYO", utility: "Información", knowledge: "Índice de conocimiento", sitemap: "Mapa del sitio" },
+const footerCopy: Record<string, { site: string; family: string; utility: string; knowledge: string; sitemap: string; support: string }> = {
+  en: { site: "Wiki", family: "OIYO family", utility: "Information", knowledge: "Knowledge index", sitemap: "Sitemap", support: "Support OIYO" },
+  ko: { site: "위키", family: "OIYO 패밀리", utility: "안내", knowledge: "지식 목록", sitemap: "사이트맵", support: "OIYO 후원" },
+  ja: { site: "ウィキ", family: "OIYOファミリー", utility: "ご案内", knowledge: "知識一覧", sitemap: "サイトマップ", support: "OIYOを支援" },
+  zh: { site: "维基", family: "OIYO 系列", utility: "信息", knowledge: "知识索引", sitemap: "网站地图", support: "支持 OIYO" },
+  fr: { site: "Wiki", family: "Famille OIYO", utility: "Informations", knowledge: "Index des connaissances", sitemap: "Plan du site", support: "Soutenir OIYO" },
+  es: { site: "Wiki", family: "Familia OIYO", utility: "Información", knowledge: "Índice de conocimiento", sitemap: "Mapa del sitio", support: "Apoyar OIYO" },
 };
 const footerLabels = footerCopy[locale] ?? footerCopy.en;
 ---
@@ -183,15 +184,29 @@ const footerLabels = footerCopy[locale] ?? footerCopy.en;
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </a>
 
-          <!-- Language switcher -->
-          <div class="flex items-center gap-2 border-l border-border/40 pl-4">
-            {langItems.map(({ code, label, flag, name }) => (
-              <a
-                href={getLocalizedPath(code)}
-                class={`text-[11px] font-bold uppercase tracking-widest transition-colors hover:text-primary ${locale === code ? "text-primary" : "text-muted-foreground/70"}`}
-               aria-label={name} title={name}>{flag} {label}</a>
-            ))}
-          </div>
+          <!-- Language switcher: native <details>/<summary> disclosure — every
+               locale stays a real static <a href> in the DOM (crawlable
+               regardless of open/closed state), just visually collapsed. -->
+          <details id="header-lang-switcher" class="relative border-l border-border/40 pl-4 group">
+            <summary
+              class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground/70 transition-colors hover:text-primary cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+              aria-label="Language"
+            >
+              <span aria-hidden="true">{currentLangItem?.flag}</span>{currentLangItem?.label}
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <nav
+              aria-label="Language"
+              class="absolute right-0 top-full z-20 mt-2 flex min-w-[140px] flex-col gap-1 rounded-lg border border-border bg-background p-2 shadow-lg"
+            >
+              {langItems.map(({ code, label, flag, name }) => (
+                <a
+                  href={getLocalizedPath(code)}
+                  class={`flex items-center gap-1.5 rounded-md px-2 py-1.5 text-[11px] font-bold uppercase tracking-widest transition-colors hover:bg-muted/60 hover:text-primary ${locale === code ? "text-primary" : "text-muted-foreground/70"}`}
+                 aria-label={name} title={name}>{flag} {label}</a>
+              ))}
+            </nav>
+          </details>
         </nav>
 
         <!-- Right controls: hamburger -->
@@ -345,6 +360,18 @@ const footerLabels = footerCopy[locale] ?? footerCopy.en;
         toggleVisibility();
       })();
 
+      // ── Language switcher: close on outside click / Escape ──────────────────
+      (function () {
+        var lang = document.getElementById("header-lang-switcher");
+        if (!lang) return;
+        document.addEventListener("click", function (e) {
+          if (lang.open && !lang.contains(e.target)) lang.removeAttribute("open");
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && lang.open) lang.removeAttribute("open");
+        });
+      })();
+
       // ── Mobile menu ───────────────────────────────────────────────────────
       (function () {
         var openBtn   = document.getElementById("menu-open");
@@ -422,6 +449,7 @@ const footerLabels = footerCopy[locale] ?? footerCopy.en;
             <a href={`/${locale}/terms`} class="hover:text-primary">{t.legal.terms.title}</a>
             <a href="/rss.xml" class="hover:text-primary">RSS</a>
             <a href="/sitemap-index.xml" class="hover:text-primary">{footerLabels.sitemap}</a>
+            <a href="https://paypal.me/chosean" target="_blank" rel="noopener noreferrer" class="hover:text-primary">{footerLabels.support}</a>
           </nav>
         </section>
         <section>
