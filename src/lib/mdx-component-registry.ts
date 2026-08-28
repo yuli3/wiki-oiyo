@@ -147,69 +147,11 @@ import VatCalculator from "../components/mdx/VatCalculator";
 import YearEndTaxCalculator from "../components/mdx/YearEndTaxCalculator";
 import ChildHeightCalculator from "../components/mdx/ChildHeightCalculator";
 
-// Batch-1 psych tests (2026-05-16)
-import EmotionalMindTest from "../components/tests/EmotionalMindTest";
-import HappinessMeterTest from "../components/tests/HappinessMeterTest";
-import LeaderPulseTest from "../components/tests/LeaderPulseTest";
-import ProductivityStyleTest from "../components/tests/ProductivityStyleTest";
-import ValueCompassTest from "../components/tests/ValueCompassTest";
-import ThinkingPatternsTest from "../components/tests/ThinkingPatternsTest";
-import ResilienceBoostTest from "../components/tests/ResilienceBoostTest";
-import FocusBlockerTest from "../components/tests/FocusBlockerTest";
-import StrengthSageTest from "../components/tests/StrengthSageTest";
-import MindClearTest from "../components/tests/MindClearTest";
-
-// Batch-2 psych tests (2026-05-16)
-import HormonesTest from "../components/tests/HormonesTest";
-import InsightQuestTest from "../components/tests/InsightQuestTest";
-import CritiQuestTest from "../components/tests/CritiQuestTest";
-import CollabRiskTest from "../components/tests/CollabRiskTest";
-import BondInsightTest from "../components/tests/BondInsightTest";
-import MindEaseTest from "../components/tests/MindEaseTest";
-import MindRestTest from "../components/tests/MindRestTest";
-import PersonaScopeTest from "../components/tests/PersonaScopeTest";
-
-// Batch-5 psych/social tests (2026-06-02)
-import MbtiCareerTest from "../components/tests/MbtiCareerTest";
-import MbtiLoveTest from "../components/tests/MbtiLoveTest";
-import MbtiStressTest from "../components/tests/MbtiStressTest";
-import SocialAnxietyTest from "../components/tests/SocialAnxietyTest";
-import NarcissismTest from "../components/tests/NarcissismTest";
-import ResilienceTest from "../components/tests/ResilienceTest";
-import LeadershipStyleTest from "../components/tests/LeadershipStyleTest";
-import GrowthMindsetTest from "../components/tests/GrowthMindsetTest";
-import LonelinessTest from "../components/tests/LonelinessTest";
-import ProcrastinationTypeTest from "../components/tests/ProcrastinationTypeTest";
-import MotivationTypeTest from "../components/tests/MotivationTypeTest";
-import DopamineDependencyTest from "../components/tests/DopamineDependencyTest";
-import AngerStyleTest from "../components/tests/AngerStyleTest";
-import SleepChronotypeTest from "../components/tests/SleepChronotypeTest";
-import EmotionalIntelligenceTest from "../components/tests/EmotionalIntelligenceTest";
 import HomeBuyingCalculator from "../components/calculators/HomeBuyingCalculator";
-
-// Batch-4 psych/health tests (2026-06-02)
-import BigFivePersonalityTest from "../components/tests/BigFivePersonalityTest";
-import BurnoutTest from "../components/tests/BurnoutTest";
-import IQTest from "../components/tests/IQTest";
-import PersonalColorTest from "../components/tests/PersonalColorTest";
-import AdhdScreeningTest from "../components/tests/AdhdScreeningTest";
-import SelfEsteemTest from "../components/tests/SelfEsteemTest";
-import DepressionScreeningTest from "../components/tests/DepressionScreeningTest";
-import AnxietyScreeningTest from "../components/tests/AnxietyScreeningTest";
 
 // Games batch-2 (2026-06-02)
 import WordleGame from "../components/games/WordleGame";
 import MemoryCardGame from "../components/games/MemoryCardGame";
-
-// Batch-3 psych tests (2026-05-17)
-import SoulMirrorTest from "../components/tests/SoulMirrorTest";
-import ToneAnalysisTest from "../components/tests/ToneAnalysisTest";
-import ColorRecognitionTest from "../components/tests/ColorRecognitionTest";
-import MindsetCompassTest from "../components/tests/MindsetCompassTest";
-import PerfectScopeTest from "../components/tests/PerfectScopeTest";
-import PerfumePersonalityTest from "../components/tests/PerfumePersonalityTest";
-import PersonaPathTest from "../components/tests/PersonaPathTest";
-import ProblemSolverTest from "../components/tests/ProblemSolverTest";
 
 // Batch-1 finance calculators (2026-05-16)
 import FireRetirementCalculator from "../components/calculators/FireRetirementCalculator";
@@ -407,64 +349,10 @@ const islandComponents = {
   VatCalculator,
   YearEndTaxCalculator,
   ChildHeightCalculator,
-  // Batch-1 psych tests
-  EmotionalMindTest,
-  HappinessMeterTest,
-  LeaderPulseTest,
-  ProductivityStyleTest,
-  ValueCompassTest,
-  ThinkingPatternsTest,
-  ResilienceBoostTest,
-  FocusBlockerTest,
-  StrengthSageTest,
-  MindClearTest,
-  // Batch-2 psych tests
-  HormonesTest,
-  InsightQuestTest,
-  CritiQuestTest,
-  CollabRiskTest,
-  BondInsightTest,
-  MindEaseTest,
-  MindRestTest,
-  PersonaScopeTest,
-  // Batch-5 psych/social tests (2026-06-02)
-  MbtiCareerTest,
-  MbtiLoveTest,
-  MbtiStressTest,
-  SocialAnxietyTest,
-  NarcissismTest,
-  ResilienceTest,
-  LeadershipStyleTest,
-  GrowthMindsetTest,
-  LonelinessTest,
-  ProcrastinationTypeTest,
-  MotivationTypeTest,
-  DopamineDependencyTest,
-  AngerStyleTest,
-  SleepChronotypeTest,
-  EmotionalIntelligenceTest,
   HomeBuyingCalculator,
-  // Batch-4 psych/health tests (2026-06-02)
-  BigFivePersonalityTest,
-  BurnoutTest,
-  IQTest,
-  PersonalColorTest,
-  AdhdScreeningTest,
-  SelfEsteemTest,
-  DepressionScreeningTest,
-  AnxietyScreeningTest,
   // Games batch-2 (2026-06-02)
   WordleGame,
   MemoryCardGame,
-  // Batch-3 psych tests
-  SoulMirrorTest,
-  ToneAnalysisTest,
-  ColorRecognitionTest,
-  MindsetCompassTest,
-  PerfectScopeTest,
-  PerfumePersonalityTest,
-  PersonaPathTest,
-  ProblemSolverTest,
   // Batch-1 finance calculators
   FireRetirementCalculator,
   JeonsevsBuyCalculator,

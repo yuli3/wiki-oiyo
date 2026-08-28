@@ -32,23 +32,26 @@ def norm(path: str) -> str:
 
 
 def load_redirect_sources(dist: Path) -> list[str]:
-    """Splat-aware source patterns from dist/_redirects (CF Pages)."""
-    f = dist / "_redirects"
-    if not f.exists():
-        return []
+    """Load both Pages redirects and the canonical Bulk Redirect SSOT."""
     sources = []
-    for line in f.read_text().splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
+    for f in (dist / "_redirects", Path("data/redirects/canonical-redirects.txt")):
+        if not f.exists():
             continue
-        sources.append(line.split()[0])
+        for line in f.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            sources.append(line.split()[0])
     return sources
 
 
 def redirect_covers(sources: list[str], path: str) -> bool:
     for src in sources:
         if src.endswith("*"):
-            if path.startswith(src[:-1].rstrip("/")):
+            prefix = src[:-1].rstrip("/")
+            pattern = re.escape(prefix).replace(r"\:", ":")
+            pattern = re.sub(r":[A-Za-z][A-Za-z0-9_]*", r"[^/]+", pattern)
+            if re.match(rf"^{pattern}(?:/.*)?$", path):
                 return True
         elif ":" in src:
             # placeholder segments (e.g. /:lang/foo) match any single segment
