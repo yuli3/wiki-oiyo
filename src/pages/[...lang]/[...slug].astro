@@ -190,7 +190,7 @@ const homeLabel: Record<string, string> = { en: "Home", ko: "홈", ja: "ホー�
 const chapterStr = (n: number) =>
   locale === "ja" ? `第${n}章` : `${chapterLabel[locale] ?? "Chapter"} ${n}`;
 
-const coursesHref = `/${locale}/courses`;
+const coursesHref = `/${locale}/explore`;
 ---
 
 <BaseLayout
@@ -267,7 +267,7 @@ const coursesHref = `/${locale}/courses`;
             <nav aria-label="Breadcrumb" class="mb-5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
               <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel[locale] ?? homeLabel.en}</a>
               <span aria-hidden="true">/</span>
-              <a href={`/${locale}/courses`} class="hover:text-primary hover:underline">{coursesLabel[locale] ?? coursesLabel.en}</a>
+              <a href={`/${locale}/explore`} class="hover:text-primary hover:underline">{coursesLabel[locale] ?? coursesLabel.en}</a>
               <span aria-hidden="true">/</span>
               <a href={`/${locale}/category/${slugifyCategory(rawCategory)}`} class="hover:text-primary hover:underline">{displayCategory}</a>
               {chapter !== null && <><span aria-hidden="true">/</span><span aria-current="page">{chapterStr(chapter)}</span></>}

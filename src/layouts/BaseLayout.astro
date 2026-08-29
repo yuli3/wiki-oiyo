@@ -61,7 +61,7 @@ const getLocalizedPath = (targetLocale: string) => {
 const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
   { href: `/${locale}/explore`, label: nav.explore ?? "Explore" },
-  { href: `/${locale}/courses`, label: nav.courses ?? "Courses" },
+  { href: `/${locale}/explore`, label: nav.explore ?? "Explore" },
   // IA consolidation: wiki has no tools of its own (tools live in the family's
   // unified catalog). "Tools/도구들" points at the canonical blog.oiyo.net hub.
   { href: `https://blog.oiyo.net/${locale}/tools/`, label: nav.tools ?? "Tools" },
