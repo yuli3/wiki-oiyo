@@ -16,12 +16,12 @@ const { seriesPosts, currentChapter, locale, seriesName, coursesHref } = Astro.p
 const total = seriesPosts.length;
 
 const copy: Record<string, { contents: string; courses: string; chapter: string }> = {
-  en: { contents: "Contents", courses: "All courses", chapter: "Chapter" },
-  ko: { contents: "목차", courses: "전체 강의", chapter: "챕터" },
-  ja: { contents: "目次", courses: "コース一覧", chapter: "章" },
-  zh: { contents: "目录", courses: "全部课程", chapter: "章节" },
-  fr: { contents: "Sommaire", courses: "Tous les cours", chapter: "Chapitre" },
-  es: { contents: "Contenido", courses: "Todos los cursos", chapter: "Capítulo" },
+  en: { contents: "Contents", courses: "Explore", chapter: "Chapter" },
+  ko: { contents: "목차", courses: "탐색", chapter: "챕터" },
+  ja: { contents: "目次", courses: "探索", chapter: "章" },
+  zh: { contents: "目录", courses: "探索", chapter: "章节" },
+  fr: { contents: "Sommaire", courses: "Explorer", chapter: "Chapitre" },
+  es: { contents: "Contenido", courses: "Explorar", chapter: "Capítulo" },
 };
 const labels = copy[locale] ?? copy.en;
 

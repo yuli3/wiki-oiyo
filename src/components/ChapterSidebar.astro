@@ -1,6 +1,6 @@
 ---
 /**
- * ChapterSidebar — 강의 챕터 목록 사이드바
+ * ChapterSidebar — 문서 시리즈 챕터 목록 사이드바
  * 시리즈의 모든 챕터를 보여주며 현재 챕터를 강조 표시
  */
 interface ChapterPost {
@@ -22,15 +22,15 @@ const progressPct = Math.round((currentChapter / total) * 100);
 
 ---
 
-<nav class="hidden lg:flex flex-col gap-0 text-sm" aria-label="Course chapters">
-  <!-- Back to courses + series name -->
+<nav class="hidden lg:flex flex-col gap-0 text-sm" aria-label="Document chapters">
+  <!-- Back to explore + series name -->
   <div class="mb-4">
     <a
       href={coursesHref}
       class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mb-2"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      All Courses
+      Explore
     </a>
     <div class="font-black text-xs uppercase tracking-widest text-foreground leading-snug">
       {seriesName}

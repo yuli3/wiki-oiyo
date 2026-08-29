@@ -184,7 +184,7 @@ const chapterLabel: Record<string, string> = { en: "Chapter", ko: "챕터", ja: 
 const prevLabel: Record<string, string> = { en: "Previous", ko: "이전", ja: "前へ", fr: "Précédent", es: "Anterior", zh: "上一页" };
 const nextLabel: Record<string, string> = { en: "Next", ko: "다음", ja: "次へ", fr: "Suivant", es: "Siguiente", zh: "下一页" };
 const contributorLabel: Record<string, string> = { en: "Contributor", ko: "기여자", ja: "寄稿者", fr: "Contributeur", es: "Colaborador", zh: "贡献者" };
-const coursesLabel: Record<string, string> = { en: "All Courses", ko: "전체 강의", ja: "コース一覧", fr: "Tous les cours", es: "Todos los cursos", zh: "全部课程" };
+const coursesLabel: Record<string, string> = { en: "Explore", ko: "탐색", ja: "探索", fr: "Explorer", es: "Explorar", zh: "探索" };
 const homeLabel: Record<string, string> = { en: "Home", ko: "홈", ja: "ホーム", fr: "Accueil", es: "Inicio", zh: "首页" };
 
 const chapterStr = (n: number) =>
@@ -267,7 +267,7 @@ const coursesHref = `/${locale}/explore`;
             <nav aria-label="Breadcrumb" class="mb-5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
               <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel[locale] ?? homeLabel.en}</a>
               <span aria-hidden="true">/</span>
-              <a href={`/${locale}/explore`} class="hover:text-primary hover:underline">{coursesLabel[locale] ?? coursesLabel.en}</a>
+              <a href={coursesHref} class="hover:text-primary hover:underline">{coursesLabel[locale] ?? coursesLabel.en}</a>
               <span aria-hidden="true">/</span>
               <a href={`/${locale}/category/${slugifyCategory(rawCategory)}`} class="hover:text-primary hover:underline">{displayCategory}</a>
               {chapter !== null && <><span aria-hidden="true">/</span><span aria-current="page">{chapterStr(chapter)}</span></>}
