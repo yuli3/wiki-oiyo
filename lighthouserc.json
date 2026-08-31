@@ -6,10 +6,10 @@
       "url": [
         "http://localhost:8080/en/",
         "http://localhost:8080/ko/",
-        "http://localhost:8080/ko/mbti-saju-cross/",
-        "http://localhost:8080/ko/riasec-career-test/",
-        "http://localhost:8080/ko/magazine/",
-        "http://localhost:8080/ko/economics-guide/",
+        "http://localhost:8080/ko/meaning-of-saju-60gapja/",
+        "http://localhost:8080/ko/meaning-of-big5/",
+        "http://localhost:8080/ko/explore/",
+        "http://localhost:8080/ko/meaning-of-cognitive-load/",
         "http://localhost:8080/knowledge/"
       ],
       "numberOfRuns": 3,
