@@ -1,0 +1,8 @@
+{
+  "recordedOn": "2026-09-01",
+  "note": "Wiki dictionary pages are tier A. This repo has no academy/education series; B/C remain for stray tracks. Keep in step with blog/config/editorial-quality-tiers.json allowedAuthors.",
+  "knowledgeSeriesPrefixes": [],
+  "examSlugPattern": "a^",
+  "examSeriesPattern": "a^",
+  "allowedAuthors": ["OIYO 편집부", "Oiyo", "OIYO", "Oiyo Editorial"]
+}

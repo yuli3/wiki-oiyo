@@ -14,6 +14,8 @@
     "validate:personality": "npx tsx scripts/validate-personality-data.ts",
     "validate:i18n": "node scripts/audit-i18n.mjs",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",
+    "audit:content-quality": "node scripts/audit-content-quality.mjs",
+    "test:editorial-quality": "node --test scripts/editorial-quality.test.mjs",
     "audit:localization": "node scripts/audit-localization.mjs",
     "verify:harness": "node scripts/verify-harness.mjs",
     "audit:magazine-compat": "node scripts/audit-magazine-compat.mjs",
