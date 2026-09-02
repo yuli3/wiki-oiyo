@@ -24,6 +24,13 @@
 # 24절기 해설은 oiyo 가 다시 썼다 — 6로케일 전부 있다.
 /:lang/meaning-of-24-jeolgi  https://oiyo.net/:lang/jeolgi/about  301
 /:lang/meaning-of-24-jeolgi/  https://oiyo.net/:lang/jeolgi/about  301
+# 개별 절기 3편도 oiyo 가 6로케일 전부 다시 썼다.
+/:lang/meaning-of-jeolgi-usu  https://oiyo.net/:lang/jeolgi/usu  301
+/:lang/meaning-of-jeolgi-usu/  https://oiyo.net/:lang/jeolgi/usu  301
+/:lang/meaning-of-jeolgi-chubun  https://oiyo.net/:lang/jeolgi/chubun  301
+/:lang/meaning-of-jeolgi-chubun/  https://oiyo.net/:lang/jeolgi/chubun  301
+/:lang/meaning-of-jeolgi-daehan  https://oiyo.net/:lang/jeolgi/daehan  301
+/:lang/meaning-of-jeolgi-daehan/  https://oiyo.net/:lang/jeolgi/daehan  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
