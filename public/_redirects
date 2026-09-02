@@ -1,6 +1,27 @@
 # wiki.oiyo.net 리다이렉트
 
 # ── 특이명 테스트 정리 301 (2026-06-11) ─────────────────────────────────
+
+# ── 심리 6개 주제 → oiyo, 화랑 폐기 (2026-09-02) ─────────────────────────
+# 로케일마다 정적 2줄씩 쓰면 96줄이 되는데, 이 파일은 그만큼의 정적 여유가
+# 없다 — 끝에 붙인 규칙이 실측에서 404 였다(정적 568번째까지만 먹었다).
+# :lang 플레이스홀더 1줄이 6로케일을 덮으므로 96줄을 14줄로 줄인다.
+# 동적 예산은 54/100 에서 68/100 이 된다. 앞쪽에 두어 평가 순서도 보장한다.
+/:lang/meaning-of-mbti  https://oiyo.net/:lang/mbti/about  301
+/:lang/meaning-of-mbti/  https://oiyo.net/:lang/mbti/about  301
+/:lang/meaning-of-attachment-theory  https://oiyo.net/:lang/attachment-style/about  301
+/:lang/meaning-of-attachment-theory/  https://oiyo.net/:lang/attachment-style/about  301
+/:lang/meaning-of-burnout  https://oiyo.net/:lang/burnout/about  301
+/:lang/meaning-of-burnout/  https://oiyo.net/:lang/burnout/about  301
+/:lang/meaning-of-perfectionism  https://oiyo.net/:lang/perfectionism/about  301
+/:lang/meaning-of-perfectionism/  https://oiyo.net/:lang/perfectionism/about  301
+/:lang/meaning-of-cognitive-biases  https://oiyo.net/:lang/cognitive-bias/about  301
+/:lang/meaning-of-cognitive-biases/  https://oiyo.net/:lang/cognitive-bias/about  301
+/:lang/meaning-of-big5  https://oiyo.net/:lang/big5/about  301
+/:lang/meaning-of-big5/  https://oiyo.net/:lang/big5/about  301
+/:lang/meaning-of-hwarang  /:lang/  301
+/:lang/meaning-of-hwarang/  /:lang/  301
+
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
 /ko/persona-path-test  https://oiyo.net/ko/mbti/test  301
@@ -720,92 +741,3 @@
 /ko/lecture-civil-law-05/  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
 /zh/stock-glossary-ch3  https://blog.oiyo.net/zh/stock-glossary-ch3/  301
 /zh/stock-glossary-ch3/  https://blog.oiyo.net/zh/stock-glossary-ch3/  301
-
-# ── 심리 6개 주제 해설을 oiyo 로 이관 (2026-09-02) ─────────────────────
-# 본문 주인이 oiyo 로 옮겨졌다. 사이트 간 중복 금지 원칙.
-/ko/meaning-of-mbti  https://oiyo.net/ko/mbti/about  301
-/ko/meaning-of-mbti/  https://oiyo.net/ko/mbti/about  301
-/ko/meaning-of-attachment-theory  https://oiyo.net/ko/attachment-style/about  301
-/ko/meaning-of-attachment-theory/  https://oiyo.net/ko/attachment-style/about  301
-/ko/meaning-of-burnout  https://oiyo.net/ko/burnout/about  301
-/ko/meaning-of-burnout/  https://oiyo.net/ko/burnout/about  301
-/ko/meaning-of-perfectionism  https://oiyo.net/ko/perfectionism/about  301
-/ko/meaning-of-perfectionism/  https://oiyo.net/ko/perfectionism/about  301
-/ko/meaning-of-cognitive-biases  https://oiyo.net/ko/cognitive-bias/about  301
-/ko/meaning-of-cognitive-biases/  https://oiyo.net/ko/cognitive-bias/about  301
-/ko/meaning-of-big5  https://oiyo.net/ko/big5/about  301
-/ko/meaning-of-big5/  https://oiyo.net/ko/big5/about  301
-/en/meaning-of-mbti  https://oiyo.net/en/mbti/about  301
-/en/meaning-of-mbti/  https://oiyo.net/en/mbti/about  301
-/en/meaning-of-attachment-theory  https://oiyo.net/en/attachment-style/about  301
-/en/meaning-of-attachment-theory/  https://oiyo.net/en/attachment-style/about  301
-/en/meaning-of-burnout  https://oiyo.net/en/burnout/about  301
-/en/meaning-of-burnout/  https://oiyo.net/en/burnout/about  301
-/en/meaning-of-perfectionism  https://oiyo.net/en/perfectionism/about  301
-/en/meaning-of-perfectionism/  https://oiyo.net/en/perfectionism/about  301
-/en/meaning-of-cognitive-biases  https://oiyo.net/en/cognitive-bias/about  301
-/en/meaning-of-cognitive-biases/  https://oiyo.net/en/cognitive-bias/about  301
-/en/meaning-of-big5  https://oiyo.net/en/big5/about  301
-/en/meaning-of-big5/  https://oiyo.net/en/big5/about  301
-/ja/meaning-of-mbti  https://oiyo.net/ja/mbti/about  301
-/ja/meaning-of-mbti/  https://oiyo.net/ja/mbti/about  301
-/ja/meaning-of-attachment-theory  https://oiyo.net/ja/attachment-style/about  301
-/ja/meaning-of-attachment-theory/  https://oiyo.net/ja/attachment-style/about  301
-/ja/meaning-of-burnout  https://oiyo.net/ja/burnout/about  301
-/ja/meaning-of-burnout/  https://oiyo.net/ja/burnout/about  301
-/ja/meaning-of-perfectionism  https://oiyo.net/ja/perfectionism/about  301
-/ja/meaning-of-perfectionism/  https://oiyo.net/ja/perfectionism/about  301
-/ja/meaning-of-cognitive-biases  https://oiyo.net/ja/cognitive-bias/about  301
-/ja/meaning-of-cognitive-biases/  https://oiyo.net/ja/cognitive-bias/about  301
-/ja/meaning-of-big5  https://oiyo.net/ja/big5/about  301
-/ja/meaning-of-big5/  https://oiyo.net/ja/big5/about  301
-/zh/meaning-of-mbti  https://oiyo.net/zh/mbti/about  301
-/zh/meaning-of-mbti/  https://oiyo.net/zh/mbti/about  301
-/zh/meaning-of-attachment-theory  https://oiyo.net/zh/attachment-style/about  301
-/zh/meaning-of-attachment-theory/  https://oiyo.net/zh/attachment-style/about  301
-/zh/meaning-of-burnout  https://oiyo.net/zh/burnout/about  301
-/zh/meaning-of-burnout/  https://oiyo.net/zh/burnout/about  301
-/zh/meaning-of-perfectionism  https://oiyo.net/zh/perfectionism/about  301
-/zh/meaning-of-perfectionism/  https://oiyo.net/zh/perfectionism/about  301
-/zh/meaning-of-cognitive-biases  https://oiyo.net/zh/cognitive-bias/about  301
-/zh/meaning-of-cognitive-biases/  https://oiyo.net/zh/cognitive-bias/about  301
-/zh/meaning-of-big5  https://oiyo.net/zh/big5/about  301
-/zh/meaning-of-big5/  https://oiyo.net/zh/big5/about  301
-/fr/meaning-of-mbti  https://oiyo.net/fr/mbti/about  301
-/fr/meaning-of-mbti/  https://oiyo.net/fr/mbti/about  301
-/fr/meaning-of-attachment-theory  https://oiyo.net/fr/attachment-style/about  301
-/fr/meaning-of-attachment-theory/  https://oiyo.net/fr/attachment-style/about  301
-/fr/meaning-of-burnout  https://oiyo.net/fr/burnout/about  301
-/fr/meaning-of-burnout/  https://oiyo.net/fr/burnout/about  301
-/fr/meaning-of-perfectionism  https://oiyo.net/fr/perfectionism/about  301
-/fr/meaning-of-perfectionism/  https://oiyo.net/fr/perfectionism/about  301
-/fr/meaning-of-cognitive-biases  https://oiyo.net/fr/cognitive-bias/about  301
-/fr/meaning-of-cognitive-biases/  https://oiyo.net/fr/cognitive-bias/about  301
-/fr/meaning-of-big5  https://oiyo.net/fr/big5/about  301
-/fr/meaning-of-big5/  https://oiyo.net/fr/big5/about  301
-/es/meaning-of-mbti  https://oiyo.net/es/mbti/about  301
-/es/meaning-of-mbti/  https://oiyo.net/es/mbti/about  301
-/es/meaning-of-attachment-theory  https://oiyo.net/es/attachment-style/about  301
-/es/meaning-of-attachment-theory/  https://oiyo.net/es/attachment-style/about  301
-/es/meaning-of-burnout  https://oiyo.net/es/burnout/about  301
-/es/meaning-of-burnout/  https://oiyo.net/es/burnout/about  301
-/es/meaning-of-perfectionism  https://oiyo.net/es/perfectionism/about  301
-/es/meaning-of-perfectionism/  https://oiyo.net/es/perfectionism/about  301
-/es/meaning-of-cognitive-biases  https://oiyo.net/es/cognitive-bias/about  301
-/es/meaning-of-cognitive-biases/  https://oiyo.net/es/cognitive-bias/about  301
-/es/meaning-of-big5  https://oiyo.net/es/big5/about  301
-/es/meaning-of-big5/  https://oiyo.net/es/big5/about  301
-
-# 화랑 문서 폐기 (2026-09-02). 대체할 글이 없어 로케일 홈으로 보낸다.
-/ko/meaning-of-hwarang  /ko/  301
-/ko/meaning-of-hwarang/  /ko/  301
-/en/meaning-of-hwarang  /en/  301
-/en/meaning-of-hwarang/  /en/  301
-/ja/meaning-of-hwarang  /ja/  301
-/ja/meaning-of-hwarang/  /ja/  301
-/zh/meaning-of-hwarang  /zh/  301
-/zh/meaning-of-hwarang/  /zh/  301
-/fr/meaning-of-hwarang  /fr/  301
-/fr/meaning-of-hwarang/  /fr/  301
-/es/meaning-of-hwarang  /es/  301
-/es/meaning-of-hwarang/  /es/  301
