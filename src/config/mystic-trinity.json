@@ -56,15 +56,9 @@
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-saju-60gapja",
-        "locales": [
-          "ko",
-          "en",
-          "zh",
-          "fr",
-          "es"
-        ]
+        "site": "oiyo",
+        "path": "/saju/60gapja",
+        "locales": "all"
       }
     },
     "zodiac": {
