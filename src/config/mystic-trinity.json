@@ -164,13 +164,13 @@
         ]
       },
       "try": {
-        "site": "wiki",
-        "path": "/dream-interpreter",
+        "site": "oiyo",
+        "path": "/dream/reading",
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-dream",
+        "site": "oiyo",
+        "path": "/dream/about",
         "locales": "all"
       }
     },
