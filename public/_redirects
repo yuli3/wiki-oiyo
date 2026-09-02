@@ -45,6 +45,11 @@
 /:lang/meaning-of-dream-water/  https://oiyo.net/:lang/dream/water  301
 /:lang/meaning-of-dream  https://oiyo.net/:lang/dream/about  301
 /:lang/meaning-of-dream/  https://oiyo.net/:lang/dream/about  301
+# 성격검사 2종은 oiyo 에 테스트가 있고 해설도 그쪽으로 갔다.
+/:lang/meaning-of-hexaco  https://oiyo.net/:lang/hexaco/about  301
+/:lang/meaning-of-hexaco/  https://oiyo.net/:lang/hexaco/about  301
+/:lang/meaning-of-tci  https://oiyo.net/:lang/tci/about  301
+/:lang/meaning-of-tci/  https://oiyo.net/:lang/tci/about  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
