@@ -31,6 +31,11 @@
 /:lang/meaning-of-jeolgi-chubun/  https://oiyo.net/:lang/jeolgi/chubun  301
 /:lang/meaning-of-jeolgi-daehan  https://oiyo.net/:lang/jeolgi/daehan  301
 /:lang/meaning-of-jeolgi-daehan/  https://oiyo.net/:lang/jeolgi/daehan  301
+# 심리 2편은 oiyo 가 다시 썼다. burnout 은 이미 옮겨져 있다.
+/:lang/meaning-of-emotion-regulation  https://oiyo.net/:lang/emotion-regulation/about  301
+/:lang/meaning-of-emotion-regulation/  https://oiyo.net/:lang/emotion-regulation/about  301
+/:lang/meaning-of-implementation-intention  https://oiyo.net/:lang/habit-builder/about  301
+/:lang/meaning-of-implementation-intention/  https://oiyo.net/:lang/habit-builder/about  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
