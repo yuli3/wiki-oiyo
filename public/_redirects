@@ -34,7 +34,28 @@
 /:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
 /:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
 /:lang/meaning-of-hwarang*  /:lang/  301
-/:lang/meaning-of-*  https://oiyo.net/:lang/meaning-of-:splat  301
+# catch-all 은 쓸 수 없다 — 살아 있는 wiki 페이지까지 삼킨다(실측).
+# 이관이 끝난 슬러그만 접두사로 열거한다. 목적지 매핑은 oiyo 가 맡는다.
+/:lang/meaning-of-dream*  https://oiyo.net/:lang/meaning-of-dream:splat  301
+/:lang/meaning-of-jeolgi*  https://oiyo.net/:lang/meaning-of-jeolgi:splat  301
+/:lang/meaning-of-24-jeolgi*  https://oiyo.net/:lang/meaning-of-24-jeolgi:splat  301
+/:lang/meaning-of-mbti*  https://oiyo.net/:lang/meaning-of-mbti:splat  301
+/:lang/meaning-of-attachment-theory*  https://oiyo.net/:lang/meaning-of-attachment-theory:splat  301
+/:lang/meaning-of-burnout*  https://oiyo.net/:lang/meaning-of-burnout:splat  301
+/:lang/meaning-of-perfectionism*  https://oiyo.net/:lang/meaning-of-perfectionism:splat  301
+/:lang/meaning-of-cognitive-biases*  https://oiyo.net/:lang/meaning-of-cognitive-biases:splat  301
+/:lang/meaning-of-big5*  https://oiyo.net/:lang/meaning-of-big5:splat  301
+/:lang/meaning-of-emotion-regulation*  https://oiyo.net/:lang/meaning-of-emotion-regulation:splat  301
+/:lang/meaning-of-implementation-intention*  https://oiyo.net/:lang/meaning-of-implementation-intention:splat  301
+/:lang/meaning-of-hexaco*  https://oiyo.net/:lang/meaning-of-hexaco:splat  301
+/:lang/meaning-of-tci*  https://oiyo.net/:lang/meaning-of-tci:splat  301
+/:lang/meaning-of-saju-60gapja*  https://oiyo.net/:lang/meaning-of-saju-60gapja:splat  301
+/:lang/meaning-of-biorhythms*  https://oiyo.net/:lang/meaning-of-biorhythms:splat  301
+/:lang/meaning-of-blood-type*  https://oiyo.net/:lang/meaning-of-blood-type:splat  301
+/:lang/meaning-of-chinese-zodiac*  https://oiyo.net/:lang/meaning-of-chinese-zodiac:splat  301
+/:lang/meaning-of-enneagram*  https://oiyo.net/:lang/meaning-of-enneagram:splat  301
+/:lang/meaning-of-hsp*  https://oiyo.net/:lang/meaning-of-hsp:splat  301
+/:lang/meaning-of-saju-stage-geonrok*  https://oiyo.net/:lang/meaning-of-saju-stage-geonrok:splat  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
