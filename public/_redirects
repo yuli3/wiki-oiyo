@@ -8,54 +8,6 @@
 # 동적 예산은 54/100 에서 68/100 이 된다. 앞쪽에 두어 평가 순서도 보장한다.
 
 
-# ── meaning-of-* 이관 (2026-09-03) ────────────────────────────────────
-# 주제마다 2줄씩 쓰다 58줄이 됐고, 그만큼 뒤쪽 정적 규칙이 죽었다(실측).
-# 여기서는 catch-all 한 줄로 접고, 슬러그별 목적지 매핑은 oiyo 의 _redirects
-# 가 맡는다 — oiyo 는 규칙이 24줄뿐이라 여유가 있다.
-#
-# 아직 wiki 에 남아 있는 meaning-of-* 는 실제 페이지가 있으므로 정적 자산이
-# 먼저 응답한다. catch-all 이 그것을 삼키지 않는다.
-#
-# 아래 갈래 규칙들이 catch-all 보다 반드시 앞에 있어야 한다(먼저 매칭 승).
-/:lang/meaning-of-tarot  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
-/:lang/meaning-of-astro-*  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-hwarang*  /:lang/  301
-# catch-all 은 쓸 수 없다 — 살아 있는 wiki 페이지까지 삼킨다(실측).
-# 이관이 끝난 슬러그만 접두사로 열거한다. 목적지 매핑은 oiyo 가 맡는다.
-/:lang/meaning-of-dream*  https://oiyo.net/:lang/meaning-of-dream:splat  301
-/:lang/meaning-of-jeolgi*  https://oiyo.net/:lang/meaning-of-jeolgi:splat  301
-/:lang/meaning-of-24-jeolgi*  https://oiyo.net/:lang/meaning-of-24-jeolgi:splat  301
-/:lang/meaning-of-mbti*  https://oiyo.net/:lang/meaning-of-mbti:splat  301
-/:lang/meaning-of-attachment-theory*  https://oiyo.net/:lang/meaning-of-attachment-theory:splat  301
-/:lang/meaning-of-burnout*  https://oiyo.net/:lang/meaning-of-burnout:splat  301
-/:lang/meaning-of-perfectionism*  https://oiyo.net/:lang/meaning-of-perfectionism:splat  301
-/:lang/meaning-of-cognitive-biases*  https://oiyo.net/:lang/meaning-of-cognitive-biases:splat  301
-/:lang/meaning-of-big5*  https://oiyo.net/:lang/meaning-of-big5:splat  301
-/:lang/meaning-of-emotion-regulation*  https://oiyo.net/:lang/meaning-of-emotion-regulation:splat  301
-/:lang/meaning-of-implementation-intention*  https://oiyo.net/:lang/meaning-of-implementation-intention:splat  301
-/:lang/meaning-of-hexaco*  https://oiyo.net/:lang/meaning-of-hexaco:splat  301
-/:lang/meaning-of-tci*  https://oiyo.net/:lang/meaning-of-tci:splat  301
-/:lang/meaning-of-saju-60gapja*  https://oiyo.net/:lang/meaning-of-saju-60gapja:splat  301
-/:lang/meaning-of-biorhythms*  https://oiyo.net/:lang/meaning-of-biorhythms:splat  301
-/:lang/meaning-of-blood-type*  https://oiyo.net/:lang/meaning-of-blood-type:splat  301
-/:lang/meaning-of-chinese-zodiac*  https://oiyo.net/:lang/meaning-of-chinese-zodiac:splat  301
-/:lang/meaning-of-enneagram*  https://oiyo.net/:lang/meaning-of-enneagram:splat  301
-/:lang/meaning-of-hsp*  https://oiyo.net/:lang/meaning-of-hsp:splat  301
-/:lang/meaning-of-saju-stage-geonrok*  https://oiyo.net/:lang/meaning-of-saju-stage-geonrok:splat  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
@@ -613,6 +565,60 @@
 /cn/tools/  https://blog.oiyo.net/zh/tools  301
 
 # ── cn locale 전체 fallback (cn→zh 마이그레이션, 2026-06-10) ─────
+
+# ── 이관 리다이렉트는 정적 규칙 뒤에 둔다 ─────────────────────────────
+# 실측: 동적 규칙이 약 37개를 넘으면 파일 처리가 통째로 멈춘다(문서상 한도
+# 100 보다 훨씬 낮다). 이 블록을 맨 앞에 두었더니 정적 584줄이 처리되기 전에
+# 예산이 소진돼 표본 40개 중 31개가 404 였다. 정적 뒤로 내린다.
+# ── meaning-of-* 이관 (2026-09-03) ────────────────────────────────────
+# 주제마다 2줄씩 쓰다 58줄이 됐고, 그만큼 뒤쪽 정적 규칙이 죽었다(실측).
+# 여기서는 catch-all 한 줄로 접고, 슬러그별 목적지 매핑은 oiyo 의 _redirects
+# 가 맡는다 — oiyo 는 규칙이 24줄뿐이라 여유가 있다.
+#
+# 아직 wiki 에 남아 있는 meaning-of-* 는 실제 페이지가 있으므로 정적 자산이
+# 먼저 응답한다. catch-all 이 그것을 삼키지 않는다.
+#
+# 아래 갈래 규칙들이 catch-all 보다 반드시 앞에 있어야 한다(먼저 매칭 승).
+/:lang/meaning-of-tarot  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
+/:lang/meaning-of-astro-*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-hwarang*  /:lang/  301
+# catch-all 은 쓸 수 없다 — 살아 있는 wiki 페이지까지 삼킨다(실측).
+# 이관이 끝난 슬러그만 접두사로 열거한다. 목적지 매핑은 oiyo 가 맡는다.
+/:lang/meaning-of-dream*  https://oiyo.net/:lang/meaning-of-dream:splat  301
+/:lang/meaning-of-jeolgi*  https://oiyo.net/:lang/meaning-of-jeolgi:splat  301
+/:lang/meaning-of-24-jeolgi*  https://oiyo.net/:lang/meaning-of-24-jeolgi:splat  301
+/:lang/meaning-of-mbti*  https://oiyo.net/:lang/meaning-of-mbti:splat  301
+/:lang/meaning-of-attachment-theory*  https://oiyo.net/:lang/meaning-of-attachment-theory:splat  301
+/:lang/meaning-of-burnout*  https://oiyo.net/:lang/meaning-of-burnout:splat  301
+/:lang/meaning-of-perfectionism*  https://oiyo.net/:lang/meaning-of-perfectionism:splat  301
+/:lang/meaning-of-cognitive-biases*  https://oiyo.net/:lang/meaning-of-cognitive-biases:splat  301
+/:lang/meaning-of-big5*  https://oiyo.net/:lang/meaning-of-big5:splat  301
+/:lang/meaning-of-emotion-regulation*  https://oiyo.net/:lang/meaning-of-emotion-regulation:splat  301
+/:lang/meaning-of-implementation-intention*  https://oiyo.net/:lang/meaning-of-implementation-intention:splat  301
+/:lang/meaning-of-hexaco*  https://oiyo.net/:lang/meaning-of-hexaco:splat  301
+/:lang/meaning-of-tci*  https://oiyo.net/:lang/meaning-of-tci:splat  301
+/:lang/meaning-of-saju-60gapja*  https://oiyo.net/:lang/meaning-of-saju-60gapja:splat  301
+/:lang/meaning-of-biorhythms*  https://oiyo.net/:lang/meaning-of-biorhythms:splat  301
+/:lang/meaning-of-blood-type*  https://oiyo.net/:lang/meaning-of-blood-type:splat  301
+/:lang/meaning-of-chinese-zodiac*  https://oiyo.net/:lang/meaning-of-chinese-zodiac:splat  301
+/:lang/meaning-of-enneagram*  https://oiyo.net/:lang/meaning-of-enneagram:splat  301
+/:lang/meaning-of-hsp*  https://oiyo.net/:lang/meaning-of-hsp:splat  301
+/:lang/meaning-of-saju-stage-geonrok*  https://oiyo.net/:lang/meaning-of-saju-stage-geonrok:splat  301
+
 /cn/*  /zh/:splat  301
 
 # ── 카테고리 정규화 301 (synonym merge, 2026-06-21) ──
