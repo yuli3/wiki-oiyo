@@ -2,54 +2,39 @@
 
 # ── 특이명 테스트 정리 301 (2026-06-11) ─────────────────────────────────
 
-# ── 심리 6개 주제 → oiyo, 화랑 폐기 (2026-09-02) ─────────────────────────
 # 로케일마다 정적 2줄씩 쓰면 96줄이 되는데, 이 파일은 그만큼의 정적 여유가
 # 없다 — 끝에 붙인 규칙이 실측에서 404 였다(정적 568번째까지만 먹었다).
 # :lang 플레이스홀더 1줄이 6로케일을 덮으므로 96줄을 14줄로 줄인다.
 # 동적 예산은 54/100 에서 68/100 이 된다. 앞쪽에 두어 평가 순서도 보장한다.
-/:lang/meaning-of-mbti  https://oiyo.net/:lang/mbti/about  301
-/:lang/meaning-of-mbti/  https://oiyo.net/:lang/mbti/about  301
-/:lang/meaning-of-attachment-theory  https://oiyo.net/:lang/attachment-style/about  301
-/:lang/meaning-of-attachment-theory/  https://oiyo.net/:lang/attachment-style/about  301
-/:lang/meaning-of-burnout  https://oiyo.net/:lang/burnout/about  301
-/:lang/meaning-of-burnout/  https://oiyo.net/:lang/burnout/about  301
-/:lang/meaning-of-perfectionism  https://oiyo.net/:lang/perfectionism/about  301
-/:lang/meaning-of-perfectionism/  https://oiyo.net/:lang/perfectionism/about  301
-/:lang/meaning-of-cognitive-biases  https://oiyo.net/:lang/cognitive-bias/about  301
-/:lang/meaning-of-cognitive-biases/  https://oiyo.net/:lang/cognitive-bias/about  301
-/:lang/meaning-of-big5  https://oiyo.net/:lang/big5/about  301
-/:lang/meaning-of-big5/  https://oiyo.net/:lang/big5/about  301
-/:lang/meaning-of-hwarang  /:lang/  301
-/:lang/meaning-of-hwarang/  /:lang/  301
-# 24절기 해설은 oiyo 가 다시 썼다 — 6로케일 전부 있다.
-/:lang/meaning-of-24-jeolgi  https://oiyo.net/:lang/jeolgi/about  301
-/:lang/meaning-of-24-jeolgi/  https://oiyo.net/:lang/jeolgi/about  301
-# 개별 절기 3편도 oiyo 가 6로케일 전부 다시 썼다.
-/:lang/meaning-of-jeolgi-usu  https://oiyo.net/:lang/jeolgi/usu  301
-/:lang/meaning-of-jeolgi-usu/  https://oiyo.net/:lang/jeolgi/usu  301
-/:lang/meaning-of-jeolgi-chubun  https://oiyo.net/:lang/jeolgi/chubun  301
-/:lang/meaning-of-jeolgi-chubun/  https://oiyo.net/:lang/jeolgi/chubun  301
-/:lang/meaning-of-jeolgi-daehan  https://oiyo.net/:lang/jeolgi/daehan  301
-/:lang/meaning-of-jeolgi-daehan/  https://oiyo.net/:lang/jeolgi/daehan  301
-# 심리 2편은 oiyo 가 다시 썼다. burnout 은 이미 옮겨져 있다.
-/:lang/meaning-of-emotion-regulation  https://oiyo.net/:lang/emotion-regulation/about  301
-/:lang/meaning-of-emotion-regulation/  https://oiyo.net/:lang/emotion-regulation/about  301
-/:lang/meaning-of-implementation-intention  https://oiyo.net/:lang/habit-builder/about  301
-/:lang/meaning-of-implementation-intention/  https://oiyo.net/:lang/habit-builder/about  301
-# 꿈 4편은 oiyo 의 상징 사전으로 재구성됐다.
-/:lang/meaning-of-dream-teeth-falling-out  https://oiyo.net/:lang/dream/teeth  301
-/:lang/meaning-of-dream-teeth-falling-out/  https://oiyo.net/:lang/dream/teeth  301
-/:lang/meaning-of-dream-falling  https://oiyo.net/:lang/dream/falling  301
-/:lang/meaning-of-dream-falling/  https://oiyo.net/:lang/dream/falling  301
-/:lang/meaning-of-dream-water  https://oiyo.net/:lang/dream/water  301
-/:lang/meaning-of-dream-water/  https://oiyo.net/:lang/dream/water  301
-/:lang/meaning-of-dream  https://oiyo.net/:lang/dream/about  301
-/:lang/meaning-of-dream/  https://oiyo.net/:lang/dream/about  301
-# 성격검사 2종은 oiyo 에 테스트가 있고 해설도 그쪽으로 갔다.
-/:lang/meaning-of-hexaco  https://oiyo.net/:lang/hexaco/about  301
-/:lang/meaning-of-hexaco/  https://oiyo.net/:lang/hexaco/about  301
-/:lang/meaning-of-tci  https://oiyo.net/:lang/tci/about  301
-/:lang/meaning-of-tci/  https://oiyo.net/:lang/tci/about  301
+
+
+# ── meaning-of-* 이관 (2026-09-03) ────────────────────────────────────
+# 주제마다 2줄씩 쓰다 58줄이 됐고, 그만큼 뒤쪽 정적 규칙이 죽었다(실측).
+# 여기서는 catch-all 한 줄로 접고, 슬러그별 목적지 매핑은 oiyo 의 _redirects
+# 가 맡는다 — oiyo 는 규칙이 24줄뿐이라 여유가 있다.
+#
+# 아직 wiki 에 남아 있는 meaning-of-* 는 실제 페이지가 있으므로 정적 자산이
+# 먼저 응답한다. catch-all 이 그것을 삼키지 않는다.
+#
+# 아래 갈래 규칙들이 catch-all 보다 반드시 앞에 있어야 한다(먼저 매칭 승).
+/:lang/meaning-of-tarot  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
+/:lang/meaning-of-astro-*  https://oiyo.net/:lang/natal/chart/  301
+/:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
+/:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
+/:lang/meaning-of-hwarang*  /:lang/  301
+/:lang/meaning-of-*  https://oiyo.net/:lang/meaning-of-:splat  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
@@ -686,28 +671,6 @@
 # roots -- oiyo has no index.astro under tarot/, enneagram/, biorhythm/, saju/
 # or natal/, so /tarot/ would 404.
 # Budget: this file dies past rule #622 with no error. Count before adding more.
-/:lang/meaning-of-hsp  https://oiyo.net/:lang/hsp-test/  301
-/:lang/meaning-of-hsp/  https://oiyo.net/:lang/hsp-test/  301
-/:lang/meaning-of-tarot  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-chinese-zodiac  https://oiyo.net/:lang/chinese-zodiac/  301
-/:lang/meaning-of-chinese-zodiac/  https://oiyo.net/:lang/chinese-zodiac/  301
-/:lang/meaning-of-blood-type  https://oiyo.net/:lang/blood-type/  301
-/:lang/meaning-of-blood-type/  https://oiyo.net/:lang/blood-type/  301
-/:lang/meaning-of-enneagram  https://oiyo.net/:lang/enneagram/test/  301
-/:lang/meaning-of-enneagram/  https://oiyo.net/:lang/enneagram/test/  301
-/:lang/meaning-of-biorhythms  https://oiyo.net/:lang/biorhythm/calculator/  301
-/:lang/meaning-of-biorhythms/  https://oiyo.net/:lang/biorhythm/calculator/  301
-/:lang/meaning-of-saju-stage-geonrok  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-stage-geonrok/  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
 
 # 2026-08-18 myth dictionary moved to blog (101 slugs x 6 locales).
 # Two wildcard rules instead of 202, because this file dies past rule #622.
@@ -715,7 +678,6 @@
 # does not document -- it documents * at the end of a path. If a probe shows
 # these 404, replace them with per-slug rules for the top 10 by impressions;
 # 21 rules of headroom remain for exactly that fallback.
-/:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
 
 # 2026-08-18 ten lecture courses moved to blog (248 files, en/ja/ko).
 # Two rules per subject, not per chapter -- per-chapter would be ~500 lines and
@@ -729,11 +691,6 @@
 # matching. Keep the dynamic count low; expand to per-locale static lines
 # instead of adding splats.
 /:lang/education-*  https://blog.oiyo.net/:lang/education-:splat  301
-/:lang/meaning-of-astro-*  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-branch*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-god*  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-tarot-*  https://oiyo.net/:lang/tarot/reading/  301
 
 # 2026-08-19 last academy/magazine articles moved to blog (16 files).
 # Written as STATIC per-locale lines, not a splat: static gets 2,000 and
