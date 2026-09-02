@@ -21,6 +21,9 @@
 /:lang/meaning-of-big5/  https://oiyo.net/:lang/big5/about  301
 /:lang/meaning-of-hwarang  /:lang/  301
 /:lang/meaning-of-hwarang/  /:lang/  301
+# 24절기 해설은 oiyo 가 다시 썼다 — 6로케일 전부 있다.
+/:lang/meaning-of-24-jeolgi  https://oiyo.net/:lang/jeolgi/about  301
+/:lang/meaning-of-24-jeolgi/  https://oiyo.net/:lang/jeolgi/about  301
 
 /en/persona-path-test  https://oiyo.net/en/mbti/test  301
 /en/persona-path-test/  https://oiyo.net/en/mbti/test  301
