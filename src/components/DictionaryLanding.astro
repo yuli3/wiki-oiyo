@@ -159,26 +159,80 @@ const COPY: Record<Locale, Copy> = {
   },
 };
 
+/**
+ * 항목이 0일 때의 문구.
+ *
+ * 2026-09-03: wiki 가 갖고 있던 주제가 모두 oiyo 로 옮겨져 콘텐츠가 0 이 됐다.
+ * 그 상태에서 "N개 용어의 정의"를 그대로 쓰면 빈 목록을 자랑하게 되고,
+ * "정의 계층"이라는 말은 2026-08-27 에 폐기된 계약을 되살린다. 그래서 0 일
+ * 때는 사이트가 지금 무엇인지를 그대로 적는다 — 다음 주제를 기다리는 자리.
+ */
+const EMPTY: Record<Locale, { eyebrow: string; title: string; lede: string; siblings: string }> = {
+  ko: {
+    eyebrow: "준비 중",
+    title: "다음 주제를 고르는 중입니다",
+    lede: "이곳에 있던 사주·심리·상징 항목은 oiyo.net 으로 옮겨 다시 썼습니다. 지금은 새로 다룰 주제와 학문을 고르는 중이며, 정해지는 대로 이 자리에 실립니다.",
+    siblings: "지금 읽을 수 있는 곳",
+  },
+  en: {
+    eyebrow: "In preparation",
+    title: "Choosing what to cover next",
+    lede: "The saju, psychology and symbol entries that lived here have moved to oiyo.net and been rewritten. We are now choosing the subjects and disciplines to take up next; they will appear here as they are decided.",
+    siblings: "Where to read in the meantime",
+  },
+  ja: {
+    eyebrow: "準備中",
+    title: "次に扱う主題を選んでいます",
+    lede: "ここにあった四柱推命・心理・象徴の項目は oiyo.net へ移し、書き直しました。いまは新しく扱う主題と学問を選んでいるところで、決まり次第この場所に載ります。",
+    siblings: "いま読める場所",
+  },
+  zh: {
+    eyebrow: "筹备中",
+    title: "正在挑选下一批主题",
+    lede: "原先在此的四柱、心理与象征词条已迁至 oiyo.net 并重写。目前正在挑选新的主题与学科，确定后将陆续在此发布。",
+    siblings: "现在可以阅读的地方",
+  },
+  fr: {
+    eyebrow: "En préparation",
+    title: "Nous choisissons les prochains sujets",
+    lede: "Les entrées de saju, de psychologie et de symboles qui se trouvaient ici ont été déplacées vers oiyo.net et réécrites. Nous choisissons à présent les sujets et disciplines à traiter ; ils paraîtront ici au fur et à mesure.",
+    siblings: "Où lire en attendant",
+  },
+  es: {
+    eyebrow: "En preparación",
+    title: "Estamos eligiendo los próximos temas",
+    lede: "Las entradas de saju, psicología y símbolos que había aquí se trasladaron a oiyo.net y se reescribieron. Ahora elegimos los temas y disciplinas que trataremos; irán apareciendo aquí conforme se decidan.",
+    siblings: "Dónde leer mientras tanto",
+  },
+};
+
 const c = COPY[locale] ?? COPY.en;
 const formatted = termCount.toLocaleString(locale === "ko" ? "ko" : locale);
-const pageTitle = c.title(formatted);
+const isEmpty = termCount === 0;
+const e = EMPTY[locale] ?? EMPTY.en;
+const eyebrow = isEmpty ? e.eyebrow : c.eyebrow;
+const pageTitle = isEmpty ? e.title : c.title(formatted);
+const lede = isEmpty ? e.lede : c.lede;
+// "정의 다음에 필요한 것"은 폐기된 정의/설명 구분을 되살린다. 빈 상태에서는 쓰지 않는다.
+const siblingsTitle = isEmpty ? e.siblings : c.siblingsTitle;
 ---
 
-<BaseLayout title={pageTitle} description={c.lede} availableLocales={availableLocales}>
+<BaseLayout title={pageTitle} description={lede} availableLocales={availableLocales}>
   <section class="py-16 md:py-20">
     <div class="container px-4">
-      <p class="text-sm font-medium text-primary mb-3">{c.eyebrow}</p>
+      <p class="text-sm font-medium text-primary mb-3">{eyebrow}</p>
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 font-heading">
         {pageTitle}
       </h1>
       {/* keep-all stops Korean and Chinese from breaking inside a word, which
           the default break-all does — "밝히 / 고," in the first render. */}
       <p class="text-lg text-muted-foreground max-w-2xl leading-relaxed [word-break:keep-all]">
-        {c.lede}
+        {lede}
       </p>
     </div>
   </section>
 
+  {!isEmpty && (
   <section class="pb-16">
     <div class="container px-4">
       <h2 class="text-2xl font-bold mb-6 font-heading">{c.browse}</h2>
@@ -202,6 +256,7 @@ const pageTitle = c.title(formatted);
       </div>
     </div>
   </section>
+  )}
 
   {recent.length > 0 && (
     <section class="pb-16">
@@ -225,6 +280,8 @@ const pageTitle = c.title(formatted);
 
   <section class="pb-20">
     <div class="container px-4 grid gap-6 lg:grid-cols-3">
+      {/* 항목이 0 이면 topics.json 도 비어 있다. 빈 사전을 광고하지 않는다. */}
+      {!isEmpty && (
       <div class="rounded-xl border border-border/60 p-6 lg:col-span-1">
         <h2 class="text-lg font-bold mb-2 font-heading">{c.machineTitle}</h2>
         <p class="text-sm text-muted-foreground leading-relaxed mb-4">{c.machineBody}</p>
@@ -232,9 +289,10 @@ const pageTitle = c.title(formatted);
           {c.machineCta} →
         </a>
       </div>
+      )}
 
-      <div class="lg:col-span-2">
-        <h2 class="text-lg font-bold mb-4 font-heading">{c.siblingsTitle}</h2>
+      <div class={isEmpty ? "lg:col-span-3" : "lg:col-span-2"}>
+        <h2 class="text-lg font-bold mb-4 font-heading">{siblingsTitle}</h2>
         <div class="grid gap-4 sm:grid-cols-2">
           <a
             href={`https://blog.oiyo.net/${locale}/`}
