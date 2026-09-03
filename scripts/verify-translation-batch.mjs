@@ -91,6 +91,13 @@ function hangulRatio(text) {
 const HANGUL_LIMIT = 0.15;
 
 function runScan(write) {
+  // 코퍼스가 0 이면 디렉터리 자체가 없다 — git 은 빈 디렉터리를 남기지 않는다.
+  // 2026-09-03 wiki 콘텐츠를 oiyo 로 전부 이관하면서 CI 가 여기서 ENOENT 로 죽었다.
+  // 검사할 것이 없는 것은 실패가 아니다.
+  if (!existsSync(CONTENT)) {
+    console.log(`${CONTENT} 없음 — 검사할 콘텐츠가 0 이다. SKIP`);
+    return 0;
+  }
   const locales = readdirSync(CONTENT, { withFileTypes: true })
     .filter((entry) => entry.isDirectory() && entry.name !== "ko")
     .map((entry) => entry.name);
