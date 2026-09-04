@@ -12,7 +12,7 @@ const LIMIT = 10_000;
 // 같은 계정에 blog 리스트 둘(canonical + locale expansions)이 함께 올라가 있어,
 // wiki 것만 세면 남은 칸을 6,000개 넘게 부풀려 보고한다.
 // 값은 `GET /accounts/{id}/rules/lists` 의 num_items 로 다시 잰다.
-const OTHER_LIST_ITEMS = 6_393; // oiyo_blog_canonical + oiyo_blog_locale_expansions @ 2026-09-04
+const OTHER_LIST_ITEMS = 6_477; // oiyo_blog_canonical + oiyo_blog_locale_expansions @ 2026-09-04
 const root = process.cwd();
 const inputPath = path.join(root, "data/redirects/canonical-redirects.txt");
 const outputDir = path.join(root, "reports/cloudflare-bulk-redirects");
