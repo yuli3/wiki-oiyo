@@ -32,6 +32,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify current pages and migration contracts
+        run: |
+          npm run test:current-routes
+          npm run verify:current-routes
+
+      # Production migration checks are distinct from this PR's local artifact.
+      - name: Verify production migration destinations
+        if: github.event_name != 'pull_request'
+        run: npm run verify:current-routes:live
+
       - name: Run Lighthouse CI
         # performance/seo are "error" assertions (fail the check); accessibility/
         # best-practices stay "warn" (see lighthouserc.json). No `|| true` — a

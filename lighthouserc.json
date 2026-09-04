@@ -1,15 +1,16 @@
 {
   "ci": {
     "collect": {
-      "startServerCommand": "npx --yes http-server dist -p 8080 -s",
+      "startServerCommand": "npx --yes http-server dist -p 8080",
       "startServerReadyPattern": "Available on",
       "url": [
         "http://localhost:8080/en/",
         "http://localhost:8080/ko/",
-        "http://localhost:8080/ko/meaning-of-saju-60gapja/",
-        "http://localhost:8080/ko/meaning-of-big5/",
+        "http://localhost:8080/ja/",
+        "http://localhost:8080/fr/",
+        "http://localhost:8080/es/",
+        "http://localhost:8080/zh/",
         "http://localhost:8080/ko/explore/",
-        "http://localhost:8080/ko/meaning-of-cognitive-load/",
         "http://localhost:8080/knowledge/"
       ],
       "numberOfRuns": 3,
