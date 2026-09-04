@@ -267,3 +267,15 @@
 /:lang/world-geography-quiz* https://blog.oiyo.net/:lang/world-geography-quiz 301
 /:lang/year-end-settlement-calculator* https://blog.oiyo.net/:lang/year-end-settlement-calculator 301
 /:lang/zodiac-deep-analysis* https://oiyo.net/:lang/zodiac/personality 301
+
+# 2026-09-04 GA4 실측 wiki 404 (28일 18세션) 중 살아 있는 목적지가 있는 것만.
+# holmes-rahe-scale · zodiac-signs · saju-stem-im · saju-stage-jewang · /en/86/ ·
+# category/mysticism/90 은 세 사이트 어디에도 대응 문서가 없다. 없는 곳으로
+# 301 하느니 404 를 그대로 둔다.
+/:lang/meaning-of-riasec* https://oiyo.net/:lang/riasec-career-test/ 301
+/en/meaning-of-daewoon* https://oiyo.net/en/daewoon-10-year-cycle-seasons/ 301
+/ko/meaning-of-daewoon* https://oiyo.net/ko/daewoon-10-year-cycle-seasons/ 301
+/ja/meaning-of-daewoon* https://oiyo.net/ja/daewoon-10-year-cycle-seasons/ 301
+/zh/meaning-of-zi-wei-dou-shu* https://oiyo.net/zh/zi-wei-dou-shu/ 301
+/en/adler-environment* https://oiyo.net/en/adler-environment/ 301
+/ko/adler-environment* https://oiyo.net/ko/adler-environment/ 301
