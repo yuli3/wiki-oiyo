@@ -325,20 +325,20 @@
 /cn/solitaire  https://game.oiyo.net/zh/solitaire  301
 /cn/solitaire/  https://game.oiyo.net/zh/solitaire  301
 # spatial-iq-game
-/en/spatial-iq-game  https://blog.oiyo.net/en/spatial-iq-game  301
-/en/spatial-iq-game/  https://blog.oiyo.net/en/spatial-iq-game  301
-/ko/spatial-iq-game  https://blog.oiyo.net/ko/spatial-iq-game  301
-/ko/spatial-iq-game/  https://blog.oiyo.net/ko/spatial-iq-game  301
-/ja/spatial-iq-game  https://blog.oiyo.net/ja/spatial-iq-game  301
-/ja/spatial-iq-game/  https://blog.oiyo.net/ja/spatial-iq-game  301
-/fr/spatial-iq-game  https://blog.oiyo.net/fr/spatial-iq-game  301
-/fr/spatial-iq-game/  https://blog.oiyo.net/fr/spatial-iq-game  301
-/es/spatial-iq-game  https://blog.oiyo.net/es/spatial-iq-game  301
-/es/spatial-iq-game/  https://blog.oiyo.net/es/spatial-iq-game  301
-/zh/spatial-iq-game  https://blog.oiyo.net/zh/spatial-iq-game  301
-/zh/spatial-iq-game/  https://blog.oiyo.net/zh/spatial-iq-game  301
-/cn/spatial-iq-game  https://blog.oiyo.net/zh/spatial-iq-game  301
-/cn/spatial-iq-game/  https://blog.oiyo.net/zh/spatial-iq-game  301
+/en/spatial-iq-game  https://oiyo.net/en/spatial-iq-game/  301
+/en/spatial-iq-game/  https://oiyo.net/en/spatial-iq-game/  301
+/ko/spatial-iq-game  https://oiyo.net/ko/spatial-iq-game/  301
+/ko/spatial-iq-game/  https://oiyo.net/ko/spatial-iq-game/  301
+/ja/spatial-iq-game  https://oiyo.net/ja/spatial-iq-game/  301
+/ja/spatial-iq-game/  https://oiyo.net/ja/spatial-iq-game/  301
+/fr/spatial-iq-game  https://oiyo.net/fr/spatial-iq-game/  301
+/fr/spatial-iq-game/  https://oiyo.net/fr/spatial-iq-game/  301
+/es/spatial-iq-game  https://oiyo.net/es/spatial-iq-game/  301
+/es/spatial-iq-game/  https://oiyo.net/es/spatial-iq-game/  301
+/zh/spatial-iq-game  https://oiyo.net/zh/spatial-iq-game/  301
+/zh/spatial-iq-game/  https://oiyo.net/zh/spatial-iq-game/  301
+/cn/spatial-iq-game  https://oiyo.net/zh/spatial-iq-game/  301
+/cn/spatial-iq-game/  https://oiyo.net/zh/spatial-iq-game/  301
 # sudoku
 /en/sudoku  https://game.oiyo.net/en/sudoku  301
 /en/sudoku/  https://game.oiyo.net/en/sudoku  301
@@ -422,16 +422,16 @@
 
 # ── cn locale 전체 fallback (cn→zh 마이그레이션, 2026-06-10) ─────
 
-/:lang/category/bienestar-y-espiritualidad*  /:lang/category/health  301
-/:lang/category/health-rhythm*  /:lang/category/health  301
-/:lang/category/liberal-arts*  /:lang/category/humanities  301
-/:lang/category/lifestyle-growth*  /:lang/category/lifestyle  301
-/:lang/category/myth-culture*  /:lang/category/mythology  301
-/:lang/category/mythology-history*  /:lang/category/mythology  301
-/:lang/category/psychologie*  /:lang/category/mind-psychology  301
-/:lang/category/psychology*  /:lang/category/mind-psychology  301
-/:lang/category/science*  /:lang/category/natural-science  301
-/:lang/category/wellness-spirituality*  /:lang/category/health  301
+/:lang/category/bienestar-y-espiritualidad*  /:lang/explore/  301
+/:lang/category/health-rhythm*  /:lang/explore/  301
+/:lang/category/liberal-arts*  /:lang/explore/  301
+/:lang/category/lifestyle-growth*  /:lang/explore/  301
+/:lang/category/myth-culture*  /:lang/explore/  301
+/:lang/category/mythology-history*  /:lang/explore/  301
+/:lang/category/psychologie*  /:lang/explore/  301
+/:lang/category/psychology*  /:lang/explore/  301
+/:lang/category/science*  /:lang/explore/  301
+/:lang/category/wellness-spirituality*  /:lang/explore/  301
 /:lang/persona-path-test*  https://oiyo.net/:lang/mbti/test  301
 /:lang/personascope-test*  https://oiyo.net/:lang/big5/test  301
 /:lang/soul-mirror-test*  https://oiyo.net/:lang/enneagram/test  301
@@ -446,10 +446,14 @@
 /:lang/strength-sage-test*  https://oiyo.net/:lang/strengths-discovery-test/  301
 /:lang/meaning-of-blood-type-ab*  https://oiyo.net/:lang/blood-type/  301
 /:lang/meaning-of-palm-heart-line*  https://oiyo.net/:lang/palmistry/explore/  301
-/:lang/insurance-cancel-guide*  https://blog.oiyo.net/:lang/insurance-cancel-guide/  301
-/:lang/insurance-how-to*  https://blog.oiyo.net/:lang/insurance-how-to/  301
-/:lang/moving-guide-jp*  https://blog.oiyo.net/:lang/moving-guide-jp/  301
-/:lang/moving-guide-kr*  https://blog.oiyo.net/:lang/moving-guide-kr/  301
+/ko/insurance-cancel-guide*  https://blog.oiyo.net/ko/insurance-cancel-guide/  301
+/en/insurance-cancel-guide*  https://blog.oiyo.net/en/insurance-cancel-guide/  301
+/ko/insurance-how-to*  https://blog.oiyo.net/ko/insurance-how-to/  301
+/en/insurance-how-to*  https://blog.oiyo.net/en/insurance-how-to/  301
+/ko/moving-guide-jp*  https://blog.oiyo.net/ko/moving-guide-jp/  301
+/en/moving-guide-jp*  https://blog.oiyo.net/en/moving-guide-jp/  301
+/ko/moving-guide-kr*  https://blog.oiyo.net/ko/moving-guide-kr/  301
+/en/moving-guide-kr*  https://blog.oiyo.net/en/moving-guide-kr/  301
 /:lang/stock-glossary-ch3*  https://blog.oiyo.net/:lang/stock-glossary-ch3/  301
 
 # ── 이관 리다이렉트 ───────────────────────────────────────────────────
@@ -521,8 +525,8 @@
 /cn/*  /zh/:splat  301
 
 # ── 카테고리 정규화 301 (synonym merge, 2026-06-21) ──
-/:lang/category/philosophy  /:lang/category/philosophy-spirit  301
-/:lang/category/philosophy/  /:lang/category/philosophy-spirit  301
+/:lang/category/philosophy  /:lang/explore/  301
+/:lang/category/philosophy/  /:lang/explore/  301
 # 경영학 강의 퇴장: Blog 강의가 정본 (locale parity가 있는 경로만)
 /ko/education-business-ch20  https://blog.oiyo.net/ko/academy-management-core-ch12/  301
 /ko/education-business-ch20/  https://blog.oiyo.net/ko/academy-management-core-ch12/  301
@@ -530,14 +534,14 @@
 # ── 금융 사전·시리즈 blog 통합 (2026-08-18) ─────────────────────────────
 # 세운 지시: wiki 금융은 blog가 정본. 4편 전부 90일 노출 0·클릭 0.
 # 고유 내용(용어 20개·차트 읽기·채권/ETF/펀드·금리/인플레/복리)은 대상 글에 병합했다.
-/ko/crypto-basics-ch1  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/crypto-basics-ch1/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/crypto-basics-ch2  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/crypto-basics-ch2/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/crypto-glossary-ch1  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/crypto-glossary-ch1/  https://blog.oiyo.net/ko/magazine-crypto-bitcoin-guide/  301
-/ko/finance-terms-glossary  https://blog.oiyo.net/ko/magazine-stock-terms-guide/  301
-/ko/finance-terms-glossary/  https://blog.oiyo.net/ko/magazine-stock-terms-guide/  301
+/ko/crypto-basics-ch1  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/crypto-basics-ch1/  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/crypto-basics-ch2  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/crypto-basics-ch2/  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/crypto-glossary-ch1  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/crypto-glossary-ch1/  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+/ko/finance-terms-glossary  https://blog.oiyo.net/ko/academy-corporate-finance-ch1/  301
+/ko/finance-terms-glossary/  https://blog.oiyo.net/ko/academy-corporate-finance-ch1/  301
 
 # ── wiki→oiyo 흡수 리다이렉트 (2026-08-18) ─────────────────────────────────
 # 이 파일에는 컷오프가 있다. 2026-08-18 라이브 이분 탐색: 규칙 #622 는 301, #624 부터 404다.

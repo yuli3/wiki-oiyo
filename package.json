@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "verify:current-routes": "node scripts/verify-current-routes.mjs",
+    "verify:current-routes:live": "node scripts/verify-current-routes.mjs --live",
+    "test:current-routes": "node --test scripts/verify-current-routes.test.mjs",
     "dev": "astro dev",
     "sync:category-registry": "node scripts/generate-category-registry.mjs",
     "check:category-registry": "node scripts/generate-category-registry.mjs --check",
