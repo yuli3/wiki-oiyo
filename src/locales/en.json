@@ -347,8 +347,6 @@
     "methodText": "Every piece (1) checks facts against primary sources, official statistics, and academic literature; (2) states limits and disclaimers for sensitive topics like psychology and health; and (3) carries an updated date and is revised on a regular cycle when the topic changes. Our goal is to give you a basis to judge for yourself rather than a verdict."
   },
   "components": {
-    "knowledgeCheck": "Knowledge Check",
-    "latestInsights": "Latest Insights",
-    "readTheBlog": "Read the blog"
+    "knowledgeCheck": "Knowledge Check"
   }
 }

@@ -347,8 +347,6 @@
     "methodText": "Cada artículo (1) verifica los hechos con fuentes primarias, estadísticas oficiales y literatura académica; (2) indica límites y descargos en temas sensibles como psicología y salud; y (3) lleva fecha de actualización y se revisa periódicamente. Nuestro objetivo es darte una base para juzgar por ti mismo, no un veredicto."
   },
   "components": {
-    "knowledgeCheck": "Verificación de conocimientos",
-    "latestInsights": "Últimas perspectivas",
-    "readTheBlog": "Leer el blog"
+    "knowledgeCheck": "Verificación de conocimientos"
   }
 }

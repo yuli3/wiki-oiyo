@@ -347,8 +347,6 @@
     "methodText": "每篇文章都會：①以一手資料、官方統計與學術文獻查證事實；②在心理、健康等敏感主題上同時說明限制與免責；③標註更新日期並定期修訂。我們的目標是提供讓你自行判斷的依據，而非定論。"
   },
   "components": {
-    "knowledgeCheck": "知识检验",
-    "latestInsights": "最新洞察",
-    "readTheBlog": "阅读博客"
+    "knowledgeCheck": "知识检验"
   }
 }
