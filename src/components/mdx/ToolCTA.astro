@@ -1,4 +1,5 @@
 ---
+import { toolCtaHref } from '@/lib/tool-cta-href';
 interface ToolMeta {
   name_ko: string;
   name_en: string;
@@ -376,8 +377,7 @@ const isKo = locale === "ko";
 const name = isKo ? meta.name_ko : meta.name_en;
 const description = isKo ? meta.description_ko : meta.description_en;
 const ctaLabel = isKo ? "계산해보기 →" : "Try it →";
-import { AHOXY_URL } from '@/config/site.config';
-const href = `${AHOXY_URL}/${locale}/${tool}?utm_source=blog_oiyo&utm_medium=referral&utm_campaign=tool_cta`;
+const href = toolCtaHref(tool, locale);
 ---
 
 <aside class="not-prose my-8 rounded-2xl border border-green-200 bg-green-50/80 shadow-sm">
