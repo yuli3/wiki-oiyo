@@ -155,7 +155,11 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
   </script>
 )}
 
-{googleAdsenseId && (
+{/* Pages the author explicitly keeps out of the index carry no ads. The 404 was
+    serving `index, follow` *and* ca-pub, which is an AdSense policy risk (ads on
+    an error page with no content), not just an SEO leak. Gated on the explicit
+    prop only — deindexed locales and slugs are real content and keep earning. */}
+{googleAdsenseId && !noindex && (
   <script is:inline async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseId}`}
      crossorigin="anonymous"></script>
 )}
