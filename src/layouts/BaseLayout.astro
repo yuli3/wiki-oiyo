@@ -5,7 +5,6 @@ import { siteConfig } from "../config/site.config";
 import "../styles/global.css";
 import "katex/dist/katex.min.css";
 import "@fontsource-variable/inter";
-import AhoxyWelcome from '../components/AhoxyWelcome.astro';
 
 // BCP-47 mapping: Astro locale → HTML lang attribute standard value
 const BCP47: Record<string, string> = {
@@ -484,6 +483,5 @@ const knowledgeMission = ({
         <a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
       </div>
     </footer>
-    <AhoxyWelcome locale={locale} />
   </body>
 </html>
