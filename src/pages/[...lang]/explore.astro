@@ -33,7 +33,7 @@ type ExploreCopy = {
 const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   en: {
     title: "Explore the OIYO Wiki",
-    intro: "Browse definitions, courses, and long-form reading by track.",
+    intro: "Browse term definitions. Courses and magazine live on the blog.",
     home: "Home",
     current: "Explore",
     dictionary: "Dictionary - term definitions",
@@ -44,7 +44,7 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   },
   ko: {
     title: "OIYO 위키 전체 탐색",
-    intro: "정의, 강좌, 긴 읽을거리를 트랙별로 둘러봅니다.",
+    intro: "용어 정의를 둘러봅니다. 강좌와 매거진은 블로그에 있습니다.",
     home: "홈",
     current: "전체 탐색",
     dictionary: "사전 - 용어 정의",
@@ -55,7 +55,7 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   },
   ja: {
     title: "OIYO Wiki を探索",
-    intro: "定義、講座、読み物をトラック別に探せます。",
+    intro: "用語の定義を探せます。講座とマガジンはブログにあります。",
     home: "ホーム",
     current: "探索",
     dictionary: "辞典 - 用語の定義",
@@ -66,7 +66,7 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   },
   zh: {
     title: "浏览 OIYO Wiki",
-    intro: "按分类浏览定义、课程和长篇阅读。",
+    intro: "浏览术语定义。课程和杂志在博客。",
     home: "首页",
     current: "浏览",
     dictionary: "词典 - 术语定义",
@@ -77,7 +77,7 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   },
   fr: {
     title: "Explorer le Wiki OIYO",
-    intro: "Parcourez les definitions, les cours et les lectures longues par piste.",
+    intro: "Parcourez les définitions. Les cours et la revue sont sur le blog.",
     home: "Accueil",
     current: "Explorer",
     dictionary: "Dictionnaire - definitions",
@@ -88,7 +88,7 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   },
   es: {
     title: "Explorar OIYO Wiki",
-    intro: "Explora definiciones, cursos y lecturas extensas por pista.",
+    intro: "Explora definiciones. Los cursos y la revista están en el blog.",
     home: "Inicio",
     current: "Explorar",
     dictionary: "Diccionario - definiciones",
@@ -113,29 +113,8 @@ for (const p of dict) {
   dictByCat.set(c, (dictByCat.get(c) ?? 0) + 1);
 }
 const dictCats = [...dictByCat.entries()].sort((a, b) => b[1] - a[1]);
-
-// academy: track → series → chapters (link to first chapter)
-const academy = posts.filter((p) => getTrackFromData(p.data) === "academy");
-type Series = { key: string; category: string; first: string; count: number };
-const seriesMap = new Map<string, Series>();
-for (const p of academy) {
-  const raw = p.slug.split("/").slice(1).join("/");
-  const m = raw.match(/^(.+)-ch\d+$/);
-  const key = m ? m[1] : raw;
-  const ex = seriesMap.get(key);
-  if (ex) ex.count++;
-  else seriesMap.set(key, { key, category: p.data.category ?? "Etc", first: raw, count: 1 });
-}
-// academy: group series by category
-const seriesByCat = new Map<string, Series[]>();
-for (const s of seriesMap.values()) {
-  if (!seriesByCat.has(s.category)) seriesByCat.set(s.category, []);
-  seriesByCat.get(s.category)!.push(s);
-}
-const acadCats = [...seriesByCat.entries()].sort((a, b) => b[1].length - a[1].length);
-
-const magazineCount = posts.filter((p) => getTrackFromData(p.data) === "magazine").length;
 const catLabel = (c: string) => categoryNames[c] ?? c;
+const blogHome = `https://blog.oiyo.net/${locale}/`;
 const title = copy.title;
 const intro = copy.intro;
 ---
@@ -165,42 +144,18 @@ const intro = copy.intro;
     </section>
 
     <section class="mt-10">
-      <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-green-900">
-        {trackLabel.academy} <span class="text-sm font-medium text-green-600">{seriesMap.size}</span>
-      </h2>
-      <div class="flex flex-col gap-2">
-        {acadCats.map(([cat, series]) => (
-          <details class="rounded-lg border border-green-100 bg-white open:bg-green-50/40">
-            <summary class="cursor-pointer list-none px-4 py-2.5 text-sm font-bold text-green-950">
-              {catLabel(cat)} <span class="ml-1 text-xs font-medium text-green-600">{series.length}</span>
-            </summary>
-            <ul class="border-t border-green-100 px-4 py-2">
-              {series
-                .sort((a, b) => a.key.localeCompare(b.key))
-                .map((s) => (
-                  <li class="py-1.5">
-                    <Item
-                      href={`/${locale}/${s.first}`}
-                      title={s.key}
-                      meta={`${s.count}${copy.chapterSuffix}`}
-                      class="border-transparent bg-transparent px-3 py-2 hover:bg-white"
-                    />
-                  </li>
-                ))}
-            </ul>
-          </details>
-        ))}
-      </div>
+      <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.academy}</h2>
+      <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={blogHome}>
+        {copy.academy}
+      </a>
     </section>
 
-    {magazineCount > 0 && (
-      <section class="mt-10">
-        <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.magazine} <span class="text-sm font-medium text-green-600">{magazineCount}</span></h2>
-        <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={`https://blog.oiyo.net/${locale}/`}>
-          {copy.browseMagazine}
-        </a>
-      </section>
-    )}
+    <section class="mt-10">
+      <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.magazine}</h2>
+      <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={blogHome}>
+        {copy.browseMagazine}
+      </a>
+    </section>
 
     {/* OIYO 지식 네트워크 — 정의(wiki)→설명(blog)→실행(oiyo) 크로스도메인 */}
     <section class="mt-12 rounded-2xl border border-green-100 bg-green-50/40 p-5">
