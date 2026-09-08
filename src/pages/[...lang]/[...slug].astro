@@ -190,7 +190,7 @@ const homeLabel: Record<string, string> = { en: "Home", ko: "홈", ja: "ホー�
 const chapterStr = (n: number) =>
   locale === "ja" ? `第${n}章` : `${chapterLabel[locale] ?? "Chapter"} ${n}`;
 
-const coursesHref = `/${locale}/explore`;
+const coursesHref = `/${locale}/explore/`;
 ---
 
 <BaseLayout
