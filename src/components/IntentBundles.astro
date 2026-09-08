@@ -171,11 +171,15 @@ const bundles: Bundle[] = [
   },
 ];
 
-// Wiki landing is for reference discovery. Executable assessments and games
-// are promoted only by their owner domains.
-const referenceBundles = bundles.filter((bundle) =>
-  bundle.title.en !== "Psychology Tests" && bundle.title.en !== "Games & Puzzles"
-);
+// Wiki landing is for reference discovery. Course/magazine hubs and executable
+// assessments live on their owner domains.
+const HIDDEN_ON_WIKI = new Set([
+  "Psychology Tests",
+  "Games & Puzzles",
+  "Exam Courses",
+  "Magazine Essays",
+]);
+const referenceBundles = bundles.filter((bundle) => !HIDDEN_ON_WIKI.has(bundle.title.en ?? ""));
 ---
 
 <div class="mb-10">
