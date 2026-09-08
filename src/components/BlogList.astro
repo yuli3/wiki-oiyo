@@ -6,7 +6,6 @@ import CategoryCloud from "./CategoryCloud.astro";
 import IntentBundles from "./IntentBundles.astro";
 import Item from "./ui/Item.astro";
 import { siteConfig } from "../config/site.config";
-import { getTrackFromData } from "../lib/taxonomy";
 import { getTranslations } from "../lib/i18n";
 import type { Locale } from "../lib/i18n";
 
@@ -33,7 +32,6 @@ interface Props {
 const { page, locale, baseUrl, title, subtitle, activeCategory, showIntentBundles = false, useItemComposition = false, noindex } = Astro.props;
 const paginationEnabled = siteConfig.features.pagination;
 const t = await getTranslations(locale as Locale);
-const blogT = t.blog as Record<string, string>;
 const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: string };
 ---
 
@@ -69,17 +67,6 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
             // post.slug is like 'ko/visualizing-goals'; strip the lang prefix
             const slug = post.slug.split("/").slice(1).join("/");
             const href = `/${locale}/${slug}/`;
-            const chMatch = post.slug.match(/-ch(\d+)$/);
-            const chapter = chMatch ? parseInt(chMatch[1], 10) : null;
-            const track = getTrackFromData(post.data);
-            const isAcademy = track === "academy";
-            const isInteractive = track === "interactive";
-            const badgeLabel = isAcademy
-              ? blogT.badgeAcademy
-              : isInteractive
-                ? (blogT.badgeInteractive ?? "Interactive")
-                : blogT.badgeMagazine;
-
             const localizedCategory = (post.data.category ? categoryNames[post.data.category] : undefined) ?? post.data.category;
             const published = post.data.pubDate?.toLocaleDateString(
               locale === "ko" ? "ko-KR" : locale === "ja" ? "ja-JP" : locale === "zh" ? "zh-CN" : locale === "fr" ? "fr-FR" : locale === "es" ? "es-ES" : "en-US",
@@ -90,9 +77,9 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
               return (
                 <Item
                   href={href}
-                  title={`${isAcademy && chapter !== null ? `#${chapter} ` : ""}${post.data.title}`}
+                  title={post.data.title}
                   description={post.data.description}
-                  eyebrow={[badgeLabel, localizedCategory].filter(Boolean).join(" · ")}
+                  eyebrow={localizedCategory}
                   meta={published}
                   imageSrc={post.data.heroImage}
                   imageAlt={post.data.title}
@@ -102,17 +89,7 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
             }
 
             return (
-              <article
-                class:list={[
-                  "group flex flex-col gap-4 py-6 md:flex-row md:items-center",
-                  {
-                    "bg-primary/5 px-4 py-6 md:px-6 rounded-2xl border border-primary/10 hover:border-primary/20 transition-colors":
-                      isAcademy,
-                    "bg-foreground/[0.03] px-4 py-6 md:px-6 rounded-2xl border border-foreground/10 hover:border-foreground/20 transition-colors":
-                      isInteractive,
-                  },
-                ]}
-              >
+              <article class="group flex flex-col gap-4 py-6 md:flex-row md:items-center">
                 {post.data.heroImage && (
                   <a
                     href={href}
@@ -127,30 +104,14 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
                 )}
 
                 <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest">
-                    <span
-                      class:list={[
-                        "px-2 py-0.5 rounded-md",
-                        isAcademy
-                          ? "bg-primary text-primary-foreground"
-                          : isInteractive
-                            ? "bg-secondary text-secondary-foreground"
-                            : "bg-foreground text-background",
-                      ]}
-                    >
-                      {badgeLabel}
-                    </span>
-                    <span class="text-muted-foreground/40">/</span>
-                    <span class="text-muted-foreground">
+                  {localizedCategory && (
+                    <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
                       {localizedCategory}
-                    </span>
-                  </div>
+                    </div>
+                  )}
 
                   <h2 class="mt-2 text-xl font-bold leading-snug group-hover:text-primary transition-colors tracking-tight">
                     <a href={href}>
-                      {isAcademy && chapter !== null && (
-                        <span class="text-primary mr-1.5">#{chapter}</span>
-                      )}
                       {post.data.title}
                     </a>
                   </h2>
