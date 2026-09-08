@@ -16,7 +16,7 @@
   "topics": {
     "tarot": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/tarot-beginners-complete-guide",
         "locales": [
           "ko"
@@ -39,7 +39,7 @@
     },
     "saju": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-saju-complete-guide",
         "locales": [
           "ko",
@@ -59,7 +59,7 @@
     },
     "zodiac": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/zodiac-rising-sign-guide",
         "locales": [
           "ko",
@@ -79,7 +79,7 @@
     },
     "chinese-zodiac": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/chinese-zodiac-compatibility-complete-guide",
         "locales": [
           "ko"
@@ -98,7 +98,7 @@
     },
     "astrology": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/academy-astrology-basics-ch1",
         "locales": [
           "ko",
@@ -114,7 +114,7 @@
     },
     "numerology": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-numerology-complete-guide",
         "locales": [
           "ko"
@@ -128,7 +128,7 @@
     },
     "blood-type": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-2026-blood-type-annual",
         "locales": [
           "ko"
@@ -147,7 +147,7 @@
     },
     "dream": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-dream-interpretation-guide",
         "locales": [
           "ko"
@@ -166,7 +166,7 @@
     },
     "palmistry": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/palm-reading-complete-guide",
         "locales": [
           "ko",
@@ -177,7 +177,7 @@
     },
     "physiognomy": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/face-reading-physiognomy-guide",
         "locales": [
           "ko"
@@ -191,7 +191,7 @@
     },
     "fortune": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-2026-monthly-forecast",
         "locales": [
           "ko"
@@ -210,7 +210,7 @@
         "locales": "all"
       },
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/mbti-complete-deep-guide",
         "locales": [
           "ko",
@@ -230,7 +230,7 @@
         "locales": "all"
       },
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/riasec-career-complete-guide",
         "locales": [
           "ko",
