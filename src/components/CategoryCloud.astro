@@ -14,11 +14,11 @@ const { activeCategory, locale } = Astro.props;
 const t = await getTranslations(locale as Locale);
 const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: string };
 
-const allPosts = await getCollection(
+const terms = await getCollection(
   "blog",
-  ({ data }) => data.draft !== true && data.locale === locale,
+  ({ data }) => data.draft !== true && data.locale === locale && getTrackFromData(data) === "dictionary",
 );
-const categoryCounts = allPosts.reduce(
+const categoryCounts = terms.reduce(
   (acc, post) => {
     const cat = post.data.category;
     if (!cat) return acc;
@@ -29,32 +29,15 @@ const categoryCounts = allPosts.reduce(
 );
 
 const categories = Object.keys(categoryCounts).sort();
-const academyCats = categories.filter((cat) =>
-  allPosts.some((post) => post.data.category === cat && getTrackFromData(post.data) === "academy"),
-);
-const interactiveCats = categories.filter((cat) =>
-  allPosts.some((post) => post.data.category === cat && getTrackFromData(post.data) === "interactive"),
-);
-const magazineCats = categories.filter((cat) =>
-  allPosts.some((post) => post.data.category === cat && getTrackFromData(post.data) === "magazine"),
-);
 ---
 
 <div class="space-y-12 mb-16">
-  {/* Academy Section */}
   {
-    academyCats.length > 0 && (
+    categories.length > 0 && (
       <div class="animate-fade-up">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="h-px flex-1 bg-border/40" />
-          <h2 class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/60">
-            OIYO Academy
-          </h2>
-          <div class="h-px flex-1 bg-border/40" />
-        </div>
         <div class="relative">
           <div class="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 scrollbar-hide w-full max-w-full snap-x snap-mandatory mask-gradient">
-            {academyCats.map((cat) => {
+            {categories.map((cat) => {
               const slug = slugifyCategory(cat);
               const isActive = activeCategory === slug;
               return (
@@ -77,91 +60,6 @@ const magazineCats = categories.filter((cat) =>
       </div>
     )
   }
-
-  {/* Magazine Section */}
-  {
-    magazineCats.length > 0 && (
-      <div class="animate-fade-up delay-100">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="h-px flex-1 bg-border/40" />
-          <h2 class="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground/60">
-            OIYO Magazine
-          </h2>
-          <div class="h-px flex-1 bg-border/40" />
-        </div>
-        <div class="relative">
-          <div class="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 scrollbar-hide w-full max-w-full snap-x snap-mandatory mask-gradient">
-            <a
-              href={locale === "en" ? "/" : `/${locale}/`}
-              class:list={[
-                "px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border snap-start",
-                !activeCategory
-                  ? "bg-foreground text-background border-foreground shadow-lg shadow-foreground/10"
-                  : "bg-muted/30 text-muted-foreground border-border/40 hover:border-foreground/40 hover:text-foreground",
-              ]}
-            >
-              {t.category.allInsights}
-            </a>
-            {magazineCats.map((cat) => {
-              const slug = slugifyCategory(cat);
-              const isActive = activeCategory === slug;
-              return (
-                <a
-                  href={`/${locale}/category/${slug}`}
-                  class:list={[
-                    "px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border snap-start",
-                    isActive
-                      ? "bg-foreground text-background border-foreground shadow-lg shadow-foreground/10"
-                      : "bg-muted/30 text-muted-foreground border-border/40 hover:border-foreground/40 hover:text-foreground",
-                  ]}
-                >
-                  {categoryNames[cat] ?? cat}{" "}
-                  <span class="ml-1 opacity-40">({categoryCounts[cat]})</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  {/* Interactive Section */}
-  {
-    interactiveCats.length > 0 && (
-      <div class="animate-fade-up delay-150">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="h-px flex-1 bg-border/40" />
-          <h2 class="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary/70">
-            OIYO Interactive
-          </h2>
-          <div class="h-px flex-1 bg-border/40" />
-        </div>
-        <div class="relative">
-          <div class="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 scrollbar-hide w-full max-w-full snap-x snap-mandatory mask-gradient">
-            {interactiveCats.map((cat) => {
-              const slug = slugifyCategory(cat);
-              const isActive = activeCategory === slug;
-              return (
-                <a
-                  href={`/${locale}/category/${slug}`}
-                  class:list={[
-                    "px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border snap-start",
-                    isActive
-                      ? "bg-secondary text-secondary-foreground border-secondary shadow-lg shadow-secondary/10"
-                      : "bg-secondary/10 text-secondary/80 border-secondary/20 hover:border-secondary/40",
-                  ]}
-                >
-                  {categoryNames[cat] ?? cat}{" "}
-                  <span class="ml-1 opacity-40">({categoryCounts[cat]})</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    )
-  }
 </div>
 
 <style>
@@ -169,6 +67,4 @@ const magazineCats = categories.filter((cat) =>
     mask-image: linear-gradient(to right, black 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
   }
-
-  /* Show full text when scrolled or hovered if needed, but for now simple mask helps mobile discoverability */
 </style>

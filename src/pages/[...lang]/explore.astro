@@ -17,93 +17,59 @@ const categoryNames = (t.category?.names ?? {}) as Record<string, string>;
 
 const posts = await getCollection("blog", ({ data }) => data.draft !== true && data.locale === locale);
 
-type Track = "dictionary" | "academy" | "magazine";
 type ExploreCopy = {
   title: string;
   intro: string;
   home: string;
   current: string;
   dictionary: string;
-  academy: string;
-  magazine: string;
-  browseMagazine: string;
-  chapterSuffix: string;
 };
 
 const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
   en: {
     title: "Explore the OIYO Wiki",
-    intro: "Browse term definitions. Courses and magazine live on the blog.",
+    intro: "Browse term definitions.",
     home: "Home",
     current: "Explore",
     dictionary: "Dictionary - term definitions",
-    academy: "Courses - learn by series",
-    magazine: "Magazine - reads",
-    browseMagazine: "Browse the magazine",
-    chapterSuffix: " ch",
   },
   ko: {
     title: "OIYO 위키 전체 탐색",
-    intro: "용어 정의를 둘러봅니다. 강좌와 매거진은 블로그에 있습니다.",
+    intro: "용어 정의를 둘러봅니다.",
     home: "홈",
     current: "전체 탐색",
     dictionary: "사전 - 용어 정의",
-    academy: "강좌 - 시리즈 학습",
-    magazine: "매거진 - 읽을거리",
-    browseMagazine: "매거진 전체 보기",
-    chapterSuffix: "강",
   },
   ja: {
     title: "OIYO Wiki を探索",
-    intro: "用語の定義を探せます。講座とマガジンはブログにあります。",
+    intro: "用語の定義を探せます。",
     home: "ホーム",
     current: "探索",
     dictionary: "辞典 - 用語の定義",
-    academy: "講座 - シリーズ学習",
-    magazine: "マガジン - 読み物",
-    browseMagazine: "マガジンを見る",
-    chapterSuffix: "章",
   },
   zh: {
     title: "浏览 OIYO Wiki",
-    intro: "浏览术语定义。课程和杂志在博客。",
+    intro: "浏览术语定义。",
     home: "首页",
     current: "浏览",
     dictionary: "词典 - 术语定义",
-    academy: "课程 - 系列学习",
-    magazine: "杂志 - 阅读",
-    browseMagazine: "浏览杂志",
-    chapterSuffix: "章",
   },
   fr: {
     title: "Explorer le Wiki OIYO",
-    intro: "Parcourez les définitions. Les cours et la revue sont sur le blog.",
+    intro: "Parcourez les définitions.",
     home: "Accueil",
     current: "Explorer",
     dictionary: "Dictionnaire - definitions",
-    academy: "Cours - series d'apprentissage",
-    magazine: "Revue - lectures",
-    browseMagazine: "Parcourir la revue",
-    chapterSuffix: " chap.",
   },
   es: {
     title: "Explorar OIYO Wiki",
-    intro: "Explora definiciones. Los cursos y la revista están en el blog.",
+    intro: "Explora definiciones.",
     home: "Inicio",
     current: "Explorar",
     dictionary: "Diccionario - definiciones",
-    academy: "Cursos - aprendizaje por series",
-    magazine: "Revista - lecturas",
-    browseMagazine: "Explorar la revista",
-    chapterSuffix: " cap.",
   },
 };
 const copy = copyByLocale[locale] ?? copyByLocale.en;
-const trackLabel: Record<Track, string> = {
-  dictionary: copy.dictionary,
-  academy: copy.academy,
-  magazine: copy.magazine,
-};
 
 // dictionary: track → category → count (link to category page)
 const dict = posts.filter((p) => getTrackFromData(p.data) === "dictionary");
@@ -114,7 +80,6 @@ for (const p of dict) {
 }
 const dictCats = [...dictByCat.entries()].sort((a, b) => b[1] - a[1]);
 const catLabel = (c: string) => categoryNames[c] ?? c;
-const blogHome = `https://blog.oiyo.net/${locale}/`;
 const title = copy.title;
 const intro = copy.intro;
 ---
@@ -130,7 +95,7 @@ const intro = copy.intro;
 
     <section class="mt-8">
       <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-green-900">
-        {trackLabel.dictionary} <span class="text-sm font-medium text-green-600">{dict.length}</span>
+        {copy.dictionary} <span class="text-sm font-medium text-green-600">{dict.length}</span>
       </h2>
       <div class="grid gap-2 sm:grid-cols-2">
         {dictCats.map(([cat, n]) => (
@@ -141,20 +106,6 @@ const intro = copy.intro;
           />
         ))}
       </div>
-    </section>
-
-    <section class="mt-10">
-      <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.academy}</h2>
-      <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={blogHome}>
-        {copy.academy}
-      </a>
-    </section>
-
-    <section class="mt-10">
-      <h2 class="mb-3 text-xl font-black text-green-900">{trackLabel.magazine}</h2>
-      <a class="inline-flex rounded-lg border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50" href={blogHome}>
-        {copy.browseMagazine}
-      </a>
     </section>
 
     {/* OIYO 지식 네트워크 — 정의(wiki)→설명(blog)→실행(oiyo) 크로스도메인 */}
@@ -170,7 +121,7 @@ const intro = copy.intro;
         <a href={`https://blog.oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-white p-4 transition-colors hover:border-green-400 hover:bg-green-50">
           <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "설명" : "Explanation"}</div>
           <div class="mt-1 font-bold text-green-950">blog.oiyo.net →</div>
-          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "강좌·매거진으로 더 깊이" : "courses & magazine"}</div>
+          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "글로 더 읽기" : "more reading"}</div>
         </a>
         <a href={`https://oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-white p-4 transition-colors hover:border-green-400 hover:bg-green-50">
           <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "실행" : "Tools"}</div>
