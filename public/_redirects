@@ -23,18 +23,6 @@
 /zh/insight-quest-test/  https://oiyo.net/zh/mbti/test  301
 
 # MBTI 실행형 테스트 → oiyo.net (테스트 canonical)
-/en/insight-quest-test  https://oiyo.net/en/mbti/test  301
-/en/insight-quest-test/  https://oiyo.net/en/mbti/test  301
-/ko/insight-quest-test  https://oiyo.net/ko/mbti/test  301
-/ko/insight-quest-test/  https://oiyo.net/ko/mbti/test  301
-/ja/insight-quest-test  https://oiyo.net/ja/mbti/test  301
-/ja/insight-quest-test/  https://oiyo.net/ja/mbti/test  301
-/fr/insight-quest-test  https://oiyo.net/fr/mbti/test  301
-/fr/insight-quest-test/  https://oiyo.net/fr/mbti/test  301
-/es/insight-quest-test  https://oiyo.net/es/mbti/test  301
-/es/insight-quest-test/  https://oiyo.net/es/mbti/test  301
-/zh/insight-quest-test  https://oiyo.net/zh/mbti/test  301
-/zh/insight-quest-test/  https://oiyo.net/zh/mbti/test  301
 /cn/insight-quest-test  https://oiyo.net/zh/mbti/test  301
 /cn/insight-quest-test/  https://oiyo.net/zh/mbti/test  301
 /en/mbti-career-test  https://oiyo.net/en/mbti/career  301
@@ -540,6 +528,20 @@
 /ko/crypto-basics-ch2/  https://blog.oiyo.net/ko/education-crypto-ch1/  301
 /ko/crypto-glossary-ch1  https://blog.oiyo.net/ko/education-crypto-ch1/  301
 /ko/crypto-glossary-ch1/  https://blog.oiyo.net/ko/education-crypto-ch1/  301
+
+# ── wiki → blog 강의 네임스페이스 (2026-09-10) ────────────────────────
+# wiki 는 강의 문서를 하나도 갖고 있지 않은데(07dad77) 리다이렉트가 없어,
+# 색인된 URL 8,500개가 404 를 낸다. 실측 2026-09-10: 인상이 남아 있는 wiki URL
+# 299개 중 154개가 404 였고 그중 113개는 blog 에 같은 경로로 살아 있었다.
+#
+# **규칙 순서가 전부다.** 이 파일은 규칙 479번째부터 조용히 적용되지 않는다
+# (2026-09-10 이분 실측: 478번 동작, 479번 404). 그래서 이 스플랫을 파일 끝이
+# 아니라 여기 둔다 — 끝에 있던 education 스플랫은 482번이라 죽어 있었다.
+# 위쪽의 education-business-ch19/ch20 처럼 **다른 슬러그로 가는 규칙이 먼저**
+# 와야 한다. 스플랫이 앞서면 그 넷을 삼킨다.
+/:lang/education-*  https://blog.oiyo.net/:lang/education-:splat  301
+/:lang/academy-*  https://blog.oiyo.net/:lang/academy-:splat  301
+
 /ko/finance-terms-glossary  https://blog.oiyo.net/ko/academy-corporate-finance-ch1/  301
 /ko/finance-terms-glossary/  https://blog.oiyo.net/ko/academy-corporate-finance-ch1/  301
 
@@ -590,7 +592,6 @@
 # pairs into splats, pushed dynamic over the cap, and the whole file stopped
 # matching. Keep the dynamic count low; expand to per-locale static lines
 # instead of adding splats.
-/:lang/education-*  https://blog.oiyo.net/:lang/education-:splat  301
 
 # 2026-08-19 last academy/magazine articles moved to blog (16 files).
 # Written as STATIC per-locale lines, not a splat: static gets 2,000 and
