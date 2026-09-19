@@ -53,7 +53,6 @@ import {
   NPVChart,
   SMLChart,
 } from "@/features/education-finance/FinanceCharts";
-import { GameTheoryPlayground } from "@/features/education-game-theory";
 import { CVPCalculator, NPVCalculator } from "@/features/education-calculators/FinancialCalculators";
 import { StoneSimulator } from "@/features/education-calculators/GameCalculators";
 import { CVPChart } from "@/features/education-calculators/FinancialCharts";
@@ -245,7 +244,6 @@ const lectureComponents = {
   FrontierChart,
   NPVChart,
   SMLChart,
-  GameTheoryPlayground,
 };
 
 const islandComponents = {
