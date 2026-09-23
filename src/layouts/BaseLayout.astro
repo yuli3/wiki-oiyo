@@ -60,12 +60,11 @@ const getLocalizedPath = (targetLocale: string) => {
 const navItems = [
   { href: `/${locale}/`, label: nav.home ?? "Home" },
   { href: `/${locale}/explore/`, label: nav.explore ?? "Explore" },
-  // IA consolidation: wiki has no tools of its own (tools live in the family's
-  // unified catalog). "Tools/도구들" points at the canonical blog.oiyo.net hub.
-  { href: `https://blog.oiyo.net/${locale}/tools/`, label: nav.tools ?? "Tools" },
+  // 헤더는 이 도메인 메뉴만 둔다. 예전 "도구들"(blog.oiyo.net 도구 허브) 링크는
+  // 패밀리 링크를 푸터에만 두는 결정(세운 2026-09-24)에 따라 뺐다.
 ];
 
-// Sister sites for family nav (footer + hamburger drawer).
+// Sister sites for family nav (footer only).
 // news is a single-locale (ko) site — it has no /{locale}/ routes, so
 // appending the locale path would land on their 404 page.
 const FAMILY = [
@@ -306,19 +305,7 @@ const knowledgeMission = ({
             Search
           </a>
         </div>
-        <div class="pt-2 border-t border-border/40 mt-4">
-          <p class="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">Oiyo Family</p>
-          {FAMILY.map((f) => (
-            <a
-              href={familyHref(f, "menu")}
-              target="_blank" rel="noopener noreferrer"
-              class="flex flex-col justify-center min-h-11 px-2 py-1.5 rounded-lg text-sm font-bold text-muted-foreground hover:text-primary hover:bg-muted/40 transition-colors"
-            >
-              <span class="uppercase tracking-widest">{f.name} ↗</span>
-              <span class="text-[11px] font-normal normal-case tracking-normal opacity-70">{f.tag[locale as keyof typeof f.tag] ?? f.tag.en}</span>
-            </a>
-          ))}
-        </div>
+        {/* 패밀리 링크는 공통 푸터에만 둔다(세운 결정 2026-09-24). */}
       </nav>
 
       <!-- Language switcher at bottom -->
