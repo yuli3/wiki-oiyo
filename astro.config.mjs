@@ -11,6 +11,7 @@ import remarkCjkFriendly from "remark-cjk-friendly";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import robotsTxt from "astro-robots-txt";
+import hreflangReconcile from "./src/integrations/hreflang-reconcile.mjs";
 
 // Bridge pages are noindex stubs that canonicalize to blog.oiyo.net/oiyo.net —
 // they must never appear in the sitemap.
@@ -18,10 +19,12 @@ const BRIDGE_SLUGS = new Set(
   JSON.parse(readFileSync(new URL("./src/config/bridge-slugs.json", import.meta.url), "utf8")),
 );
 
-// Crawl-budget policy: served to users, kept out of the index. Googlebot rations
-// crawling on low-authority domains, and these locales consumed ~35% of wiki's
-// submitted URLs while producing no clicks. Must stay in lockstep with
-// SEO.astro's robots meta — sitemap-listed but noindex is a contradictory signal.
+// Locale deindex list. The 2026-07-14 crawl-budget deindex of zh/fr/es was
+// reversed on 2026-09-24 (세운 decision): the list is empty and all six locales are indexable, self-canonical, in the
+// sitemap and in the reciprocal hreflang cluster. The mechanism stays as a lever: a
+// locale listed here leaves the index, the sitemap and the hreflang cluster together.
+// Must stay in lockstep with SEO.astro's robots meta — sitemap-listed but noindex
+// is a contradictory signal.
 const DEINDEXED_LOCALES = new Set(
   JSON.parse(readFileSync(new URL("./src/config/deindexed-locales.json", import.meta.url), "utf8")),
 );
@@ -120,6 +123,8 @@ export default defineConfig({
         },
       ],
     }),
+    // Runs after the build: hreflang only to built, indexable, reciprocal pages.
+    hreflangReconcile(),
   ],
   image: {
     service: {

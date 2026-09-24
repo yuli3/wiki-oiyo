@@ -4,8 +4,9 @@ import { getAuthor } from "../lib/authors";
 import deindexedLocales from "../config/deindexed-locales.json";
 import deindexedSlugs from "../config/deindexed-slugs.json";
 
-// Crawl-budget policy — see astro.config.mjs. Reachable for users, out of the
-// index, the sitemap, and the hreflang cluster.
+// Locale deindex list — see astro.config.mjs. Empty since 2026-09-24 (all six
+// locales indexable); a listed locale would leave the index, the sitemap, and
+// the hreflang cluster together.
 const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
 // 조합격자처럼 URL 만 늘리고 검색 수요가 없는 슬러그 묶음. 근거는 설정 파일에 적혀 있다.
 const DEINDEXED_SLUG_RES = deindexedSlugs.patterns.map((p) => new RegExp(p.pattern));
