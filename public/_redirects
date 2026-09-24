@@ -445,11 +445,11 @@
 /:lang/stock-glossary-ch3*  https://blog.oiyo.net/:lang/stock-glossary-ch3/  301
 
 # ── 이관 리다이렉트 ───────────────────────────────────────────────────
-# 이 파일은 **앞에서부터 약 622줄까지만** 적용된다(2026-09-03 실측: #622 는
-# 301, #626 부터 404). 위치가 기준이고 동적/정적 구분과는 무관하다.
+# 이 파일은 **앞에서부터 규칙 #464까지만** 적용된다(2026-09-24 실측: #464 는
+# 301, #469 부터 404). 위치가 기준이고 동적/정적 구분과는 무관하다.
 #
 # 그러므로 규칙을 늘릴 때는 총량을 622 아래로 유지해야 하고, 새 규칙은
-# 앞쪽에 두는 편이 안전하다. 지금 이 블록은 #523 부터라 경계 안에 있다.
+# 새 규칙은 컷오프(#464) 안에 두어야 한다. 이 블록도 규칙 번호를 세며 유지한다.
 #
 # 앞서 "동적 규칙 37개를 넘으면 멈춘다"고 적었던 것은 틀렸다 — 배포가
 # 전파되는 도중에 잰 값을 근거로 세운 가설이었다.
@@ -466,12 +466,6 @@
 /:lang/meaning-of-tarot/  https://oiyo.net/:lang/tarot/reading/  301
 /:lang/meaning-of-tarot-major-arcana  https://oiyo.net/:lang/tarot/reading/  301
 /:lang/meaning-of-tarot-major-arcana/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-tarot-eight-of-swords/  https://oiyo.net/:lang/tarot/reading/  301
-/:lang/meaning-of-saju-ilju-byeongja  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-saju-ilju-byeongja/  https://oiyo.net/:lang/saju/calculator/  301
-/:lang/meaning-of-astro-mars-in-taurus  https://oiyo.net/:lang/natal/chart/  301
-/:lang/meaning-of-astro-mars-in-taurus/  https://oiyo.net/:lang/natal/chart/  301
 /:lang/meaning-of-myth-*  https://blog.oiyo.net/:lang/meaning-of-myth-:splat  301
 /:lang/meaning-of-astro-*  https://oiyo.net/:lang/natal/chart/  301
 /:lang/meaning-of-saju-ilju*  https://oiyo.net/:lang/saju/calculator/  301
@@ -534,9 +528,10 @@
 # 색인된 URL 8,500개가 404 를 낸다. 실측 2026-09-10: 인상이 남아 있는 wiki URL
 # 299개 중 154개가 404 였고 그중 113개는 blog 에 같은 경로로 살아 있었다.
 #
-# **규칙 순서가 전부다.** 이 파일은 규칙 479번째부터 조용히 적용되지 않는다
-# (2026-09-10 이분 실측: 478번 동작, 479번 404). 그래서 이 스플랫을 파일 끝이
-# 아니라 여기 둔다 — 끝에 있던 education 스플랫은 482번이라 죽어 있었다.
+# **규칙 순서가 전부다.** 이 파일은 규칙 465번째부터 조용히 적용되지 않는다
+# (2026-09-24 라이브 실측: #464 동작, #469 부터 404; #465–468 혈액형 정적은 앞선 splat에 가려짐).
+# 삭제·재배치 후 마지막 적용 규칙은 #464, 헤드룸 0 (파일 끝 adler 2줄은 컷오프 밖).
+# 그래서 이 education/academy 스플랫을 파일 끝이 아니라 여기 둔다 — 끝에 두면 죽어 있었다.
 # 위쪽의 education-business-ch19/ch20 처럼 **다른 슬러그로 가는 규칙이 먼저**
 # 와야 한다. 스플랫이 앞서면 그 넷을 삼킨다.
 /:lang/education-*  https://blog.oiyo.net/:lang/education-:splat  301
@@ -546,7 +541,7 @@
 /ko/finance-terms-glossary/  https://blog.oiyo.net/ko/academy-corporate-finance-ch1/  301
 
 # ── wiki→oiyo 흡수 리다이렉트 (2026-08-18) ─────────────────────────────────
-# 이 파일에는 컷오프가 있다. 2026-08-18 라이브 이분 탐색: 규칙 #622 는 301, #624 부터 404다.
+# 이 파일에는 컷오프가 있다. 2026-09-24 라이브 실측: 규칙 #464 는 301, #469 부터 404다.
 # (blog 는 #303. 공통 상수가 아니다. 원인 규명은 2026-08-12 에 하지 않기로 결정했다.)
 # 그래서 MBTI 81 + 혈액형·손금 40, 총 121 슬러그에 258줄을 붙였다가 대부분이 죽었다.
 # GSC 90일에서 그 121개 중 **노출이 한 번이라도 잡힌 것은 10개**뿐이고, 의미 있는 순위는
@@ -558,32 +553,32 @@
 /ko/mbti-career-infj/  https://oiyo.net/ko/mbti/infj/  301
 /ko/mbti-study-intj  https://oiyo.net/ko/mbti/intj/  301
 /ko/mbti-study-intj/  https://oiyo.net/ko/mbti/intj/  301
-/en/meaning-of-blood-type-o  https://oiyo.net/en/blood-type/  301
-/en/meaning-of-blood-type-o/  https://oiyo.net/en/blood-type/  301
-/en/meaning-of-blood-type-b  https://oiyo.net/en/blood-type/  301
-/en/meaning-of-blood-type-b/  https://oiyo.net/en/blood-type/  301
+
+# palm + lecture-civil-law revived inside Pages cutoff (was past #464; 2026-09-24)
 /ja/meaning-of-palm-head-line  https://oiyo.net/ja/palmistry/explore/  301
 /ja/meaning-of-palm-head-line/  https://oiyo.net/ja/palmistry/explore/  301
 /ko/meaning-of-palm-life-line  https://oiyo.net/ko/palmistry/explore/  301
 /ko/meaning-of-palm-life-line/  https://oiyo.net/ko/palmistry/explore/  301
+/ko/lecture-civil-law-05  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
+/ko/lecture-civil-law-05/  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
 
 # 2026-08-18 wiki -> oiyo tool merge. These 11 slugs are the only ones in the
 # batch with 3+ impressions in 90 days; the articles are archived under
 # archive/oiyo-tool-merge-2026-08-18/. Targets are concrete pages, not section
 # roots -- oiyo has no index.astro under tarot/, enneagram/, biorhythm/, saju/
 # or natal/, so /tarot/ would 404.
-# Budget: this file dies past rule #622 with no error. Count before adding more.
+# Budget: this file dies past rule #464 with no error. Count before adding more.
 
 # 2026-08-18 myth dictionary moved to blog (101 slugs x 6 locales).
-# Two wildcard rules instead of 202, because this file dies past rule #622.
+# Two wildcard rules instead of 202, because this file dies past rule #464.
 # NOTE: the splat here is mid-segment (meaning-of-myth-*), which Cloudflare
 # does not document -- it documents * at the end of a path. If a probe shows
 # these 404, replace them with per-slug rules for the top 10 by impressions;
-# 21 rules of headroom remain for exactly that fallback.
+# 0 rules of headroom remain after the last in-limit rule; do not append without freeing slots.
 
 # 2026-08-18 ten lecture courses moved to blog (248 files, en/ja/ko).
 # Two rules per subject, not per chapter -- per-chapter would be ~500 lines and
-# this file stops working past rule #622. Same unverified mid-segment splat as
+# this file stops working past rule #464. Same unverified mid-segment splat as
 # the myth block above; probe both together after deploy.
 
 # 2026-08-19 wiki no longer holds any education-* or grid article.
@@ -598,5 +593,3 @@
 # dynamic only 100, and 4ae617b proved what happens when dynamic overflows.
 /ko/adler-environment  https://blog.oiyo.net/ko/adler-environment/  301
 /ko/adler-environment/  https://blog.oiyo.net/ko/adler-environment/  301
-/ko/lecture-civil-law-05  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
-/ko/lecture-civil-law-05/  https://blog.oiyo.net/ko/lecture-civil-law-05/  301
