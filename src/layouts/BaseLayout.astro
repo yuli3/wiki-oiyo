@@ -69,7 +69,7 @@ const navItems = [
 // appending the locale path would land on their 404 page.
 const FAMILY = [
   { host: "oiyo.net", name: "OIYO tests", localePath: true, tag: { ko: "심리테스트", en: "Psychology tests", ja: "心理テスト", zh: "心理测试", fr: "Tests psychologiques", es: "Tests psicológicos" } },
-  { host: "blog.oiyo.net", name: "OIYO blog", localePath: true, tag: { ko: "콘텐츠", en: "Articles", ja: "記事", zh: "文章", fr: "Articles", es: "Artículos" } },
+  { host: "blog.oiyo.net", name: "OIYO blog", localePath: true, tag: { ko: "강의", en: "Courses", ja: "講座", zh: "课程", fr: "Cours", es: "Cursos" } },
   { host: "wiki.oiyo.net", name: "OIYO wiki", localePath: true, tag: { ko: "지식창고", en: "Knowledge repository", ja: "知識倉庫", zh: "知识库", fr: "Réserve de connaissances", es: "Archivo de conocimiento" } },
   { host: "game.oiyo.net", name: "OIYO game", localePath: true, tag: { ko: "게임", en: "Games", ja: "ゲーム", zh: "游戏", fr: "Jeux", es: "Juegos" } },
   { host: "news.oiyo.net", name: "OIYO news", localePath: false, tag: { ko: "뉴스·AI", en: "News & AI", ja: "ニュース・AI", zh: "新闻·AI", fr: "Actualités et IA", es: "Noticias e IA" } },
@@ -104,7 +104,7 @@ const footerCopy: Record<string, { site: string; family: string; utility: string
 };
 const footerLabels = footerCopy[locale] ?? footerCopy.en;
 const knowledgeMission = ({
-  ko: "여러 전문 지식 도메인의 정보를 사람과 AI가 인용할 수 있게 정리합니다.",
+  ko: "여러 전문 지식 도메인의 정보를 사람과 AI가 인용할 수 있게 정리해요.",
   en: "A citable repository of specialist knowledge for people and AI systems.",
   ja: "複数の専門分野の知識を、人とAIが引用できる形で整理します。",
   zh: "整理多个专业知识领域的信息，供人类与 AI 系统引用。",
