@@ -204,7 +204,7 @@
 /:lang/rent-comparison-calculator* https://blog.oiyo.net/:lang/rent-comparison-calculator/ 301
 /:lang/rental-roi-calculator* https://blog.oiyo.net/:lang/rental-roi-calculator/ 301
 /:lang/rental-yield-calculator* https://blog.oiyo.net/:lang/rental-yield-calculator/ 301
-/:lang/resilience-boost-test* https://oiyo.net/:lang/resilience-boost-test/ 301
+/:lang/resilience-boost-test* https://oiyo.net/:lang/resilience-test/ 301
 /:lang/resilience-test* https://oiyo.net/:lang/resilience-test/ 301
 /:lang/riasec-career-test* https://oiyo.net/:lang/riasec-career-test/ 301
 /:lang/risk-tolerance-test* https://oiyo.net/:lang/risk-tolerance-test/ 301
