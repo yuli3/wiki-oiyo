@@ -19,6 +19,11 @@ test('live contract follows redirect to exact 200 destination', async () => {
 test('404, soft replacement, loops and unrelated destinations fail', async () => {
   await assert.rejects(verifyLive(source, target, async () => reply(404)), /Migration failed/);
   assert.equal((await verifyLive(source, target, async () => reply(403))).blocked, true);
+  const seen = [];
+  const viaMirror = await verifyLive(source, target, async url => { seen.push(new URL(url).hostname); return url.includes('wiki-oiyo.pages.dev') ? reply(301, target) : reply(200); }, { mirror: true });
+  assert.equal(viaMirror.length, 2);
+  assert.deepEqual(seen, ['wiki-oiyo.pages.dev', 'oiyo-astro.pages.dev']);
+  assert.equal(viaMirror[1].url, target);
   assert.equal((await verifyLive(source, target, async url => url === source ? reply(301, target) : reply(403))).blocked, true);
   await assert.rejects(verifyLive(source, target, async () => reply(200)), /Migration failed/);
   await assert.rejects(verifyLive(source, target, async () => reply(301, source)), /loop/);
