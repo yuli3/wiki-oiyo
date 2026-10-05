@@ -86,7 +86,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
               value={dailyCost}
               onChange={(e) => setDailyCost(e.target.value)}
               min="0"
-              className="w-full p-3 bg-white border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
+              className="w-full p-3 bg-card border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
               aria-label={locale === 'ko' ? '일일 소비 금액' : 'Daily Expense'}
             />
             <p className="text-xs text-amber-500">
@@ -101,7 +101,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
             <select
               value={frequency}
               onChange={(e) => setFrequency(e.target.value)}
-              className="w-full p-3 bg-white border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
+              className="w-full p-3 bg-card border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
               aria-label={locale === 'ko' ? '소비 빈도' : 'Frequency'}
             >
               <option value="daily">{locale === 'ko' ? '매일 (월 30회)' : 'Every day (30x/month)'}</option>
@@ -121,7 +121,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
               step="0.1"
               min="0"
               max="30"
-              className="w-full p-3 bg-white border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
+              className="w-full p-3 bg-card border border-amber-200 rounded-xl focus:ring-2 focus:ring-amber-400 outline-none"
               aria-label={locale === 'ko' ? '연 수익률' : 'Annual Return Rate'}
             />
           </div>
@@ -142,7 +142,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
             </button>
             <button
               onClick={reset}
-              className="px-5 py-3 bg-white border border-amber-300 hover:bg-amber-50 text-amber-700 font-bold rounded-xl transition-colors"
+              className="px-5 py-3 bg-card border border-amber-300 hover:bg-amber-50 text-amber-700 font-bold rounded-xl transition-colors"
               aria-label={locale === 'ko' ? '초기화' : 'Reset'}
             >
               {locale === 'ko' ? '초기화' : 'Reset'}
@@ -154,7 +154,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
         <div className="space-y-4">
           {result ? (
             <>
-              <div className="p-4 bg-white rounded-2xl border border-amber-100">
+              <div className="p-4 bg-card rounded-2xl border border-amber-100">
                 <p className="text-xs text-amber-600 font-bold mb-1">
                   {locale === 'ko' ? '절약 시 월 저축 가능액' : 'Monthly Savings if Stopped'}
                 </p>
@@ -163,7 +163,7 @@ const LatteFactorCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'k
 
               <div className="grid grid-cols-3 gap-3">
                 {result.results.map((r) => (
-                  <div key={r.years} className="p-4 bg-white rounded-2xl border border-amber-100 text-center">
+                  <div key={r.years} className="p-4 bg-card rounded-2xl border border-amber-100 text-center">
                     <p className="text-xs text-amber-600 font-bold mb-1">{r.years}{locale === 'ko' ? '년 후' : 'yrs'}</p>
                     <p className="text-xl font-bold text-amber-800">{fmt(r.total)}원</p>
                     <p className="text-xs text-green-500 mt-1">+{fmt(r.interest)}원 이자</p>

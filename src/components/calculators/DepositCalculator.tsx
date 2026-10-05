@@ -107,7 +107,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
               className={`flex-1 py-2 rounded-xl text-sm font-bold border transition-colors ${
                 calcType === t
                   ? 'bg-green-600 text-white border-green-600'
-                  : 'bg-white text-green-700 border-green-200 hover:bg-green-50'
+                  : 'bg-card text-green-700 border-green-200 hover:bg-green-50'
               }`}
             >
               {t === 'deposit'
@@ -128,7 +128,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             min="0"
-            className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+            className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
           />
         </div>
 
@@ -143,7 +143,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
               onChange={(e) => setRate(e.target.value)}
               min="0"
               step="0.1"
-              className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+              className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
             />
           </div>
           <div className="space-y-1">
@@ -155,7 +155,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
               value={period}
               onChange={(e) => setPeriod(e.target.value)}
               min="1"
-              className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+              className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
             />
           </div>
         </div>
@@ -173,7 +173,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
                 className={`flex-1 py-2 px-3 rounded-xl text-xs font-bold border transition-colors ${
                   taxType === t
                     ? 'bg-green-600 text-white border-green-600'
-                    : 'bg-white text-green-700 border-green-200 hover:bg-green-50'
+                    : 'bg-card text-green-700 border-green-200 hover:bg-green-50'
                 }`}
               >
                 {taxLabels[t]}
@@ -195,7 +195,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
                 className={`py-1.5 px-4 rounded-xl text-xs font-bold border transition-colors ${
                   isCompound === v
                     ? 'bg-green-600 text-white border-green-600'
-                    : 'bg-white text-green-700 border-green-200 hover:bg-green-50'
+                    : 'bg-card text-green-700 border-green-200 hover:bg-green-50'
                 }`}
               >
                 {v ? (ko ? '복리' : 'Compound') : (ko ? '단리' : 'Simple')}
@@ -219,7 +219,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
           </button>
           <button
             onClick={reset}
-            className="px-5 py-3 bg-white border border-green-300 hover:bg-green-50 text-green-700 font-bold rounded-xl transition-colors"
+            className="px-5 py-3 bg-card border border-green-300 hover:bg-green-50 text-green-700 font-bold rounded-xl transition-colors"
           >
             {ko ? '초기화' : 'Reset'}
           </button>
@@ -241,7 +241,7 @@ const DepositCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }
                 { label: ko ? '세금' : 'Tax', value: '-' + fmt(result.tax), color: 'text-red-600' },
                 { label: ko ? '세후 이자' : 'After-Tax Interest', value: '+' + fmt(result.afterTaxInterest), color: 'text-green-700' },
               ].map((item) => (
-                <div key={item.label} className="bg-white rounded-xl p-3 border border-green-100">
+                <div key={item.label} className="bg-card rounded-xl p-3 border border-green-100">
                   <p className="text-xs text-green-500 font-semibold mb-1">{item.label}</p>
                   <p className={`text-sm font-bold ${item.color}`}>{item.value}</p>
                 </div>

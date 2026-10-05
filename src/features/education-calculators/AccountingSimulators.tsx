@@ -34,7 +34,7 @@ export const VarianceAnalysis: React.FC = () => {
     const tVar = formatVar(totalVariance);
 
     return (
-        <Card className="p-6 bg-white border-slate-200 shadow-xl mt-8 overflow-hidden">
+        <Card className="p-6 bg-card border-border shadow-xl mt-8 overflow-hidden">
             <div className="flex items-center gap-2 mb-6 text-foreground border-b pb-4">
                 <ArrowLeftRight className="text-blue-500" />
                 <h3 className="text-xl font-bold">원가 차이 분석(Variance Analysis) 시뮬레이터</h3>
@@ -46,11 +46,11 @@ export const VarianceAnalysis: React.FC = () => {
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="text-[10px] text-muted-foreground block mb-1">실제 투입량 (AQ)</label>
-                            <input type="number" value={aq} onChange={e => setAq(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
+                            <input type="number" value={aq} onChange={e => setAq(Number(e.target.value))} className="w-full p-2 border border-border rounded text-sm"/>
                         </div>
                         <div>
                             <label className="text-[10px] text-muted-foreground block mb-1">실제 가격 (AP)</label>
-                            <input type="number" value={ap} onChange={e => setAp(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
+                            <input type="number" value={ap} onChange={e => setAp(Number(e.target.value))} className="w-full p-2 border border-border rounded text-sm"/>
                         </div>
                     </div>
                 </div>
@@ -60,11 +60,11 @@ export const VarianceAnalysis: React.FC = () => {
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="text-[10px] text-muted-foreground block mb-1">표준 허용량 (SQ)</label>
-                            <input type="number" value={sq} onChange={e => setSq(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
+                            <input type="number" value={sq} onChange={e => setSq(Number(e.target.value))} className="w-full p-2 border border-border rounded text-sm"/>
                         </div>
                         <div>
                             <label className="text-[10px] text-muted-foreground block mb-1">표준 가격 (SP)</label>
-                            <input type="number" value={sp} onChange={e => setSp(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
+                            <input type="number" value={sp} onChange={e => setSp(Number(e.target.value))} className="w-full p-2 border border-border rounded text-sm"/>
                         </div>
                     </div>
                 </div>
@@ -91,12 +91,12 @@ export const VarianceAnalysis: React.FC = () => {
 
                 {/* Variance Labels */}
                 <div className="absolute top-24 left-[16.6%] right-[50%] h-px bg-slate-200 flex justify-center">
-                    <div className={`mt-2 text-xs font-bold px-2 py-0.5 rounded-full bg-white border ${pVar.color.replace('text-', 'border-').replace('-400', '-200') + ' ' + pVar.color}`}>
+                    <div className={`mt-2 text-xs font-bold px-2 py-0.5 rounded-full bg-card border ${pVar.color.replace('text-', 'border-').replace('-400', '-200') + ' ' + pVar.color}`}>
                         가격 차이: {pVar.text}
                     </div>
                 </div>
                 <div className="absolute top-24 left-[50%] right-[16.6%] h-px bg-slate-200 flex justify-center">
-                    <div className={`mt-2 text-xs font-bold px-2 py-0.5 rounded-full bg-white border ${eVar.color.replace('text-', 'border-').replace('-400', '-200') + ' ' + eVar.color}`}>
+                    <div className={`mt-2 text-xs font-bold px-2 py-0.5 rounded-full bg-card border ${eVar.color.replace('text-', 'border-').replace('-400', '-200') + ' ' + eVar.color}`}>
                         능률 차이: {eVar.text}
                     </div>
                 </div>

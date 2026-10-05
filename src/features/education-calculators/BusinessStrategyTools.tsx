@@ -34,7 +34,7 @@ export const SWOTBuilder: React.FC = () => {
     };
 
     return (
-        <Card className="p-8 bg-white border-slate-200 shadow-2xl mt-8">
+        <Card className="p-8 bg-card border-border shadow-2xl mt-8">
             <div className="flex items-center justify-between mb-8 border-b pb-4">
                 <h3 className="text-xl font-bold flex items-center gap-2 text-foreground">
                     <Target className="text-blue-500" />
@@ -59,7 +59,7 @@ export const SWOTBuilder: React.FC = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="항목을 입력하세요..."
-                    className="flex-1 p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                    className="flex-1 p-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                     onKeyDown={(e) => e.key === 'Enter' && addItem()}
                 />
                 <Button onClick={addItem} className="bg-blue-600 hover:bg-blue-700 rounded-xl px-6">추가</Button>

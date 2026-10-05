@@ -90,7 +90,7 @@ const LoanCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) =
               value={loanAmount}
               onChange={(e) => setLoanAmount(e.target.value)}
               min="0"
-              className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+              className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
               aria-label={locale === 'ko' ? '대출금액' : 'Loan Amount'}
             />
           </div>
@@ -106,7 +106,7 @@ const LoanCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) =
               step="0.1"
               min="0"
               max="30"
-              className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+              className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
               aria-label={locale === 'ko' ? '연이자율' : 'Annual Interest Rate'}
             />
           </div>
@@ -118,7 +118,7 @@ const LoanCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) =
             <select
               value={termMonths}
               onChange={(e) => setTermMonths(e.target.value)}
-              className="w-full p-3 bg-white border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+              className="w-full p-3 bg-card border border-green-200 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
               aria-label={locale === 'ko' ? '대출기간' : 'Loan Term'}
             >
               <option value="120">{locale === 'ko' ? '10년 (120개월)' : '10 years (120m)'}</option>
@@ -146,7 +146,7 @@ const LoanCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) =
             </button>
             <button
               onClick={reset}
-              className="px-5 py-3 bg-white border border-green-300 hover:bg-green-50 text-green-700 font-bold rounded-xl transition-colors"
+              className="px-5 py-3 bg-card border border-green-300 hover:bg-green-50 text-green-700 font-bold rounded-xl transition-colors"
               aria-label={locale === 'ko' ? '초기화' : 'Reset'}
             >
               {locale === 'ko' ? '초기화' : 'Reset'}
@@ -165,11 +165,11 @@ const LoanCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) =
                 <p className="text-4xl font-bold">{fmt(result.monthlyPayment)}원</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white rounded-2xl border border-green-100 text-center">
+                <div className="p-4 bg-card rounded-2xl border border-green-100 text-center">
                   <p className="text-xs text-muted-foreground font-bold mb-1">{locale === 'ko' ? '총 상환액' : 'Total Payment'}</p>
                   <p className="text-lg font-bold text-green-700">{fmt(result.totalPayment)}원</p>
                 </div>
-                <div className="p-4 bg-white rounded-2xl border border-green-100 text-center">
+                <div className="p-4 bg-card rounded-2xl border border-green-100 text-center">
                   <p className="text-xs text-muted-foreground font-bold mb-1">{locale === 'ko' ? '총 이자' : 'Total Interest'}</p>
                   <p className="text-lg font-bold text-amber-600">{fmt(result.totalInterest)}원</p>
                 </div>

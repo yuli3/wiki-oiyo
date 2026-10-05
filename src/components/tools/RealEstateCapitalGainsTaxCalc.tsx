@@ -271,7 +271,7 @@ const RealEstateCapitalGainsTaxCalc: React.FC<{ locale?: Locale }> = ({ locale =
             onClick={() => setIsAdjusted(v => !v)}
             className={`w-12 h-6 rounded-full transition-colors relative ${isAdjusted ? 'bg-primary' : 'bg-muted'}`}
           >
-            <span className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-transform ${isAdjusted ? 'translate-x-7' : 'translate-x-1'}`} />
+            <span className={`absolute top-1 w-4 h-4 rounded-full bg-card shadow transition-transform ${isAdjusted ? 'translate-x-7' : 'translate-x-1'}`} />
           </button>
         </div>
       </div>

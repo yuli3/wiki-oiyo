@@ -300,7 +300,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl border-2 font-bold text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400 ${
                   isActive
                     ? `${ca.bg} ${ca.border} ${ca.text} shadow-sm scale-105`
-                    : 'bg-white border-slate-200 text-muted-foreground hover:border-slate-300 hover:bg-card'
+                    : 'bg-white border-border text-muted-foreground hover:border-slate-300 hover:bg-card'
                 }`}
               >
                 <span aria-hidden="true" className="text-xl">{country.flag}</span>
@@ -336,7 +336,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
               className={`flex items-center gap-1.5 px-4 py-2 rounded-xl border text-xs font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400 ${
                 isActive
                   ? `${accent.chip} border-current shadow-sm`
-                  : 'bg-white border-slate-200 text-muted-foreground hover:border-slate-300'
+                  : 'bg-card border-border text-muted-foreground hover:border-slate-300'
               }`}
             >
               <span aria-hidden="true">{icon}</span>
@@ -360,7 +360,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
           return (
             <article
               key={program.id}
-              className={`flex flex-col p-5 bg-white rounded-2xl border ${accent.border} shadow-sm hover:shadow-md transition-shadow`}
+              className={`flex flex-col p-5 bg-card rounded-2xl border ${accent.border} shadow-sm hover:shadow-md transition-shadow`}
             >
               {/* Card header */}
               <div className="flex items-start gap-3 mb-3">
@@ -413,7 +413,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                   <a
                     href={program.phone}
                     aria-label={`${name} — ${t.callPhone} ${program.phoneDisplay}`}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-slate-200 text-slate-600 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-border text-slate-600 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                 ) : program.phoneDisplay !== null ? (
                   <span
                     aria-label={`${name} — ${program.phoneDisplay}`}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-slate-200 text-slate-400"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-border text-slate-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -463,7 +463,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
       <div
         role="note"
         aria-label="Disclaimer"
-        className="mt-8 p-4 bg-card border border-slate-200 rounded-2xl"
+        className="mt-8 p-4 bg-card border border-border rounded-2xl"
       >
         <p className="text-xs text-muted-foreground leading-relaxed text-center">
           <svg

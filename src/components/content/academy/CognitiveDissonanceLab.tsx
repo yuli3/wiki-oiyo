@@ -150,9 +150,9 @@ export default function CognitiveDissonanceLab() {
   return (
     <section
       aria-labelledby="cognitive-dissonance-lab-title"
-      className="not-prose my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white text-foreground"
+      className="not-prose my-8 overflow-hidden rounded-2xl border border-border bg-card text-foreground"
     >
-      <div className="border-b border-slate-200 bg-lime-50 px-5 py-5 sm:px-7">
+      <div className="border-b border-border bg-lime-50 px-5 py-5 sm:px-7">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <p className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-lime-800">
@@ -177,7 +177,7 @@ export default function CognitiveDissonanceLab() {
       </div>
 
       <div className="grid gap-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
-        <div className="space-y-6 border-b border-slate-200 p-5 sm:p-7 lg:border-b-0 lg:border-r">
+        <div className="space-y-6 border-b border-border p-5 sm:p-7 lg:border-b-0 lg:border-r">
           <fieldset>
             <legend className="mb-3 text-sm font-bold text-foreground">1. 상황 선택</legend>
             <div className="grid grid-cols-3 gap-2">
@@ -192,7 +192,7 @@ export default function CognitiveDissonanceLab() {
                     className={`min-h-11 rounded-lg border px-2 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700 ${
                       selected
                         ? "border-lime-700 bg-lime-50 text-lime-900"
-                        : "border-slate-200 bg-white text-slate-600 hover:bg-card"
+                        : "border-border bg-white text-slate-600 hover:bg-card"
                     }`}
                   >
                     {item.label}
@@ -203,7 +203,7 @@ export default function CognitiveDissonanceLab() {
           </fieldset>
 
           <div className="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-stretch">
-            <div className="rounded-xl border border-slate-200 bg-card p-4">
+            <div className="rounded-xl border border-border bg-card p-4">
               <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">신념</p>
               <p className="mt-2 text-sm font-semibold leading-6 text-foreground">{scenario.belief}</p>
             </div>
@@ -277,7 +277,7 @@ export default function CognitiveDissonanceLab() {
                     className={`min-h-12 rounded-lg border px-3 py-2 text-left text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700 ${
                       selected
                         ? "border-lime-700 bg-lime-50 text-lime-900"
-                        : "border-slate-200 bg-white text-slate-700 hover:bg-card"
+                        : "border-border bg-white text-slate-700 hover:bg-card"
                     }`}
                   >
                     {item.label}
@@ -287,7 +287,7 @@ export default function CognitiveDissonanceLab() {
             </div>
           </fieldset>
 
-          <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <div className="rounded-xl border border-border bg-card p-4">
             <p className="text-sm font-bold text-foreground">{strategy.label}를 택하면</p>
             <p className="mt-2 text-sm leading-6 text-slate-600">{strategy.description}</p>
             <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
