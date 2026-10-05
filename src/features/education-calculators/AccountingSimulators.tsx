@@ -35,7 +35,7 @@ export const VarianceAnalysis: React.FC = () => {
 
     return (
         <Card className="p-6 bg-white border-slate-200 shadow-xl mt-8 overflow-hidden">
-            <div className="flex items-center gap-2 mb-6 text-slate-900 border-b pb-4">
+            <div className="flex items-center gap-2 mb-6 text-foreground border-b pb-4">
                 <ArrowLeftRight className="text-blue-500" />
                 <h3 className="text-xl font-bold">원가 차이 분석(Variance Analysis) 시뮬레이터</h3>
             </div>
@@ -45,11 +45,11 @@ export const VarianceAnalysis: React.FC = () => {
                     <span className="text-xs font-bold text-blue-600 uppercase">실제 데이터 (Actual)</span>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label className="text-[10px] text-slate-500 block mb-1">실제 투입량 (AQ)</label>
+                            <label className="text-[10px] text-muted-foreground block mb-1">실제 투입량 (AQ)</label>
                             <input type="number" value={aq} onChange={e => setAq(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
                         </div>
                         <div>
-                            <label className="text-[10px] text-slate-500 block mb-1">실제 가격 (AP)</label>
+                            <label className="text-[10px] text-muted-foreground block mb-1">실제 가격 (AP)</label>
                             <input type="number" value={ap} onChange={e => setAp(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
                         </div>
                     </div>
@@ -59,11 +59,11 @@ export const VarianceAnalysis: React.FC = () => {
                     <span className="text-xs font-bold text-emerald-600 uppercase">표준 데이터 (Standard)</span>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label className="text-[10px] text-slate-500 block mb-1">표준 허용량 (SQ)</label>
+                            <label className="text-[10px] text-muted-foreground block mb-1">표준 허용량 (SQ)</label>
                             <input type="number" value={sq} onChange={e => setSq(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
                         </div>
                         <div>
-                            <label className="text-[10px] text-slate-500 block mb-1">표준 가격 (SP)</label>
+                            <label className="text-[10px] text-muted-foreground block mb-1">표준 가격 (SP)</label>
                             <input type="number" value={sp} onChange={e => setSp(Number(e.target.value))} className="w-full p-2 border border-slate-200 rounded text-sm"/>
                         </div>
                     </div>
@@ -73,18 +73,18 @@ export const VarianceAnalysis: React.FC = () => {
             <div className="relative pt-10 pb-6 hidden md:block">
                 <div className="flex justify-between text-center px-4">
                     <div className="w-1/3">
-                        <div className="text-xs font-bold text-slate-500 mb-1">실제 원가</div>
-                        <div className="text-sm font-bold text-slate-900 mb-2">AQ × AP</div>
+                        <div className="text-xs font-bold text-muted-foreground mb-1">실제 원가</div>
+                        <div className="text-sm font-bold text-foreground mb-2">AQ × AP</div>
                         <div className="p-3 bg-slate-100 rounded-lg font-mono text-sm leading-tight">₩{actualCost.toLocaleString()}</div>
                     </div>
                     <div className="w-1/3">
-                        <div className="text-xs font-bold text-slate-500 mb-1">분리점 (Shadow)</div>
-                        <div className="text-sm font-bold text-slate-900 mb-2">AQ × SP</div>
+                        <div className="text-xs font-bold text-muted-foreground mb-1">분리점 (Shadow)</div>
+                        <div className="text-sm font-bold text-foreground mb-2">AQ × SP</div>
                         <div className="p-3 bg-slate-100 rounded-lg font-mono text-sm leading-tight">₩{splitPoint.toLocaleString()}</div>
                     </div>
                     <div className="w-1/3">
-                        <div className="text-xs font-bold text-slate-500 mb-1">표준 원가</div>
-                        <div className="text-sm font-bold text-slate-900 mb-2">SQ × SP</div>
+                        <div className="text-xs font-bold text-muted-foreground mb-1">표준 원가</div>
+                        <div className="text-sm font-bold text-foreground mb-2">SQ × SP</div>
                         <div className="p-3 bg-slate-100 rounded-lg font-mono text-sm leading-tight">₩{standardCost.toLocaleString()}</div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ export const VarianceAnalysis: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
                         <span className="text-3xl font-black font-mono">총 원가 차이: {tVar.text}</span>
-                        <p className="text-xs text-slate-500">
+                        <p className="text-xs text-muted-foreground">
                             표준 원가(₩{standardCost.toLocaleString()}) 대비 실제 지출액의 차이입니다.
                         </p>
                     </div>

@@ -106,7 +106,7 @@ function Slider({
         <label htmlFor={id} className="text-sm font-semibold text-slate-800">
           {label}
         </label>
-        <output htmlFor={id} className="min-w-12 text-right font-mono text-sm font-bold text-slate-950">
+        <output htmlFor={id} className="min-w-12 text-right font-mono text-sm font-bold text-foreground">
           {value}
         </output>
       </div>
@@ -120,7 +120,7 @@ function Slider({
         onChange={(event) => onChange(Number(event.currentTarget.value))}
         className="h-2 w-full cursor-pointer accent-lime-700"
       />
-      <p className="mt-1 text-xs leading-5 text-slate-500">{hint}</p>
+      <p className="mt-1 text-xs leading-5 text-muted-foreground">{hint}</p>
     </div>
   );
 }
@@ -150,7 +150,7 @@ export default function CognitiveDissonanceLab() {
   return (
     <section
       aria-labelledby="cognitive-dissonance-lab-title"
-      className="not-prose my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-950"
+      className="not-prose my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white text-foreground"
     >
       <div className="border-b border-slate-200 bg-lime-50 px-5 py-5 sm:px-7">
         <div className="flex flex-wrap items-start justify-between gap-4">
@@ -168,7 +168,7 @@ export default function CognitiveDissonanceLab() {
           <button
             type="button"
             onClick={reset}
-            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700"
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-700 hover:bg-card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700"
           >
             <RefreshCcw aria-hidden="true" size={16} />
             초기화
@@ -179,7 +179,7 @@ export default function CognitiveDissonanceLab() {
       <div className="grid gap-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
         <div className="space-y-6 border-b border-slate-200 p-5 sm:p-7 lg:border-b-0 lg:border-r">
           <fieldset>
-            <legend className="mb-3 text-sm font-bold text-slate-900">1. 상황 선택</legend>
+            <legend className="mb-3 text-sm font-bold text-foreground">1. 상황 선택</legend>
             <div className="grid grid-cols-3 gap-2">
               {scenarios.map((item) => {
                 const selected = item.id === scenarioId;
@@ -192,7 +192,7 @@ export default function CognitiveDissonanceLab() {
                     className={`min-h-11 rounded-lg border px-2 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700 ${
                       selected
                         ? "border-lime-700 bg-lime-50 text-lime-900"
-                        : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                        : "border-slate-200 bg-white text-slate-600 hover:bg-card"
                     }`}
                   >
                     {item.label}
@@ -203,14 +203,14 @@ export default function CognitiveDissonanceLab() {
           </fieldset>
 
           <div className="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-stretch">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <p className="text-xs font-bold uppercase tracking-wider text-slate-500">신념</p>
-              <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{scenario.belief}</p>
+            <div className="rounded-xl border border-slate-200 bg-card p-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">신념</p>
+              <p className="mt-2 text-sm font-semibold leading-6 text-foreground">{scenario.belief}</p>
             </div>
             <ArrowRight aria-hidden="true" className="hidden self-center text-slate-400 sm:block" size={20} />
             <div className="rounded-xl border border-rose-200 bg-rose-50 p-4">
               <p className="text-xs font-bold uppercase tracking-wider text-rose-700">행동</p>
-              <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{scenario.behavior}</p>
+              <p className="mt-2 text-sm font-semibold leading-6 text-foreground">{scenario.behavior}</p>
             </div>
           </div>
 
@@ -239,14 +239,14 @@ export default function CognitiveDissonanceLab() {
           </div>
         </div>
 
-        <div className="space-y-6 bg-slate-50/70 p-5 sm:p-7">
+        <div className="space-y-6 bg-card/70 p-5 sm:p-7">
           <div aria-live="polite">
             <div className="flex items-end justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-slate-700">교육용 긴장 지표</p>
                 <p className={`mt-1 text-lg font-bold ${tensionBand.text}`}>{tensionBand.label}</p>
               </div>
-              <p className="font-mono text-4xl font-black tabular-nums text-slate-950">{tension}</p>
+              <p className="font-mono text-4xl font-black tabular-nums text-foreground">{tension}</p>
             </div>
             <div
               role="meter"
@@ -258,13 +258,13 @@ export default function CognitiveDissonanceLab() {
             >
               <div className={`h-full rounded-full ${tensionBand.color}`} style={{ width: `${tension}%` }} />
             </div>
-            <p className="mt-3 text-xs leading-5 text-slate-500">
+            <p className="mt-3 text-xs leading-5 text-muted-foreground">
               이 수치는 이론의 방향을 설명하기 위한 단순화 모델이며, 실제 심리 상태를 측정하거나 진단하지 않습니다.
             </p>
           </div>
 
           <fieldset>
-            <legend className="mb-3 text-sm font-bold text-slate-900">2. 해소 전략 비교</legend>
+            <legend className="mb-3 text-sm font-bold text-foreground">2. 해소 전략 비교</legend>
             <div className="grid grid-cols-2 gap-2">
               {strategies.map((item) => {
                 const selected = item.id === strategyId;
@@ -277,7 +277,7 @@ export default function CognitiveDissonanceLab() {
                     className={`min-h-12 rounded-lg border px-3 py-2 text-left text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700 ${
                       selected
                         ? "border-lime-700 bg-lime-50 text-lime-900"
-                        : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                        : "border-slate-200 bg-white text-slate-700 hover:bg-card"
                     }`}
                   >
                     {item.label}
@@ -288,11 +288,11 @@ export default function CognitiveDissonanceLab() {
           </fieldset>
 
           <div className="rounded-xl border border-slate-200 bg-white p-4">
-            <p className="text-sm font-bold text-slate-950">{strategy.label}를 택하면</p>
+            <p className="text-sm font-bold text-foreground">{strategy.label}를 택하면</p>
             <p className="mt-2 text-sm leading-6 text-slate-600">{strategy.description}</p>
             <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
               <span className="text-sm font-semibold text-slate-600">예상 지표 변화</span>
-              <span className="font-mono text-lg font-black text-slate-950">
+              <span className="font-mono text-lg font-black text-foreground">
                 {tension} <span aria-hidden="true">→</span> {projectedTension}
               </span>
             </div>

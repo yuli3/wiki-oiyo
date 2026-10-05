@@ -187,7 +187,7 @@ export const GDPCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko
             { label: 'X-M', value: s.exports - s.imports, color: 'bg-rose-400' },
           ].map((bar) => (
             <div key={bar.label} className="flex items-center gap-2">
-              <span className="text-xs font-bold text-slate-500 w-8">{bar.label}</span>
+              <span className="text-xs font-bold text-muted-foreground w-8">{bar.label}</span>
               <div className="flex-1 bg-slate-100 rounded-full h-4 overflow-hidden">
                 <div
                   className={`h-4 rounded-full transition-all ${bar.color}`}
@@ -197,7 +197,7 @@ export const GDPCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko
                   aria-label={bar.label}
                 />
               </div>
-              <span className="text-xs text-slate-500 w-12 text-right">{pct(bar.value, gdp)}%</span>
+              <span className="text-xs text-muted-foreground w-12 text-right">{pct(bar.value, gdp)}%</span>
             </div>
           ))}
         </div>
@@ -329,7 +329,7 @@ export const MultiplierCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ local
         <div className="space-y-1.5">
           {rounds.map((val, i) => (
             <div key={i} className="flex items-center gap-2">
-              <span className="text-xs text-slate-500 w-14">
+              <span className="text-xs text-muted-foreground w-14">
                 {locale === 'ko' ? `${i + 1}라운드` : `Round ${i + 1}`}
               </span>
               <div className="flex-1 bg-slate-100 rounded-full h-4 overflow-hidden">
@@ -395,7 +395,7 @@ export const InflationCalculator: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale
           { label: locale === 'ko' ? '비교년 CPI' : 'Compare CPI', value: compareCPI, set: setCompareCPI, min: 50, max: 200, step: 1 },
         ].map(({ label, value, set, min, max, step }) => (
           <div key={label}>
-            <label className="block text-xs text-slate-500 mb-1">{label}</label>
+            <label className="block text-xs text-muted-foreground mb-1">{label}</label>
             <input
               type="number"
               value={value}

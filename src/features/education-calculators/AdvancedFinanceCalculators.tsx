@@ -24,15 +24,15 @@ export const CAPMCalculator: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                     <div>
-                        <label className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1 block">무위험수익률 (Rf, %)</label>
+                        <label className="text-xs text-muted-foreground font-bold uppercase tracking-wider mb-1 block">무위험수익률 (Rf, %)</label>
                         <input type="number" value={rf} onChange={e => setRf(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-white font-mono"/>
                     </div>
                     <div>
-                        <label className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1 block">베타 (Beta, β)</label>
+                        <label className="text-xs text-muted-foreground font-bold uppercase tracking-wider mb-1 block">베타 (Beta, β)</label>
                         <input type="number" value={beta} onChange={e => setBeta(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-white font-mono"/>
                     </div>
                     <div>
-                        <label className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1 block">시장기대수익률 (Rm, %)</label>
+                        <label className="text-xs text-muted-foreground font-bold uppercase tracking-wider mb-1 block">시장기대수익률 (Rm, %)</label>
                         <input type="number" value={rm} onChange={e => setRm(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-white font-mono"/>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export const CAPMCalculator: React.FC = () => {
                     <div className="text-5xl font-black text-white font-mono">
                         {ke.toFixed(2)}%
                     </div>
-                    <div className="mt-4 text-[10px] text-slate-500 text-center">
+                    <div className="mt-4 text-[10px] text-muted-foreground text-center">
                         Ke = {rf}% + {beta} × ({rm}% - {rf}%)
                     </div>
                 </div>
@@ -75,24 +75,24 @@ export const WACCCalculator: React.FC = () => {
                 <div className="space-y-3">
                     <div className="grid grid-cols-2 gap-2">
                         <div>
-                            <label className="text-[10px] text-slate-500 font-black">자기자본 (E)</label>
+                            <label className="text-[10px] text-muted-foreground font-black">자기자본 (E)</label>
                             <input type="number" value={equity} onChange={e => setEquity(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-sm"/>
                         </div>
                         <div>
-                            <label className="text-[10px] text-slate-500 font-black">타인자본 (D)</label>
+                            <label className="text-[10px] text-muted-foreground font-black">타인자본 (D)</label>
                             <input type="number" value={debt} onChange={e => setDebt(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-sm"/>
                         </div>
                     </div>
                     <div>
-                        <label className="text-[10px] text-slate-500 font-black">자기자본비용 (Ke, %)</label>
+                        <label className="text-[10px] text-muted-foreground font-black">자기자본비용 (Ke, %)</label>
                         <input type="number" value={ke} onChange={e => setKe(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-sm"/>
                     </div>
                     <div>
-                        <label className="text-[10px] text-slate-500 font-black">세전 부채비용 (Kd, %)</label>
+                        <label className="text-[10px] text-muted-foreground font-black">세전 부채비용 (Kd, %)</label>
                         <input type="number" value={kd} onChange={e => setKd(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-sm"/>
                     </div>
                     <div>
-                        <label className="text-[10px] text-slate-500 font-black">법인세율 (Tax, %)</label>
+                        <label className="text-[10px] text-muted-foreground font-black">법인세율 (Tax, %)</label>
                         <input type="number" value={tax} onChange={e => setTax(Number(e.target.value))} className="w-full bg-slate-800 border-slate-700 p-2 rounded text-sm"/>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ export const WACCCalculator: React.FC = () => {
                     <div className="text-5xl font-black text-white font-mono">
                         {wacc.toFixed(2)}%
                     </div>
-                    <div className="mt-4 text-[10px] text-slate-500 text-center leading-relaxed">
+                    <div className="mt-4 text-[10px] text-muted-foreground text-center leading-relaxed">
                         부채비율: {(debt/total*100).toFixed(1)}% | 자기자본비율: {(equity/total*100).toFixed(1)}%
                     </div>
                 </div>

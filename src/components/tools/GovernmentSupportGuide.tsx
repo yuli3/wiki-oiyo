@@ -277,8 +277,8 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
     <div className="not-prose my-8 max-w-4xl mx-auto">
       {/* Page header */}
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">{t.pageTitle}</h1>
-        <p className="text-sm font-bold uppercase tracking-widest text-slate-500">{t.pageSubtitle}</p>
+        <h1 className="text-3xl font-bold text-foreground mb-2">{t.pageTitle}</h1>
+        <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.pageSubtitle}</p>
       </div>
 
       {/* Country selector */}
@@ -300,7 +300,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl border-2 font-bold text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400 ${
                   isActive
                     ? `${ca.bg} ${ca.border} ${ca.text} shadow-sm scale-105`
-                    : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300 hover:bg-slate-50'
+                    : 'bg-white border-slate-200 text-muted-foreground hover:border-slate-300 hover:bg-card'
                 }`}
               >
                 <span aria-hidden="true" className="text-xl">{country.flag}</span>
@@ -336,7 +336,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
               className={`flex items-center gap-1.5 px-4 py-2 rounded-xl border text-xs font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400 ${
                 isActive
                   ? `${accent.chip} border-current shadow-sm`
-                  : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'
+                  : 'bg-white border-slate-200 text-muted-foreground hover:border-slate-300'
               }`}
             >
               <span aria-hidden="true">{icon}</span>
@@ -371,7 +371,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                   {icon}
                 </span>
                 <div className="min-w-0">
-                  <h2 className="font-bold text-slate-900 text-sm leading-snug">{name}</h2>
+                  <h2 className="font-bold text-foreground text-sm leading-snug">{name}</h2>
                   <span className={`inline-block mt-1 text-[10px] font-bold uppercase tracking-widest ${accent.text}`}>
                     {filterLabel[program.category]}
                   </span>
@@ -413,7 +413,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                   <a
                     href={program.phone}
                     aria-label={`${name} — ${t.callPhone} ${program.phoneDisplay}`}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-slate-50 border-slate-200 text-slate-600 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-slate-200 text-slate-600 transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-slate-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
                 ) : program.phoneDisplay !== null ? (
                   <span
                     aria-label={`${name} — ${program.phoneDisplay}`}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-slate-50 border-slate-200 text-slate-400"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border bg-card border-slate-200 text-slate-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -463,9 +463,9 @@ const GovernmentSupportGuide: React.FC<Props> = ({ locale }) => {
       <div
         role="note"
         aria-label="Disclaimer"
-        className="mt-8 p-4 bg-slate-50 border border-slate-200 rounded-2xl"
+        className="mt-8 p-4 bg-card border border-slate-200 rounded-2xl"
       >
-        <p className="text-xs text-slate-500 leading-relaxed text-center">
+        <p className="text-xs text-muted-foreground leading-relaxed text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="13"

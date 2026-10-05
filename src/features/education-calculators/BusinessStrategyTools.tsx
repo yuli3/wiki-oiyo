@@ -36,7 +36,7 @@ export const SWOTBuilder: React.FC = () => {
     return (
         <Card className="p-8 bg-white border-slate-200 shadow-2xl mt-8">
             <div className="flex items-center justify-between mb-8 border-b pb-4">
-                <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
+                <h3 className="text-xl font-bold flex items-center gap-2 text-foreground">
                     <Target className="text-blue-500" />
                     인터랙티브 SWOT 전략 빌더
                 </h3>
@@ -47,7 +47,7 @@ export const SWOTBuilder: React.FC = () => {
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`flex-1 px-4 py-2 rounded-lg text-xs font-bold transition-all ${activeTab === tab ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
+                        className={`flex-1 px-4 py-2 rounded-lg text-xs font-bold transition-all ${activeTab === tab ? 'bg-slate-900 text-white' : 'bg-slate-100 text-muted-foreground hover:bg-slate-200'}`}
                     >
                         {tab === 'S' ? 'Strengths' : tab === 'W' ? 'Weaknesses' : tab === 'O' ? 'Opportunities' : 'Threats'}
                     </button>

@@ -58,7 +58,7 @@ export default function CryptoTaxCalculator() {
 
   return (
     <div className="my-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-6 text-xl font-bold text-gray-900">암호화폐 세금 계산기</h3>
+      <h3 className="mb-6 text-xl font-bold text-foreground">암호화폐 세금 계산기</h3>
       <p className="mb-4 text-xs text-gray-400">2025년부터 시행: 기본공제 250만 원, 세율 20% + 지방소득세 2%</p>
 
       <div className="mb-4 space-y-3">
@@ -72,7 +72,7 @@ export default function CryptoTaxCalculator() {
                 { label: '수수료(원)', field: 'fee' as const, val: row.fee },
               ].map(({ label, field, val }) => (
                 <div key={field}>
-                  <label className="mb-0.5 block text-xs text-gray-500">{label}</label>
+                  <label className="mb-0.5 block text-xs text-muted-foreground">{label}</label>
                   <input type="number" value={val} onChange={(e) => updateRow(row.id, field, e.target.value)}
                     className="w-full rounded-lg border border-gray-300 px-2 py-1.5 text-xs" />
                 </div>
@@ -87,7 +87,7 @@ export default function CryptoTaxCalculator() {
       </div>
 
       <button onClick={addRow}
-        className="mb-4 w-full rounded-lg border border-dashed border-gray-300 py-2 text-sm text-gray-500 hover:bg-gray-50">
+        className="mb-4 w-full rounded-lg border border-dashed border-gray-300 py-2 text-sm text-muted-foreground hover:bg-card">
         + 거래 추가
       </button>
 
@@ -115,8 +115,8 @@ export default function CryptoTaxCalculator() {
               { label: '지방소득세(2%)', value: result.localTax, color: 'text-red-500' },
               { label: '총 납부세액', value: result.total, color: 'text-red-700' },
             ].map(({ label, value, color }) => (
-              <div key={label} className="rounded-xl bg-gray-50 p-3 text-center">
-                <p className="text-xs text-gray-500">{label}</p>
+              <div key={label} className="rounded-xl bg-card p-3 text-center">
+                <p className="text-xs text-muted-foreground">{label}</p>
                 <p className={`text-sm font-bold ${color}`}>{formatKRW(value)}원</p>
               </div>
             ))}
