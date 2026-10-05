@@ -45,6 +45,10 @@ export async function verifyLive(source, expected, request = fetch) {
     const location = response.headers.get('location');
     await response.body?.cancel();
     chain.push({ url, status });
+    // 2026-10-05: GitHub 러너 IP는 Cloudflare 봇 차단으로 403을 받는다(09-07부터 매주 실패).
+    // 403은 이전 경로가 깨졌다는 증거가 아니므로 실패가 아니라 '확인 불가'로 돌려준다.
+    // 실제로 깨진 경우는 404·200·다른 목적지로 나타나고, 그건 아래에서 그대로 실패한다.
+    if (status === 403) return { blocked: true, chain };
     if (status >= 300 && status < 400 && location) {
       const next = new URL(location, url);
       if (next.protocol !== 'https:' || !['wiki.oiyo.net', 'oiyo.net'].includes(next.hostname)) {
@@ -67,12 +71,19 @@ async function main() {
   console.log('PASS: configured Lighthouse pages exist; 3 migrated-topic contracts retained');
   if (!process.argv.includes('--live')) return;
   // A live check is supplementary: it checks production, not the PR preview.
+  const blocked = [];
   for (const locale of locales) {
     for (const topic of migratedTopics) {
       const source = `https://wiki.oiyo.net/${locale}/${topic}/`;
       const expected = `https://oiyo.net/${locale}/${destinationPaths[topic]}`;
-      console.log(JSON.stringify(await verifyLive(source, expected)));
+      const result = await verifyLive(source, expected);
+      if (result.blocked) blocked.push(source);
+      console.log(JSON.stringify(result));
     }
+  }
+  if (blocked.length) {
+    console.log(`::warning::Live migration check inconclusive: ${blocked.length}/18 URLs returned 403 to this runner (edge bot block). Verify from an unblocked network.`);
+    return;
   }
   console.log('PASS: 18 production migration URLs reach the expected OIYO page with HTTP 200');
 }
