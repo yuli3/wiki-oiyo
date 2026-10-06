@@ -18,6 +18,7 @@
 
 ## 검증
 
+- **shadcn lint 필수(2026-10-06 세운 결정, Claude·Codex·Grok Build·Grok Bot·Cursor 공통)**: UI·컴포넌트·스타일(`src/**/*.{astro,tsx,ts,jsx,js}`)을 바꿨으면 끝내기 전에 `npm run lint`(`astro check` + `npm run lint:shadcn`)를 돌리고, 실패하면 push하지 않는다. `lint:shadcn`은 공식 [`@shadcn/lint`](https://github.com/shadcn-ui/lint) 규칙을 `eslint.config.mjs`로 실행하며 CI에서도 차단한다. 검사 대상: raw 팔레트 색(`bg-pink-500`), 임의값(`p-[13px]`), 인라인 style·`<style>` 요소, Tailwind가 만들지 못하는 클래스, `src/components/ui` 컴포넌트에 className으로 덧칠하기(레이아웃 클래스는 허용), 읽을 수 없는 동적 클래스. 도입 시점의 기존 위반은 `eslint-suppressions.json` 기준선이라 새 위반만 실패한다. 새 위반은 테마 토큰·컴포넌트 variant로 고치고, `--suppress-all`/`--suppress-rule`로 기준선을 늘려 통과시키지 않는다. 기존 위반을 고쳤으면 `npm run lint:shadcn:prune`으로 기준선을 줄인다.
 - 기본: `npm run type-check`, `npm run validate:i18n`, `npm run verify:harness`, `npm run build`.
 - 카테고리는 `npm run check:category-registry`, 해당 콘텐츠 변경은 `npm run audit:magazine-compat`·`npm run validate:personality`를 추가한다. 빌드 후 내부 링크·schema·canonical도 검증한다.
 - 콘텐츠 변경 시 `npm run audit:content-quality`와 `npm run test:editorial-quality`를 실행한다. 허위 권위·허위 완결 제목 등은 `config/editorial-quality-baseline.json` 천장으로만 막으며 천장을 올려서 PASS를 만들지 않는다. 현황: `node scripts/audit-content-quality.mjs --inventory`.

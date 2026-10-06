@@ -1,0 +1,1469 @@
+{
+  "src/components/AuthorProfile.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/BlogList.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-restyle": {
+      "count": 3
+    }
+  },
+  "src/components/Button.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/CategoryCloud.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/components/ChapterSidebar.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/DictionaryLanding.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/DocumentChapterNav.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    }
+  },
+  "src/components/IntentBundles.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 42
+    }
+  },
+  "src/components/MysticTrinity.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/TOC.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/astro/AstroMatrix.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    }
+  },
+  "src/components/calculators/Compound2Calculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 47
+    }
+  },
+  "src/components/calculators/DepositCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 42
+    }
+  },
+  "src/components/calculators/DutchPayCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 46
+    }
+  },
+  "src/components/calculators/ExpenseRatioCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 35
+    }
+  },
+  "src/components/calculators/FireRetirementCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 54
+    }
+  },
+  "src/components/calculators/GiftTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 36
+    }
+  },
+  "src/components/calculators/GiftVsInheritanceCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 37
+    }
+  },
+  "src/components/calculators/HomeBuyingCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 13
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/calculators/IncorporationCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 38
+    }
+  },
+  "src/components/calculators/InheritanceTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 44
+    }
+  },
+  "src/components/calculators/IsaVsPensionCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 56
+    }
+  },
+  "src/components/calculators/JeonseVsRentCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 43
+    }
+  },
+  "src/components/calculators/JeonsevsBuyCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 42
+    }
+  },
+  "src/components/calculators/LaborCostCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 35
+    }
+  },
+  "src/components/calculators/LatteFactorCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 37
+    }
+  },
+  "src/components/calculators/LegalInterestCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 33
+    }
+  },
+  "src/components/calculators/LifeExpectancyCalculator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 33
+    }
+  },
+  "src/components/calculators/LifePlanningCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 65
+    }
+  },
+  "src/components/calculators/LoanCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 41
+    }
+  },
+  "src/components/calculators/MortgageCalculator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 39
+    }
+  },
+  "src/components/calculators/OverseasStockSaverCalculator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 32
+    }
+  },
+  "src/components/calculators/PensionOptimizerCalculator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 42
+    }
+  },
+  "src/components/calculators/PensionTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 36
+    }
+  },
+  "src/components/calculators/PresentValueCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 32
+    }
+  },
+  "src/components/calculators/RentalRoiCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 37
+    }
+  },
+  "src/components/calculators/SavingsComparisonCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 36
+    }
+  },
+  "src/components/calculators/StatuteLimitationsCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 20
+    }
+  },
+  "src/components/calculators/StockYieldCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 35
+    }
+  },
+  "src/components/calculators/TaxCalendar.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/calculators/WeddingPlanningCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 26
+    }
+  },
+  "src/components/content/academy/CognitiveDissonanceLab.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/games/Blackjack.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-restyle": {
+      "count": 6
+    }
+  },
+  "src/components/games/Checkers.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/games/ChessBoard.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/games/ChimpTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/components/games/Dominoes.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/games/FreeCell.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 4
+    }
+  },
+  "src/components/games/Game2048.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/games/Gomoku.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 10
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/games/HeartsGame.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-restyle": {
+      "count": 2
+    }
+  },
+  "src/components/games/Hitori.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/games/JanggiBoard.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 16
+    },
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/components/games/LightUp.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/games/LottoGenerator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/games/MemoryCardGame.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/games/PsychologyWordle.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/games/Reversi.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/games/SnakeGame.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    }
+  },
+  "src/components/games/Solitaire.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 4
+    }
+  },
+  "src/components/games/Sudoku.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/games/TentsAndTrees.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/games/WaterSort.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/games/WheelSpinner.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/games/WordleGame.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-restyle": {
+      "count": 2
+    }
+  },
+  "src/components/mdx/ASADChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 29
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 11
+    }
+  },
+  "src/components/mdx/AcquisitionTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 15
+    }
+  },
+  "src/components/mdx/BarChart.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/mdx/BusinessCycle.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 23
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 12
+    }
+  },
+  "src/components/mdx/CaffeineCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 24
+    }
+  },
+  "src/components/mdx/Callout.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/CapitalGainsTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 23
+    }
+  },
+  "src/components/mdx/ChildHeightCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/mdx/CompareTable.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 8
+    }
+  },
+  "src/components/mdx/ConceptCard.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/CryptoTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/mdx/DividendCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 33
+    }
+  },
+  "src/components/mdx/EarlyRepaymentCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 13
+    }
+  },
+  "src/components/mdx/FlowChart.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/ForceDiagram.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 14
+    }
+  },
+  "src/components/mdx/FormulaBox.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 4
+    }
+  },
+  "src/components/mdx/Fraction.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 14
+    }
+  },
+  "src/components/mdx/FreelancerTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/mdx/HeatMap.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/ISLMSimulator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/mdx/InflationCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/mdx/KeynesianCross.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 29
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 10
+    }
+  },
+  "src/components/mdx/LineChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/LoanCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 25
+    }
+  },
+  "src/components/mdx/LorenzCurve.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 11
+    }
+  },
+  "src/components/mdx/OrgChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 19
+    }
+  },
+  "src/components/mdx/PPFChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 17
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 11
+    }
+  },
+  "src/components/mdx/PensionCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/components/mdx/PhillipsCurveChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 21
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 8
+    }
+  },
+  "src/components/mdx/PieChart.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/mdx/PolicyCycle.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 4
+    }
+  },
+  "src/components/mdx/ProductLifeCycle.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 7
+    }
+  },
+  "src/components/mdx/ProgressBar.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 10
+    }
+  },
+  "src/components/mdx/PropertyTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 13
+    }
+  },
+  "src/components/mdx/PyramidDiagram.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 3
+    }
+  },
+  "src/components/mdx/QuadrantMatrix.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    }
+  },
+  "src/components/mdx/Quiz.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/ROICalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/mdx/RadarChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/SalaryCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 23
+    }
+  },
+  "src/components/mdx/SavingsCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 29
+    }
+  },
+  "src/components/mdx/SeveranceCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/mdx/StatCards.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 9
+    }
+  },
+  "src/components/mdx/StockYieldCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/mdx/SupplyDemandChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 26
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 13
+    }
+  },
+  "src/components/mdx/Term.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/TestCTA.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/Timeline.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 9
+    }
+  },
+  "src/components/mdx/ToolCTA.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/ToolCTAInline.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/mdx/ValueChain.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/mdx/VatCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/mdx/YearEndTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/shared/_oiyo-shared/KnowledgeNetworkMap.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/tests/SalaryCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tests/TypingSpeedTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/AcquisitionTaxCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tools/AgeCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 10
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/AsciiArtGenerator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/AutoTaxCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tools/Base64Converter.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    }
+  },
+  "src/components/tools/BmiCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tools/BrokerageCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/CaffeineCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tools/CaffelatteCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/CapitalGainsTaxCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/tools/CompoundInterestCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/ComprehensiveIncomeTaxCalc.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/DogVisionSimulator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/tools/EarlyRepaymentCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 15
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tools/EtfRecommender.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/FastingTimer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/FreelancerTaxCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tools/GovernmentSupportGuide.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/tools/GpaCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/HeightPredictor.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ImageCropper.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ImageDegrader.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ImagePixelator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ImageProcessor.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    }
+  },
+  "src/components/tools/InflationCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/tools/IsaCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/MetadataViewer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/PaletteExtractor.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/tools/PensionCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tools/PetAgeCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    }
+  },
+  "src/components/tools/PregnancyCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/tools/PropertyTaxCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tools/RealEstateCapitalGainsTaxCalc.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tools/RentComparisonCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 10
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 4
+    }
+  },
+  "src/components/tools/RentalYieldCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 11
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tools/RoiCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tools/SalaryCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tools/SeparateVsComprehensiveTaxCalc.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 22
+    }
+  },
+  "src/components/tools/SeveranceCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/StockAverageCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tools/SvgStudio.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/VatCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/ui/Item.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/ui/badge.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/ui/button.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    }
+  },
+  "src/components/ui/card.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/ui/game/GamePrimitives.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/features/education-calculators/AccountingGames.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 27
+    },
+    "shadcn/no-restyle": {
+      "count": 14
+    }
+  },
+  "src/features/education-calculators/AccountingSimulators.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    },
+    "shadcn/no-restyle": {
+      "count": 4
+    }
+  },
+  "src/features/education-calculators/AdvancedFinanceCalculators.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 30
+    },
+    "shadcn/no-restyle": {
+      "count": 10
+    }
+  },
+  "src/features/education-calculators/BondAndPortfolioTools.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 19
+    },
+    "shadcn/no-restyle": {
+      "count": 8
+    }
+  },
+  "src/features/education-calculators/BusinessStrategyTools.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 32
+    },
+    "shadcn/no-restyle": {
+      "count": 10
+    }
+  },
+  "src/features/education-calculators/CostAccountingSimulator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 47
+    }
+  },
+  "src/features/education-calculators/DeveloperTools.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 24
+    },
+    "shadcn/no-restyle": {
+      "count": 5
+    }
+  },
+  "src/features/education-calculators/EconomicSimulators.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 16
+    },
+    "shadcn/no-restyle": {
+      "count": 4
+    }
+  },
+  "src/features/education-calculators/FinancialCalculators.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 50
+    },
+    "shadcn/no-restyle": {
+      "count": 10
+    }
+  },
+  "src/features/education-calculators/FinancialCharts.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 3
+    }
+  },
+  "src/features/education-calculators/FinancialStatementAnalyzer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 22
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 97
+    },
+    "shadcn/no-restyle": {
+      "count": 5
+    }
+  },
+  "src/features/education-calculators/GameCalculators.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    },
+    "shadcn/no-restyle": {
+      "count": 17
+    }
+  },
+  "src/features/education-calculators/JournalEntryTrainer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 59
+    }
+  },
+  "src/features/education-calculators/LogicTools.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 33
+    },
+    "shadcn/no-restyle": {
+      "count": 5
+    }
+  },
+  "src/features/education-calculators/MacroCalculators.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 79
+    }
+  },
+  "src/features/education-calculators/PersonalColorTools.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 16
+    },
+    "shadcn/no-restyle": {
+      "count": 8
+    }
+  },
+  "src/features/education-calculators/PsychologyTools.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 36
+    },
+    "shadcn/no-restyle": {
+      "count": 18
+    }
+  },
+  "src/features/education-calculators/TAccountVisualizer.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 60
+    }
+  },
+  "src/features/education-calculators/TradeSimulators.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 26
+    },
+    "shadcn/no-restyle": {
+      "count": 4
+    }
+  },
+  "src/features/education-calculators/UtilityGames.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 43
+    },
+    "shadcn/no-restyle": {
+      "count": 38
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/features/education-common/components/LectureVisuals.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 102
+    }
+  },
+  "src/features/education-finance/FinanceCharts.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 32
+    }
+  },
+  "src/layouts/BaseLayout.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    }
+  },
+  "src/pages/404.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/pages/[...lang]/[...slug].astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 11
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/pages/[...lang]/about.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/pages/[...lang]/explore.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 25
+    }
+  },
+  "src/pages/[...lang]/privacy.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/pages/[...lang]/search.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/pages/[...lang]/terms.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  }
+}
