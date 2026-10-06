@@ -12,13 +12,13 @@ export const GET: APIRoute = async () => {
     name: `${siteConfig.name} — Knowledge Foundation`,
     role: "reference-and-knowledge",
     description:
-      "Machine-citable, source-cited reference data for astrology, saju, tarot, personality, psychology and related domains.",
+      "Discovery manifest for Oiyo Wiki's machine-readable catalogs. The wiki currently publishes no definition articles; see topics.json for the live count.",
     publisher: { name: siteConfig.seo.organization.name, url: base },
     locales: siteConfig.locales,
     resources: {
       topics: {
         url: `${base}/knowledge/topics.json`,
-        description: "DefinedTermSet: every dictionary term with definition, sources, locale.",
+        description: "DefinedTermSet of published wiki terms (may be empty) plus the topic-ownership map.",
       },
       relations: {
         url: `${base}/knowledge/relations.json`,

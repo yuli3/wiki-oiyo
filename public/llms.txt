@@ -1,21 +1,21 @@
-# Oiyo Wiki — Reference and Knowledge
+# Oiyo Wiki — Brand home and knowledge catalog
 
-> Source-cited, machine-citable reference knowledge across astrology, saju, tarot, numerology, personality and psychology. Wiki can own definitions or explanations when it is the canonical route. Languages: en, ko, ja, fr, es, zh.
+> Oiyo Wiki is the brand home of the Oiyo network. It currently publishes no definition or reference articles of its own; reference and explanatory articles live on blog.oiyo.net, and tests and tools live on oiyo.net. Languages: en, ko, ja, fr, es, zh.
 
 ## Machine-readable catalogs
-- [Topics catalog](https://wiki.oiyo.net/knowledge/topics.json): schema.org DefinedTermSet of every dictionary term — definition, category, tags, locale, author/reviewer, and a stable canonical URL.
-- [Concept graph](https://wiki.oiyo.net/knowledge/relations.json): series/topic clusters, broader/narrower/related edges, cross-locale translation links, and the cross-site hub ownership graph.
+- [Topics catalog](https://wiki.oiyo.net/knowledge/topics.json): schema.org DefinedTermSet. `hasDefinedTerm` lists only wiki terms with a published definition page and is currently empty. `topicOwnership` is routing data that names which Oiyo site owns each topic; it contains no definitions.
+- [Concept graph](https://wiki.oiyo.net/knowledge/relations.json): series/topic clusters, cross-locale translation links, and the cross-site hub ownership graph.
 - [Discovery manifest](https://wiki.oiyo.net/knowledge/index.json): resources and the Oiyo knowledge network.
 
 ## Overview
-- [Knowledge hub](https://wiki.oiyo.net/knowledge/): human-readable overview, topic map, and citation guidance.
+- [Knowledge hub](https://wiki.oiyo.net/knowledge/): overview of the catalogs and the network.
 
 ## Citation
-Cite individual terms by their stable URL (see topics.json `url`). Attribution: Oiyo Wiki (wiki.oiyo.net).
+Cite the canonical page on the site that owns the topic (blog.oiyo.net for reference articles, oiyo.net for tests and tools). Do not cite topics.json ownership rows as definitions.
 
 ## Network
-- Reference and knowledge: https://wiki.oiyo.net
-- Publishing and utilities: https://blog.oiyo.net
+- Brand home and catalog: https://wiki.oiyo.net
+- Reference articles and utilities: https://blog.oiyo.net
 - Interactive tools: https://oiyo.net
 - Gaming: https://game.oiyo.net
 - Curation: https://news.oiyo.net
