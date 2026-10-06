@@ -94,44 +94,40 @@ export const GET: APIRoute = async () => {
     m.set(topic.concept, topic.url);
   }
 
+  // 2026-10-06 (audit S4 / 2026-09-28 P0-4): the route-ownership seed used to be
+  // emitted here as DefinedTerm rows with `definition: null` and a reviewer
+  // string the editorial test classifies as fake authority, so an empty wiki
+  // advertised 60 "source-cited" definitions. Ownership rows are routing data,
+  // not definitions: they now live under `topicOwnership`, and `hasDefinedTerm`
+  // only lists terms that have a published page with a definition.
   const seedUpdatedDate = "2026-06-14";
-  const hubTopics = readWikiSeedTopics()
+  const topicOwnership = readWikiSeedTopics()
     .filter((topic) => !existingConcepts.has(topic.id))
-    .flatMap((topic) =>
-      Object.entries(topic.name ?? {}).map(([locale, term]) => {
-        const definitionUrl = resolveDefinitionUrl(topic, locale, conceptUrlByLocale);
-        return {
-          id: `hub/${locale}/${topic.id}`,
-          concept: topic.id,
-          url: `${siteConfig.url}/knowledge/topics.json#${topic.id}`,
-          term,
-          definition: null,
-          definitionUrl,
-          category: "hub",
-          series: null,
-          locale,
-          tags: topic.aliases ?? [],
-          relatedTerms: topic.relatedTopicIds ?? [],
-          broader: null,
-          narrower: [],
-          author: "Oiyo",
-          reviewer: "OIYO Research Institute",
-          datePublished: seedUpdatedDate,
-          dateModified: seedUpdatedDate,
-          isHub: true,
-          source: {
-            primaryOwner: topic.primaryOwner ?? null,
-            definitionOwner: topic.definitionOwner ?? null,
-            definitionUrl,
-            explanationOwner: topic.explanationOwner ?? null,
-            marketPolicy: topic.marketPolicy ?? null,
-            routeIds: topic.routeIds ?? [],
-          },
-        };
-      }),
-    );
+    .map((topic) => {
+      const definitionUrls = Object.fromEntries(
+        Object.keys(topic.name ?? {})
+          .map((locale) => [locale, resolveDefinitionUrl(topic, locale, conceptUrlByLocale)] as const)
+          .filter(([, url]) => url !== null),
+      );
+      return {
+        topicId: topic.id,
+        names: topic.name ?? {},
+        aliases: topic.aliases ?? [],
+        relatedTopicIds: topic.relatedTopicIds ?? [],
+        primaryOwner: topic.primaryOwner ?? null,
+        definitionOwner: topic.definitionOwner ?? null,
+        explanationOwner: topic.explanationOwner ?? null,
+        marketPolicy: topic.marketPolicy ?? null,
+        routeIds: topic.routeIds ?? [],
+        definitionUrls,
+        seedUpdated: seedUpdatedDate,
+      };
+    })
+    .sort((a, b) => a.topicId.localeCompare(b.topicId));
 
-  const topics = [...dictionaryTopics, ...hubTopics].sort((a, b) => a.id.localeCompare(b.id));
+  const topics = dictionaryTopics
+    .filter((topic) => typeof topic.definition === "string" && topic.definition.trim().length > 0)
+    .sort((a, b) => a.id.localeCompare(b.id));
 
   const body = {
     "@context": "https://schema.org",
@@ -139,13 +135,16 @@ export const GET: APIRoute = async () => {
     name: `${siteConfig.name} — Knowledge Catalog`,
     url: `${siteConfig.url}/knowledge/topics.json`,
     description:
-      "Canonical, source-cited catalog of defined terms across astrology, saju, tarot, personality, psychology and more. Stable identifiers for human and machine citation.",
+      topics.length > 0
+        ? "Catalog of defined terms published on Oiyo Wiki, each with its definition and a stable canonical URL. topicOwnership lists which Oiyo site owns each topic."
+        : "No defined terms are published on Oiyo Wiki at this time, so hasDefinedTerm is empty. topicOwnership is routing data only: it lists which Oiyo site owns each topic and carries no definitions.",
     publisher: { "@type": "Organization", name: siteConfig.seo.organization.name },
     license: `${siteConfig.url}/en/about`,
     dateModified: new Date().toISOString(),
     count: topics.length,
-    hubCount: hubTopics.length,
+    hubCount: topicOwnership.length,
     hasDefinedTerm: topics,
+    topicOwnership,
   };
 
   return new Response(JSON.stringify(body, null, 2), {

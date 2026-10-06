@@ -35,7 +35,14 @@ const topicMap = ((seedData as { topics?: Seed[] }).topics ?? [])
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const resources = [
-  { name: "topics.json", href: "/knowledge/topics.json", desc: `${dictCount} defined terms (schema.org DefinedTermSet) with definition, sources, locale and a stable URL.` },
+  {
+    name: "topics.json",
+    href: "/knowledge/topics.json",
+    // 2026-10-06 (audit S4): do not advertise definitions the wiki does not publish.
+    desc: dictCount > 0
+      ? `${dictCount} defined terms (schema.org DefinedTermSet) with definition, locale and a stable URL, plus the topic-ownership map.`
+      : "No defined terms are published yet, so the DefinedTermSet is empty. It also carries the topic-ownership map: which Oiyo site owns each topic.",
+  },
   { name: "relations.json", href: "/knowledge/relations.json", desc: "Concept graph: series/topic clusters, explicit broader/narrower/related edges, and cross-locale translations." },
   { name: "index.json", href: "/knowledge/index.json", desc: "Machine-readable discovery manifest for this site and the wider knowledge network." },
 ];
@@ -45,8 +52,8 @@ const network = [
     role: "Reference",
     title: "Oiyo Wiki",
     href: "https://wiki.oiyo.net/knowledge/",
-    summary: "Source-backed definitions and concept graphs.",
-    details: "Use this catalog when you need stable terms, cited references, and machine-readable DefinedTerm data.",
+    summary: "Brand home, topic-ownership map and concept graph.",
+    details: "Use this catalog to find which Oiyo site owns a topic. Definitions appear here only once a wiki page publishes them.",
     catalogs: [{ label: "topics.json", href: "/knowledge/topics.json" }],
     current: true,
   },
@@ -70,18 +77,20 @@ const network = [
 ---
 
 <BaseLayout
-  title="Knowledge Foundation — Citable Reference Data"
-  description="A machine-citable, source-cited reference dataset for astrology, saju, tarot, personality and psychology — designed for people and AI to cite."
+  title="Knowledge Foundation — Oiyo Network Catalogs"
+  description="Machine-readable catalogs from Oiyo Wiki: which Oiyo site owns each topic, how topics connect, and any published wiki definitions."
 >
   <article class="py-24 max-w-3xl mx-auto px-6">
     <p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Knowledge Foundation</p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-      A reference dataset built to be cited
+      Where each topic lives in the Oiyo network
     </h1>
     <p class="text-lg text-muted-foreground leading-relaxed mb-10">
-      Oiyo Wiki publishes source-cited reference knowledge in the Oiyo network, including stable definitions
-      and selected explanations across astrology, saju, tarot, personality and psychology — as clean
-      HTML <em>and</em> as machine-readable catalogs so that both people and AI can reference them.
+      Oiyo Wiki is the brand home of the Oiyo network. It publishes machine-readable catalogs that say
+      which site owns each topic — reference articles on blog.oiyo.net, tests and tools on oiyo.net.
+      {dictCount > 0
+        ? ` The wiki itself currently publishes ${dictCount} definition pages.`
+        : " The wiki itself does not publish definition pages at this time."}
     </p>
 
     <h2 class="text-2xl font-bold tracking-tight mb-4">Open data catalogs</h2>
@@ -97,7 +106,7 @@ const network = [
     {topicMap.length > 0 && (
       <>
         <h2 class="text-2xl font-bold tracking-tight mb-4">Topic map</h2>
-        <p class="text-muted-foreground mb-4">Top-level concepts and how they connect. Each links to its definition.</p>
+        <p class="text-muted-foreground mb-4">Top-level concepts and how they connect. A concept links to its definition only when a wiki page exists.</p>
         <div class="grid sm:grid-cols-2 gap-3 mb-12">
           {topicMap.map((t) => (
             <div class="border border-border rounded-lg p-4">
@@ -124,16 +133,16 @@ const network = [
 
     <h2 class="text-2xl font-bold tracking-tight mb-4">Citation</h2>
     <p class="text-muted-foreground">
-      Cite individual terms by their stable URL (see <a href="/knowledge/topics.json" class="text-primary">topics.json</a>).
-      Coverage spans {locales.length} languages ({locales.join(", ")}). Attribution: <strong>Oiyo Wiki (wiki.oiyo.net)</strong>.
+      Cite the canonical page on the site that owns the topic (see <a href="/knowledge/topics.json" class="text-primary">topics.json</a> <code>topicOwnership</code>).
+      Catalogs cover {locales.length} languages ({locales.join(", ")}). Attribution: <strong>Oiyo Wiki (wiki.oiyo.net)</strong>.
     </p>
 
     <FaqAccordion
       heading="FAQ"
       items={[
-        { q: "Can I cite or reuse this data?", a: "Yes. Each term has a stable canonical URL (see <a href='/knowledge/topics.json'>topics.json</a>). Please attribute to Oiyo Wiki (wiki.oiyo.net)." },
-        { q: "Is the data machine-readable?", a: "Yes — open JSON catalogs (topics.json, relations.json) plus <code>DefinedTerm</code> JSON-LD embedded in every dictionary page." },
-        { q: "How current is it?", a: "Catalogs are regenerated on every build; each entry carries a published and last-reviewed date." },
+        { q: "Can I cite or reuse this data?", a: "Yes. Cite the canonical page on the owning site, and attribute catalog data to Oiyo Wiki (wiki.oiyo.net). Ownership rows in <a href='/knowledge/topics.json'>topics.json</a> are routing data, not definitions." },
+        { q: "Is the data machine-readable?", a: "Yes — open JSON catalogs (topics.json, relations.json, index.json)." },
+        { q: "How current is it?", a: "Catalogs are regenerated on every build." },
       ]}
     />
   </article>
