@@ -16,6 +16,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getTranslations } from "../lib/i18n";
 import type { Locale } from "../lib/i18n";
+import Bookshelf from "./Bookshelf.astro";
+import type { Shelf } from "./Bookshelf.astro";
 
 interface Category {
   key: string;
@@ -31,9 +33,10 @@ interface Props {
   categories: Category[];
   recent: { title: string; href: string; definition: string; reviewedDate?: string }[];
   availableLocales?: string[];
+  shelves?: Shelf[];
 }
 
-const { locale, termCount, categories, recent, availableLocales } = Astro.props;
+const { locale, termCount, categories, recent, availableLocales, shelves = [] } = Astro.props;
 const t = await getTranslations(locale);
 
 type Copy = {
@@ -206,7 +209,17 @@ const EMPTY: Record<Locale, { eyebrow: string; title: string; lede: string; sibl
   },
 };
 
+const SHELF: Record<Locale, { title: string; note: string; chapters: string; more: string }> = {
+  ko: { title: "책장에서 과목 고르기", note: "책등을 누르면 그 과목의 1장이 열려요.", chapters: "장", more: "{count}권 더" },
+  en: { title: "Pick a course from the shelf", note: "Tap a spine to open chapter 1 of that course.", chapters: "chapters", more: "{count} more" },
+  ja: { title: "本棚から科目を選ぶ", note: "背表紙を押すとその科目の第1章が開きます。", chapters: "章", more: "ほか{count}冊" },
+  zh: { title: "从书架上挑一门课", note: "点击书脊即可打开该课程的第 1 章。", chapters: "章", more: "另有 {count} 本" },
+  fr: { title: "Choisir un cours sur l'étagère", note: "Touchez un dos de livre pour ouvrir le chapitre 1 du cours.", chapters: "chapitres", more: "{count} de plus" },
+  es: { title: "Elige un curso de la estantería", note: "Toca un lomo para abrir el capítulo 1 del curso.", chapters: "capítulos", more: "{count} más" },
+};
+
 const c = COPY[locale] ?? COPY.en;
+const shelfCopy = SHELF[locale] ?? SHELF.en;
 const formatted = termCount.toLocaleString(locale === "ko" ? "ko" : locale);
 const isEmpty = termCount === 0;
 const e = EMPTY[locale] ?? EMPTY.en;
@@ -231,6 +244,21 @@ const siblingsTitle = isEmpty ? e.siblings : c.siblingsTitle;
       </p>
     </div>
   </section>
+
+  {shelves.length > 0 && (
+    <section class="pb-6">
+      <div class="container px-4">
+        <Bookshelf
+          eyebrow="BOOKSHELF"
+          title={shelfCopy.title}
+          note={shelfCopy.note}
+          chapterWord={shelfCopy.chapters}
+          moreLabel={shelfCopy.more}
+          shelves={shelves}
+        />
+      </div>
+    </section>
+  )}
 
   {!isEmpty && (
   <section class="pb-16">
