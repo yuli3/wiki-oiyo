@@ -1,0 +1,179 @@
+---
+/**
+ * 글로벌 학제 캘린더 타임라인 비교 바 (AcademicCalendarBar)
+ *
+ * 대한민국(3월 신학년), 미국·유럽(9월 신학년), 일본(4월 3학기제), 호주(2월 4학기제)의
+ * 연간 1~12월 학기 운영 및 방학 기간을 가로 타임라인 바로 한눈에 비교합니다.
+ */
+
+interface SystemData {
+  country: string;
+  startMonth: string;
+  system: string;
+  months: {
+    month: number;
+    type: "term" | "break" | "mixed";
+    label: string;
+  }[];
+}
+
+const systems: SystemData[] = [
+  {
+    country: "대한민국 (KR)",
+    startMonth: "3월 1일",
+    system: "2학기제 (연간 190일 이상 법정수업)",
+    months: [
+      { month: 1, type: "break", label: "겨울방학" },
+      { month: 2, type: "break", label: "봄방학/학년말" },
+      { month: 3, type: "term", label: "1학기 시작" },
+      { month: 4, type: "term", label: "1학기" },
+      { month: 5, type: "term", label: "1학기" },
+      { month: 6, type: "term", label: "1학기" },
+      { month: 7, type: "mixed", label: "1학기말/여름방학" },
+      { month: 8, type: "mixed", label: "여름방학/2학기" },
+      { month: 9, type: "term", label: "2학기" },
+      { month: 10, type: "term", label: "2학기" },
+      { month: 11, type: "term", label: "2학기" },
+      { month: 12, type: "mixed", label: "2학기말/겨울방학" },
+    ]
+  },
+  {
+    country: "미국 / 캐나다 (US)",
+    startMonth: "8월말 ~ 9월초",
+    system: "2학기제 또는 쿼터제 (여름방학 2.5~3개월)",
+    months: [
+      { month: 1, type: "term", label: "봄학기 시작" },
+      { month: 2, type: "term", label: "봄학기" },
+      { month: 3, type: "term", label: "Spring Break" },
+      { month: 4, type: "term", label: "봄학기" },
+      { month: 5, type: "mixed", label: "봄학기 종료" },
+      { month: 6, type: "break", label: "여름방학 (Summer)" },
+      { month: 7, type: "break", label: "여름방학 (Summer)" },
+      { month: 8, type: "mixed", label: "여름방학/신학년" },
+      { month: 9, type: "term", label: "가을학기 시작" },
+      { month: 10, type: "term", label: "가을학기" },
+      { month: 11, type: "term", label: "추수감사절" },
+      { month: 12, type: "break", label: "겨울방학 (Winter)" },
+    ]
+  },
+  {
+    country: "일본 (JP)",
+    startMonth: "4월 1일",
+    system: "3학기제 (벚꽃 시즌 입학)",
+    months: [
+      { month: 1, type: "term", label: "3학기" },
+      { month: 2, type: "term", label: "3학기" },
+      { month: 3, type: "mixed", label: "종업식/봄방학" },
+      { month: 4, type: "term", label: "1학기 입학" },
+      { month: 5, type: "term", label: "1학기" },
+      { month: 6, type: "term", label: "1학기" },
+      { month: 7, type: "mixed", label: "여름방학 시작" },
+      { month: 8, type: "break", label: "여름방학" },
+      { month: 9, type: "term", label: "2학기 시작" },
+      { month: 10, type: "term", label: "2학기" },
+      { month: 11, type: "term", label: "2학기" },
+      { month: 12, type: "mixed", label: "겨울방학" },
+    ]
+  },
+  {
+    country: "호주 / 뉴질랜드 (AU)",
+    startMonth: "1월말 ~ 2월초 (남반구)",
+    system: "4학기제 (Term 1 ~ Term 4)",
+    months: [
+      { month: 1, type: "break", label: "여름방학(성탄/새해)" },
+      { month: 2, type: "term", label: "Term 1 시작" },
+      { month: 3, type: "term", label: "Term 1" },
+      { month: 4, type: "mixed", label: "가을방학/Term 2" },
+      { month: 5, type: "term", label: "Term 2" },
+      { month: 6, type: "term", label: "Term 2" },
+      { month: 7, type: "mixed", label: "겨울방학/Term 3" },
+      { month: 8, type: "term", label: "Term 3" },
+      { month: 9, type: "mixed", label: "봄방학/Term 4" },
+      { month: 10, type: "term", label: "Term 4" },
+      { month: 11, type: "term", label: "Term 4" },
+      { month: 12, type: "mixed", label: "학년종료/여름방학" },
+    ]
+  }
+];
+
+const monthsHeader = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+---
+
+<div class="not-prose my-8 rounded-xl border border-border bg-card p-4 sm:p-6 shadow-xs" id="academic-bar-root">
+  <div class="mb-5">
+    <div class="flex items-center gap-2">
+      <span class="inline-block h-2.5 w-2.5 rounded-full bg-primary" aria-hidden="true"></span>
+      <h3 class="text-lg font-bold tracking-tight text-foreground sm:text-xl">
+        글로벌 4대 학제 타임라인 및 방학 캘린더 비교
+      </h3>
+    </div>
+    <p class="mt-1 text-xs text-muted-foreground sm:text-sm">
+      신학년 시작 시점과 학기/방학 배치가 전 세계적으로 왜 다른지, 1~12월 가로 타임라인으로 직관 비교합니다.
+    </p>
+  </div>
+
+  <!-- Legend -->
+  <div class="mb-4 flex flex-wrap items-center gap-4 text-xs">
+    <div class="flex items-center gap-1.5">
+      <span class="h-3 w-3 rounded-xs bg-primary" aria-hidden="true"></span>
+      <span class="text-foreground font-medium">정규 학기 (수업 진행)</span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <span class="h-3 w-3 rounded-xs bg-muted border border-border" aria-hidden="true"></span>
+      <span class="text-muted-foreground font-medium">방학 (여름/겨울/봄)</span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <span class="h-3 w-3 rounded-xs bg-primary/40" aria-hidden="true"></span>
+      <span class="text-foreground/80 font-medium">학기 전환 / 복합 구간</span>
+    </div>
+  </div>
+
+  <!-- Responsive Calendar Matrix -->
+  <div class="overflow-x-auto rounded-lg border border-border bg-background">
+    <div class="min-w-160 p-3">
+      <!-- Header Months -->
+      <div class="grid grid-cols-12 gap-1 pb-2 border-b border-border text-center text-xs font-bold text-muted-foreground">
+        {monthsHeader.map((m) => (
+          <div>{m}</div>
+        ))}
+      </div>
+
+      <!-- Systems Rows -->
+      <div class="mt-3 space-y-4">
+        {systems.map((sys) => (
+          <div>
+            <div class="mb-1 flex items-baseline justify-between text-xs">
+              <span class="font-bold text-foreground">{sys.country}</span>
+              <span class="text-muted-foreground">
+                신학년 시작: <strong class="text-primary font-semibold">{sys.startMonth}</strong> ({sys.system})
+              </span>
+            </div>
+            <div class="grid grid-cols-12 gap-1 text-center">
+              {sys.months.map((m) => (
+                <div
+                  class:list={[
+                    "flex h-11 flex-col items-center justify-center rounded-sm text-xs font-semibold transition-transform hover:scale-105 select-none",
+                    m.type === "term" && "bg-primary text-primary-foreground shadow-xs",
+                    m.type === "break" && "bg-muted text-muted-foreground border border-border/80",
+                    m.type === "mixed" && "bg-primary/30 text-foreground border border-primary/40",
+                  ]}
+                  title={`${m.month}월: ${m.label}`}
+                >
+                  <span class="text-xs opacity-80">{m.month}월</span>
+                  <span class="text-xs font-medium leading-none truncate max-w-full px-0.5">
+                    {m.type === "term" ? "학기" : m.type === "break" ? "방학" : "전환"}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 rounded-lg border border-border/60 bg-muted/20 p-3 text-xs leading-relaxed text-muted-foreground">
+    <strong class="font-semibold text-foreground">핵심 시사점:</strong>
+    한국은 혹한기(1~2월) 난방 여건과 3월 입춘·봄의 시작에 맞춘 3월 학제를 택한 반면, 미국과 유럽은 농경 사회의 여름 추수철 일손 돕기와 9월 가을 수확기에 기원을 둔 가을학기제를 채택하고 있습니다.
+  </div>
+</div>

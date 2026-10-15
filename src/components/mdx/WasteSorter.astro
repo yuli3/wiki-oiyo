@@ -1,0 +1,377 @@
+---
+/**
+ * 자원순환 및 분리배출 스마트 판별기 (WasteSorter)
+ *
+ * 일상에서 자주 혼동되는 16대 생활 품목의 정확한 배출 분류함(일반종량제, 음식물, 불연성마대, 재활용, 전용수거함)과
+ * 폐기물관리법 및 환경부 고시에 따른 공학적·법적 근거를 실시간으로 검색·필터링합니다.
+ */
+
+interface WasteItem {
+  id: string;
+  name: string;
+  category: "general" | "food" | "non-combustible" | "recyclable" | "special";
+  categoryLabel: string;
+  badgeVariant: "default" | "secondary" | "destructive" | "outline";
+  method: string;
+  basis: string;
+  keywords: string[];
+}
+
+const wasteItems: WasteItem[] = [
+  {
+    id: "pet-clear",
+    name: "투명 페트병 (생수·음료)",
+    category: "recyclable",
+    categoryLabel: "투명페트 별도배출",
+    badgeVariant: "default",
+    method: "내용물을 비우고 물로 헹군 뒤, 라벨을 떼어내고 압착하여 뚜껑을 닫아 전용 수거함에 배출합니다.",
+    basis: "환경부 고시 — 고품질 재생원료(의류용 장섬유) 생산을 위해 유색 플라스틱과 혼합 금지.",
+    keywords: ["페트병", "생수병", "물병", "음료수병", "투명페트"]
+  },
+  {
+    id: "pet-colored",
+    name: "유색 페트병 및 일반 플라스틱",
+    category: "recyclable",
+    categoryLabel: "일반 플라스틱",
+    badgeVariant: "outline",
+    method: "내용물을 세척하고 상표 스티커를 제거한 후 일반 플라스틱류로 배출합니다.",
+    basis: "재생 원사 염색 가공이 어려워 투명 페트와 분리하여 중저급 플라스틱 원료로 재활용.",
+    keywords: ["맥주병", "갈색페트", "초록페트", "샴푸통", "세제통"]
+  },
+  {
+    id: "stained-plastic",
+    name: "양념·기름에 물든 배달용기",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "주방세제로 세척해도 붉은 고추기름이나 착색이 지워지지 않는 용기는 종량제 봉투에 담아 배출합니다.",
+    basis: "착색된 플라스틱은 재활용 펠릿 제조 시 품질 저하 및 불량의 주원인이 됨.",
+    keywords: ["배달용기", "떡볶이용기", "짬뽕국물", "기름때", "오염된플라스틱"]
+  },
+  {
+    id: "egg-shell",
+    name: "달걀·메추리알 껍데기",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "음식물 쓰레기가 아닌 일반 종량제 봉투에 넣어 배출합니다.",
+    basis: "탄산칼슘 성분의 딱딱한 석회질은 동물 사료화 및 퇴비화 분쇄 시설을 마모·파손시킴.",
+    keywords: ["계란껍질", "달걀껍데기", "알껍질", "메추리알"]
+  },
+  {
+    id: "animal-bone",
+    name: "소·돼지·닭 뼈 및 어패류 껍데기",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "살코기를 최대한 분리한 후 단단한 뼈와 조개·게 껍데기는 일반 종량제 봉투에 버립니다.",
+    basis: "사료화 처리 시 고속 분쇄기 칼날을 손상시키고 가축 섭취 시 장기 손상을 유발함.",
+    keywords: ["치킨뼈", "닭뼈", "갈비뼈", "조개껍데기", "굴껍질", "게껍질"]
+  },
+  {
+    id: "onion-peel",
+    name: "양파·마늘·생강 껍질 / 옥수수 수염",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "물기를 털어내고 일반 종량제 봉투에 담아 배출합니다.",
+    basis: "질긴 불용성 식이섬유질로 가축의 소화 능력을 떨어뜨려 사료 원료로 부적합 판정.",
+    keywords: ["양파껍질", "마늘껍질", "옥수수껍질", "옥수수수염", "생강껍질"]
+  },
+  {
+    id: "fruit-seed",
+    name: "복숭아·살구·자두 등 과일 씨앗",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "과육을 제거한 단단한 씨앗은 일반 종량제 봉투에 배출합니다.",
+    basis: "사료화 공정의 파쇄 장비를 파손시키며 자연 발효 및 부패 속도가 현저히 느림.",
+    keywords: ["복숭아씨", "자두씨", "살구씨", "감씨", "호두껍질"]
+  },
+  {
+    id: "sap-ice-pack",
+    name: "젤 아이스팩 (고흡수성수지 SAP)",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "포장지를 뜯지 않고 통째로 일반 종량제 봉투에 담아 버립니다. (싱크대 투기 절대 금지)",
+    basis: "고흡수성수지는 미세플라스틱의 일종으로 하수 처리장에서 걸러지지 않아 수생태계를 심각하게 오염시킴.",
+    keywords: ["아이스팩", "젤아이스팩", "고흡수성수지", "냉동팩"]
+  },
+  {
+    id: "water-ice-pack",
+    name: "친환경 물 아이스팩",
+    category: "recyclable",
+    categoryLabel: "비닐류 분리배출",
+    badgeVariant: "default",
+    method: "가위로 잘라 내부의 물은 싱크대에 버리고, 겉포장재 비닐은 비닐류로 분리배출합니다.",
+    basis: "순수 물로 충전된 팩은 내용물 하수 배출이 무해하며 외피 비닐은 열분해 재활용 가능.",
+    keywords: ["순수물팩", "종이아이스팩", "물아이스팩"]
+  },
+  {
+    id: "medication",
+    name: "유효기간 지난 폐의약품",
+    category: "special",
+    categoryLabel: "약국·보건소 전용 수거함",
+    badgeVariant: "destructive",
+    method: "알약은 포장재를 제거해 알약끼리 모으고, 물약은 밀봉하여 약국·보건소·주민센터 전용 수거함에 배출합니다.",
+    basis: "폐기물관리법 — 일반 투기나 하수구 배출 시 토양 및 지하수를 통해 생태계 교란과 항생제 내성균 유발.",
+    keywords: ["약", "알약", "감기약", "항생제", "물약", "연고", "폐의약품"]
+  },
+  {
+    id: "broken-glass",
+    name: "깨진 유리·거울·도자기·타일",
+    category: "non-combustible",
+    categoryLabel: "불연성 특수규격마대",
+    badgeVariant: "outline",
+    method: "두꺼운 신문지나 뽁뽁이로 감싼 후 지자체 불연성 마대(특수규격봉투)에 넣어 배출합니다.",
+    basis: "소각로에서 타지 않고 녹아 설비를 고장 내며, 종량제 봉투 파손 시 환경미화원 자상 사고 초래.",
+    keywords: ["유리", "깨진유리", "거울", "도자기", "그릇", "화분", "타일"]
+  },
+  {
+    id: "battery",
+    name: "폐건전지 및 충전지",
+    category: "special",
+    categoryLabel: "폐전지 전용 수거함",
+    badgeVariant: "destructive",
+    method: "동주민센터, 공동주택, 편의점 등에 비치된 폐전지 전용 수거함에 넣습니다.",
+    basis: "수은, 납, 카드뮴 등 유독 중금속 유출 방지 및 아연, 니켈, 망간 등 희유금속 회수.",
+    keywords: ["건전지", "배터리", "보조배터리", "수은전지"]
+  },
+  {
+    id: "pizza-box",
+    name: "기름에 젖은 피자·치킨 박스",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "음식물과 기름이 깊게 밴 종이 박스는 일반 종량제 봉투에 버립니다.",
+    basis: "유분 오염 종이는 재활용 해섬(pulping) 과정에서 섬유 결합을 방해하여 재생지 생산 불가.",
+    keywords: ["피자박스", "치킨박스", "기름종이", "오염된종이"]
+  },
+  {
+    id: "delivery-box",
+    name: "골판지 택배 상자",
+    category: "recyclable",
+    categoryLabel: "종이류 분리배출",
+    badgeVariant: "default",
+    method: "비닐 테이프, 운송장 스티커, 철핀을 완전히 제거한 후 납작하게 접어서 묶어 배출합니다.",
+    basis: "테이프의 아크릴 점착제는 재생 펄프 공정에서 지합 불량을 일으키는 최대 이물질.",
+    keywords: ["택배박스", "박스", "골판지", "종이상자"]
+  },
+  {
+    id: "receipt",
+    name: "영수증·전단지·사진류",
+    category: "general",
+    categoryLabel: "일반 종량제 봉투",
+    badgeVariant: "secondary",
+    method: "종이류가 아닌 일반 종량제 봉투에 배출합니다.",
+    basis: "감열지 화학약품(비스페놀A 등) 코팅 및 방수 비닐 코팅으로 인해 물에 풀리지 않아 재생 불가.",
+    keywords: ["영수증", "감열지", "전단지", "코팅지", "사진"]
+  },
+  {
+    id: "appliances",
+    name: "소형 폐가전 (드라이어·다리미 등)",
+    category: "special",
+    categoryLabel: "폐가전 무상수거 / 전용함",
+    badgeVariant: "destructive",
+    method: "주민센터 소형가전 전용함에 넣거나 5개 이상 모아 '폐가전 무상방문수거(1599-0903)'를 신청합니다.",
+    basis: "전자제품 등 자원순환법에 따라 제조·수입업자의 의무 회수 품목으로 규정.",
+    keywords: ["선풍기", "드라이어", "다리미", "밥솥", "청소기", "가전제품"]
+  }
+];
+---
+
+<div class="not-prose my-8 rounded-xl border border-border bg-card p-4 sm:p-6 shadow-xs" id="waste-sorter-root">
+  <div class="mb-4">
+    <div class="flex items-center gap-2">
+      <span class="inline-block h-2.5 w-2.5 rounded-full bg-primary" aria-hidden="true"></span>
+      <h3 class="text-lg font-bold tracking-tight text-foreground sm:text-xl">
+        생활 자원순환 품목별 배출 판별기
+      </h3>
+    </div>
+    <p class="mt-1 text-xs text-muted-foreground sm:text-sm">
+      버리려는 물품의 이름을 검색하거나 카테고리 탭을 선택하면 즉시 합법적 배출 경로와 법적 근거를 안내합니다.
+    </p>
+  </div>
+
+  <!-- Search & Category Filters -->
+  <div class="space-y-3">
+    <div class="relative">
+      <input
+        type="search"
+        id="waste-search-input"
+        placeholder="물품명 검색 (예: 달걀껍질, 깨진유리, 아이스팩, 영수증...)"
+        class="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        aria-label="생활 폐기물 품목 검색"
+      />
+    </div>
+
+    <div class="flex flex-wrap gap-1.5" role="tablist" aria-label="배출 분류 필터">
+      <button
+        type="button"
+        data-filter-btn
+        class="rounded-md border border-primary bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+        data-filter="all"
+      >
+        전체 보기
+      </button>
+      <button
+        type="button"
+        data-filter-btn
+        class="rounded-md border border-border bg-muted/60 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted transition-colors"
+        data-filter="general"
+      >
+        일반 종량제
+      </button>
+      <button
+        type="button"
+        data-filter-btn
+        class="rounded-md border border-border bg-muted/60 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted transition-colors"
+        data-filter="recyclable"
+      >
+        재활용 (페트·플라스틱·종이)
+      </button>
+      <button
+        type="button"
+        data-filter-btn
+        class="rounded-md border border-border bg-muted/60 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted transition-colors"
+        data-filter="non-combustible"
+      >
+        불연성 마대
+      </button>
+      <button
+        type="button"
+        data-filter-btn
+        class="rounded-md border border-border bg-muted/60 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted transition-colors"
+        data-filter="special"
+      >
+        전용 수거함 (약품·전지·가전)
+      </button>
+    </div>
+  </div>
+
+  <!-- Results Count -->
+  <div class="mt-4 flex items-center justify-between border-b border-border pb-2 text-xs text-muted-foreground">
+    <span id="waste-result-count">총 {wasteItems.length}개 품목 안내</span>
+    <span class="text-xs">기준: 환경부 자원순환포털 및 폐기물관리법</span>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="mt-4 grid gap-3 sm:grid-cols-2" id="waste-items-grid">
+    {wasteItems.map((item) => (
+      <div
+        data-waste-card
+        class="flex flex-col justify-between rounded-lg border border-border bg-background p-3.5 transition-shadow hover:shadow-xs"
+        data-category={item.category}
+        data-keywords={`${item.name} ${item.keywords.join(" ")} ${item.categoryLabel} ${item.method}`}
+      >
+        <div>
+          <div class="flex items-start justify-between gap-2">
+            <h4 class="text-sm font-bold text-foreground">
+              {item.name}
+            </h4>
+            <span
+              class:list={[
+                "inline-flex shrink-0 items-center rounded-md px-2 py-0.5 text-xs font-semibold tracking-tight",
+                item.category === "recyclable" && "bg-primary/10 text-primary border border-primary/20",
+                item.category === "general" && "bg-muted text-muted-foreground border border-border",
+                item.category === "non-combustible" && "bg-warning/10 text-warning border border-warning/20",
+                item.category === "special" && "bg-destructive/10 text-destructive border border-destructive/20"
+              ]}
+            >
+              {item.categoryLabel}
+            </span>
+          </div>
+          <p class="mt-2 text-xs leading-relaxed text-foreground/90">
+            <strong class="font-semibold text-foreground">배출 요령:</strong> {item.method}
+          </p>
+        </div>
+        <div class="mt-2.5 rounded border border-border/50 bg-muted/30 p-2 text-xs leading-normal text-muted-foreground">
+          <strong class="font-medium text-foreground/80">공학·법적 근거:</strong> {item.basis}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div id="waste-no-results" class="hidden py-8 text-center text-sm text-muted-foreground">
+    검색어와 일치하는 품목이 없습니다. 정확한 규격은 해당 시·군·구청 폐기물과 조례를 확인해 주세요.
+  </div>
+</div>
+
+<script>
+  function setupWasteSorter() {
+    const root = document.getElementById("waste-sorter-root");
+    if (!root) return;
+
+    const input = root.querySelector<HTMLInputElement>("#waste-search-input");
+    const filterBtns = root.querySelectorAll<HTMLButtonElement>("[data-filter-btn]");
+    const cards = root.querySelectorAll<HTMLElement>("[data-waste-card]");
+    const countEl = root.querySelector<HTMLElement>("#waste-result-count");
+    const noResultsEl = root.querySelector<HTMLElement>("#waste-no-results");
+
+    let currentFilter = "all";
+    let searchQuery = "";
+
+    function update() {
+      let visibleCount = 0;
+      const q = searchQuery.toLowerCase().trim();
+
+      cards.forEach((card) => {
+        const cat = card.dataset.category || "";
+        const kw = (card.dataset.keywords || "").toLowerCase();
+
+        const matchesCat = currentFilter === "all" || cat === currentFilter;
+        const matchesQuery = !q || kw.includes(q);
+
+        if (matchesCat && matchesQuery) {
+          card.classList.remove("hidden");
+          visibleCount++;
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      if (countEl) {
+        countEl.textContent = `검색 결과 ${visibleCount}개 품목`;
+      }
+
+      if (noResultsEl) {
+        if (visibleCount === 0) {
+          noResultsEl.classList.remove("hidden");
+        } else {
+          noResultsEl.classList.add("hidden");
+        }
+      }
+    }
+
+    if (input) {
+      input.addEventListener("input", (e) => {
+        searchQuery = (e.target as HTMLInputElement).value;
+        update();
+      });
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => {
+          b.classList.remove("bg-primary", "text-primary-foreground", "border-primary", "font-semibold");
+          b.classList.add("bg-muted/60", "text-foreground", "border-border", "font-medium");
+        });
+
+        btn.classList.remove("bg-muted/60", "text-foreground", "border-border", "font-medium");
+        btn.classList.add("bg-primary", "text-primary-foreground", "border-primary", "font-semibold");
+
+        currentFilter = btn.dataset.filter || "all";
+        update();
+      });
+    });
+  }
+
+  // Handle both initial load and client-side page transitions
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupWasteSorter);
+  } else {
+    setupWasteSorter();
+  }
+  document.addEventListener("astro:page-load", setupWasteSorter);
+</script>

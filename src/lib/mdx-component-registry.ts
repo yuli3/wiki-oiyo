@@ -40,6 +40,9 @@ import KeynesianCross from "../components/mdx/KeynesianCross.astro";
 import OrgChart from "../components/mdx/OrgChart.astro";
 import PolicyCycle from "../components/mdx/PolicyCycle.astro";
 import MdxContentHeading from "../components/mdx/MdxContentHeading.astro";
+import WasteSorter from "../components/mdx/WasteSorter.astro";
+import WindChillSlider from "../components/mdx/WindChillSlider.astro";
+import AcademicCalendarBar from "../components/mdx/AcademicCalendarBar.astro";
 
 import {
   LectureTable,
@@ -213,6 +216,9 @@ const diagramComponents = {
   ConceptCard,
   OrgChart,
   PolicyCycle,
+  WasteSorter,
+  WindChillSlider,
+  AcademicCalendarBar,
 };
 
 const chartsAndMathComponents = {
