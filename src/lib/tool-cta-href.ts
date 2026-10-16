@@ -2,11 +2,11 @@
  * Family-first ToolCTA / ToolCTAInline href resolution.
  * Never fall back to ahoxy.com (content-less 301 shell).
  */
-import { BLOG_URL, GAME_URL, OIYO_URL } from "../config/site.config.ts";
+import { BLOG_URL, GAME_URL, OIYO_URL, TOOLS_URL } from "../config/site.config.ts";
 
 const UTM = "utm_source=blog_oiyo&utm_medium=referral&utm_campaign=tool_cta";
 
-/** Absolute family surfaces (oiyo tests, game arcade) when blog is not the owner. */
+/** Absolute family surfaces (oiyo tests, game arcade, tools utility hub) when blog is not the owner. */
 export const TOOL_CTA_FAMILY_OVERRIDES: Record<string, (locale: string) => string> = {
   mbti: (l) => `${OIYO_URL}/${l}/mbti/test?${UTM}`,
   riasec: (l) => `${OIYO_URL}/${l}/riasec-career-test?${UTM}`,
@@ -25,6 +25,12 @@ export const TOOL_CTA_FAMILY_OVERRIDES: Record<string, (locale: string) => strin
   investment: (l) => `${OIYO_URL}/${l}/investment-type/test?${UTM}`,
   chess: (l) => `${GAME_URL}/${l}/chess/`,
   gomoku: (l) => `${GAME_URL}/${l}/gomoku/`,
+  "waste-sorter": (l) => `${TOOLS_URL}/${l}/waste-sorter/`,
+  "wind-chill": (l) => `${TOOLS_URL}/${l}/wind-chill-calculator/`,
+  "business-day": (l) => `${TOOLS_URL}/${l}/business-day-checker/`,
+  "net-salary": (l) => `${TOOLS_URL}/${l}/net-salary-calculator/`,
+  "severance-pay-calc": (l) => `${TOOLS_URL}/${l}/severance-pay-calculator/`,
+  "annual-leave-calc": (l) => `${TOOLS_URL}/${l}/annual-leave-calculator/`,
 };
 
 /**

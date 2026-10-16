@@ -296,6 +296,23 @@ const wasteItems: WasteItem[] = [
   <div id="waste-no-results" class="hidden py-8 text-center text-sm text-muted-foreground">
     검색어와 일치하는 품목이 없습니다. 정확한 규격은 해당 시·군·구청 폐기물과 조례를 확인해 주세요.
   </div>
+
+  <!-- Tools 연계 콜아웃 -->
+  <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-lg border border-primary/20 bg-primary/5 p-4 text-xs">
+    <div class="space-y-0.5 text-center sm:text-left">
+      <div class="font-bold text-foreground">💡 전용 분리배출 스마트 검색기</div>
+      <div class="text-muted-foreground">환경부 고시 및 폐기물관리법 16대 생활 품목 즉시 조회 (100% 클라이언트 연산)</div>
+    </div>
+    <a
+      href="https://tools.oiyo.net/ko/waste-sorter/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 font-bold text-primary-foreground hover:bg-primary/90 transition shadow-xs whitespace-nowrap"
+    >
+      <span>OIYO tools 분리배출기 열기</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
 </div>
 
 <script>

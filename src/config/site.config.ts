@@ -1,6 +1,8 @@
 export const OIYO_URL = 'https://oiyo.net';
 export const BLOG_URL = 'https://blog.oiyo.net';
 export const GAME_URL = 'https://game.oiyo.net';
+export const TOOLS_URL = 'https://tools.oiyo.net';
+export const API_URL = 'https://api.oiyo.net';
 
 export const siteConfig = {
   name: "Oiyo Wiki",

@@ -125,31 +125,31 @@ const courses = [...seriesMap.values()];
 
 <BaseLayout title={title} description={intro}>
   <div class="mx-auto max-w-4xl px-4 py-10">
-    <nav class="mb-4 text-xs text-green-700/70" aria-label="Breadcrumb">
+    <nav class="mb-4 text-xs text-muted-foreground" aria-label="Breadcrumb">
       <a class="hover:underline" href={`/${locale}`}>{copy.home}</a> <span class="mx-1">›</span>
       <span class="font-semibold">{copy.current}</span>
     </nav>
-    <h1 class="text-3xl font-black text-green-950">{title}</h1>
-    <p class="mt-2 text-sm text-green-700">{intro}</p>
+    <h1 class="text-3xl font-black text-foreground">{title}</h1>
+    <p class="mt-2 text-sm text-muted-foreground">{intro}</p>
 
     {courses.length > 0 && (
       <section class="mt-8">
-        <h2 class="mb-1 flex items-baseline gap-2 text-xl font-black text-green-900">
-          {copy.academyTitle} <span class="text-sm font-medium text-green-600">{academyPosts.length}</span>
+        <h2 class="mb-1 flex items-baseline gap-2 text-xl font-black text-foreground">
+          {copy.academyTitle} <span class="text-sm font-medium text-primary">{academyPosts.length}</span>
         </h2>
-        <p class="mb-4 text-xs text-green-700">{copy.academyIntro}</p>
+        <p class="mb-4 text-xs text-muted-foreground">{copy.academyIntro}</p>
         <div class="grid gap-4 sm:grid-cols-3">
           {courses.map((course) => (
-            <div class="rounded-xl border border-green-200 bg-card p-4 shadow-none">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-green-800 bg-green-100/70 px-2 py-0.5 rounded border border-green-200">
+            <div class="rounded-xl border border-border bg-card p-4 shadow-none">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
                 {catLabel(course.category)}
               </span>
-              <h3 class="mt-2 text-base font-black text-green-950">{course.title}</h3>
-              <ul class="mt-3 divide-y divide-green-100 text-xs">
+              <h3 class="mt-2 text-base font-black text-foreground">{course.title}</h3>
+              <ul class="mt-3 divide-y divide-border text-xs">
                 {course.posts.map((cp) => (
                   <li class="py-1.5">
-                    <a href={`/${locale}/${slugOf(cp.slug)}/`} class="group flex items-start gap-1.5 text-foreground hover:text-green-800">
-                      <span class="font-bold text-green-700 shrink-0">{cp.data.chapter ? `${cp.data.chapter}장.` : "•"}</span>
+                    <a href={`/${locale}/${slugOf(cp.slug)}/`} class="group flex items-start gap-1.5 text-foreground hover:text-primary">
+                      <span class="font-bold text-primary shrink-0">{cp.data.chapter ? `${cp.data.chapter}장.` : "•"}</span>
                       <span class="line-clamp-1 group-hover:underline">{cp.data.chapterTitleShort ?? cp.data.title}</span>
                     </a>
                   </li>
@@ -162,8 +162,8 @@ const courses = [...seriesMap.values()];
     )}
 
     <section class="mt-10">
-      <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-green-900">
-        {copy.dictionary} <span class="text-sm font-medium text-green-600">{dict.length}</span>
+      <h2 class="mb-3 flex items-baseline gap-2 text-xl font-black text-foreground">
+        {copy.dictionary} <span class="text-sm font-medium text-primary">{dict.length}</span>
       </h2>
       <div class="grid gap-2 sm:grid-cols-2">
         {dictCats.map(([cat, n]) => (
@@ -177,24 +177,24 @@ const courses = [...seriesMap.values()];
     </section>
 
     {/* OIYO 지식 네트워크 — 정의(wiki)→설명(blog)→실행(oiyo) 크로스도메인 */}
-    <section class="mt-12 rounded-2xl border border-green-100 bg-green-50/40 p-5">
-      <h2 class="mb-1 text-lg font-black text-green-950">{locale === "ko" ? "OIYO 지식 네트워크" : "OIYO Knowledge Network"}</h2>
-      <p class="mb-3 text-sm text-green-700">{locale === "ko" ? "한 주제를 정의 → 설명 → 실행으로 잇습니다." : "Each topic connects: definition → explanation → tool."}</p>
+    <section class="mt-12 rounded-2xl border border-border bg-muted/40 p-5">
+      <h2 class="mb-1 text-lg font-black text-foreground">{locale === "ko" ? "OIYO 지식 네트워크" : "OIYO Knowledge Network"}</h2>
+      <p class="mb-3 text-sm text-muted-foreground">{locale === "ko" ? "한 주제를 정의 → 설명 → 실행으로 잇습니다." : "Each topic connects: definition → explanation → tool."}</p>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div class="rounded-xl border border-green-200 bg-card p-4">
-          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "정의" : "Definition"}</div>
-          <div class="mt-1 font-bold text-green-950">wiki.oiyo.net</div>
-          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "지금 보고 있는 사전" : "the dictionary you're in"}</div>
+        <div class="rounded-xl border border-border bg-card p-4">
+          <div class="text-xs font-bold uppercase tracking-widest text-primary">{locale === "ko" ? "정의" : "Definition"}</div>
+          <div class="mt-1 font-bold text-foreground">wiki.oiyo.net</div>
+          <div class="mt-1 text-xs text-muted-foreground">{locale === "ko" ? "지금 보고 있는 사전" : "the dictionary you're in"}</div>
         </div>
-        <a href={`https://blog.oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-card p-4 transition-colors hover:border-green-400 hover:bg-green-50">
-          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "설명" : "Explanation"}</div>
-          <div class="mt-1 font-bold text-green-950">blog.oiyo.net →</div>
-          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "글로 더 읽기" : "more reading"}</div>
+        <a href={`https://blog.oiyo.net/${locale}/`} class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary hover:bg-muted/50">
+          <div class="text-xs font-bold uppercase tracking-widest text-primary">{locale === "ko" ? "설명" : "Explanation"}</div>
+          <div class="mt-1 font-bold text-foreground">blog.oiyo.net →</div>
+          <div class="mt-1 text-xs text-muted-foreground">{locale === "ko" ? "글로 더 읽기" : "more reading"}</div>
         </a>
-        <a href={`https://oiyo.net/${locale}/`} class="rounded-xl border border-green-200 bg-card p-4 transition-colors hover:border-green-400 hover:bg-green-50">
-          <div class="text-xs font-bold uppercase tracking-widest text-green-600">{locale === "ko" ? "실행" : "Tools"}</div>
-          <div class="mt-1 font-bold text-green-950">oiyo.net →</div>
-          <div class="mt-1 text-xs text-green-700">{locale === "ko" ? "테스트·계산기로 직접" : "tests & calculators"}</div>
+        <a href={`https://oiyo.net/${locale}/`} class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary hover:bg-muted/50">
+          <div class="text-xs font-bold uppercase tracking-widest text-primary">{locale === "ko" ? "실행" : "Tools"}</div>
+          <div class="mt-1 font-bold text-foreground">oiyo.net →</div>
+          <div class="mt-1 text-xs text-muted-foreground">{locale === "ko" ? "테스트·계산기로 직접" : "tests & calculators"}</div>
         </a>
       </div>
     </section>
