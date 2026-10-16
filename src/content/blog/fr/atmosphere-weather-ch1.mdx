@@ -1,0 +1,37 @@
+---
+title: "Atmosphère et Météo en Corée — Ch 1: Physique du Refroidissement Éolien (Vagues de Froid)"
+description: "Modèle mathématique JAG/TI adopté par l'Administration Météorologique Coréenne (KMA), dynamique thermique de la peau face au vent sibérien et alertes officielles de grand froid."
+pubDate: 2026-10-16
+tags: ["temperature-ressentie", "refroidissement-eolien", "meteo-coree", "vague-de-froid", "sciences-atmospheriques"]
+category: "Natural Science"
+track: "academy"
+series: "atmosphere-weather"
+chapter: 1
+chapterTitleShort: "Refroidissement Éolien et Vagues de Froid"
+locale: "fr"
+market: "EU"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "localized"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+# Atmosphère et Météo en Corée — Chapitre 1: Physique du Refroidissement Éolien
+
+Pendant l'hiver à Séoul, un thermomètre affichant -5°C peut provoquer une sensation thermique proche de -15°C sous les assauts du vent du nord-ouest en provenance de Sibérie. La quantification de ce phénomène repose sur la **température ressentie (Wind Chill Index)**.
+
+L'Administration Météorologique Coréenne (KMA) applique la formule conjointe JAG/TI (Joint Action Group for Temperature Indices), établie à partir d'expériences en soufflerie mesurant la perte thermique sur un visage humain adulte (0,13 m²) à une vitesse de marche de 4,8 km/h.
+
+## Formule JAG/TI de la KMA
+
+$$Twc = 13.12 + 0.6215Ta - 11.37V^{0.16} + 0.3965TaV^{0.16}$$
+
+Où $Ta$ désigne la température de l'air à 1,5 mètre du sol (°C) et $V$ la vitesse du vent à 10 mètres d'altitude (km/h). L'exposant 0,16 traduit une non-linéarité prononcée : dès les premiers mètres par seconde, la couche limite isolante d'air entourant le corps est arrachée, provoquant une chute brutale de la température cutanée.
+
+<WindChillSlider />
+
+## Seuils des Alertes Météo aux Vagues de Froid
+
+- **Vigilance Grand Froid** : Baisse de plus de 10°C de la température minimale par rapport à la veille pour atteindre 3°C ou moins, ou température minimale sous -12°C prévue pendant au moins 2 jours consécutifs.
+- **Alerte Grand Froid** : Baisse de plus de 15°C pour atteindre 3°C ou moins, ou température minimale sous -15°C pendant 2 jours consécutifs.
