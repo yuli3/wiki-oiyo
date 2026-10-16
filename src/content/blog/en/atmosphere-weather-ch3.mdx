@@ -1,0 +1,52 @@
+---
+title: "Atmosphere, Climate, and Weather Warnings — Chapter 3: Wind Chill Index and Summer Heat Index Formulations"
+description: "The biometeorological physics of sensible temperature: convective boundary layer stripping (JAG/TI wind chill model) and evaporative cooling inhibition in summer."
+pubDate: 2026-10-16
+tags: ["atmosphere-weather", "wind-chill", "heat-index", "biometeorology", "perceived-temperature"]
+category: "natural-science"
+track: "academy"
+series: "atmosphere-weather"
+chapter: 3
+chapterTitleShort: "Wind Chill & Heat Index"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+Thermometers measure dry-bulb kinetic air temperature. However, living biological organisms do not experience raw air temperature in a vacuum. Instead, humans sense the **net rate of heat flux leaving or entering the dermal boundary layer**.
+
+The **Perceived Temperature** (sensible temperature) models this dynamic equilibrium, dividing into two complementary seasonal regimes: **Wind Chill Index** in winter and **Heat Index** in summer.
+
+<WindChillSlider />
+
+---
+
+## 1. Winter Wind Chill: The JAG/TI Convective Model
+
+In freezing weather, resting human skin maintains a microscopic microclimate: an insulating, motionless boundary layer of air heated by dermal metabolic perfusion. When winter winds blow, turbulent air currents strip this thermal cushion away, dramatically accelerating convective heat loss.
+
+The Korea Meteorological Administration (KMA), the U.S. National Weather Service (NWS), and Environment Canada officially calculate winter wind chill using the **JAG/TI (Joint Action Group for Temperature Indices) empirical formula**:
+
+$$Twc = 13.12 + 0.6215\,T - 11.37\,V^{0.16} + 0.3965\,T\,V^{0.16}$$
+
+Where:
+- $Twc$: Wind chill equivalent temperature (°C)
+- $T$: Ambient dry-bulb air temperature (°C, validated for $T \le 10^\circ C$)
+- $V$: Wind velocity measured at standard anemometer height of 10 meters ($km/h$, validated for $V \ge 4.8\,km/h$)
+
+The non-linear exponent $0.16$ represents empirical skin surface heat transfer mechanics derived from twelve human clinical trials. At low wind speeds, slight gusts cause massive sensible temperature drops; at higher speeds, the cooling curve levels off.
+
+---
+
+## 2. Summer Heat Index: Evaporative Cooling Breakdown
+
+In hot weather ($T \ge 27^\circ C$), ambient air often exceeds skin temperature ($33^\circ C$). Under these conditions, the body can no longer shed heat via radiation or convection. The sole physiological mechanism available to prevent core hyperthermia is **sweat evaporation**.
+
+The latent heat of vaporization of water removes approximately 2.4 kilojoules per gram of sweat evaporated. However, when ambient relative humidity ($RH$) is elevated:
+1. High atmospheric vapor pressure suppresses the dermal evaporation rate.
+2. Sweat beads up and drips off without cooling the skin.
+3. Core body temperature climbs, causing heat exhaustion or fatal heatstroke.
