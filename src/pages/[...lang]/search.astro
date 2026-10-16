@@ -44,6 +44,34 @@ const crossLabels = ({
   heading: "Search more on our other sites", target: "Search OIYO Blog", oiyo: "Browse OIYO tests" };
 const crossSearchBase = `https://blog.oiyo.net/${locale}/search/`;
 
+const popularMap: Record<string, { label: string; keywords: string[] }> = {
+  ko: {
+    label: "추천 검색어",
+    keywords: ["근로계약서", "주휴수당", "퇴직금", "학년도", "미세먼지", "쓰레기배출"],
+  },
+  en: {
+    label: "Popular topics",
+    keywords: ["Labor Law", "Academic Calendar", "Weather", "Waste Management"],
+  },
+  ja: {
+    label: "人気の検索ワード",
+    keywords: ["労働法", "学年度", "気象", "ゴミ排出"],
+  },
+  zh: {
+    label: "热门搜索",
+    keywords: ["劳动法", "学年度", "气象", "垃圾分类"],
+  },
+  fr: {
+    label: "Sujets populaires",
+    keywords: ["Droit du travail", "Calendrier scolaire", "Météo"],
+  },
+  es: {
+    label: "Temas populares",
+    keywords: ["Derecho laboral", "Calendario escolar", "Clima"],
+  },
+};
+const popular = popularMap[locale as string] ?? popularMap.en;
+
 const searchLabels = {
   title: translations.search.title,
   placeholder: translations.search.placeholder,
@@ -57,14 +85,39 @@ const searchLabels = {
     <h1 class="text-4xl font-extrabold tracking-tight mb-10">{searchLabels.title}</h1>
 
     <div id="search-root" data-index={JSON.stringify(searchIndex)} data-labels={JSON.stringify(searchLabels)}>
-      <input
-        id="search-input"
-        type="search"
-        placeholder={searchLabels.placeholder}
-        class="w-full rounded-xl border border-border bg-card px-4 py-3 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50 mb-6"
-        autofocus
-        aria-label={searchLabels.placeholder}
-      />
+      <div class="relative w-full mb-3">
+        <input
+          id="search-input"
+          type="search"
+          placeholder={searchLabels.placeholder}
+          class="w-full rounded-xl border border-border bg-card pl-4 pr-10 py-3 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+          autofocus
+          aria-label={searchLabels.placeholder}
+        />
+        <button
+          id="search-clear"
+          type="button"
+          class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground text-sm font-bold w-6 h-6 flex items-center justify-center rounded-full hover:bg-muted"
+          aria-label="Clear search"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div id="popular-chips" class="flex flex-wrap items-center gap-1.5 mb-6">
+        <span class="text-xs text-muted-foreground mr-1 font-medium">{popular.label}:</span>
+        {popular.keywords.map((kw) => (
+          <button
+            type="button"
+            data-chip="true"
+            data-query={kw}
+            class="rounded-lg border border-border bg-card px-2.5 py-1 text-xs text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer"
+          >
+            {kw}
+          </button>
+        ))}
+      </div>
+
       <div id="search-meta" class="text-sm text-muted-foreground mb-4 min-h-[1.25rem]"></div>
       <ul id="search-results" class="space-y-4" role="list" aria-live="polite" aria-atomic="true"></ul>
 
@@ -106,6 +159,7 @@ const searchLabels = {
         const index: SearchItem[] = JSON.parse(root.dataset.index || "[]");
         const labels: SearchLabels = JSON.parse(root.dataset.labels || "{}");
         const input = document.getElementById("search-input") as HTMLInputElement | null;
+        const clearBtn = document.getElementById("search-clear") as HTMLButtonElement | null;
         const resultsList = document.getElementById("search-results") as HTMLUListElement | null;
         const metaEl = document.getElementById("search-meta") as HTMLDivElement | null;
 
@@ -125,7 +179,10 @@ const searchLabels = {
             minMatchCharLength: 2,
           });
           const q = new URLSearchParams(window.location.search).get("q");
-          if (q && input) { input.value = q; runSearch(q); }
+          if (q && input) {
+            input.value = q;
+            runSearch(q);
+          }
         }
 
         function renderResults(results: FuseResult<SearchItem>[], query: string): void {
@@ -159,6 +216,18 @@ const searchLabels = {
             desc.textContent = item.description;
             a.appendChild(desc);
 
+            if (item.tags && item.tags.length > 0) {
+              const tagsWrapper = document.createElement("div");
+              tagsWrapper.className = "flex flex-wrap gap-1 mt-2";
+              for (const tag of item.tags.slice(0, 4)) {
+                const tagSpan = document.createElement("span");
+                tagSpan.className = "text-[10px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground";
+                tagSpan.textContent = `#${tag}`;
+                tagsWrapper.appendChild(tagSpan);
+              }
+              a.appendChild(tagsWrapper);
+            }
+
             const time = document.createElement("time");
             time.className = "text-[11px] text-muted-foreground/60 mt-2 block";
             time.textContent = item.pubDate;
@@ -171,22 +240,43 @@ const searchLabels = {
 
         function runSearch(query: string): void {
           if (!fuse || !resultsList || !metaEl) return;
-          if (!query.trim()) {
+          const trimmed = query.trim();
+
+          if (clearBtn) {
+            clearBtn.classList.toggle("hidden", !trimmed);
+          }
+
+          document.querySelectorAll("[data-chip]").forEach((btn) => {
+            const chipQ = (btn as HTMLElement).dataset.query;
+            const isMatch = chipQ && trimmed && (chipQ === trimmed || trimmed.includes(chipQ));
+            btn.classList.toggle("border-primary", Boolean(isMatch));
+            btn.classList.toggle("text-primary", Boolean(isMatch));
+          });
+
+          if (!trimmed) {
             resultsList.innerHTML = "";
             metaEl.textContent = "";
+            const cross = document.getElementById("cross-search");
+            if (cross) cross.classList.add("hidden");
+            const url = new URL(window.location.href);
+            url.searchParams.delete("q");
+            history.replaceState(null, "", url.pathname);
             return;
           }
-          const results = fuse.search(query);
-          renderResults(results, query);
+
+          const results = fuse.search(trimmed);
+          renderResults(results, trimmed);
+
           const cross = document.getElementById("cross-search");
           const crossLink = document.getElementById("cross-search-link") as HTMLAnchorElement | null;
           if (cross && crossLink) {
-            cross.classList.toggle("hidden", !query.trim());
+            cross.classList.remove("hidden");
             const base = crossLink.href.split("?")[0];
-            crossLink.href = `${base}?q=${encodeURIComponent(query.trim())}`;
+            crossLink.href = `${base}?q=${encodeURIComponent(trimmed)}`;
           }
+
           const url = new URL(window.location.href);
-          url.searchParams.set("q", query);
+          url.searchParams.set("q", trimmed);
           history.replaceState(null, "", url.toString());
         }
 
@@ -194,9 +284,36 @@ const searchLabels = {
         if (input) {
           input.addEventListener("input", (e) => {
             clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(() => runSearch((e.target as HTMLInputElement).value), 200);
+            debounceTimer = setTimeout(() => runSearch((e.target as HTMLInputElement).value), 150);
+          });
+          input.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+              input.value = "";
+              runSearch("");
+            }
           });
         }
+
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            if (input) {
+              input.value = "";
+              input.focus();
+              runSearch("");
+            }
+          });
+        }
+
+        document.querySelectorAll("[data-chip]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const q = (btn as HTMLElement).dataset.query || "";
+            if (input) {
+              input.value = q;
+              input.focus();
+              runSearch(q);
+            }
+          });
+        });
 
         initFuse();
       }
