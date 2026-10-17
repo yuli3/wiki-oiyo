@@ -135,7 +135,12 @@
       "Statistics": "통계학",
       "Tax": "세금",
       "Technical Analysis": "기술적 분석",
-      "Zoology": "동물학"
+      "Zoology": "동물학",
+      "finance": "금융",
+      "consumer": "소비자",
+      "Consumer": "소비자",
+      "education": "교육",
+      "natural-science": "자연과학"
     }
   },
   "legal": {

@@ -139,7 +139,7 @@ export const GET: APIRoute = async () => {
         ? "Catalog of defined terms published on Oiyo Wiki, each with its definition and a stable canonical URL. topicOwnership lists which Oiyo site owns each topic."
         : "No defined terms are published on Oiyo Wiki at this time, so hasDefinedTerm is empty. topicOwnership is routing data only: it lists which Oiyo site owns each topic and carries no definitions.",
     publisher: { "@type": "Organization", name: siteConfig.seo.organization.name },
-    license: `${siteConfig.url}/en/about`,
+    license: `${siteConfig.url}/en/about/`,
     dateModified: new Date().toISOString(),
     count: topics.length,
     hubCount: topicOwnership.length,

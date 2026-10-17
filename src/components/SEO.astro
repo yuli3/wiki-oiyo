@@ -207,7 +207,7 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
   <meta property="article:modified_time" content={(updatedDate ?? pubDate)!.toISOString()} />
 )}
 {type === "article" && (
-  <meta property="article:author" content={`${siteConfig.url}/en/about`} />
+  <meta property="article:author" content={`${siteConfig.url}/${currentLocaleSegment}/about/`} />
 )}
 {type === "article" && category && (
   <meta property="article:section" content={category} />
@@ -341,7 +341,8 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
         author: {
           "@type": getAuthor(author).schemaType,
           name: author,
-          url: `${siteConfig.url}/about`,
+          // /about 은 빌드되지 않는다(404). 소개 페이지는 로케일 경로에만 있다(2026-10-17 감사 C).
+          url: `${siteConfig.url}/${currentLocaleSegment}/about/`,
         },
         publisher: {
           "@type": "Organization",
