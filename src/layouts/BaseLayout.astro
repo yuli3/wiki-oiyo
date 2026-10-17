@@ -1,5 +1,6 @@
 ---
 import SEO from "../components/SEO.astro";
+import ManualAds from "../components/ads/ManualAds.astro";
 import { getLocaleFromPath, getTranslations } from "../lib/i18n";
 import { siteConfig } from "../config/site.config";
 import "../styles/global.css";
@@ -415,6 +416,7 @@ const knowledgeMission = ({
 
     <main id="main-content" role="main" class="flex-1">
       <slot />
+      <ManualAds locale={locale} noindex={noindex} />
     </main>
 
     <!-- Back to top button -->
