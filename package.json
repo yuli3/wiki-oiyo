@@ -2,6 +2,8 @@
   "name": "wiki-oiyo",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "verify:current-routes": "node scripts/verify-current-routes.mjs",
     "verify:current-routes:live": "node scripts/verify-current-routes.mjs --live",

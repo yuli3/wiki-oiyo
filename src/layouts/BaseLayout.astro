@@ -95,13 +95,13 @@ const langItems = availableLocales && availableLocales.length
   : allLangItems;
 const currentLangItem = langItems.find((li) => li.code === locale) ?? allLangItems.find((li) => li.code === locale);
 
-const footerCopy: Record<string, { site: string; family: string; utility: string; knowledge: string; sitemap: string; support: string }> = {
-  en: { site: "Wiki", family: "OIYO family", utility: "Information", knowledge: "Knowledge index", sitemap: "Sitemap", support: "Support OIYO" },
-  ko: { site: "위키", family: "OIYO 패밀리", utility: "안내", knowledge: "지식 목록", sitemap: "사이트맵", support: "OIYO 후원" },
-  ja: { site: "ウィキ", family: "OIYOファミリー", utility: "ご案内", knowledge: "知識一覧", sitemap: "サイトマップ", support: "OIYOを支援" },
-  zh: { site: "维基", family: "OIYO 系列", utility: "信息", knowledge: "知识索引", sitemap: "网站地图", support: "支持 OIYO" },
-  fr: { site: "Wiki", family: "Famille OIYO", utility: "Informations", knowledge: "Index des connaissances", sitemap: "Plan du site", support: "Soutenir OIYO" },
-  es: { site: "Wiki", family: "Familia OIYO", utility: "Información", knowledge: "Índice de conocimiento", sitemap: "Mapa del sitio", support: "Apoyar OIYO" },
+const footerCopy: Record<string, { site: string; family: string; utility: string; knowledge: string; sitemap: string; support: string; license: string }> = {
+  en: { site: "Wiki", family: "OIYO family", utility: "Information", knowledge: "Knowledge index", sitemap: "Sitemap", support: "Support OIYO", license: "License" },
+  ko: { site: "위키", family: "OIYO 패밀리", utility: "안내", knowledge: "지식 목록", sitemap: "사이트맵", support: "OIYO 후원", license: "라이선스" },
+  ja: { site: "ウィキ", family: "OIYOファミリー", utility: "ご案内", knowledge: "知識一覧", sitemap: "サイトマップ", support: "OIYOを支援", license: "ライセンス" },
+  zh: { site: "维基", family: "OIYO 系列", utility: "信息", knowledge: "知识索引", sitemap: "网站地图", support: "支持 OIYO", license: "许可协议" },
+  fr: { site: "Wiki", family: "Famille OIYO", utility: "Informations", knowledge: "Index des connaissances", sitemap: "Plan du site", support: "Soutenir OIYO", license: "Licence" },
+  es: { site: "Wiki", family: "Familia OIYO", utility: "Información", knowledge: "Índice de conocimiento", sitemap: "Mapa del sitio", support: "Apoyar OIYO", license: "Licencia" },
 };
 const footerLabels = footerCopy[locale] ?? footerCopy.en;
 const knowledgeMission = ({
@@ -468,7 +468,7 @@ const knowledgeMission = ({
         </section>
       </div>
       <div class="container mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-border px-4 pt-5 text-xs text-muted-foreground">
-        <span>© {new Date().getFullYear()} Oiyo Tech</span>
+        <span>© {new Date().getFullYear()} Oiyo Tech · <a href={`https://blog.oiyo.net/${locale}/license/`} class="hover:text-primary">{footerLabels.license}</a></span>
         <a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
       </div>
     </footer>
