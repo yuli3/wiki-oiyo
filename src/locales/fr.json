@@ -135,7 +135,12 @@
       "Statistics": "Statistiques",
       "Tax": "Fiscalité",
       "Technical Analysis": "Analyse technique",
-      "Zoology": "Zoologie"
+      "Zoology": "Zoologie",
+      "finance": "Finance",
+      "consumer": "Consommation",
+      "Consumer": "Consommation",
+      "education": "Éducation",
+      "natural-science": "Sciences naturelles"
     }
   },
   "legal": {

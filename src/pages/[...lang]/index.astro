@@ -88,8 +88,7 @@ const recent = terms
     reviewedDate: asISO(e.data.reviewedDate),
   }));
 
-// 책장(2026-10-13 세운 결정 "글 생기면"): 지금 wiki 본문은 0건이라 책장이 그려지지
-// 않는다. 학문 과목(series, 2장 이상)이 들어오는 날 학문별 선반에 바로 꽂힌다.
+// 책장(2026-10-13 세운 결정 "글 생기면"): 학문 과목(series, 2장 이상)이 학문별 선반에 꽂힌다.
 // 준비 중인 과목을 미리 세우지 않는다 — 공개 약속이 되기 때문이다.
 const coursePosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true && data.locale === locale && !!data.series && !!data.category;
@@ -120,6 +119,10 @@ for (const [key, course] of courseMap) {
   });
   shelfGroups.set(course.category, list);
 }
+const courseTotals = [...courseMap.values()].reduce(
+  (acc, course) => (course.chapters < 2 ? acc : { courses: acc.courses + 1, chapters: acc.chapters + course.chapters }),
+  { courses: 0, chapters: 0 },
+);
 const shelves: Shelf[] = [...shelfGroups.entries()].flatMap(([category, books], index) => {
   let slug: string;
   try {
@@ -140,6 +143,7 @@ const shelves: Shelf[] = [...shelfGroups.entries()].flatMap(([category, books], 
 ---
 
 <DictionaryLanding
+  courseTotals={courseTotals}
   locale={locale as Locale}
   termCount={terms.length}
   categories={categories}

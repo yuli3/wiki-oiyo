@@ -12,6 +12,7 @@ import { getRegisteredMdxComponents } from "../../lib/mdx-component-registry";
 import { getTrackFromData, slugifyCategory } from "../../lib/taxonomy";
 import AuthorProfile from "../../components/AuthorProfile.astro";
 import MysticTrinity from "../../components/MysticTrinity.astro";
+import topicParity from "../../config/locale-topic-parity.json";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog", (p) => !p.data.draft);
@@ -102,11 +103,19 @@ export async function getStaticPaths() {
         title: p.data.title,
       }));
 
-    const availableLocales = Array.from(localesByBaseSlug[slug] ?? [lang]);
+    // 같은 slug인데 ko와 주제가 다른 로케일(src/config/locale-topic-parity.json)은 서로의 번역이 아니다.
+    // 그 페이지는 자기 자신만 가리키고(noindex), 나머지 로케일의 hreflang·언어 전환에서도 빠진다.
+    const topicMismatch = new Set(
+      topicParity.mismatch.flatMap((e) => e.locales.map((l) => `${e.slug}|${l}`)),
+    );
+    const isTopicMismatch = topicMismatch.has(`${slug}|${lang}`);
+    const availableLocales = isTopicMismatch
+      ? [lang]
+      : Array.from(localesByBaseSlug[slug] ?? [lang]).filter((l) => !topicMismatch.has(`${slug}|${l}`));
 
     return {
       params: { lang, slug },
-      props: { post, locale: lang, prevPost, nextPost, seriesPosts, availableLocales, relatedPosts },
+      props: { post, locale: lang, prevPost, nextPost, seriesPosts, availableLocales, relatedPosts, isTopicMismatch },
     };
   });
 }
@@ -115,7 +124,7 @@ const RELATED_HEADING: Record<string, string> = {
   ko: "관련 문서", en: "Related articles", ja: "関連記事",
   zh: "相关文章", fr: "Articles liés", es: "Artículos relacionados",
 };
-const { post, locale, prevPost, nextPost, seriesPosts, availableLocales, relatedPosts } = Astro.props;
+const { post, locale, prevPost, nextPost, seriesPosts, availableLocales, relatedPosts, isTopicMismatch } = Astro.props;
 const { Content } = await post.render();
 const tocEnabled = siteConfig.features.toc;
 const t = await getTranslations(locale as Locale);
@@ -132,9 +141,13 @@ const chapter = chMatch ? parseInt(chMatch[1], 10) : null;
 const isSeriesPost = chapter !== null && seriesPosts !== null && seriesPosts.length > 0;
 const displayTitle = post.data.title.replace(/^Ch\.?\s*\d+[.:]?\s*/i, "");
 
-// Derive series name for sidebar — prefer frontmatter `series` field over slug-derived name
+// 과목 이름은 1장 제목의 앞부분이다("자원순환과 분리배출 — 1장 …" → "자원순환과 분리배출").
+// frontmatter series는 slug라서(예: freelancer-tax-basics) 화면에 그대로 내보내지 않는다(2026-10-17 감사 A2).
+const courseNameFromTitle = isSeriesPost
+  ? (seriesPosts![0]?.data.title ?? "").replace(/^Ch\.?\s*\d+[.:]?\s*/i, "").split(/\s+[—:-]\s+|:\s*/)[0].trim()
+  : "";
 const seriesName = isSeriesPost
-  ? (post.data.series ?? post.slug
+  ? (courseNameFromTitle || post.data.series || post.slug
       .replace(/-ch\d+$/, "")
       .replace(/^[a-z]+\//, "")
       .replace(/^education-/, "")
@@ -204,6 +217,7 @@ const coursesHref = `/${locale}/explore/`;
   category={post.data.category}
   author={post.data.author}
   availableLocales={availableLocales}
+  noindex={isTopicMismatch}
   track={track}
   series={post.data.series}
   definition={post.data.definition}

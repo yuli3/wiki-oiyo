@@ -135,7 +135,12 @@
       "Statistics": "统计学",
       "Tax": "税务",
       "Technical Analysis": "技术分析",
-      "Zoology": "动物学"
+      "Zoology": "动物学",
+      "finance": "金融",
+      "consumer": "消费者",
+      "Consumer": "消费者",
+      "education": "教育",
+      "natural-science": "自然科学"
     }
   },
   "legal": {

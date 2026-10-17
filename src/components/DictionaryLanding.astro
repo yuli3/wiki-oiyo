@@ -34,9 +34,11 @@ interface Props {
   recent: { title: string; href: string; definition: string; reviewedDate?: string }[];
   availableLocales?: string[];
   shelves?: Shelf[];
+  /** 책장에 꽂힌 과목 수와 장 수(SHELF_LIMIT로 잘리기 전 전체). */
+  courseTotals?: { courses: number; chapters: number };
 }
 
-const { locale, termCount, categories, recent, availableLocales, shelves = [] } = Astro.props;
+const { locale, termCount, categories, recent, availableLocales, shelves = [], courseTotals } = Astro.props;
 const t = await getTranslations(locale);
 
 type Copy = {
@@ -209,6 +211,50 @@ const EMPTY: Record<Locale, { eyebrow: string; title: string; lede: string; sibl
   },
 };
 
+/**
+ * 사전 항목은 0이지만 과목(장)이 있을 때의 문구. 2026-10-17 감사 A8: 홈이 "다음 주제를 고르고 있어요"
+ * (준비 중)로 남아 있었는데 실제로는 과목이 꽂혀 있었다. 답 먼저 — 지금 무엇을 읽을 수 있는지를 첫 줄에 쓴다.
+ * 숫자는 빌드 시점의 실제 과목·장 수에서 온다. 주제 나열은 그 로케일에 실제로 있는 과목만 적는다.
+ */
+const SHELF_STATE: Record<Locale, { eyebrow: string; title: (courses: number, chapters: number) => string; lede: string; siblings: string }> = {
+  ko: {
+    eyebrow: "OIYO 위키",
+    title: (c, n) => `생활 제도와 기초 지식을 ${c}과목 ${n}장으로 정리했어요`,
+    lede: "세금·노동·주거·분리배출 같은 생활 제도와 대기·학사 같은 기초 지식을 과목별로 정리했어요. 아래 책장에서 과목을 누르면 1장부터 차례로 읽을 수 있어요.",
+    siblings: "함께 볼 곳",
+  },
+  en: {
+    eyebrow: "OIYO Wiki",
+    title: (c, n) => `${c} courses, ${n} chapters on how everyday life works in Korea`,
+    lede: "Short courses on waste sorting, the school year, and air quality and weather warnings in Korea. Pick a course on the shelf below to start at chapter 1.",
+    siblings: "Also on OIYO",
+  },
+  ja: {
+    eyebrow: "OIYO ウィキ",
+    title: (c, n) => `韓国の暮らしの仕組みを${c}科目・${n}章にまとめています`,
+    lede: "ごみの分別、学事日程、大気と気象など、韓国の暮らしに関わる仕組みを科目ごとにまとめています。下の本棚から科目を選ぶと第1章から読めます。",
+    siblings: "あわせて読む",
+  },
+  zh: {
+    eyebrow: "OIYO 百科",
+    title: (c, n) => `用 ${c} 门课程、${n} 章整理韩国生活中的制度`,
+    lede: "垃圾分类、学年日程、大气与气象等与韩国生活相关的制度，按课程整理。在下方书架选择课程即可从第1章开始阅读。",
+    siblings: "延伸阅读",
+  },
+  fr: {
+    eyebrow: "OIYO Wiki",
+    title: (c, n) => `${c} cours, ${n} chapitres sur le fonctionnement de la vie en Corée`,
+    lede: "Tri des déchets, calendrier scolaire, qualité de l'air et alertes météo : des cours courts sur la vie quotidienne en Corée. Choisissez un cours sur l'étagère ci-dessous pour commencer au chapitre 1.",
+    siblings: "À lire aussi",
+  },
+  es: {
+    eyebrow: "OIYO Wiki",
+    title: (c, n) => `${c} cursos y ${n} capítulos sobre cómo funciona la vida en Corea`,
+    lede: "Separación de residuos, calendario escolar, calidad del aire y avisos meteorológicos: cursos breves sobre la vida cotidiana en Corea. Elige un curso en la estantería de abajo para empezar por el capítulo 1.",
+    siblings: "También en OIYO",
+  },
+};
+
 const SHELF: Record<Locale, { chapters: string; more: string }> = {
   ko: { chapters: "장", more: "{count}권 더" },
   en: { chapters: "chapters", more: "{count} more" },
@@ -223,11 +269,13 @@ const shelfCopy = SHELF[locale] ?? SHELF.en;
 const formatted = termCount.toLocaleString(locale === "ko" ? "ko" : locale);
 const isEmpty = termCount === 0;
 const e = EMPTY[locale] ?? EMPTY.en;
-const eyebrow = isEmpty ? e.eyebrow : c.eyebrow;
-const pageTitle = isEmpty ? e.title : c.title(formatted);
-const lede = isEmpty ? e.lede : c.lede;
+const hasCourses = isEmpty && shelves.length > 0 && !!courseTotals && courseTotals.courses > 0;
+const sh = SHELF_STATE[locale] ?? SHELF_STATE.en;
+const eyebrow = hasCourses ? sh.eyebrow : isEmpty ? e.eyebrow : c.eyebrow;
+const pageTitle = hasCourses ? sh.title(courseTotals!.courses, courseTotals!.chapters) : isEmpty ? e.title : c.title(formatted);
+const lede = hasCourses ? sh.lede : isEmpty ? e.lede : c.lede;
 // "정의 다음에 필요한 것"은 폐기된 정의/설명 구분을 되살린다. 빈 상태에서는 쓰지 않는다.
-const siblingsTitle = isEmpty ? e.siblings : c.siblingsTitle;
+const siblingsTitle = hasCourses ? sh.siblings : isEmpty ? e.siblings : c.siblingsTitle;
 ---
 
 <BaseLayout title={pageTitle} description={lede} availableLocales={availableLocales}>

@@ -135,7 +135,12 @@
       "Statistics": "統計学",
       "Tax": "税務",
       "Technical Analysis": "テクニカル分析",
-      "Zoology": "動物学"
+      "Zoology": "動物学",
+      "finance": "金融",
+      "consumer": "消費者",
+      "Consumer": "消費者",
+      "education": "教育",
+      "natural-science": "自然科学"
     }
   },
   "legal": {
