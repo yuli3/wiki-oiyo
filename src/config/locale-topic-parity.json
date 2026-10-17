@@ -1,0 +1,139 @@
+{
+  "_why": "같은 URL(slug)인데 로케일마다 주제가 다른 장. 여기 'mismatch'로 적힌 로케일 페이지는 noindex이고, 같은 slug의 다른 로케일 hreflang·언어 전환·사이트맵에서 빠진다(SEO.astro·[...slug].astro·astro.config.mjs가 이 파일 하나를 함께 읽는다). 'reviewedMatch'는 자동 선별(scripts/audit-locale-topic-parity.mjs)이 의심으로 걸렀지만 사람이 제목·H2를 대조해 같은 주제로 판정한 쌍이다. 번역을 ko 원문 기준으로 다시 하면 해당 항목을 지운다.",
+  "measuredAt": "2026-10-17",
+  "reference": "ko",
+  "mismatch": [
+    {
+      "slug": "academic-calendar-ch1",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 학년도 법적 정의·회계연도 ↔ ja·zh·fr·es 6-3-3-4 학제·3월 신학기"
+    },
+    {
+      "slug": "academic-calendar-ch2",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 법정 수업일수 190일·방학 산정 ↔ ja·zh·fr·es 2학기제 학사력·방학(일부 겹침)"
+    },
+    {
+      "slug": "academic-calendar-ch3",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 3월 vs 9월 신학년 비교 ↔ ja·zh·fr·es 수능 일정·국가 통제"
+    },
+    {
+      "slug": "academic-calendar-ch4",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 취학 연령·조기입학·입학유예 ↔ ja·zh·fr·es 재량휴업일·대체휴일·학교운영위원회"
+    },
+    {
+      "slug": "atmosphere-weather-ch1",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 미세먼지 PM10/PM2.5 ↔ ja·zh·fr·es 체감온도·풍랭지수(ko 3장 겨울 절과 주제 겹침)"
+    },
+    {
+      "slug": "atmosphere-weather-ch2",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 기상특보 발령 기준 ↔ ja·zh·fr·es 미세먼지 등급·역전층(ko 1장과 주제 겹침)"
+    },
+    {
+      "slug": "atmosphere-weather-ch3",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 체감온도(겨울 풍랭·여름 열지수) ↔ ja·zh·fr·es WBGT·자외선·폭염특보"
+    },
+    {
+      "slug": "atmosphere-weather-ch4",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 황사 vs 스모그 ↔ ja·zh·fr·es 기상레이더·수치예보모델 KIM"
+    },
+    {
+      "slug": "waste-management-ch4",
+      "locales": [
+        "en",
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "ko 젤 아이스팩·폐의약품 ↔ en 종이팩·폐건전지·폐의약품(일부만 겹침), ja·zh·fr·es 폐가전 무상수거·유해폐기물"
+    }
+  ],
+  "reviewedMatch": [
+    {
+      "slug": "academic-calendar-ch1",
+      "locales": [
+        "en"
+      ],
+      "note": "en 초·중등교육법 제24조 학년도 정의 — ko와 같은 주제(절 구성은 다름)"
+    },
+    {
+      "slug": "academic-calendar-ch3",
+      "locales": [
+        "en"
+      ],
+      "note": "en 3월/9월 학년 시작 국제 비교 — ko와 같은 주제"
+    },
+    {
+      "slug": "atmosphere-weather-ch4",
+      "locales": [
+        "en"
+      ],
+      "note": "en 황사 vs 스모그 — ko와 같은 주제"
+    },
+    {
+      "slug": "waste-management-ch2",
+      "locales": [
+        "en"
+      ],
+      "note": "en 투명 페트병 4단계·비중 분리 — ko와 같은 주제"
+    },
+    {
+      "slug": "waste-management-ch3",
+      "locales": [
+        "en",
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "음식물 쓰레기 금지 품목·일반 봉투 구분 — ko와 같은 주제(ko의 재활용 공정 절은 일부 로케일에 없음)"
+    }
+  ]
+}

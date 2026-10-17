@@ -45,6 +45,12 @@ function collectExcludedPageSlugs(directory) {
   });
 }
 
+// 같은 slug인데 ko와 주제가 다른 로케일 페이지(noindex). [...slug].astro 와 같은 파일을 읽는다.
+const TOPIC_MISMATCH = new Set(
+  JSON.parse(readFileSync(new URL("./src/config/locale-topic-parity.json", import.meta.url), "utf8"))
+    .mismatch.flatMap((/** @type {{ slug: string, locales: string[] }} */ e) => e.locales.map((l) => `${l}/${e.slug}`)),
+);
+
 const EXCLUDED_PAGE_SLUGS = new Set(
   collectExcludedPageSlugs(new URL("./src/pages/[...lang]/", import.meta.url)),
 );
@@ -85,6 +91,8 @@ export default defineConfig({
         // Deindexed slug patterns (combinatorial grids). In lockstep with SEO.astro.
         if (segs.length > 1 && DEINDEXED_SLUG_RES.some((/** @type {RegExp} */ re) => re.test(segs[segs.length - 1]))) return false;
         if (segs.length === 2 && EXCLUDED_PAGE_SLUGS.has(segs[1])) return false;
+        // Locale pages whose topic differs from ko at the same slug (noindex, lockstep with [...slug].astro).
+        if (segs.length === 2 && TOPIC_MISMATCH.has(`${segs[0]}/${segs[1]}`)) return false;
         return true;
       },
       // Do not stamp every URL with the build time. A trustworthy per-entry
