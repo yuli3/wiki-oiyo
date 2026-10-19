@@ -1,6 +1,6 @@
 ---
 title: "Atmosphere, Climate, and Weather Warnings — Chapter 1: PM10 vs PM2.5 Fine Particulate Matter Standards"
-description: "The aerodynamic diameter definitions of particulate matter (PM10 and PM2.5), pulmonary alveoli penetration, and South Korea Ministry of Environment air quality warning thresholds."
+description: "PM2.5 within PM10, diameter versus area, direct and secondary particles, and the difference between Korean daily forecast grades and hourly advisory criteria."
 pubDate: 2026-10-16
 tags: ["atmosphere-weather", "air-quality", "pm10", "pm25", "korea-meteorology", "health-standards"]
 category: "natural-science"
@@ -17,7 +17,7 @@ author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-Airborne particulate matter is one of the most prominent environmental and public health concerns across East Asia. In public meteorology and air quality reports, dust is categorized primarily by its aerodynamic diameter: **PM10** (coarse inhalable particles) and **PM2.5** (fine respirable particles).
+**PM2.5 is part of PM10, not a separate chemical substance.** These labels describe overlapping aerodynamic size fractions. PM10 includes both fine and larger inhalable particles; PM2.5 is the finer fraction. See the [EPA definitions](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics).
 
 Understanding the physical scale and biological penetration mechanisms of these aerosols is critical for interpreting environmental alerts and selecting appropriate respiratory protection.
 
@@ -27,38 +27,38 @@ Understanding the physical scale and biological penetration mechanisms of these 
 
 The designation "PM" stands for Particulate Matter, and the attached number denotes the aerodynamic cut-off diameter in micrometers ($\mu m$, where $1\,\mu m = 10^{-6}\,m$):
 
-- **PM10 ($10\,\mu m$ or smaller)**: Coarse particles approximately 1/5th to 1/7th the thickness of an average human hair (which spans 50 to 70 micrometers in diameter). Examples include crushed mineral dust, pollen grains, and mold spores.
-- **PM2.5 ($2.5\,\mu m$ or smaller)**: Ultrafine particles roughly 1/20th to 1/30th the diameter of a human hair. Examples include combustion aerosols from vehicle exhaust, industrial coal fly ash, and secondary aerosol condensation products ($SO_x, NO_x$).
+- **PM10**: inhalable particles generally 10μm or smaller, including PM2.5.
+- **PM2.5**: fine inhalable particles generally 2.5μm or smaller. The term *fine* should not be replaced by *ultrafine*, a different size category.
 
-```
-[Human Hair: 50~70 μm] ──────────────────────────────────────────────┐
-  ├── [Fine Beach Sand: ~90 μm]                                      │
-  ├── [PM10 Inhalable Dust: ≤ 10 μm] ───┐                            │
-  │     └── Upper respiratory tract (nasal cilia, trachea filtration)│
-  └── [PM2.5 Respirable Dust: ≤ 2.5 μm] ───┐                         │
-        └── Alveolar penetration & systemic bloodstream entry        │
-```
+| Illustrative object | Diameter | Ratio to an assumed 60μm hair |
+|---|---:|---|
+| Hair | 60μm | Reference for scale, not an airborne size fraction |
+| Particle at the PM10 upper size | 10μm | 1/6 of the diameter; 1/36 of a circular cross-sectional area |
+| Particle at the PM2.5 upper size | 2.5μm | 1/24 of the diameter; 1/576 of a circular cross-sectional area |
+
+This is geometry, not a toxicity calculation. Actual particles vary in shape and density. A diameter ratio is not an area ratio.
+
+Size, composition and formation are separate questions. Both fractions can include directly emitted particles and particles formed through atmospheric reactions. A universal percentage for secondary PM2.5 is not established by the size label; a measured share needs a location, period and method.
 
 ---
 
 ## 2. Biological Penetration: Nasal Cilia vs Alveolar Blood Barriers
 
-The decisive physiological difference between PM10 and PM2.5 lies in how human anatomy handles airborne particulates:
-
-1. **PM10 Filtration in Upper Airways**: Particles between $2.5\,\mu m$ and $10\,\mu m$ are predominantly captured by nasal hairs, mucosal secretions in the pharynx, and bronchial ciliated epithelia. They are expelled upward via the mucociliary escalator and cleared through coughing or phlegm.
-2. **PM2.5 Alveolar Translocation**: Particles smaller than $2.5\,\mu m$ bypass upper airway filtration mechanisms entirely. They travel deep into terminal bronchioles and pulmonary alveoli, where gas exchange takes place. There, ultrafine soot particles penetrate alveolar epithelial walls, enter capillaries, and circulate systemically throughout the vascular system, triggering endothelial inflammation, arterial plaque destabilization, and cerebrovascular risks.
+The [EPA health overview](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm) explains that particles below 10μm can reach deep into the lungs, and some may reach the bloodstream. That does not mean all PM2.5 bypasses filtration completely or enters blood directly. A size fraction cannot diagnose an individual's exposure outcome.
 
 ---
 
-## 3. South Korea Ministry of Environment 4-Tier Warning System
+## 3. South Korean forecast grades are not warning thresholds
 
-South Korea maintains rigorous public alert thresholds benchmarked against the World Health Organization (WHO) air quality guidelines:
+The [AirKorea forecast table](https://airkorea.or.kr/web/dustForecast) below uses daily-average concentrations. These forecast grades are not the same as statutory ambient standards or hourly advisory/warning criteria. Do not substitute one averaging period for another.
 
-| Grade | PM10 Concentration (24h Average) | PM2.5 Concentration (24h Average) | Recommended Protective Action |
-|---|---|---|---|
-| **Good (좋음)** | $0 \sim 30\,\mu g/m^3$ | $0 \sim 15\,\mu g/m^3$ | Normal outdoor recreation permitted |
-| **Moderate (보통)** | $31 \sim 80\,\mu g/m^3$ | $16 \sim 35\,\mu g/m^3$ | Standard outdoor activities |
-| **Bad (나쁨)** | $81 \sim 150\,\mu g/m^3$ | $36 \sim 75\,\mu g/m^3$ | Wear KF80/KF94 masks; sensitive groups reduce outdoor time |
-| **Very Bad (매우나쁨)** | **$151\,\mu g/m^3$ or higher** | **$76\,\mu g/m^3$ or higher** | Refrain from outdoor sports; vulnerable groups stay indoors |
+| Grade | PM10 (μg/m³, daily mean) | PM2.5 (μg/m³, daily mean) |
+|---|---:|---:|
+| Good (좋음) | 0–30 | 0–15 |
+| Moderate (보통) | 31–80 | 16–35 |
+| Bad (나쁨) | 81–150 | 36–75 |
+| Very bad (매우나쁨) | Above 150 | Above 75 |
 
-When PM2.5 hourly concentrations exceed $75\,\mu g/m^3$ for two consecutive hours, a municipal **Fine Dust Advisory (주의보)** is issued; when exceeding $150\,\mu g/m^3$ for two hours, a **Fine Dust Warning (경보)** is triggered, restricting thermal power output and high-emission commercial transport.
+For the separate [advisory/warning criteria](https://airkorea.or.kr/web/pmWarning?pMENU_NO=115), AirKorea lists PM2.5 hourly means of at least75μg/m³ for two hours for an advisory, and at least150μg/m³ for two hours for a warning, considering local meteorological conditions. This statement does not establish the separate legal triggers for transport or power-generation restrictions.
+
+Sources checked: 2026-10-18. The Korean forecast table is jurisdiction-specific even though the particle-size definitions are general. This chapter is not personalized medical guidance.
