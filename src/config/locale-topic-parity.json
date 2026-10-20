@@ -21,7 +21,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 법정 수업일수 190일·방학 산정 ↔ ja·zh·fr·es 2학기제 학사력·방학(일부 겹침)"
+      "note": "10/21 현행45·47·50조 기준으로 KO/EN 오류와 JA/ZH/FR/ES 주제불일치를 교정. KR관할·학교종류·감축·개인출석 구분 및14일 가상SVG/펼침 적용. 공개승인 전4언어 noindex/hreflang/사이트맵 차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
     },
     {
       "slug": "academic-calendar-ch3",
@@ -31,7 +31,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 3월 vs 9월 신학년 비교 ↔ ja·zh·fr·es 수능 일정·국가 통제"
+      "note": "10/21 KO/EN 국가전체9월·원인/비용단정을 교정하고 JA/ZH/FR/ES 수능오역을 국가·지역학년도비교로 재작성. KR/JP법정경계와실제등교일·스코틀랜드8월·현지확인흐름·비교SVG. 공개승인 전4언어 noindex/hreflang/사이트맵차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
     },
     {
       "slug": "academic-calendar-ch4",
@@ -41,7 +41,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 취학 연령·조기입학·입학유예 ↔ ja·zh·fr·es 재량휴업일·대체휴일·학교운영위원회"
+      "note": "10/21 KO/EN 입학연기/취학유예혼동·약칭나이·과목요약오류를 법13/14·시행령15/28로교정,JA/ZH/FR/ES를같은취학주제로재작성. KR관할·신청연도/기관·2021년생3경로SVG·기한후펼침. 공개승인 전4언어 noindex/hreflang/사이트맵차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
     },
     {
       "slug": "atmosphere-weather-ch1",
@@ -92,7 +92,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 젤 아이스팩·폐의약품 ↔ en 종이팩·폐건전지·폐의약품(일부만 겹침), ja·zh·fr·es 폐가전 무상수거·유해폐기물"
+      "note": "2026-10-21 KO/EN/JA/ZH/FR/ES를 한국의 젤·물 아이스팩/폐의약품 동일주제로 로컬교정·검증. 지역수거차이·액체/연고 우체통제외·제품표시확인 구분. EN포함외국어5개 noindex/hreflang/사이트맵차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-waste-ch4-sources-2026-10-21.md"
     }
   ],
   "reviewedMatch": [
