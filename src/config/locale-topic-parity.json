@@ -97,6 +97,13 @@
   ],
   "reviewedMatch": [
     {
+      "slug": "disaster-alerts-ch3",
+      "locales": [
+        "en"
+      ],
+      "note": "2026-10-20 Codex 독립 본문 대조: 한국 대피시설3유형·안전디딤돌/포털 조회·사전준비·해외안내가 KO와 동일주제. 숫자/라틴약어 지문 부재로 sim0; 수동 의미분류이며 재난 안전행동 정확성 전수 인증 아님. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-quality-release-2026-10-20.md"
+    },
+    {
       "slug": "academic-calendar-ch1",
       "locales": [
         "en"
