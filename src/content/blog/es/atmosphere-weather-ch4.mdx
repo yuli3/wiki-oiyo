@@ -1,34 +1,179 @@
 ---
-title: "Atmósfera y Clima en Corea — Ch 4: Modelo Numérico KIM y Radares Meteorológicos"
-description: "Estructura del modelo numérico global de predicción meteorológica KIM de Corea del Sur, radares Doppler de doble polarización y avisos móviles de inundación relámpago."
+title: "Atmósfera y estaciones — Capítulo 4: polvo, contaminación por partículas y esmog"
+description: "Distingue emisión y transporte de polvo, partículas primarias y secundarias, ozono superficial y condiciones de mezcla asociadas a una inversión térmica."
 pubDate: 2026-10-16
-tags: ["prediccion-numerica", "modelo-kim", "radar-doppler", "alertas-inundacion", "defensa-civil"]
-category: "Natural Science"
+tags: ["polvo-asiatico", "esmog", "PM10", "PM2.5", "ozono", "inversion-termica"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 4
-chapterTitleShort: "Modelo KIM y Radares Meteorológicos"
+chapterTitleShort: "Polvo, partículas y esmog"
 locale: "es"
-market: "LATAM"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmósfera y Clima en Corea — Capítulo 4: Predicción Numérica KIM y Radares Dopplers
+**El polvo asiático describe un fenómeno de emisión y transporte; PM10 y PM2.5 son intervalos de tamaño; el esmog fotoquímico implica reacciones atmosféricas, incluidas las que forman ozono superficial.** Pueden coexistir. Oponer polvo natural y partículas finas artificiales confunde distintos ejes de clasificación. Ni el color del cielo ni una concentración aislada determinan todas las fuentes o el riesgo individual.
 
-La predicción meteorológica contemporánea se fundamenta en la resolución numérica de las ecuaciones diferenciales de Navier-Stokes y los balances termodinámicos en supercomputadoras.
+## 1. Emisión y transporte del polvo
 
-Desde 2020, Corea del Sur opera su propio modelo de pronóstico global de desarrollo autóctono, el **KIM (Korean Integrated Model)**, siendo el noveno país del mundo en alcanzar autonomía completa en modelización global.
+El [resumen de la OMM sobre tormentas de arena y polvo](https://public.wmo.int/themes/sand-and-dust-storms) explica cómo el viento levanta materiales de suelos secos y los transporta lejos. Zonas áridas como el Gobi son fuentes importantes; la pérdida de vegetación, la agricultura y la gestión del suelo también pueden exponerlo a erosión eólica. «Natural» no significa ausencia de influencia humana ni de riesgos para la salud.
 
-## Innovación de la Malla Cúbica Esférica del KIM
+La emisión superficial, elevación, transporte y deposición son procesos diferentes. La saltación es el rebote de granos cerca del suelo, no un movimiento dentro de la corriente en chorro en altura. La altura y el tiempo de viaje dependen de las partículas y la meteorología; no existe una altitud o un plazo de dos días válido para todos los episodios.
 
-Rodeada por el mar Amarillo y la cordillera montañosa de Taebaek, la península coreana experimenta fuertes gradientes meteorológicos locales. El KIM emplea una malla cúbica esférica (Cubed-Sphere Grid) que evita las singularidades geométricas de los polos y permite un mallado anidado de alta resolución (8 km) en Asia Oriental.
+El polvo incluye varios tamaños. PM10 no es una etiqueta exclusiva del polvo asiático; medir PM2.5 tampoco basta para descartar la contribución de polvo mineral.
 
-<WindChillSlider />
+## 2. Las partículas no son el ozono
 
-## Radares Dopplers de Doble Polarización
+Algunas partículas salen directamente del suelo, obras o combustión; otras se forman mediante reacciones en el aire. La [explicación de la EPA sobre PM](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics) distingue emisión directa y formación secundaria. El tamaño no determina por sí solo la composición ni la fuente.
 
-La red meteorológica surcoreana transmite impulsos electromagnéticos en planos horizontales y verticales de forma simultánea. Al calcular la relación de elipticidad de las gotas, los radares identifican si la nube contiene lluvia fina, granizo o nieve. Esta tecnología permite prever lluvias torrenciales repentinas entre 10 y 20 minutos antes de su llegada a tierra firme y emitir mensajes de texto de emergencia civil prioritarios (Cell Broadcast).
+**El ozono superficial es un gas, no otro nombre de PM2.5.** La [EPA explica su formación](https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics) mediante reacciones que implican óxidos de nitrógeno (NOₓ), compuestos orgánicos volátiles (VOC en este capítulo) y luz solar. La concentración de ozono y la concentración másica de partículas se leen por separado.
+
+<section aria-label="Comparación entre polvo, partículas y esmog" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Pregunta
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Polvo y partículas minerales</dt>
+<dd>¿Dónde se levantó el material y cómo se transportó?</dd>
+</div>
+<div>
+<dt className="font-medium">Contaminación por partículas y esmog fotoquímico</dt>
+<dd>¿Cómo se emitieron o formaron partículas y gases?</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Tamaño
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Polvo y partículas minerales</dt>
+<dd>Varios tamaños pueden contribuir a PM10 y PM2.5</dd>
+</div>
+<div>
+<dt className="font-medium">Contaminación por partículas y esmog fotoquímico</dt>
+<dd>PM clasifica tamaños; el ozono es un gas</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Composición
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Polvo y partículas minerales</dt>
+<dd>Los minerales importan, pero el nombre no define toda la mezcla</dd>
+</div>
+<div>
+<dt className="font-medium">Contaminación por partículas y esmog fotoquímico</dt>
+<dd>Comprobar partículas primarias, secundarias y gases</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Coexistencia
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Polvo y partículas minerales</dt>
+<dd>El polvo transportado puede compartir el aire con otros contaminantes</dd>
+</div>
+<div>
+<dt className="font-medium">Contaminación por partículas y esmog fotoquímico</dt>
+<dd>No son categorías mutuamente excluyentes</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+## 3. La inversión describe condiciones de mezcla
+
+Una inversión térmica es una capa en la que la temperatura aumenta con la altura. Una noche despejada y tranquila puede enfriar la superficie y formar una inversión cerca del suelo. La estratificación estable puede limitar la mezcla vertical y favorecer la acumulación de contaminantes. Consulta la [explicación del servicio meteorológico estadounidense](https://www.weather.gov/lmk/inversion).
+
+Eso no implica que todo movimiento de aire se detenga ni que los gases se conviertan todos en PM2.5 por simple compresión. Emisión, formación química, transporte, mezcla y eliminación son procesos distintos. El polvo transportado también puede coincidir con una dispersión débil en la región de llegada.
+
+## 4. No deducir la fuente a partir de una sola lectura
+
+Los ejemplos siguientes son editoriales y cualitativos, no observaciones de un día concreto ni una tabla de diagnóstico.
+
+<section aria-label="Ejemplos de interpretación de la calidad del aire" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10 elevada
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Qué describe</dt>
+<dd>Concentración en ese intervalo de tamaño</dd>
+</div>
+<div>
+<dt className="font-medium">Evidencia adicional necesaria</dt>
+<dd>Observaciones de polvo, fuentes, transporte y composición</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10 y PM2.5 elevadas
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Qué describe</dt>
+<dd>Concentraciones en dos intervalos</dd>
+</div>
+<div>
+<dt className="font-medium">Evidencia adicional necesaria</dt>
+<dd>Contribuciones directas, secundarias y transportadas</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Ozono elevado
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Qué describe</dt>
+<dd>Un contaminante gaseoso distinto de las partículas</dd>
+</div>
+<div>
+<dt className="font-medium">Evidencia adicional necesaria</dt>
+<dd>Luz solar, precursores, transporte y condiciones de reacción</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+Para Corea, consulta [AirKorea](https://airkorea.or.kr/web/dustForecast) junto con el contaminante, el período de promedio y la hora de publicación. La presencia de polvo, partículas, ozono y alertas meteorológicas no son indicadores intercambiables. Un cielo amarillo o gris no basta para determinar una composición ni si un equipo de protección es suficiente.
+
+## Resumen
+
+El origen y transporte responden «¿de dónde viene?», el tamaño «¿qué intervalo se mide?», la química «¿qué se forma?» y la inversión «¿cómo se mezcla el aire?». Separar estas preguntas permite entender la coexistencia de polvo y esmog.
+
+Fuentes consultadas el 2026-10-19. Este capítulo explica procesos atmosféricos; no ofrece consejo médico individual ni prescribe categorías de mascarillas.

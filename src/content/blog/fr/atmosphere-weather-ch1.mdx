@@ -1,37 +1,248 @@
 ---
-title: "Atmosphère et Météo en Corée — Ch 1: Physique du Refroidissement Éolien (Vagues de Froid)"
-description: "Modèle mathématique JAG/TI adopté par l'Administration Météorologique Coréenne (KMA), dynamique thermique de la peau face au vent sibérien et alertes officielles de grand froid."
+title: "Atmosphère et saisons — Chapitre 1 : taille et composition des PM10 et PM2.5"
+description: "Les PM2.5 font partie des PM10. Distinguez diamètre, émissions directes, formation secondaire, concentration massique et catégories de prévision utilisées en Corée."
 pubDate: 2026-10-16
-tags: ["temperature-ressentie", "refroidissement-eolien", "meteo-coree", "vague-de-froid", "sciences-atmospheriques"]
-category: "Natural Science"
+tags: ["PM10", "PM2.5", "sciences-atmospheriques", "aerosols"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 1
-chapterTitleShort: "Refroidissement Éolien et Vagues de Froid"
+chapterTitleShort: "PM10 et PM2.5"
 locale: "fr"
-market: "EU"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmosphère et Météo en Corée — Chapitre 1: Physique du Refroidissement Éolien
+**Les PM2.5 ne sont pas une substance distincte des PM10 : elles correspondent à une plage de diamètres plus petits, comprise dans les PM10.** Les noms coréens « 미세먼지 » et « 초미세먼지 » ne désignent donc pas deux ensembles sans recouvrement. Partons de la [définition de l’EPA américaine](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics), en séparant les notions scientifiques du dispositif de prévision coréen.
 
-Pendant l'hiver à Séoul, un thermomètre affichant -5°C peut provoquer une sensation thermique proche de -15°C sous les assauts du vent du nord-ouest en provenance de Sibérie. La quantification de ce phénomène repose sur la **température ressentie (Wind Chill Index)**.
+## 1. Comparer les tailles sans confondre les grandeurs
 
-L'Administration Météorologique Coréenne (KMA) applique la formule conjointe JAG/TI (Joint Action Group for Temperature Indices), établie à partir d'expériences en soufflerie mesurant la perte thermique sur un visage humain adulte (0,13 m²) à une vitesse de marche de 4,8 km/h.
+Le nombre après PM indique une limite supérieure approximative du diamètre aérodynamique, exprimée en micromètres (μm, un millionième de mètre). Les PM10 sont des particules inhalables dont le diamètre est généralement inférieur ou égal à 10 μm ; les PM2.5 correspondent généralement à 2,5 μm ou moins. Le terme anglais *fine particles* désigne les PM2.5. Il n’est pas synonyme de *ultrafine particles*.
 
-## Formule JAG/TI de la KMA
+Prenons un cheveu de 60μm de diamètre comme référence. Il s’agit d’un exemple géométrique, pas d’un calcul de la forme, de la densité, du nombre ou de la nocivité des particules réelles.
 
-$$Twc = 13.12 + 0.6215Ta - 11.37V^{0.16} + 0.3965TaV^{0.16}$$
 
-Où $Ta$ désigne la température de l'air à 1,5 mètre du sol (°C) et $V$ la vitesse du vent à 10 mètres d'altitude (km/h). L'exposant 0,16 traduit une non-linéarité prononcée : dès les premiers mètres par seconde, la couche limite isolante d'air entourant le corps est arrachée, provoquant une chute brutale de la température cutanée.
+<section aria-label="Comparaison des diamètres et des aires" className="my-6 grid gap-3">
 
-<WindChillSlider />
+<div className="rounded-lg border border-border bg-card p-4">
 
-## Seuils des Alertes Météo aux Vagues de Froid
+### Cheveu de référence
 
-- **Vigilance Grand Froid** : Baisse de plus de 10°C de la température minimale par rapport à la veille pour atteindre 3°C ou moins, ou température minimale sous -12°C prévue pendant au moins 2 jours consécutifs.
-- **Alerte Grand Froid** : Baisse de plus de 15°C pour atteindre 3°C ou moins, ou température minimale sous -15°C pendant 2 jours consécutifs.
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diamètre</dt>
+<dd>60μm</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des diamètres à 60μm</dt>
+<dd>1</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des aires pour des sections circulaires</dt>
+<dd>1</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Taille limite des PM10
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diamètre</dt>
+<dd>10μm</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des diamètres à 60μm</dt>
+<dd>1/6</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des aires pour des sections circulaires</dt>
+<dd>1/36</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Taille limite des PM2.5
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diamètre</dt>
+<dd>2,5 μm</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des diamètres à 60μm</dt>
+<dd>1/24</dd>
+</div>
+<div>
+<dt className="font-medium">Rapport des aires pour des sections circulaires</dt>
+<dd>1/576</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+Un rapport de diamètres n’est pas un rapport d’aires. Diamètre, nombre de particules et concentration massique sont également des grandeurs différentes. Le vent peut transporter les particules avant leur dépôt sur le sol ou dans l’eau, mais la catégorie PM10 ou PM2.5 ne suffit pas à fixer un temps de séjour dans l’atmosphère : chacune regroupe des tailles variées. Voir les [explications de l’EPA sur les effets environnementaux](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm).
+
+## 2. Émissions directes et formation secondaire : un autre axe
+
+Les PM10 comme les PM2.5 peuvent contenir des composants directement émis et d’autres formés par des réactions dans l’atmosphère. Opposer « poussière naturelle » pour les premières et « substances chimiques » pour les secondes serait trompeur.
+
+
+<section aria-label="Sources et composition des particules" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Plage de tailles
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Petites particules et particules relativement plus grandes</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Plage plus petite au sein des PM10</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Exemples de sources
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Sols, poussières routières ou de chantier, combustion</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Émissions de combustion et réactions de précurseurs gazeux</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Composition
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Le nom ne suffit pas à la déterminer</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Les petites particules ont aussi des compositions variées</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Lecture des données
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Vérifier lieu, période, sources et conditions de mesure</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Examiner les contributions directes et secondaires avec leurs conditions</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+La contribution de la formation secondaire dépend du lieu, de la période et des conditions d’observation. Ce chapitre n’emploie pas de proportion universelle telle que « toujours plus de 70% ».
+
+## 3. Voies respiratoires : éviter les conclusions automatiques
+
+Les voies respiratoires disposent de mécanismes d’élimination des corps étrangers. Des particules de la plage PM10 peuvent néanmoins atteindre les parties profondes des poumons, et certaines peuvent même rejoindre la circulation sanguine. Cela ne signifie pas que toutes les PM2.5 contournent intégralement les défenses des voies supérieures et pénètrent directement dans les vaisseaux.
+
+La [présentation des effets sanitaires par l’EPA](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm) traite des liens entre exposition et problèmes cardiopulmonaires. Une catégorie de diamètre ne permet pas de diagnostiquer une maladie individuelle ni de prédire les conséquences d’une exposition particulière.
+
+## 4. Lire les catégories coréennes de prévision
+
+Le tableau présente **les catégories de prévision en Corée, fondées sur la concentration moyenne journalière**, en μg/m³. Il ne convertit pas les indices français ou européens.
+
+
+<section aria-label="Catégories coréennes de prévision" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Bonne (좋음)</dt>
+<dd>0–30</dd>
+</div>
+<div>
+<dt className="font-medium">Moyenne (보통)</dt>
+<dd>31–80</dd>
+</div>
+<div>
+<dt className="font-medium">Mauvaise (나쁨)</dt>
+<dd>81–150</dd>
+</div>
+<div>
+<dt className="font-medium">Très mauvaise (매우나쁨)</dt>
+<dd>Plus de 150</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM2.5
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Bonne (좋음)</dt>
+<dd>0–15</dd>
+</div>
+<div>
+<dt className="font-medium">Moyenne (보통)</dt>
+<dd>16–35</dd>
+</div>
+<div>
+<dt className="font-medium">Mauvaise (나쁨)</dt>
+<dd>36–75</dd>
+</div>
+<div>
+<dt className="font-medium">Très mauvaise (매우나쁨)</dt>
+<dd>Plus de 75</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+Source : [catégories de prévision d’AirKorea](https://airkorea.or.kr/web/dustForecast). Elles ne doivent pas être confondues avec les normes légales de qualité de l’air ni avec les seuils des avis et alertes fondés sur des moyennes horaires. Il faut lire ensemble le polluant, la durée de moyenne et le dispositif concerné.
+
+## À retenir
+
+Taille, composition chimique, formation et concentration massique sont à distinguer. Comprendre l’inclusion des PM2.5 dans les PM10 évite une fausse opposition entre deux substances. La comparaison géométrique ne classe ni la nocivité ni les maladies individuelles.
+
+Sources consultées le 2026-10-19. Ce chapitre ne fournit pas de conseils médicaux personnalisés. Les alertes météorologiques de la KMA, notamment pour les précipitations et le froid, relèvent d’un dispositif distinct des prévisions et alertes d’AirKorea sur les particules.

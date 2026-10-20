@@ -1,35 +1,179 @@
 ---
-title: "大气环境与生活气象 — 第4章: 气象雷达、韩国型数值预报模型（KIM）与防灾信息"
-description: "探讨韩国自主研发的全球数值预报模型（KIM）技术体系、双偏振多普勒天气雷达对降水粒子的实时识别，以及极端局地暴雨的预警机制。"
+title: "大气与季节 — 第4章：区分沙尘、颗粒物污染与光化学烟雾"
+description: "分别理解沙尘起源与输送、颗粒物直接排放与二次生成、近地面臭氧，以及逆温对垂直混合的影响。"
 pubDate: 2026-10-16
-tags: ["数值天气预报", "天气雷达", "KIM预报模型", "气象防灾", "韩国气象厅"]
-category: "Natural Science"
+tags: ["沙尘", "烟雾", "PM10", "PM2.5", "臭氧", "逆温"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 4
-chapterTitleShort: "数值预报模型与雷达防灾"
+chapterTitleShort: "沙尘、颗粒物与烟雾"
 locale: "zh"
-market: "CN"
-audienceMarket: "CN"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
+**沙尘主要描述土壤颗粒的产生与迁移，PM10和PM2.5是粒径范围，光化学烟雾则涉及臭氧等污染物的大气反应。** 它们可能在同一天共存，不能简单分成“天然沙尘”与“人工细颗粒物”两个互斥类别。天空颜色或单一浓度值，也不能确定全部来源、成分或个人风险。
 
-# 大气环境与生活气象 — 第4章: 数值天气预报与气象雷达技术
+## 1. 沙尘的产生与输送
 
-现代气象预报是一门基于流体力学基本控制方程（纳维-斯托克斯方程）与热力学能量守恒方程、在超级计算机上进行超大规模网格差分求解的精密科学。
+[WMO的沙尘暴说明](https://public.wmo.int/themes/sand-and-dust-storms)介绍了强风将干燥土壤中的沙和尘抬升、输送至远方的过程。戈壁等干旱地区是重要源区，但植被减少、农业与土地管理也可能增加暴露于风蚀的土壤。“自然现象”不意味着没有人为影响或健康风险。
 
-大韩民国气象厅自2020年起全面投入运行自主研发的全球数值预报模型——**KIM（Korean Integrated Model / 韩国型数值预报系统）**，使韩国成为全球第九个拥有独立全套全球数值预报能力的国家。
+地表起尘、抬升、输送和沉降是不同过程。近地面沙粒的跃移，不是发生在高空急流中的运动。高度和到达时间随天气与颗粒性质变化，不能把所有过程固定为某个高度或两天内抵达。
 
-## KIM模型网格与技术革新
+沙尘包含多种粒径。PM10不是沙尘专属标签，测到PM2.5也不能仅凭这一点排除矿物尘的贡献。
 
-朝鲜半岛三面环海，西侧为浅水黄海，东侧为高达千米的太白山脉，地形梯度极为陡峭，易引发微尺度气流扰动。KIM模型采用非静力学动力核心与全球正方体球面网格（Cubed-Sphere Grid），不仅彻底消除了两极经线汇聚造成的数学奇异点，更实现了东亚区域8公里级别超高精度水平网格嵌套计算。
+## 2. 颗粒物污染与臭氧不是同一种量
 
-<WindChillSlider />
+颗粒物可能由土壤、施工或燃烧直接排出，也可能由大气反应形成。[EPA的颗粒物说明](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)区分直接排放与二次生成。粒径标签本身不能确定化学成分或来源。
 
-## 双偏振气象雷达与短临强对流预警
+**近地面臭氧是气体，不是PM2.5的另一个名称。** [EPA的臭氧说明](https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics)介绍了氮氧化物（NOₓ）、挥发性有机化合物（VOC）在阳光作用下参与反应形成臭氧的过程。臭氧浓度与颗粒物质量浓度应分别阅读。
 
-韩国全境布设的双偏振天气雷达网络，通过同时发射和接收水平与垂直偏振电磁波，测量水滴的扁平率（差动反射率因子 Zdr），能在云层内部精准区分雨滴、冰雹与雪片。这种短时临近预报技术能够在暴雨云团着陆前10至20分钟发出精确预警，并通过手机“紧急灾难短信（CBS）”向公众实时推送避险指令。
+<section aria-label="沙尘、颗粒物污染与光化学烟雾比较" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 问题
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">沙尘与矿物颗粒</dt>
+<dd>在哪里扬起，如何迁移</dd>
+</div>
+<div>
+<dt className="font-medium">颗粒物污染与光化学烟雾</dt>
+<dd>颗粒与气体如何排放、生成</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 粒径
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">沙尘与矿物颗粒</dt>
+<dd>可包含对PM10和PM2.5都有贡献的颗粒</dd>
+</div>
+<div>
+<dt className="font-medium">颗粒物污染与光化学烟雾</dt>
+<dd>PM是粒径分类，臭氧是气体</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 成分
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">沙尘与矿物颗粒</dt>
+<dd>矿物成分重要，但名称不能确定完整组成</dd>
+</div>
+<div>
+<dt className="font-medium">颗粒物污染与光化学烟雾</dt>
+<dd>分别确认直接排放颗粒、二次颗粒和气体</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 共存
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">沙尘与矿物颗粒</dt>
+<dd>输送中的尘可与其他污染物处于同一团空气中</dd>
+</div>
+<div>
+<dt className="font-medium">颗粒物污染与光化学烟雾</dt>
+<dd>两者不是互斥分类</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+## 3. 逆温描述的是混合条件
+
+逆温指某个高度范围内，气温随高度增加而升高。晴朗、风弱的夜晚，地面冷却可能形成近地面逆温。稳定层结会抑制垂直混合，从而影响近地面污染物的积累。参阅[美国国家气象局的说明](https://www.weather.gov/lmk/inversion)。
+
+这不等于所有空气运动完全停止，也不意味着气体只是被压缩就统一变成PM2.5。排放、化学生成、输送、混合与清除是不同过程。外来尘的输送也可能与到达地区扩散较弱的条件叠加。
+
+## 4. 不要从单一观测直接跳到来源诊断
+
+下表是用于说明解读边界的定性虚构示例，不是某一天的实测或诊断表。
+
+<section aria-label="空气质量信息解读示例" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10较高
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">能说明的范围</dt>
+<dd>该粒径范围的颗粒物浓度</dd>
+</div>
+<div>
+<dt className="font-medium">还需要的证据</dt>
+<dd>沙尘观测、源区与输送、成分</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10和PM2.5同时较高
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">能说明的范围</dt>
+<dd>两个粒径范围的浓度</dd>
+</div>
+<div>
+<dt className="font-medium">还需要的证据</dt>
+<dd>直接排放、二次生成和输送的贡献</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 臭氧较高
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">能说明的范围</dt>
+<dd>与颗粒不同的气体信息</dd>
+</div>
+<div>
+<dt className="font-medium">还需要的证据</dt>
+<dd>日照、前体物、输送和反应条件</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+查看韩国预报时，请在[AirKorea](https://airkorea.or.kr/web/dustForecast)同时确认污染物、平均时段和发布时间。沙尘是否出现、颗粒物浓度、臭氧浓度和气象特报不是同一个指标。仅凭天空发黄或灰白，不能确定某一种成分，也不能判断防护用品是否足够。
+
+## 小结
+
+来源与输送回答“从哪里来”，粒径回答“测量哪个大小范围”，化学反应回答“生成什么”，逆温回答“混合受到怎样的影响”。区分这些问题，就能理解沙尘与烟雾为何可以共存。
+
+原文核对日期：2026-10-19。本章解释大气过程，不提供个人医疗建议或口罩等级处方。

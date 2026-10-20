@@ -11,7 +11,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 학년도 법적 정의·회계연도 ↔ ja·zh·fr·es 6-3-3-4 학제·3월 신학기"
+      "note": "10/19 현행법령과 독립조사로 KO/EN 학년도·학기·국공립학교회계·개인졸업 효과를 구분하고 JA/ZH/FR/ES를 동일주제로 교정. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-school-year-six-locales-2026-10-19.md"
     },
     {
       "slug": "academic-calendar-ch2",
@@ -51,7 +51,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 미세먼지 PM10/PM2.5 ↔ ja·zh·fr·es 체감온도·풍랭지수(ko 3장 겨울 절과 주제 겹침)"
+      "note": "10/19 Codex가 ja·zh·fr·es 풍랭지수 오역을 교정KO/EN PM10·PM2.5 원문에 맞춰 재작성·본문대조. 공개 승인 전 noindex/hreflang/사이트맵 차단은 유지. mismatch는 현재 공개 차단 목록이며 본문 재교정 상태는 company-brain/projects/oiyo-ecosystem/reports/wiki-pm-four-locales-2026-10-19.md 참조"
     },
     {
       "slug": "atmosphere-weather-ch2",
@@ -61,7 +61,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 기상특보 발령 기준 ↔ ja·zh·fr·es 미세먼지 등급·역전층(ko 1장과 주제 겹침)"
+      "note": "10/19 현행KMA기준으로 KO/EN 교정·JA/ZH/FR/ES 미세먼지 오역을 동일 특보 주제로 재작성. 중대경보·지역별열대야·AND/OR 조건 반영. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-warning-criteria-six-locales-2026-10-19.md"
     },
     {
       "slug": "atmosphere-weather-ch3",
@@ -71,7 +71,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 체감온도(겨울 풍랭·여름 열지수) ↔ ja·zh·fr·es WBGT·자외선·폭염특보"
+      "note": "10/19 KO/EN 원문의 열수지·포화·의복·피험자 단정 교정 후 JA/ZH/FR/ES를 풍랭·열지수·WBGT 동일 주제로 재작성. 공용 계산 UI 인스턴스는 정적 예제로 대체. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-thermal-indices-six-locales-2026-10-19.md"
     },
     {
       "slug": "atmosphere-weather-ch4",
@@ -81,7 +81,7 @@
         "fr",
         "es"
       ],
-      "note": "ko 황사 vs 스모그 ↔ ja·zh·fr·es 기상레이더·수치예보모델 KIM"
+      "note": "10/19 KO/EN 황사·스모그의 이분법/오존/역전 설명을 공식원문으로 교정하고 JA/ZH/FR/ES KIM·레이더 오역도 동일주제로 재작성. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-dust-smog-six-locales-2026-10-19.md"
     },
     {
       "slug": "waste-management-ch4",

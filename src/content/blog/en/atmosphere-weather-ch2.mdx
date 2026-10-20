@@ -1,57 +1,109 @@
 ---
-title: "Atmosphere, Climate, and Weather Warnings — Chapter 2: Meteorological Special Warning Standards and Thresholds"
-description: "Korea Meteorological Administration (KMA) statutory criteria for weather advisories and warnings: cold waves, heatwaves, heavy snow, and torrential rain thresholds."
+title: "Atmosphere and seasons — Chapter 2: reading Korea's weather-alert criteria"
+description: "Read Korean rain, snow, cold-wave and heat-alert criteria with their duration, logical conditions and regional limits, including the severe heat tier."
 pubDate: 2026-10-16
-tags: ["atmosphere-weather", "weather-warnings", "kma-standards", "cold-wave", "heatwave", "natural-hazards"]
+tags: ["weather-alerts", "KMA", "heavy-rain", "heavy-snow", "cold-wave", "heatwave"]
 category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 2
-chapterTitleShort: "Meteorological Warnings Criteria"
+chapterTitleShort: "Korean weather-alert criteria"
 locale: "en"
-market: "GLOBAL"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "translated"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-The **Korea Meteorological Administration (KMA)** issues statutory Special Meteorological Reports (*Gisang Teukbo*) to protect public life and infrastructure against acute natural disasters. Warnings are structured into two distinct escalation tiers:
+**A weather alert is not an automatic switch triggered by one observed number.** Read the phenomenon, quantity, duration, region and logical conditions together. This chapter concerns South Korea; its thresholds are not rules for other countries.
 
-1. **Advisory (주의보, Juyibo)**: Issued when a hazardous meteorological event is expected to cause localized disruption and caution is required.
-2. **Warning (경보, Gyeongbo)**: Issued when severe meteorological phenomena are forecast to inflict widespread infrastructural damage, casualties, or severe transportation shutdowns.
+Criteria checked: **2026-10-19**, against the [KMA's current alert-criteria page](https://www.weather.go.kr/w/forecast/guide/standard.do). When criteria change, consult the official table and actual bulletin rather than treating this chapter as a live alert service.
 
----
+## 1. Check the tiers for each phenomenon
 
-## 1. Winter Hazard Thresholds: Cold Waves and Heavy Snow
+Advisories and warnings are common categories, but not every phenomenon has only two tiers. The current table includes a heat **중대경보**, rendered here as a severe heat warning, and separate tropical-night advisory criteria. The dust row, by contrast, has no advisory criterion.
 
-### Cold Wave Criteria (한파, Hanpa)
-Cold wave declarations consider both absolute morning lows and the magnitude of day-over-day temperature drops:
+A warning does not mean damage must already have occurred. Many criteria concern what is expected. Observations inform assessment, but an observation, forecast and issued bulletin are different things.
 
-| Level | 24-Hour Temperature Drop Criteria | Absolute Minimum Temperature Criteria |
-|---|---|---|
-| **Cold Wave Advisory** | Morning low drops by $\ge 10^\circ C$ compared to previous day, falling to $\le 3^\circ C$, with expected damage | Morning low $\le -12^\circ C$ persistent for $\ge 2$ consecutive days |
-| **Cold Wave Warning** | Morning low drops by $\ge 15^\circ C$ compared to previous day, falling to $\le 3^\circ C$, with severe disruption | Morning low $\le -15^\circ C$ persistent for $\ge 2$ consecutive days |
+## 2. Heavy rain and snow: keep the accumulation window
 
-### Heavy Snow Criteria (대설, Daeseol)
-Snow warnings evaluate projected 24-hour accumulated snowfall depth:
-- **Heavy Snow Advisory**: Expected 24-hour fresh snow depth $\ge 5.0\,cm$ (or $\ge 20.0\,cm$ in mountainous mountainous terrain).
-- **Heavy Snow Warning**: Expected 24-hour fresh snow depth $\ge 20.0\,cm$ (or $\ge 30.0\,cm$ in mountainous terrain).
+<section aria-label="Heavy-rain and heavy-snow criteria" className="my-6 grid gap-3">
 
----
+<div className="rounded-lg border border-border bg-card p-4">
 
-## 2. Summer Hazard Thresholds: Heatwaves and Torrential Rain
+### Heavy rain
 
-### Heatwave Criteria (폭염, Pok-yeom)
-Since 2020, KMA has transitioned heatwave standards from simple dry-bulb temperatures to **Perceived Daily Maximum Temperature (체감온도)**, integrating ambient humidity into thermal stress assessments:
+- Advisory: expected accumulation of **60mm or more in 3 hours**, **or 110mm or more in 12 hours**.
+- Warning: **90mm or more in 3 hours**, **or 180mm or more in 12 hours**.
+- Both windows need not be satisfied. These are accumulated depths, not rates expressed in mm/h.
 
-| Level | Perceived Temperature Threshold | Duration and Vulnerability Criteria |
-|---|---|---|
-| **Heatwave Advisory** | Daily maximum perceived temperature $\ge 33^\circ C$ | Expected to persist for $\ge 2$ consecutive days |
-| **Heatwave Warning** | Daily maximum perceived temperature $\ge 35^\circ C$ | Expected to persist for $\ge 2$ consecutive days, or widespread heat illness casualties anticipated |
+</div>
 
-### Heavy Rain Criteria (호우, Hou)
-Precipitation warnings evaluate both acute short-duration rain rates and aggregate accumulation:
-- **Heavy Rain Advisory**: 3-hour accumulated rainfall $\ge 60\,mm$, OR 12-hour accumulated rainfall $\ge 110\,mm$.
-- **Heavy Rain Warning**: 3-hour accumulated rainfall $\ge 90\,mm$, OR 12-hour accumulated rainfall $\ge 180\,mm$.
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Heavy snow
+
+- Advisory: **5cm or more** expected to fall and accumulate within **24 hours**.
+- Warning: **20cm or more** over that period, except **30cm or more in mountainous areas**.
+- The mountain exception belongs to the warning criterion, not an invented 20cm advisory criterion. Fresh accumulation is not the total old snow already on the ground.
+
+</div>
+
+</section>
+
+## 3. Cold waves: compound cooling and sustained cold are alternative routes
+
+The cold-wave criteria apply during **October–April**. Each tier has two alternative routes in the current table.
+
+<section aria-label="Alternative routes for cold-wave alerts" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Cold-wave advisory
+
+1. The morning minimum is expected to fall by **at least 10°C** from the previous day, reach **3°C or lower**, **and** be **at least 3°C below the climatological normal**.
+2. Morning minima **at or below −12°C** are expected to persist for **at least 2 days**.
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Cold-wave warning
+
+1. The morning minimum is expected to fall by **at least 15°C**, reach **3°C or lower**, **and** be **at least 3°C below the climatological normal**.
+2. Morning minima **at or below −15°C** are expected to persist for **at least 2 days**.
+
+</div>
+
+</section>
+
+Conditions within the first route are joined by **and**; the two routes are joined by **or**. Do not omit the normal-temperature condition or judge the route from the drop alone. These cold-wave criteria use morning minimum **air temperature**, not wind chill.
+
+### A hypothetical reading exercise
+
+If a morning minimum falls from 8°C to −2°C, the 10°C drop and the 3°C ceiling are satisfied. Without the climatological normal, however, the first route cannot be confirmed. This is an editorial example, not a dated observation or an actual alert decision.
+
+## 4. Include the severe heat tier and regional tropical-night criteria
+
+A heat advisory concerns a daily maximum **apparent temperature of at least 33°C for at least 2 days** as expected; the warning uses **35°C for at least 2 days**. Unlike the cold-wave row, this row uses apparent temperature.
+
+For the current **중대경보** tier, the prerequisite is a region where daily maximum apparent temperatures **of at least 35°C have been observed for at least 2 days**. In that region, either of the following must be expected:
+
+- Daily maximum **apparent temperature of at least 38°C for at least 1 day**.
+- Daily maximum **air temperature of at least 39°C for at least 1 day**.
+
+Keep the observed prerequisite and forecast condition together. The 38°C and 39°C alternatives refer to different quantities.
+
+The tropical-night advisory combines an expected daily maximum apparent temperature of at least 33°C for at least 2 days **and** a forecast nighttime minimum meeting the **regional threshold designated by KMA**. Do not replace this advisory rule with one nationwide nighttime temperature. Consult the regional tropical-night threshold guide linked on the same official page.
+
+## 5. Read the actual bulletin before acting
+
+Check the phenomenon, area, issue time and effective time. Identify the quantity, accumulation window and prerequisites, then consult the bulletin and instructions from the relevant authorities. One station reading, a model output, a disaster text message and an evacuation order serve different purposes.
+
+Station counts, radar counts and satellite sampling intervals can change. Listing them without a dated source does not establish the alert decision, so they are not presented here as fixed operational facts.
+
+## Summary
+
+Read alert criteria as **quantity + threshold + duration + logic + region**. Rain windows use **or**; the conditions within the rapid-cooling route use **and**. Include the severe heat tier and regional tropical-night criteria, and do not use this explanatory chapter to determine whether an official alert has been issued.

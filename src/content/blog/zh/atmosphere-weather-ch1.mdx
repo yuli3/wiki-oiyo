@@ -1,38 +1,246 @@
 ---
-title: "大气环境与生活气象 — 第1章: 体感温度的物理学与风寒指数（冬季寒潮）"
-description: "阐明韩国气象厅（KMA）采用的JAG/TI体感温度数学模型、风速对人体皮肤热耗散的动力学机理，以及寒潮注意报、警报的法定科学标准。"
+title: "大气与季节 — 第1章：PM10与PM2.5的粒径和成分差异"
+description: "PM2.5属于PM10的粒径范围。区分粒径、直接排放与二次生成、质量浓度，以及韩国空气质量预报等级。"
 pubDate: 2026-10-16
-tags: ["体感温度", "风寒指数", "气象科学", "韩国冬季", "寒潮防御"]
-category: "Natural Science"
+tags: ["PM10", "PM2.5", "大气科学", "气溶胶"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 1
-chapterTitleShort: "体感温度与风寒指数"
+chapterTitleShort: "PM10与PM2.5"
 locale: "zh"
-market: "CN"
-audienceMarket: "CN"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
+**PM2.5不是与PM10相互独立的物质，而是PM10所包含的较小粒径范围。** 韩语“미세먼지”和“초미세먼지”的名称容易让人误以为两者互不重叠。先根据[美国EPA的颗粒物定义](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)理解粒径关系，再把科学概念与韩国预报制度分开阅读。
 
-# 大气环境与生活气象 — 第1章: 体感温度的物理学与风寒指数
+## 1. 粒径与大小比较
 
-在韩国冬季的首尔，即使温度计显示气温仅为零下5℃，如果伴随来自西伯利亚的强劲西北季风，人体裸露皮肤所感受到的刺骨寒意往往会骤降至“零下15℃”。将这种人体主观冷暖感知量化为客观物理指标的体系，便是**体感温度（Apparent Temperature / Wind Chill Index）**。
+PM后的数字以微米（μm，即一米的百万分之一）表示空气动力学直径的大致上限。PM10通常指直径不超过10μm的可吸入颗粒物范围，PM2.5通常指不超过2.5μm的细颗粒物范围。英文称PM2.5为 *fine particles*，不能将其与 *ultrafine particles* 当成同一个术语。
 
-韩国气象厅自2001年起正式引入美国与加拿大气象部门联合研制的“JAG/TI模型”。该模型基于成年人平均面部受风面积（约0.13m²）与标准步行速度（时速4.8km）下的风洞实验流体力学数据推导而来。
+假设头发直径为60μm，可以做下面的几何比较。它不用于计算真实颗粒的形状、密度、数量或危害。
 
-## 韩国气象厅 JAG/TI 体感温度公式
 
-$$Twc = 13.12 + 0.6215Ta - 11.37V^{0.16} + 0.3965TaV^{0.16}$$
+<section aria-label="粒径与面积比较表" className="my-6 grid gap-3">
 
-其中 $Ta$ 为地面1.5米处的气温（℃），$V$ 为地面10米处的风速（km/h）。公式中风速的指数为0.16，揭示了强烈的非线性流体动力学特征：在微风起步阶段，皮肤表面的静止隔热空气边界层被迅速剥离，导致人体热损失速率最为陡峭。
+<div className="rounded-lg border border-border bg-card p-4">
 
-<WindChillSlider />
+### 作为基准的头发
 
-## 韩国气象厅寒潮特报发布标准
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">直径</dt>
+<dd>60μm</dd>
+</div>
+<div>
+<dt className="font-medium">相对60μm的直径比</dt>
+<dd>1</dd>
+</div>
+<div>
+<dt className="font-medium">假设均为圆形截面的面积比</dt>
+<dd>1</dd>
+</div>
+</dl>
 
-- **寒潮注意报**: 早晨最低气温比前一日骤降10℃以上且降至3℃以下，预计比常年平均低3℃以上时；或早晨最低气温达到零下12℃以下并预计持续2天以上时。
-- **寒潮警报**: 早晨最低气温比前一日骤降15℃以上且降至3℃以下，预计比常年平均低3℃以上时；或早晨最低气温达到零下15℃以下并预计持续2天以上时。
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10范围的粒径上限
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">直径</dt>
+<dd>10μm</dd>
+</div>
+<div>
+<dt className="font-medium">相对60μm的直径比</dt>
+<dd>1/6</dd>
+</div>
+<div>
+<dt className="font-medium">假设均为圆形截面的面积比</dt>
+<dd>1/36</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM2.5范围的粒径上限
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">直径</dt>
+<dd>2.5μm</dd>
+</div>
+<div>
+<dt className="font-medium">相对60μm的直径比</dt>
+<dd>1/24</dd>
+</div>
+<div>
+<dt className="font-medium">假设均为圆形截面的面积比</dt>
+<dd>1/576</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+直径比不是截面积比；粒径、颗粒数量和质量浓度也不是同一个量。颗粒可以随风迁移，随后沉降到地面或水体，但不能仅凭PM10或PM2.5分类就确定大气停留时间。同一个PM10范围内也包含多种大小的颗粒。可参阅[EPA的环境影响说明](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm)。
+
+## 2. 直接排放与二次生成是另一条分类轴
+
+PM10和PM2.5都可能包含直接排出的成分，以及在大气反应中形成的成分。“PM10都是天然尘土，PM2.5都是化学物质”的二分法并不准确。
+
+
+<section aria-label="来源与成分比较表" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 粒径范围
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>同时包含较小和相对较大的颗粒</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>PM10中的较小粒径范围</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 来源示例
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>土壤和道路扬尘、施工、燃烧等</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>燃烧直接排放、气态前体物反应等</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 成分判断
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>不能只由粒径名称确定</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>小颗粒也可能具有不同化学成分</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### 数据解读
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>同时检查地区、时期、来源与测量条件</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>有条件地判断直接排放和二次生成的贡献</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+二次生成的贡献比例需要附带地区、时间与观测条件。本章不采用没有条件的“始终超过70%”等比例。
+
+## 3. 呼吸系统影响与解释边界
+
+呼吸系统有排除外来物的机制，但PM10范围的颗粒也可能进入肺部深处，其中一部分甚至可能进入血液。这不等于所有PM2.5都会完全绕过上呼吸道防御并直接进入血管。[EPA健康影响说明](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm)讨论了颗粒暴露与心肺健康问题的关系。粒径分类不能诊断个人疾病，也不能预测某次暴露后的个人结果。
+
+## 4. 区分韩国预报等级与其他标准
+
+下表是**韩国根据日平均浓度划分的预报等级**，不是中国空气质量指数的换算表。单位为μg/m³。
+
+
+<section aria-label="韩国预报等级表" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">良好（좋음）</dt>
+<dd>0–30</dd>
+</div>
+<div>
+<dt className="font-medium">一般（보통）</dt>
+<dd>31–80</dd>
+</div>
+<div>
+<dt className="font-medium">差（나쁨）</dt>
+<dd>81–150</dd>
+</div>
+<div>
+<dt className="font-medium">很差（매우나쁨）</dt>
+<dd>超过150</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM2.5
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">良好（좋음）</dt>
+<dd>0–15</dd>
+</div>
+<div>
+<dt className="font-medium">一般（보통）</dt>
+<dd>16–35</dd>
+</div>
+<div>
+<dt className="font-medium">差（나쁨）</dt>
+<dd>36–75</dd>
+</div>
+<div>
+<dt className="font-medium">很差（매우나쁨）</dt>
+<dd>超过75</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+来源为[AirKorea预报等级](https://airkorea.or.kr/web/dustForecast)。它不同于法定环境空气质量标准，也不同于按小时平均浓度等条件发布的注意报和警报标准。阅读浓度数字时，应同时确认颗粒种类、平均时段和制度名称。
+
+## 小结
+
+粒径、化学成分、生成过程和质量浓度需要分别判断。先理解PM2.5包含在PM10之内，就能避免把它们当成两种完全不同物质的误解。大小的几何比较，不是危害程度或个人疾病的比较。
+
+原文核对日期：2026-10-19。本章不提供个人医疗建议。韩国气象厅针对降水、寒潮等发布的气象特报，与本章AirKorea的颗粒物预报、警报属于不同制度。

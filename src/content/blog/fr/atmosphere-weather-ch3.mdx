@@ -1,39 +1,90 @@
 ---
-title: "Atmosphère et Météo en Corée — Ch 3: Indice WBGT de Stress Thermique et Canicule"
-description: "Dérivation thermodynamique de la température au thermomètre-globe mouillé (WBGT), alertes canicule de la KMA et indice de rayonnement UV en été humide coréen."
+title: "Atmosphère et saisons — Chapitre 3 : refroidissement éolien, indice de chaleur et WBGT"
+description: "Vérifier les unités et le domaine du refroidissement éolien, puis distinguer indice de chaleur et WBGT par leurs données et hypothèses."
 pubDate: 2026-10-16
-tags: ["canicule", "wbgt", "stress-thermique", "rayonnement-uv", "meteo-ete"]
-category: "Natural Science"
+tags: ["wind-chill", "heat-index", "WBGT", "thermal-indices"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 3
-chapterTitleShort: "Indice WBGT et Alertes Canicule"
+chapterTitleShort: "Indices thermiques et hypothèses"
 locale: "fr"
-market: "EU"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmosphère et Météo en Corée — Chapitre 3: Stress Thermique Estival et Indice WBGT
+**Un indice de température ressentie ne corrige pas le thermomètre pour révéler la « vraie température du corps ».** Refroidissement éolien, indice de chaleur et WBGT résument des conditions différentes. Une unité commune ne les rend ni interchangeables ni équivalents à une mesure de température cutanée ou centrale.
 
-En plein été, la superposition de l'anticyclone subtropical du Pacifique Nord et de l'anticyclone tibétain engendre en Corée du Sud un dôme de chaleur extrême. À température égale (33°C), un climat sec permet un refroidissement efficace par sudation, tandis qu'une humidité relative de 80 % après la saison des pluies (Jangma) paralyse l'évaporation corporelle.
+## 1. La température de l’air ne décrit pas tout le bilan thermique
 
-L'étalon international de référence pour évaluer le risque de coup de chaleur est le **WBGT (Wet Bulb Globe Temperature)**.
+Le bilan humain comprend chaleur métabolique, travail, convection, rayonnement, conduction et évaporation. Un air plus froid que la peau peut favoriser une perte convective ; plus chaud, il peut apporter de la chaleur. Le rayonnement dépend aussi des surfaces environnantes et de l’exposition. Convection et rayonnement ne cessent pas tous deux dès que l’air dépasse un seuil universel de 27 ou 30 °C.
 
-## Pondération de l'Indice WBGT
+Le vent modifie les transferts de chaleur et d’humidité près de la peau, sans procurer toujours le même refroidissement. Une humidité élevée peut freiner l’évaporation ; 80–90 % d’humidité relative ne signifie pas saturation. À température d’air donnée, la saturation correspond à 100 %. La température de la peau et la différence de pression de vapeur comptent aussi.
 
-$$WBGT = 0.7Twb + 0.2Tg + 0.1Ta$$
+## 2. Le refroidissement éolien a un domaine de validité
 
-- $Twb$ (Thermomètre mouillé) : Représente 70 % du score total, reflétant directement la capacité résiduelle d'évaporation de la sueur.
-- $Tg$ (Globe noir) : Pèse 20 % et mesure le rayonnement solaire direct et la chaleur réfléchie par le bitume urbain.
-- $Ta$ (Thermomètre sec ordinaire) : Ne représente que 10 %.
+L’[explication du NWS](https://www.weather.gov/safety/cold-wind-chill-chart) décrit un modèle de perte de chaleur du visage exposé, sans réchauffement solaire. Ce n’est pas une mesure directe de température cutanée ou d’isolation des vêtements. La forme en degrés Celsius et km/h est :
 
-<WindChillSlider />
+$$T_{wc}=13.12+0.6215T-11.37V^{0.16}+0.3965TV^{0.16}$$
 
-## Seuils des Alertes Canicule en Corée
+$T$ est la température de l’air en °C et $V$ la vitesse du vent en km/h. Convertissez une vitesse $v$ en m/s par $V=3.6v$ avant substitution ; les constantes de l’équation utilisent ici le point décimal. Le NWS définit l’indice à 50 °F ou moins et au-dessus de 3 mph, soit 10 °C ou moins et plus d’environ 4,8 km/h. Une extrapolation au calme ou par temps chaud n’est pas une mesure physiologique précise.
 
-- **Vigilance Canicule** : Température ressentie maximale quotidienne prévue à **33°C ou plus** pendant au moins 2 jours consécutifs.
-- **Alerte Canicule Maximale** : Température ressentie maximale quotidienne prévue à **35°C ou plus** pendant au moins 2 jours consécutifs.
+### Exemple : −5 °C et 5 m/s
+
+La vitesse vaut $5×3.6=18$ km/h et $18^{0.16}≈1.588$. La substitution donne environ −11,2 °C. C’est un résultat de modèle arrondi, pas une observation ni un compte à rebours personnel avant gelure. L’air reste à −5 °C ; le vent seul ne fait pas descendre un objet inanimé sec sous la température de l’air.
+
+## 3. L’indice de chaleur n’est pas le WBGT
+
+L’[explication des outils du NWS](https://www.weather.gov/safety/heat-index) relie l’indice de chaleur à la température et à l’humidité relative, avec des hypothèses d’ombre et de vent faible. Il ne s’applique pas sans précaution à une activité au soleil et ne se confond pas avec tous les critères d’alerte coréens.
+
+Le WBGT repose sur d’autres mesures environnementales, notamment les températures du thermomètre mouillé naturel et du globe noir. Vent et rayonnement comptent. Lire température et humidité ordinaires n’équivaut pas à mesurer ces grandeurs. Calculer seulement une température de thermomètre mouillé ne constitue pas une mesure du WBGT.
+
+<section aria-label="Données et limites des indices thermiques" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Refroidissement éolien
+
+**Données et hypothèses:** Air froid, vent, visage exposé, sans soleil
+
+**Ce que le nombre seul ne permet pas d’établir:** Température cutanée réelle ou isolation des vêtements
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Indice de chaleur
+
+**Données et hypothèses:** Température et humidité, ombre, vent faible
+
+**Ce que le nombre seul ne permet pas d’établir:** Risque personnel tenant compte du soleil et de l’effort
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### WBGT
+
+**Données et hypothèses:** Mesures dont thermomètre mouillé naturel et globe noir
+
+**Ce que le nombre seul ne permet pas d’établir:** Sécurité indépendamment de l’activité, des vêtements ou de l’acclimatation
+
+</div>
+
+</section>
+
+## 4. Lire le nom de l’indice avant le nombre
+
+Identifiez indice, organisme, unités et hypothèses. Vérifiez lieu, heure et distinction entre maximum et moyenne, puis consultez l’alerte et les consignes effectives. N’appliquez pas les catégories de risque d’un indice à un autre au seul motif que les deux utilisent des degrés.
+
+Douze participants ne sont pas douze essais cliniques. L’exposant ajusté 0,16 n’explique pas à lui seul une réponse nerveuse individuelle. L’indice ne garantit ni exactement 5 °C de protection par un vêtement, ni une gelure chez une personne donnée après un délai fixe.
+
+## À retenir
+
+Refroidissement éolien : froid et vent ; indice de chaleur : chaleur et humidité ; WBGT : autre cadre environnemental de stress thermique. Distinguez résultat de modèle, observation et évaluation médicale personnelle.
+
+Sources consultées le 2026-10-19. Le texte et l’exemple enseignent l’interprétation des indices ; ils ne remplacent ni évaluation médicale individuelle ni alerte officielle.

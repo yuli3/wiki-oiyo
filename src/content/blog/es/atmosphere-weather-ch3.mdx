@@ -1,39 +1,90 @@
 ---
-title: "Atmósfera y Clima en Corea — Ch 3: Estrés Térmico WBGT y Olas de Calor Caniculares"
-description: "Ecuación termodinámica de la temperatura de bulbo húmedo y globo negro (WBGT), umbrales de alerta de canícula de la KMA y protección frente al índice UV veraniego."
+title: "Atmósfera y estaciones — Capítulo 3: sensación térmica por viento, índice de calor y WBGT"
+description: "Revisar las unidades y el ámbito de la sensación térmica por viento, y distinguir índice de calor y WBGT por sus entradas y supuestos."
 pubDate: 2026-10-16
-tags: ["ola-de-calor", "wbgt", "estres-termico", "indice-uv", "verano-corea"]
-category: "Natural Science"
+tags: ["wind-chill", "heat-index", "WBGT", "thermal-indices"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 3
-chapterTitleShort: "Índice WBGT y Alertas Caniculares"
+chapterTitleShort: "Índices térmicos y supuestos"
 locale: "es"
-market: "LATAM"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmósfera y Clima en Corea — Capítulo 3: Estrés Térmico Estival y Temperatura WBGT
+**Un índice de temperatura aparente no corrige el termómetro para revelar la «temperatura real del cuerpo».** La sensación térmica por viento, el índice de calor y el WBGT resumen condiciones distintas. Compartir unidades no los hace intercambiables ni los convierte en medidas de temperatura cutánea o central.
 
-En pleno verano, la confluencia del anticiclón subtropical del Pacífico Norte y el anticiclón tibetano forma una cúpula de calor sofocante en Corea del Sur. A 33°C, en un clima seco el sudor se evapora y enfría el cuerpo; pero con la humedad relativa del 80 % tras las lluvias estivales (Jangma), la capacidad de enfriamiento por evaporación se bloquea.
+## 1. La temperatura del aire no es todo el balance térmico
 
-El estándar internacional de precisión para medir este peligro es la **temperatura de bulbo húmedo y globo (WBGT)**.
+El balance humano incluye calor metabólico, trabajo, convección, radiación, conducción y evaporación. Un aire más frío que la piel puede permitir pérdidas por convección; uno más caliente puede aportar calor. El intercambio radiativo también depende de las superficies próximas y de la exposición. Convección y radiación no se detienen ambas al superar un umbral universal de 27 o 30 °C.
 
-## Ecuación y Ponderación del WBGT
+El viento modifica la transferencia de calor y humedad junto a la piel, pero no siempre produce el mismo enfriamiento. La humedad alta puede dificultar la evaporación; una humedad relativa del 80–90 % no es saturación. A una temperatura del aire dada, la saturación corresponde al 100 %. También influyen la temperatura de la piel y la diferencia de presión de vapor.
 
-$$WBGT = 0.7Twb + 0.2Tg + 0.1Ta$$
+## 2. El índice por viento tiene un ámbito de aplicación
 
-- $Twb$ (Bulbo húmedo): Aporta el 70 % de la fórmula, reflejando directamente la viabilidad del enfriamiento por transpiración.
-- $Tg$ (Globo negro): Pondera un 20 %, midiendo la radiación solar directa y la emisión infrarroja del asfalto.
-- $Ta$ (Bulbo seco ordinario): Solo pesa un 10 %.
+La [explicación del NWS](https://www.weather.gov/safety/cold-wind-chill-chart) describe un modelo de pérdida de calor del rostro expuesto sin calentamiento solar. No mide directamente la temperatura de la piel ni el aislamiento de la ropa. Su forma en grados Celsius y km/h es:
 
-<WindChillSlider />
+$$T_{wc}=13.12+0.6215T-11.37V^{0.16}+0.3965TV^{0.16}$$
 
-## Umbrales de Alertas Caniculares en Corea
+$T$ es la temperatura del aire en °C y $V$ la velocidad del viento en km/h. Convierta primero una velocidad $v$ en m/s mediante $V=3.6v$; aquí las constantes de la fórmula usan punto decimal. El NWS define el índice para 50 °F o menos y velocidades superiores a 3 mph: 10 °C o menos y más de unos 4,8 km/h. Extrapolarlo a calma o tiempo cálido no produce una medición fisiológica precisa.
 
-- **Aviso de Ola de Calor**: Temperatura de sensación máxima diaria prevista de **33°C o superior** durante 2 días consecutivos.
-- **Alerta de Ola de Calor Severa**: Temperatura de sensación máxima diaria prevista de **35°C o superior** durante 2 días consecutivos.
+### Ejemplo: −5 °C y 5 m/s
+
+La velocidad es $5×3.6=18$ km/h y $18^{0.16}≈1.588$. Al sustituir se obtiene aproximadamente −11,2 °C. Es un resultado de modelo redondeado, no una observación ni una cuenta atrás personal hasta la congelación de la piel. El aire sigue a −5 °C; el viento por sí solo no enfría un objeto inanimado seco por debajo de la temperatura del aire.
+
+## 3. El índice de calor no es el WBGT
+
+La [explicación de las herramientas del NWS](https://www.weather.gov/safety/heat-index) relaciona el índice de calor con temperatura y humedad relativa, bajo supuestos de sombra y viento débil. No se traslada sin cautela a actividades al sol ni equivale a todos los criterios coreanos de aviso por calor.
+
+El WBGT utiliza otras mediciones ambientales, incluidas las temperaturas de bulbo húmedo natural y de globo negro. Importan viento y radiación. Leer temperatura y humedad ordinarias no equivale a medir esas magnitudes. Calcular únicamente la temperatura de bulbo húmedo no constituye una medición del WBGT.
+
+<section aria-label="Entradas y límites de los índices térmicos" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Sensación térmica por viento
+
+**Entradas y supuestos:** Aire frío, viento, rostro expuesto, sin calentamiento solar
+
+**Lo que la cifra por sí sola no determina:** Temperatura cutánea real o aislamiento de la ropa
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Índice de calor
+
+**Entradas y supuestos:** Temperatura y humedad, sombra, viento débil
+
+**Lo que la cifra por sí sola no determina:** Riesgo personal que incluya sol y esfuerzo
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### WBGT
+
+**Entradas y supuestos:** Mediciones como bulbo húmedo natural y globo negro
+
+**Lo que la cifra por sí sola no determina:** Seguridad sin considerar actividad, ropa o aclimatación
+
+</div>
+
+</section>
+
+## 4. Lea el nombre del índice antes de la cifra
+
+Identifique índice, organismo, unidades y supuestos ambientales. Compruebe lugar, hora y si se trata de un máximo o un promedio; después consulte el aviso y las recomendaciones efectivas. No traslade categorías de riesgo de un índice a otro solo porque ambos se expresan en grados.
+
+Doce participantes no son doce ensayos clínicos. El exponente ajustado 0,16 no explica por sí solo la respuesta nerviosa de una persona. El índice tampoco garantiza exactamente 5 °C de protección de una prenda ni una lesión por congelación en un plazo fijo.
+
+## Resumen
+
+El índice por viento trata frío y viento; el índice de calor, calor y humedad; el WBGT utiliza otro marco ambiental de estrés térmico. Distinga resultados de modelos, observaciones y evaluaciones de salud personales.
+
+Fuentes comprobadas: 2026-10-19. El texto y el ejemplo enseñan a interpretar índices; no sustituyen una evaluación médica individual ni los avisos oficiales.

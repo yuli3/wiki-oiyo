@@ -1,37 +1,248 @@
 ---
-title: "Atmósfera y Clima en Corea — Ch 1: Sensación Térmica y Viento Siberiano (Olas de Frío)"
-description: "Fórmula JAG/TI oficial de la Administración Meteorológica de Corea (KMA), física de la pérdida térmica cutánea por viento y criterios para alertas de frío extremo."
+title: "Atmósfera y estaciones — Capítulo 1: tamaño y composición de PM10 y PM2.5"
+description: "PM2.5 forma parte de PM10. Distingue diámetro, emisiones directas, formación secundaria, concentración másica y categorías de pronóstico utilizadas en Corea."
 pubDate: 2026-10-16
-tags: ["sensacion-termica", "viento-siberiano", "clima-corea", "olas-de-frio", "ciencias-atmosfericas"]
-category: "Natural Science"
+tags: ["PM10", "PM2.5", "ciencias-atmosfericas", "aerosoles"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 1
-chapterTitleShort: "Sensación Térmica y Olas de Frío"
+chapterTitleShort: "PM10 y PM2.5"
 locale: "es"
-market: "LATAM"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmósfera y Clima en Corea — Capítulo 1: Física de la Sensación Térmica y Viento Siberiano
+**PM2.5 no es una sustancia separada de PM10, sino un intervalo de tamaños más pequeños incluido en PM10.** Los términos coreanos «미세먼지» y «초미세먼지» no designan dos conjuntos sin solapamiento. Partimos de la [definición de la EPA estadounidense](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics), separando los conceptos científicos del sistema coreano de pronóstico.
 
-Durante el invierno en Seúl, un termómetro que marca -5°C puede sentirse como -15°C debido al gélido viento del noroeste procedente del anticiclón de Siberia. La cuantificación de esta percepción biológica corresponde al **índice de sensación térmica (Wind Chill Index)**.
+## 1. Comparar tamaños sin confundir magnitudes
 
-La Administración Meteorológica de Corea (KMA) utiliza el modelo conjunto JAG/TI (Joint Action Group for Temperature Indices), deducido a partir de pruebas aerodinámicas en túnel de viento con un área facial de referencia de 0,13 m² y una velocidad de marcha de 4,8 km/h.
+El número después de PM indica un límite superior aproximado del diámetro aerodinámico, expresado en micrómetros (μm, la millonésima parte de un metro). PM10 abarca partículas inhalables de, por lo general, 10 μm o menos; PM2.5 abarca partículas finas de, por lo general, 2,5 μm o menos. El término inglés *fine particles* se utiliza para PM2.5 y no equivale a *ultrafine particles*.
 
-## Ecuación JAG/TI de la KMA
+Supongamos un cabello de 60μm de diámetro como referencia. Es un ejemplo geométrico, no un cálculo de la forma, densidad, cantidad o peligrosidad de las partículas reales.
 
-$$Twc = 13.12 + 0.6215Ta - 11.37V^{0.16} + 0.3965TaV^{0.16}$$
 
-Donde $Ta$ es la temperatura del aire a 1,5 metros (°C) y $V$ la velocidad del viento a 10 metros (km/h). El exponente 0,16 refleja un comportamiento no lineal crítico: la capa de aire aislante superficial que envuelve la piel se desprende bruscamente incluso ante brisas moderadas.
+<section aria-label="Comparación de diámetros y áreas" className="my-6 grid gap-3">
 
-<WindChillSlider />
+<div className="rounded-lg border border-border bg-card p-4">
 
-## Criterios Oficiales de Alertas por Olas de Frío
+### Cabello de referencia
 
-- **Aviso de Ola de Frío**: Descenso de más de 10°C en la mínima respecto al día anterior para situarse en 3°C o menos, o temperatura mínima de -12°C o inferior prevista durante al menos 2 días consecutivos.
-- **Alerta de Ola de Frío Severa**: Descenso de más de 15°C para situarse en 3°C o menos, o mínimas de -15°C o inferiores durante 2 días consecutivos.
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diámetro</dt>
+<dd>60μm</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de diámetros respecto a 60μm</dt>
+<dd>1</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de áreas suponiendo secciones circulares</dt>
+<dd>1</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Tamaño límite de PM10
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diámetro</dt>
+<dd>10μm</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de diámetros respecto a 60μm</dt>
+<dd>1/6</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de áreas suponiendo secciones circulares</dt>
+<dd>1/36</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Tamaño límite de PM2.5
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Diámetro</dt>
+<dd>2,5 μm</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de diámetros respecto a 60μm</dt>
+<dd>1/24</dd>
+</div>
+<div>
+<dt className="font-medium">Relación de áreas suponiendo secciones circulares</dt>
+<dd>1/576</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+La relación entre diámetros no es la relación entre áreas. Tamaño, número de partículas y concentración másica también son magnitudes distintas. El viento puede transportar partículas antes de que se depositen en el suelo o el agua, pero no se puede fijar su tiempo de permanencia en la atmósfera solo por la categoría PM10 o PM2.5: cada intervalo contiene diversos tamaños. Consulta la [explicación ambiental de la EPA](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm).
+
+## 2. Emisión directa y formación secundaria: otro eje de clasificación
+
+Tanto PM10 como PM2.5 pueden incluir componentes emitidos directamente y componentes formados por reacciones atmosféricas. No es correcto dividirlas en «polvo natural» frente a «sustancias químicas».
+
+
+<section aria-label="Fuentes y composición de partículas" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Intervalo de tamaños
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Incluye partículas pequeñas y relativamente mayores</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Intervalo más pequeño dentro de PM10</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Ejemplos de fuentes
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Suelo, polvo vial o de obras y combustión</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Emisión por combustión y reacciones de precursores gaseosos</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Composición
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>El nombre no basta para determinarla</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Las partículas pequeñas también tienen composiciones diversas</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Lectura de datos
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">PM10</dt>
+<dd>Revisar lugar, período, fuentes y condiciones de medición</dd>
+</div>
+<div>
+<dt className="font-medium">PM2.5</dt>
+<dd>Interpretar las contribuciones directas y secundarias con sus condiciones</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+La contribución secundaria requiere especificar lugar, período y condiciones de observación. Este capítulo no utiliza porcentajes universales como «siempre más del 70%».
+
+## 3. Efectos respiratorios y límites de la explicación
+
+El sistema respiratorio tiene mecanismos para eliminar material extraño. Aun así, las partículas del intervalo PM10 pueden alcanzar zonas profundas de los pulmones y algunas incluso llegar al torrente sanguíneo. Esto no significa que todas las PM2.5 eviten por completo las defensas de las vías superiores y entren directamente en los vasos.
+
+La [explicación sanitaria de la EPA](https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm) aborda la relación entre exposición y problemas cardiopulmonares. Una categoría de tamaño no permite diagnosticar enfermedades individuales ni predecir el resultado de una exposición concreta.
+
+## 4. Interpretar las categorías coreanas de pronóstico
+
+Esta tabla muestra **las categorías de pronóstico de Corea basadas en la concentración media diaria**, en μg/m³. No es una conversión a los índices de España ni de países latinoamericanos.
+
+
+<section aria-label="Categorías coreanas de pronóstico" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Buena (좋음)</dt>
+<dd>0–30</dd>
+</div>
+<div>
+<dt className="font-medium">Moderada (보통)</dt>
+<dd>31–80</dd>
+</div>
+<div>
+<dt className="font-medium">Mala (나쁨)</dt>
+<dd>81–150</dd>
+</div>
+<div>
+<dt className="font-medium">Muy mala (매우나쁨)</dt>
+<dd>Más de 150</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM2.5
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Buena (좋음)</dt>
+<dd>0–15</dd>
+</div>
+<div>
+<dt className="font-medium">Moderada (보통)</dt>
+<dd>16–35</dd>
+</div>
+<div>
+<dt className="font-medium">Mala (나쁨)</dt>
+<dd>36–75</dd>
+</div>
+<div>
+<dt className="font-medium">Muy mala (매우나쁨)</dt>
+<dd>Más de 75</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+Fuente: [categorías de pronóstico de AirKorea](https://airkorea.or.kr/web/dustForecast). No son las normas legales de calidad del aire ni los umbrales de avisos y alertas basados en promedios horarios. Conviene comprobar el contaminante, el período de promedio y el sistema al que pertenece cada cifra.
+
+## Resumen
+
+El tamaño, la composición química, la formación y la concentración másica deben leerse por separado. Comprender que PM2.5 está incluida en PM10 evita tratarlas como sustancias completamente diferentes. La comparación geométrica no clasifica la peligrosidad ni las enfermedades de cada persona.
+
+Fuentes consultadas el 2026-10-19. Este capítulo no ofrece asesoramiento médico individual. Las alertas meteorológicas de la KMA, por ejemplo por lluvias o frío, pertenecen a un sistema distinto de los pronósticos y alertas de AirKorea sobre partículas.

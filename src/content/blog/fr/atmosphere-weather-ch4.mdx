@@ -1,34 +1,179 @@
 ---
-title: "Atmosphère et Météo en Corée — Ch 4: Modèle Numérique KIM et Radars Météorologiques"
-description: "Architecture du modèle mondial coréen KIM (Korean Integrated Model), radars Doppler à double polarisation et système d'alertes SMS d'urgence en cas d'inondation."
+title: "Atmosphère et saisons — Chapitre 4 : poussières, pollution particulaire et smog"
+description: "Distinguez émission et transport des poussières, particules primaires et secondaires, ozone au sol et inhibition du mélange par une inversion de température."
 pubDate: 2026-10-16
-tags: ["prevision-numerique", "modele-kim", "radar-doppler", "alertes-inondation", "securite-civile"]
-category: "Natural Science"
+tags: ["poussieres", "smog", "PM10", "PM2.5", "ozone", "inversion-temperature"]
+category: "natural-science"
 track: "academy"
 series: "atmosphere-weather"
 chapter: 4
-chapterTitleShort: "Modèle KIM et Radars Météo"
+chapterTitleShort: "Poussières, particules et smog"
 locale: "fr"
-market: "EU"
-audienceMarket: "GLOBAL"
-contentScope: "global"
+market: "KR"
+audienceMarket: "KR"
+contentScope: "local"
 localizationMode: "localized"
 author: "Oiyo"
 layoutVariant: "lecture-series"
 ---
 
-# Atmosphère et Météo en Corée — Chapitre 4: Prévision Numérique KIM et Radars Dopplers
+**Les poussières asiatiques désignent un phénomène d’émission et de transport ; PM10 et PM2.5 sont des plages de tailles ; le smog photochimique implique des réactions atmosphériques, notamment celles qui produisent l’ozone au sol.** Ces phénomènes peuvent coexister. Opposer poussière naturelle et particules fines artificielles confond plusieurs axes. Ni la couleur du ciel ni une concentration isolée ne révèlent toutes les sources ou le risque individuel.
 
-La prévision météorologique moderne repose sur la résolution numérique des équations fondamentales de la mécanique des fluides (Navier-Stokes) et de la thermodynamique sur supercalculateur.
+## 1. Émission et transport des poussières
 
-Depuis 2020, l'Administration Météorologique Coréenne exploite son propre modèle global souverain, le **KIM (Korean Integrated Model)**, plaçant la Corée du Sud parmi les neuf nations disposant d'un modèle atmosphérique mondial autonome.
+L’[aperçu de l’OMM sur les tempêtes de sable et de poussière](https://public.wmo.int/themes/sand-and-dust-storms) décrit le soulèvement de matériaux des sols secs par le vent et leur transport à distance. Des zones arides comme le Gobi sont des sources importantes ; perte de végétation, agriculture et gestion des terres peuvent aussi exposer le sol à l’érosion éolienne. « Naturel » ne signifie ni absence d’influence humaine ni absence de risque sanitaire.
 
-## Grille Sphérique Cubique du Modèle KIM
+Émission au sol, soulèvement, transport et dépôt sont des processus distincts. La saltation correspond au rebond des grains près du sol, pas à un mouvement dans le courant-jet en altitude. Hauteur et temps de trajet varient selon les particules et la météo : il n’existe pas une altitude ni un délai de deux jours valables pour chaque épisode.
 
-Bordée par la mer Jaune à l'ouest et la chaîne montagneuse escarpée de Taebaek à l'est, la péninsule coréenne présente des gradients topographiques extrêmes. Le modèle KIM recourt à une grille sphérique cubique (Cubed-Sphere Grid) pour s'affranchir de la singularité polaire et propose un maillage imbriqué à haute résolution de 8 km sur l'Asie de l'Est.
+Les poussières comprennent différentes tailles. PM10 n’est pas une étiquette réservée aux poussières asiatiques ; une mesure de PM2.5 ne suffit pas non plus à exclure une contribution minérale.
 
-<WindChillSlider />
+## 2. Les particules ne sont pas l’ozone
 
-## Détection des Pluies Torrentielles par Radars à Double Polarisation
+Des particules sont émises directement par les sols, les chantiers ou la combustion ; d’autres se forment par réaction dans l’air. L’[explication de l’EPA sur les PM](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics) distingue émissions directes et formation secondaire. La taille ne détermine pas à elle seule la composition ou la source.
 
-Le réseau radar coréen émet simultanément des ondes polarisées horizontalement et verticalement. En calculant le rapport d'ellipticité des gouttes, le système identifie instantanément s'il s'agit d'une pluie fine, de grêle ou de grésil. Ce dispositif permet d'anticiper les crues éclair 10 à 20 minutes avant l'impact au sol et d'envoyer des SMS d'alerte catastrophe prioritaires (Emergency Disaster Messages) sur les téléphones des citoyens concernés.
+**L’ozone au sol est un gaz, pas un autre nom des PM2.5.** L’[EPA explique sa formation](https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics) par des réactions impliquant oxydes d’azote (NOₓ), composés organiques volatils (VOC dans ce chapitre) et lumière solaire. Concentration d’ozone et concentration massique des particules se lisent séparément.
+
+<section aria-label="Comparaison des poussières, particules et du smog" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Question
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Poussières et particules minérales</dt>
+<dd>Où les matériaux ont-ils été soulevés et transportés ?</dd>
+</div>
+<div>
+<dt className="font-medium">Pollution particulaire et smog photochimique</dt>
+<dd>Comment particules et gaz ont-ils été émis ou formés ?</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Taille
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Poussières et particules minérales</dt>
+<dd>Différentes tailles peuvent contribuer aux PM10 et PM2.5</dd>
+</div>
+<div>
+<dt className="font-medium">Pollution particulaire et smog photochimique</dt>
+<dd>PM désigne une taille ; l’ozone est un gaz</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Composition
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Poussières et particules minérales</dt>
+<dd>Les minéraux comptent, sans définir à eux seuls tout le mélange</dd>
+</div>
+<div>
+<dt className="font-medium">Pollution particulaire et smog photochimique</dt>
+<dd>Examiner particules primaires, secondaires et gaz</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Coexistence
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Poussières et particules minérales</dt>
+<dd>Les poussières transportées peuvent partager l’air avec d’autres polluants</dd>
+</div>
+<div>
+<dt className="font-medium">Pollution particulaire et smog photochimique</dt>
+<dd>Les catégories ne sont pas mutuellement exclusives</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+## 3. L’inversion décrit les conditions de mélange
+
+Une inversion est une couche où la température augmente avec l’altitude. Une nuit claire et calme peut refroidir la surface et créer une inversion près du sol. Une stratification stable peut freiner le mélange vertical et favoriser l’accumulation de polluants. Voir l’[explication du service météorologique américain](https://www.weather.gov/lmk/inversion).
+
+Cela ne signifie pas que tout mouvement d’air cesse ni que les gaz se transforment tous en PM2.5 par simple compression. Émission, formation chimique, transport, mélange et élimination sont distincts. Des poussières transportées peuvent aussi rencontrer une faible dispersion dans la région d’arrivée.
+
+## 4. Ne pas déduire une source d’une seule mesure
+
+Voici des exemples éditoriaux qualitatifs, pas les observations d’un jour donné ni un tableau diagnostique.
+
+<section aria-label="Exemples de lecture de la qualité de l’air" className="my-6 grid gap-3">
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10 élevées
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Ce qu’elle décrit</dt>
+<dd>Concentration dans cette plage de tailles</dd>
+</div>
+<div>
+<dt className="font-medium">Éléments supplémentaires nécessaires</dt>
+<dd>Observations de poussières, sources, transport et composition</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### PM10 et PM2.5 élevées
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Ce qu’elle décrit</dt>
+<dd>Concentrations dans deux plages de tailles</dd>
+</div>
+<div>
+<dt className="font-medium">Éléments supplémentaires nécessaires</dt>
+<dd>Contributions directes, secondaires et transportées</dd>
+</div>
+</dl>
+
+</div>
+
+<div className="rounded-lg border border-border bg-card p-4">
+
+### Ozone élevé
+
+<dl className="grid gap-3">
+<div>
+<dt className="font-medium">Ce qu’elle décrit</dt>
+<dd>Un polluant gazeux distinct des particules</dd>
+</div>
+<div>
+<dt className="font-medium">Éléments supplémentaires nécessaires</dt>
+<dd>Soleil, précurseurs, transport et conditions de réaction</dd>
+</div>
+</dl>
+
+</div>
+
+</section>
+
+Pour la Corée, consultez [AirKorea](https://airkorea.or.kr/web/dustForecast) avec le polluant, la durée de moyenne et l’heure de publication. Présence de poussières, concentration particulaire, ozone et alertes météorologiques ne sont pas interchangeables. Un ciel jaune ou gris ne suffit pas à établir une composition ni l’adéquation d’un équipement de protection.
+
+## À retenir
+
+Source et transport répondent à « d’où cela vient-il ? », la taille à « quelle plage mesure-t-on ? », la chimie à « que se forme-t-il ? » et l’inversion à « comment l’air se mélange-t-il ? ». Séparer ces questions permet de comprendre la coexistence des poussières et du smog.
+
+Sources consultées le 2026-10-19. Ce chapitre explique des processus atmosphériques ; il ne fournit ni conseil médical individuel ni prescription de catégorie de masque.
