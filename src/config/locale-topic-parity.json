@@ -1,100 +1,8 @@
 {
-  "_why": "같은 URL(slug)인데 로케일마다 주제가 다른 장. 여기 'mismatch'로 적힌 로케일 페이지는 noindex이고, 같은 slug의 다른 로케일 hreflang·언어 전환·사이트맵에서 빠진다(SEO.astro·[...slug].astro·astro.config.mjs가 이 파일 하나를 함께 읽는다). 'reviewedMatch'는 자동 선별(scripts/audit-locale-topic-parity.mjs)이 의심으로 걸렀지만 사람이 제목·H2를 대조해 같은 주제로 판정한 쌍이다. 번역을 ko 원문 기준으로 다시 하면 해당 항목을 지운다.",
-  "measuredAt": "2026-10-17",
+  "_why": "mismatch는 같은 slug에서 다른 주제를 다뤄 noindex·hreflang·언어전환·사이트맵에서 차단하는 목록이다. reviewedMatch는 본문 의미를 대조해 같은 주제로 판정한 목록이며, 자동 숫자/약어 지문만으로 전문 번역·법률 감수를 인증하지 않는다. 교정·검증·배포 후 검색 공개 승인을 받은 쌍은 mismatch에서 reviewedMatch로 옮겨 이력을 유지한다. SEO.astro·route·sitemap은 이 설정 하나를 함께 읽는다.",
+  "measuredAt": "2026-10-21",
   "reference": "ko",
-  "mismatch": [
-    {
-      "slug": "academic-calendar-ch1",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/19 현행법령과 독립조사로 KO/EN 학년도·학기·국공립학교회계·개인졸업 효과를 구분하고 JA/ZH/FR/ES를 동일주제로 교정. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-school-year-six-locales-2026-10-19.md"
-    },
-    {
-      "slug": "academic-calendar-ch2",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/21 현행45·47·50조 기준으로 KO/EN 오류와 JA/ZH/FR/ES 주제불일치를 교정. KR관할·학교종류·감축·개인출석 구분 및14일 가상SVG/펼침 적용. 공개승인 전4언어 noindex/hreflang/사이트맵 차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
-    },
-    {
-      "slug": "academic-calendar-ch3",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/21 KO/EN 국가전체9월·원인/비용단정을 교정하고 JA/ZH/FR/ES 수능오역을 국가·지역학년도비교로 재작성. KR/JP법정경계와실제등교일·스코틀랜드8월·현지확인흐름·비교SVG. 공개승인 전4언어 noindex/hreflang/사이트맵차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
-    },
-    {
-      "slug": "academic-calendar-ch4",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/21 KO/EN 입학연기/취학유예혼동·약칭나이·과목요약오류를 법13/14·시행령15/28로교정,JA/ZH/FR/ES를같은취학주제로재작성. KR관할·신청연도/기관·2021년생3경로SVG·기한후펼침. 공개승인 전4언어 noindex/hreflang/사이트맵차단유지. 근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md"
-    },
-    {
-      "slug": "atmosphere-weather-ch1",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/19 Codex가 ja·zh·fr·es 풍랭지수 오역을 교정KO/EN PM10·PM2.5 원문에 맞춰 재작성·본문대조. 공개 승인 전 noindex/hreflang/사이트맵 차단은 유지. mismatch는 현재 공개 차단 목록이며 본문 재교정 상태는 company-brain/projects/oiyo-ecosystem/reports/wiki-pm-four-locales-2026-10-19.md 참조"
-    },
-    {
-      "slug": "atmosphere-weather-ch2",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/19 현행KMA기준으로 KO/EN 교정·JA/ZH/FR/ES 미세먼지 오역을 동일 특보 주제로 재작성. 중대경보·지역별열대야·AND/OR 조건 반영. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-warning-criteria-six-locales-2026-10-19.md"
-    },
-    {
-      "slug": "atmosphere-weather-ch3",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/19 KO/EN 원문의 열수지·포화·의복·피험자 단정 교정 후 JA/ZH/FR/ES를 풍랭·열지수·WBGT 동일 주제로 재작성. 공용 계산 UI 인스턴스는 정적 예제로 대체. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-thermal-indices-six-locales-2026-10-19.md"
-    },
-    {
-      "slug": "atmosphere-weather-ch4",
-      "locales": [
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "10/19 KO/EN 황사·스모그의 이분법/오존/역전 설명을 공식원문으로 교정하고 JA/ZH/FR/ES KIM·레이더 오역도 동일주제로 재작성. 공개 승인 전4언어 noindex/hreflang/사이트맵 차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-dust-smog-six-locales-2026-10-19.md"
-    },
-    {
-      "slug": "waste-management-ch4",
-      "locales": [
-        "en",
-        "ja",
-        "zh",
-        "fr",
-        "es"
-      ],
-      "note": "2026-10-21 KO/EN/JA/ZH/FR/ES를 한국의 젤·물 아이스팩/폐의약품 동일주제로 로컬교정·검증. 지역수거차이·액체/연고 우체통제외·제품표시확인 구분. EN포함외국어5개 noindex/hreflang/사이트맵차단 유지. 경과 company-brain/projects/oiyo-ecosystem/reports/wiki-waste-ch4-sources-2026-10-21.md"
-    }
-  ],
+  "mismatch": [],
   "reviewedMatch": [
     {
       "slug": "disaster-alerts-ch3",
@@ -141,6 +49,97 @@
         "es"
       ],
       "note": "음식물 쓰레기 금지 품목·일반 봉투 구분 — ko와 같은 주제(ko의 재활용 공정 절은 일부 로케일에 없음)"
+    },
+    {
+      "slug": "academic-calendar-ch1",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-school-year-six-locales-2026-10-19.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "academic-calendar-ch2",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "academic-calendar-ch3",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "academic-calendar-ch4",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-academic-ch2-4-sources-2026-10-21.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "atmosphere-weather-ch1",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-pm-four-locales-2026-10-19.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "atmosphere-weather-ch2",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-warning-criteria-six-locales-2026-10-19.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "atmosphere-weather-ch3",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-thermal-indices-six-locales-2026-10-19.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "atmosphere-weather-ch4",
+      "locales": [
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-dust-smog-six-locales-2026-10-19.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
+    },
+    {
+      "slug": "waste-management-ch4",
+      "locales": [
+        "en",
+        "ja",
+        "zh",
+        "fr",
+        "es"
+      ],
+      "note": "2026-10-21 세운 검색 공개 승인. 동일 주제/KR관할 본문교정·배포와 의미대조 후 차단 해제. 자동감사 임계값은 유지하며 독립 전문감수 인증은 아님. 교정근거 company-brain/projects/oiyo-ecosystem/reports/wiki-waste-ch4-sources-2026-10-21.md; 해제검증 company-brain/projects/oiyo-ecosystem/reports/approved-family-release-2026-10-21.md"
     }
   ]
 }

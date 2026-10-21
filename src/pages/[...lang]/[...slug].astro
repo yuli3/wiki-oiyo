@@ -105,8 +105,10 @@ export async function getStaticPaths() {
 
     // 같은 slug인데 ko와 주제가 다른 로케일(src/config/locale-topic-parity.json)은 서로의 번역이 아니다.
     // 그 페이지는 자기 자신만 가리키고(noindex), 나머지 로케일의 hreflang·언어 전환에서도 빠진다.
+    // 2026-10-21: a fully reviewed release can leave this JSON list empty;
+    // keep the entry shape explicit rather than inferring its elements as never.
     const topicMismatch = new Set(
-      topicParity.mismatch.flatMap((e) => e.locales.map((l) => `${e.slug}|${l}`)),
+      topicParity.mismatch.flatMap((e: { slug: string; locales: string[] }) => e.locales.map((l) => `${e.slug}|${l}`)),
     );
     const isTopicMismatch = topicMismatch.has(`${slug}|${lang}`);
     const availableLocales = isTopicMismatch
