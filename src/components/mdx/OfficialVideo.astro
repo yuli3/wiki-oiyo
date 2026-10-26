@@ -1,0 +1,46 @@
+---
+/**
+ * 공공기관 공식 유튜브 영상 임베드 (OfficialVideo)
+ *
+ * 영상은 YouTube 공식 플레이어(youtube-nocookie)로만 보여 주고, 대본·캡처는 옮기지 않는다.
+ * 출처 채널과 "기관과 관계없음" 문구를 캡션에 항상 붙인다.
+ */
+
+interface Props {
+  /** YouTube 영상 ID (watch?v= 뒤의 11자) */
+  id: string;
+  title: string;
+  /** 영상을 올린 기관 채널 이름 */
+  channel: string;
+  /** 시청 포인트 한 줄 */
+  note?: string;
+}
+
+const { id, title, channel, note } = Astro.props;
+const watchUrl = `https://www.youtube.com/watch?v=${id}`;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${id}`;
+---
+
+<figure class="not-prose my-6 overflow-hidden rounded-lg border border-border bg-muted/20">
+  <div class="aspect-video w-full bg-muted">
+    <iframe
+      class="h-full w-full"
+      src={embedUrl}
+      title={title}
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <figcaption class="space-y-1 px-4 [&>p]:m-0 py-3 text-sm leading-6 text-muted-foreground">
+    <p class="font-semibold text-foreground">{title}</p>
+    {note && <p>{note}</p>}
+    <p>
+      출처: {channel} 공식 유튜브 채널 ·{" "}
+      <a class="text-primary underline underline-offset-4" href={watchUrl} rel="noopener" target="_blank">
+        YouTube에서 보기
+      </a>
+    </p>
+    <p>영상 저작권은 {channel}에 있습니다. 이 해설은 Oiyo가 따로 쓴 글이며 {channel}과 관계가 없습니다.</p>
+  </figcaption>
+</figure>

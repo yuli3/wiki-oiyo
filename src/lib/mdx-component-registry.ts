@@ -43,6 +43,7 @@ import MdxContentHeading from "../components/mdx/MdxContentHeading.astro";
 import WasteSorter from "../components/mdx/WasteSorter.astro";
 import WindChillSlider from "../components/mdx/WindChillSlider.astro";
 import AcademicCalendarBar from "../components/mdx/AcademicCalendarBar.astro";
+import OfficialVideo from "../components/mdx/OfficialVideo.astro";
 
 import {
   LectureTable,
@@ -201,6 +202,7 @@ const editorialComponents = {
   ToolCTAInline,
   TestCTA,
   TermCatalog,
+  OfficialVideo,
 };
 
 const diagramComponents = {
