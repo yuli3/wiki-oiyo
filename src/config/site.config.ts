@@ -47,7 +47,7 @@ export const siteConfig = {
   manualAds: {
     enabled: true,
     slots: {
-      articleEnd: "2768903568", // Responsive display unit placed after chapter reading content
+      articleEnd: "9488503351", // oiyo-wiki-article-end: after chapter reading content (own unit since 2026-10-26)
     },
   },
   newsletter: {
