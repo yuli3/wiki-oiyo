@@ -1,0 +1,103 @@
+---
+title: "Materials Science Chapter 5 — A Phase Diagram Is a Map: Binary Diagrams, Tie Lines and the Lever Rule"
+description: "On a hypothetical isomorphous A–B phase diagram, follow one alloy as it cools and compute the composition and amount of liquid and solid with tie lines and the lever rule. The Gibbs phase rule shows why fixing temperature alone fixes both compositions in a two-phase field, and a mass balance checks the result."
+pubDate: 2026-11-03
+tags: ["materials-science", "phase-diagram", "phase-equilibrium", "lever-rule", "tie-line", "gibbs-phase-rule", "solidification"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 5
+chapterTitleShort: "Binary Diagrams and the Lever Rule"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**A phase diagram is a map: for a given temperature and composition it tells you which phases exist at equilibrium, what each one contains, and how much of each there is.** Chapter 4 computed how fast atoms move. This chapter covers the **equilibrium** they reach when given enough time.
+
+The diagram values below belong to a **hypothetical A–B binary system** chosen for practice. They are not data for any real alloy.
+
+---
+
+## 1. What you read: phase, composition, amount
+
+- **Phase**: a region with uniform structure and composition, such as liquid L or solid solution α.
+- **Composition**: how many wt% B each phase contains.
+- **Amount (phase fraction)**: the share of total mass in each phase.
+
+The overall alloy composition $C_0$ differs from the composition of each phase. Mixing them up is the most common misreading.
+
+---
+
+## 2. The hypothetical A–B system: complete solid solubility
+
+Assume A and B mix in any ratio even as solids. A melts at 1500 K, B at 1100 K. Above the upper curve (the **liquidus**) everything is liquid, below the lower curve (the **solidus**) everything is solid α, and between them lies the two-phase L + α field.
+
+The compositions where each temperature meets the two curves:
+
+| Temperature (K) | Solidus $C_\alpha$ (wt% B) | Liquidus $C_L$ (wt% B) |
+|---:|---:|---:|
+| 1350 | 12 | 26 |
+| 1300 | 20 | 35 |
+| 1250 | 29 | 45 |
+
+---
+
+## 3. Tie lines: read phase compositions at the ends
+
+A horizontal segment through a point in the two-phase field, ending at both boundaries, is a **tie line**. Whatever the overall composition, at that temperature **the liquid has the liquidus-end composition and the solid has the solidus-end composition**.
+
+At 1300 K, whether $C_0$ is 21 or 34 wt% B, the liquid holds 35 wt% B and α holds 20 wt% B. Only the **amounts** change.
+
+The **Gibbs phase rule** explains this. At constant pressure, $F=C-P+1$. With $C=2$ components and $P=2$ phases, $F=1$: choosing the temperature fixes both phase compositions.
+
+---
+
+## 4. The lever rule: amount scales with the opposite arm
+
+Treat the tie line as a lever with the alloy composition $C_0$ as the fulcrum:
+
+$$W_L=\frac{C_0-C_\alpha}{C_L-C_\alpha},\qquad W_\alpha=\frac{C_L-C_0}{C_L-C_\alpha}$$
+
+Each phase fraction is proportional to the arm **on the far side from that phase**. The two fractions sum to 1.
+
+For $C_0=30$ wt% B at 1300 K:
+
+$$W_L=\frac{30-20}{35-20}=\frac{10}{15}\approx0.667,\qquad W_\alpha=\frac{35-30}{15}\approx0.333$$
+
+**Check with a mass balance.** In 1 kg of alloy, 0.667 kg of liquid holds $0.667\times0.35=0.233$ kg B and 0.333 kg of solid holds $0.333\times0.20=0.067$ kg B, for 0.300 kg in total: the 30 wt% B we started with.
+
+---
+
+## 5. Following an alloy as it cools
+
+The same $C_0=30$ wt% B alloy, cooled slowly, at three temperatures:
+
+| Temperature (K) | Reading | $W_L$ | $W_\alpha$ | Solid composition (wt% B) |
+|---:|---|---:|---:|---:|
+| 1350 | $C_0=30>C_L=26$: single-phase liquid | 1 | 0 | — |
+| 1300 | two-phase | 0.667 | 0.333 | 20 |
+| 1250 | two-phase | $(30-29)/(45-29)\approx0.063$ | 0.938 | 29 |
+
+At 1350 K the alloy has more B than the liquidus composition, so it is still in the liquid field. As temperature falls the solid grows, and **the first solid is A-rich (20 wt% B) while later solid carries more B.** At equilibrium, diffusion evens out the whole solid, which ends at 30 wt% B once fully solidified.
+
+---
+
+## 6. What not to do with this model
+
+- **Do not treat real cooling as equilibrium.** As Chapter 4 showed, solid-state diffusion is slow; fast cooling leaves **coring**, where the first-frozen centre and last-frozen rim differ in composition.
+- **Do not assume every binary is isomorphous.** Systems with eutectics, peritectics or intermetallic compounds have different fields, and along a three-phase horizontal line the degrees of freedom are zero.
+- **Do not apply the hypothetical values to real alloys.** Melting points and compositions are for practice; real diagrams come from measurement and thermodynamic databases.
+
+Phase equilibria connect to the scope of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical values, numbers and order of explanation here were written independently; no MIT figures or problems are reproduced.
+
+---
+
+## Sources
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (course scope)
+- Diagram values are hypothetical, made by Oiyo (lever-rule and mass-balance arithmetic checked 2026-11-03).

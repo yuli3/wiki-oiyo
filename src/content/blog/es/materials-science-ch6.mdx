@@ -1,0 +1,104 @@
+---
+title: "Ciencia de materiales, capítulo 6 — La banda prohibida decide la conducción: semiconductores intrínsecos, dopaje y conductividad"
+description: "Con un semiconductor hipotético (banda prohibida de 1.10 eV) se calcula cómo crece la concentración intrínseca de portadores con la temperatura, las concentraciones de electrones y huecos tras dopar (ley de acción de masas n·p = n_i²) y la conductividad σ = n·q·μ. Se ve por qué el dopaje cambia la conductividad unas 740 000 veces y se comparan el borde de absorción y un aislante."
+pubDate: 2026-11-03
+tags: ["ciencia-de-materiales", "semiconductor", "banda-prohibida", "dopaje", "conductividad-electrica", "concentracion-de-portadores", "materiales-electronicos"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 6
+chapterTitleShort: "Banda prohibida y dopaje"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Casi toda la diferencia entre metales, semiconductores y aislantes se reduce a un hueco entre bandas de energía permitidas: la banda prohibida.** Las vacantes del capítulo 3 y la difusión del capítulo 4 seguían $\exp(-Q/kT)$. Los portadores de carga de un semiconductor siguen la misma forma, y este capítulo la usa para mostrar por qué el dopaje es tan eficaz.
+
+La banda prohibida, las movilidades y las concentraciones pertenecen a un **semiconductor hipotético**. Su orden de magnitud se parece al del silicio, pero no son datos del silicio.
+
+---
+
+## 1. Bandas y hueco
+
+Las energías de los electrones en un sólido se agrupan en **bandas** continuas. La banda llena más alta es la **banda de valencia**, la banda vacía de encima es la **banda de conducción**, y el hueco entre ambas es la **banda prohibida $E_g$**.
+
+- **Metales**: las bandas están parcialmente llenas o se solapan, y los electrones se mueven con un campo muy pequeño.
+- **Semiconductores**: $E_g$ es de unos pocos eV o menos, y el calor eleva algunos electrones a la banda de conducción.
+- **Aislantes**: $E_g$ es grande y a temperatura ambiente prácticamente no sube ningún electrón.
+
+Un electrón que sube deja un estado vacío, un **hueco**, en la banda de valencia, y los huecos también conducen.
+
+---
+
+## 2. La concentración intrínseca es sensible a la temperatura
+
+En un **semiconductor intrínseco** puro, la concentración de electrones n es igual a la de huecos p, y su valor común $n_i$ es aproximadamente
+
+$$n_i\propto T^{3/2}\exp\!\left(-\frac{E_g}{2kT}\right)$$
+
+A diferencia de los capítulos 3 y 4, en el exponente aparece la **mitad** de $E_g$. Para el semiconductor hipotético se toma $E_g=1.10$ eV y $n_i(300\text{ K})=1.0\times10^{10}\ \text{cm}^{-3}$, y se escala por cociente (sin considerar el cambio de $E_g$ con la temperatura).
+
+| Temperatura (K) | $E_g/2kT$ | $n_i$ (cm⁻³) |
+|---:|---:|---:|
+| 300 | 21.27 | 1.0 × 10¹⁰ |
+| 350 | 18.24 | 2.6 × 10¹¹ |
+| 400 | 15.96 | 3.1 × 10¹² |
+| 500 | 12.76 | 1.1 × 10¹⁴ |
+
+La fila de 400 K es $(400/300)^{1.5}\times\exp[21.27-15.96]=1.54\times204\approx314$ veces el valor a 300 K. Subir 100 K multiplica $n_i$ por más de 300, de modo que un semiconductor intrínseco por sí solo varía mucho con la temperatura.
+
+---
+
+## 3. Dopaje y ley de acción de masas
+
+Añadir un **donador** que aporta un electrón extra (como un elemento del grupo 15) en $N_D=1.0\times10^{16}\ \text{cm}^{-3}$, alrededor de un átomo por cada varios millones, lo ioniza casi por completo a temperatura ambiente y da $n\approx N_D$. Es un semiconductor de **tipo n**.
+
+En equilibrio se cumple $n\cdot p=n_i^2$ con o sin dopaje (ley de acción de masas). Por tanto
+
+$$p=\frac{n_i^2}{n}=\frac{(1.0\times10^{10})^2}{1.0\times10^{16}}=1.0\times10^{4}\ \text{cm}^{-3}$$
+
+Los electrones pasan a ser portadores mayoritarios y los huecos minoritarios. Incluso a 500 K, $n_i=1.1\times10^{14}$ es 100 veces menor que $N_D$, así que en este intervalo n se mantiene en $N_D$ casi sin depender de la temperatura. Por eso el dopaje **estabiliza** el material.
+
+---
+
+## 4. Conductividad: σ = n·q·μ
+
+La conductividad es el producto del número de portadores, la carga $q=1.602\times10^{-19}$ C y la **movilidad μ** (velocidad de deriva por 1 V/cm). Se usan valores hipotéticos $\mu_n=1350$ y $\mu_p=480\ \text{cm}^2/\text{V·s}$.
+
+| Caso | Cálculo | σ (S/cm) |
+|---|---|---:|
+| Intrínseco (300 K) | $n_i q(\mu_n+\mu_p)=10^{10}\times1.602\times10^{-19}\times1830$ | 2.9 × 10⁻⁶ |
+| Tipo n $N_D=10^{16}$ | $N_D q\mu_n=10^{16}\times1.602\times10^{-19}\times1350$ | 2.16 |
+
+El cociente es de unas **7.4 × 10⁵** veces. Una impureza de menos de un átomo por millón cambia la conductividad 740 000 veces. La resistividad del tipo n es $1/2.16\approx0.46\ \Omega\cdot\text{cm}$.
+
+---
+
+## 5. La luz y los aislantes con las mismas ecuaciones
+
+- **Borde de absorción**: solo los fotones con más energía que la banda prohibida elevan electrones. $\lambda=hc/E_g\approx1240/E_g$ nm, así que $E_g=1.10$ eV absorbe luz más corta que unos **1127 nm**. Esto fija el intervalo de sensibilidad de células solares y fotodetectores.
+- **Comparación con un aislante**: para $E_g=5.5$ eV con el mismo prefactor, el cociente de $n_i$ a 300 K es $\exp[-(5.5-1.1)/(2kT)]\approx10^{-37}$. Prácticamente ningún electrón llega a la banda de conducción a temperatura ambiente. Ese material solo absorbe ultravioleta por debajo de unos 225 nm, por lo que a la vista es transparente.
+
+---
+
+## 6. Lo que no hay que hacer con este modelo
+
+- **No tratar el prefactor de $n_i$ como constante.** Las masas efectivas y la propia $E_g$ cambian con la temperatura; para valores reales se usan tablas medidas.
+- **No suponer que los donadores siempre están totalmente ionizados.** A temperatura muy baja la ionización es incompleta; a temperatura muy alta $n_i$ supera a $N_D$ y el material vuelve a ser intrínseco.
+- **No tratar la movilidad como independiente del dopaje.** Más impurezas significan más dispersión y menor movilidad.
+- **No usar los valores hipotéticos para diseñar dispositivos reales.**
+
+Los materiales electrónicos se relacionan con el alcance del [programa MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Los valores hipotéticos, las cifras y el orden de la explicación se elaboraron de forma independiente; no se reproducen figuras ni problemas del MIT.
+
+---
+
+## Fuentes
+
+- NIST CODATA, [constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): 8.617 333 262 × 10⁻⁵ eV/K; [carga elemental](https://physics.nist.gov/cgi-bin/cuu/Value?e): 1.602 176 634 × 10⁻¹⁹ C (exacta)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (alcance del curso)
+- Los valores del semiconductor son hipotéticos, elaborados por Oiyo (aritmética verificada el 2026-11-03).

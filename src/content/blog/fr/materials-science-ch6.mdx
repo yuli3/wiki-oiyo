@@ -1,0 +1,104 @@
+---
+title: "Science des matériaux, chapitre 6 — La bande interdite décide de la conduction : semi-conducteurs intrinsèques, dopage et conductivité"
+description: "Avec un semi-conducteur fictif (bande interdite de 1,10 eV), on calcule la hausse de la concentration intrinsèque de porteurs avec la température, les concentrations d'électrons et de trous après dopage (loi d'action de masse n·p = n_i²) et la conductivité σ = n·q·μ. On voit pourquoi le dopage change la conductivité d'environ 740 000 fois, puis on compare le seuil d'absorption et un isolant."
+pubDate: 2026-11-03
+tags: ["science-des-materiaux", "semi-conducteur", "bande-interdite", "dopage", "conductivite-electrique", "concentration-de-porteurs", "materiaux-electroniques"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 6
+chapterTitleShort: "Bande interdite et dopage"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**L'essentiel de la différence entre métaux, semi-conducteurs et isolants tient à un écart entre bandes d'énergie permises : la bande interdite.** Les lacunes du chapitre 3 et la diffusion du chapitre 4 suivaient $\exp(-Q/kT)$. Les porteurs de charge d'un semi-conducteur suivent la même forme, et ce chapitre s'en sert pour montrer pourquoi le dopage est si efficace.
+
+La bande interdite, les mobilités et les concentrations appartiennent à un **semi-conducteur fictif**. Leur ordre de grandeur est proche du silicium, mais ce ne sont pas des données du silicium.
+
+---
+
+## 1. Bandes et écart
+
+Les énergies des électrons d'un solide se regroupent en **bandes** continues. La bande pleine la plus haute est la **bande de valence**, la bande vide au-dessus est la **bande de conduction**, et l'écart entre les deux est la **bande interdite $E_g$**.
+
+- **Métaux** : les bandes sont partiellement remplies ou se chevauchent ; les électrons bougent sous un champ minime.
+- **Semi-conducteurs** : $E_g$ vaut quelques eV ou moins ; la chaleur fait monter une partie des électrons dans la bande de conduction.
+- **Isolants** : $E_g$ est grande ; à température ambiante, pratiquement aucun électron ne monte.
+
+Un électron qui monte laisse un état vide, un **trou**, dans la bande de valence, et les trous conduisent aussi.
+
+---
+
+## 2. La concentration intrinsèque est sensible à la température
+
+Dans un **semi-conducteur intrinsèque** pur, la concentration d'électrons n égale celle des trous p, et leur valeur commune $n_i$ vaut environ
+
+$$n_i\propto T^{3/2}\exp\!\left(-\frac{E_g}{2kT}\right)$$
+
+Contrairement aux chapitres 3 et 4, c'est la **moitié** de $E_g$ qui figure dans l'exposant. Pour le semi-conducteur fictif, on prend $E_g=1.10$ eV et $n_i(300\text{ K})=1.0\times10^{10}\ \text{cm}^{-3}$, puis on calcule par rapport (en négligeant la variation de $E_g$ avec la température).
+
+| Température (K) | $E_g/2kT$ | $n_i$ (cm⁻³) |
+|---:|---:|---:|
+| 300 | 21.27 | 1.0 × 10¹⁰ |
+| 350 | 18.24 | 2.6 × 10¹¹ |
+| 400 | 15.96 | 3.1 × 10¹² |
+| 500 | 12.76 | 1.1 × 10¹⁴ |
+
+La ligne à 400 K vaut $(400/300)^{1.5}\times\exp[21.27-15.96]=1.54\times204\approx314$ fois la valeur à 300 K. Une hausse de 100 K multiplie $n_i$ par plus de 300 : un semi-conducteur intrinsèque seul varie donc fortement avec la température.
+
+---
+
+## 3. Dopage et loi d'action de masse
+
+L'ajout d'un **donneur** qui fournit un électron supplémentaire (comme un élément du groupe 15) à $N_D=1.0\times10^{16}\ \text{cm}^{-3}$, environ un atome sur plusieurs millions, s'ionise presque entièrement à température ambiante et donne $n\approx N_D$. C'est un semi-conducteur de **type n**.
+
+À l'équilibre, $n\cdot p=n_i^2$ reste vrai avec ou sans dopage (loi d'action de masse). Donc
+
+$$p=\frac{n_i^2}{n}=\frac{(1.0\times10^{10})^2}{1.0\times10^{16}}=1.0\times10^{4}\ \text{cm}^{-3}$$
+
+Les électrons deviennent porteurs majoritaires et les trous minoritaires. Même à 500 K, $n_i=1.1\times10^{14}$ reste 100 fois plus petit que $N_D$ ; dans cette plage, n reste égal à $N_D$ presque indépendamment de la température. C'est pourquoi le dopage **stabilise** le matériau.
+
+---
+
+## 4. Conductivité : σ = n·q·μ
+
+La conductivité est le produit du nombre de porteurs, de la charge $q=1.602\times10^{-19}$ C et de la **mobilité μ** (vitesse de dérive pour 1 V/cm). On prend les valeurs fictives $\mu_n=1350$ et $\mu_p=480\ \text{cm}^2/\text{V·s}$.
+
+| Cas | Calcul | σ (S/cm) |
+|---|---|---:|
+| Intrinsèque (300 K) | $n_i q(\mu_n+\mu_p)=10^{10}\times1.602\times10^{-19}\times1830$ | 2.9 × 10⁻⁶ |
+| Type n $N_D=10^{16}$ | $N_D q\mu_n=10^{16}\times1.602\times10^{-19}\times1350$ | 2.16 |
+
+Le rapport est d'environ **7.4 × 10⁵**. Une impureté à moins d'un atome par million change la conductivité de 740 000 fois. La résistivité du type n vaut $1/2.16\approx0.46\ \Omega\cdot\text{cm}$.
+
+---
+
+## 5. La lumière et les isolants avec les mêmes équations
+
+- **Seuil d'absorption** : seuls les photons plus énergétiques que la bande interdite font monter des électrons. $\lambda=hc/E_g\approx1240/E_g$ nm, donc $E_g=1.10$ eV absorbe la lumière plus courte qu'environ **1127 nm**. Cela fixe la plage de sensibilité des cellules solaires et des photodétecteurs.
+- **Comparaison avec un isolant** : pour $E_g=5.5$ eV avec le même préfacteur, le rapport des $n_i$ à 300 K vaut $\exp[-(5.5-1.1)/(2kT)]\approx10^{-37}$. Pratiquement aucun électron n'atteint la bande de conduction à température ambiante. Ce matériau n'absorbe que l'ultraviolet en dessous d'environ 225 nm : il paraît transparent à l'œil.
+
+---
+
+## 6. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas traiter le préfacteur de $n_i$ comme constant.** Les masses effectives et $E_g$ elle-même varient avec la température ; pour des valeurs réelles, utiliser des tables mesurées.
+- **Ne pas supposer les donneurs toujours entièrement ionisés.** À très basse température l'ionisation est incomplète ; à très haute température $n_i$ dépasse $N_D$ et le matériau redevient intrinsèque.
+- **Ne pas traiter la mobilité comme indépendante du dopage.** Plus d'impuretés signifie plus de diffusion et une mobilité plus faible.
+- **Ne pas utiliser les valeurs fictives pour concevoir un composant réel.**
+
+Les matériaux électroniques rejoignent le périmètre du [programme MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Les valeurs fictives, les chiffres et l'ordre de l'exposé ont été rédigés de façon indépendante ; aucune figure ni aucun exercice du MIT n'est reproduit.
+
+---
+
+## Sources
+
+- NIST CODATA, [constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann) : 8,617 333 262 × 10⁻⁵ eV/K ; [charge élémentaire](https://physics.nist.gov/cgi-bin/cuu/Value?e) : 1,602 176 634 × 10⁻¹⁹ C (valeur exacte)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (périmètre du cours)
+- Les valeurs du semi-conducteur sont fictives, établies par Oiyo (calculs vérifiés le 2026-11-03).

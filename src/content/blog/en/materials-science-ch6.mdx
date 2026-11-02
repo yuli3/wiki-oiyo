@@ -1,0 +1,104 @@
+---
+title: "Materials Science Chapter 6 — The Band Gap Decides Conduction: Intrinsic Semiconductors, Doping and Conductivity"
+description: "With a hypothetical semiconductor (band gap 1.10 eV), compute how the intrinsic carrier concentration rises with temperature, electron and hole concentrations after doping (mass action law n·p = n_i²) and conductivity σ = n·q·μ. See why doping alone changes conductivity about 740,000-fold, and compare the absorption edge and an insulator with the same equations."
+pubDate: 2026-11-03
+tags: ["materials-science", "semiconductor", "band-gap", "doping", "electrical-conductivity", "carrier-concentration", "electronic-materials"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 6
+chapterTitleShort: "Band Gap and Doping"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Most of the difference between metals, semiconductors and insulators comes down to one gap between allowed energy bands: the band gap.** Vacancies in Chapter 3 and diffusion in Chapter 4 followed $\exp(-Q/kT)$. Charge carriers in a semiconductor follow the same form, and this chapter uses it to show why doping is so powerful.
+
+The band gap, mobilities and concentrations below belong to a **hypothetical semiconductor**. They are close to silicon in order of magnitude but are not silicon data.
+
+---
+
+## 1. Bands and the gap
+
+Electron energies in a solid group into continuous **bands**. The highest filled band is the **valence band**, the empty band above it is the **conduction band**, and the gap between them is the **band gap $E_g$**.
+
+- **Metals**: bands are partly filled or overlap, so electrons move under a tiny field.
+- **Semiconductors**: $E_g$ is a few eV or less, so heat lifts some electrons into the conduction band.
+- **Insulators**: $E_g$ is large and practically no electrons are lifted at room temperature.
+
+A lifted electron leaves an empty state, a **hole**, in the valence band, and holes carry current too.
+
+---
+
+## 2. Intrinsic carrier concentration is temperature-sensitive
+
+In a pure **intrinsic semiconductor** the electron concentration n equals the hole concentration p, and their common value $n_i$ is approximately
+
+$$n_i\propto T^{3/2}\exp\!\left(-\frac{E_g}{2kT}\right)$$
+
+Unlike Chapters 3 and 4, **half** of $E_g$ appears in the exponent. For the hypothetical semiconductor take $E_g=1.10$ eV and $n_i(300\text{ K})=1.0\times10^{10}\ \text{cm}^{-3}$, and scale by ratio (ignoring the temperature change of $E_g$).
+
+| Temperature (K) | $E_g/2kT$ | $n_i$ (cm⁻³) |
+|---:|---:|---:|
+| 300 | 21.27 | 1.0 × 10¹⁰ |
+| 350 | 18.24 | 2.6 × 10¹¹ |
+| 400 | 15.96 | 3.1 × 10¹² |
+| 500 | 12.76 | 1.1 × 10¹⁴ |
+
+The 400 K row is $(400/300)^{1.5}\times\exp[21.27-15.96]=1.54\times204\approx314$ times the 300 K value. A 100 K rise multiplies $n_i$ by more than 300, so an intrinsic semiconductor alone swings strongly with temperature.
+
+---
+
+## 3. Doping and the mass action law
+
+Adding a **donor** that gives up one extra electron (such as a group-15 element) at $N_D=1.0\times10^{16}\ \text{cm}^{-3}$, about one atom in several million, ionises almost fully at room temperature and gives $n\approx N_D$. This is an **n-type** semiconductor.
+
+At equilibrium, $n\cdot p=n_i^2$ holds regardless of doping (the mass action law). So
+
+$$p=\frac{n_i^2}{n}=\frac{(1.0\times10^{10})^2}{1.0\times10^{16}}=1.0\times10^{4}\ \text{cm}^{-3}$$
+
+Electrons become the majority carriers and holes the minority. Even at 500 K, $n_i=1.1\times10^{14}$ is 100 times smaller than $N_D$, so across this range n stays at $N_D$ almost independently of temperature. That is why doping **stabilises** the material.
+
+---
+
+## 4. Conductivity: σ = n·q·μ
+
+Conductivity is the product of carrier number, charge $q=1.602\times10^{-19}$ C and **mobility μ** (drift speed per 1 V/cm). Use hypothetical $\mu_n=1350$ and $\mu_p=480\ \text{cm}^2/\text{V·s}$.
+
+| Case | Calculation | σ (S/cm) |
+|---|---|---:|
+| Intrinsic (300 K) | $n_i q(\mu_n+\mu_p)=10^{10}\times1.602\times10^{-19}\times1830$ | 2.9 × 10⁻⁶ |
+| n-type $N_D=10^{16}$ | $N_D q\mu_n=10^{16}\times1.602\times10^{-19}\times1350$ | 2.16 |
+
+The ratio is about **7.4 × 10⁵**. An impurity at less than one atom per million changes conductivity 740,000-fold. The n-type resistivity is $1/2.16\approx0.46\ \Omega\cdot\text{cm}$.
+
+---
+
+## 5. Light and insulators with the same equations
+
+- **Absorption edge**: only photons with more energy than the gap lift electrons. $\lambda=hc/E_g\approx1240/E_g$ nm, so $E_g=1.10$ eV absorbs light shorter than about **1127 nm**. This sets the sensitivity range of solar cells and photodetectors.
+- **Insulator comparison**: for $E_g=5.5$ eV with the same prefactor, the $n_i$ ratio at 300 K is $\exp[-(5.5-1.1)/(2kT)]\approx10^{-37}$. Practically no electrons reach the conduction band at room temperature. Such a material absorbs only ultraviolet below about 225 nm, so it looks transparent to the eye.
+
+---
+
+## 6. What not to do with this model
+
+- **Do not treat the $n_i$ prefactor as constant.** Effective masses and $E_g$ itself change with temperature; use measured tables for real values.
+- **Do not assume donors are always fully ionised.** At very low temperature ionisation is incomplete; at very high temperature $n_i$ exceeds $N_D$ and the material turns intrinsic again.
+- **Do not treat mobility as independent of doping.** More impurities mean more scattering and lower mobility.
+- **Do not use the hypothetical values for real device design.**
+
+Electronic materials connect to the scope of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical values, numbers and order of explanation here were written independently; no MIT figures or problems are reproduced.
+
+---
+
+## Sources
+
+- NIST CODATA, [Boltzmann constant](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): 8.617 333 262 × 10⁻⁵ eV/K; [elementary charge](https://physics.nist.gov/cgi-bin/cuu/Value?e): 1.602 176 634 × 10⁻¹⁹ C (exact)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (course scope)
+- Semiconductor values are hypothetical, made by Oiyo (arithmetic checked 2026-11-03).

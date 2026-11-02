@@ -1,0 +1,103 @@
+---
+title: "Science des matériaux, chapitre 5 — Un diagramme de phases est une carte : diagrammes binaires, conodes et règle des leviers"
+description: "Sur un diagramme A–B fictif à solubilité totale, on suit un alliage qui refroidit et l'on calcule la composition et la quantité de liquide et de solide avec les conodes et la règle des leviers. La règle des phases de Gibbs montre pourquoi, dans un domaine biphasé, fixer la température suffit, et un bilan de masse vérifie le résultat."
+pubDate: 2026-11-03
+tags: ["science-des-materiaux", "diagramme-de-phases", "equilibre-des-phases", "regle-des-leviers", "conode", "regle-des-phases", "solidification"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 5
+chapterTitleShort: "Diagrammes binaires et règle des leviers"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Un diagramme de phases est une carte : pour une température et une composition données, il indique quelles phases existent à l'équilibre, ce que contient chacune et en quelle quantité.** Le chapitre 4 a calculé la vitesse à laquelle les atomes se déplacent. Ce chapitre traite de l'**équilibre** qu'ils atteignent quand on leur en laisse le temps.
+
+Les valeurs du diagramme appartiennent à un **système binaire A–B fictif** choisi pour s'exercer. Ce ne sont les données d'aucun alliage réel.
+
+---
+
+## 1. Ce qu'on lit : phase, composition, quantité
+
+- **Phase** : région de structure et de composition uniformes, comme le liquide L ou la solution solide α.
+- **Composition** : le pourcentage massique de B dans chaque phase.
+- **Quantité (fraction de phase)** : la part de la masse totale dans chaque phase.
+
+La composition globale de l'alliage $C_0$ diffère de celle de chaque phase. Les confondre est l'erreur de lecture la plus courante.
+
+---
+
+## 2. Le système A–B fictif : solubilité totale
+
+Supposons que A et B se mélangent en toute proportion, même à l'état solide. A fond à 1500 K, B à 1100 K. Au-dessus de la courbe supérieure (le **liquidus**) tout est liquide, au-dessous de la courbe inférieure (le **solidus**) tout est solide α, et entre les deux se trouve le domaine biphasé L + α.
+
+Compositions où chaque température coupe les deux courbes :
+
+| Température (K) | Solidus $C_\alpha$ (% mass. B) | Liquidus $C_L$ (% mass. B) |
+|---:|---:|---:|
+| 1350 | 12 | 26 |
+| 1300 | 20 | 35 |
+| 1250 | 29 | 45 |
+
+---
+
+## 3. Les conodes : les compositions se lisent aux extrémités
+
+Le segment horizontal passant par un point du domaine biphasé et s'arrêtant aux deux frontières est une **conode**. Quelle que soit la composition globale, à cette température **le liquide a la composition de l'extrémité côté liquidus et le solide celle de l'extrémité côté solidus**.
+
+À 1300 K, que $C_0$ vaille 21 ou 34 % de B, le liquide contient 35 % de B et α 20 %. Seules les **quantités** changent.
+
+La **règle des phases de Gibbs** l'explique. À pression constante, $F=C-P+1$. Avec $C=2$ constituants et $P=2$ phases, $F=1$ : fixer la température fixe les deux compositions.
+
+---
+
+## 4. La règle des leviers : la quantité suit le bras opposé
+
+En prenant la conode comme levier et la composition de l'alliage $C_0$ comme point d'appui :
+
+$$W_L=\frac{C_0-C_\alpha}{C_L-C_\alpha},\qquad W_\alpha=\frac{C_L-C_0}{C_L-C_\alpha}$$
+
+Chaque fraction est proportionnelle au bras **situé du côté opposé à cette phase**. Les deux fractions font 1.
+
+Pour $C_0=30$ % de B à 1300 K :
+
+$$W_L=\frac{30-20}{35-20}=\frac{10}{15}\approx0.667,\qquad W_\alpha=\frac{35-30}{15}\approx0.333$$
+
+**Vérification par bilan de masse.** Dans 1 kg d'alliage, 0,667 kg de liquide contient $0.667\times0.35=0.233$ kg de B et 0,333 kg de solide $0.333\times0.20=0.067$ kg de B, soit 0,300 kg au total : les 30 % de B de départ.
+
+---
+
+## 5. Suivre un alliage qui refroidit
+
+Le même alliage $C_0=30$ % de B, refroidi lentement, à trois températures :
+
+| Température (K) | Lecture | $W_L$ | $W_\alpha$ | Composition du solide (% B) |
+|---:|---|---:|---:|---:|
+| 1350 | $C_0=30>C_L=26$ : liquide monophasé | 1 | 0 | — |
+| 1300 | biphasé | 0.667 | 0.333 | 20 |
+| 1250 | biphasé | $(30-29)/(45-29)\approx0.063$ | 0.938 | 29 |
+
+À 1350 K l'alliage contient plus de B que le liquidus : il est encore dans le domaine liquide. Quand la température baisse, le solide augmente, et **le premier solide est riche en A (20 % de B) tandis que le solide formé ensuite contient davantage de B.** À l'équilibre, la diffusion homogénéise tout le solide, qui finit à 30 % de B une fois entièrement solidifié.
+
+---
+
+## 6. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas assimiler un refroidissement réel à l'équilibre.** Comme l'a montré le chapitre 4, la diffusion dans le solide est lente ; un refroidissement rapide laisse une **ségrégation (coring)** : le cœur solidifié en premier et la périphérie solidifiée en dernier n'ont pas la même composition.
+- **Ne pas supposer que tout binaire est à solubilité totale.** Les systèmes à eutectique, péritectique ou composés intermétalliques ont d'autres domaines, et sur un palier à trois phases la variance est nulle.
+- **Ne pas appliquer les valeurs fictives à des alliages réels.** Les points de fusion et compositions servent d'exercice ; les vrais diagrammes viennent de mesures et de bases de données thermodynamiques.
+
+L'équilibre des phases rejoint le périmètre du [programme MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Les valeurs fictives, les chiffres et l'ordre de l'exposé ont été rédigés de façon indépendante ; aucune figure ni aucun exercice du MIT n'est reproduit.
+
+---
+
+## Sources
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (périmètre du cours)
+- Les valeurs du diagramme sont fictives, établies par Oiyo (règle des leviers et bilan de masse vérifiés le 2026-11-03).

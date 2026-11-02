@@ -1,0 +1,114 @@
+---
+title: "Ciencia de materiales, capítulo 7 — Sólidos menos ordenados: masa molar de polímeros, cristalinidad y transición vítrea"
+description: "Con un polímero hipotético se calculan la masa molar promedio en número y en peso y la dispersidad, la cristalinidad a partir de la densidad y la temperatura de transición vítrea a partir del cambio de pendiente del volumen específico frente a la temperatura. El capítulo cierra el curso explicando por qué un sólido no cristalino tiene transición vítrea en lugar de punto de fusión."
+pubDate: 2026-11-03
+tags: ["ciencia-de-materiales", "polimeros", "masa-molar", "cristalinidad", "transicion-vitrea", "amorfo"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 7
+chapterTitleShort: "Polímeros y transición vítrea"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Los capítulos 1–6 suponían un cristal, con átomos apilados de forma regular. El vidrio y los plásticos son sólidos en los que esa suposición falla.** Con polímeros formados por moléculas en cadena, este capítulo calcula tres herramientas para describir sólidos sin orden de largo alcance.
+
+Las masas molares, densidades y volúmenes pertenecen a un **polímero hipotético**. No son datos de ninguna resina comercial.
+
+---
+
+## 1. Un polímero no tiene una sola masa molar
+
+Un polímero es una cadena de miles de unidades repetidas, pero las cadenas tienen longitudes distintas. La masa molar es por tanto una **distribución**, y su promedio depende de cómo se calcule.
+
+Supongamos que una muestra hipotética tiene estas fracciones en número:
+
+| Fracción en número $x_i$ | Masa molar $M_i$ (g/mol) |
+|---:|---:|
+| 0.30 | 20 000 |
+| 0.50 | 50 000 |
+| 0.20 | 100 000 |
+
+La **masa molar promedio en número** promedia sobre cadenas:
+
+$$\bar M_n=\sum x_iM_i=0.3(20\,000)+0.5(50\,000)+0.2(100\,000)=51\,000$$
+
+La **masa molar promedio en peso** promedia sobre masa, de modo que las cadenas largas pesan más:
+
+$$\bar M_w=\frac{\sum x_iM_i^2}{\sum x_iM_i}=\frac{3.37\times10^{9}}{51\,000}\approx66\,100$$
+
+El cociente $\bar M_w/\bar M_n\approx1.30$ es la **dispersidad**; cuanto más cerca de 1, más uniformes son las cadenas. Con una unidad repetida de 28 g/mol, el grado de polimerización medio es $51\,000/28\approx1\,820$.
+
+---
+
+## 2. Cristalinidad a partir de la densidad
+
+Las cadenas solo se pliegan en regiones cristalinas en parte; el resto queda como material amorfo enredado. Las regiones cristalinas son más densas, así que la densidad da su proporción. La cristalinidad en masa es
+
+$$\%\text{cristalinidad}=\frac{\rho_c(\rho_s-\rho_a)}{\rho_s(\rho_c-\rho_a)}\times100$$
+
+donde $\rho_c$ es totalmente cristalino, $\rho_a$ totalmente amorfo y $\rho_s$ la densidad de la muestra. Con valores hipotéticos $\rho_c=1.00$, $\rho_a=0.86$ y $\rho_s=0.93\ \text{g/cm}^3$:
+
+$$\frac{1.00\times(0.93-0.86)}{0.93\times(1.00-0.86)}=\frac{0.0700}{0.1302}\approx53.8\%$$
+
+La densidad de la muestra está justo en el punto medio (0.93), pero la cristalinidad es 53.8 % y no 50 % porque la fracción en masa y la fracción en volumen difieren: el cristal, más denso, guarda más masa en el mismo volumen.
+
+---
+
+## 3. La transición vítrea: un cambio de pendiente en lugar de un punto de fusión
+
+El volumen de un cristal da un salto escalonado en su punto de fusión. Un sólido amorfo no tiene ese escalón; en su lugar **cambia la pendiente del volumen específico frente a la temperatura**. Por debajo de esa temperatura las cadenas quedan congeladas en un **vidrio** rígido; por encima, los segmentos se mueven y el material se comporta como un **caucho**. Esa temperatura es la **temperatura de transición vítrea $T_g$**.
+
+Medidas del polímero hipotético:
+
+| Temperatura (K) | Volumen específico (cm³/g) | Región |
+|---:|---:|---|
+| 320 | 0.8036 | vidrio |
+| 340 | 0.8072 | vidrio |
+| 400 | 0.8276 | caucho |
+| 420 | 0.8376 | caucho |
+
+La pendiente vítrea es $(0.8072-0.8036)/20=1.8\times10^{-4}$ y la del caucho $(0.8376-0.8276)/20=5.0\times10^{-4}\ \text{cm}^3/(\text{g·K})$. Igualando las dos rectas
+
+$$v_g=0.8036+1.8\times10^{-4}(T-320),\qquad v_r=0.8276+5.0\times10^{-4}(T-400)$$
+
+se obtiene $T_g=370$ K, donde ambas valen $v=0.8126$.
+
+$T_g$ se desplaza unos pocos kelvin según la velocidad de medida. Un enfriamiento más rápido congela las cadenas antes de que se ordenen y da una $T_g$ más alta. No es una temperatura de equilibrio fija como un punto de fusión.
+
+---
+
+## 4. Resumen del curso: modelos cristalinos y amorfos
+
+| Capítulo | Herramienta para cristales | Para amorfos y polímeros |
+|---|---|---|
+| 1 Enlace | rigidez del enlace → módulo elástico | enlaces covalentes fuertes a lo largo de la cadena, débiles entre cadenas; la rigidez cae mucho por encima de $T_g$ |
+| 2 Cristales | celda unidad, densidad teórica | sin celda unidad; solo las regiones cristalinas se describen con $\rho_c$ |
+| 3–4 Defectos, difusión | vacantes, $\exp(-Q/kT)$ | volumen libre y movimiento de cadenas; la misma exponencial sirve de aproximación pero falla cerca de $T_g$ |
+| 5 Equilibrio de fases | diagramas de fases, regla de la palanca | el vidrio no es una fase de equilibrio; la cristalinidad depende de la historia de enfriamiento |
+| 6 Materiales electrónicos | banda prohibida, dopaje | casi todos aislantes; los polímeros conductores son un campo aparte |
+
+---
+
+## 5. Lo que no hay que hacer con este modelo
+
+- **No juzgar propiedades con una sola masa molar promedio.** La misma $\bar M_n$ con distinta dispersidad se procesa y se comporta de otro modo.
+- **No ignorar factores distintos de la densidad en la fórmula de cristalinidad.** Aditivos, poros y cargas cambian la densidad e invalidan la fórmula.
+- **No citar $T_g$ como un valor fijo como un punto de fusión.** Hay que indicar método y velocidad para poder comparar.
+- **No usar los valores hipotéticos para elegir una resina real.**
+
+Los sólidos amorfos y los polímeros se relacionan con el alcance del [programa MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Los valores hipotéticos, las cifras y el orden de la explicación se elaboraron de forma independiente; no se reproducen figuras ni problemas del MIT. Con este capítulo termina el curso de ciencia de materiales.
+
+---
+
+## Fuentes
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (alcance del curso)
+- IUPAC, [Glossary of basic terms in polymer science](https://doi.org/10.1351/pac199668122287) (promedios de masa molar y dispersidad)
+- Los valores del polímero son hipotéticos, elaborados por Oiyo (aritmética verificada el 2026-11-03).

@@ -1,0 +1,114 @@
+---
+title: "Science des matériaux, chapitre 7 — Des solides moins ordonnés : masse molaire des polymères, cristallinité et transition vitreuse"
+description: "Avec un polymère fictif, on calcule les masses molaires moyennes en nombre et en masse et la dispersité, la cristallinité à partir de la densité, et la température de transition vitreuse à partir du changement de pente du volume massique en fonction de la température. Le chapitre clôt le cours en montrant pourquoi un solide non cristallin a une transition vitreuse au lieu d'un point de fusion."
+pubDate: 2026-11-03
+tags: ["science-des-materiaux", "polymeres", "masse-molaire", "cristallinite", "transition-vitreuse", "amorphe"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 7
+chapterTitleShort: "Polymères et transition vitreuse"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Les chapitres 1 à 6 supposaient un cristal, avec des atomes empilés de façon régulière. Le verre et les plastiques sont des solides où cette hypothèse tombe.** À partir de polymères faits de molécules en chaîne, ce chapitre calcule trois outils pour décrire les solides sans ordre à longue distance.
+
+Les masses molaires, densités et volumes appartiennent à un **polymère fictif**. Ce ne sont les données d'aucune résine commerciale.
+
+---
+
+## 1. Un polymère n'a pas une seule masse molaire
+
+Un polymère est une chaîne de milliers de motifs répétés, mais les chaînes n'ont pas toutes la même longueur. La masse molaire est donc une **distribution**, et sa moyenne dépend de la manière de la calculer.
+
+Supposons qu'un échantillon fictif ait ces fractions en nombre :
+
+| Fraction en nombre $x_i$ | Masse molaire $M_i$ (g/mol) |
+|---:|---:|
+| 0.30 | 20 000 |
+| 0.50 | 50 000 |
+| 0.20 | 100 000 |
+
+La **masse molaire moyenne en nombre** fait la moyenne sur les chaînes :
+
+$$\bar M_n=\sum x_iM_i=0.3(20\,000)+0.5(50\,000)+0.2(100\,000)=51\,000$$
+
+La **masse molaire moyenne en masse** fait la moyenne sur la masse, si bien que les longues chaînes comptent davantage :
+
+$$\bar M_w=\frac{\sum x_iM_i^2}{\sum x_iM_i}=\frac{3.37\times10^{9}}{51\,000}\approx66\,100$$
+
+Le rapport $\bar M_w/\bar M_n\approx1.30$ est la **dispersité** ; plus il est proche de 1, plus les chaînes sont homogènes. Avec un motif de 28 g/mol, le degré de polymérisation moyen vaut $51\,000/28\approx1\,820$.
+
+---
+
+## 2. La cristallinité à partir de la densité
+
+Les chaînes ne se replient en régions cristallines qu'en partie ; le reste demeure un enchevêtrement amorphe. Les régions cristallines sont plus denses, donc la densité donne leur proportion. La cristallinité en masse vaut
+
+$$\%\text{cristallinité}=\frac{\rho_c(\rho_s-\rho_a)}{\rho_s(\rho_c-\rho_a)}\times100$$
+
+où $\rho_c$ est la masse volumique du totalement cristallin, $\rho_a$ celle du totalement amorphe et $\rho_s$ celle de l'échantillon. Avec les valeurs fictives $\rho_c=1.00$, $\rho_a=0.86$ et $\rho_s=0.93\ \text{g/cm}^3$ :
+
+$$\frac{1.00\times(0.93-0.86)}{0.93\times(1.00-0.86)}=\frac{0.0700}{0.1302}\approx53.8\%$$
+
+La masse volumique de l'échantillon est pile au milieu (0,93), mais la cristallinité vaut 53,8 % et non 50 %, car fraction massique et fraction volumique diffèrent : le cristal, plus dense, contient plus de masse dans le même volume.
+
+---
+
+## 3. La transition vitreuse : un changement de pente au lieu d'un point de fusion
+
+Le volume d'un cristal fait un saut à son point de fusion. Un solide amorphe n'a pas ce saut ; à la place, **la pente du volume massique en fonction de la température change**. En dessous, les chaînes sont figées en un **verre** rigide ; au-dessus, les segments bougent et le matériau se comporte comme un **caoutchouc**. Cette température est la **température de transition vitreuse $T_g$**.
+
+Mesures sur le polymère fictif :
+
+| Température (K) | Volume massique (cm³/g) | Domaine |
+|---:|---:|---|
+| 320 | 0.8036 | verre |
+| 340 | 0.8072 | verre |
+| 400 | 0.8276 | caoutchouc |
+| 420 | 0.8376 | caoutchouc |
+
+La pente vitreuse vaut $(0.8072-0.8036)/20=1.8\times10^{-4}$ et la pente caoutchoutique $(0.8376-0.8276)/20=5.0\times10^{-4}\ \text{cm}^3/(\text{g·K})$. En égalant les deux droites
+
+$$v_g=0.8036+1.8\times10^{-4}(T-320),\qquad v_r=0.8276+5.0\times10^{-4}(T-400)$$
+
+on obtient $T_g=370$ K, où les deux valent $v=0.8126$.
+
+$T_g$ se décale de quelques kelvins selon la vitesse de mesure. Un refroidissement plus rapide fige les chaînes avant qu'elles ne s'arrangent et donne une $T_g$ plus élevée. Ce n'est pas une température d'équilibre fixe comme un point de fusion.
+
+---
+
+## 4. Synthèse du cours : modèles cristallins et amorphes
+
+| Chapitre | Outil pour les cristaux | Pour les amorphes et les polymères |
+|---|---|---|
+| 1 Liaison | raideur de liaison → module d'élasticité | liaisons covalentes fortes le long des chaînes, faibles entre elles ; la raideur chute fortement au-dessus de $T_g$ |
+| 2 Cristaux | maille, masse volumique théorique | pas de maille ; seules les régions cristallines sont décrites par $\rho_c$ |
+| 3–4 Défauts, diffusion | lacunes, $\exp(-Q/kT)$ | volume libre et mouvement des chaînes ; la même exponentielle sert d'approximation mais échoue près de $T_g$ |
+| 5 Équilibre des phases | diagrammes de phases, règle des leviers | le verre n'est pas une phase d'équilibre ; la cristallinité dépend de l'histoire thermique |
+| 6 Matériaux électroniques | bande interdite, dopage | surtout des isolants ; les polymères conducteurs forment un domaine à part |
+
+---
+
+## 5. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas juger les propriétés à partir d'une seule masse molaire moyenne.** Une même $\bar M_n$ avec une dispersité différente se met en œuvre et se comporte autrement.
+- **Ne pas ignorer les facteurs autres que la densité dans la formule de cristallinité.** Additifs, porosités et charges modifient la densité et faussent la formule.
+- **Ne pas citer $T_g$ comme une valeur fixe à la manière d'un point de fusion.** Indiquer la méthode et la vitesse pour pouvoir comparer.
+- **Ne pas utiliser les valeurs fictives pour choisir une résine réelle.**
+
+Les solides amorphes et les polymères rejoignent le périmètre du [programme MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Les valeurs fictives, les chiffres et l'ordre de l'exposé ont été rédigés de façon indépendante ; aucune figure ni aucun exercice du MIT n'est reproduit. Ce chapitre clôt le cours de science des matériaux.
+
+---
+
+## Sources
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (périmètre du cours)
+- IUPAC, [Glossary of basic terms in polymer science](https://doi.org/10.1351/pac199668122287) (moyennes de masse molaire et dispersité)
+- Les valeurs du polymère sont fictives, établies par Oiyo (calculs vérifiés le 2026-11-03).
