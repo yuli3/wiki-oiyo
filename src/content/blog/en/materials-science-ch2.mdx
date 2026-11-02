@@ -1,0 +1,113 @@
+---
+title: "Materials Science Chapter 2 — How Atoms Are Stacked Sets the Density: Unit Cells, Packing Factor and Theoretical Density"
+description: "For simple cubic, body-centred cubic and face-centred cubic unit cells we count the atoms per cell, relate the lattice parameter to the atomic radius, derive the atomic packing factor, and compute theoretical density ρ=nA/(V_c N_A) for a hypothetical element. The numbers show why the same atoms give different densities when stacked differently."
+pubDate: 2026-11-02
+tags: ["materials-science", "crystal-structure", "unit-cell", "packing-factor", "density", "fcc", "bcc"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 2
+chapterTitleShort: "Unit Cells and Theoretical Density"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**A solid made of the same atoms can have different densities depending on the rule used to stack them.** Chapter 1 followed one bond's stiffness up to the deformation of a part; this chapter looks at how many atoms fill space. We pick three unit cells, derive the number of atoms and the packing factor for each, and use the result to compute a theoretical density.
+
+The assumptions match Chapter 1. We use the **hard-sphere model**, treating atoms as rigid balls of fixed size, and the element below is a **hypothetical element** chosen to show the relationships. It is not a property sheet for any real metal.
+
+---
+
+## 1. The unit cell: the smallest repeating unit that represents the crystal
+
+A crystal is a solid in which the same arrangement repeats in three directions. One repeating block is the **unit cell**, and the edge length of a cubic unit cell is the **lattice parameter a**. We look at three cubic cells only.
+
+| Name | Where the atoms sit | Common abbreviation |
+|---|---|---|
+| Simple cubic | 8 corners | SC |
+| Body-centred cubic | 8 corners + 1 at the centre | BCC |
+| Face-centred cubic | 8 corners + the centres of the 6 faces | FCC |
+
+### How many atoms a cell really holds: n
+
+A corner atom is shared by 8 neighbouring cells, so only 1/8 of it belongs to one cell. A face-centre atom is shared by two cells (1/2), and a body-centre atom belongs entirely to one cell (1).
+
+- SC: 8 × 1/8 = **1 atom**
+- BCC: 8 × 1/8 + 1 = **2 atoms**
+- FCC: 8 × 1/8 + 6 × 1/2 = **4 atoms**
+
+---
+
+## 2. The direction in which atoms touch links a and R
+
+In the hard-sphere model we find the direction along which atoms touch and use it to connect the lattice parameter a with the atomic radius R.
+
+- **SC**: two atoms touch along a cube edge. $a=2R$
+- **BCC**: corner–centre–corner atoms touch along the body diagonal (length $\sqrt3\,a$). $\sqrt3\,a=4R$, so $a=\dfrac{4R}{\sqrt3}$
+- **FCC**: corner–face-centre–corner atoms touch along a face diagonal (length $\sqrt2\,a$). $\sqrt2\,a=4R$, so $a=2\sqrt2\,R$
+
+Pick the wrong touching direction and a is wrong, and so is every calculation after it. Marking "where the balls touch" on your sketch first is the cheapest check there is.
+
+---
+
+## 3. Atomic packing factor: the share of the cell volume taken by atoms
+
+The **atomic packing factor (APF)** is the total volume of the atoms in the unit cell divided by the cell volume.
+
+$$\text{APF}=\frac{n\cdot\frac43\pi R^3}{a^3}$$
+
+Substituting the relations from Section 2, R cancels and a pure number remains.
+
+| Cell | n | a | APF |
+|---|---:|---|---:|
+| SC | 1 | 2R | π/6 ≈ 0.524 |
+| BCC | 2 | 4R/√3 | √3π/8 ≈ 0.680 |
+| FCC | 4 | 2√2R | π/(3√2) ≈ 0.740 |
+
+The cancellation of R matters. The packing factor is a property of **the stacking pattern** alone, not of the atom's size. About 0.74 (FCC) is the most that equal spheres can fill; the remaining ~26% is the gaps between them. The size and position of those gaps come back later when we discuss diffusion and alloys.
+
+---
+
+## 4. Theoretical density: mass of one cell ÷ volume of one cell
+
+With n atoms per cell, molar mass A (g/mol) and Avogadro's number $N_A$, one cell has mass $nA/N_A$. Dividing by the cell volume $V_c=a^3$ gives
+
+$$\rho=\frac{nA}{V_c\,N_A}$$
+
+### Comparing the three cells with a hypothetical element
+
+Assume a hypothetical element with R = 0.125 nm and A = 50 g/mol stacked in each of the three ways. 1 nm = 10⁻⁷ cm and $N_A=6.022\times10^{23}\ \text{mol}^{-1}$.
+
+| Cell | a (nm) | n | Theoretical density (g/cm³) |
+|---|---:|---:|---:|
+| SC | 0.2500 | 1 | 5.31 |
+| BCC | 0.2887 | 2 | 6.90 |
+| FCC | 0.3536 | 4 | 7.52 |
+
+Working SC by hand: $a^3=(0.25\times10^{-7})^3=1.5625\times10^{-23}\ \text{cm}^3$, so $\rho=\dfrac{1\times50}{1.5625\times10^{-23}\times6.022\times10^{23}}\approx5.31\ \text{g/cm}^3$.
+
+The density ratios equal the packing-factor ratios (7.52 ÷ 5.31 ≈ 0.740 ÷ 0.524 ≈ 1.41). With the same atomic size and mass, the calculation shows the density difference comes only from the stacking.
+
+---
+
+## 5. What not to do with this model
+
+- **Do not expect it to equal measured density exactly.** Real crystals contain defects such as vacancies, impurities and porosity, and a changes with temperature. Theoretical density is the baseline for "if the crystal were perfect".
+- **Do not memorise atomic radius as a fixed value.** It is a model value that depends on the bonding partner and coordination number. In practice the common direction is the reverse: estimate R or the structure from a measured a and density.
+- **Do not say a higher packing factor means stronger.** As Chapter 1 showed, stiffness, strength and ductility are separate questions. The packing factor tells you about density and the geometry of the gaps, nothing more.
+
+Crystal structure and density calculations connect to the crystallography part of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical element, numbers and order of explanation in this chapter were written independently and do not copy MIT figures or problems.
+
+---
+
+## Sources
+
+- OpenStax, [Chemistry 2e, §10.6 Lattice Structures in Crystalline Solids](https://openstax.org/books/chemistry-2e/pages/10-6-lattice-structures-in-crystalline-solids) (CC BY 4.0, for the unit-cell definitions)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (for the course scope)
+- Avogadro constant: [NIST CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?na) 6.022 140 76 × 10²³ mol⁻¹ (exact)
+- The worked numbers use a hypothetical element created by Oiyo (arithmetic checked 2026-11-02).
