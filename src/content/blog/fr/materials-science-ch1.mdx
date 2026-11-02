@@ -1,0 +1,114 @@
+---
+title: "Science des matériaux, chapitre 1 — Comment la raideur des liaisons devient la déformation d'une pièce"
+description: "Distinguer le module d'élasticité E de la raideur d'une pièce K=EA/L, puis déduire le modèle idéalisé E≈k/a de la courbure locale du potentiel de liaison. Des exemples chiffrés fictifs apprennent à lire séparément matériau et géométrie."
+pubDate: 2026-11-02
+tags: ["science-des-materiaux", "module-elasticite", "contrainte", "deformation", "raideur", "liaison"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 1
+chapterTitleShort: "Raideur des liaisons et déformation"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Choisir un matériau à fort module d'élasticité n'est pas la même chose que fabriquer une pièce qui fléchit peu.** Il faut d'abord séparer les propriétés du matériau, la géométrie de la pièce et les conditions d'utilisation, puis les relier. Ce chapitre vérifie cette distinction sur une barre en traction et construit un modèle idéalisé qui remonte des liaisons atomiques au module macroscopique.
+
+Il suffit de connaître la physique générale (force, travail, unités) et le sens d'une dérivée. Ce chapitre ne remplace ni un dimensionnement de sécurité ni une certification de matériau. Tous les chiffres sont des **entrées fictives** choisies pour montrer des relations, pas les données d'un alliage réel.
+
+---
+
+## 1. Propriété, géométrie et performance ne sont pas le même nombre
+
+Un matériau réagit différemment selon sa composition, sa mise en œuvre et sa structure interne. Mais la flèche ou la durée de vie que perçoit l'utilisateur ne dépendent pas du seul nom du matériau : il faut aussi la direction et le nombre de cycles de charge, la température, la forme de la pièce et les assemblages.
+
+| Question | Catégorie | Terme dans ce chapitre |
+|---|---|---|
+| De combien se déforme-t-il pour une petite hausse de contrainte ? | Propriété élastique linéaire | Module d'élasticité E, unité Pa |
+| De combien la pièce entière s'allonge-t-elle sous la même force ? | Raideur de la structure | Raideur axiale K=F/ΔL, unité N/m |
+| La déformation permanente commence-t-elle ? | Plasticité et résistance | Les formules élastiques n'y répondent pas |
+| Une pièce fissurée tient-elle ? | Rupture | Le module seul ne permet pas de juger |
+
+Trouver un grand E dans un tableau ne règle ni la limite d'élasticité, ni la fatigue, ni la rupture, ni la corrosion. Avant de parler de « matériau résistant », il faut préciser de quelle charge et de quelle défaillance il s'agit.
+
+Une façon de l'organiser : **composition et liaisons** et **mise en œuvre et histoire thermique** créent la **structure et les défauts**, et la structure fixe les **propriétés du matériau**. En y ajoutant **géométrie et assemblages** et **charges, température et conditions aux limites**, on obtient la **réponse de la pièce**. En conception réelle, on part souvent de la performance visée pour remonter au procédé et au matériau : ce n'est donc pas un algorithme causal à sens unique.
+
+---
+
+## 2. Traction axiale : un même matériau s'allonge moins dans une pièce plus épaisse
+
+Soit une barre droite de longueur L et de section constante A soumise à une force de traction axiale F. La contrainte nominale et la déformation conventionnelle sont
+
+$$\sigma=\frac{F}{A},\qquad \varepsilon=\frac{\Delta L}{L}$$
+
+Pour une petite déformation élastique linéaire d'un matériau homogène, $\sigma=E\varepsilon$, d'où
+
+$$\Delta L=\frac{FL}{EA},\qquad K=\frac{F}{\Delta L}=\frac{EA}{L}$$
+
+E décrit la relation contrainte–déformation du matériau ; K, la relation force–déplacement de toute la barre. À E égal, un autre A ou un autre L donne une autre K. Les définitions figurent dans [OpenStax University Physics §12.3](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus).
+
+### Séparer les deux questions avec des chiffres
+
+Prenons la barre fictive F=1 000 N, A=20 mm², L=200 mm et E=100 GPa. Comme 1 mm²=10⁻⁶ m², la contrainte vaut 50 MPa, la déformation 50 MPa ÷ 100 GPa = 0,0005 et l'allongement 200 mm × 0,0005 = 0,10 mm.
+
+| Cas | Contrainte σ | ε | ΔL |
+|---|---:|---:|---:|
+| Initial | 50 MPa | 0,0005 | 0,10 mm |
+| Section seule → 40 mm² | 25 MPa | 0,00025 | 0,05 mm |
+| Longueur seule → 400 mm | 50 MPa | 0,0005 | 0,20 mm |
+
+Dire que « le module a doublé » parce que la deuxième barre s'allonge moins revient à confondre propriété et géométrie. La troisième s'allonge deux fois plus, mais sa déformation est la même. Comparer directement les déplacements d'éprouvettes de longueurs différentes peut fausser la lecture d'une différence de matériau.
+
+Ce n'est pas une formule de flèche de poutre. Si les charges excentrées, les concentrations de contraintes, les grandes déformations, le flambement, l'effet de la température ou l'anisotropie comptent, il faut un modèle adapté.
+
+---
+
+## 3. Modèle atomique : profondeur du puits et courbure à l'équilibre sont deux informations différentes
+
+Soit U(r) l'énergie potentielle entre deux unités à la distance r, avec un équilibre stable r₀ où U′(r₀)=0 et U″(r₀)>0. Un développement de Taylor pour une petite variation x=r−r₀ donne
+
+$$U(r_0+x)\simeq U(r_0)+\tfrac12 U''(r_0)\,x^2$$
+
+La force de rappel vaut −dU/dr ; pour de petits déplacements, le système se comporte comme un ressort F≈−kx avec k=U″(r₀). C'est une approximation locale : on ne prolonge pas la droite aux grands déplacements et on ne s'en sert pas pour prédire la charge qui rompt une liaison.
+
+La **profondeur** du puits et la **courbure** de son fond sont des informations distinctes. Un puits profond ne fixe pas à lui seul k pour les petits déplacements. Sans la courbe complète, on ne peut pas conclure « deux fois plus d'énergie de liaison, donc deux fois plus de module ».
+
+![Deux paraboles fictives de même équilibre mais de courbure locale différente](/images/materials-science/ch01-local-curvature.svg)
+
+La figure trace le modèle adimensionnel fictif ΔU/E₀=κx²/2 avec x=(r−r₀)/a. κ=2 et κ=6 ont le même équilibre mais une raideur locale différente : à x=0,20 les valeurs sont 0,04 et 0,12, et à x=0 les deux valent 0. Ce ne sont pas des potentiels atomiques mesurés. Les courbes se distinguent par trait plein et pointillé en plus de la couleur.
+
+### Déduire la dimension de E dans un réseau idéal 1-D
+
+Supposons des ressorts identiques k reliés Nₛ en série dans la longueur, et Nₚ chaînes de ce type en parallèle. Une chaîne a une raideur k/Nₛ, le réseau entier K=Nₚk/Nₛ. Si l'écart entre chaînes et la longueur au repos valent tous deux a, alors A=Nₚa² et L=Nₛa. En comparant avec K=EA/L,
+
+$$E=\frac{KL}{A}=\frac{k}{a}$$
+
+Des N/m divisés par des m donnent des N/m², la dimension d'un module. Dans ce **réseau fictif**, k=20 N/m et a=0,25 nm donnent E=80 GPa, qui n'est pas une valeur mesurée.
+
+La déduction suppose des ressorts uniformes en série et en parallèle agissant seulement selon l'axe. Les cristaux réels font intervenir des liaisons dépendant de la direction, la déformation latérale, des interactions à plusieurs atomes et des défauts. Il ne faut pas retenir E=k/a comme une formule valable pour tout matériau.
+
+---
+
+## 4. Questions à se poser devant un tableau de propriétés
+
+Si deux valeurs sont données pour un même matériau, ne décidez pas tout de suite que l'une est fausse. Comparez dans cet ordre :
+
+1. **Même grandeur ?** E et K, ou des définitions de contrainte différentes, sont-ils mélangés ?
+2. **Même direction et mêmes conditions ?** Orientation de l'éprouvette, température, plage de déformation, mode de chargement.
+3. **Même structure ?** Porosité, composition du composite, état de mise en œuvre.
+4. **Même modèle ?** Pente du domaine élastique linéaire ou valeur effective d'un autre domaine ?
+
+Le parcours liaison, cristaux, défauts, diffusion et équilibres de phases correspond au périmètre de [MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Le modèle, les chiffres et l'ordre de ce chapitre ont été construits indépendamment et ne reprennent ni figures ni exercices du MIT.
+
+---
+
+## Sources
+
+- OpenStax, [University Physics Volume 1, §12.3 Stress, Strain, and Elastic Modulus](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus) (CC BY 4.0, définitions)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (périmètre du cours)
+- Les chiffres et la figure sont des modèles fictifs d'Oiyo (arithmétique vérifiée le 2026-11-02).
