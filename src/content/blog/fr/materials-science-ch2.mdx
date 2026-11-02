@@ -1,0 +1,113 @@
+---
+title: "Science des matériaux, chapitre 2 — La façon d'empiler les atomes fixe la densité : maille, compacité et masse volumique théorique"
+description: "Pour les mailles cubique simple, cubique centrée et cubique à faces centrées, on compte les atomes par maille, on relie le paramètre de maille au rayon atomique, on établit la compacité et on calcule la masse volumique théorique ρ=nA/(V_c N_A) d'un élément fictif. Les nombres montrent pourquoi les mêmes atomes donnent des densités différentes selon l'empilement."
+pubDate: 2026-11-02
+tags: ["science-des-materiaux", "structure-cristalline", "maille", "compacite", "masse-volumique", "cfc", "cc"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 2
+chapterTitleShort: "Maille et masse volumique théorique"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Un solide fait des mêmes atomes peut avoir des masses volumiques différentes selon la règle d'empilement.** Le chapitre 1 a suivi la raideur d'une liaison jusqu'à la déformation d'une pièce ; ce chapitre regarde comment de nombreux atomes remplissent l'espace. On choisit trois mailles, on établit pour chacune le nombre d'atomes et la compacité, puis on en tire une masse volumique théorique.
+
+Les hypothèses sont celles du chapitre 1. On utilise le **modèle des sphères dures**, qui traite les atomes comme des billes rigides de taille fixe, et l'élément ci-dessous est un **élément fictif** choisi pour montrer les relations. Ce n'est la fiche d'aucun métal réel.
+
+---
+
+## 1. La maille : le plus petit motif répété qui représente le cristal
+
+Un cristal est un solide où le même arrangement se répète dans trois directions. Un bloc répété est la **maille élémentaire**, et l'arête d'une maille cubique est le **paramètre de maille a**. On ne regarde que trois mailles cubiques.
+
+| Nom | Position des atomes | Abréviation courante |
+|---|---|---|
+| Cubique simple | 8 sommets | CS (SC) |
+| Cubique centrée | 8 sommets + 1 au centre | CC (BCC) |
+| Cubique à faces centrées | 8 sommets + le centre des 6 faces | CFC (FCC) |
+
+### Combien d'atomes une maille contient vraiment : n
+
+Un atome de sommet est partagé par 8 mailles voisines : une maille n'en possède que 1/8. Un atome au centre d'une face est partagé par deux mailles (1/2), et l'atome central appartient entièrement à la maille (1).
+
+- CS : 8 × 1/8 = **1 atome**
+- CC : 8 × 1/8 + 1 = **2 atomes**
+- CFC : 8 × 1/8 + 6 × 1/2 = **4 atomes**
+
+---
+
+## 2. La direction de contact entre atomes relie a et R
+
+Dans le modèle des sphères dures, on cherche la direction selon laquelle les atomes se touchent pour relier le paramètre de maille a au rayon atomique R.
+
+- **CS** : deux atomes se touchent le long d'une arête. $a=2R$
+- **CC** : les atomes sommet–centre–sommet se touchent le long de la grande diagonale (longueur $\sqrt3\,a$). $\sqrt3\,a=4R$, soit $a=\dfrac{4R}{\sqrt3}$
+- **CFC** : les atomes sommet–centre de face–sommet se touchent le long d'une diagonale de face (longueur $\sqrt2\,a$). $\sqrt2\,a=4R$, soit $a=2\sqrt2\,R$
+
+Une mauvaise direction de contact donne un a faux, et tout le calcul suivant l'est aussi. Marquer d'abord sur le croquis « où les billes se touchent » est la vérification la moins chère.
+
+---
+
+## 3. Compacité : la part du volume de la maille occupée par les atomes
+
+La **compacité (APF)** est le volume total des atomes de la maille divisé par le volume de la maille.
+
+$$\text{APF}=\frac{n\cdot\frac43\pi R^3}{a^3}$$
+
+En reportant les relations de la section 2, R se simplifie et il reste un nombre pur.
+
+| Maille | n | a | Compacité |
+|---|---:|---|---:|
+| CS | 1 | 2R | π/6 ≈ 0,524 |
+| CC | 2 | 4R/√3 | √3π/8 ≈ 0,680 |
+| CFC | 4 | 2√2R | π/(3√2) ≈ 0,740 |
+
+Que R disparaisse est essentiel : la compacité ne dépend que du **mode d'empilement**, pas de la taille de l'atome. Environ 0,74 (CFC) est le maximum atteignable avec des sphères égales ; les ~26 % restants sont des vides entre elles. La taille et la position de ces sites vides reviendront plus tard avec la diffusion et les alliages.
+
+---
+
+## 4. Masse volumique théorique : masse d'une maille ÷ volume d'une maille
+
+Avec n atomes par maille, une masse molaire A (g/mol) et la constante d'Avogadro $N_A$, une maille a pour masse $nA/N_A$. En divisant par le volume $V_c=a^3$ :
+
+$$\rho=\frac{nA}{V_c\,N_A}$$
+
+### Comparer les trois mailles avec un élément fictif
+
+Prenons un élément fictif avec R = 0,125 nm et A = 50 g/mol empilé des trois façons. 1 nm = 10⁻⁷ cm et $N_A=6{,}022\times10^{23}\ \text{mol}^{-1}$.
+
+| Maille | a (nm) | n | Masse volumique théorique (g/cm³) |
+|---|---:|---:|---:|
+| CS | 0,2500 | 1 | 5,31 |
+| CC | 0,2887 | 2 | 6,90 |
+| CFC | 0,3536 | 4 | 7,52 |
+
+À la main pour CS : $a^3=(0{,}25\times10^{-7})^3=1{,}5625\times10^{-23}\ \text{cm}^3$, donc $\rho=\dfrac{1\times50}{1{,}5625\times10^{-23}\times6{,}022\times10^{23}}\approx5{,}31\ \text{g/cm}^3$.
+
+Les rapports de masses volumiques égalent les rapports de compacité (7,52 ÷ 5,31 ≈ 0,740 ÷ 0,524 ≈ 1,41). À taille et masse atomiques égales, le calcul montre que l'écart de densité ne vient que de l'empilement.
+
+---
+
+## 5. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas attendre une égalité exacte avec la masse volumique mesurée.** Les cristaux réels contiennent des défauts comme les lacunes, des impuretés et de la porosité, et a varie avec la température. La valeur théorique est la référence « si le cristal était parfait ».
+- **Ne pas apprendre le rayon atomique comme une constante.** C'est une valeur de modèle qui dépend du voisin de liaison et de la coordinence. En pratique, on procède souvent à l'inverse : estimer R ou la structure à partir de a et de la masse volumique mesurés.
+- **Ne pas dire qu'une compacité plus élevée rend plus résistant.** Comme au chapitre 1, raideur, résistance et ductilité sont des questions distinctes. La compacité ne renseigne que sur la densité et la géométrie des vides.
+
+La structure cristalline et le calcul de masse volumique rejoignent la partie cristallographie du [programme MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). L'élément fictif, les nombres et l'ordre d'exposition de ce chapitre sont originaux et ne reprennent ni figures ni exercices du MIT.
+
+---
+
+## Sources
+
+- OpenStax, [Chemistry 2e, §10.6 Lattice Structures in Crystalline Solids](https://openstax.org/books/chemistry-2e/pages/10-6-lattice-structures-in-crystalline-solids) (CC BY 4.0, pour les définitions de maille)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (pour le périmètre du cours)
+- Constante d'Avogadro : [NIST CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?na) 6,022 140 76 × 10²³ mol⁻¹ (valeur exacte)
+- Les exemples numériques utilisent un élément fictif créé par Oiyo (arithmétique vérifiée le 2026-11-02).
