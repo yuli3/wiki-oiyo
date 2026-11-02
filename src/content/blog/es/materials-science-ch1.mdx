@@ -1,0 +1,114 @@
+---
+title: "Ciencia de materiales, capítulo 1 — Cómo la rigidez del enlace se convierte en deformación de la pieza"
+description: "Distingue el módulo elástico E de la rigidez de la pieza K=EA/L y deduce el modelo idealizado E≈k/a a partir de la curvatura local del potencial de enlace. Ejemplos con números inventados para leer por separado material y geometría."
+pubDate: 2026-11-02
+tags: ["ciencia-de-materiales", "modulo-elastico", "tension", "deformacion", "rigidez", "enlace"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 1
+chapterTitleShort: "Rigidez del enlace y deformación"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Elegir un material con un módulo elástico alto no es lo mismo que fabricar una pieza que apenas se deforme.** Primero hay que separar las propiedades del material, la geometría de la pieza y las condiciones de uso, y después conectarlas. Este capítulo comprueba esa distinción con una barra a tracción y construye un modelo idealizado que sube desde los enlaces atómicos hasta el módulo macroscópico.
+
+Basta con física general (fuerza, trabajo, unidades) y el significado de una derivada. No sustituye al diseño de seguridad ni a la certificación de materiales. Todos los números son **entradas inventadas** para mostrar relaciones, no datos de ninguna aleación real.
+
+---
+
+## 1. Propiedad, geometría y rendimiento no son el mismo número
+
+Un material responde de forma distinta según su composición, su procesado y su estructura interna. Pero la flecha o la vida útil que nota el usuario no dependen solo del nombre del material: también importan la dirección y el número de ciclos de carga, la temperatura, la forma de la pieza y las uniones.
+
+| Pregunta | Categoría | Término en este capítulo |
+|---|---|---|
+| ¿Cuánto se deforma con un pequeño aumento de tensión? | Propiedad elástica lineal | Módulo elástico E, unidad Pa |
+| ¿Cuánto se alarga la pieza entera con la misma fuerza? | Rigidez estructural | Rigidez axial K=F/ΔL, unidad N/m |
+| ¿Empieza la deformación permanente? | Plasticidad y resistencia | Las fórmulas elásticas no lo responden |
+| ¿Aguanta una pieza con una grieta? | Fractura | No se juzga solo con el módulo |
+
+Encontrar un E alto en una tabla no resuelve la fluencia, la fatiga, la fractura ni la corrosión. Antes de decir «material resistente», hay que decidir de qué carga y de qué fallo se habla.
+
+Una forma de ordenarlo: **composición y enlace** y **procesado e historia térmica** crean la **estructura y los defectos**, y la estructura fija las **propiedades del material**. Si se añaden **geometría y uniones** y **cargas, temperatura y condiciones de contorno**, se obtiene la **respuesta de la pieza**. En el diseño real a menudo se parte del rendimiento deseado hacia el proceso y el material, así que no es un algoritmo causal de un solo sentido.
+
+---
+
+## 2. Tracción axial: el mismo material se alarga menos en una pieza más gruesa
+
+Sea una barra recta de longitud L y sección constante A sometida a una fuerza axial de tracción F. La tensión nominal y la deformación ingenieril son
+
+$$\sigma=\frac{F}{A},\qquad \varepsilon=\frac{\Delta L}{L}$$
+
+Para una deformación elástica lineal pequeña de un material homogéneo, $\sigma=E\varepsilon$, de modo que
+
+$$\Delta L=\frac{FL}{EA},\qquad K=\frac{F}{\Delta L}=\frac{EA}{L}$$
+
+E describe la relación tensión–deformación del material; K, la relación fuerza–desplazamiento de toda la barra. Con el mismo E, otro A u otro L dan otra K. Las definiciones están en [OpenStax University Physics §12.3](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus).
+
+### Separar las dos preguntas con números
+
+Sea la barra inventada F=1.000 N, A=20 mm², L=200 mm y E=100 GPa. Como 1 mm²=10⁻⁶ m², la tensión es 50 MPa, la deformación 50 MPa ÷ 100 GPa = 0,0005 y el alargamiento 200 mm × 0,0005 = 0,10 mm.
+
+| Cambio | Tensión | Deformación | Alargamiento |
+|---|---:|---:|---:|
+| Original | 50 MPa | 0,0005 | 0,10 mm |
+| Solo área → 40 mm² | 25 MPa | 0,00025 | 0,05 mm |
+| Solo longitud → 400 mm | 50 MPa | 0,0005 | 0,20 mm |
+
+Decir que «el módulo se ha duplicado» porque la segunda barra se alarga menos confunde propiedad con geometría. La tercera se alarga el doble, pero su deformación es la misma. Comparar desplazamientos de probetas de distinta longitud puede llevar a leer mal una diferencia de material.
+
+No es una fórmula de flecha de vigas. Si importan cargas excéntricas, concentraciones de tensión, grandes deformaciones, pandeo, dependencia de la temperatura o anisotropía, hay que plantear el modelo correspondiente.
+
+---
+
+## 3. Modelo atómico: la profundidad del pozo y la curvatura en el equilibrio son cosas distintas
+
+Sea U(r) la energía potencial entre dos unidades a distancia r, con un equilibrio estable r₀ en el que U′(r₀)=0 y U″(r₀)>0. Un desarrollo de Taylor para un cambio pequeño x=r−r₀ da
+
+$$U(r_0+x)\simeq U(r_0)+\tfrac12 U''(r_0)\,x^2$$
+
+La fuerza restauradora es −dU/dr, así que para desplazamientos pequeños se comporta como un muelle F≈−kx con k=U″(r₀). Es una aproximación local: no se debe prolongar la recta a grandes desplazamientos ni usarla para predecir la carga que rompe un enlace.
+
+La **profundidad** del pozo y la **curvatura** de su fondo son información distinta. Un pozo profundo no fija por sí solo k para desplazamientos pequeños. Sin la curva completa no se puede concluir «el doble de energía de enlace, el doble de módulo».
+
+![Dos parábolas inventadas con el mismo equilibrio y distinta curvatura local](/images/materials-science/ch01-local-curvature.svg)
+
+La figura representa el modelo adimensional inventado ΔU/E₀=κx²/2 con x=(r−r₀)/a. κ=2 y κ=6 comparten equilibrio pero difieren en rigidez local: en x=0,20 valen 0,04 y 0,12, y en x=0 ambos valen 0. No son potenciales atómicos medidos. Las curvas se distinguen con línea continua y discontinua además del color.
+
+### Deducir la dimensión de E en una red ideal 1-D
+
+Supongamos muelles idénticos k conectados Nₛ en serie a lo largo y Nₚ cadenas así en paralelo. Una cadena tiene rigidez k/Nₛ y la red completa K=Nₚk/Nₛ. Si la separación entre cadenas y la longitud de reposo valen a, entonces A=Nₚa² y L=Nₛa. Comparando con K=EA/L,
+
+$$E=\frac{KL}{A}=\frac{k}{a}$$
+
+N/m dividido entre m da N/m², la dimensión de un módulo. En esta **red inventada**, k=20 N/m y a=0,25 nm dan E=80 GPa, que no es un valor medido.
+
+La deducción supone muelles en serie y paralelo uniformes que solo actúan en el eje. Los cristales reales implican enlaces que dependen de la dirección, deformación lateral, interacciones de muchos átomos y defectos. No hay que memorizar E=k/a como fórmula para todo material.
+
+---
+
+## 4. Preguntas al leer una tabla de propiedades
+
+Si hay dos valores para el mismo material, no decidas enseguida que uno está mal. Compara en este orden:
+
+1. **¿La misma magnitud?** ¿Se mezclan E y K, o definiciones de tensión distintas?
+2. **¿La misma dirección y condiciones?** Orientación de la probeta, temperatura, rango de deformación, tipo de carga.
+3. **¿La misma estructura?** Porosidad, composición del compuesto, estado de procesado.
+4. **¿El mismo modelo?** ¿Pendiente del tramo elástico lineal o valor efectivo de otro tramo?
+
+El recorrido por enlace, cristales, defectos, difusión y equilibrio de fases coincide con el alcance de [MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). El modelo, los números y el orden de este capítulo se elaboraron de forma independiente y no copian figuras ni problemas del MIT.
+
+---
+
+## Fuentes
+
+- OpenStax, [University Physics Volume 1, §12.3 Stress, Strain, and Elastic Modulus](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus) (CC BY 4.0, definiciones)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (alcance del curso)
+- Los números y la figura son modelos inventados por Oiyo (aritmética comprobada el 2026-11-02).

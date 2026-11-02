@@ -1,0 +1,114 @@
+---
+title: "Materials Science Chapter 1 — How Bond Stiffness Becomes Part Deformation"
+description: "Separate the elastic modulus E from part stiffness K=EA/L, then derive the idealized E≈k/a from the local curvature of a bond potential. Worked examples with made-up numbers show how to read material and geometry separately."
+pubDate: 2026-11-02
+tags: ["materials-science", "elastic-modulus", "stress", "strain", "stiffness", "bonding"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 1
+chapterTitleShort: "Bond Stiffness and Part Deformation"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Choosing a material with a high elastic modulus is not the same as making a part that barely deflects.** Material properties, part geometry and service conditions have to be separated first and then connected. This chapter checks that distinction with a simple bar in tension and builds an idealized model that climbs from atomic bonds to the macroscopic modulus.
+
+You need introductory physics (force, work, units) and the meaning of a derivative. This is not a substitute for safety design or material certification. All numbers below are **made-up inputs** chosen to show relationships, not data for any real alloy.
+
+---
+
+## 1. Property, geometry and performance are different numbers
+
+A material responds differently depending on what it is made of, how it was processed and its internal structure. But the deflection or life a user notices is not set by the material name alone. You also need the load direction and number of cycles, temperature, part shape and joints.
+
+| Question | Category | Term in this chapter |
+|---|---|---|
+| How much does it strain for a small increase in stress? | Linear elastic property | Elastic modulus E, unit Pa |
+| How far does the whole part stretch under the same force? | Structural stiffness | Axial stiffness K=F/ΔL, unit N/m |
+| Does permanent deformation start? | Plasticity and strength | Not answered by elastic formulas |
+| Will a cracked part hold? | Fracture | Not judged by modulus alone |
+
+Finding a large E in a property table does not mean yield, fatigue, fracture or corrosion are solved. Before calling a material "strong", decide which load and which failure you mean.
+
+One way to lay it out: **composition and bonding** and **processing and thermal history** create **structure and defects**, and structure sets the **material properties**. Adding **geometry and joints** and **loads, temperature and boundary conditions** gives the **part response**. Real design often works backwards from the target performance to the process and material, so this is not a one-way causal algorithm.
+
+---
+
+## 2. Axial tension: the same material stretches less in a thicker part
+
+Take a straight bar of length L and constant cross-section A under axial tensile force F. Engineering stress and strain are
+
+$$\sigma=\frac{F}{A},\qquad \varepsilon=\frac{\Delta L}{L}$$
+
+For small linear elastic deformation of a homogeneous material, $\sigma=E\varepsilon$, so
+
+$$\Delta L=\frac{FL}{EA},\qquad K=\frac{F}{\Delta L}=\frac{EA}{L}$$
+
+E describes the material's stress–strain relation; K describes the whole bar's force–displacement relation. With the same E, a different A or L gives a different K. See the definitions in [OpenStax University Physics §12.3](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus).
+
+### Separating the two questions with numbers
+
+Let the made-up bar have F=1,000 N, A=20 mm², L=200 mm and E=100 GPa. Since 1 mm²=10⁻⁶ m², the stress is 50 MPa, the strain is 50 MPa ÷ 100 GPa = 0.0005 and the elongation is 200 mm × 0.0005 = 0.10 mm.
+
+| Change | Stress | Strain | Elongation |
+|---|---:|---:|---:|
+| Original | 50 MPa | 0.0005 | 0.10 mm |
+| Area only → 40 mm² | 25 MPa | 0.00025 | 0.05 mm |
+| Length only → 400 mm | 50 MPa | 0.0005 | 0.20 mm |
+
+Saying "the modulus doubled" because the second bar stretched less confuses property with geometry. The third bar stretches twice as far, but its strain is the same. Comparing raw displacements of specimens of different lengths can misread a material difference.
+
+This is not a beam deflection formula. If eccentric loads, stress concentrations, large deformation, buckling, temperature dependence or anisotropy matter, build the appropriate model separately.
+
+---
+
+## 3. Atomic model: well depth and curvature at equilibrium are different
+
+Let U(r) be the potential energy between two units at distance r, with a stable equilibrium r₀ where U′(r₀)=0 and U″(r₀)>0. A Taylor expansion for a small change x=r−r₀ gives
+
+$$U(r_0+x)\simeq U(r_0)+\tfrac12 U''(r_0)\,x^2$$
+
+The restoring force is −dU/dr, so for small displacements it behaves like a spring, F≈−kx with k=U″(r₀). This is a local approximation. Do not extend the straight line to large displacements or use it to predict the load that breaks a bond.
+
+The **depth** of the well and the **curvature** at its bottom are different information. A deep well alone does not fix k for small displacements. Without the whole potential curve you cannot conclude "twice the bond energy, so twice the modulus".
+
+![Two made-up parabolas with the same equilibrium but different local curvature](/images/materials-science/ch01-local-curvature.svg)
+
+The figure plots the dimensionless made-up model ΔU/E₀=κx²/2 with x=(r−r₀)/a. κ=2 and κ=6 share the same equilibrium but differ in local stiffness: at x=0.20 the values are 0.04 and 0.12, and at x=0 both are 0. These are not measured atomic potentials or dissociation energies. The curves are distinguished by solid and dashed lines as well as color.
+
+### Deriving the dimension of E in an ideal 1-D network
+
+Suppose identical springs k are connected Nₛ in series along the length, and Nₚ such chains sit in parallel. A chain has stiffness k/Nₛ and the whole network K=Nₚk/Nₛ. If the chain spacing and spring rest length are both a, then A=Nₚa² and L=Nₛa. Comparing with K=EA/L,
+
+$$E=\frac{KL}{A}=\frac{k}{a}$$
+
+N/m divided by m gives N/m², the dimension of a modulus. In this **made-up network**, k=20 N/m and a=0.25 nm give E=80 GPa. That is not a measured value for any material.
+
+The derivation assumes uniform series–parallel springs acting only along the axis. Real crystals involve direction-dependent bonding, lateral strain, many-atom interactions and defects. Do not memorize E=k/a as a formula for every material.
+
+---
+
+## 4. Questions to ask when reading a property table
+
+When two values are reported for the same material name, do not decide at once that one is wrong. Compare in this order:
+
+1. **Same quantity?** Are E and K, or different stress definitions, mixed up?
+2. **Same direction and conditions?** Specimen orientation, temperature, strain range, loading mode?
+3. **Same structure?** Porosity, composite make-up, processing state?
+4. **Same model?** The slope of the linear elastic range, or an effective value from another range?
+
+The wider path through bonding, crystals, defects, diffusion and phase equilibria matches the scope of [MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The model, numbers and order here were built independently and do not copy MIT figures or problems.
+
+---
+
+## Sources
+
+- OpenStax, [University Physics Volume 1, §12.3 Stress, Strain, and Elastic Modulus](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus) (CC BY 4.0, definitions)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (course scope)
+- Worked numbers and the figure are Oiyo's made-up models (arithmetic checked 2026-11-02).
