@@ -1,0 +1,107 @@
+---
+title: "Materials Science Chapter 4 — Atoms Move by Way of Vacancies: The Diffusion Coefficient and Fick's First Law"
+description: "Fick's first law J = −D·dC/dx and the Arrhenius form D = D₀·exp(−Q_d/kT), applied to the Chapter 3 hypothetical element: diffusion coefficients by temperature, flux for a fixed concentration difference, the characteristic length √(Dt), and the activation energy recovered from two temperatures."
+pubDate: 2026-11-02
+tags: ["materials-science", "diffusion", "ficks-law", "diffusion-coefficient", "activation-energy", "arrhenius", "heat-treatment"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 4
+chapterTitleShort: "Diffusion Coefficient and Fick's Law"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Atoms in a solid move too, and their speed changes by hundreds of times when the temperature rises only a little.** Chapter 3 showed the number of vacancies growing exponentially with temperature. This chapter covers **diffusion**, in which atoms travel by way of those vacancies. Heat treatment, surface hardening and semiconductor doping all rest on this calculation.
+
+The assumptions match the earlier chapters. The diffusion constants and concentrations below are **hypothetical values** chosen to show the relationships. They are not data for any real metal or process.
+
+---
+
+## 1. Vacancy diffusion: an atom jumps into a neighbouring vacancy
+
+When an atom in a crystal swaps places with a neighbouring vacancy, the atom moves one step and the vacancy moves one step the other way. This is **vacancy diffusion**. Each jump needs two things at once.
+
+1. There must be a vacancy next to the atom. Its probability follows $\exp(-Q_v/kT)$ from Chapter 3.
+2. The atom must clear the energy barrier $Q_m$ (the migration energy) to squeeze between its neighbours. That probability also has the form $\exp(-Q_m/kT)$.
+
+Multiplying the two probabilities adds the exponents, so the **activation energy for vacancy diffusion is roughly $Q_d\approx Q_v+Q_m$**. In this chapter we add $Q_m=0.90$ eV to the Chapter 3 value $Q_v=0.90$ eV and set $Q_d=1.8$ eV.
+
+**Interstitial diffusion**, in which small atoms move through the gaps between lattice sites, needs no vacancy and is usually much faster. This chapter calculates vacancy diffusion only.
+
+---
+
+## 2. Fick's first law: a concentration difference drives a flow
+
+The amount passing per unit area per unit time from high to low concentration is the **diffusion flux J**. At steady state, when the concentration profile does not change with time,
+
+$$J=-D\,\frac{dC}{dx}$$
+
+D is the **diffusion coefficient** (m²/s) and $dC/dx$ is the concentration gradient. The minus sign means the flow goes toward lower concentration. For the same concentration difference, a larger D means more flow, so the properties of the material and the temperature are all contained in D.
+
+---
+
+## 3. Temperature dependence of the diffusion coefficient
+
+$$D=D_0\exp\!\left(-\frac{Q_d}{kT}\right)$$
+
+$D_0$ is a prefactor that barely depends on temperature. For the hypothetical element we take $D_0=2.0\times10^{-5}\ \text{m}^2/\text{s}$ and $Q_d=1.8$ eV ($k=8.617\times10^{-5}$ eV/K).
+
+For a plate 5 mm thick with 1.2 kg/m³ on one side and 0.4 kg/m³ on the other, and a constant gradient, the flux magnitude is $J=D\times0.8/0.005$.
+
+| Temperature (K) | $Q_d/kT$ | D (m²/s) | J (kg/m²·s) |
+|---:|---:|---:|---:|
+| 300 | 69.63 | 1.2 × 10⁻³⁵ | 1.8 × 10⁻³³ |
+| 900 | 23.21 | 1.67 × 10⁻¹⁵ | 2.7 × 10⁻¹³ |
+| 1200 | 17.41 | 5.51 × 10⁻¹³ | 8.8 × 10⁻¹¹ |
+
+Working the 1200 K row by hand: $Q_d/kT=1.8/(8.617\times10^{-5}\times1200)=1.8/0.1034\approx17.41$, $e^{-17.41}\approx2.76\times10^{-8}$, and $D=2.0\times10^{-5}\times2.76\times10^{-8}\approx5.51\times10^{-13}$ m²/s. This uses the same exponent (17.41) as the Chapter 3 vacancy fraction at 600 K, because $Q_d$ is twice $Q_v$, so $Q_d/kT$ at 1200 K equals $Q_v/kT$ at 600 K.
+
+While the temperature rose by a third from 900 K to 1200 K, D grew about 331 times. At room temperature, 300 K, it is effectively zero, which is why the composition of a metal part does not mix by itself at room temperature.
+
+---
+
+## 4. How long does it take: the characteristic length √(Dt)
+
+When the concentration changes with time (Fick's second law), the solutions take several forms, but the length scale that appears in all of them is $\sqrt{Dt}$. Read it as the **rough size** of the distance diffusion reaches in time t. It is not an exact penetration depth; it gives the order of magnitude.
+
+| Temperature (K) | $\sqrt{Dt}$ after 1 hour | Time to reach 100 µm ($t=x^2/D$) |
+|---:|---:|---:|
+| 900 | about 2.4 µm | about 70 days |
+| 1200 | about 45 µm | about 5.0 hours |
+
+At 1200 K, $t=(100\times10^{-6})^2/5.51\times10^{-13}\approx1.81\times10^{4}$ s ≈ 5.0 hours. The same 100 µm takes about 70 days at 900 K. The table shows why raising the heat-treatment temperature a little shortens process time a lot. The $x^2$ also shows directly that doubling the distance takes four times as long.
+
+---
+
+## 5. Working backwards: $Q_d$ from D at two temperatures
+
+The method is the same as in Chapter 3. Since $\ln D=\ln D_0-\dfrac{Q_d}{k}\cdot\dfrac1T$,
+
+$$Q_d=\frac{k\,\ln(D_2/D_1)}{1/T_1-1/T_2}$$
+
+With the 900 K and 1200 K values: $D_2/D_1\approx331$, $\ln331\approx5.80$, $1/900-1/1200=2.78\times10^{-4}\ \text{K}^{-1}$, so $Q_d\approx8.617\times10^{-5}\times5.80/2.78\times10^{-4}\approx1.8$ eV, the value we assumed. Real experiments also measure D at several temperatures and take the activation energy from the slope of an Arrhenius plot.
+
+---
+
+## 6. What not to do with this model
+
+- **Do not use √(Dt) as an exact penetration depth.** The real concentration profile takes forms such as the error function depending on the boundary conditions, and the prefactor depends on which concentration you use as the threshold.
+- **Do not treat all diffusion as vacancy diffusion.** Interstitial diffusion of small atoms such as carbon and hydrogen, and fast paths along grain boundaries or surfaces, have different activation energies.
+- **Do not use $Q_d=Q_v+Q_m$ as an exact equality.** It is an approximation; the real value is set by measurement.
+- **Do not plug the hypothetical values into a real process.** The $D_0$, $Q_d$ and concentrations in the tables are for practice.
+
+Diffusion connects to the defects and diffusion part of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical values, numbers and order of explanation in this chapter were written independently and do not copy MIT figures or problems.
+
+---
+
+## Sources
+
+- NIST CODATA, [Boltzmann constant search results](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): k = 1.380 649 × 10⁻²³ J/K (exact) = 8.617 333 262 × 10⁻⁵ eV/K
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (for the course scope)
+- The worked numbers use hypothetical values created by Oiyo (arithmetic checked 2026-11-02).

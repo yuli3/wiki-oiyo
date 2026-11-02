@@ -1,0 +1,107 @@
+---
+title: "Science des matériaux, chapitre 4 — Les atomes se déplacent par les lacunes : coefficient de diffusion et première loi de Fick"
+description: "Première loi de Fick J = −D·dC/dx et forme d'Arrhenius D = D₀·exp(−Q_d/kT) appliquées à l'élément fictif du chapitre 3 : coefficients de diffusion selon la température, flux pour une différence de concentration donnée, longueur caractéristique √(Dt) et énergie d'activation tirée de deux températures."
+pubDate: 2026-11-02
+tags: ["science-des-materiaux", "diffusion", "loi-de-fick", "coefficient-de-diffusion", "energie-d-activation", "arrhenius", "traitement-thermique"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 4
+chapterTitleShort: "Coefficient de diffusion et loi de Fick"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Les atomes d'un solide bougent aussi, et leur vitesse change d'un facteur de plusieurs centaines quand la température monte à peine.** Le chapitre 3 a montré que le nombre de lacunes croît de façon exponentielle avec la température. Ce chapitre traite de la **diffusion**, par laquelle les atomes se déplacent en passant par ces lacunes. Traitement thermique, durcissement superficiel et dopage des semi-conducteurs reposent tous sur ce calcul.
+
+Les hypothèses sont celles des chapitres précédents. Les constantes de diffusion et les concentrations ci-dessous sont des **valeurs fictives** choisies pour montrer les relations. Ce ne sont les données d'aucun métal ni d'aucun procédé réel.
+
+---
+
+## 1. Diffusion lacunaire : un atome saute dans une lacune voisine
+
+Quand un atome d'un cristal échange sa place avec une lacune voisine, l'atome avance d'un pas et la lacune recule d'un pas en sens inverse. C'est la **diffusion lacunaire**. Chaque saut exige deux conditions à la fois.
+
+1. Il faut une lacune à côté de l'atome. Sa probabilité suit $\exp(-Q_v/kT)$ du chapitre 3.
+2. L'atome doit franchir la barrière d'énergie $Q_m$ (énergie de migration) pour se glisser entre ses voisins. Cette probabilité a aussi la forme $\exp(-Q_m/kT)$.
+
+En multipliant les deux probabilités, les exposants s'additionnent : l'**énergie d'activation de la diffusion lacunaire vaut à peu près $Q_d\approx Q_v+Q_m$**. Dans ce chapitre, on ajoute $Q_m=0{,}90$ eV à la valeur $Q_v=0{,}90$ eV du chapitre 3 et on prend $Q_d=1{,}8$ eV.
+
+La **diffusion interstitielle**, où de petits atomes se déplacent dans les espaces entre les sites du réseau, n'a pas besoin de lacunes et est en général beaucoup plus rapide. Ce chapitre ne calcule que la diffusion lacunaire.
+
+---
+
+## 2. Première loi de Fick : une différence de concentration crée un flux
+
+La quantité qui traverse une unité de surface par unité de temps, de la zone la plus concentrée vers la moins concentrée, est le **flux de diffusion J**. En régime permanent, quand le profil de concentration ne varie pas dans le temps,
+
+$$J=-D\,\frac{dC}{dx}$$
+
+D est le **coefficient de diffusion** (m²/s) et $dC/dx$ le gradient de concentration. Le signe moins indique que le flux va vers la concentration la plus faible. Pour une même différence de concentration, un D plus grand donne un flux plus important : les propriétés du matériau et l'effet de la température sont tous contenus dans D.
+
+---
+
+## 3. Dépendance du coefficient de diffusion en température
+
+$$D=D_0\exp\!\left(-\frac{Q_d}{kT}\right)$$
+
+$D_0$ est un facteur pré-exponentiel qui dépend à peine de la température. Pour l'élément fictif, on prend $D_0=2{,}0\times10^{-5}\ \text{m}^2/\text{s}$ et $Q_d=1{,}8$ eV ($k=8{,}617\times10^{-5}$ eV/K).
+
+Pour une plaque de 5 mm d'épaisseur avec 1,2 kg/m³ d'un côté et 0,4 kg/m³ de l'autre, et un gradient constant, le module du flux vaut $J=D\times0{,}8/0{,}005$.
+
+| Température (K) | $Q_d/kT$ | D (m²/s) | J (kg/m²·s) |
+|---:|---:|---:|---:|
+| 300 | 69,63 | 1,2 × 10⁻³⁵ | 1,8 × 10⁻³³ |
+| 900 | 23,21 | 1,67 × 10⁻¹⁵ | 2,7 × 10⁻¹³ |
+| 1200 | 17,41 | 5,51 × 10⁻¹³ | 8,8 × 10⁻¹¹ |
+
+Calcul à la main de la ligne 1200 K : $Q_d/kT=1{,}8/(8{,}617\times10^{-5}\times1200)=1{,}8/0{,}1034\approx17{,}41$, $e^{-17{,}41}\approx2{,}76\times10^{-8}$ et $D=2{,}0\times10^{-5}\times2{,}76\times10^{-8}\approx5{,}51\times10^{-13}$ m²/s. On retrouve le même exposant (17,41) que pour la fraction de lacunes à 600 K du chapitre 3 : $Q_d$ valant le double de $Q_v$, $Q_d/kT$ à 1200 K égale $Q_v/kT$ à 600 K.
+
+Pendant que la température augmentait d'un tiers, de 900 K à 1200 K, D a été multiplié par environ 331. À température ambiante, 300 K, il est pratiquement nul ; c'est pourquoi la composition d'une pièce métallique ne se mélange pas d'elle-même à température ambiante.
+
+---
+
+## 4. Combien de temps : la longueur caractéristique √(Dt)
+
+Quand la concentration varie dans le temps (seconde loi de Fick), les solutions prennent plusieurs formes, mais la même échelle de longueur $\sqrt{Dt}$ apparaît dans toutes. On la lit comme la **taille approximative** de la distance atteinte par la diffusion pendant un temps t. Ce n'est pas une profondeur de pénétration exacte : elle donne l'ordre de grandeur.
+
+| Température (K) | $\sqrt{Dt}$ après 1 heure | Temps pour atteindre 100 µm ($t=x^2/D$) |
+|---:|---:|---:|
+| 900 | environ 2,4 µm | environ 70 jours |
+| 1200 | environ 45 µm | environ 5,0 heures |
+
+À 1200 K, $t=(100\times10^{-6})^2/5{,}51\times10^{-13}\approx1{,}81\times10^{4}$ s ≈ 5,0 heures. Les mêmes 100 µm demandent environ 70 jours à 900 K. Le tableau montre pourquoi relever un peu la température de traitement thermique raccourcit fortement le procédé. Le $x^2$ montre aussi directement que doubler la distance demande quatre fois plus de temps.
+
+---
+
+## 5. Dans l'autre sens : $Q_d$ à partir de D à deux températures
+
+La méthode est celle du chapitre 3. Comme $\ln D=\ln D_0-\dfrac{Q_d}{k}\cdot\dfrac1T$,
+
+$$Q_d=\frac{k\,\ln(D_2/D_1)}{1/T_1-1/T_2}$$
+
+Avec les valeurs à 900 K et 1200 K : $D_2/D_1\approx331$, $\ln331\approx5{,}80$, $1/900-1/1200=2{,}78\times10^{-4}\ \text{K}^{-1}$, d'où $Q_d\approx8{,}617\times10^{-5}\times5{,}80/2{,}78\times10^{-4}\approx1{,}8$ eV, la valeur supposée. Les expériences réelles mesurent aussi D à plusieurs températures et tirent l'énergie d'activation de la pente d'un diagramme d'Arrhenius.
+
+---
+
+## 6. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas utiliser √(Dt) comme profondeur de pénétration exacte.** Le profil réel de concentration prend des formes comme la fonction d'erreur selon les conditions aux limites, et le facteur devant dépend de la concentration choisie comme seuil.
+- **Ne pas traiter toute diffusion comme lacunaire.** La diffusion interstitielle de petits atomes comme le carbone et l'hydrogène, et les chemins rapides le long des joints de grains ou des surfaces, ont d'autres énergies d'activation.
+- **Ne pas utiliser $Q_d=Q_v+Q_m$ comme une égalité exacte.** C'est une approximation ; la valeur réelle est fixée par la mesure.
+- **Ne pas appliquer les valeurs fictives à un procédé réel.** $D_0$, $Q_d$ et les concentrations des tableaux servent à s'exercer.
+
+La diffusion se rattache à la partie défauts et diffusion du [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Les valeurs fictives, les nombres et l'ordre des explications de ce chapitre ont été rédigés de façon indépendante et ne reprennent ni figures ni exercices du MIT.
+
+---
+
+## Sources
+
+- NIST CODATA, [résultats de recherche pour la constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann) : k = 1,380 649 × 10⁻²³ J/K (valeur exacte) = 8,617 333 262 × 10⁻⁵ eV/K
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (pour le périmètre du cours)
+- Les exemples numériques utilisent des valeurs fictives créées par Oiyo (arithmétique vérifiée le 2026-11-02).

@@ -1,0 +1,107 @@
+---
+title: "Science des matériaux, chapitre 3 — Aucun cristal n'est parfait : types de défauts et concentration de lacunes à l'équilibre"
+description: "On classe les défauts en ponctuels, linéaires et plans, puis on applique la fraction de lacunes à l'équilibre N_v/N = exp(−Q_v/kT) à l'élément fictif du chapitre 2 pour compter les lacunes à plusieurs températures. On montre aussi comment retrouver l'énergie de formation à partir de deux températures, et où s'arrête ce modèle."
+pubDate: 2026-11-02
+tags: ["science-des-materiaux", "defauts-cristallins", "lacune", "arrhenius", "constante-de-boltzmann", "dislocation", "joint-de-grain"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 3
+chapterTitleShort: "Défauts et concentration de lacunes"
+locale: "fr"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Un cristal réel comporte toujours des sites où il manque un atome, et leur nombre augmente de façon exponentielle avec la température.** Le chapitre 2 a calculé une masse volumique théorique en prenant pour référence un « cristal parfait ». Ce chapitre classe les défauts qui s'écartent de cette référence et calcule combien il y a du plus simple d'entre eux, la lacune.
+
+Les hypothèses sont celles des chapitres précédents. L'élément et l'énergie de formation ci-dessous sont des **valeurs fictives** choisies pour montrer les relations. Ce n'est la fiche de propriétés d'aucun métal réel.
+
+---
+
+## 1. On classe les défauts par dimension
+
+| Nom (Dimension) | Exemples | Ce qu'ils influencent |
+|---|---|---|
+| Défauts ponctuels (0-D) | Lacunes, atomes interstitiels, atomes en substitution | Diffusion, conduction électrique, masse volumique |
+| Défauts linéaires (1-D) | Dislocations (l'arrangement atomique est décalé le long d'une ligne) | Déformation plastique, résistance |
+| Défauts plans (2-D) | Joints de grains, surfaces | Résistance, corrosion, chemins de diffusion |
+
+- **Lacune** : un site du réseau qui devrait porter un atome est vide.
+- **Atome interstitiel** : un atome logé dans les espaces entre les sites du réseau (les quelque 26 % de vide vus au chapitre 2).
+- **Atome en substitution** : un atome d'une autre espèce occupe un site du réseau. C'est le point de départ des alliages.
+
+Ce chapitre ne calcule que les lacunes. Elles se forment sous le seul effet de la température, sans rien ajouter, si bien que leur quantité à l'équilibre thermique s'écrit avec une seule équation.
+
+---
+
+## 2. La concentration de lacunes à l'équilibre
+
+L'énergie nécessaire pour retirer un atome de son site et créer une lacune est l'**énergie de formation des lacunes $Q_v$**. À l'équilibre thermique, la fraction des N sites du réseau qui sont vacants, $N_v$, vaut
+
+$$\frac{N_v}{N}=\exp\!\left(-\frac{Q_v}{kT}\right)$$
+
+où T est la température absolue (K) et k la constante de Boltzmann. Avec $Q_v$ en eV, $k=8{,}617\times10^{-5}\ \text{eV/K}$ (la valeur exacte du SI 1,380 649×10⁻²³ J/K convertie en eV).
+
+L'essentiel est que l'énergie se trouve dans l'exponentielle. Créer une lacune coûte de l'énergie : près de 0 K la fraction est presque nulle, mais quand la température monte, l'énergie thermique kT augmente et la fraction croît de façon exponentielle.
+
+---
+
+## 3. Application à l'élément du chapitre 2
+
+On reprend l'élément fictif CFC du chapitre 2 (R = 0,125 nm, A = 50 g/mol). Le paramètre de maille vaut $a=2\sqrt2R=0{,}3536$ nm et la maille contient 4 atomes ; la densité de sites du réseau est donc
+
+$$N=\frac{4}{a^3}=\frac{4}{4{,}419\times10^{-23}\ \text{cm}^3}\approx9{,}05\times10^{22}\ \text{cm}^{-3}$$
+
+La masse volumique théorique du chapitre 2 donne la même valeur : $N=\rho N_A/A=7{,}52\times6{,}022\times10^{23}/50\approx9{,}06\times10^{22}$ (écart d'arrondi).
+
+Supposons que l'énergie de formation des lacunes de cet élément soit $Q_v=0{,}90$ eV.
+
+| Température (K) | $Q_v/kT$ | $N_v/N$ | $N_v$ (cm⁻³) |
+|---:|---:|---:|---:|
+| 300 | 34,81 | 7,6 × 10⁻¹⁶ | 6,9 × 10⁷ |
+| 600 | 17,41 | 2,76 × 10⁻⁸ | 2,5 × 10¹⁵ |
+| 900 | 11,60 | 9,12 × 10⁻⁶ | 8,3 × 10¹⁷ |
+| 1200 | 8,70 | 1,66 × 10⁻⁴ | 1,5 × 10¹⁹ |
+
+Calcul à la main de la ligne 1200 K : $kT=8{,}617\times10^{-5}\times1200=0{,}1034$ eV, $Q_v/kT=0{,}90/0{,}1034\approx8{,}70$ et $e^{-8{,}70}\approx1{,}66\times10^{-4}$. En multipliant par N, on obtient $1{,}5\times10^{19}\ \text{cm}^{-3}$.
+
+Pendant que la température quadruplait de 300 K à 1200 K, la fraction de lacunes a été multipliée par environ 2×10¹¹. La fraction paraît encore faible, mais dans un centimètre cube elle représente 10¹⁹ lacunes. C'est le point de départ pour comprendre pourquoi la diffusion, où les atomes se déplacent par l'intermédiaire des lacunes, s'accélère fortement à haute température.
+
+---
+
+## 4. Dans l'autre sens : $Q_v$ à partir de deux températures
+
+En prenant le logarithme népérien des deux membres,
+
+$$\ln\frac{N_v}{N}=-\frac{Q_v}{k}\cdot\frac1T$$
+
+si bien que $\ln(N_v/N)$ tracé en fonction de $1/T$ donne une droite de pente $-Q_v/k$ (diagramme d'Arrhenius). Avec les fractions $f_1$, $f_2$ à deux températures $T_1$, $T_2$,
+
+$$Q_v=\frac{k\,\ln(f_2/f_1)}{1/T_1-1/T_2}$$
+
+Avec les valeurs à 900 K et 1200 K du tableau : $f_2/f_1\approx18{,}2$, $\ln18{,}2\approx2{,}90$, $1/900-1/1200=2{,}78\times10^{-4}\ \text{K}^{-1}$, d'où $Q_v\approx8{,}617\times10^{-5}\times2{,}90/2{,}78\times10^{-4}\approx0{,}90$ eV, la valeur supposée au départ. Expérimentalement, on obtient la fraction de lacunes en mesurant précisément la masse volumique ou le paramètre de maille à haute température, puis on estime ainsi l'énergie de formation.
+
+---
+
+## 5. Ce qu'il ne faut pas faire avec ce modèle
+
+- **Ne pas appliquer l'équation d'équilibre à un échantillon trempé.** Un refroidissement rapide depuis une haute température ne laisse pas aux lacunes le temps de s'éliminer : il en reste plus qu'à l'équilibre. L'équation donne la valeur « s'il était resté assez longtemps à cette température ».
+- **Ne pas supposer que le facteur pré-exponentiel vaut toujours 1.** Des modèles plus précis ajoutent un facteur lié à l'entropie de vibration, qui n'est pas forcément 1. Ce chapitre le fixe à 1 pour le concept.
+- **Ne pas expliquer la résistance par les seules lacunes.** La déformation plastique et la résistance des métaux dépendent surtout des dislocations et des joints de grains. Un chapitre ultérieur y sera consacré.
+- **Ne pas appliquer les valeurs fictives à un élément réel.** La $Q_v$ et l'élément du tableau servent à s'exercer.
+
+Les défauts cristallins se rattachent à la partie défauts et diffusion du [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). L'élément fictif, les nombres et l'ordre des explications de ce chapitre ont été rédigés de façon indépendante et ne reprennent ni figures ni exercices du MIT.
+
+---
+
+## Sources
+
+- NIST CODATA, [résultats de recherche pour la constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann) : k = 1,380 649 × 10⁻²³ J/K (valeur exacte) = 8,617 333 262 × 10⁻⁵ eV/K
+- Constante d'Avogadro : [NIST CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?na) 6,022 140 76 × 10²³ mol⁻¹ (valeur exacte)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (pour le périmètre du cours)
+- Les exemples numériques utilisent des valeurs fictives créées par Oiyo (arithmétique vérifiée le 2026-11-02).

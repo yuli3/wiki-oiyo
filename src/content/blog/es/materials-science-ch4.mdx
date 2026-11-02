@@ -1,0 +1,107 @@
+---
+title: "Ciencia de materiales, capítulo 4 — Los átomos se mueven a través de vacantes: coeficiente de difusión y primera ley de Fick"
+description: "Primera ley de Fick J = −D·dC/dx y forma de Arrhenius D = D₀·exp(−Q_d/kT) aplicadas al elemento hipotético del capítulo 3: coeficientes de difusión por temperatura, flujo para una diferencia de concentración fija, longitud característica √(Dt) y energía de activación a partir de dos temperaturas."
+pubDate: 2026-11-02
+tags: ["ciencia-de-materiales", "difusion", "ley-de-fick", "coeficiente-de-difusion", "energia-de-activacion", "arrhenius", "tratamiento-termico"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 4
+chapterTitleShort: "Coeficiente de difusión y ley de Fick"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Los átomos de un sólido también se mueven, y su velocidad cambia cientos de veces cuando la temperatura sube solo un poco.** El capítulo 3 mostró que el número de vacantes crece de forma exponencial con la temperatura. Este capítulo trata la **difusión**, en la que los átomos se desplazan a través de esas vacantes. El tratamiento térmico, el endurecimiento superficial y el dopado de semiconductores se apoyan en este cálculo.
+
+Los supuestos son los de los capítulos anteriores. Las constantes de difusión y las concentraciones que siguen son **valores hipotéticos** elegidos para mostrar las relaciones. No son datos de ningún metal ni proceso real.
+
+---
+
+## 1. Difusión por vacantes: un átomo salta a una vacante vecina
+
+Cuando un átomo de un cristal intercambia su posición con una vacante vecina, el átomo avanza un paso y la vacante retrocede un paso en sentido contrario. Esto es la **difusión por vacantes**. Cada salto necesita dos cosas a la vez.
+
+1. Debe haber una vacante junto al átomo. Su probabilidad sigue $\exp(-Q_v/kT)$ del capítulo 3.
+2. El átomo debe superar la barrera de energía $Q_m$ (energía de migración) para pasar entre sus vecinos. Esa probabilidad también tiene la forma $\exp(-Q_m/kT)$.
+
+Al multiplicar las dos probabilidades se suman los exponentes, de modo que la **energía de activación de la difusión por vacantes es aproximadamente $Q_d\approx Q_v+Q_m$**. En este capítulo sumamos $Q_m=0{,}90$ eV al valor $Q_v=0{,}90$ eV del capítulo 3 y tomamos $Q_d=1{,}8$ eV.
+
+La **difusión intersticial**, en la que átomos pequeños se mueven por los huecos entre posiciones de la red, no necesita vacantes y suele ser mucho más rápida. Este capítulo solo calcula la difusión por vacantes.
+
+---
+
+## 2. Primera ley de Fick: una diferencia de concentración impulsa un flujo
+
+La cantidad que pasa por unidad de área y de tiempo desde la zona de mayor a la de menor concentración es el **flujo de difusión J**. En estado estacionario, cuando el perfil de concentración no cambia con el tiempo,
+
+$$J=-D\,\frac{dC}{dx}$$
+
+D es el **coeficiente de difusión** (m²/s) y $dC/dx$ el gradiente de concentración. El signo menos indica que el flujo va hacia la concentración menor. Con la misma diferencia de concentración, un D mayor significa más flujo, así que las propiedades del material y la temperatura quedan contenidas en D.
+
+---
+
+## 3. Dependencia del coeficiente de difusión con la temperatura
+
+$$D=D_0\exp\!\left(-\frac{Q_d}{kT}\right)$$
+
+$D_0$ es un factor preexponencial que apenas depende de la temperatura. Para el elemento hipotético tomamos $D_0=2{,}0\times10^{-5}\ \text{m}^2/\text{s}$ y $Q_d=1{,}8$ eV ($k=8{,}617\times10^{-5}$ eV/K).
+
+Para una placa de 5 mm de espesor con 1,2 kg/m³ en una cara y 0,4 kg/m³ en la otra, y un gradiente constante, el módulo del flujo es $J=D\times0{,}8/0{,}005$.
+
+| Temperatura (K) | $Q_d/kT$ | D (m²/s) | J (kg/m²·s) |
+|---:|---:|---:|---:|
+| 300 | 69,63 | 1,2 × 10⁻³⁵ | 1,8 × 10⁻³³ |
+| 900 | 23,21 | 1,67 × 10⁻¹⁵ | 2,7 × 10⁻¹³ |
+| 1200 | 17,41 | 5,51 × 10⁻¹³ | 8,8 × 10⁻¹¹ |
+
+Calculando a mano la fila de 1200 K: $Q_d/kT=1{,}8/(8{,}617\times10^{-5}\times1200)=1{,}8/0{,}1034\approx17{,}41$, $e^{-17{,}41}\approx2{,}76\times10^{-8}$ y $D=2{,}0\times10^{-5}\times2{,}76\times10^{-8}\approx5{,}51\times10^{-13}$ m²/s. Usa el mismo exponente (17,41) que la fracción de vacantes a 600 K del capítulo 3, porque $Q_d$ es el doble de $Q_v$ y, por tanto, $Q_d/kT$ a 1200 K es igual a $Q_v/kT$ a 600 K.
+
+Mientras la temperatura subió un tercio, de 900 K a 1200 K, D aumentó unas 331 veces. A temperatura ambiente, 300 K, es prácticamente cero; por eso la composición de una pieza metálica no se mezcla sola a temperatura ambiente.
+
+---
+
+## 4. Cuánto tarda: la longitud característica √(Dt)
+
+Cuando la concentración cambia con el tiempo (segunda ley de Fick), las soluciones adoptan varias formas, pero en todas aparece la escala de longitud $\sqrt{Dt}$. Léala como el **tamaño aproximado** de la distancia que alcanza la difusión en un tiempo t. No es una profundidad de penetración exacta; da el orden de magnitud.
+
+| Temperatura (K) | $\sqrt{Dt}$ tras 1 hora | Tiempo hasta 100 µm ($t=x^2/D$) |
+|---:|---:|---:|
+| 900 | unos 2,4 µm | unos 70 días |
+| 1200 | unos 45 µm | unas 5,0 horas |
+
+A 1200 K, $t=(100\times10^{-6})^2/5{,}51\times10^{-13}\approx1{,}81\times10^{4}$ s ≈ 5,0 horas. Los mismos 100 µm tardan unos 70 días a 900 K. La tabla muestra por qué subir un poco la temperatura del tratamiento térmico acorta mucho el proceso. El $x^2$ también indica directamente que duplicar la distancia exige cuatro veces más tiempo.
+
+---
+
+## 5. Al revés: $Q_d$ a partir de D a dos temperaturas
+
+El método es el del capítulo 3. Como $\ln D=\ln D_0-\dfrac{Q_d}{k}\cdot\dfrac1T$,
+
+$$Q_d=\frac{k\,\ln(D_2/D_1)}{1/T_1-1/T_2}$$
+
+Con los valores de 900 K y 1200 K: $D_2/D_1\approx331$, $\ln331\approx5{,}80$, $1/900-1/1200=2{,}78\times10^{-4}\ \text{K}^{-1}$, por lo que $Q_d\approx8{,}617\times10^{-5}\times5{,}80/2{,}78\times10^{-4}\approx1{,}8$ eV, el valor supuesto. Los experimentos reales también miden D a varias temperaturas y obtienen la energía de activación de la pendiente de un gráfico de Arrhenius.
+
+---
+
+## 6. Lo que no hay que hacer con este modelo
+
+- **No usar √(Dt) como profundidad de penetración exacta.** El perfil real de concentración adopta formas como la función error según las condiciones de contorno, y el factor delante depende de qué concentración se tome como umbral.
+- **No tratar toda difusión como difusión por vacantes.** La difusión intersticial de átomos pequeños como el carbono y el hidrógeno, y las vías rápidas por límites de grano o superficies, tienen energías de activación distintas.
+- **No usar $Q_d=Q_v+Q_m$ como igualdad exacta.** Es una aproximación; el valor real lo fija la medición.
+- **No aplicar los valores hipotéticos a un proceso real.** $D_0$, $Q_d$ y las concentraciones de las tablas son para practicar.
+
+La difusión enlaza con la parte de defectos y difusión del [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Los valores hipotéticos, los números y el orden de la explicación de este capítulo se escribieron de forma independiente y no copian figuras ni problemas del MIT.
+
+---
+
+## Fuentes
+
+- NIST CODATA, [resultados de búsqueda de la constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): k = 1,380 649 × 10⁻²³ J/K (valor exacto) = 8,617 333 262 × 10⁻⁵ eV/K
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (para el alcance de la asignatura)
+- Los ejemplos numéricos usan valores hipotéticos creados por Oiyo (aritmética comprobada el 2026-11-02).
