@@ -1,0 +1,114 @@
+---
+title: "Materials Science Chapter 7 — Less Ordered Solids: Polymer Molecular Weight, Crystallinity and the Glass Transition"
+description: "With a hypothetical polymer, compute number- and weight-average molecular weight and dispersity, crystallinity from density, and the glass transition temperature from the change of slope in specific volume versus temperature. It closes the course by showing why a non-crystalline solid has a glass transition instead of a melting point."
+pubDate: 2026-11-03
+tags: ["materials-science", "polymer", "molecular-weight", "crystallinity", "glass-transition", "amorphous"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 7
+chapterTitleShort: "Polymers and the Glass Transition"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Chapters 1–6 assumed a crystal, with atoms stacked in a regular pattern. Glass and plastics are solids where that assumption breaks.** Using polymers made of chain molecules, this chapter computes three tools for describing solids that lack long-range order.
+
+The molecular weights, densities and volumes below belong to a **hypothetical polymer**. They are not data for any commercial resin.
+
+---
+
+## 1. A polymer has no single molecular weight
+
+A polymer is a chain of thousands of repeat units, but chain lengths vary. Molecular weight is therefore a **distribution**, and its average depends on how you take it.
+
+Suppose a hypothetical sample has these number fractions:
+
+| Number fraction $x_i$ | Molecular weight $M_i$ (g/mol) |
+|---:|---:|
+| 0.30 | 20,000 |
+| 0.50 | 50,000 |
+| 0.20 | 100,000 |
+
+The **number-average molecular weight** averages over chains:
+
+$$\bar M_n=\sum x_iM_i=0.3(20{,}000)+0.5(50{,}000)+0.2(100{,}000)=51{,}000$$
+
+The **weight-average molecular weight** averages over mass, so long chains count more:
+
+$$\bar M_w=\frac{\sum x_iM_i^2}{\sum x_iM_i}=\frac{3.37\times10^{9}}{51{,}000}\approx66{,}100$$
+
+The ratio $\bar M_w/\bar M_n\approx1.30$ is the **dispersity**; the closer to 1, the more uniform the chain lengths. With a repeat-unit mass of 28 g/mol, the average degree of polymerisation is $51{,}000/28\approx1{,}820$.
+
+---
+
+## 2. Crystallinity from density
+
+Polymer chains fold into crystalline regions only in part; the rest stays as tangled amorphous material. Crystalline regions pack more densely, so density gives their share. Crystallinity by mass is
+
+$$\%\text{crystallinity}=\frac{\rho_c(\rho_s-\rho_a)}{\rho_s(\rho_c-\rho_a)}\times100$$
+
+where $\rho_c$ is fully crystalline, $\rho_a$ fully amorphous and $\rho_s$ the sample density. With hypothetical $\rho_c=1.00$, $\rho_a=0.86$ and $\rho_s=0.93\ \text{g/cm}^3$:
+
+$$\frac{1.00\times(0.93-0.86)}{0.93\times(1.00-0.86)}=\frac{0.0700}{0.1302}\approx53.8\%$$
+
+The sample density sits exactly halfway (0.93), yet crystallinity is 53.8% rather than 50% because mass fraction and volume fraction differ: the denser crystal holds more mass in the same volume.
+
+---
+
+## 3. The glass transition: a change of slope instead of a melting point
+
+A crystal's volume jumps in a step at its melting point. An amorphous solid has no such step; instead **the slope of specific volume versus temperature changes**. Below that temperature the chains are frozen into a rigid **glass**; above it chain segments move and the material behaves like **rubber**. That temperature is the **glass transition temperature $T_g$**.
+
+Measurements on the hypothetical polymer:
+
+| Temperature (K) | Specific volume (cm³/g) | Region |
+|---:|---:|---|
+| 320 | 0.8036 | glass |
+| 340 | 0.8072 | glass |
+| 400 | 0.8276 | rubber |
+| 420 | 0.8376 | rubber |
+
+The glassy slope is $(0.8072-0.8036)/20=1.8\times10^{-4}$ and the rubbery slope $(0.8376-0.8276)/20=5.0\times10^{-4}\ \text{cm}^3/(\text{g·K})$. Setting the two lines
+
+$$v_g=0.8036+1.8\times10^{-4}(T-320),\qquad v_r=0.8276+5.0\times10^{-4}(T-400)$$
+
+equal gives $T_g=370$ K, where both equal $v=0.8126$.
+
+$T_g$ shifts by a few kelvin with measurement rate. Faster cooling freezes chains before they settle and gives a higher $T_g$. It is not a fixed equilibrium temperature like a melting point.
+
+---
+
+## 4. Course summary: crystal and amorphous models
+
+| Chapter | Tool for crystals | For amorphous solids and polymers |
+|---|---|---|
+| 1 Bonding | bond stiffness → elastic modulus | strong covalent bonds along chains, weak bonds between them; stiffness drops sharply above $T_g$ |
+| 2 Crystals | unit cell, theoretical density | no unit cell; only crystalline regions described by $\rho_c$ |
+| 3–4 Defects, diffusion | vacancies, $\exp(-Q/kT)$ | free volume and chain motion; the same exponential is used as an approximation but fails near $T_g$ |
+| 5 Phase equilibria | phase diagrams, lever rule | glass is not an equilibrium phase; crystallinity depends on cooling history |
+| 6 Electronic materials | band gap, doping | mostly insulators; conducting polymers are a separate field |
+
+---
+
+## 5. What not to do with this model
+
+- **Do not judge properties from one average molecular weight.** The same $\bar M_n$ with different dispersity processes and performs differently.
+- **Do not ignore factors other than density in the crystallinity formula.** Additives, voids and fillers change density and break the formula.
+- **Do not quote $T_g$ as a fixed value like a melting point.** State the method and rate so values can be compared.
+- **Do not use the hypothetical values to choose a real resin.**
+
+Amorphous solids and polymers connect to the scope of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical values, numbers and order of explanation here were written independently; no MIT figures or problems are reproduced. This chapter completes the materials science course.
+
+---
+
+## Sources
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (course scope)
+- IUPAC, [Glossary of basic terms in polymer science](https://doi.org/10.1351/pac199668122287) (molecular-weight averages and dispersity)
+- Polymer values are hypothetical, made by Oiyo (arithmetic checked 2026-11-03).

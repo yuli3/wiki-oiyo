@@ -1,0 +1,103 @@
+---
+title: "Ciencia de materiales, capítulo 5 — Un diagrama de fases es un mapa: diagramas binarios, líneas de reparto y regla de la palanca"
+description: "En un diagrama hipotético A–B de solubilidad total, se sigue una aleación mientras se enfría y se calculan la composición y la cantidad de líquido y sólido con líneas de reparto y la regla de la palanca. La regla de las fases de Gibbs explica por qué en una región bifásica basta fijar la temperatura, y un balance de masa comprueba el resultado."
+pubDate: 2026-11-03
+tags: ["ciencia-de-materiales", "diagrama-de-fases", "equilibrio-de-fases", "regla-de-la-palanca", "linea-de-reparto", "regla-de-las-fases", "solidificacion"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 5
+chapterTitleShort: "Diagramas binarios y regla de la palanca"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Un diagrama de fases es un mapa: para una temperatura y una composición dadas indica qué fases hay en equilibrio, qué contiene cada una y cuánto hay de cada una.** El capítulo 4 calculó la rapidez con que se mueven los átomos. Este capítulo trata el **equilibrio** al que llegan cuando tienen tiempo suficiente.
+
+Los valores del diagrama pertenecen a un **sistema binario A–B hipotético** pensado para practicar. No son datos de ninguna aleación real.
+
+---
+
+## 1. Qué se lee: fase, composición, cantidad
+
+- **Fase**: región de estructura y composición uniformes, como el líquido L o la solución sólida α.
+- **Composición**: cuántos % en peso de B contiene cada fase.
+- **Cantidad (fracción de fase)**: parte de la masa total que corresponde a cada fase.
+
+La composición global de la aleación $C_0$ es distinta de la composición de cada fase. Confundirlas es el error de lectura más común.
+
+---
+
+## 2. El sistema A–B hipotético: solubilidad total
+
+Supongamos que A y B se mezclan en cualquier proporción incluso en estado sólido. A funde a 1500 K y B a 1100 K. Por encima de la curva superior (el **liquidus**) todo es líquido, por debajo de la inferior (el **solidus**) todo es sólido α, y entre ambas está la región bifásica L + α.
+
+Composiciones donde cada temperatura corta las dos curvas:
+
+| Temperatura (K) | Solidus $C_\alpha$ (% en peso B) | Liquidus $C_L$ (% en peso B) |
+|---:|---:|---:|
+| 1350 | 12 | 26 |
+| 1300 | 20 | 35 |
+| 1250 | 29 | 45 |
+
+---
+
+## 3. Líneas de reparto: las composiciones se leen en los extremos
+
+El segmento horizontal que pasa por un punto de la región bifásica y termina en ambas fronteras es una **línea de reparto**. Sea cual sea la composición global, a esa temperatura **el líquido tiene la composición del extremo del liquidus y el sólido la del extremo del solidus**.
+
+A 1300 K, tanto si $C_0$ es 21 como 34 % en peso de B, el líquido tiene 35 % de B y α tiene 20 %. Solo cambian las **cantidades**.
+
+Lo explica la **regla de las fases de Gibbs**. A presión constante, $F=C-P+1$. Con $C=2$ componentes y $P=2$ fases, $F=1$: al fijar la temperatura quedan fijadas ambas composiciones.
+
+---
+
+## 4. La regla de la palanca: la cantidad sigue al brazo opuesto
+
+Tomando la línea de reparto como palanca y la composición de la aleación $C_0$ como punto de apoyo:
+
+$$W_L=\frac{C_0-C_\alpha}{C_L-C_\alpha},\qquad W_\alpha=\frac{C_L-C_0}{C_L-C_\alpha}$$
+
+Cada fracción es proporcional al brazo **del lado opuesto a esa fase**. Las dos suman 1.
+
+Para $C_0=30$ % en peso de B a 1300 K:
+
+$$W_L=\frac{30-20}{35-20}=\frac{10}{15}\approx0.667,\qquad W_\alpha=\frac{35-30}{15}\approx0.333$$
+
+**Comprobación con un balance de masa.** En 1 kg de aleación, 0.667 kg de líquido contienen $0.667\times0.35=0.233$ kg de B y 0.333 kg de sólido contienen $0.333\times0.20=0.067$ kg de B; en total 0.300 kg, el 30 % de B inicial.
+
+---
+
+## 5. Seguir una aleación mientras se enfría
+
+La misma aleación $C_0=30$ % en peso de B, enfriada lentamente, a tres temperaturas:
+
+| Temperatura (K) | Lectura | $W_L$ | $W_\alpha$ | Composición del sólido (% B) |
+|---:|---|---:|---:|---:|
+| 1350 | $C_0=30>C_L=26$: líquido monofásico | 1 | 0 | — |
+| 1300 | bifásica | 0.667 | 0.333 | 20 |
+| 1250 | bifásica | $(30-29)/(45-29)\approx0.063$ | 0.938 | 29 |
+
+A 1350 K la aleación tiene más B que el liquidus, así que sigue en la región líquida. Al bajar la temperatura crece el sólido, y **el primer sólido es rico en A (20 % de B) mientras que el sólido posterior lleva más B.** En equilibrio, la difusión iguala todo el sólido, que termina con 30 % de B al solidificar por completo.
+
+---
+
+## 6. Lo que no hay que hacer con este modelo
+
+- **No tratar un enfriamiento real como equilibrio.** Como mostró el capítulo 4, la difusión en sólidos es lenta; un enfriamiento rápido deja **segregación (coring)**: el centro que solidificó primero y el borde que solidificó al final tienen composiciones distintas.
+- **No suponer que todo sistema binario es de solubilidad total.** Los sistemas con eutécticos, peritécticos o compuestos intermetálicos tienen otras regiones, y en una línea horizontal de tres fases los grados de libertad son cero.
+- **No aplicar los valores hipotéticos a aleaciones reales.** Los puntos de fusión y composiciones son de práctica; los diagramas reales provienen de medidas y bases de datos termodinámicas.
+
+El equilibrio de fases se relaciona con el alcance del [programa MIT 3.091SC](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). Los valores hipotéticos, las cifras y el orden de la explicación se elaboraron de forma independiente; no se reproducen figuras ni problemas del MIT.
+
+---
+
+## Fuentes
+
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (alcance del curso)
+- Los valores del diagrama son hipotéticos, elaborados por Oiyo (regla de la palanca y balance de masa verificados el 2026-11-03).
