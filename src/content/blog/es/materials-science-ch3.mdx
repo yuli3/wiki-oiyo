@@ -1,0 +1,107 @@
+---
+title: "Ciencia de materiales, capítulo 3 — Ningún cristal es perfecto: tipos de defectos y concentración de vacantes en equilibrio"
+description: "Clasificamos los defectos en puntuales, lineales y planares, y aplicamos la fracción de vacantes en equilibrio N_v/N = exp(−Q_v/kT) al elemento hipotético del capítulo 2 para contar vacantes a varias temperaturas. También mostramos cómo recuperar la energía de formación a partir de dos temperaturas y dónde termina este modelo."
+pubDate: 2026-11-02
+tags: ["ciencia-de-materiales", "defectos-cristalinos", "vacante", "arrhenius", "constante-de-boltzmann", "dislocacion", "limite-de-grano"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 3
+chapterTitleShort: "Defectos y concentración de vacantes"
+locale: "es"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**Un cristal real siempre tiene posiciones donde falta un átomo, y su número crece de forma exponencial con la temperatura.** En el capítulo 2 calculamos una densidad teórica con la referencia de un «cristal perfecto». Este capítulo clasifica los defectos que se apartan de esa referencia y calcula cuántos hay del más sencillo, la vacante.
+
+Los supuestos son los de los capítulos anteriores. El elemento y la energía de formación que siguen son **valores hipotéticos** elegidos para mostrar las relaciones. No son la ficha de propiedades de ningún metal real.
+
+---
+
+## 1. Los defectos se clasifican por dimensión
+
+| Nombre (Dimensión) | Ejemplos | Qué afectan |
+|---|---|---|
+| Defectos puntuales (0-D) | Vacantes, átomos intersticiales, átomos sustitucionales | Difusión, conducción eléctrica, densidad |
+| Defectos lineales (1-D) | Dislocaciones (la disposición atómica se desplaza a lo largo de una línea) | Deformación plástica, resistencia |
+| Defectos planares (2-D) | Límites de grano, superficies | Resistencia, corrosión, vías de difusión |
+
+- **Vacante**: una posición de la red que debería tener un átomo está vacía.
+- **Átomo intersticial**: un átomo situado en los huecos entre posiciones de la red (el espacio vacío de aproximadamente el 26 % que vimos en el capítulo 2).
+- **Átomo sustitucional**: un átomo de otro tipo que ocupa una posición de la red. Es el punto de partida de las aleaciones.
+
+Este capítulo solo calcula vacantes. Se forman únicamente por la temperatura, sin añadir nada, de modo que su cantidad en equilibrio térmico puede escribirse con una sola ecuación.
+
+---
+
+## 2. La concentración de vacantes en equilibrio
+
+La energía necesaria para sacar un átomo de su posición en la red y crear una vacante es la **energía de formación de vacantes $Q_v$**. En equilibrio térmico, la fracción de las N posiciones de la red que están vacías, $N_v$, es
+
+$$\frac{N_v}{N}=\exp\!\left(-\frac{Q_v}{kT}\right)$$
+
+Aquí T es la temperatura absoluta (K) y k la constante de Boltzmann. Con $Q_v$ en eV, $k=8{,}617\times10^{-5}\ \text{eV/K}$ (el valor exacto del SI 1,380 649×10⁻²³ J/K convertido a eV).
+
+Lo esencial es que la energía está dentro de la exponencial. Crear una vacante cuesta energía, así que cerca de 0 K la fracción es casi cero, pero al subir la temperatura la energía térmica kT aumenta y la fracción crece de forma exponencial.
+
+---
+
+## 3. Aplicación al elemento del capítulo 2
+
+Reutilizamos el elemento hipotético FCC del capítulo 2 (R = 0,125 nm, A = 50 g/mol). El parámetro de red es $a=2\sqrt2R=0{,}3536$ nm y hay 4 átomos por celda, de modo que la densidad numérica de posiciones de red es
+
+$$N=\frac{4}{a^3}=\frac{4}{4{,}419\times10^{-23}\ \text{cm}^3}\approx9{,}05\times10^{22}\ \text{cm}^{-3}$$
+
+La densidad teórica del capítulo 2 da el mismo valor: $N=\rho N_A/A=7{,}52\times6{,}022\times10^{23}/50\approx9{,}06\times10^{22}$ (diferencia de redondeo).
+
+Supongamos que la energía de formación de vacantes de este elemento es $Q_v=0{,}90$ eV.
+
+| Temperatura (K) | $Q_v/kT$ | $N_v/N$ | $N_v$ (cm⁻³) |
+|---:|---:|---:|---:|
+| 300 | 34,81 | 7,6 × 10⁻¹⁶ | 6,9 × 10⁷ |
+| 600 | 17,41 | 2,76 × 10⁻⁸ | 2,5 × 10¹⁵ |
+| 900 | 11,60 | 9,12 × 10⁻⁶ | 8,3 × 10¹⁷ |
+| 1200 | 8,70 | 1,66 × 10⁻⁴ | 1,5 × 10¹⁹ |
+
+Calculando a mano la fila de 1200 K: $kT=8{,}617\times10^{-5}\times1200=0{,}1034$ eV, $Q_v/kT=0{,}90/0{,}1034\approx8{,}70$ y $e^{-8{,}70}\approx1{,}66\times10^{-4}$. Multiplicando por N se obtiene $1{,}5\times10^{19}\ \text{cm}^{-3}$.
+
+Mientras la temperatura se cuadruplicó de 300 K a 1200 K, la fracción de vacantes creció unas 2×10¹¹ veces. La fracción sigue pareciendo pequeña, pero en un centímetro cúbico significa 10¹⁹ vacantes. De aquí parte la explicación de por qué la difusión, en la que los átomos se mueven a través de vacantes, se acelera bruscamente a alta temperatura.
+
+---
+
+## 4. Al revés: $Q_v$ a partir de dos temperaturas
+
+Tomando el logaritmo natural de ambos lados,
+
+$$\ln\frac{N_v}{N}=-\frac{Q_v}{k}\cdot\frac1T$$
+
+de modo que al representar $\ln(N_v/N)$ frente a $1/T$ se obtiene una recta de pendiente $-Q_v/k$ (gráfico de Arrhenius). Con las fracciones $f_1$, $f_2$ a dos temperaturas $T_1$, $T_2$,
+
+$$Q_v=\frac{k\,\ln(f_2/f_1)}{1/T_1-1/T_2}$$
+
+Con los valores de 900 K y 1200 K de la tabla: $f_2/f_1\approx18{,}2$, $\ln18{,}2\approx2{,}90$, $1/900-1/1200=2{,}78\times10^{-4}\ \text{K}^{-1}$, por lo que $Q_v\approx8{,}617\times10^{-5}\times2{,}90/2{,}78\times10^{-4}\approx0{,}90$ eV, el valor supuesto. En los experimentos, la fracción de vacantes se obtiene midiendo con precisión la densidad o el parámetro de red a alta temperatura, y la energía de formación se estima de este modo.
+
+---
+
+## 5. Lo que no hay que hacer con este modelo
+
+- **No aplicar la ecuación de equilibrio a una muestra templada.** Al enfriar rápidamente desde alta temperatura, las vacantes no tienen tiempo de desaparecer y quedan más que en equilibrio. La ecuación da el valor «si hubiera permanecido el tiempo suficiente a esa temperatura».
+- **No dar por hecho que el factor preexponencial siempre vale 1.** Los modelos más precisos añaden un factor procedente de la entropía vibracional que no tiene por qué ser 1. Este capítulo lo fija en 1 para el concepto.
+- **No explicar la resistencia solo con vacantes.** La deformación plástica y la resistencia de los metales dependen sobre todo de las dislocaciones y los límites de grano. Eso tendrá su propio capítulo.
+- **No aplicar los valores hipotéticos a un elemento real.** La $Q_v$ y el elemento de la tabla son para practicar.
+
+Los defectos cristalinos enlazan con la parte de defectos y difusión del [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). El elemento hipotético, los números y el orden de la explicación de este capítulo se escribieron de forma independiente y no copian figuras ni problemas del MIT.
+
+---
+
+## Fuentes
+
+- NIST CODATA, [resultados de búsqueda de la constante de Boltzmann](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): k = 1,380 649 × 10⁻²³ J/K (valor exacto) = 8,617 333 262 × 10⁻⁵ eV/K
+- Constante de Avogadro: [NIST CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?na) 6,022 140 76 × 10²³ mol⁻¹ (valor exacto)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (para el alcance de la asignatura)
+- Los ejemplos numéricos usan valores hipotéticos creados por Oiyo (aritmética comprobada el 2026-11-02).

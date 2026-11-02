@@ -1,0 +1,107 @@
+---
+title: "Materials Science Chapter 3 — No Crystal Is Perfect: Types of Defects and the Equilibrium Vacancy Concentration"
+description: "We sort defects into point, line and planar types, then apply the equilibrium vacancy fraction N_v/N = exp(−Q_v/kT) to the hypothetical element from Chapter 2 to count vacancies at several temperatures. We also show how to recover the formation energy from values at two temperatures, and where this model stops."
+pubDate: 2026-11-02
+tags: ["materials-science", "crystal-defects", "vacancy", "arrhenius", "boltzmann-constant", "dislocation", "grain-boundary"]
+category: "natural-science"
+track: "academy"
+series: "materials-science"
+chapter: 3
+chapterTitleShort: "Defects and Vacancy Concentration"
+locale: "en"
+market: "GLOBAL"
+audienceMarket: "GLOBAL"
+contentScope: "global"
+localizationMode: "translated"
+author: "Oiyo"
+layoutVariant: "lecture-series"
+---
+
+**A real crystal always has sites where an atom is missing, and their number grows exponentially with temperature.** Chapter 2 computed a theoretical density for a "perfect crystal" baseline. This chapter classifies the defects that depart from that baseline and calculates how many of the simplest one, the vacancy, are present.
+
+The assumptions match the earlier chapters. The element and formation energy below are **hypothetical values** chosen to show the relationships. They are not a property sheet for any real metal.
+
+---
+
+## 1. Defects are sorted by dimension
+
+| Name (Dimension) | Examples | What they affect |
+|---|---|---|
+| Point defects (0-D) | Vacancies, interstitial atoms, substitutional atoms | Diffusion, electrical conduction, density |
+| Line defects (1-D) | Dislocations (the atomic arrangement is offset along a line) | Plastic deformation, strength |
+| Planar defects (2-D) | Grain boundaries, surfaces | Strength, corrosion, diffusion paths |
+
+- **Vacancy**: a lattice site that should hold an atom is empty.
+- **Interstitial atom**: an atom sitting in the gaps between lattice sites (the roughly 26% empty space we saw in Chapter 2).
+- **Substitutional atom**: a different kind of atom occupying a lattice site. This is where alloys start.
+
+This chapter calculates only vacancies. They form from temperature alone, without anything being added, so their amount at thermal equilibrium can be written as a single equation.
+
+---
+
+## 2. The equilibrium vacancy concentration
+
+The energy needed to remove an atom from its lattice site and create a vacancy is the **vacancy formation energy $Q_v$**. At thermal equilibrium, the fraction of the N lattice sites that are vacant, $N_v$, is
+
+$$\frac{N_v}{N}=\exp\!\left(-\frac{Q_v}{kT}\right)$$
+
+Here T is the absolute temperature (K) and k is the Boltzmann constant. With $Q_v$ in eV, $k=8.617\times10^{-5}\ \text{eV/K}$ (the exact SI value 1.380 649×10⁻²³ J/K converted to eV).
+
+The key is that the energy sits inside the exponential. Creating a vacancy costs energy, so near 0 K the fraction is close to zero, but as the temperature rises the thermal energy kT grows and the fraction rises exponentially.
+
+---
+
+## 3. Applying it to the Chapter 2 element
+
+We reuse the FCC hypothetical element from Chapter 2 (R = 0.125 nm, A = 50 g/mol). The lattice parameter is $a=2\sqrt2R=0.3536$ nm and there are 4 atoms per cell, so the number density of lattice sites is
+
+$$N=\frac{4}{a^3}=\frac{4}{4.419\times10^{-23}\ \text{cm}^3}\approx9.05\times10^{22}\ \text{cm}^{-3}$$
+
+The theoretical density from Chapter 2 gives the same value: $N=\rho N_A/A=7.52\times6.022\times10^{23}/50\approx9.06\times10^{22}$ (rounding difference).
+
+Assume this element's vacancy formation energy is $Q_v=0.90$ eV.
+
+| Temperature (K) | $Q_v/kT$ | $N_v/N$ | $N_v$ (cm⁻³) |
+|---:|---:|---:|---:|
+| 300 | 34.81 | 7.6 × 10⁻¹⁶ | 6.9 × 10⁷ |
+| 600 | 17.41 | 2.76 × 10⁻⁸ | 2.5 × 10¹⁵ |
+| 900 | 11.60 | 9.12 × 10⁻⁶ | 8.3 × 10¹⁷ |
+| 1200 | 8.70 | 1.66 × 10⁻⁴ | 1.5 × 10¹⁹ |
+
+Working the 1200 K row by hand: $kT=8.617\times10^{-5}\times1200=0.1034$ eV, $Q_v/kT=0.90/0.1034\approx8.70$, and $e^{-8.70}\approx1.66\times10^{-4}$. Multiplying by N gives $1.5\times10^{19}\ \text{cm}^{-3}$.
+
+While the temperature rose fourfold from 300 K to 1200 K, the vacancy fraction grew by about 2×10¹¹. The fraction still looks small, but in one cubic centimetre it means 10¹⁹ vacancies. This is the starting point for why diffusion, in which atoms move by way of vacancies, speeds up sharply at high temperature.
+
+---
+
+## 4. Working backwards: $Q_v$ from two temperatures
+
+Taking the natural log of both sides gives
+
+$$\ln\frac{N_v}{N}=-\frac{Q_v}{k}\cdot\frac1T$$
+
+so plotting $\ln(N_v/N)$ against $1/T$ gives a straight line with slope $-Q_v/k$ (an Arrhenius plot). With the fractions $f_1$, $f_2$ at two temperatures $T_1$, $T_2$,
+
+$$Q_v=\frac{k\,\ln(f_2/f_1)}{1/T_1-1/T_2}$$
+
+Using the 900 K and 1200 K values from the table: $f_2/f_1\approx18.2$, $\ln18.2\approx2.90$, $1/900-1/1200=2.78\times10^{-4}\ \text{K}^{-1}$, so $Q_v\approx8.617\times10^{-5}\times2.90/2.78\times10^{-4}\approx0.90$ eV, the value we assumed. In experiments, the vacancy fraction is obtained from precise high-temperature measurements of density or lattice parameter, and the formation energy is estimated this way.
+
+---
+
+## 5. What not to do with this model
+
+- **Do not apply the equilibrium equation to a quenched sample.** Cooling quickly from high temperature leaves vacancies no time to escape, so more remain than at equilibrium. The equation gives the value "if it had stayed at that temperature long enough".
+- **Do not assume the pre-exponential factor is always 1.** More accurate models add a factor from vibrational entropy that need not be 1. This chapter sets it to 1 for the concept.
+- **Do not explain strength with vacancies alone.** Plastic deformation and strength in metals are governed mainly by dislocations and grain boundaries. That gets its own chapter later.
+- **Do not plug the hypothetical values into a real element.** The $Q_v$ and element in the table are for practice.
+
+Crystal defects connect to the defects and diffusion part of the [MIT 3.091SC syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/). The hypothetical element, numbers and order of explanation in this chapter were written independently and do not copy MIT figures or problems.
+
+---
+
+## Sources
+
+- NIST CODATA, [Boltzmann constant search results](https://physics.nist.gov/cgi-bin/cuu/Results?search_for=boltzmann): k = 1.380 649 × 10⁻²³ J/K (exact) = 8.617 333 262 × 10⁻⁵ eV/K
+- Avogadro constant: [NIST CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?na) 6.022 140 76 × 10²³ mol⁻¹ (exact)
+- MIT OpenCourseWare, [3.091SC Introduction to Solid State Chemistry — Syllabus](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/syllabus/) (for the course scope)
+- The worked numbers use hypothetical values created by Oiyo (arithmetic checked 2026-11-02).
