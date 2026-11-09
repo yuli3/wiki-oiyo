@@ -25,6 +25,9 @@ type ExploreCopy = {
   dictionary: string;
   academyTitle: string;
   academyIntro: string;
+  chapter: (n: number) => string;
+  supportGuide: string;
+  supportGuideMeta: string;
 };
 
 const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
@@ -35,7 +38,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "Explore",
     dictionary: "Dictionary - term definitions",
     academyTitle: "Public Knowledge Curriculum",
-    academyIntro: "Core curricula covering public waste standards, atmospheric science, and education systems.",
+    academyIntro: "Chapter-by-chapter courses on public standards and everyday systems.",
+    chapter: (n) => `Ch. ${n}`,
+    supportGuide: "Government support guide",
+    supportGuideMeta: "Welfare, health, housing and jobs — official links",
   },
   ko: {
     title: "OIYO 위키 전체 탐색",
@@ -44,7 +50,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "전체 탐색",
     dictionary: "사전 - 용어 정의",
     academyTitle: "공공 표준 지식 과목",
-    academyIntro: "자원순환·대기기상·학사일정 등 생활과 직결된 3대 공공 표준 과목입니다.",
+    academyIntro: "생활과 직결된 공공 표준·제도를 장별로 정리한 과목입니다.",
+    chapter: (n) => `${n}장.`,
+    supportGuide: "정부 지원 가이드",
+    supportGuideMeta: "복지·의료·주거·취업 공식 안내",
   },
   ja: {
     title: "OIYO Wiki を探索",
@@ -53,7 +62,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "探索",
     dictionary: "辞典 - 用語の定義",
     academyTitle: "公共標準知識科目",
-    academyIntro: "資源循環・気象・学事日程など生活に直結する3つの公共標準科目です。",
+    academyIntro: "暮らしに直結する公共の基準・制度を章ごとにまとめた科目です。",
+    chapter: (n) => `第${n}章`,
+    supportGuide: "政府支援ガイド",
+    supportGuideMeta: "福祉・医療・住居・就労の公式案内",
   },
   zh: {
     title: "浏览 OIYO Wiki",
@@ -62,7 +74,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "浏览",
     dictionary: "词典 - 术语定义",
     academyTitle: "公共标准知识课程",
-    academyIntro: "涵盖垃圾分类、气象气候、教育学制等生活标准的三大核心科目。",
+    academyIntro: "按章节整理与日常生活相关的公共标准与制度课程。",
+    chapter: (n) => `第${n}章`,
+    supportGuide: "政府补助指南",
+    supportGuideMeta: "福利、医疗、住房与就业官方信息",
   },
   fr: {
     title: "Explorer le Wiki OIYO",
@@ -71,7 +86,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "Explorer",
     dictionary: "Dictionnaire - definitions",
     academyTitle: "Programmes de connaissances publiques",
-    academyIntro: "Trois programmes couvrant le tri des déchets, la météorologie et le système éducatif.",
+    academyIntro: "Des cours chapitre par chapitre sur les normes publiques et les systèmes du quotidien.",
+    chapter: (n) => `Ch. ${n}`,
+    supportGuide: "Guide des aides publiques",
+    supportGuideMeta: "Aide sociale, santé, logement, emploi — liens officiels",
   },
   es: {
     title: "Explorar OIYO Wiki",
@@ -80,7 +98,10 @@ const copyByLocale: Record<ActiveLocale, ExploreCopy> = {
     current: "Explorar",
     dictionary: "Diccionario - definiciones",
     academyTitle: "Programas de conocimiento público",
-    academyIntro: "Tres materias clave que cubren normas de reciclaje, meteorología y calendarios académicos.",
+    academyIntro: "Cursos por capítulos sobre normas públicas y sistemas de la vida diaria.",
+    chapter: (n) => `Cap. ${n}`,
+    supportGuide: "Guía de ayudas públicas",
+    supportGuideMeta: "Bienestar, salud, vivienda y empleo — enlaces oficiales",
   },
 };
 const copy = copyByLocale[locale] ?? copyByLocale.en;
@@ -149,7 +170,7 @@ const courses = [...seriesMap.values()];
                 {course.posts.map((cp) => (
                   <li class="py-1.5">
                     <a href={`/${locale}/${slugOf(cp.slug)}/`} class="group flex items-start gap-1.5 text-foreground hover:text-primary">
-                      <span class="font-bold text-primary shrink-0">{cp.data.chapter ? `${cp.data.chapter}장.` : "•"}</span>
+                      <span class="font-bold text-primary shrink-0">{cp.data.chapter ? copy.chapter(cp.data.chapter) : "•"}</span>
                       <span class="line-clamp-1 group-hover:underline">{cp.data.chapterTitleShort ?? cp.data.title}</span>
                     </a>
                   </li>
@@ -173,6 +194,16 @@ const courses = [...seriesMap.values()];
             meta={n}
           />
         ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <div class="grid gap-2 sm:grid-cols-2">
+        <Item
+          href={`/${locale}/government-support-guide/`}
+          title={copy.supportGuide}
+          meta={copy.supportGuideMeta}
+        />
       </div>
     </section>
 
