@@ -47,6 +47,7 @@ export const siteConfig = {
   manualAds: {
     enabled: true,
     slots: {
+      articleMid: "8286559759", // 2026-11-06: long prose only, separated from controls and end unit.
       articleEnd: "9488503351", // oiyo-wiki-article-end: after chapter reading content (own unit since 2026-10-26)
     },
   },
