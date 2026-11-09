@@ -76,6 +76,21 @@ const active = config.enabled && Boolean(client) && !noindex;
   var main=document.getElementById("main-content");
   if(!main)return;
   var prose=main.querySelector(".prose, [data-document-shell]");
+  // 2026-11-06: expand only substantial reading pages, never interactive islands.
+  // Existing charts/tables/forms stay intact; insert at a direct prose heading boundary.
+  if(prose&&!prose.querySelector("astro-island,form,input,textarea,select")&&prose.textContent.trim().length>=4000){
+    var headings=Array.from(prose.querySelectorAll(":scope > h2"));
+    if(headings.length>=5){
+      var anchor=headings[Math.floor(headings.length/2)];
+      var start=prose.getBoundingClientRect().top;
+      var end=prose.getBoundingClientRect().bottom;
+      var y=anchor.getBoundingClientRect().top;
+      if(y-start>=600&&end-y>=600&&!anchor.previousElementSibling?.querySelector(".adsbygoogle")){
+        var mid=box("wiki-article-mid",cfg.slots.articleMid);
+        if(mid)anchor.parentNode.insertBefore(mid,anchor);
+      }
+    }
+  }
   var target=box("wiki-article-end",cfg.slots.articleEnd);
   if(target){
     if(prose){
