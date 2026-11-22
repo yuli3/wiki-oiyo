@@ -169,7 +169,7 @@ const courses = [...seriesMap.values()];
               <ul class="mt-3 divide-y divide-border text-xs">
                 {course.posts.map((cp) => (
                   <li class="py-1.5">
-                    <a href={`/${locale}/${slugOf(cp.slug)}/`} class="group flex items-start gap-1.5 text-foreground hover:text-primary">
+                    <a href={`/${locale}/${slugOf(cp.id)}/`} class="group flex items-start gap-1.5 text-foreground hover:text-primary">
                       <span class="font-bold text-primary shrink-0">{cp.data.chapter ? copy.chapter(cp.data.chapter) : "•"}</span>
                       <span class="line-clamp-1 group-hover:underline">{cp.data.chapterTitleShort ?? cp.data.title}</span>
                     </a>

@@ -1,6 +1,6 @@
 ---
 interface ChapterPost {
-  slug: string;
+  id: string;
   data: { title: string };
 }
 
@@ -26,11 +26,11 @@ const copy: Record<string, { contents: string; courses: string; chapter: string 
 const labels = copy[locale] ?? copy.en;
 
 const chapterLinks = seriesPosts.map((post) => {
-  const number = parseInt(post.slug.match(/-ch(\d+)$/)?.[1] ?? "0", 10);
+  const number = parseInt(post.id.match(/-ch(\d+)$/)?.[1] ?? "0", 10);
   return {
     number,
     title: post.data.title.replace(/^Ch\.?\s*\d+[.:]?\s*/i, ""),
-    href: `/${locale}/${post.slug.split("/").slice(1).join("/")}/`,
+    href: `/${locale}/${post.id.split("/").slice(1).join("/")}/`,
     current: number === currentChapter,
   };
 });

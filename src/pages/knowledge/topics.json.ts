@@ -60,13 +60,13 @@ export const GET: APIRoute = async () => {
   const dictionaryTopics = posts
     .filter((p) => p.data.track === "dictionary")
     .map((p) => {
-      const localeFromSlug = p.slug.split("/")[0];
-      const concept = p.slug.split("/").slice(1).join("/"); // slug without locale prefix
+      const localeFromSlug = p.id.split("/")[0];
+      const concept = p.id.split("/").slice(1).join("/"); // slug without locale prefix
       const modified = p.data.reviewedDate ?? p.data.updatedDate ?? p.data.pubDate;
       return {
-        id: p.slug,
+        id: p.id,
         concept,
-        url: new URL(`/${p.slug}/`, siteConfig.url).href,
+        url: new URL(`/${p.id}/`, siteConfig.url).href,
         term: p.data.title,
         definition: p.data.definition ?? p.data.description,
         category: p.data.category ?? null,

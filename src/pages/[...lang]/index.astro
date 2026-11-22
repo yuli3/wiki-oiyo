@@ -83,7 +83,7 @@ const recent = terms
   .slice(0, 8)
   .map((e) => ({
     title: e.data.title,
-    href: `/${locale}/${slugOf(e.slug)}/`,
+    href: `/${locale}/${slugOf(e.id)}/`,
     definition: e.data.definition ?? e.data.description ?? "",
     reviewedDate: asISO(e.data.reviewedDate),
   }));
@@ -114,7 +114,7 @@ for (const [key, course] of courseMap) {
   list.push({
     // 과목 이름은 1장 제목의 앞부분이다("심리측정학 — 1장 …" → "심리측정학").
     title: course.first.data.title.split(/\s+[—:-]\s+|:\s*/)[0] || key,
-    href: `/${locale}/${slugOf(course.first.slug)}/`,
+    href: `/${locale}/${slugOf(course.first.id)}/`,
     chapters: course.chapters,
   });
   shelfGroups.set(course.category, list);

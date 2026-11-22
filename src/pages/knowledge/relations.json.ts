@@ -99,12 +99,12 @@ export const GET: APIRoute = async () => {
   const conceptUrlByLocale = new Map<string, Map<string, string>>();
 
   for (const p of posts) {
-    const locale = p.data.locale ?? p.slug.split("/")[0];
-    const concept = p.slug.split("/").slice(1).join("/");
+    const locale = p.data.locale ?? p.id.split("/")[0];
+    const concept = p.id.split("/").slice(1).join("/");
 
     let cu = conceptUrlByLocale.get(locale);
     if (!cu) conceptUrlByLocale.set(locale, (cu = new Map()));
-    cu.set(concept, url(p.slug));
+    cu.set(concept, url(p.id));
 
     if (p.data.broader) {
       edges.push({ from: concept, to: p.data.broader, type: "broader", locale });
@@ -117,15 +117,15 @@ export const GET: APIRoute = async () => {
     }
 
     if (p.data.series) {
-      addToSet(`series:${locale}:${p.data.series}`, "series", locale, p.data.series, p.slug);
+      addToSet(`series:${locale}:${p.data.series}`, "series", locale, p.data.series, p.id);
     }
     const topic = inferTopic(concept);
     if (topic) {
-      addToSet(`topic:${locale}:${topic}`, "topic", locale, topic, p.slug);
+      addToSet(`topic:${locale}:${topic}`, "topic", locale, topic, p.id);
     }
 
     const tuple = sameAsMap.get(concept) ?? {};
-    tuple[locale] = url(p.slug);
+    tuple[locale] = url(p.id);
     sameAsMap.set(concept, tuple);
   }
 
