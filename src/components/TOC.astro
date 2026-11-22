@@ -16,7 +16,7 @@ const filteredHeadings = headings.filter((h) => h.depth <= 3);
       {filteredHeadings.map((h) => (
         <li class:list={[
           "text-sm font-medium transition-colors hover:text-primary",
-          { "pl-4 text-muted-foreground/80": h.depth === 3 },
+          { "pl-4 text-muted-foreground": h.depth === 3 },
           { "text-muted-foreground": h.depth === 2 }
         ]}>
           <a href={`#${h.slug}`}>{h.text}</a>

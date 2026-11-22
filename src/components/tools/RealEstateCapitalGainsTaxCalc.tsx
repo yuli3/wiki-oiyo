@@ -357,7 +357,7 @@ const RealEstateCapitalGainsTaxCalc: React.FC<{ locale?: Locale }> = ({ locale =
         </>
       )}
 
-      <p className="text-[10px] text-muted-foreground/60 leading-relaxed">{t.note}</p>
+      <p className="text-[10px] text-muted-foreground leading-relaxed">{t.note}</p>
     </div>
   );
 };
