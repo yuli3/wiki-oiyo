@@ -1176,7 +1176,7 @@
       "count": 2
     },
     "shadcn/no-raw-colors": {
-      "count": 11
+      "count": 9
     }
   },
   "src/components/ui/badge.tsx": {
@@ -1444,11 +1444,6 @@
   "src/pages/[...lang]/about.astro": {
     "shadcn/no-arbitrary-values": {
       "count": 2
-    }
-  },
-  "src/pages/[...lang]/explore.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 25
     }
   },
   "src/pages/[...lang]/privacy.astro": {

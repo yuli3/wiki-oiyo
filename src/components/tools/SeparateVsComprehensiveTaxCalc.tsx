@@ -288,7 +288,7 @@ const SeparateVsComprehensiveTaxCalc: React.FC<{ locale?: Locale }> = ({ locale 
         )}
       </div>
 
-      <p className="text-[10px] text-muted-foreground/60 leading-relaxed mt-4">{t.note}</p>
+      <p className="text-[10px] text-muted-foreground leading-relaxed mt-4">{t.note}</p>
     </div>
   );
 };
