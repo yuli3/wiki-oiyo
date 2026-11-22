@@ -14,8 +14,8 @@ const locales = siteConfig.locales;
 // English concept → URL index, for linking topic-map cards to their definition.
 const enConceptUrl = new Map<string, string>();
 for (const p of dictPosts) {
-  if ((p.data.locale ?? p.slug.split("/")[0]) !== "en") continue;
-  enConceptUrl.set(p.slug.split("/").slice(1).join("/"), `/${p.slug}/`);
+  if ((p.data.locale ?? p.id.split("/")[0]) !== "en") continue;
+  enConceptUrl.set(p.id.split("/").slice(1).join("/"), `/${p.id}/`);
 }
 const conceptSlug = (v: string) =>
   "meaning-of-" + v.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

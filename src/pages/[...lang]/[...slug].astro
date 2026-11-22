@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 // import TOC from "../../components/TOC.astro";
 import ChapterSidebar from "../../components/ChapterSidebar.astro";
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   // Group by locale for non-series navigation
   const byLocale: Record<string, typeof allPosts> = {};
   for (const post of allPosts) {
-    const lang = post.slug.split("/")[0];
+    const lang = post.id.split("/")[0];
     (byLocale[lang] ??= []).push(post);
   }
   for (const list of Object.values(byLocale)) {
@@ -32,18 +32,18 @@ export async function getStaticPaths() {
   //      "education-accounting-ch1"    → ["ko", "en", "ja"]
   const localesByBaseSlug: Record<string, Set<string>> = {};
   for (const post of allPosts) {
-    const parts = post.slug.split("/");
+    const parts = post.id.split("/");
     const lang = parts[0];
     const baseSlug = parts.slice(1).join("/");
     (localesByBaseSlug[baseSlug] ??= new Set()).add(lang);
   }
 
   return allPosts.map((post) => {
-    const parts = post.slug.split("/");
+    const parts = post.id.split("/");
     const lang = parts[0];
     const slug = parts.slice(1).join("/");
 
-    const chMatch = post.slug.match(/-ch(\d+)$/);
+    const chMatch = post.id.match(/-ch(\d+)$/);
 
     let prevPost: (typeof allPosts)[0] | null = null;
     let nextPost: (typeof allPosts)[0] | null = null;
@@ -51,26 +51,26 @@ export async function getStaticPaths() {
 
     if (chMatch) {
       // Series-aware navigation: find all posts in the same series (same locale prefix + series base)
-      const seriesBase = post.slug.replace(/-ch\d+$/, ""); // e.g. "ko/education-english-grammar"
+      const seriesBase = post.id.replace(/-ch\d+$/, ""); // e.g. "ko/education-english-grammar"
       const sorted = allPosts
         .filter(
           (p) =>
-            p.slug.replace(/-ch\d+$/, "") === seriesBase &&
-            p.slug.match(/-ch\d+$/)
+            p.id.replace(/-ch\d+$/, "") === seriesBase &&
+            p.id.match(/-ch\d+$/)
         )
         .sort((a, b) => {
-          const aNum = parseInt(a.slug.match(/-ch(\d+)$/)![1], 10);
-          const bNum = parseInt(b.slug.match(/-ch(\d+)$/)![1], 10);
+          const aNum = parseInt(a.id.match(/-ch(\d+)$/)![1], 10);
+          const bNum = parseInt(b.id.match(/-ch(\d+)$/)![1], 10);
           return aNum - bNum;
         });
       seriesPosts = sorted;
-      const idx = sorted.findIndex((p) => p.slug === post.slug);
+      const idx = sorted.findIndex((p) => p.id === post.id);
       prevPost = idx > 0 ? sorted[idx - 1] : null;
       nextPost = idx < sorted.length - 1 ? sorted[idx + 1] : null;
     } else {
       // Non-series: pubDate-based across locale
       const localePosts = byLocale[lang] ?? [];
-      const idx = localePosts.findIndex((p) => p.slug === post.slug);
+      const idx = localePosts.findIndex((p) => p.id === post.id);
       prevPost = idx > 0 ? localePosts[idx - 1] : null;
       nextPost = idx < localePosts.length - 1 ? localePosts[idx + 1] : null;
       seriesPosts = null;
@@ -82,7 +82,7 @@ export async function getStaticPaths() {
     const myTags = new Set<string>((post.data.tags ?? []) as string[]);
     const mySeries = post.data.series ?? null;
     const relatedPosts = (byLocale[lang] ?? [])
-      .filter((p) => p.slug !== post.slug)
+      .filter((p) => p.id !== post.id)
       .map((p) => {
         let score = 0;
         if (mySeries && p.data.series === mySeries) score += 3;
@@ -99,7 +99,7 @@ export async function getStaticPaths() {
       )
       .slice(0, 6)
       .map(({ p }) => ({
-        slug: p.slug.split("/").slice(1).join("/"),
+        slug: p.id.split("/").slice(1).join("/"),
         title: p.data.title,
       }));
 
@@ -127,7 +127,7 @@ const RELATED_HEADING: Record<string, string> = {
   zh: "相关文章", fr: "Articles liés", es: "Artículos relacionados",
 };
 const { post, locale, prevPost, nextPost, seriesPosts, availableLocales, relatedPosts, isTopicMismatch } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 const tocEnabled = siteConfig.features.toc;
 const t = await getTranslations(locale as Locale);
 const categoryNames = (t.category.names ?? {}) as Record<string, string>;
@@ -138,7 +138,7 @@ const track = getTrackFromData(post.data);
 const isDocumentPilot = rawCategory === "Mind & Psychology";
 const mdxComponents = getRegisteredMdxComponents(track);
 
-const chMatch = post.slug.match(/-ch(\d+)$/);
+const chMatch = post.id.match(/-ch(\d+)$/);
 const chapter = chMatch ? parseInt(chMatch[1], 10) : null;
 const isSeriesPost = chapter !== null && seriesPosts !== null && seriesPosts.length > 0;
 const displayTitle = post.data.title.replace(/^Ch\.?\s*\d+[.:]?\s*/i, "");
@@ -149,7 +149,7 @@ const courseNameFromTitle = isSeriesPost
   ? (seriesPosts![0]?.data.title ?? "").replace(/^Ch\.?\s*\d+[.:]?\s*/i, "").split(/\s+[—:-]\s+|:\s*/)[0].trim()
   : "";
 const seriesName = isSeriesPost
-  ? (courseNameFromTitle || post.data.series || post.slug
+  ? (courseNameFromTitle || post.data.series || post.id
       .replace(/-ch\d+$/, "")
       .replace(/^[a-z]+\//, "")
       .replace(/^education-/, "")
@@ -161,7 +161,7 @@ const seriesName = isSeriesPost
 let seriesJsonLd: string | null = null;
 if (isSeriesPost && chapter !== null) {
   const totalChapters = seriesPosts!.length;
-  const courseSlugBase = post.slug
+  const courseSlugBase = post.id
     .replace(/-ch\d+$/, "")
     .replace(/^[a-z]+\//, "");
 
@@ -178,7 +178,7 @@ if (isSeriesPost && chapter !== null) {
     },
     position: chapter,
     numberOfItems: totalChapters,
-    url: `${siteConfig.url}/${locale}/${post.slug.split("/").slice(1).join("/")}/`,
+    url: `${siteConfig.url}/${locale}/${post.id.split("/").slice(1).join("/")}/`,
   });
 }
 
@@ -344,7 +344,7 @@ const coursesHref = `/${locale}/explore/`;
               {isSeriesPost && (
                 <div class="ml-auto lg:hidden flex items-center gap-2">
                   {prevPost && (() => {
-                    const ps = prevPost.slug.split("/");
+                    const ps = prevPost.id.split("/");
                     return (
                       <a
                         href={`/${locale}/${ps.slice(1).join("/")}/`}
@@ -357,7 +357,7 @@ const coursesHref = `/${locale}/explore/`;
                   })()}
                   <span class="text-[10px] font-black text-muted-foreground">{chapter}/{seriesPosts!.length}</span>
                   {nextPost && (() => {
-                    const ns = nextPost.slug.split("/");
+                    const ns = nextPost.id.split("/");
                     return (
                       <a
                         href={`/${locale}/${ns.slice(1).join("/")}/`}
@@ -390,7 +390,7 @@ const coursesHref = `/${locale}/explore/`;
                 <!-- Quick prev/next for desktop -->
                 <div class="flex items-center gap-1.5 flex-shrink-0">
                   {prevPost && (() => {
-                    const ps = prevPost.slug.split("/");
+                    const ps = prevPost.id.split("/");
                     return (
                       <a
                         href={`/${locale}/${ps.slice(1).join("/")}/`}
@@ -402,7 +402,7 @@ const coursesHref = `/${locale}/explore/`;
                     );
                   })()}
                   {nextPost && (() => {
-                    const ns = nextPost.slug.split("/");
+                    const ns = nextPost.id.split("/");
                     return (
                       <a
                         href={`/${locale}/${ns.slice(1).join("/")}/`}
@@ -442,7 +442,7 @@ const coursesHref = `/${locale}/explore/`;
           <!-- Author Profile Component for E-E-A-T SEO -->
           <AuthorProfile authorName={post.data.author} locale={locale} />
 
-          <MysticTrinity slug={post.slug.split("/").slice(1).join("/")} locale={locale} />
+          <MysticTrinity slug={post.id.split("/").slice(1).join("/")} locale={locale} />
 
           {relatedPosts && relatedPosts.length > 0 && (
             <aside class="mt-10 not-prose" aria-label="Related articles">
@@ -468,9 +468,9 @@ const coursesHref = `/${locale}/explore/`;
           {(prevPost || nextPost) && (
             <nav class="mt-16 grid grid-cols-2 gap-4 not-prose" aria-label="Article navigation">
               {prevPost ? (() => {
-                const prevParts = prevPost.slug.split("/");
+                const prevParts = prevPost.id.split("/");
                 const prevSlug = prevParts.slice(1).join("/");
-                const prevCh = prevPost.slug.match(/-ch(\d+)$/);
+                const prevCh = prevPost.id.match(/-ch(\d+)$/);
                 return (
                   <a
                     href={`/${locale}/${prevSlug}/`}
@@ -488,9 +488,9 @@ const coursesHref = `/${locale}/explore/`;
                 );
               })() : <div />}
               {nextPost ? (() => {
-                const nextParts = nextPost.slug.split("/");
+                const nextParts = nextPost.id.split("/");
                 const nextSlug = nextParts.slice(1).join("/");
-                const nextCh = nextPost.slug.match(/-ch(\d+)$/);
+                const nextCh = nextPost.id.match(/-ch(\d+)$/);
                 return (
                   <a
                     href={`/${locale}/${nextSlug}/`}

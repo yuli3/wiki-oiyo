@@ -64,8 +64,8 @@ const categoryNames = (t.category.names ?? {}) as unknown as { [key: string]: st
       <div class="flex flex-col divide-y divide-border/60">
         {
           page.data.map((post) => {
-            // post.slug is like 'ko/visualizing-goals'; strip the lang prefix
-            const slug = post.slug.split("/").slice(1).join("/");
+            // post.id is like 'ko/visualizing-goals'; strip the lang prefix
+            const slug = post.id.split("/").slice(1).join("/");
             const href = `/${locale}/${slug}/`;
             const localizedCategory = (post.data.category ? categoryNames[post.data.category] : undefined) ?? post.data.category;
             const published = post.data.pubDate?.toLocaleDateString(
