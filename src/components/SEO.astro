@@ -161,7 +161,7 @@ const xDefaultLocale = locales.includes("en") ? "en" : (locales[0] ?? siteConfig
     an error page with no content), not just an SEO leak. Gated on the explicit
     prop only — deindexed locales and slugs are real content and keep earning. */}
 {googleAdsenseId && !noindex && (
-  <script is:inline async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseId}`}
+  <script is:inline async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseId}`} data-overlays="bottom"
      crossorigin="anonymous"></script>
 )}
 
